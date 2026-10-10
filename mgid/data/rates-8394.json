@@ -1,0 +1,27 @@
+{
+ "offer": 8394,
+ "name": "Tinely - Mobile/Desktop [LT, LV, EE, KZ, MD, GE, AZ] SOI 18+ (Exclusive)",
+ "status": 1,
+ "goal": "Correct registration 18+",
+ "default_group": "LT",
+ "countries": [
+  "AZ",
+  "EE",
+  "GE",
+  "KZ",
+  "LT",
+  "LV",
+  "MD"
+ ],
+ "daily_cap": 200,
+ "payouts": {
+  "AZ": 0.2,
+  "EE": 1.48,
+  "GE": 0.468,
+  "KZ": 0.56,
+  "LT": 0.44,
+  "LV": 0.32,
+  "MD": 0.2
+ },
+ "fetched": "2026-10-10 19:19 UTC"
+}

@@ -1,0 +1,62 @@
+{
+ "KZ": {
+  "id": 12510622,
+  "name": "Tinely girls KZ mobile CPA",
+  "geo": "KZ",
+  "offer": 8394,
+  "cpa": 0.56,
+  "payout": 0.56,
+  "source": 12502232,
+  "teasers": [
+   "28136687",
+   "28136688",
+   "28136689"
+  ],
+  "problems": []
+ },
+ "LT": {
+  "id": 12510623,
+  "name": "Tinely girls LT mobile CPA",
+  "geo": "LT",
+  "offer": 8394,
+  "cpa": 0.44,
+  "payout": 0.44,
+  "source": 12502232,
+  "teasers": [
+   "28136690",
+   "28136691",
+   "28136692"
+  ],
+  "problems": []
+ },
+ "LV": {
+  "id": 12510625,
+  "name": "Tinely girls LV mobile CPA",
+  "geo": "LV",
+  "offer": 8394,
+  "cpa": 0.32,
+  "payout": 0.32,
+  "source": 12502232,
+  "teasers": [
+   "28136693",
+   "28136694",
+   "28136695"
+  ],
+  "problems": []
+ },
+ "EE": {
+  "id": 12510626,
+  "name": "Tinely girls EE mobile CPA",
+  "geo": "EE",
+  "offer": 8394,
+  "cpa": 1.48,
+  "payout": 1.48,
+  "source": 12502232,
+  "teasers": [
+   "28136696",
+   "28136697",
+   "28136698"
+  ],
+  "problems": []
+ }
+}
