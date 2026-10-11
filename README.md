@@ -76,6 +76,29 @@ conversion cost), `MGID_OFFERS` (offers that can be MGID leads).
 
 Derived from the `mgid` skill of the Tedbolt repo (`.claude/skills/mgid/scripts`), whose flat $0.30 rule it replaces.
 
+## Analytics by geo and placement
+
+`mgid/analytics.py`: spend, clicks and impressions from MGID (v2 report by country and by placement),
+leads and money from cpamatica (`cpamatica.mjs conv`), joined by country and by campaign + placement
+(`aff_sub3` carries `{widget_id}`). Also replays the 2 x CPA rule over the history.
+
+```bash
+node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/analytics.py \
+    --conv <Tedbolt>/mirelia_api/.mirelia/cpam-conv.json --out /tmp/mgid-report
+```
+
+Reading of 11.10 (30.09 to 11.10, spend $105.56, 21 leads, $12.28):
+- Kazakhstan is the only geo near break-even: 9 leads on 587 clicks, CR 1.53% (95% interval 0.8 to
+  2.9%) against 2.7% needed at 1.5¢ and 1.8% at the 1.0¢ minimum. At that CR the break-even CPC is
+  0.86¢, below the minimum, so it only works if the real CR sits in the upper half of the interval.
+- LATAM cannot work at these payouts: 9 leads on 5417 clicks, CR 0.17% (0.09 to 0.32%) against ~2%.
+  Not one of its seven geos reaches break-even even at its upper bound.
+- Georgia, Azerbaijan and Moldova took 60% of the CIS spend; AZ and MD pay $0.20 a lead, which needs
+  a 7.5% CR at 1.5¢.
+- Placement blocking is a weak lever on this traffic. LATAM mobile spent $81 over 586 placements
+  (top 10 = 18%, top 50 = 62%); the 21 placements over the 2 x CPA line held only $3.00 above the
+  line. The money is lost by the geo, not by a few placements.
+
 ## Things found on the way
 
 - The guard that was deployed on 30.09 had been in **HOLD since 01.10 19:30**, blocking nothing. Its
