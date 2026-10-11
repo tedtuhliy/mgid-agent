@@ -4,6 +4,25 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## Spend stop-loss on Inferno (11.11)
+
+Owner: «настрой на инферно бота который стопнет кампании после спенда в 3 бакса». `mgid/spend_stop.py` runs on
+Inferno every 2 minutes (`mgid-spend-stop.timer`, code in `/opt/mgid-spend-stop/`). It pauses every ACTIVE
+MGID campaign on the account whose **lifetime** spend (v1 `campaigns-stat`, `dateInterval=all`) reaches $3.
+It never starts anything. A campaign restarted above $3 is paused again on the next run. If the spend cannot
+be read, nothing is paused. Limit: `MGID_SPEND_LIMIT` in the unit. Log of stops: `/var/lib/mgid-spend-stop/actions.log`.
+
+It is not the placement guard: the guard (`mgid-guard`) stops single placements, this stops whole campaigns.
+It does not cover Adskeeper or other networks.
+
+```bash
+python3 -m unittest -v mgid/test_spend_stop.py                                  # offline checks
+TAILSCALE="<tailscale> --socket=<sock>" bash mgid/deploy_spend_stop_inferno.sh  # stage, dry run, swap, timer
+tailscale ssh root@100.121.239.113 'systemctl disable --now mgid-spend-stop.timer'   # switch off
+```
+
+On install (11.11, 11:26) the three active campaigns (two whitelists, the LATAM CPA test) had $0.00 spend.
+
 ## LATAM CPA test, one campaign (11.10)
 
 `mgid/latam_cpa.py`: **Tinely girls LATAM CPA - CR DO GT PA (8326)**, campaign 12510766. Geos CR, DO, GT, PA
