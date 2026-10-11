@@ -20,8 +20,13 @@ every campaign by its own conversion cost.
 
 Copy of the live CIS-mobile campaign 12502232 (mobile OS list, Russian browser language, three
 women-only teasers, the same cpamatica link, UTM that returns click id, campaign and placement
-with the lead) with `targetCpa` bidding and a $20 daily budget. All four are **paused**, teasers are on
-moderation, nothing starts by itself.
+with the lead) with `targetCpa` bidding and a $20 daily budget. Created paused, teasers on moderation.
+
+**State since 11.10 (owner: «стопни пока все кроме казахстана»):** only KZ (12510622) is started; LT, LV
+and EE stay paused, and so are all six older «Tinely girls» campaigns. Teasers of the KZ copy were still on moderation after a day, so no
+traffic until they are approved. The v2 read of `isAutoLaunchAdsAfterApproval` always says `false`
+(also on the 30.09 campaigns whose teasers did start by themselves), so it cannot confirm a PATCH;
+check that the approved teasers are `active` instead.
 
 ```bash
 cd mgid
@@ -83,3 +88,8 @@ Derived from the `mgid` skill of the Tedbolt repo (`.claude/skills/mgid/scripts`
   (v1 `dailyLimit` 200000) instead of $20.
 - MGID creates a campaign active; v2 `PATCH .../status` answered 403 for a campaign created two
   seconds earlier. `pause()` uses the v1 flag and reads the status back.
+- **A top-up restarts campaigns that the network stopped for lack of funds** (`outOfClientFunds`,
+  v2 status `active/unfulfilled`): the `mgid` skill says they stay paused, and that is wrong. After
+  the $100 top-up of 10.10 «Tinely girls LATAM mobile» spent $80 in about a day (5300 clicks at 1.5¢,
+  9 leads) on its $2000 daily limit and took the balance from $99 to $14 before it was paused. Before
+  topping up, pause what should not run, or lower the limits.
