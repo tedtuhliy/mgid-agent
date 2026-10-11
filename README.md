@@ -4,6 +4,16 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## LATAM CPA test, one campaign (11.10)
+
+`mgid/latam_cpa.py`: **Tinely girls LATAM CPA - CR DO GT PA (8326)**, campaign 12510766. Geos CR, DO, GT, PA
+(the ones with approved leads), targetCpa $0.01 as the owner set it, no whitelist, $20 a day. The conversion
+cost in the settings is $0.01 too, so the guard stops a placement after $0.02 without a lead of this
+campaign. Teasers are the LATAM creatives at 1.0¢, on moderation at launch.
+
+On 11.10 the owner asked to stop every other active MGID campaign except the two whitelist copies. The
+KZ CPA copy (12510622) was paused; the rest were already paused. The wallet was $13.94 before the launch.
+
 ## Whitelist copies of the girls campaigns (11.10)
 
 Owner: «запусти вайтлист копии с теми же крео, по минималкам ставкам по cpc, те же гео что дали лиды,
