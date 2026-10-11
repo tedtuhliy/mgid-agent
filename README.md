@@ -8,8 +8,9 @@ MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard 
 
 Owner: «настрой на инферно бота который стопнет кампании после спенда в 3 бакса». `mgid/spend_stop.py` runs on
 Inferno every 2 minutes (`mgid-spend-stop.timer`, code in `/opt/mgid-spend-stop/`). It pauses every ACTIVE
-MGID campaign on the account whose **lifetime** spend (v1 `campaigns-stat`, `dateInterval=all`) reaches $3.
-It never starts anything. A campaign restarted above $3 is paused again on the next run. If the spend cannot
+MGID campaign on the account whose spend **since the last reset** reaches $3. `--reset` stores every campaign's lifetime spend as its
+baseline; a campaign created later counts all its spend. The reset was run on 11.11 at 20:40:49 UTC for 23 campaigns.
+It never starts anything. Restarting a campaign does not reset its count; only `--reset` does. If the spend cannot
 be read, nothing is paused. Limit: `MGID_SPEND_LIMIT` in the unit. Log of stops: `/var/lib/mgid-spend-stop/actions.log`.
 
 It is not the placement guard: the guard (`mgid-guard`) stops single placements, this stops whole campaigns.
@@ -22,6 +23,21 @@ tailscale ssh root@100.121.239.113 'systemctl disable --now mgid-spend-stop.time
 ```
 
 On install (11.11, 11:26) the three active campaigns (two whitelists, the LATAM CPA test) had $0.00 spend.
+
+## All dating campaigns on CPA 1 cent (11.11)
+
+Owner: «мужские удали, все остальные запускай, сбрось 3 бакса начиная с сейчас, считай».
+
+- **Deleted** the six men's campaigns 12501886–12501891 (Tinely dating, men's creatives). Teasers went with them.
+- **Switched** the twelve remaining campaigns (girls 12502227–12502232, whitelists 12510729–12510730, CPA copies
+  12510622, 12510623, 12510625, 12510626) to `targetCpa` $0.01 with conversion cost 0.01, with
+  `mgid/cpa_cent.py`. Each was read back. The LATAM CPA test (12510766) already had the same settings.
+- **MGID refuses teaser CPC changes under CPA bidding** ("CPC changes are not allowed with CPA bidding strategy
+  campaign"), so the teasers keep their old CPC; the algorithm sets the click price.
+- **Relaunched** the paused ones at 20:41 UTC: 12502227–12502232 and 12510622. The rest were already active.
+  The wallet was $13.94 at the time.
+- Conversion cost 0.01 means the placement guard stops a placement after $0.02 without a lead, as for the
+  LATAM CPA test. Expect many placements to be blacklisted quickly.
 
 ## LATAM CPA test, one campaign (11.10)
 
