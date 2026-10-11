@@ -52,8 +52,10 @@ set -e
 set -a; . /etc/mgid-guard.env; set +a
 echo "--- dry run (nothing is written, state goes to /tmp)"
 rc=0
-MGID_GUARD_STATE=/tmp/mgid-guard-dry.json MGID_GUARD_ACTIONS=/tmp/mgid-guard-dry.log \
-  python3 /opt/mgid-guard.new/mgid_guard.py > /tmp/mgid-guard-dry.out 2>&1 || rc=$?
+# MGID answers slowly from this box (quality-analysis took 13 s): allow up to 15 minutes, and give the
+# guard no stdin: it inherits this heredoc otherwise.
+timeout 900 env MGID_GUARD_STATE=/tmp/mgid-guard-dry.json MGID_GUARD_ACTIONS=/tmp/mgid-guard-dry.log \
+  python3 /opt/mgid-guard.new/mgid_guard.py > /tmp/mgid-guard-dry.out 2>&1 < /dev/null || rc=$?
 cut -c1-220 /tmp/mgid-guard-dry.out | head -40
 rm -f /tmp/mgid-guard-dry.out
 test "$rc" = 0 || { echo "dry run упал (код $rc) — старый сторож остаётся"; rm -rf /opt/mgid-guard.new; exit 1; }
@@ -79,7 +81,7 @@ Environment=MGID_GUARD_ACTIONS=/var/lib/mgid-guard/actions.log
 Environment=MGID_LEADS_DB=/var/www/postback-middleware/accumulator_exocpa.db
 WorkingDirectory=/var/lib/mgid-guard
 ExecStart=/usr/bin/flock -w 60 /var/lib/mgid-guard/.lock /usr/bin/python3 /opt/mgid-guard/mgid_guard.py --apply
-TimeoutStartSec=240
+TimeoutStartSec=900
 EOF
 cat > /etc/systemd/system/mgid-guard.timer <<"EOF"
 [Unit]
@@ -103,7 +105,7 @@ EOF
 chmod 755 /usr/local/bin/mgid-guard-status
 systemctl daemon-reload
 systemctl enable --now mgid-guard.timer >/dev/null 2>&1
-systemctl start mgid-guard.service || true
+systemctl start --no-block mgid-guard.service || true   # a run can take minutes: do not hold this session
 journalctl -u mgid-guard.service -n 14 --no-pager -o cat
 systemctl list-timers mgid-guard.timer --no-pager | head -3
 REMOTE

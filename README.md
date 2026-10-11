@@ -4,6 +4,53 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## Whitelist copies of the girls campaigns (11.10)
+
+Owner: «запусти вайтлист копии с теми же крео, по минималкам ставкам по cpc, те же гео что дали лиды,
+на тех же площадках, задача отбить минуса». `mgid/whitelist_copies.py` makes one copy per offer (the
+teaser link carries the offer id, the conversion cost is one number per campaign):
+
+| copy | source | offer | geos | placements | CPC (teaser) | bid (campaign) | conversion cost |
+|---|---|---|---|---|---|---|---|
+| Tinely girls CIS mobile WL - KZ AZ MD LT (8394) (12510730) | 12502232 | 8394 | KZ AZ MD LT | 7 | 1.5¢ | $0.015 | $0.44 |
+| Tinely girls LATAM mobile WL - CR DO GT PA (8326) (12510729) | 12502230 | 8326 | CR DO GT PA | 8 | 1.0¢ | $0.01 | $0.62 |
+
+Both: `manualBidding`, $20 a day, the source's OS and language, the source's three teasers (same images,
+title and link), UTM as in the other copies, v2 widget filter `only` with the lead placements.
+
+- **The minimum CPC is per geo.** MGID refused a campaign bid of 1.0¢ on the CIS geos ("bidding.price
+  must be >= 0.015") and accepted 1.0¢ on LATAM.
+- **The lead placements** are the approved cpamatica leads of the source campaign (`aff_sub3` =
+  `{widget_id}`), 30.09 to 11.10. Dating CIS (12501891) is not in it: its creatives are men's.
+- **Teasers were rejected on the KZ copy** (12510622): "Restricted or Illegal product/service", no
+  further detail from MGID. The LT, LV and EE copies carry the same rejected teasers (paused). The two
+  whitelist copies' teasers were still on moderation at 11.10 with the same creatives and title.
+  Nothing is served until a teaser is approved.
+- **What the history says.** Those 15 placements (30.09 to 11.10): spend $4.64, 310 clicks, 17 leads,
+  revenue $10.04, i.e. +$5.40 in sample. Everything else on the account: spend about $101, revenue
+  $2.24, i.e. -$99. The whitelist is a cut of the loss, not a recovery: it sells about 26 clicks a day,
+  so at 1.0-1.5¢ it spends about $0.4 a day, and the in-sample surplus is about $0.45 a day before the
+  selection bias (the placements were picked for having leads) is taken out. $93 would take years.
+- **The wallet is shared** with the KZ copy and is $13.94 (11.10).
+
+**Guard for whitelists.** The guard used to read a whitelist as a blacklist: its placements counted as
+"already blocked" and nothing was cut. Now a placement on an `only` list that spends 2 conversion
+costs without a lead of that campaign is removed from the list (v2 `batch-delete`, read back). The
+last placement of a list is never removed: the campaign is paused instead, because what an emptied
+`only` filter turns into was not tested. Spend outside the list is reported (`MGIDG_WARN`).
+Tests: `test_guard.py`, 19 offline checks. The removal was tested live on the LATAM copy (one
+placement off and back on, the list read back identical).
+
+```bash
+node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/whitelist_copies.py           # plan
+node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/whitelist_copies.py --apply   # create, check, start
+node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/whitelist_copies.py --apply --only CIS
+```
+
+**MGID answers slowly from Inferno.** `quality-analysis` took 13 s there (under a second from a
+sandbox), so a guard run took 3 to 4 minutes, and one run hit the 240 s start timeout. The unit now
+allows 900 s, and the deploy's dry run has a 900 s limit and no stdin.
+
 ## Tinely: Kazakhstan and the Baltics, CPA bidding (10.10)
 
 The only cpamatica offer that has paid us in these geos is **Tinely [LT, LV, EE, KZ, MD, GE, AZ] SOI 18+ (8394)**:

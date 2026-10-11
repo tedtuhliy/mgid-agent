@@ -112,6 +112,37 @@ def pause(cid, on=True):
     return campaign(cid, ("id", "status")).get("status") or {}
 
 
+def widgets_filter(cid):
+    """(filter type, {widget uid: sourceIds}) of a campaign, read through v2 and paged: the v2 default
+    page is 20 rows, so a list longer than that would be cut silently without the loop."""
+    typ, out, off = None, {}, 0
+    while True:
+        st, d = call("GET", V2 + f"account/{CID2}/campaigns/{cid}/widgets/filters?limit=100&offset={off}")
+        if st != 200 or not isinstance(d, dict):
+            raise RuntimeError(f"widgets filter {cid}: {st} {json.dumps(d, ensure_ascii=False)[:200]}")
+        typ = d.get("filterType")
+        rows = d.get("data") or []
+        out.update({str(x["widgetUid"]): x.get("sourceIds") or [] for x in rows})
+        if len(rows) < 100:
+            return typ, out
+        off += 100
+
+
+def whitelist_set(cid, uids):
+    """Replace the whole widget filter with a whitelist (`only`): only these placements are served.
+    PUT replaces, so nothing from an earlier list survives."""
+    return call("PUT", V2 + f"account/{CID2}/campaigns/{cid}/widgets/filters",
+                {"filterType": "only", "data": [{"widgetUid": int(u)} for u in sorted(uids)]})
+
+
+def whitelist_remove(cid, uids):
+    """Take placements off a whitelist. The spec says the filter type is kept unless the list becomes
+    empty; what an emptied `only` filter turns into was NOT tested. So a caller must never remove the
+    last placement: pause the campaign instead (see mgid_guard)."""
+    return call("PATCH", V2 + f"account/{CID2}/campaigns/{cid}/widgets/filters/batch-delete",
+                {"data": [{"widgetUid": int(u)} for u in sorted(uids)]})
+
+
 def campaign(cid, fields=("id", "name", "status", "widgetsFilterUid", "trackingOptions", "limitsFilter")):
     st, d = v1("GET", f"goodhits/clients/{CID1}/campaigns/{cid}",
                fields="[" + ",".join(f"'{x}'" for x in fields) + "]")

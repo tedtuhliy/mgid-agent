@@ -1,0 +1,47 @@
+{
+ "CIS": {
+  "id": 12510730,
+  "name": "Tinely girls CIS mobile WL - KZ AZ MD LT (8394)",
+  "geo": "KZ AZ MD LT",
+  "offer": 8394,
+  "placements": [
+   "57628091",
+   "57627045",
+   "58022243",
+   "57627015",
+   "57617585",
+   "64349629",
+   "58022244"
+  ],
+  "teasers": [
+   "28137762",
+   "28137763",
+   "28137764"
+  ],
+  "status": "active",
+  "problems": []
+ },
+ "LATAM": {
+  "id": 12510729,
+  "name": "Tinely girls LATAM mobile WL - CR DO GT PA (8326)",
+  "geo": "CR DO GT PA",
+  "offer": 8326,
+  "placements": [
+   "62670116",
+   "72335636",
+   "73376853",
+   "58071814",
+   "72608295",
+   "57830299",
+   "57793776",
+   "57923111"
+  ],
+  "teasers": [
+   "28137759",
+   "28137760",
+   "28137761"
+  ],
+  "status": "active",
+  "problems": []
+ }
+}

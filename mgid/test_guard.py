@@ -32,19 +32,35 @@ class Guard(unittest.TestCase):
         g.STATE = os.path.join(self.tmp, "state.json")
         g.ACTIONS = os.path.join(self.tmp, "actions.log")
         g.DB = os.path.join(self.tmp, "m.db")
-        self.blocked = {}
+        self.blocked = {}          # blacklist of a campaign, or its whitelist when ftype is "only"
+        self.ftype = {}
         self.spend = {}
         self.rows = {}
+        self.paused = []
+        self.unlisted = []
         g.v2_campaigns = lambda: self.rows
         g.v1_conversion = lambda cid: (None, None)
         g.widget_spend = lambda cid: self.spend[cid]
-        g.blacklist = lambda cid: (set(self.blocked.get(cid, ())), "except")
+        g.blacklist = lambda cid: (set(self.blocked.get(cid, ())), self.ftype.get(cid, "except"))
+        g.widgets_filter = lambda cid: (self.ftype.get(cid, "except"),
+                                        {w: [] for w in self.blocked.get(cid, ())})
         g.report = lambda *a, **k: []
 
         def block(cid, uids):
             self.blocked.setdefault(cid, set()).update(uids)
             return 200, {"id": cid}
         g.block = block
+
+        def whitelist_remove(cid, uids):
+            self.unlisted.append((cid, sorted(uids)))
+            self.blocked[cid] = self.blocked.get(cid, set()) - set(uids)
+            return 204, {}
+        g.whitelist_remove = whitelist_remove
+
+        def pause(cid, on=True):
+            self.paused.append(cid)
+            return {"name": "paused", "reason": "clientManuallyPaused"}
+        g.pause = pause
 
     def camp(self, cid, name, cpa, status="active", target=g.TARGET, strategy="targetCpa", price=None):
         buy = {"targetId": target, "deduplicateConversions": True}
@@ -168,6 +184,69 @@ class Guard(unittest.TestCase):
         g.block = lambda cid, uids: calls.append(uids) or real(cid, uids)
         self.run_guard()
         self.assertEqual(calls, [])
+
+
+    def test_whitelist_placement_that_spent_two_costs_without_lead_is_unlisted(self):
+        make_db(g.DB)
+        self.camp(1, "CIS wl", 0.44)
+        self.ftype[1] = "only"
+        self.blocked[1] = {"57628091", "64349629"}
+        self.spend = {1: {"57628091": (60, 0.95), "64349629": (5, 0.10)}}    # 2 x 0.44 = 0.88
+        self.run_guard()
+        self.assertEqual(self.unlisted, [(1, ["57628091"])])
+        self.assertEqual(self.blocked[1], {"64349629"})
+        self.assertEqual(self.paused, [])
+
+    def test_whitelist_placement_with_a_lead_of_this_campaign_stays(self):
+        make_db(g.DB, leads=[("1", "57628091", "2026-10-11 10:00:00")])
+        self.camp(1, "CIS wl", 0.44)
+        self.ftype[1] = "only"
+        self.blocked[1] = {"57628091"}
+        self.spend = {1: {"57628091": (60, 0.95)}}
+        self.run_guard()
+        self.assertEqual(self.unlisted, [])
+
+    def test_a_lead_of_another_campaign_does_not_keep_a_whitelist_placement(self):
+        make_db(g.DB, leads=[("2", "57628091", "2026-10-11 10:00:00")])
+        self.camp(1, "CIS wl", 0.44)
+        self.ftype[1] = "only"
+        self.blocked[1] = {"57628091", "64349629"}     # a second one keeps the list from emptying
+        self.spend = {1: {"57628091": (60, 0.95), "64349629": (5, 0.10)}}
+        self.run_guard()
+        self.assertEqual(self.unlisted, [(1, ["57628091"])])
+        self.assertEqual(self.paused, [])
+
+    def test_emptied_whitelist_pauses_the_campaign_and_removes_nothing(self):
+        make_db(g.DB)
+        self.camp(1, "LATAM wl", 0.62)
+        self.ftype[1] = "only"
+        self.blocked[1] = {"5"}
+        self.spend = {1: {"5": (300, 1.30)}}                                  # 2 x 0.62 = 1.24
+        self.run_guard()
+        self.assertEqual(self.unlisted, [])
+        self.assertEqual(self.paused, [1])
+
+    def test_spend_off_the_whitelist_is_warned_and_not_touched(self):
+        make_db(g.DB)
+        self.camp(1, "CIS wl", 0.44)
+        self.ftype[1] = "only"
+        self.blocked[1] = {"7", "8"}
+        self.spend = {1: {"7": (5, 0.02), "99": (100, 2.0)}}
+        out = self.run_guard()
+        self.assertIn("MGIDG_WARN", out)
+        self.assertEqual(self.unlisted, [])
+        self.assertEqual(self.paused, [])
+
+    def test_whitelist_dry_run_changes_nothing(self):
+        make_db(g.DB)
+        self.camp(1, "CIS wl", 0.44)
+        self.ftype[1] = "only"
+        self.blocked[1] = {"57628091", "64349629"}
+        self.spend = {1: {"57628091": (60, 0.95)}}
+        out = self.run_guard(apply=False)
+        self.assertEqual(self.unlisted, [])
+        self.assertEqual(self.paused, [])
+        self.assertIn("<- в блок", out)
 
 
 if __name__ == "__main__":

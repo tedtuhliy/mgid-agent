@@ -33,6 +33,10 @@ Spend per placement comes from v1 quality-analysis of each campaign over its who
 It is judged per campaign. A widget blocked in the Kazakh campaign keeps running in the Latvian
 one, because rate, geo and audience differ and so can the answer.
 
+A campaign on a WHITELIST (filter `only`, the copies of 11.10) is judged by the same rule. The cut is
+then the placement's removal from the list (v2 batch-delete). A placement that would leave the list
+empty is never removed: the campaign is paused instead, because an emptied filter is untested.
+
 Safety:
 - widget keys are cut to their leading digits on both sides. A sub-source row ("123s4") and the
   macro value ("123") then cannot miss each other and get a converting placement blocked;
@@ -51,7 +55,8 @@ from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mgid_api import TARGET, blacklist, block, buy_cpa, report, v1_conversion, v2_campaigns, widget_spend  # noqa: E402
+from mgid_api import (TARGET, blacklist, block, buy_cpa, pause, report, v1_conversion,  # noqa: E402
+                      v2_campaigns, whitelist_remove, widget_spend, widgets_filter)
 
 MULT = float(os.environ.get("MGID_GUARD_MULT", "2"))        # conversion costs a placement may spend
 FLAT = float(os.environ.get("MGID_GUARD_THRESH", "0.30"))   # $ for a campaign with no conversion cost
@@ -227,18 +232,56 @@ def main():
             a[1] += spent
         have_b = {base(w) for w in have}
         n_leads = lambda w: leads.get((str(cid), w), 0) + conv.get((str(cid), w), 0)  # noqa: E731
-        kill = sorted(w for w, (clicks, spent) in agg.items()
-                      if spent >= thresh and not n_leads(w) and w not in have_b and w not in bad)
+        if ftype == "only":
+            # A whitelist serves only its listed placements, so only a LISTED placement can spend
+            # without a lead. Spend off the list means the filter did not take: say so, do not guess.
+            stray = sorted(w for w, (clicks, spent) in agg.items() if w not in have_b and spent > 0)
+            if stray:
+                print(f"MGIDG_WARN {cid} {name}: расход вне вайтлиста на площадках {stray} — фильтр не действует?")
+            kill = sorted(w for w in have_b
+                          if agg.get(w, (0, 0.0))[1] >= thresh and not n_leads(w) and w not in bad)
+        else:
+            kill = sorted(w for w, (clicks, spent) in agg.items()
+                          if spent >= thresh and not n_leads(w) and w not in have_b and w not in bad)
         c.update(widgets=len(agg), spend=round(sum(a[1] for a in agg.values()), 2),
                  leads=sum(n for (k, _), n in leads.items() if k == str(cid)), blocked=len(have_b))
         print(f"MGIDG {cid} {name}: расход ${c['spend']:.2f} на {len(agg)} площадках, лидов {c['leads']}, "
               f"в блоке {len(have_b)} ({ftype}); к блоку (≥ ${thresh:.2f} = {basis}, без лида): {len(kill)}")
         if not apply:
             for w, (clicks, spent) in sorted(agg.items(), key=lambda kv: -kv[1][1])[:15]:
-                mark = "  <- в блок" if w in kill else ("  (уже в блоке)" if w in have_b else "")
+                listed = "в вайтлисте" if ftype == "only" else "уже в блоке"
+                mark = "  <- в блок" if w in kill else ("  (" + listed + ")" if w in have_b else "")
                 print(f"    {w:<12} {clicks:>5} кл ${spent:>6.2f}  лидов {n_leads(w)}{mark}")
             continue
         if not kill or hold:
+            continue
+        if ftype == "only":
+            remain = sorted(have_b - set(kill))
+            if not remain:
+                # The last placement of a whitelist is never removed: what an emptied `only` filter
+                # turns into was not tested. The campaign is paused instead.
+                st_p = pause(cid)
+                c["paused"] = st_p.get("name") == "paused"
+                log_action(f"pause camp={cid} ({name}) вайтлист исчерпан: все площадки ушли за ${thresh:.2f} без лида")
+                print(f"MGIDG_PAUSE {cid} {name}: вайтлист исчерпан, кампания {st_p.get('name')}/{st_p.get('reason')}")
+                continue
+            st_code, resp = whitelist_remove(cid, kill)
+            typ_after, left = widgets_filter(cid)
+            left_b = {base(w) for w in left}
+            done = [w for w in kill if w not in left_b]
+            missed = [w for w in kill if w in left_b]
+            c["blocked"] = len(left_b)
+            for w in done:
+                log_action(f"unlist camp={cid} ({name}) widget={w} spent=${agg[w][1]:.2f} clicks={agg[w][0]} leads=0 "
+                           f"thresh=${thresh:.2f} ({basis})")
+            print(f"MGIDG_UNLIST {cid} {name}: {len(done)} площадок снято с вайтлиста ({', '.join(done)}); "
+                  f"DELETE {st_code}; тип фильтра {typ_after}")
+            if typ_after != "only":
+                print(f"MGIDG_ERR {cid}: после снятия тип фильтра стал {typ_after}, а не only — проверить вручную")
+                c["error"] = f"тип фильтра {typ_after}"
+            if missed:
+                print(f"MGIDG_ERR {cid}: не сняты {missed}: {json.dumps(resp, ensure_ascii=False)[:200]}")
+                c["error"] = f"не сняты {len(missed)}"
             continue
         # A uid MGID does not know comes back in `data` with WIDGETS_WITH_THESE_UIDS_DO_NOT_EXIST
         # (HTTP 200); the valid ones in the same call are still added (checked 30.09).
