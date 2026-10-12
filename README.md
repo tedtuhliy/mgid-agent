@@ -275,7 +275,8 @@ asked (bid = cabinet rate), so the best case is break-even; set 0.7 to leave a m
 - Campaigns are found, not listed: every active campaign whose buy stage is the dating target 1274200.
   A copy is covered as soon as it is started.
 - A lead counts from either source: the middleware table `mgid_leads` (placement comes from the UTM)
-  or MGID's own buy conversion. Judged per campaign, spend over the campaign's lifetime.
+  or MGID's own buy conversion. Judged per campaign, on the statistics window (below): spend and leads
+  from `MGID_GUARD_SINCE`, 12.10, not from the campaign's first day.
 - The block list only grows, every write is read back. HOLD (nothing is blocked) when the UTM may have
   stopped reaching cpamatica or the tables are unreadable.
 
@@ -288,7 +289,35 @@ python3 -m unittest -v mgid/test_guard.py                       # offline checks
 
 Rollback: `cp /opt/mgid-guard/backup-<utc>/*.py /opt/mgid-guard/ && systemctl start mgid-guard.service`.
 Knobs in the unit: `MGID_GUARD_MULT=2`, `MGID_GUARD_THRESH=0.30` (only for a campaign with no
-conversion cost), `MGID_OFFERS` (offers that can be MGID leads).
+conversion cost), `MGID_GUARD_SINCE=2026-10-12` (statistics window), `MGID_OFFERS` (offers that can be MGID leads).
+
+**Statistics window since 12.10 (owner, 13.10).** «Статистики по ограничению площадок нужно собирать со вчера,
+когда мы поставили везде cpa tune формат, и теперь данные новые по новой цене клика нужно собрать, так что все
+площадки верни». Spend and leads now count from `MGID_GUARD_SINCE` (an MGID day, UTC+3), not from the
+campaign's first day. Spend per placement comes from the v2 report (`widget_spend(cid, since=...)`), leads from
+`mgid_leads` with `ts >= since_utc()` (12.10 00:00 UTC+3 is 11.10 21:00 UTC) and from MGID's own buy conversions
+of the same window. The HOLD check still compares with the newest lead that had a placement, of all time.
+
+Why. The twelve campaigns went to `targetCpa` $0.01 with a conversion cost of $0.01 on the evening of 11.10
+(about 20:40 UTC), so the threshold fell to 2 x $0.01 = $0.02, and the guard judged the lifetime money of the
+old price (manual clicks, about 1.5 cents) by it. Replayed on 12.10 (placements with a lead are left out):
+
+| campaign | placements that ever spent | spent $0.02 or more, no lead | in the block list |
+|---|---|---|---|
+| Tinely girls LATAM mobile (12502230) | 592 | 580 | 579 |
+| Tinely girls CIS mobile (12502232) | 257 | 243 | 243 |
+
+So 98% and 95% of the placements that had ever carried traffic were closed within hours. The list only grows, so
+the later rise of the cost to 30% of the payout did not reopen them, and the volume fell from about 186 clicks an
+hour on 11.10 to 10-50 on 12.10.
+
+13.10: the six exclusion lists (839 placements: 579 + 243 + 9 + 4 + 2 + 2) were removed with v2
+`DELETE .../campaigns/{id}/widgets/filters` and read back (filter `off`, domains, IPs and limits unchanged). With
+the old code the guard put back exactly the 64 and 25 placements over the 30% thresholds ($0.288 and $0.12)
+within 8 minutes, so the new code was deployed first (`deploy_guard_inferno.sh`, the unit carries
+`MGID_GUARD_SINCE`; the dry run on the box found 0 placements to block), and then the 64 + 25 were removed. The
+whitelists 12510729 and 12510730 were not touched. **When the conversion cost in the settings changes again, move
+`MGID_GUARD_SINCE` to that day**, or the old spend is judged by the new threshold and the same thing repeats.
 
 Derived from the `mgid` skill of the Tedbolt repo (`.claude/skills/mgid/scripts`), whose flat $0.30 rule it replaces.
 

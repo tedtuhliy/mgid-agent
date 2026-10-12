@@ -22,6 +22,7 @@ import os
 import urllib.error
 import urllib.parse
 import urllib.request
+from datetime import datetime, timedelta, timezone
 
 CID1, CID2 = 816929, 939031
 V1 = "https://api.mgid.com/v1/"
@@ -165,9 +166,25 @@ def block(cid, uids):
               {"widgetsFilterUid": "include, except, " + ", ".join(sorted(uids))})
 
 
-def widget_spend(cid, interval="all"):
-    """{widget uid: (clicks, spent $)} for one campaign, from quality-analysis (checked against
-    campaigns-stat to the cent on the older account). `all` covers the account's lifetime."""
+def _num(x):
+    return float(x.get("amount") if isinstance(x, dict) else (x or 0))
+
+
+def widget_spend(cid, interval="all", since=None):
+    """{widget uid: (clicks, spent $)} for one campaign.
+
+    Without `since`: v1 quality-analysis over `interval` (checked against campaigns-stat to the cent on
+    the older account); `all` covers the campaign's lifetime. With `since` ('YYYY-MM-DD', an MGID day,
+    UTC+3): the v2 report by placement from that day to today. quality-analysis takes only fixed
+    intervals, and the guard has to count from the day the CPA bidding began (see mgid_guard)."""
+    if since:
+        till = (datetime.now(timezone.utc) + timedelta(days=1)).date().isoformat()
+        out = {}
+        for r in report(since, till, ("clicks", "spent"), ("campaignId", "widgetId"), [cid]):
+            uid = str(r.get("widgetId"))
+            c, s = out.get(uid, (0, 0.0))
+            out[uid] = (c + int(_num(r.get("clicks"))), s + _num(r.get("spent")))
+        return out
     st, d = v1("GET", f"goodhits/campaigns/{cid}/quality-analysis/", campaignId=cid, dateInterval=interval)
     if st != 200 or not isinstance(d, dict) or d.get("errors"):
         raise RuntimeError(f"quality-analysis {cid}: {st} {json.dumps(d, ensure_ascii=False)[:200]}")

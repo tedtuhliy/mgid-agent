@@ -75,6 +75,7 @@ Type=oneshot
 EnvironmentFile=/etc/mgid-guard.env
 Environment=MGID_GUARD_MULT=2
 Environment=MGID_GUARD_THRESH=0.30
+Environment=MGID_GUARD_SINCE=2026-10-12
 Environment=MGID_OFFERS=9962,8326,8394,8395
 Environment=MGID_GUARD_STATE=/var/lib/mgid-guard/state.json
 Environment=MGID_GUARD_ACTIONS=/var/lib/mgid-guard/actions.log

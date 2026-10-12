@@ -24,11 +24,21 @@ The rule, per campaign:
 - Campaigns are found, not listed: every ACTIVE campaign of the account whose buy stage is the
   dating target 1274200. A copy is covered from the moment it is started, with no edit here.
 
-Spend per placement comes from v1 quality-analysis of each campaign over its whole life
-(`dateInterval=all`). A placement counts as having a lead when EITHER source says so:
+Spend per placement comes from the v2 report by placement, from MGID_GUARD_SINCE to today (the
+statistics window, below). A placement counts as having a lead, inside that window, when EITHER
+source says so:
 - our own record. The middleware on Inferno writes every MGID lead into `mgid_leads`, with the
   campaign and widget taken from the UTM (`source=mgid_<campaign>_<widget>`, set by mgid_utm.py);
 - or MGID's own buy-stage conversion on that widget (v2 report), fed by the same postback.
+
+The statistics window. Owner, 13.10: «статистики по ограничению площадок нужно собирать со вчера, когда
+мы поставили везде cpa tune формат, и теперь данные новые по новой цене клика нужно собрать, так что
+все площадки верни». Spend and leads count from MGID_GUARD_SINCE (an MGID day, UTC+3; 2026-10-12), not
+from the campaign's first day. Why: on 11.10 at 20:40 UTC the conversion cost in the settings went to
+$0.01, so the threshold fell to $0.02, and the guard judged the money of the old price (manual clicks at
+1.5 cents) by it. It closed 580 of the 592 placements of LATAM mobile and 243 of the 257 of CIS mobile
+that had ever spent, and since the list only grows they stayed closed after the cost went back up.
+Move MGID_GUARD_SINCE to the day of any later change of the cost, or a lower one will do it again.
 
 It is judged per campaign. A widget blocked in the Kazakh campaign keeps running in the Latvian
 one, because rate, geo and audience differ and so can the answer.
@@ -66,7 +76,8 @@ ACTIONS = os.environ.get("MGID_GUARD_ACTIONS", "/var/lib/mgid-guard/actions.log"
 # cpamatica offers our MGID links point at: Tinely PL 9962, LATAM 8326, CIS/Baltics 8394, UA 8395.
 # A lead of any other offer cannot be an MGID lead, whatever its source says (see our_leads).
 OFFERS = {int(x) for x in os.environ.get("MGID_OFFERS", "9962,8326,8394,8395").split(",") if x.strip()}
-START = "2026-09-30"                   # the campaigns' first day
+# First MGID day (UTC+3) whose spend and leads count: the day after the cost in the settings went to $0.01.
+SINCE = os.environ.get("MGID_GUARD_SINCE", "2026-10-12")
 NOSRC_SINCE = "2026-09-30 12:45:00"    # UTM with the placement live from here (UTC)
 
 
@@ -77,6 +88,11 @@ def now():
 def base(uid):
     m = re.match(r"\d+", str(uid))
     return m.group() if m else str(uid)
+
+
+def since_utc():
+    """SINCE (an MGID day, which starts at 00:00 UTC+3) as the UTC timestamp the middleware's `ts` uses."""
+    return (datetime.strptime(SINCE, "%Y-%m-%d") - timedelta(hours=3)).strftime("%Y-%m-%d %H:%M:%S")
 
 
 def offer_of(tx):
@@ -116,8 +132,13 @@ def our_leads():
     """({(campaign, widget): leads}, hold reason or None) from the middleware's own tables."""
     try:
         con = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
+        # whole life: only to tell when the newest lead WITH a placement arrived (the HOLD check below)
         rows = con.execute("SELECT camp, widget, COUNT(*), MAX(ts) FROM mgid_leads "
                            "WHERE camp IS NOT NULL AND camp != '' GROUP BY camp, widget").fetchall()
+        # inside the statistics window: what protects a placement
+        window = con.execute("SELECT camp, widget, COUNT(*) FROM mgid_leads "
+                             "WHERE camp IS NOT NULL AND camp != '' AND ts >= ? GROUP BY camp, widget",
+                             (since_utc(),)).fetchall()
         nosrc = con.execute("SELECT tx, ts FROM mgid_nosrc WHERE ts >= ?", (NOSRC_SINCE,)).fetchall()
         con.close()
     except sqlite3.Error as e:
@@ -127,7 +148,7 @@ def our_leads():
     # another buy; counting them kept this guard on HOLD from 01.10 19:30 on, doing nothing.
     last_nosrc = max((t for tx, t in nosrc if offer_of(tx) is None or offer_of(tx) in OFFERS), default=None)
     leads = defaultdict(int)
-    for c, w, n, _ in rows:
+    for c, w, n in window:
         if w:
             leads[(str(c), base(w))] += n
     last_placed = max((t for c, w, n, t in rows if w), default=None)
@@ -141,7 +162,7 @@ def mgid_conversions(camps):
     """{(campaign, widget): buy-stage conversions} as MGID counted them; {} if unavailable."""
     till = (datetime.now(timezone.utc) + timedelta(days=1)).date().isoformat()   # MGID days are UTC+3
     try:
-        rows = report(START, till, ("conversionsBuy",), ("campaignId", "widgetId"), list(camps))
+        rows = report(SINCE, till, ("conversionsBuy",), ("campaignId", "widgetId"), list(camps))
     except Exception as e:  # our own table is the primary signal; this one is extra
         print(f"MGIDG_WARN v2 report: {e}")
         return {}
@@ -175,6 +196,7 @@ def status():
         print("сторож ещё не запускался (нет state.json)")
         return
     print(f"последний прогон {st.get('last_run')} UTC, правило {st.get('mult')} x цена конверсии кампании, "
+          f"статистика с {st.get('since', 'начала жизни кампании')}, "
           f"{'HOLD: ' + st['hold'] if st.get('hold') else 'режет'}")
     if not st.get("camps"):
         print("под наблюдением нет ни одной активной кампании с целью 1274200")
@@ -207,7 +229,7 @@ def main():
         bad = set(json.load(open(STATE)).get("unknown_uids") or [])
     except (OSError, ValueError):
         bad = set()
-    st = {"last_run": now(), "mult": MULT, "hold": hold, "camps": {}}
+    st = {"last_run": now(), "mult": MULT, "since": SINCE, "hold": hold, "camps": {}}
     if hold:
         print(f"MGIDG_HOLD {hold} — площадки не режу")
     if not camps:
@@ -219,7 +241,7 @@ def main():
         if not info["cpa"]:
             print(f"MGIDG_NOCPA {cid} {name}: цены конверсии в настройках нет — {basis}")
         try:
-            spend = widget_spend(cid)
+            spend = widget_spend(cid, since=SINCE)
             have, ftype = blacklist(cid)
         except Exception as e:
             c["error"] = str(e)[:200]
@@ -245,7 +267,7 @@ def main():
                           if spent >= thresh and not n_leads(w) and w not in have_b and w not in bad)
         c.update(widgets=len(agg), spend=round(sum(a[1] for a in agg.values()), 2),
                  leads=sum(n for (k, _), n in leads.items() if k == str(cid)), blocked=len(have_b))
-        print(f"MGIDG {cid} {name}: расход ${c['spend']:.2f} на {len(agg)} площадках, лидов {c['leads']}, "
+        print(f"MGIDG {cid} {name}: с {SINCE} расход ${c['spend']:.2f} на {len(agg)} площадках, лидов {c['leads']}, "
               f"в блоке {len(have_b)} ({ftype}); к блоку (≥ ${thresh:.2f} = {basis}, без лида): {len(kill)}")
         if not apply:
             for w, (clicks, spent) in sorted(agg.items(), key=lambda kv: -kv[1][1])[:15]:

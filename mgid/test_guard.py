@@ -38,9 +38,15 @@ class Guard(unittest.TestCase):
         self.rows = {}
         self.paused = []
         self.unlisted = []
+        g.SINCE = "2026-10-01"       # the lead dates below sit inside this window; the window tests set their own
+        self.asked_since = []        # `since` the guard passed to widget_spend
         g.v2_campaigns = lambda: self.rows
         g.v1_conversion = lambda cid: (None, None)
-        g.widget_spend = lambda cid: self.spend[cid]
+
+        def widget_spend(cid, since=None):
+            self.asked_since.append(since)
+            return self.spend[cid]
+        g.widget_spend = widget_spend
         g.blacklist = lambda cid: (set(self.blocked.get(cid, ())), self.ftype.get(cid, "except"))
         g.widgets_filter = lambda cid: (self.ftype.get(cid, "except"),
                                         {w: [] for w in self.blocked.get(cid, ())})
@@ -247,6 +253,58 @@ class Guard(unittest.TestCase):
         self.assertEqual(self.unlisted, [])
         self.assertEqual(self.paused, [])
         self.assertIn("<- в блок", out)
+
+    # --- the statistics window (MGID_GUARD_SINCE) ----------------------------------------------
+
+    def test_window_starts_at_midnight_of_the_mgid_day(self):
+        g.SINCE = "2026-10-12"
+        self.assertEqual(g.since_utc(), "2026-10-11 21:00:00")        # an MGID day is UTC+3
+
+    def test_spend_is_asked_for_from_the_window_start(self):
+        g.SINCE = "2026-10-12"
+        make_db(g.DB)
+        self.camp(1, "KZ", 0.56)
+        self.spend = {1: {}}
+        self.run_guard()
+        self.assertEqual(self.asked_since, ["2026-10-12"])
+
+    def test_mgid_conversions_are_asked_for_from_the_window_start(self):
+        g.SINCE = "2026-10-12"
+        make_db(g.DB)
+        self.camp(1, "KZ", 0.56)
+        self.spend = {1: {}}
+        asked = []
+        g.report = lambda frm, *a, **k: asked.append(frm) or []
+        self.run_guard()
+        self.assertEqual(asked, ["2026-10-12"])
+
+    def test_lead_before_the_window_does_not_protect_a_placement(self):
+        # 12.10 00:00 MSK is 11.10 21:00 UTC: the first lead is a second too old, the second is in
+        g.SINCE = "2026-10-12"
+        make_db(g.DB, leads=[("1", "5", "2026-10-11 20:59:59"), ("1", "6", "2026-10-11 21:00:00")])
+        self.camp(1, "KZ", 0.56)
+        self.spend = {1: {"5": (90, 9.0), "6": (90, 9.0)}}
+        self.run_guard()
+        self.assertEqual(self.blocked, {1: {"5"}})
+
+    def test_hold_still_compares_with_the_newest_placed_lead_of_all_time(self):
+        # a placed lead from before the window and a lead without source after it: the UTM may have broken
+        g.SINCE = "2026-10-12"
+        make_db(g.DB, leads=[("1", "9", "2026-10-01 10:00:00")],
+                nosrc=[("35_5084_8394_c655cd2e24e4125fa4edd915145e834e", "2026-10-12 12:00:00")])
+        self.camp(1, "KZ", 0.56)
+        self.spend = {1: {"5": (90, 9.0)}}
+        self.assertIn("MGIDG_HOLD", self.run_guard())
+        self.assertEqual(self.blocked, {})
+
+    def test_state_records_the_window(self):
+        g.SINCE = "2026-10-12"
+        make_db(g.DB)
+        self.camp(1, "KZ", 0.56)
+        self.spend = {1: {}}
+        self.run_guard()
+        with open(g.STATE) as f:
+            self.assertEqual(g.json.load(f)["since"], "2026-10-12")
 
 
 if __name__ == "__main__":
