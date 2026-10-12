@@ -75,6 +75,28 @@ node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/cpa_share.py -
 python3 -m unittest -v mgid/test_cpa_share.py                                                       # offline checks
 ```
 
+## Ukraine: one CPA copy at 1 cent, sources blocklist off (12.10)
+
+Owner, 12.10: «На Украину есть объявления? Убери блеклист и запусти Украину на cpa tune 1 цент?»
+
+- **Offers.** Cabinet cards on 12.10. Active (status 1): Tinely - Mobile/Desktop [UA] SOI 18+ (Exclusive) (8395), $1.00;
+  Gentlove - Mobile/Desktop [UA] SOI 18+ (10276), $1.00; Tinely - Mobile / Desktop [UA] PPS 18+ (11181), $12.50.
+  Not approved (status 0): Sinder - Desktop/Mobile [UA] SOI (9027), $1.55; Natalie Dating - Desktop/Mobile [UA] SOI (NEW) (14564),
+  $0.85; Natalie Dating - Desktop/Mobile [UA] SOI (9542), $0.60; Amurest- Mobile [UA] SOI (M+F) 18+ (10135), $0.624;
+  OneAmour - Mobile / Desktop [UA] PPS 18+ (10976), $14.00.
+- **Campaign.** `mgid/ua_copy.py` created Tinely girls UA mobile CPA (12511370): geo Ukraine (MGID id 1), offer 8395,
+  targetCpa $0.01 and the same conversion cost in the settings, budget $20 a day. Mobile OS list and Russian language are
+  copied from Tinely girls CIS mobile (12502232); the three teasers are the CIS creatives. Read back before the start, all
+  matched. Started on 12.10 (`active/fulfilled`). The teasers are on moderation, so nothing is served until MGID approves
+  them; auto-launch after approval is on.
+- **Blocklist.** The account's sources blocklist had 103 entries, 52 of them .ua domains. It is switched off now
+  (`filterType off`, 0 entries). Per the API docs it acts only with sources optimization on; that is off in all 13 dating
+  campaigns and in the new one, so nothing else changed. The list is kept in `data/sources-blocklist-before-12.10.json`.
+  The placement blacklist of the CIS source (243 placements) is not copied into the new campaign.
+- **Spend.** The spend stop-loss counts the new campaign from zero and stops it at $3, like the others.
+- **Bid.** At a $1.00 payout one cent is 1% of the payout. The 10% rule (`cpa_share.py`) would bid $0.10; the owner's
+  figure is used here.
+
 ## Earlier: all dating campaigns on CPA 1 cent (11.10)
 
 Owner: «мужские удали, все остальные запускай, сбрось 3 бакса начиная с сейчас, считай».
