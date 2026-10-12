@@ -105,6 +105,12 @@ Owner, 12.10: «На Украину есть объявления? Убери б
   (MGID restricts Russian-language teasers in Ukraine under the language law, art. 32 of Law 2704-VIII;
   they had no impressions and no statistics; a deleted teaser cannot be restored).
 
+- **Second campaign (12.10).** `mgid/ua_v2.py` created Tinely girls UA mobile CPA v2 (12511469): geo Ukraine, offer 8395,
+  targetCpa and conversion cost $0.01, $20 a day, mobile OS list of the CIS source, **no language targeting**. The first
+  campaign had copied the browser language of the CIS source (Russian only, value [39]); the campaign that delivered 557
+  clicks in Ukraine had none. The ten Ukrainian teasers (titles and images of 12478529, our link) are in it, on
+  moderation. Started on 12.10 (`active/fulfilled`). The first campaign 12511370 is paused, not deleted.
+
 ## Earlier: all dating campaigns on CPA 1 cent (11.10)
 
 Owner: «мужские удали, все остальные запускай, сбрось 3 бакса начиная с сейчас, считай».
