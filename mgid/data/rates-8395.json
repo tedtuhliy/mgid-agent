@@ -1,0 +1,15 @@
+{
+ "offer": 8395,
+ "name": "Tinely - Mobile/Desktop [UA] SOI 18+ (Exclusive)",
+ "status": 1,
+ "goal": "Correct registration 18+",
+ "default_group": "",
+ "countries": [
+  "UA"
+ ],
+ "daily_cap": 100,
+ "payouts": {
+  "UA": 1.0
+ },
+ "fetched": "2026-10-12 18:37 UTC"
+}
