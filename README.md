@@ -48,11 +48,11 @@ Payouts from the cabinet cards, USD:
 
 | campaign | geos | bid |
 |---|---|---|
-| 12502227 Tinely girls PL desktop | PL | 0.20 |
+| 12502227 Tinely girls PL mobile+desktop | PL | 0.20 |
 | 12502228 Tinely girls PL mobile | PL | 0.20 |
-| 12502229 Tinely girls LATAM desktop | CL, CR, DO, EC, GT, HN, PA | 0.048 (PA) |
+| 12502229 Tinely girls LATAM mobile+desktop | CL, CR, DO, EC, GT, HN, PA | 0.048 (PA) |
 | 12502230 Tinely girls LATAM mobile | CL, CR, DO, EC, GT, HN, PA | 0.048 (PA) |
-| 12502231 Tinely girls CIS desktop | KZ, LV, MD, EE, LT, GE, AZ | 0.02 (AZ) |
+| 12502231 Tinely girls CIS mobile+desktop | KZ, LV, MD, EE, LT, GE, AZ | 0.02 (AZ) |
 | 12502232 Tinely girls CIS mobile | KZ, LV, MD, EE, LT, GE, AZ | 0.02 (AZ) |
 | 12510622 Tinely girls KZ mobile CPA | KZ | 0.056 |
 | 12510623 Tinely girls LT mobile CPA | LT | 0.044 |
@@ -63,6 +63,11 @@ Payouts from the cabinet cards, USD:
 | 12510766 Tinely girls LATAM CPA - CR DO GT PA (8326) | CR, DO, GT, PA | 0.048 (PA) |
 
 All 13 were written and read back: PATCH 204, and the bid and the conversion cost both read back as the new value.
+
+Later on 12.10 the three desktop-only campaigns (12502227, 12502229, 12502231) also got the mobile OS list of their
+sibling mobile campaign. Their OS targeting was the desktop ids 8, 9, 10; now it is those plus the 38 mobile ids,
+41 in total, so they serve mobile and desktop. The names were changed to match. Bids and conversion cost were not
+touched, and all nine of their teasers were already active.
 
 ```bash
 node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/cpa_share.py 12502227 ...           # plan, changes nothing
