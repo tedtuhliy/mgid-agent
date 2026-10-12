@@ -8,16 +8,17 @@ from cpa_share import bid, by_country, geos_of
 
 
 class Bid(unittest.TestCase):
-    def test_single_geo_is_a_tenth_of_its_payout(self):
-        self.assertEqual(bid(["PL"], {"PL": 2.0}), (0.2, "PL"))
+    def test_single_geo_is_a_fifth_of_its_payout(self):
+        self.assertEqual(bid(["PL"], {"PL": 2.0}), (0.4, "PL"))
 
     def test_several_geos_take_the_lowest_payout(self):
         pay = {"CL": 1.0, "CR": 0.8, "DO": 0.62, "EC": 0.62, "GT": 0.7, "HN": 0.8, "PA": 0.48}
-        self.assertEqual(bid(["CR", "DO", "GT", "PA"], pay), (0.048, "PA"))
+        self.assertEqual(bid(["CR", "DO", "GT", "PA"], pay), (0.096, "PA"))
 
     def test_cents_are_exact(self):
-        self.assertEqual(bid(["EE"], {"EE": 1.48}), (0.148, "EE"))
-        self.assertEqual(bid(["LV"], {"LV": 0.32}), (0.032, "LV"))
+        self.assertEqual(bid(["EE"], {"EE": 1.48}), (0.296, "EE"))
+        self.assertEqual(bid(["LV"], {"LV": 0.32}), (0.064, "LV"))
+        self.assertEqual(bid(["KZ"], {"KZ": 0.56}), (0.112, "KZ"))
 
     def test_geo_without_a_payout_is_refused(self):
         with self.assertRaises(ValueError):

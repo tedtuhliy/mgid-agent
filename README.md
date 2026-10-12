@@ -24,17 +24,19 @@ tailscale ssh root@100.121.239.113 'systemctl disable --now mgid-spend-stop.time
 
 On install (11.10, 11:26) the three active campaigns (two whitelists, the LATAM CPA test) had $0.00 spend.
 
-## Dating campaigns on CPA = 10% of the payout per geo (12.10)
+## Dating campaigns on CPA = 20% of the payout per geo (12.10)
 
 Owner, 12.10: «Точней поставь 10% от выплат на гео ставку cpatune» (replaces the flat 5 cents asked earlier that day).
+Later the same day the owner raised it to 20%: «Давай поставим может тогда 20% от лида ставку на дейтинг? Но на Украине
+оставь 1 цент ставку». Ukraine keeps its own 1-cent bid and is not passed to the script.
 
-`mgid/cpa_share.py` sets each dating campaign's `targetCpa` bid to 10% of the cpamatica payout for its geo. The
+`mgid/cpa_share.py` sets each dating campaign's `targetCpa` bid to 20% of the cpamatica payout for its geo. The
 conversion cost in the campaign settings gets the same number, and the placement guard stops a placement after 2x
-that cost without a lead. The payouts come from `mgid/data/rates-<offer>.json`, saved from the offer cards by
-`mgid/cpam_rates.py`.
+that cost without a lead, so its threshold follows the new bid. The payouts come from `mgid/data/rates-<offer>.json`,
+saved from the offer cards by `mgid/cpam_rates.py`.
 
-- **One bid per campaign.** MGID cannot price geos apart inside one campaign, so a campaign on several geos gets 10%
-  of the LOWEST payout among them: no geo is bid above 10% of its own payout. Exact per-geo bids mean one campaign per
+- **One bid per campaign.** MGID cannot price geos apart inside one campaign, so a campaign on several geos gets 20%
+  of the LOWEST payout among them: no geo is bid above 20% of its own payout. Exact per-geo bids mean one campaign per
   geo, which is a new campaign, not a setting.
 - **Teasers are not touched** (MGID refuses CPC changes under CPA bidding).
 - **Offer 9962** has one country and no payout group: its goal payout ($2.00, PL) is the PL rate. `cpam_rates.py`
@@ -48,21 +50,21 @@ Payouts from the cabinet cards, USD:
 
 | campaign | geos | bid |
 |---|---|---|
-| 12502227 Tinely girls PL mobile+desktop | PL | 0.20 |
-| 12502228 Tinely girls PL mobile | PL | 0.20 |
-| 12502229 Tinely girls LATAM mobile+desktop | CL, CR, DO, EC, GT, HN, PA | 0.048 (PA) |
-| 12502230 Tinely girls LATAM mobile | CL, CR, DO, EC, GT, HN, PA | 0.048 (PA) |
-| 12502231 Tinely girls CIS mobile+desktop | KZ, LV, MD, EE, LT, GE, AZ | 0.02 (AZ) |
-| 12502232 Tinely girls CIS mobile | KZ, LV, MD, EE, LT, GE, AZ | 0.02 (AZ) |
-| 12510622 Tinely girls KZ mobile CPA | KZ | 0.056 |
-| 12510623 Tinely girls LT mobile CPA | LT | 0.044 |
-| 12510625 Tinely girls LV mobile CPA | LV | 0.032 |
-| 12510626 Tinely girls EE mobile CPA | EE | 0.148 |
-| 12510729 Tinely girls LATAM mobile WL - CR DO GT PA (8326) | CR, DO, GT, PA | 0.048 (PA) |
-| 12510730 Tinely girls CIS mobile WL - KZ AZ MD LT (8394) | KZ, AZ, MD, LT | 0.02 (AZ) |
-| 12510766 Tinely girls LATAM CPA - CR DO GT PA (8326) | CR, DO, GT, PA | 0.048 (PA) |
+| 12502227 Tinely girls PL mobile+desktop | PL | 0.40 |
+| 12502228 Tinely girls PL mobile | PL | 0.40 |
+| 12502229 Tinely girls LATAM mobile+desktop | CL, CR, DO, EC, GT, HN, PA | 0.096 (PA) |
+| 12502230 Tinely girls LATAM mobile | CL, CR, DO, EC, GT, HN, PA | 0.096 (PA) |
+| 12502231 Tinely girls CIS mobile+desktop | KZ, LV, MD, EE, LT, GE, AZ | 0.04 (AZ) |
+| 12502232 Tinely girls CIS mobile | KZ, LV, MD, EE, LT, GE, AZ | 0.04 (AZ) |
+| 12510622 Tinely girls KZ mobile CPA | KZ | 0.112 |
+| 12510623 Tinely girls LT mobile CPA | LT | 0.088 |
+| 12510625 Tinely girls LV mobile CPA | LV | 0.064 |
+| 12510626 Tinely girls EE mobile CPA | EE | 0.296 |
+| 12510729 Tinely girls LATAM mobile WL - CR DO GT PA (8326) | CR, DO, GT, PA | 0.096 (PA) |
+| 12510730 Tinely girls CIS mobile WL - KZ AZ MD LT (8394) | KZ, AZ, MD, LT | 0.04 (AZ) |
+| 12510766 Tinely girls LATAM CPA - CR DO GT PA (8326) | CR, DO, GT, PA | 0.096 (PA) |
 
-All 13 were written and read back: PATCH 204, and the bid and the conversion cost both read back as the new value.
+All 13 were rewritten at 20% on 12.10 and read back: PATCH 204, and the bid and the conversion cost both read back as the new value. The 10% step was written earlier the same day.
 
 Later on 12.10 the three desktop-only campaigns (12502227, 12502229, 12502231) also got the mobile OS list of their
 sibling mobile campaign. Their OS targeting was the desktop ids 8, 9, 10; now it is those plus the 38 mobile ids,
@@ -94,7 +96,7 @@ Owner, 12.10: «На Украину есть объявления? Убери б
   campaigns and in the new one, so nothing else changed. The list is kept in `data/sources-blocklist-before-12.10.json`.
   The placement blacklist of the CIS source (243 placements) is not copied into the new campaign.
 - **Spend.** The spend stop-loss counts the new campaign from zero and stops it at $3, like the others.
-- **Bid.** At a $1.00 payout one cent is 1% of the payout. The 10% rule (`cpa_share.py`) would bid $0.10; the owner's
+- **Bid.** At a $1.00 payout one cent is 1% of the payout. The 20% rule (`cpa_share.py`) would bid $0.20; the owner's
   figure is used here.
 - **Creatives.** On 12.10 the ten approved teasers of the old test campaign 12478529 (account 816921, Ukrainian titles and
   images) were copied into 12511370 by `mgid/ua_transfer.py`: title and image as they are, our standard link

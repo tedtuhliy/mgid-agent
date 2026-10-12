@@ -3,8 +3,8 @@
 Owner, 12.10: «На Украину есть объявления? Убери блеклист и запусти Украину на cpa tune 1 цент?»
 
 - Offer 8395, Tinely - Mobile/Desktop [UA] SOI 18+ (Exclusive): the cabinet card is ACTIVE, payout $1.00, UA only.
-- Bid and conversion cost are $0.01, the owner's figure. At a $1.00 payout that is 1% of the payout; the 10% rule
-  in cpa_share.py would bid $0.10. The owner's figure is used here.
+- Bid and conversion cost are $0.01, the owner's figure. At a $1.00 payout that is 1% of the payout; the 20% rule
+  in cpa_share.py would bid $0.20. The owner's figure is used here.
 - No placement blacklist: the copy takes only the mobile settings of the source campaign, so the 243 placements
   blocked on it stay behind. The account's sources blocklist was switched off on 12.10; the list it held is in
   data/sources-blocklist-before-12.10.json.

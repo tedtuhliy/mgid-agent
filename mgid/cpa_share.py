@@ -1,12 +1,14 @@
-"""CPA bid of dating campaigns = 10% of the cpamatica payout for their geo.
+"""CPA bid of dating campaigns = 20% of the cpamatica payout for their geo.
 
     python3 cpa_share.py 12502227 12502228           # plan: prints the bid and the current settings, changes nothing
     python3 cpa_share.py --apply 12502227 12502228   # PATCH each campaign, then read it back
 
-Owner, 12.10: «Точней поставь 10% от выплат на гео ставку cpatune».
+Owner, 12.10: «Точней поставь 10% от выплат на гео ставку cpatune», then the same day: «Давай поставим может
+тогда 20% от лида ставку на дейтинг? Но на Украине оставь 1 цент ставку». Ukraine is not passed in here: its
+campaigns keep their own 1-cent bid.
 
 - One campaign has one bid: MGID cannot price geos apart inside a campaign. A campaign on several geos gets
-  10% of the LOWEST payout among them, so no geo is bid above 10% of its own payout. Exact per-geo bids would
+  20% of the LOWEST payout among them, so no geo is bid above 20% of its own payout. Exact per-geo bids would
   need one campaign per geo, which is a new campaign rather than a setting.
 - The bid (targetCpa price) and the conversion cost in the campaign settings are the same number. The guard
   stops a placement after 2x that cost without a lead, so its threshold follows the bid.
@@ -24,7 +26,7 @@ import time
 from cpam_rates import load
 from mgid_api import CID1, CID2, TARGET, V2, buy_cpa, call, v1, v2_campaigns
 
-SHARE = 0.10
+SHARE = 0.20
 # MGID country ids from dictionaries/countries, checked 12.10
 COUNTRY_ID = {"KZ": 5, "LV": 8, "MD": 9, "EE": 10, "LT": 11, "GE": 15, "AZ": 17, "PL": 19,
               "CL": 86, "CR": 89, "DO": 94, "EC": 96, "GT": 108, "HN": 111, "PA": 158}
@@ -95,7 +97,7 @@ def patch_campaign(cid, name, cpa):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="CPA bid = 10% of the cabinet payout per geo")
+    ap = argparse.ArgumentParser(description="CPA bid = 20% of the cabinet payout per geo")
     ap.add_argument("cids", nargs="+", type=int)
     ap.add_argument("--apply", action="store_true")
     a = ap.parse_args()
