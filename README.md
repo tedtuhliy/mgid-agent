@@ -100,7 +100,11 @@ Owner, 12.10: «На Украину есть объявления? Убери б
   images) were copied into 12511370 by `mgid/ua_transfer.py`: title and image as they are, our standard link
   (`aff_sub5=mgid`, the old one had `aff_sub5=native`). The old account was only read. The new teasers are on moderation;
   the record is in `data/ua-old-teasers.json`. Some creations hit MGID's teaser add limit (`LS_TEASER_ADD_LIMIT_ERROR`),
-  so the script is run again until all ten are there.
+  so 7 of the 10 are in. `python3 ua_transfer.py --apply` adds the other three when the limit allows (tried 12:27,
+  12:37, 12:47, 12:57 and 13:04 UTC, all refused). The three Russian CIS teasers (28144941–28144943) are still in the
+  campaign: MGID restricts Russian-language teasers in Ukraine under the language law (art. 32 of Law 2704-VIII), so
+  they get no impressions there. A pause through the API was accepted but did not take effect; their status stays
+  onModeration. Deleting them is a separate decision.
 
 ## Earlier: all dating campaigns on CPA 1 cent (11.10)
 
