@@ -4,8 +4,8 @@
     python3 spend_stop.py --apply    # pauses the campaigns at or above the limit and reads each one back
     python3 spend_stop.py --reset    # starts the count from now: remembers every campaign's lifetime spend
 
-Owner, 11.11: «настрой на инферно бота который стопнет кампании после спенда в 3 бакса».
-Owner, 11.11: «сбрось 3 бакса начиная с сейчас считай».
+Owner, 11.10: «настрой на инферно бота который стопнет кампании после спенда в 3 бакса».
+Owner, 11.10: «сбрось 3 бакса начиная с сейчас считай».
 
 - Spend is the lifetime spend from v1 campaigns-stat (dateInterval=all), in dollars. The bot counts from
   the baseline: the spend each campaign had when the count was last reset. A campaign that is not in the

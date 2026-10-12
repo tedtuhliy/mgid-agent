@@ -1,0 +1,27 @@
+{
+ "offer": 8326,
+ "name": "Tinely - Mobile/Desktop [EC, CR, GT, HN, DO, PA, CL] SOI 25+ (Exclusive)",
+ "status": 1,
+ "goal": "Correct registration 25+",
+ "default_group": "EC",
+ "countries": [
+  "CL",
+  "CR",
+  "DO",
+  "EC",
+  "GT",
+  "HN",
+  "PA"
+ ],
+ "daily_cap": 300,
+ "payouts": {
+  "CL": 1.0,
+  "CR": 0.8,
+  "DO": 0.62,
+  "EC": 0.62,
+  "GT - Mobile/Desktop": 0.7,
+  "HN": 0.8,
+  "PA": 0.48
+ },
+ "fetched": "2026-10-12 10:49 UTC"
+}

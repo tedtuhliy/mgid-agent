@@ -40,6 +40,9 @@ def rates(card, goal_name=None):
         if p.get("payoutCurrencyCode") != 840:
             raise SystemExit(f"{p.get('name')}: валюта {p.get('payoutCurrencyCode')}, а не USD")
         pay[p["name"]] = float(p["payout"])
+    if not pay and len(o.get("countries") or []) == 1:
+        # one country and no payout group (offer 9962, PL, 12.10): the goal's own payout is that country's rate
+        pay[o["countries"][0]] = float(g["payout"])
     return {"offer": o["id"], "name": o["name"], "status": o.get("status"), "goal": g.get("name"),
             "default_group": default, "countries": o.get("countries"), "daily_cap": o.get("dailyCaps"),
             "payouts": dict(sorted(pay.items())),

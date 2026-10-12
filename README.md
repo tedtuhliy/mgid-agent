@@ -4,12 +4,12 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
-## Spend stop-loss on Inferno (11.11)
+## Spend stop-loss on Inferno (11.10)
 
 Owner: «настрой на инферно бота который стопнет кампании после спенда в 3 бакса». `mgid/spend_stop.py` runs on
 Inferno every 2 minutes (`mgid-spend-stop.timer`, code in `/opt/mgid-spend-stop/`). It pauses every ACTIVE
 MGID campaign on the account whose spend **since the last reset** reaches $3. `--reset` stores every campaign's lifetime spend as its
-baseline; a campaign created later counts all its spend. The reset was run on 11.11 at 20:40:49 UTC for 23 campaigns.
+baseline; a campaign created later counts all its spend. The reset was run on 11.10 at 20:40:49 UTC for 23 campaigns.
 It never starts anything. Restarting a campaign does not reset its count; only `--reset` does. If the spend cannot
 be read, nothing is paused. Limit: `MGID_SPEND_LIMIT` in the unit. Log of stops: `/var/lib/mgid-spend-stop/actions.log`.
 
@@ -22,16 +22,62 @@ TAILSCALE="<tailscale> --socket=<sock>" bash mgid/deploy_spend_stop_inferno.sh  
 tailscale ssh root@100.121.239.113 'systemctl disable --now mgid-spend-stop.timer'   # switch off
 ```
 
-On install (11.11, 11:26) the three active campaigns (two whitelists, the LATAM CPA test) had $0.00 spend.
+On install (11.10, 11:26) the three active campaigns (two whitelists, the LATAM CPA test) had $0.00 spend.
 
-## All dating campaigns on CPA 1 cent (11.11)
+## Dating campaigns on CPA = 10% of the payout per geo (12.10)
+
+Owner, 12.10: «Точней поставь 10% от выплат на гео ставку cpatune» (replaces the flat 5 cents asked earlier that day).
+
+`mgid/cpa_share.py` sets each dating campaign's `targetCpa` bid to 10% of the cpamatica payout for its geo. The
+conversion cost in the campaign settings gets the same number, and the placement guard stops a placement after 2x
+that cost without a lead. The payouts come from `mgid/data/rates-<offer>.json`, saved from the offer cards by
+`mgid/cpam_rates.py`.
+
+- **One bid per campaign.** MGID cannot price geos apart inside one campaign, so a campaign on several geos gets 10%
+  of the LOWEST payout among them: no geo is bid above 10% of its own payout. Exact per-geo bids mean one campaign per
+  geo, which is a new campaign, not a setting.
+- **Teasers are not touched** (MGID refuses CPC changes under CPA bidding).
+- **Offer 9962** has one country and no payout group: its goal payout ($2.00, PL) is the PL rate. `cpam_rates.py`
+  reads it that way.
+
+Payouts from the cabinet cards, USD:
+
+- Tinely - Mobile/Desktop [PL] SOI 18+ (Exclusive) (9962): PL 2.00
+- Tinely - Mobile/Desktop [EC, CR, GT, HN, DO, PA, CL] SOI 25+ (Exclusive) (8326): CL 1.00, CR 0.80, DO 0.62, EC 0.62, GT 0.70, HN 0.80, PA 0.48
+- Tinely - Mobile/Desktop [LT, LV, EE, KZ, MD, GE, AZ] SOI 18+ (Exclusive) (8394): AZ 0.20, EE 1.48, GE 0.468, KZ 0.56, LT 0.44, LV 0.32, MD 0.20
+
+| campaign | geos | bid |
+|---|---|---|
+| 12502227 Tinely girls PL desktop | PL | 0.20 |
+| 12502228 Tinely girls PL mobile | PL | 0.20 |
+| 12502229 Tinely girls LATAM desktop | CL, CR, DO, EC, GT, HN, PA | 0.048 (PA) |
+| 12502230 Tinely girls LATAM mobile | CL, CR, DO, EC, GT, HN, PA | 0.048 (PA) |
+| 12502231 Tinely girls CIS desktop | KZ, LV, MD, EE, LT, GE, AZ | 0.02 (AZ) |
+| 12502232 Tinely girls CIS mobile | KZ, LV, MD, EE, LT, GE, AZ | 0.02 (AZ) |
+| 12510622 Tinely girls KZ mobile CPA | KZ | 0.056 |
+| 12510623 Tinely girls LT mobile CPA | LT | 0.044 |
+| 12510625 Tinely girls LV mobile CPA | LV | 0.032 |
+| 12510626 Tinely girls EE mobile CPA | EE | 0.148 |
+| 12510729 Tinely girls LATAM mobile WL - CR DO GT PA (8326) | CR, DO, GT, PA | 0.048 (PA) |
+| 12510730 Tinely girls CIS mobile WL - KZ AZ MD LT (8394) | KZ, AZ, MD, LT | 0.02 (AZ) |
+| 12510766 Tinely girls LATAM CPA - CR DO GT PA (8326) | CR, DO, GT, PA | 0.048 (PA) |
+
+All 13 were written and read back: PATCH 204, and the bid and the conversion cost both read back as the new value.
+
+```bash
+node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/cpa_share.py 12502227 ...           # plan, changes nothing
+node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/cpa_share.py --apply 12502227 ...   # PATCH, then read back
+python3 -m unittest -v mgid/test_cpa_share.py                                                       # offline checks
+```
+
+## Earlier: all dating campaigns on CPA 1 cent (11.10)
 
 Owner: «мужские удали, все остальные запускай, сбрось 3 бакса начиная с сейчас, считай».
 
 - **Deleted** the six men's campaigns 12501886–12501891 (Tinely dating, men's creatives). Teasers went with them.
 - **Switched** the twelve remaining campaigns (girls 12502227–12502232, whitelists 12510729–12510730, CPA copies
   12510622, 12510623, 12510625, 12510626) to `targetCpa` $0.01 with conversion cost 0.01, with
-  `mgid/cpa_cent.py`. Each was read back. The LATAM CPA test (12510766) already had the same settings.
+  `mgid/cpa_cent.py` (removed on 12.10, replaced by `mgid/cpa_share.py`). Each was read back. The LATAM CPA test (12510766) already had the same settings.
 - **MGID refuses teaser CPC changes under CPA bidding** ("CPC changes are not allowed with CPA bidding strategy
   campaign"), so the teasers keep their old CPC; the algorithm sets the click price.
 - **Relaunched** the paused ones at 20:41 UTC: 12502227–12502232 and 12510622. The rest were already active.
