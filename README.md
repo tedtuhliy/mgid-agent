@@ -24,6 +24,38 @@ tailscale ssh root@100.121.239.113 'systemctl disable --now mgid-spend-stop.time
 
 On install (11.10, 11:26) the three active campaigns (two whitelists, the LATAM CPA test) had $0.00 spend.
 
+## Mainstream dating tests, 15 campaigns prepared paused (12.10)
+
+Owner, 12.10: «Подготовь все гео на тест» for the approved offers that had no campaign on MGID yet. `mgid/mainstream_tests.py`
+creates them paused (`--apply`; the plan without `--apply` creates nothing): UTM, three women-alone creatives each with the
+title in the geo's language, mobile OS list, $20 a day (the MGID minimum), and the bid at 30% of the payout.
+Read back: bids and conversion cost equal, geo right, campaign language matches the creative (Spanish, English, French,
+German, Danish, Norwegian), all 45 teasers on moderation. Nothing runs until the owner says so.
+
+| campaign | offer | geo | payout | bid |
+|---|---|---|---|---|
+| 12511741 Tinely ES mobile CPA | Tinely - Mobile/Desktop [ES] SOI 18+ (Exclusive) (9960) | ES | $1.35 | $0.405 |
+| 12511742 Tinely ZA mobile CPA | Tinely - Mobile/Desktop [ZA] SOI 25+ (Exclusive) (8331) | ZA | $0.78 | $0.234 |
+| 12511743 Tinely HT mobile CPA | Tinely - Mobile/Desktop [HT] SOI 25+ (Exclusive) (8330) | HT | $0.23 | $0.069 |
+| 12511744 Tinely CO mobile CPA | Tinely - Mobile/Desktop [CO] SOI 25+ (Exclusive) (8329) | CO | $0.19 | $0.057 |
+| 12511745 Date4you US mobile CPA | Date4you - Desktop/Mobile [US] SOI (Mainstream) (5368) | US | €1.60 ≈ $1.84 | $0.552 |
+| 12511746 iDates GB mobile CPA | iDates - Desktop/Mobile [UK] SOI (Mainstream) (5655) | GB | €1.84 ≈ $2.12 | $0.6348 |
+| 12511747 iDates DE mobile CPA | iDates - Desktop/Mobile [DE] SOI (Mainstream) (5656) | DE | €1.60 ≈ $1.84 | $0.552 |
+| 12511748 Singles-Meets US mobile CPA | Singles-Meets - Desktop/Mobile [US] SOI (Mainstream) (9047) | US | €1.56 ≈ $1.79 | $0.5382 |
+| 12511751 Singles-meets US mobile CPA | Singles-meets - Desktop/Mobile [US] SOI (9014) | US | €1.56 ≈ $1.79 | $0.5382 |
+| 12511753 Singles-meets DK mobile CPA | Singles-meets - Desktop/Mobile [DK] SOI (9018) | DK | €3.40 ≈ $3.91 | $1.173 |
+| 12511755 SingleMeets NO mobile CPA | SingleMeets - Desktop/Mobile [NO] SOI (10233) | NO | €3.50 ≈ $4.03 | $1.2075 |
+| 12511758 Singles-Meets IE mobile CPA | Singles-Meets - Desktop/Mobile [Multi-Geo] SOI (Mainstream) (9045), IE only | IE | €2.35 ≈ $2.70 | $0.8107 |
+| 12511761 Flirtooy AU mobile CPA | Flirtooy (Mainstream) - Desktop/Mobile [WW] SOI+revShare (8978), AU only | AU | $5 | $1.50 |
+| 12511763 Flirtooy CA mobile CPA | Flirtooy (Mainstream), CA only (8978) | CA | $4 | $1.20 |
+| 12511764 Flirtooy NZ mobile CPA | Flirtooy (Mainstream), NZ only (8978) | NZ | $4 | $1.20 |
+
+- **EUR payouts** are converted at 1.15 USD per EUR, an estimate: the dated rates found were 1.14–1.16 (late July to early
+  August 2026), with no quote for today. Check before starting and correct the bids if the rate has moved.
+- **Not in this batch:** the other geos of Singles-Meets Multi-Geo (CZ, DK, GR, IL, IT, NL, SE, UK) and of Flirtooy
+  (UK, SE, NL, NO at $5; DE, CH, AT, US, IT, ES, FR at $4; others $2), which need a campaign and a title per geo; the
+  adult-recommended Tinely offers (AR, MX, BR, IL, UK male-only) and the Gentlove offers.
+
 ## Dating campaigns on CPA = 30% of the payout per geo (12.10)
 
 Owner, 12.10: «Точней поставь 10% от выплат на гео ставку cpatune» (replaces the flat 5 cents asked earlier that day).
