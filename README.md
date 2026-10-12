@@ -96,6 +96,11 @@ Owner, 12.10: «На Украину есть объявления? Убери б
 - **Spend.** The spend stop-loss counts the new campaign from zero and stops it at $3, like the others.
 - **Bid.** At a $1.00 payout one cent is 1% of the payout. The 10% rule (`cpa_share.py`) would bid $0.10; the owner's
   figure is used here.
+- **Creatives.** On 12.10 the ten approved teasers of the old test campaign 12478529 (account 816921, Ukrainian titles and
+  images) were copied into 12511370 by `mgid/ua_transfer.py`: title and image as they are, our standard link
+  (`aff_sub5=mgid`, the old one had `aff_sub5=native`). The old account was only read. The new teasers are on moderation;
+  the record is in `data/ua-old-teasers.json`. Some creations hit MGID's teaser add limit (`LS_TEASER_ADD_LIMIT_ERROR`),
+  so the script is run again until all ten are there.
 
 ## Earlier: all dating campaigns on CPA 1 cent (11.10)
 
