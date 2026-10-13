@@ -13,6 +13,12 @@ AZ/MD $0.20), «На польшу поставить половину от вы�
 подними ставку» (read as 30% + 10 points = 40% of the lowest LATAM payout, PA $0.48 = 0.192). Those are --share 0.6,
 0.5 and 0.4. Run without --share, the script puts a campaign back to 30%.
 
+Later the same day: «Подними ставки на польшу и ещё на 30% от стоимости конверсии но Украину поставь 30 центов ставку»
+(Poland 50% + 30 points = 80% of $2.00 = 1.60; +30% of the old bid would be 1.30), «Украину поставь 30 центов» (the
+Ukraine campaign read 0.20 with an empty conversion cost; 30% of its $1.00 payout is exactly 0.30, so the default share
+does it), «На латам тоже подними ставку ещё на 30%» (40% + 30 points = 70% of PA $0.48 = 0.336; +30% of the old bid
+would be 0.25). Those are --share 0.8, the default and 0.7.
+
 - One campaign has one bid: MGID cannot price geos apart inside a campaign. A campaign on several geos gets
   30% of the LOWEST payout among them, so no geo is bid above 30% of its own payout. Exact per-geo bids would
   need one campaign per geo, which is a new campaign rather than a setting.
@@ -108,7 +114,7 @@ def main():
     ap.add_argument("cids", nargs="+", type=int)
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--share", type=float, default=SHARE,
-                    help="share of the lowest payout, default 0.30; the 13.10 regions: CIS 0.6, PL 0.5, LATAM 0.4")
+                    help="share of the lowest payout, default 0.30; the 13.10 regions: CIS 0.6, PL 0.8, LATAM 0.7")
     a = ap.parse_args()
     rows = v2_campaigns(FIELDS)
     failed = 0

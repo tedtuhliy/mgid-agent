@@ -165,6 +165,24 @@ Owner, 13.10, after the first three: «Я Балтике подними до 50%
 together with the others, so say if it was meant too (50% of $0.56 = 0.28).
 `cpa_share.py --share 0.6|0.5|0.4` reproduces the new numbers; without `--share` it puts a campaign back to 30%.
 
+**13.10, second round (owner).** «Подними ставки на польшу и ещё на 30% от стоимости конверсии но Украину поставь 30
+центов ставку», then «На латам тоже подними ставку ещё на 30%». «Another 30% of the conversion cost» is read the way the
+LATAM «+10% of the payout» was: +30 points of the payout on top of the share the region already had. If +30% of the
+old bid was meant, that is Poland 1.30 and LATAM 0.25 (`--share 0.65` and `--share 0.52` put them there). Each PATCH was
+read back (204, bid and conversion cost equal). The guard's threshold follows the cost (2 x the new cost) and a higher
+cost only loosens it, so the statistics window stays at 12.10.
+
+| region | campaigns | share of the lowest payout | bid before -> now |
+|---|---|---|---|
+| Poland | 12502227, 12502228 | 0.8 of PL $2.00 (50% + 30 points) | 1.00 -> 1.60 |
+| LATAM | 12502229, 12502230, 12510729, 12510766 | 0.7 of PA $0.48 (40% + 30 points) | 0.192 -> 0.336 |
+| Ukraine | 12511469 | 0.3 of UA $1.00 (the default share) | 0.20, conversion cost empty -> 0.30, both |
+
+The Ukraine campaign is not at the 0.30 of the 12.10 table above: on 13.10 it read targetCpa 0.20 with an empty
+conversion cost (not written by `cpa_share.py`). The guard had been using its bid as the cost (a CPA campaign without a
+cost falls back to its price, threshold $0.40); now both settings are 0.30 and the threshold is $0.60. The first Ukraine
+campaign 12511370 is paused and stays at $0.01. The payout at 80% leaves Poland $0.40 a lead below its $2.00.
+
 ```bash
 node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/cpa_share.py 12502227 ...           # plan, changes nothing
 node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/cpa_share.py --apply 12502227 ...   # PATCH, then read back
