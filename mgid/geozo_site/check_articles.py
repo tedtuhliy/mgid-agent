@@ -21,9 +21,9 @@ ART = HERE / "articles"
 NUMBERED = {"food-storage": 9, "houseplants-autumn": 7}      # numbered sections: the title promises the number
 ARTICLE_KEYS = ["rubric", "title", "teaser", "description", "heroAlt", "body"]
 # characters that the language must show somewhere in its ten articles, and characters that betray a sibling language
-MUST = {"bg": "ъщчшжя", "pl": "ąęłśżćńó", "ro": "ăâîșț", "cs": "řěůčžš", "pt": "ãçõéê", "it": "àèìòù", "es": "ñáéíóú",
+MUST = {"ru": "ыэъщшчжю", "bg": "ъщчшжя", "pl": "ąęłśżćńó", "ro": "ăâîșț", "cs": "řěůčžš", "pt": "ãçõéê", "it": "àèìòù", "es": "ñáéíóú",
         "de": "äöü", "hu": "őűáéíóö", "sk": "äľĺŕôčšž", "sl": "čšž", "sr": "čšžćđ"}
-FORBID = {"sk": "řěů", "cs": "ĺľŕôä", "pl": "ăřěůșț", "sl": "ćđ", "sr": "", "pt": "ñ", "es": "ãõ", "it": "ñãõ",
+FORBID = {"ru": "іїєґў", "sk": "řěů", "cs": "ĺľŕôä", "pl": "ăřěůșț", "sl": "ćđ", "sr": "", "pt": "ñ", "es": "ãõ", "it": "ñãõ",
           "ro": "ş" + "ţ", "hu": "ãõñł"}                      # ş/ţ are the cedilla forms, wrong for Romanian
 HEALTHY = re.compile(r"\bdetox|\bimmun|\bimun|\bdiabet|\bcholester|\bkolester|\bcancer|\btumo|\brheum|\barthr|\bartrit|"
                      r"\bslimm|\bmiracle|\bcure\b|\bheals?\b|\btherap|\bterap|\blečen|\bleczen|\bliječ|\bgyógy|"
@@ -237,6 +237,32 @@ def check_lang(lang):
                 E(f"pages.json: у {k} должно быть {want_n[k]} абзаца(ов)")
         if "contact@arcadiablog.com" not in json.dumps(pg.get("contact", {}), ensure_ascii=False):
             E("pages.json: в contact нет contact@arcadiablog.com")
+
+    # ebook.json (optional until the writers have delivered it: only checked when the file exists)
+    f = d / "ebook.json"
+    if f.exists():
+        try:
+            eb = json.loads(f.read_text(encoding="utf-8"))
+        except Exception as e:
+            eb = {}
+            E(f"ebook.json не читается: {e}")
+        lim = {"title": (20, 80), "subtitle": (20, 140), "intro": (150, 520), "toc": (3, 30), "chapter": (3, 20),
+               "cta_title": (8, 60), "cta_text": (40, 200), "cta_meta": (8, 90), "cta_button": (4, 30),
+               "closing_title": (4, 60), "closing_text": (60, 320)}
+        for k in mc.EBOOK_KEYS:
+            v = eb.get(k)
+            if not isinstance(v, str) or not lim[k][0] <= len(v) <= lim[k][1]:
+                E(f"ebook.json: {k} нужна строка длиной {lim[k][0]}-{lim[k][1]} знаков (сейчас {len(v) if isinstance(v, str) else v!r})")
+                continue
+            if "!" in v:
+                E(f"ebook.json: восклицательный знак в {k}")
+            if BAD_MARKUP.search(v.replace("{pages}", "")) or EMOJI.search(v):
+                E(f"ebook.json: разметка или эмодзи в {k}")
+        if "{pages}" not in str(eb.get("cta_meta", "")):
+            E("ebook.json: cta_meta без {pages}")
+        m = HEALTHY.search(json.dumps(eb, ensure_ascii=False))
+        if m:
+            W(f"ebook.json: подозрение на лечебное обещание «{m.group(0)}»")
 
     # teasers.json
     f = d / "teasers.json"

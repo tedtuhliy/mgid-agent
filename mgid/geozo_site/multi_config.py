@@ -45,11 +45,14 @@ LANGS = {
            "geos": ["RS"], "notes": "Serbian of Serbia, ekavian, written in the LATIN alphabet (latinica), "
                                     "with đ š č ć ž."},
 }
+LANGS["ru"] = {"name": "Russian (for readers in Kazakhstan)", "html": "ru", "ad_label": "Реклама", "script": "cyrillic",
+               "mgid_lang": 39, "geos": ["KZ"],
+               "notes": "Standard Russian as written for readers in Kazakhstan: no references that only make sense in Russia."}
 # Switzerland reads the German pages with ss instead of ß: the route is derived from de at build time.
 DERIVED = {"ch": {"from": "de", "html": "de-CH", "replace": [("ß", "ss")], "geos": ["CH"]}}
 
 # how a language names itself (language switcher in the footer, /blog/ chooser)
-NATIVE = {"bg": "Български", "pl": "Polski", "ro": "Română", "cs": "Čeština", "pt": "Português", "it": "Italiano",
+NATIVE = {"ru": "Русский", "bg": "Български", "pl": "Polski", "ro": "Română", "cs": "Čeština", "pt": "Português", "it": "Italiano",
           "es": "Español", "de": "Deutsch", "ch": "Deutsch (Schweiz)", "hu": "Magyar", "sk": "Slovenčina",
           "sl": "Slovenščina", "sr": "Srpski"}
 HTML_LANG = {"ch": "de-CH"}
@@ -59,6 +62,7 @@ GEOS = {
     "BG": (27, "bg"), "PL": (19, "pl"), "RO": (13, "ro"), "CZ": (16, "cs"), "PT": (35, "pt"), "IT": (22, "it"),
     "ES": (18, "es"), "DE": (3, "de"), "AT": (36, "de"), "CH": (37, "ch"), "HU": (39, "hu"), "SK": (47, "sk"),
     "SI": (172, "sl"), "RS": (165, "sr"),
+    "KZ": (5, "ru"),                     # the Kazakhstan tests of /dom/ and /dom2/ moved here (campaigns of geozo_campaign.py)
 }
 
 # LuckyFeed income, USD, 15.08-13.10 (for the order of the waves and the report; not a bid input)
@@ -100,3 +104,7 @@ UI_KEYS = ["brand_tag", "read_also", "read_min", "home_title", "home_intro", "al
            "nav_contact", "nav_privacy", "disclosure", "cookie", "cookie_more", "cookie_ok", "disclaimer", "months",
            "date_fmt"]
 PAGE_KEYS = ["about", "contact", "privacy"]       # pages.json: {key: {"title": str, "paras": [str, ...]}}
+# ebook.json (written by the language writer): the free e-book (PDF) that is compiled from the ten articles of the language
+# and offered on every article page; {pages} in cta_meta is replaced by the real page count at build time.
+EBOOK_KEYS = ["title", "subtitle", "intro", "toc", "chapter", "cta_title", "cta_text", "cta_meta", "cta_button",
+              "closing_title", "closing_text"]

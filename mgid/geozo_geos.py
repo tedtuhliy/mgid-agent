@@ -8,6 +8,10 @@ Owner, 13.10 night: «запустить кампании на эти гео и 
     python3 geozo_geos.py --apply [--only PL,BG]  # create the campaigns PAUSED and add their two teasers (moderation)
     python3 geozo_geos.py --start [--only PL,BG]  # start them (needs a positive balance)
     python3 geozo_geos.py --status              # campaigns, teaser states, today's numbers
+    python3 geozo_geos.py --set-cpa BG=0.03,PL=0.05   # change the CPA target of live campaigns (and their names)
+    python3 geozo_geos.py --make-goal ebook     # create the MGID goal «E-book download» (event ebook, category Download)
+    python3 geozo_geos.py --goal ebook --only PT,ES   # make the buy-stage goal of these campaigns the e-book download
+                                                # (back: --goal geozoclick); the learning of the campaign starts over
 
 Everything but the geo is the Kazakhstan test (geozo_campaign.py): campaign type `product`, bidding targetCpa with the
 goal «Geozo block click» (target 1280981, event geozoclick, no deduplication: one conversion per counted click on a
@@ -41,8 +45,12 @@ TARGET_ID = 1280981                    # «Geozo block click», eventName geozoc
 LINK = SITE + "/blog/{route}/{slug}.html?click_id={{click_id}}&source=mgid_{{campaign_id}}_{{widget_id}}"
 IMAGE = SITE + "/blog/c/{slug}.jpg"
 ORDER = ["BG", "PL", "RO", "CZ", "PT", "IT", "ES", "DE", "CH", "AT", "HU", "SK", "SI", "RS"]    # the owner's order
-CPA = {"BG": 0.01, "RO": 0.01, "RS": 0.01, "SK": 0.01, "SI": 0.01, "HU": 0.015,
-       "PL": 0.02, "CZ": 0.02, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.04, "AT": 0.04, "CH": 0.05}
+# 14.10 ~01:25 MSK: after 80 minutes of approved teasers and no impressions in BG RO SK SI HU PL CZ DE AT the target was raised
+# (--set-cpa); PT ES IT CH already delivered at the starting values and keep them. The names of the campaigns carry the value.
+CPA = {"BG": 0.03, "RO": 0.03, "RS": 0.01, "SK": 0.03, "SI": 0.03, "HU": 0.04,
+       "PL": 0.05, "CZ": 0.05, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.10, "AT": 0.10, "CH": 0.05}
+START_CPA = {"BG": 0.01, "RO": 0.01, "RS": 0.01, "SK": 0.01, "SI": 0.01, "HU": 0.015,
+             "PL": 0.02, "CZ": 0.02, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.04, "AT": 0.04, "CH": 0.05}
 SECOND = ["bread-storage", "fruit-and-vegetables", "houseplants-autumn"]           # the rotating second creative
 FIRST = "herbs-in-a-jar"
 OUT = HERE / "data" / "geozo-geos.json"
@@ -50,6 +58,18 @@ OUT = HERE / "data" / "geozo-geos.json"
 
 def name_of(geo):
     return f"Arcadia {geo} content mobile CPA {CPA[geo]:g}"
+
+
+def saved():
+    return json.loads(OUT.read_text()) if OUT.exists() else {}
+
+
+def cid_of(geo, live):
+    """The campaign of a geo: by the id saved at creation (names carry the CPA, which changes), else by name."""
+    cid = (saved().get(geo) or {}).get("id")
+    if cid in live:
+        return cid
+    return next((i for i, x in live.items() if x.get("name") == name_of(geo)), None)
 
 
 def picks(geo):
@@ -135,12 +155,83 @@ def start(geos, live):
     if bal is None or float(bal) <= 0:
         raise SystemExit("баланс не положительный, не запускаю")
     for g in geos:
-        cid = next((i for i, x in live.items() if x.get("name") == name_of(g)), None)
+        cid = cid_of(g, live)
         if not cid:
             print(f"{g}: кампании нет")
             continue
         s = pause(cid, on=False)
         print(f"{g}: {cid} {s.get('name')}/{s.get('reason')}")
+        time.sleep(1)
+
+
+def set_cpa(changes, live):
+    """PATCH the CPA target (bid and the value of the buy-stage goal) of live campaigns and put it in their names.
+    MGID is slow to show a PATCH in reads, so the answer of the PATCH itself is what is printed."""
+    sv = saved()
+    for g, new in changes.items():
+        cid = cid_of(g, live)
+        if not cid:
+            print(f"{g}: кампании нет")
+            continue
+        old = CPA[g]
+        CPA[g] = new
+        body = {"name": name_of(g), "isAutoLaunchAdsAfterApproval": True,
+                "bidding": {"strategy": "targetCpa", "price": new},
+                "conversionTracking": {"type": "sensors", "decisionStage": None, "interestStage": None,
+                                       "buyStage": {"targetId": TARGET_ID, "deduplicateConversions": False,
+                                                    "conversionValue": new}}}
+        st, d = call("PATCH", V2 + f"account/{CID2}/campaigns/{cid}", body)
+        print(f"{g} {cid}: {old:g} -> {new:g}  PATCH {st} {'' if st in (200, 204) else json.dumps(d, ensure_ascii=False)[:300]}")
+        if st in (200, 204) and g in sv:
+            sv[g]["cpa"], sv[g]["name"] = new, name_of(g)
+        time.sleep(1)
+    OUT.write_text(json.dumps(sv, ensure_ascii=False, indent=1))
+
+
+GOALS = {   # event name -> (name, description, category). v2 targets of this account accept the categories 1 and 9 only
+            # (14.10: 2, 3, 4, 5 answer «Selected category is not available»), so «Download» is category 9 «Other».
+    "geozoclick": ("Geozo block click", "one conversion per real click on a Geozo ad block (relay /dom/lead)", 1),
+    "ebook": ("E-book download", "arcadiablog.com/blog: the free e-book (PDF) was downloaded with an MGID click id "
+                                 "(nginx mirrors /blog/dl/<lang>.pdf to the postback)", 9),
+}
+
+
+def goal_id(event):
+    st, d = call("GET", V2 + f"account/{CID2}/targets")
+    rows = d.get("data") if isinstance(d, dict) else d
+    return next((int(t["id"]) for t in (rows or []) if t.get("eventName") == event), None)
+
+
+def make_goal(event):
+    have = goal_id(event)
+    if have:
+        print(f"цель {event} уже есть: {have}")
+        return have
+    name, desc, cat = GOALS[event]
+    st, d = call("POST", V2 + f"account/{CID2}/targets", {"type": "postback", "eventName": event, "name": name,
+                                                          "description": desc, "categoryId": cat})
+    print(f"создание цели {event}: {st} {json.dumps(d, ensure_ascii=False)[:300]}")
+    return goal_id(event)
+
+
+def set_goal(geos, event, live):
+    """Make `event` the buy-stage goal of the geo campaigns (the value stays the CPA of the geo; the e-book goal is deduplicated
+    per click id because a download can be requested twice, a block click is counted every time)."""
+    tid = goal_id(event)
+    if not tid:
+        raise SystemExit(f"в MGID нет цели {event}: сначала --make-goal {event}")
+    for g in geos:
+        cid = cid_of(g, live)
+        if not cid:
+            print(f"{g}: кампании нет")
+            continue
+        body = {"name": name_of(g), "isAutoLaunchAdsAfterApproval": True,
+                "bidding": {"strategy": "targetCpa", "price": CPA[g]},
+                "conversionTracking": {"type": "sensors", "decisionStage": None, "interestStage": None,
+                                       "buyStage": {"targetId": tid, "deduplicateConversions": event == "ebook",
+                                                    "conversionValue": CPA[g]}}}
+        st, d = call("PATCH", V2 + f"account/{CID2}/campaigns/{cid}", body)
+        print(f"{g} {cid}: цель {event} ({tid})  PATCH {st} {'' if st in (200, 204) else json.dumps(d, ensure_ascii=False)[:300]}")
         time.sleep(1)
 
 
@@ -153,8 +244,7 @@ def status(geos, live):
     except Exception as e:          # the report must not hide the states
         print("отчёт MGID недоступен:", str(e)[:120])
     for g in geos:
-        name = name_of(g)
-        cid = next((i for i, x in live.items() if x.get("name") == name), None)
+        cid = cid_of(g, live)
         if not cid:
             print(f"{g}: нет кампании")
             continue
@@ -176,6 +266,9 @@ def main():
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--start", action="store_true")
     ap.add_argument("--status", action="store_true")
+    ap.add_argument("--set-cpa", default="", help="GEO=price,GEO=price")
+    ap.add_argument("--make-goal", default="", choices=["", *GOALS])
+    ap.add_argument("--goal", default="", choices=["", *GOALS], help="switch the buy-stage goal of the campaigns of --only")
     ap.add_argument("--only", default="")
     a = ap.parse_args()
     geos = [g for g in ORDER if not a.only or g in a.only.split(",")]
@@ -183,6 +276,18 @@ def main():
     if bad:
         raise SystemExit(f"нет таких гео в списке: {bad}")
     live = v2_campaigns(("name", "status", "bidding"))
+    if a.make_goal:
+        return make_goal(a.make_goal)
+    if a.goal:
+        if not a.only:
+            raise SystemExit("--goal только вместе с --only: цель меняют на нескольких кампаниях, а не на всех сразу")
+        return set_goal(geos, a.goal, live)
+    if a.set_cpa:
+        changes = {kv.split("=")[0]: float(kv.split("=")[1]) for kv in a.set_cpa.split(",")}
+        bad = [g for g in changes if g not in ORDER]
+        if bad:
+            raise SystemExit(f"нет таких гео в списке: {bad}")
+        return set_cpa(changes, live)
     if a.status:
         return status(geos, live)
     if a.start:

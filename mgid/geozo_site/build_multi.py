@@ -34,6 +34,7 @@ sys.path.insert(0, str(HERE))
 
 import build as kz  # noqa: E402  the Kazakhstan build: blocks, loader, brand, rendering of article blocks
 import check_articles as ck  # noqa: E402
+import make_ebooks as mb  # noqa: E402
 import multi_config as mc  # noqa: E402
 
 ROOT = "blog"
@@ -169,11 +170,26 @@ def words(body):
     return kz.words(body)
 
 
-def build(out_root, langs, force=False):
+def book_card(route, eb, pages):
+    """The offer card of the free e-book: not an ad (no label, own colour), a plain link to /blog/dl/<route>.pdf; the script
+    adds click_id and source to it like to any internal link, nginx counts the request and tells MGID."""
+    href = f"/{ROOT}/dl/{route}.pdf"
+    return (f'<aside class="book"><a class="book-cover js-int" href="{href}" tabindex="-1" aria-hidden="true">'
+            f'<img src="/{ROOT}/ebook/cover-{route}.jpg" width="84" height="119" alt="" loading="lazy"></a>'
+            f'<div class="book-body"><p class="book-title">{esc(eb["cta_title"])}</p><p class="book-text">{esc(eb["cta_text"])}</p>'
+            f'<p class="book-meta">{esc(eb["cta_meta"].format(pages=pages))}</p>'
+            f'<a class="book-btn js-int" href="{href}">{esc(eb["cta_button"])}</a></div></aside>')
+
+
+def build(out_root, langs, force=False, ebooks=True):
     out = Path(out_root) / ROOT
     shutil.rmtree(out, ignore_errors=True)
     for sub in ("h", "t", "c"):
         (out / sub).mkdir(parents=True)
+    pages = {}
+    if ebooks:
+        want = mb.routes_with_book(langs)
+        pages = mb.build(want, out_root) if want else {}
 
     # shared files
     js_src = (HERE / "dom.js").read_text(encoding="utf-8").replace("__CFG__", json.dumps(kz.js_cfg(ROOT), ensure_ascii=False))
@@ -200,7 +216,11 @@ def build(out_root, langs, force=False):
 
     for route in langs:
         cfg = mc.LANGS.get(route) or {"html": mc.DERIVED[route]["html"], "ad_label": mc.LANGS[mc.DERIVED[route]["from"]]["ad_label"]}
-        ui, pages, arts, teasers = load_lang(route)
+        ui, pages_json, arts, teasers = load_lang(route)
+        card = ""
+        if route in pages:
+            _, eb, _ = mb.load(route)
+            card = book_card(route, eb, pages[route])
         base = f"/{ROOT}/{route}/"
         d = out / route
         d.mkdir(parents=True)
@@ -229,8 +249,9 @@ def build(out_root, langs, force=False):
       <p class="rubric">{esc(a['rubric'])}</p>
       <h1>{esc(a['title'])}</h1>
       <p class="meta">{esc(fmt_date(ui, article_date(slug, today)))} · {esc(ui['read_min'].format(n=max(2, round(words(a['body']) / 190))))}</p>
-{kz.body_html_dense(a['body'], label=label)}
+{kz.body_html_dense(a['body'], label=label, inserts={2: card} if card else None)}
       <p class="note">{esc(ui['disclaimer'])}</p>
+{card}
 {kz.slot(kz.BLOCK_DENSE_C, compact=True, label=label)}
       <section class="related">
         <h3>{esc(ui['read_also'])}</h3>
@@ -248,6 +269,7 @@ def build(out_root, langs, force=False):
         main = f"""    <div class="inner home">
       <h1>{esc(ui['home_title'])}</h1>
       <p class="intro">{esc(ui['home_intro'])}</p>
+{card}
       <h2>{esc(ui['all_articles'])}</h2>
       <div class="cards">
 {cards}
@@ -257,7 +279,7 @@ def build(out_root, langs, force=False):
 
         # service pages
         for key in mc.PAGE_KEYS:
-            p = pages[key]
+            p = pages_json[key]
             body = "\n".join(f"      <p>{esc(x)}</p>" for x in p["paras"])
             main = f"""    <div class="inner text">
       <h1>{esc(p['title'])}</h1>
@@ -283,6 +305,7 @@ def main(argv=None):
     ap.add_argument("--out", required=True)
     ap.add_argument("--langs", default="", help="comma separated routes, default: every language folder that exists (+ ch with de)")
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--no-ebook", action="store_true", help="skip the PDF books (and so the offer cards): quick builds")
     ap.add_argument("--force", action="store_true", help="build a language even if the checker reports errors")
     a = ap.parse_args(argv)
     want = [x for x in a.langs.split(",") if x]
@@ -301,7 +324,7 @@ def main(argv=None):
     if a.check:
         print("годятся:", good)
         return good
-    return build(a.out, good, a.force)
+    return build(a.out, good, a.force, ebooks=not a.no_ebook)
 
 
 if __name__ == "__main__":

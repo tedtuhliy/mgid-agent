@@ -15,3 +15,11 @@ a.brand{text-decoration:none}
 .langs{margin:14px 0 0;font-size:14px;line-height:2.1}
 .langs a{margin-right:12px;color:var(--muted);text-decoration:none;white-space:nowrap}
 .langlist a{display:block;padding:14px 0;font-weight:700;font-size:18px}
+/* Карточка бесплатной электронной книги (не реклама: без метки, свой цвет, кнопка скачивания) */
+.book{display:flex;gap:14px;align-items:center;margin:22px 0;padding:14px;border:1px solid var(--line);border-left:4px solid var(--brand);background:#f4f8f6;border-radius:8px}
+.book .book-cover{flex:none;line-height:0}
+.book .book-cover img{display:block;width:84px;height:auto;border-radius:3px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.book .book-title{margin:0 0 4px;font-weight:700;font-size:18px;line-height:1.25}
+.book .book-text{margin:0 0 6px;font-size:15px;line-height:1.45}
+.book .book-meta{margin:0 0 10px;font-size:13px;color:var(--muted)}
+.book .book-btn{display:inline-block;padding:11px 18px;background:var(--accent);color:#fff;font-weight:700;font-size:16px;line-height:1.2;border-radius:8px;text-decoration:none}

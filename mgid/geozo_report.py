@@ -15,7 +15,9 @@ multilingual site (/blog/<lang>/, geozo_geos.py). Four sources, each on its own 
     Austria and Switzerland, which share /blog/de/, stay apart); a view with a 32-character click id is a real MGID click,
     the rest are moderators, bots and our own checks;
  3. the relay log /var/log/nginx/arcadiablog.dom.log: one line per signal sent to MGID after a real click on an ad block,
-    with MGID's HTTP status (up=); the page that sent it is in ref=, which carries the same source=;
+    with MGID's HTTP status (up=); the page that sent it is in ref=, which carries the same source=. The free e-book
+    (/blog/dl/<lang>.pdf?click_id=..&source=..) writes two lines per download: the request itself (up=-) and the mirrored
+    postback of the goal «E-book download» (up=<MGID's status>); the first is counted as «скач», the second as «ebook up=200»;
  4. Geozo publisher statistics of the blocks (clicks, revenue), when the API answers (it has answered 429 so far).
 RPV = Geozo revenue / MGID clicks; a click costs more than it earns when RPV < MGID cost per click.
 """
@@ -61,7 +63,8 @@ def ssh(cmd):
 
 def mgid_rows(day):
     live = v2_campaigns(("name", "status", "bidding"))
-    ids = {label: next((i for i, x in live.items() if x.get("name") == name), None) for label, name in CAMPAIGNS}
+    ids = {label: (gg.cid_of(label, live) if label in gg.ORDER else
+                   next((i for i, x in live.items() if x.get("name") == name), None)) for label, name in CAMPAIGNS}
     rep = {}
     try:
         for x in report(day, day, ("impressions", "clicks", "spent", "conversionsBuy"), ("campaignId",)):
@@ -121,15 +124,22 @@ def site_rows(day):
         if m and c:
             views[int(m.group(1))] += 1
             ids.setdefault(int(m.group(1)), set()).add(c.group(1))
-    sig = {}
+    sig, dl, dl_up = {}, Counter(), Counter()
     for l in rel.splitlines():
         t = re.search(r"\[(\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d)\]", l)
-        if "/dom/lead" not in l or not t or not d0 <= datetime.fromisoformat(t.group(1)) < d1:
+        if not t or not d0 <= datetime.fromisoformat(t.group(1)) < d1:
             continue
         m = re.search(r"source=mgid_(\d+)_", l)
         u = re.search(r"up=(\S+)", l)
-        sig.setdefault(int(m.group(1)) if m else 0, Counter())[u.group(1) if u else "-"] += 1
-    return views, {k: len(v) for k, v in ids.items()}, sig
+        cid = int(m.group(1)) if m else 0
+        if "/dom/lead" in l:
+            sig.setdefault(cid, Counter())[u.group(1) if u else "-"] += 1
+        elif "/blog/dl/" in l and re.search(r"click_id=[0-9a-f]{32}\b", l):
+            if u and u.group(1) != "-":
+                dl_up[cid] += (u.group(1) == "200")
+            else:
+                dl[cid] += 1
+    return views, {k: len(v) for k, v in ids.items()}, sig, dl, dl_up
 
 
 def geozo_part(day):
@@ -167,11 +177,11 @@ def main():
 
 def one_day(day):
     rows = mgid_rows(day)
-    views, uniq, sig = site_rows(day)
+    views, uniq, sig, dl, dl_up = site_rows(day)
     print(f"отчёт за {day} (сутки MGID = МСК)")
     print(f"{'кампания':10} {'статус':22} {'ставка':>6} {'тизеры':26} {'показы':>6} {'клики':>5} {'расход$':>8} {'конв':>4} "
-          f"{'заходы':>6} {'клик-id':>7} {'сигналы':>7} {'up=200':>6}")
-    tot = [0, 0, 0.0, 0, 0, 0, 0, 0]
+          f"{'заходы':>6} {'клик-id':>7} {'сигналы':>7} {'up=200':>6} {'скач':>4} {'ebook200':>8}")
+    tot = [0, 0, 0.0, 0, 0, 0, 0, 0, 0, 0]
     for label, _ in CAMPAIGNS:
         r = rows[label]
         if not r:
@@ -179,11 +189,13 @@ def one_day(day):
             continue
         cid = r["cid"]
         s = sig.get(cid, Counter())
-        v = [r["imp"], r["clk"], r["spent"], r["conv"], views.get(cid, 0), uniq.get(cid, 0), sum(s.values()), s.get("200", 0)]
+        v = [r["imp"], r["clk"], r["spent"], r["conv"], views.get(cid, 0), uniq.get(cid, 0), sum(s.values()), s.get("200", 0),
+             dl.get(cid, 0), dl_up.get(cid, 0)]
         tot = [a + b for a, b in zip(tot, v)]
         print(f"{label:10} {r['status'][:22]:22} {r['bid']!s:>6} {str(r['teasers'])[:26]:26} {v[0]:>6} {v[1]:>5} {v[2]:>8.4f} "
-              f"{v[3]:>4} {v[4]:>6} {v[5]:>7} {v[6]:>7} {v[7]:>6}")
-    print(f"{'ИТОГО':10} {'':22} {'':>6} {'':26} {tot[0]:>6} {tot[1]:>5} {tot[2]:>8.4f} {tot[3]:>4} {tot[4]:>6} {tot[5]:>7} {tot[6]:>7} {tot[7]:>6}")
+              f"{v[3]:>4} {v[4]:>6} {v[5]:>7} {v[6]:>7} {v[7]:>6} {v[8]:>4} {v[9]:>8}")
+    print(f"{'ИТОГО':10} {'':22} {'':>6} {'':26} {tot[0]:>6} {tot[1]:>5} {tot[2]:>8.4f} {tot[3]:>4} {tot[4]:>6} {tot[5]:>7} {tot[6]:>7} "
+          f"{tot[7]:>6} {tot[8]:>4} {tot[9]:>8}")
     print("(заходы = страницы с source=mgid_<кампания>_ и 32-значным click_id; среди них и проверки модераторов MGID)")
     if sig.get(0):
         print(f"сигналов без кампании в ref: {sum(sig[0].values())} (наши проверки)")

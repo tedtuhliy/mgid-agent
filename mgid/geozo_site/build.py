@@ -104,10 +104,10 @@ def body_html(blocks):
     return "\n".join(out)
 
 
-def body_html_dense(blocks, label="Реклама"):
+def body_html_dense(blocks, label="Реклама", inserts=None):
     """A slot right after the lead, then after every DENSE_EVERY-th block of text (the lead counts as the first); never
     between a heading and its first paragraph, never right before the closing slot of the page. `label` is the word
-    for «advertisement» in the page's language."""
+    for «advertisement» in the page's language; `inserts` maps «after the N-th block of text» to extra HTML."""
     out, texts = [], 0
     last = len(blocks) - 1
     for i, b in enumerate(blocks):
@@ -121,6 +121,8 @@ def body_html_dense(blocks, label="Реклама"):
             out.append(slot(BLOCK_DENSE_A, compact=True, label=label))
         elif texts % DENSE_EVERY == 1:
             out.append(slot(BLOCK_DENSE_B, compact=True, label=label))
+        if inserts and texts in inserts:                 # e.g. the e-book card after the second block of text
+            out.append(inserts[texts])
     return "\n".join(out)
 
 

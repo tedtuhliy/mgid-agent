@@ -180,25 +180,29 @@ mobile, targetCpa on goal 1280981 (no dedup), language of the geo, type `product
 teasers each: always the jar-of-water herbs article and a second one that rotates (bread, fruit and vegetables, houseplants) from geo
 to geo so that the first data also says which article wins.
 
-| geo | campaign | targetCpa | teasers |
+| geo | campaign | targetCpa now (start) | teasers |
 |---|---|---|---|
-| BG | 12512632 | 0.01 | 28160036, 28160037 |
-| PL | 12512633 | 0.02 | 28160038, 28160039 |
-| CZ | 12512634 | 0.02 | 28160040, 28160041 |
+| BG | 12512632 | 0.03 (0.01) | 28160036, 28160037 |
+| PL | 12512633 | 0.05 (0.02) | 28160038, 28160039 |
+| CZ | 12512634 | 0.05 (0.02) | 28160040, 28160041 |
 | PT | 12512635 | 0.02 | 28160042, 28160043 |
 | IT | 12512636 | 0.02 | 28160044, 28160045 |
 | ES | 12512638 | 0.02 | 28160046, 28160047 |
-| DE | 12512639 | 0.04 | 28160048, 28160050 |
+| DE | 12512639 | 0.10 (0.04) | 28160048, 28160050 |
 | CH | 12512640 | 0.05 | 28160051, 28160066 |
-| AT | 12512641 | 0.04 | 28160068, 28160069 |
+| AT | 12512641 | 0.10 (0.04) | 28160068, 28160069 |
 | RS | 12512643 | 0.01 | 28160070, 28160071 |
-| RO | 12512647 | 0.01 | 28160088, 28160089 |
-| HU | 12512648 | 0.015 | 28160090, 28160091 |
-| SK | 12512649 | 0.01 | 28160092, 28160093 |
-| SI | 12512650 | 0.01 | 28160094, 28160095 |
+| RO | 12512647 | 0.03 (0.01) | 28160088, 28160089 |
+| HU | 12512648 | 0.04 (0.015) | 28160090, 28160091 |
+| SK | 12512649 | 0.03 (0.01) | 28160092, 28160093 |
+| SI | 12512650 | 0.03 (0.01) | 28160094, 28160095 |
 
-The bids are a first guess, not a measurement: the cheap geos start at the one cent of the Kazakhstan test, the geos with a higher
-floor price higher. Set them by what delivers. Wallet at launch $12.90, 16 campaigns with a $3 cap each: the wallet runs out first.
+The bids were a first guess, not a measurement: the cheap geos started at the one cent of the Kazakhstan test, the geos with a
+higher floor price higher. **14.10 ~01:25 MSK**: after 80 minutes of approved teasers and no impressions at all in BG RO SK SI HU PL
+CZ DE AT the target was raised (`geozo_geos.py --set-cpa BG=0.03,...`, PATCH of `bidding` plus the new value in the campaign name);
+PT ES IT CH delivered at the starting values (a few dozen impressions an hour at MGID's $0.0001 click) and keep them, RS waits for its
+moderation. The values live in `CPA` in `geozo_geos.py`, the starting ones in `START_CPA`. Wallet at launch $12.90, 16 campaigns with a
+$3 cap each: the wallet runs out first.
 
 **Report.** `geozo_report.py` is one row per campaign (MGID impressions / clicks / spend / conversions, page views and distinct
 32-character click ids from the nginx log by the campaign id in `source=mgid_<campaign>_`, relay signals and MGID's answer to
@@ -213,6 +217,47 @@ proxy swallows the nested CONNECT), the first live traffic is the test.
 product and says nothing about Geozo's CPC); the Geozo site was approved for «TikTok 45+, RO/KZ», so the manager should be told that
 the traffic now also comes from MGID and from fourteen more geos; German-speaking pages have no Impressum (the DE writer's note);
 LuckyFeed's HR, FR, NL for the next wave.
+
+### A second action next to the clicks: the free e-book (14.10 night)
+
+Owner: «у нас просто контент арбитраж, а он запрещён по CPA-tune модели, тоесть нам нужно добавить на сайте ещё действие, которое будет
+параллельно кликам. Сбор имейл, например, или что-то в этом роде ... мы пытаемся стать compliant для MGID и использовать их CPA tune»,
+then «А что может быть кроме подписки? Может скачивание электронной книги?». What exactly MGID's rules say about arbitrage inside
+CPA tune is **not known** (the question to MGID support is drafted, not sent); this is the part that does not depend on the answer:
+a real, free action of the visitor that is not a click on an ad.
+
+- **The book.** Every language has a free PDF compiled from its own ten articles (`geozo_site/make_ebooks.py`): A5, cover with a
+  mosaic of four photos, «about this book», contents, the ten articles as chapters, a closing page, no ads inside, no registration, no
+  e-mail; 34 pages, about 870 KB (photos at 800 px). The strings (title, subtitle, introduction, the offer card's text) are written by
+  the language's writer into `articles/<lang>/ebook.json` (`articles/EBOOK_BRIEF.md`, checked by `check_articles.py`); Switzerland derives
+  from German like everything else. Output goes under `blog/ebook/` (`<lang>.pdf`, `cover-<lang>.jpg`, `pages.json` with the real page
+  counts for the card); `build_multi.py` calls it, `--no-ebook` skips it (a route without `ebook.json` gets no book and no card).
+- **The card.** `<aside class="book">` after the second block of text and again before the last ad slot of every article, and on the
+  home page; it is not an ad (no label, own colour, outside `.ad-slot`, so a tap on it never sends the ad-click signal: tested), a plain
+  link to `/blog/dl/<lang>.pdf` that `dom.js` decorates with `click_id` and `source` like every internal link.
+- **Counting.** nginx location `~ "^/blog/dl/(?<bl>bg|ch|...)\.pdf$"` (the alternation is exactly the list of real routes; a made-up
+  language gets a plain 404 and no signal; the regex must be quoted, a bare `{2}` makes `nginx -t` fail) serves `blog/ebook/$bl.pdf` as
+  an attachment (`Cache-Control: private, no-store`, `X-Robots-Tag: noindex`) and `mirror`s the request to the internal location
+  `= /_ebook_pb`, which calls `https://a.mgid.com/postback?c=<click_id>&e=ebook&r=0.05` and returns 204 when there is no valid click id
+  (a download without an MGID click is not reported). The log `arcadiablog.dom.log` has two lines per download: the request (`up=-`) and the
+  postback (`up=<MGID status>`, `log_subrequest on`). `deploy.py nginx` is idempotent: it adds the locations or rewrites the location
+  line of an older generic version (backup, `nginx -t`, reload).
+- **MGID goal.** `E-book download` (id **1280985**, event `ebook`, category «Other» = 9): v2 postback targets accept only categories 1
+  and 9 ("Selected category is not available" for 2-5). `geozo_geos.py --make-goal ebook` creates it, `--goal ebook --only KZ,PT`
+  makes it the buy-stage goal of those campaigns (`--goal geozoclick` back; the learning of the campaign starts over). **No campaign
+  uses it yet**: the book is live and its downloads are only logged and sent to the goal; the targetCpa campaigns still optimise for
+  the block click. The conversion value would have to be much higher than one cent because the share of visitors who download is
+  expected to be a few percent (not measured).
+- **Verified live (14.10):** PDF with attachment headers, 34 pages; fake click id `0000...` gives mirror line `up=200`; no click id gives
+  204 and no call; a made-up language gives 404 and no line; offer card 2x per article. `geozo_report.py` shows `скач` (downloads with
+  a click id) and `ebook200` (postbacks answered 200) per campaign.
+- **Russian for Kazakhstan.** `ru` is a route in `multi_config.py` (`GEOS["KZ"] = (5, "ru")`, MGID language 39) so that the Kazakhstan
+  campaigns can later point to `/blog/ru/` with the book and the same ten articles instead of the two articles under `/dom/` and
+  `/dom2/`, which stay as MGID approved them.
+- **Not done / for the owner:** switching the campaign goals to the download (starting with Kazakhstan); an e-mail newsletter as
+  another action (needs an e-mail service provider and a legal operator's name and address on the site); a cookie banner that asks
+  before the ad scripts load (the current one only informs) and an Impressum for the German-speaking pages: both matter before EU
+  traffic is scaled.
 
 ## Spend stop-loss on Inferno (11.10)
 

@@ -33,9 +33,18 @@ def fake_article(slug, lang):
             "description": f"Description of {slug}", "heroAlt": f"Alt {slug}", "body": body}
 
 
-def fake_lang(root, lang):
+EBOOK = {"title": "Home, kitchen and garden: ten practical guides", "subtitle": "Food storage, herbs, houseplants and a little gardening",
+         "intro": "x" * 160, "toc": "Contents", "chapter": "Chapter", "cta_title": "Free e-book: ten practical guides",
+         "cta_text": "Download the PDF with our guides. No registration, no e-mail address needed.",
+         "cta_meta": "PDF · {pages} pages · free · no registration", "cta_button": "Download the PDF",
+         "closing_title": "Thank you for reading", "closing_text": "y" * 80}
+
+
+def fake_lang(root, lang, ebook=False):
     d = Path(root) / lang
     d.mkdir(parents=True)
+    if ebook:
+        (d / "ebook.json").write_text(json.dumps(EBOOK, ensure_ascii=False), encoding="utf-8")
     for slug in mc.SLUGS:
         (d / f"{slug}.json").write_text(json.dumps(fake_article(slug, lang)), encoding="utf-8")
     ui = {"brand_tag": "tips", "read_also": "Read also", "read_min": "{n} min read", "home_title": "Home title ß",
@@ -161,6 +170,84 @@ class Multi(unittest.TestCase):
                 self.assertEqual(im.size, (1200, 800), s)
             with Image.open(self.root / "t" / f"{s}.jpg") as im:
                 self.assertEqual(im.size, (360, 240), s)
+
+
+CHROME = Path("/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
+
+
+@unittest.skipUnless(CHROME.exists(), "needs the Chromium of the sandbox")
+class Ebook(unittest.TestCase):
+    """The free e-book: a PDF per language, the offer card on every article page and on the home page."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.src = tempfile.TemporaryDirectory()
+        cls.out = tempfile.TemporaryDirectory()
+        cls.real_art = ck.ART
+        ck.ART = Path(cls.src.name)
+        fake_lang(cls.src.name, "pl", ebook=True)
+        fake_lang(cls.src.name, "bg")                      # a language without a book gets no card
+        bm.build(cls.out.name, ["pl", "bg"])
+        cls.root = Path(cls.out.name) / "blog"
+
+    @classmethod
+    def tearDownClass(cls):
+        ck.ART = cls.real_art
+        cls.src.cleanup()
+        cls.out.cleanup()
+
+    def test_pdf_exists_has_pages_and_the_title(self):
+        from pypdf import PdfReader
+        pdf = self.root / "ebook" / "pl.pdf"
+        self.assertEqual(pdf.read_bytes()[:5], b"%PDF-")
+        r = PdfReader(str(pdf))
+        self.assertGreaterEqual(len(r.pages), 14)                       # cover, intro, contents, ten chapters, closing
+        self.assertIn(EBOOK["title"], r.pages[0].extract_text().replace("\n", " "))
+        self.assertEqual(json.loads((self.root / "ebook" / "pages.json").read_text())["pl"], len(r.pages))
+        self.assertTrue((self.root / "ebook" / "cover-pl.jpg").exists())
+        self.assertFalse((self.root / "ebook" / "bg.pdf").exists())
+
+    def test_card_is_on_articles_twice_and_on_home_once_and_is_not_an_ad(self):
+        n = len(json.loads((self.root / "ebook" / "pages.json").read_text())) and json.loads((self.root / "ebook" / "pages.json").read_text())["pl"]
+        for s in mc.SLUGS:
+            h = (self.root / "pl" / f"{s}.html").read_text(encoding="utf-8")
+            self.assertEqual(h.count('<aside class="book">'), 2, s)
+            self.assertEqual(h.count('href="/blog/dl/pl.pdf"'), 4, s)               # cover and button, twice
+            self.assertIn(f"PDF · {n} pages · free · no registration", h)
+            self.assertNotIn('class="ad-slot', h.split('<aside class="book">')[1].split("</aside>")[0], s)
+            self.assertIn('class="book-btn js-int"', h)                              # js-int: click_id and source are appended
+            # the first card comes after the second block of text, the second one after the note and before the closing slot
+            self.assertLess(h.index('<aside class="book">'), h.index("<h2>"), s)
+            self.assertLess(h.index('class="note"'), h.rindex('<aside class="book">'), s)
+            self.assertLess(h.rindex('<aside class="book">'), h.index(kz.BLOCK_DENSE_C), s)
+        home = (self.root / "pl" / "index.html").read_text(encoding="utf-8")
+        self.assertEqual(home.count('<aside class="book">'), 1)
+        self.assertNotIn('class="ad-slot', home)
+
+    def test_language_without_a_book_has_no_card(self):
+        for p in (self.root / "bg").glob("*.html"):
+            self.assertNotIn('class="book"', p.read_text(encoding="utf-8"), p.name)
+
+    def test_card_never_sits_inside_the_click_signal_area(self):
+        js = next(self.root.glob("blog.*.js")).read_text(encoding="utf-8")
+        self.assertIn('closest(".ad-slot a[href]")', js)                            # only links inside ad slots send the ad-click signal
+
+
+class Nginx(unittest.TestCase):
+    def test_book_location_counts_only_downloads_with_a_click_id(self):
+        import deploy
+        loc = deploy.BOOK_LOCATION
+        self.assertIn("mirror /_ebook_pb;", loc)
+        self.assertIn("e=ebook", loc)
+        self.assertNotIn("geozoclick", loc)
+        self.assertIn('$arg_click_id !~ "^[A-Za-z0-9_.-]{6,128}$") { return 204; }', loc)
+        self.assertIn("rewrite ^ /blog/ebook/$bl.pdf break;", loc)
+        # quoted: nginx reads a bare { as a block; the alternation lists exactly the real routes, so that a made-up language
+        # (/blog/dl/xx.pdf?click_id=..) neither mirrors a signal to MGID nor is served
+        m = re.search(r'location ~ "\^/blog/dl/\(\?<bl>([a-z|]+)\)\\\.pdf\$" \{', loc)
+        self.assertTrue(m, loc[:400])
+        self.assertEqual(set(m.group(1).split("|")), set(mc.LANGS) | set(mc.DERIVED))
+        self.assertEqual(deploy.BOOK_LOCATION_LINE.strip(), m.group(0))
 
 
 class Config(unittest.TestCase):
