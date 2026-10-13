@@ -29,7 +29,7 @@ NAME = "Arcadia KZ content mobile CPA 0.01"
 HOST = "root@100.121.239.113"
 TS_BIN = os.environ.get("TS_BIN", "/tmp/claude-0/ts/tailscale_1.104.1_amd64/tailscale")
 TS_SOCK = os.environ.get("TS_SOCK", "/tmp/claude-0/ts/ts.sock")
-BLOCKS = {1283936: "dom-header", 1283937: "dom-feed"}
+BLOCKS = {1283938: "dom2-header", 1283939: "dom2-feed"}
 
 
 def money(x):

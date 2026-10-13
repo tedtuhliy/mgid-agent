@@ -82,13 +82,15 @@ MGID teaser (KZ, Russian, mobile, targetCpa $0.01)
   autumn; the first is the TikTok version's text, the second is new), deployed by `geozo_site/deploy.py static`. The
   TikTok versions `/sovety/` and `/sfaturi/` are untouched. No TikTok pixel, no beacon, no redirect, no pop-up and no back-button tricks on
   `/dom/` (the build test fails if the script contains any), unlike the omnitr.com quiz that MGID rejected.
-- **Geozo blocks.** Two own blocks so the statistics of this traffic are apart from TikTok's: `dom-header` (id 1283936,
-  uuid a4ecaca6-cb0b-4e44-9323-355326c78357) and `dom-feed` (id 1283937, uuid eb58d5e5-77a6-4b0b-9a4c-b5233e12418b). Template
-  16003 (image on top, 16:9, no button): the first version, 16006 "Post", draws a fake clock chip and fake like/comment/share
-  counters on every ad, and 16001 (image left) breaks into one-letter lines in a narrow column. Bodies of all nine format-16
-  templates were captured with the local panel mock (see the Tedbolt branch claude/dr-cash-automation-20xngo, ops/geozo/webmaster);
-  the one in use is `geozo_site/geozo_blocks/block_post_16003_16x9_nobtn.json`, applied with `webmaster.py put-block` (the image-left body is kept next to it). Geozo's render cache keeps serving
-  the previous template for a while after a PUT (observed: mixed old/new slots for 20+ minutes).
+- **Geozo blocks.** Two own blocks so the statistics of this traffic are apart from TikTok's: `dom2-header` (id 1283938,
+  uuid dffc5623-f12c-4c85-8cb1-efa1a2fc617f) and `dom2-feed` (id 1283939, uuid 68d5f52f-27f7-4157-b09c-c2da3a2b87b3), template
+  16003 (image on top, 16:9, no button, no fake counters). The first pair (1283936 / 1283937) was made with 16006 "Post", which
+  draws a fake clock chip and fake like/comment/share counters on every ad, and was switched by PUT; Geozo's render nodes kept
+  serving the old template (and, in between, the broken narrow image-left 16001) for 20+ minutes in a random mix, so a fresh
+  pair was created directly with 16003 and the first pair deleted. Bodies of all nine format-16 templates were captured with the
+  local panel mock (Tedbolt branch claude/dr-cash-automation-20xngo, ops/geozo/webmaster); the one in use is
+  `geozo_site/geozo_blocks/block_post_16003_16x9_nobtn.json`, applied with `webmaster.py create-block`/`put-block` (the
+  image-left body is kept next to it). Not tested by Geozo's moderation, which only reads the site.
 - **Conversion = a real click on an ad link in a slot** (`dom.js`): trusted event, at least 0.7 s after load, at least 1.2 s
   between signals, at most 6 per visit, only with a valid click id (MGID's are 32 hex characters). It is the closest thing
   to «each counted paid click» that exists: Geozo's publisher API has no per-click callback, only aggregates
@@ -98,8 +100,13 @@ MGID teaser (KZ, Russian, mobile, targetCpa $0.01)
   reload), log `/var/log/nginx/arcadiablog.dom.log` with MGID's HTTP status (`up=`). MGID answers 200 and a 1x1 GIF to any click
   id, real or not, so only the report of the campaign shows whether a conversion was counted.
 - **MGID.** Postback target `Geozo block click` (id 1280981, eventName geozoclick), created with `POST /v2/ads/account/939031/targets`;
-  not the dating target 1274200, so mgid-guard does not judge this campaign. Campaign created by `mgid/geozo_campaign.py`.
-  The real cap of the test is `mgid-spend-stop` (pauses any active campaign at $3 spend); MGID's own daily minimum here is $20.
+  not the dating target 1274200, so mgid-guard does not judge this campaign. Campaign **12512609** «Arcadia KZ content mobile CPA 0.01»
+  (`mgid/geozo_campaign.py --apply`, then `--teasers`, then `--start`): KZ, Russian, mobile OS list, targetCpa $0.01 with conversion value
+  $0.01 and deduplication OFF (every counted click is a conversion), type `product` because MGID refuses targetCpa on `content`
+  (BIDDING_STRATEGY_CAMPAIGN_TYPES_ERROR). Five teasers, ids 28159839-28159842 and 28159844 (photos that show what the title says);
+  the sixth was refused with LS_CAB_GOODS_TEASER_ALLOWED_DOMAIN_LIMIT, so five is the limit per landing domain in a campaign.
+  Started 13.10 at 22:57 MSK while the teasers were `onModeration` (auto-launch after approval is on). The real cap of the test is
+  `mgid-spend-stop` (pauses any active campaign at $3 spend); MGID's own daily minimum here is $20. Wallet at start: $12.90.
 - **Report.** `geozo_report.py` prints MGID by hour (spend, clicks, conversions), page views and signals from the logs, and
   Geozo's block statistics.
 - **Found on the way.** On the TikTok pages `/sovety/` and (same code) `/sfaturi/` the «Реклама» label never shows: the

@@ -25,9 +25,12 @@ HERE = Path(__file__).resolve().parent
 ROUTE = "dom"
 BRAND = {"name": "Arcadia Blog", "tag": "советы", "mark": "A", "color": "#1f6f5c"}
 LOADER = "https://cdn.ecstaticexistence.com/7czl17291/vli0pm30y8qh/786uvq768ypk0f4dm.go"
-# Geozo blocks of site 25953 created 13.10 (UUIDs go into the markup, numeric ids 1283936 / 1283937 into the API)
-BLOCK_HEADER = "a4ecaca6-cb0b-4e44-9323-355326c78357"      # dom-header
-BLOCK_FEED = "eb58d5e5-77a6-4b0b-9a4c-b5233e12418b"        # dom-feed
+# Geozo blocks of site 25953 created 13.10 (UUIDs go into the markup, numeric ids 1283938 / 1283939 into the API).
+# Created directly with template 16003 (image on top, 16:9, no button). The first pair, dom-header / dom-feed
+# (1283936 / 1283937), was made with 16006 and switched by PUT, and Geozo's render nodes kept serving the old template
+# for hours, so a fresh pair was made instead.
+BLOCK_HEADER = "dffc5623-f12c-4c85-8cb1-efa1a2fc617f"      # dom2-header
+BLOCK_FEED = "68d5f52f-27f7-4157-b09c-c2da3a2b87b3"        # dom2-feed
 # (file, article json, thumbnail used in «Читайте также»)
 PAGES = [("index.html", "hranenie-produktov", "t1.jpg"), ("rasteniya-osenyu.html", "rasteniya-osenyu", "t4.jpg")]
 JS_CFG = {"route": ROUTE, "lead": f"/{ROUTE}/lead", "minDwellMs": 700, "cooldownMs": 1200, "maxPerVisit": 6}
