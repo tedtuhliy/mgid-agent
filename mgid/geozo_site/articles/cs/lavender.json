@@ -1,0 +1,37 @@
+{
+  "rubric": "Zahrada",
+  "title": "Jak pěstovat levanduli: slunce, půda a správný řez",
+  "teaser": "Levandule se odvděčí vůní a modrofialovými květy, když má dost slunce, propustnou půdu a rozumný řez. Přehled, co dělat a čeho se vyvarovat od sázení po sušení květů.",
+  "description": "Praktické rady pro pěstování levandule na zahradě i v nádobě: stanoviště, půda, výsadba, řez, zimování a sušení květů pro vůni.",
+  "heroAlt": "Řady kvetoucí levandule na poli, v pozadí zelený kopec se stromy a hospodářským stavením.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Levandule se v zahradě pěkně vyjímá a příjemně voní. Není náročná, pokud dostane, co potřebuje: hodně slunce a propustnou půdu. Většina neúspěchů pramení spíš z přílišné péče než z jejího nedostatku."},
+    {"t": "p", "x": "Tady jsou základy od sázení až po sklizeň květů."},
+    {"t": "h2", "x": "Slunné a teplé stanoviště"},
+    {"t": "p", "x": "Levandule potřebuje plné slunce, tedy aspoň šest hodin přímého světla denně. Ve stínu řídne, vytahuje se a kvete jen skromně. Nejlépe se jí daří na teplém, závětrném místě. Hodí se jižní svah, štěrková skalka nebo místo u zdi, která přes den akumuluje teplo."},
+    {"t": "h2", "x": "Lehká a propustná půda"},
+    {"t": "p", "x": "Hodí se lehká, dobře propustná a spíše chudá půda. V těžké hlíně nebo v zemi bohaté na živiny levandule bujně roste do listů, ale méně kvete a hůř odolává zimě."},
+    {"t": "p", "x": "Těžší půdu proto prokypřete pískem nebo drobným štěrkem."},
+    {"t": "h2", "x": "Sázení na jaře a střídmé zalévání"},
+    {"t": "p", "x": "Sazenice sázejte na jaře ve vzdálenosti 40 až 60 centimetrů od sebe, aby měly dost vzduchu i prostoru k růstu."},
+    {"t": "p", "x": "Po výsadbě zalévejte pravidelně, dokud se nezakoření. Potom už stačí zalít jen v dlouhém suchu, a to spíš vydatně než často. Vhodný je mulč z drobného štěrku, který odráží teplo a nedrží vlhkost u báze keře."},
+    {"t": "h2", "x": "Lehký řez po odkvětu"},
+    {"t": "p", "x": "Po odkvětu keř lehce zastřihněte, zhruba o dva až tři centimetry pod odkvetlými květenstvími, aby zůstal kompaktní. Řez opakujte každý rok, jinak keř zespodu zdřevnatí a rozpadne se. Nikdy nestříhejte do starého, bezlistého dřeva, ze kterého levandule už nevyrazí."},
+    {"t": "tip", "x": "Čistý řez ostrými nůžkami se zacelí snáz než rozdrcený tupými."},
+    {"t": "h2", "x": "Zima: mokro škodí víc než mráz"},
+    {"t": "p", "x": "Většina odrůd snese i silný mráz, hůř však zimní vlhko u kořenů. Důležitá je proto propustná půda a místo, kde se nehromadí voda."},
+    {"t": "p", "x": "V nádobách používejte substrát promíchaný se štěrkem nebo hrubým pískem a otvory ve dně nechte volné. Na zimu květináče přesuňte k chráněné zdi, kam nepadá trvalý déšť."},
+    {"t": "h2", "x": "Sklizeň a sušení květů"},
+    {"t": "p", "x": "Květenství stříhejte za sucha, když se otevřelo jen pár květů a většina je ještě v poupatech. Svažte je do malých svazečků a zavěste hlavou dolů na suché, tmavé a vzdušné místo."},
+    {"t": "p", "x": "Usušené květy poslouží jako ozdoba domova nebo do vonných sáčků do skříně, kde prádlu dodají příjemnou vůni. Sáčky stačí ušít nebo uvázat z kousku látky a vložit mezi prádlo."},
+    {"t": "h2", "x": "Základní zásady"},
+    {"t": "ul", "x": [
+      "Plné slunce a teplé, závětrné místo.",
+      "Lehká, propustná a spíše chudá půda.",
+      "Sázet na jaře po 40 až 60 centimetrech a zalévat střídmě.",
+      "Po odkvětu lehce stříhat, nikdy do starého dřeva.",
+      "V zimě se vyhnout stojící vodě u kořenů."
+    ]},
+    {"t": "p", "x": "Nejčastějšími chybami bývají bohatá půda, přílišné zalévání a stín. Když se jim vyhnete, bude vám levandule dělat radost řadu let."}
+  ]
+}

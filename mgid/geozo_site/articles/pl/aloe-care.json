@@ -1,0 +1,37 @@
+{
+  "rubric": "Rośliny w domu",
+  "title": "Aloes w domu: światło, podlewanie i przesadzanie",
+  "teaser": "Aloes dobrze znosi domowe warunki, o ile ma jasne miejsce i nie dostaje za dużo wody. Opisujemy zasady uprawy w doniczce: światło, podlewanie, ziemię, zimowanie i przesadzanie.",
+  "description": "Jak dbać o aloes w doniczce: jasne miejsce, rzadkie podlewanie, przepuszczalne podłoże, zimowy odpoczynek, oddzielanie odrostów i przesadzanie.",
+  "heroAlt": "Zbliżenie na mięsiste, zielone liście aloesu pokryte drobnymi kroplami wody",
+  "body": [
+    {"t": "p", "lead": true, "x": "Aloes to sukulent, który dobrze radzi sobie w domu, jeśli dostaje dużo światła i niewiele wody. Zapomniane podlewanie zwykle mu nie szkodzi, za to nadmiar wilgoci bywa kłopotliwy. Poniżej zasady uprawy w doniczce."},
+    {"t": "p", "x": "Wystarczą jasne miejsce, przepuszczalna ziemia i dobrze dobrana doniczka."},
+    {"t": "h2", "x": "Jasne, rozproszone światło"},
+    {"t": "p", "x": "Aloes najlepiej rośnie w jasnym miejscu, w świetle rozproszonym, na przykład przy oknie wschodnim lub zachodnim. Odrobina bezpośredniego słońca mu nie szkodzi."},
+    {"t": "p", "x": "Po zimie trzeba przyzwyczajać go do ostrego słońca stopniowo, bo liście mogą się przypiec i zbrązowieć. Raz na kilka tygodni warto obrócić doniczkę, aby roślina nie wyciągała się w jedną stronę."},
+    {"t": "h2", "x": "Podlewanie"},
+    {"t": "p", "x": "Aloes magazynuje wodę w liściach, dlatego podlewa się go obficie, ale rzadko. Ziemia powinna całkowicie przeschnąć, zanim znów pojawi się woda."},
+    {"t": "p", "x": "Latem oznacza to zwykle podlewanie raz na dwa–trzy tygodnie, a zimą jeszcze rzadziej. Wodę najlepiej lać przy brzegu doniczki, nie w sam środek rozety liści, a nadmiar ze spodka trzeba wylać."},
+    {"t": "h2", "x": "Ziemia i doniczka"},
+    {"t": "p", "x": "Dobrze sprawdza się podłoże dla kaktusów i sukulentów albo zwykła ziemia z dodatkiem piasku lub drobnego żwiru. Doniczka musi mieć otwory odpływowe, a najlepsza jest ta z terakoty, bo przepuszcza powietrze i szybciej oddaje wilgoć."},
+    {"t": "h2", "x": "Zimowy odpoczynek"},
+    {"t": "p", "x": "Zimą aloes zwalnia wzrost i najlepiej czuje się w chłodniejszym, ale jasnym miejscu. Temperatura nie powinna spadać poniżej około 10 °C, a mrozu aloes w ogóle nie znosi. Podlewanie warto ograniczyć do minimum, a z nawożeniem poczekać do wiosny."},
+    {"t": "h2", "x": "Co mówią liście"},
+    {"t": "p", "x": "Miękkie, szkliste, jakby przeświecające liście to znak, że roślina dostaje za dużo wody. Trzeba wtedy odczekać z podlewaniem i sprawdzić, czy podłoże nie jest stale mokre."},
+    {"t": "p", "x": "Cienkie, pomarszczone i zwijające się liście zwykle oznaczają niedobór wody. Wtedy należy podlać porządnie, a potem regularnie sprawdzać ziemię."},
+    {"t": "tip", "x": "Drewniany patyczek wsunięty w ziemię pokaże, czy podłoże w głębi jest jeszcze wilgotne."},
+    {"t": "h2", "x": "Odrosty i przesadzanie"},
+    {"t": "p", "x": "Z czasem przy nasadzie pojawiają się małe rośliny, zwane odrostami. Gdy mają kilka własnych liści i korzenie, można je oddzielić czystym nożem. Dobrze jest odczekać dzień lub dwa, żeby miejsce cięcia przeschło, i dopiero wtedy posadzić młodą roślinę w osobnej doniczce."},
+    {"t": "p", "x": "Starsze okazy przesadza się co 2–3 lata, wiosną, do doniczki tylko trochę większej. Ponieważ aloes rośnie wysoko, warto wybrać doniczkę ciężką i stabilną."},
+    {"t": "h2", "x": "Aloes w skrócie"},
+    {"t": "ul", "x": [
+      "Jasne miejsce, światło rozproszone i odrobina słońca.",
+      "Podlewać obficie, ale dopiero po całkowitym przeschnięciu ziemi.",
+      "Przepuszczalne podłoże i doniczka z otworami, najlepiej gliniana.",
+      "Zimą chłodniej, ale powyżej około 10 °C.",
+      "Odrosty oddzielać wiosną, przesadzać co 2–3 lata."
+    ]},
+    {"t": "p", "x": "W razie wątpliwości lepiej podlać aloes o dzień później niż o dzień wcześniej, bo suszę znosi znacznie lepiej niż nadmiar wody."}
+  ]
+}

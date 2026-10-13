@@ -1,0 +1,19 @@
+{
+  "brand_tag": "Tipps",
+  "read_also": "Lesen Sie auch",
+  "read_min": "{n} Min. Lesezeit",
+  "home_title": "Haus, Küche und Garten",
+  "home_intro": "Praktische Ideen für den Alltag: Lebensmittel richtig aufbewahren, Kräuter und Zimmerpflanzen pflegen und im Garten ein wenig dazulernen.",
+  "all_articles": "Alle Artikel",
+  "nav_home": "Startseite",
+  "nav_about": "Über uns",
+  "nav_contact": "Kontakt",
+  "nav_privacy": "Datenschutz",
+  "disclosure": "Die Beiträge dienen nur der allgemeinen Information. Die Website zeigt Werbung von Partnern; jeder Werbeblock ist mit dem Wort „Anzeige“ gekennzeichnet, und für die Website und die Werbeblöcke verwenden wir Cookies.",
+  "cookie": "Wir verwenden Cookies für die Website und die Werbeblöcke.",
+  "cookie_more": "Mehr erfahren",
+  "cookie_ok": "OK",
+  "disclaimer": "Dieser Beitrag dient nur der allgemeinen Information; bitte beachten Sie immer die Hinweise des Herstellers und die Besonderheiten der jeweiligen Pflanze oder des jeweiligen Produkts.",
+  "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+  "date_fmt": "{d}. {month} {y}"
+}

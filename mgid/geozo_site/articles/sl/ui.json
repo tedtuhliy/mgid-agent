@@ -1,0 +1,19 @@
+{
+  "brand_tag": "nasveti",
+  "read_also": "Preberite tudi",
+  "read_min": "{n} min branja",
+  "home_title": "Dom, kuhinja in vrt",
+  "home_intro": "Kratki, praktični članki o shranjevanju hrane, zeliščih, sobnih rastlinah in malem vrtu. Nasveti, ki jih lahko preizkusite že danes.",
+  "all_articles": "Vsi članki",
+  "nav_home": "Domov",
+  "nav_about": "O nas",
+  "nav_contact": "Kontakt",
+  "nav_privacy": "Zasebnost",
+  "disclosure": "Vsebina strani je informativne narave. Stran prikazuje oglase partnerjev, vsak oglasni blok je označen z besedo »Oglas«, za delovanje strani in oglasnih blokov pa uporabljamo piškotke.",
+  "cookie": "Za delovanje strani in oglasnih blokov uporabljamo piškotke.",
+  "cookie_more": "Več o tem",
+  "cookie_ok": "V redu",
+  "disclaimer": "Besedilo je zgolj informativno: upoštevajte navodila proizvajalca ter potrebe posamezne rastline ali izdelka.",
+  "months": ["januarja", "februarja", "marca", "aprila", "maja", "junija", "julija", "avgusta", "septembra", "oktobra", "novembra", "decembra"],
+  "date_fmt": "{d}. {month} {y}"
+}

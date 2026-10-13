@@ -1,0 +1,40 @@
+{
+  "rubric": "Otthon és konyha",
+  "title": "9 egyszerű szabály, hogy az élelmiszerek tovább maradjanak frissek",
+  "teaser": "A hűtő elrendezésétől a fagyasztásig: kilenc egyszerű szabály, amely segít abban, hogy a vásárolt élelmiszerek hosszabb ideig megőrizzék frissességüket és ízüket.",
+  "description": "Kilenc gyakorlati szabály a hűtő elrendezéséről, a zöldfűszerek, a zöldségek és a kenyér tárolásáról, a fagyasztásról és a maradékokról.",
+  "heroAlt": "Nyitott, rendezett hűtőszekrény: dobozokban maradékok és bogyós gyümölcs, pohárban petrezselyem, a fiókokban zöldségek.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Az élelmiszerek frissessége nagyrészt azon múlik, hová és hogyan kerülnek a hűtőbe vagy a kamrába. Néhány egyszerű szokással kevesebb étel romlik meg idő előtt, és az íze is tovább megmarad."},
+    {"t": "p", "x": "Kilenc rövid szabályt gyűjtöttünk össze, amelyeket a legtöbb háztartásban könnyű bevezetni."},
+    {"t": "h2", "x": "1. Rendezze a hűtőt hőmérséklet szerint"},
+    {"t": "p", "x": "A hűtő leghidegebb része a hátsó fal mentén és az alsó polcokon van, az ajtó a legmelegebb. Az ajtóba a szószok és az italok valók, a tejtermékeknek és a felvágottaknak a polcokon, hátul van a helyük. Az ajánlott hőmérséklet 2–5 °C."},
+    {"t": "h2", "x": "2. A nyers húst és halat tegye alulra"},
+    {"t": "p", "x": "A nyers húst és halat tegye az alsó polcra, lefedett tányéron vagy zárt dobozban. Így a levük nem csöpög a többi élelmiszerre, és a hűtő is tisztább marad."},
+    {"t": "h2", "x": "3. A zöldfűszert kezelje úgy, mint a virágot"},
+    {"t": "p", "x": "A petrezselymet, a kaprot és a koriandert állítsa pohár vízbe, mint a vázába tett virágot; előtte vágja le a szárak végét egy kicsit. A levelekre húzzon laza zacskót, így hosszabb ideig frissek maradnak."},
+    {"t": "h2", "x": "4. A gyümölcsöt és a zöldséget tartsa külön"},
+    {"t": "p", "x": "Az alma, a körte, a banán és a paradicsom etilén nevű gázt bocsát ki, amitől a közelükben tárolt zöldségek hamarabb elromlanak."},
+    {"t": "p", "x": "A burgonyát és a hagymát egymástól is érdemes elkülöníteni, hűvös, sötét, szellős helyen."},
+    {"t": "h2", "x": "5. A bogyósokat, a gombát és a salátát ne mossa meg előre"},
+    {"t": "p", "x": "A bogyós gyümölcsöt, a gombát és a salátát csak közvetlenül fogyasztás előtt mossa meg, mert a nedvesség gyorsítja a penészedést. Addig tartsa őket szárazon, lehetőleg papírtörlővel kibélelt dobozban."},
+    {"t": "h2", "x": "6. Kenyér, gabonafélék és magvak"},
+    {"t": "p", "x": "A kenyér kenyértartóban marad puha, a hűtőben hamarabb megszikkad. A lisztet, a rizst, a tésztát és az olajos magvakat jól záródó edényben, hűvös, száraz, sötét helyen tárolja."},
+    {"t": "h2", "x": "7. Fagyasszon frissen, adagolva, dátummal"},
+    {"t": "p", "x": "Az élelmiszert még frissen fagyassza le, kisebb adagokban, jól záródó zacskóban vagy dobozban, a levegőt kinyomva belőle. Írja rá a dátumot is, a fagyasztóban pedig az ajánlott hőmérséklet −18 °C."},
+    {"t": "tip", "x": "A zacskókat fektetve fagyassza le: a lapos csomag gyorsabban megfagy, és később kevés helyet foglal."},
+    {"t": "h2", "x": "8. A megfőtt ételt hűtse le gyorsan"},
+    {"t": "p", "x": "A megfőtt ételt két órán belül hűtse le, majd tegye a hűtőbe. Zárt edényben általában 3–4 napig tartható el; amit ennél tovább szeretne tárolni, azt inkább fagyassza le."},
+    {"t": "h2", "x": "9. A régebbi kerüljön előre, a hűtő legyen tiszta"},
+    {"t": "p", "x": "Az újonnan vásárolt élelmiszert tegye hátra, a régebbit előre, így mindig szem előtt van, mit érdemes előbb felhasználni. Havonta egyszer tisztítsa meg a polcokat langyos, mosogatószeres vízzel, majd törölje szárazra."},
+    {"t": "h2", "x": "Röviden: amit érdemes megjegyezni"},
+    {"t": "ul", "x": [
+      "A hűtő hátsó része és alsó polcai a leghidegebbek, az ajtó a legmelegebb.",
+      "A nyers hús és hal zárt edényben, alul álljon.",
+      "Az etilént termelő gyümölcsöket tartsa külön a zöldségektől.",
+      "Fagyasztáskor adagoljon, csomagoljon légmentesen, és írjon rá dátumot.",
+      "A maradékot két órán belül hűtse le, és 3–4 napon belül fogyassza el."
+    ]},
+    {"t": "p", "x": "A tárolási idő élelmiszerenként eltér, ezért a csomagoláson szereplő utasítást is vegye figyelembe."}
+  ]
+}

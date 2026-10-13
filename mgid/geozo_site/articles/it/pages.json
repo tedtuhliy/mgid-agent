@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "Chi siamo",
+    "paras": [
+      "Arcadia Blog è una piccola rivista online dedicata alla casa, alla cucina e al giardino. Pubblichiamo consigli pratici di uso quotidiano: come conservare meglio gli alimenti, come prendersi cura delle piante da appartamento, come coltivare qualche erba aromatica sul davanzale.",
+      "I nostri articoli hanno carattere esclusivamente informativo. Non sostituiscono le indicazioni dei produttori né le esigenze specifiche di ogni pianta o prodotto, che conviene sempre verificare.",
+      "Il sito è finanziato dalla pubblicità dei partner. Gli annunci compaiono tra i paragrafi degli articoli e sono sempre contrassegnati dalla parola «Pubblicità», in modo da distinguerli chiaramente dai testi della rivista."
+    ]
+  },
+  "contact": {
+    "title": "Contatti",
+    "paras": [
+      "Per domande, osservazioni o suggerimenti potete scriverci all’indirizzo contact@arcadiablog.com.",
+      "Leggiamo tutti i messaggi e rispondiamo di solito entro pochi giorni lavorativi."
+    ]
+  },
+  "privacy": {
+    "title": "Privacy",
+    "paras": [
+      "Questa pagina spiega in poche parole quali informazioni raccoglie il sito. Quando visitate Arcadia Blog vengono registrati alcuni dati tecnici della visita, come il tipo di dispositivo e di browser, la pagina aperta e l’orario, e vengono usati i cookie necessari al funzionamento del sito.",
+      "I blocchi pubblicitari dei partner possono usare cookie e tecnologie simili per mostrare e misurare gli annunci. Questi blocchi sono sempre contrassegnati dalla parola «Pubblicità».",
+      "Sul sito non esistono account né pagamenti: non vi chiediamo di registrarvi e non raccogliamo dati di pagamento.",
+      "Potete gestire o eliminare i cookie in qualsiasi momento dalle impostazioni del vostro browser, oppure impedirne il salvataggio.",
+      "Per qualsiasi domanda su questo tema scrivete a contact@arcadiablog.com: risponderemo appena possibile."
+    ]
+  }
+}

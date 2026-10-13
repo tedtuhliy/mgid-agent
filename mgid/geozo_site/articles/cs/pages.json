@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "O magazínu Arcadia Blog",
+    "paras": [
+      "Arcadia Blog je malý magazín o domově, kuchyni a zahradě. Najdete v něm krátké a srozumitelné články o tom, jak déle uchovat čerstvé potraviny, jak pěstovat bylinky na parapetu a jak pečovat o pokojové rostliny i o zahradu.",
+      "Všechny texty mají pouze informativní charakter. Jde o obecné rady z běžné domácnosti, které nenahrazují pokyny výrobce ani potřeby konkrétní rostliny nebo potraviny, proto se vždy řiďte údaji na obalu a zkušenostmi z vlastního bytu či zahrady.",
+      "Provoz stránek je financován reklamou partnerů. Každý reklamní blok je jasně označen slovem „Reklama“ a odlišen od článků, takže poznáte, kde končí text a kde začíná reklama."
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "paras": [
+      "S dotazem, připomínkou nebo námětem na článek nám napište na adresu contact@arcadiablog.com.",
+      "Na zprávy odpovídáme obvykle do několika pracovních dnů. Děkujeme za trpělivost, pokud odpověď zabere o něco déle."
+    ]
+  },
+  "privacy": {
+    "title": "Ochrana soukromí",
+    "paras": [
+      "Při návštěvě stránek se zaznamenávají běžné technické údaje, například typ prohlížeče a zařízení, navštívené stránky a čas návštěvy. Stránky také používají soubory cookies, tedy malé textové soubory ukládané ve vašem prohlížeči.",
+      "Na stránkách se zobrazují reklamní bloky partnerů. Partneři mohou používat soubory cookies a podobné technologie k zobrazování a měření reklamy.",
+      "Na webu nejsou žádné uživatelské účty ani platby, proto od vás nevyžadujeme jméno, heslo ani platební údaje.",
+      "Soubory cookies můžete kdykoli spravovat nebo smazat v nastavení svého prohlížeče, případně jejich ukládání zakázat. Některé části stránek pak nemusí fungovat úplně správně.",
+      "S otázkou k ochraně soukromí se na nás můžete obrátit e-mailem na adrese contact@arcadiablog.com."
+    ]
+  }
+}

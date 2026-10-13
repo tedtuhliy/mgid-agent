@@ -1,0 +1,37 @@
+{
+  "rubric": "Casa e cozinha",
+  "title": "Salsa, endro e coentros frescos durante semanas: o método do frasco",
+  "teaser": "Um molho de salsa ou de coentros murcha em poucos dias no fundo da gaveta. Tratado como um ramo de flores, num frasco com um pouco de água, dura muito mais tempo. Eis o método, passo a passo.",
+  "description": "Como manter salsa, endro e coentros frescos durante semanas com o método do frasco, e o que fazer com o manjericão e com as ervas que sobram.",
+  "heroAlt": "Um molho de salsa e endro num frasco de vidro com água.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Um molho de salsa, de endro ou de coentros costuma murchar em poucos dias, esquecido no fundo da gaveta. Guardado como um ramo de flores, num frasco com água, aguenta muito mais tempo, por vezes semanas."},
+    {"t": "p", "x": "O método do frasco é simples e resulta sobretudo com ervas de folha macia, como a salsa, o endro e os coentros. Bastam um frasco de vidro, um pouco de água e um saco."},
+    {"t": "h2", "x": "Aparar os talos e tirar as folhas cansadas"},
+    {"t": "p", "x": "Corta-se cerca de 1 cm na base dos talos, como se faz com as flores, e retiram-se as folhas amarelas, moles ou escurecidas. Uma folha estragada depressa estraga as vizinhas."},
+    {"t": "p", "x": "As folhas que ficariam dentro de água também se retiram, porque apodrecem e turvam o frasco."},
+    {"t": "h2", "x": "Frasco com água, saco por cima e frigorífico"},
+    {"t": "p", "x": "O molho fica de pé num frasco com 2 a 3 cm de água. Cobre-se com um saco de plástico solto e leva-se tudo para o frigorífico."},
+    {"t": "p", "x": "O saco mantém alguma humidade à volta das folhas, mas não deve ficar apertado, para o ar poder circular."},
+    {"t": "h2", "x": "Trocar a água de dois em dois dias"},
+    {"t": "p", "x": "A água turva depressa. Convém trocá-la de dois em dois dias e voltar a cortar uns milímetros aos talos que tenham escurecido."},
+    {"t": "p", "x": "A salsa costuma aguentar duas semanas ou mais; o endro e os coentros, um pouco menos."},
+    {"t": "h2", "x": "Não lavar antes de guardar"},
+    {"t": "p", "x": "A humidade nas folhas favorece o bolor, por isso as ervas só se lavam na hora de as usar. Se vierem molhadas, secam-se com cuidado num pano limpo antes de irem para o frasco."},
+    {"t": "h2", "x": "Uma exceção: o manjericão"},
+    {"t": "p", "x": "O manjericão não gosta de frio e, no frigorífico, as folhas escurecem. Fica melhor à temperatura ambiente, num copo com água, longe do sol direto."},
+    {"t": "h2", "x": "Outras formas de conservar"},
+    {"t": "p", "x": "Sem espaço para um frasco, serve um recipiente com tampa, forrado com papel de cozinha ligeiramente húmido. As ervas picadas também se congelam em formas de gelo, com um pouco de água ou de azeite."},
+    {"t": "p", "x": "Os cubos vão diretamente para o tacho, sem descongelar."},
+    {"t": "tip", "x": "Folhas já um pouco moles ainda servem, picadas, para sopas e molhos."},
+    {"t": "h2", "x": "O essencial"},
+    {"t": "ul", "x": [
+      "Aparar os talos e retirar as folhas estragadas.",
+      "Frasco com 2 a 3 cm de água e saco solto por cima.",
+      "Água trocada de dois em dois dias.",
+      "Ervas lavadas só na hora de usar.",
+      "Manjericão à temperatura ambiente, longe do frio."
+    ]},
+    {"t": "p", "x": "Com estes gestos, um só molho pode acompanhar várias refeições, em vez de ir para o lixo ao fim de poucos dias."}
+  ]
+}

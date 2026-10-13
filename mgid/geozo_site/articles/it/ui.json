@@ -1,0 +1,32 @@
+{
+  "brand_tag": "consigli",
+  "read_also": "Leggete anche",
+  "read_min": "{n} min di lettura",
+  "home_title": "Casa, cucina e giardino",
+  "home_intro": "Consigli pratici per conservare meglio gli alimenti, prendersi cura delle piante di casa e coltivare qualche erba aromatica. Articoli brevi, da leggere con calma, quando e dove volete.",
+  "all_articles": "Tutti gli articoli",
+  "nav_home": "Home",
+  "nav_about": "Chi siamo",
+  "nav_contact": "Contatti",
+  "nav_privacy": "Privacy",
+  "disclosure": "I materiali pubblicati hanno scopo puramente informativo. Il sito mostra la pubblicità di alcuni partner: ogni blocco è contrassegnato dalla parola «Pubblicità», e utilizziamo i cookie per il funzionamento del sito e di questi blocchi.",
+  "cookie": "Utilizziamo i cookie per il funzionamento del sito e dei blocchi pubblicitari.",
+  "cookie_more": "Maggiori informazioni",
+  "cookie_ok": "OK",
+  "disclaimer": "Il testo ha carattere puramente informativo: seguite sempre le indicazioni del produttore e tenete conto delle esigenze della singola pianta o del singolo prodotto.",
+  "months": [
+    "gennaio",
+    "febbraio",
+    "marzo",
+    "aprile",
+    "maggio",
+    "giugno",
+    "luglio",
+    "agosto",
+    "settembre",
+    "ottobre",
+    "novembre",
+    "dicembre"
+  ],
+  "date_fmt": "{d} {month} {y}"
+}

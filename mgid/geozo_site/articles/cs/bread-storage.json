@@ -1,0 +1,38 @@
+{
+  "rubric": "Domácnost a kuchyně",
+  "title": "Jak uchovávat chléb, aby zůstal čerstvý a měkký",
+  "teaser": "V lednici chléb tvrdne rychleji než na lince. Šest jednoduchých postupů: kam ho uložit, jak ho zmrazit a oživit a co z něj udělat, když už trochu oschl.",
+  "description": "Praktické rady, jak uložit chléb v chlebníku nebo v plátně, zmrazit ho po krajících, oživit oschlý bochník a využít zbytky.",
+  "heroAlt": "Ruce vkládají krajíc tmavého chleba do průhledného sáčku.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Čerstvě koupený chléb voní a křupe, jenže za dva tři dny bývá buď tvrdý, nebo naopak vlhký a gumový. Správné uložení pomůže víc, než by se zdálo. Stačí zvolit vhodný obal a vědět, co chlebu nesvědčí."},
+    {"t": "p", "x": "Níže je šest jednoduchých postupů pro bochníky i běžné pečivo."},
+    {"t": "h2", "x": "Proč chléb do lednice nepatří"},
+    {"t": "p", "x": "V lednici chléb vysychá a tvrdne rychleji než při pokojové teplotě. Chlad mu bere měkkost střídky i křupavost kůrky."},
+    {"t": "p", "x": "Nejlépe mu svědčí suché a vzdušné místo mimo dosah sporáku a přímého slunce. V parném létě, kdy chléb snadno plesniví, se vyplatí část zásoby rovnou zmrazit."},
+    {"t": "h2", "x": "Chlebník, plátno nebo papír"},
+    {"t": "p", "x": "Chlebu se nejlépe daří v chlebníku nebo plátěném sáčku, kde může dýchat. V těsně uzavřeném plastovém sáčku se drží vlhkost a kůrka změkne. Hodí se i čistá bavlněná utěrka."},
+    {"t": "p", "x": "Bochník s tuhou kůrkou si po nakrojení položte na prkénko řezem dolů nebo ho zabalte do papíru. Měkký sendvičový chléb naopak potřebuje obal, který se zavře, aby neoschl."},
+    {"t": "h2", "x": "Nakrájet a zmrazit"},
+    {"t": "p", "x": "Chléb, který nestihnete sníst do tří dnů, nakrájejte na krajíce a rozdělte na porce podle denní spotřeby. Mezi krajíce vložte proužky pečicího papíru, aby se po vyndání daly snadno oddělit, a vše zmrazte v uzavřeném sáčku nebo dóze."},
+    {"t": "p", "x": "Rozmrazovat není třeba: krajíc stačí dát rovnou z mrazáku do toustovače nebo na suchou pánev."},
+    {"t": "tip", "x": "Nejlépe chutná chléb zmrazený v den koupě, dokud je čerstvý."},
+    {"t": "h2", "x": "Jak oživit oschlý bochník"},
+    {"t": "p", "x": "Lehce oschlý bochník pokropte několika kapkami vody a dejte asi na deset minut do rozehřáté trouby. Kůrka znovu zkřupavěje a střídka změkne. Oživený chléb snězte hned, druhý den by znovu ztvrdl. Rohlíky a housky se oživují stejně, stačí jim kratší doba v troubě."},
+    {"t": "h2", "x": "Čistý a suchý chlebník"},
+    {"t": "p", "x": "Drobky a zbytky vlhkosti jsou živnou půdou pro plísně. Chlebník proto jednou týdně vyprázdněte, vytřete a nechte úplně vyschnout. Plátěný sáček občas vyperte."},
+    {"t": "p", "x": "Pokud se na chlebu objeví plíseň, vyhoďte ho celý, i když je vidět jen na jednom místě. Odkrojit postiženou část nestačí."},
+    {"t": "h2", "x": "Co s chlebem, který ztvrdl"},
+    {"t": "p", "x": "Oschlý chléb se ještě dobře využije. Nakrájený na kostky a opečený s trochou oleje a bylinek poslouží jako krutony do polévky, nastrouhaný jako domácí strouhanka. Oblíbené jsou i topinky, slané s česnekem, nebo sladké, namočené ve vajíčku s mlékem."},
+    {"t": "h2", "x": "Na co nezapomenout"},
+    {"t": "ul", "x": [
+      "Chléb neukládejte do lednice, v chladu rychleji tvrdne.",
+      "Chlebník nebo plátěný sáček, nakrojený bochník řezem dolů.",
+      "Nakrájený chléb zmrazte s papírem mezi krajíci.",
+      "Oschlý bochník oživíte kapkami vody a horkou troubou.",
+      "Chlebník pravidelně čistěte, plesnivý chléb vyhoďte.",
+      "Zbytky využijte na krutony, strouhanku a topinky."
+    ]},
+    {"t": "p", "x": "Díky několika drobným návykům se chleba vyhodí méně a každý krajíc se dobře využije. U baleného pečiva platí především pokyny výrobce na obalu."}
+  ]
+}

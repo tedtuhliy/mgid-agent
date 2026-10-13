@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "O nás",
+    "paras": [
+      "Arcadia Blog je malý online časopis o domove, kuchyni a záhrade. Píšeme o veciach, ktoré sa dajú vyskúšať hneď doma: ako uložiť potraviny, postarať sa o izbové rastliny a bylinky alebo zvládnuť drobnú prácu v záhrade.",
+      "Všetky texty majú informatívny charakter. Nenahrádzajú pokyny výrobcov ani odporúčania pre konkrétnu rastlinu či potravinu, preto sa pri každom postupe oplatí pozrieť aj na obal alebo do návodu.",
+      "Stránku financujeme z reklamy partnerov. Reklamné bloky sa zobrazujú medzi odsekmi článkov a každý z nich je zreteľne označený slovom „Reklama“, aby sa dal ľahko odlíšiť od obsahu časopisu."
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "paras": [
+      "Máte otázku, pripomienku alebo nápad na tému, o ktorej by sme mali napísať? Napíšte nám e-mail na adresu contact@arcadiablog.com.",
+      "Na správy odpovedáme zvyčajne do niekoľkých pracovných dní. Do správy prosím nepíšte osobné údaje, ktoré na vybavenie otázky nie sú potrebné."
+    ]
+  },
+  "privacy": {
+    "title": "Ochrana súkromia",
+    "paras": [
+      "Pri návšteve stránky sa automaticky zaznamenávajú základné technické údaje, napríklad typ zariadenia a prehliadača, jazyk a čas návštevy. Slúžia na to, aby stránka správne fungovala a dobre sa zobrazovala aj na mobile. Používame tiež súbory cookie.",
+      "Reklamné bloky našich partnerov môžu na zobrazovanie a meranie reklám využívať súbory cookie a podobné technológie. Partneri pritom zbierajú vlastné technické údaje podľa svojich zásad.",
+      "Na stránke nie sú používateľské účty ani platby, takže od vás nevyžadujeme meno, adresu ani údaje o platobnej karte.",
+      "Súbory cookie môžete kedykoľvek odstrániť alebo zablokovať v nastaveniach svojho prehliadača. Niektoré časti stránky alebo reklamné bloky sa potom nemusia zobraziť správne.",
+      "Ak máte otázku týkajúcu sa ochrany súkromia, napíšte nám na contact@arcadiablog.com a odpovieme vám v priebehu niekoľkých pracovných dní."
+    ]
+  }
+}

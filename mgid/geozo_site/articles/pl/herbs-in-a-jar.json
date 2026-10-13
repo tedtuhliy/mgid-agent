@@ -1,0 +1,37 @@
+{
+  "rubric": "Dom i kuchnia",
+  "title": "Jak zachować świeżość natki, koperku i kolendry: metoda ze słoikiem",
+  "teaser": "Pęczek natki czy koperku często więdnie po kilku dniach w lodówce. Opisujemy prostą metodę, w której zioła stoją w słoiku z wodą i zachowują świeży wygląd o wiele dłużej.",
+  "description": "Jak przechowywać natkę, koperek i kolendrę w słoiku z wodą, jak często zmieniać wodę i dlaczego bazylia wymaga innego traktowania.",
+  "heroAlt": "Szklany słoik z pęczkiem świeżej natki pietruszki i koperku",
+  "body": [
+    {"t": "p", "lead": true, "x": "Pęczek natki, koperku czy kolendry często zaczyna więdnąć już po kilku dniach w lodówce. Tymczasem wystarczą zwykły słoik, trochę wody i kilka minut pracy. Przy tej metodzie zioła zwykle zachowują świeży wygląd nawet przez dwa tygodnie."},
+    {"t": "p", "x": "W ciasnym woreczku zbiera się wilgoć, a liście szybko ciemnieją. Znacznie lepiej sprawdza się słoik z wodą, który nie wymaga żadnych specjalnych akcesoriów."},
+    {"t": "h2", "x": "Najpierw przycięcie łodyg"},
+    {"t": "p", "x": "Z pęczka warto zdjąć gumkę lub sznurek i usunąć żółknące, oślizgłe albo zwiędłe listki, bo przyspieszają psucie się reszty."},
+    {"t": "p", "x": "Końcówki łodyg dobrze jest skrócić o 1–2 cm ostrym nożem, tak jak robi się to z kwiatami ciętymi. Świeże przecięcie ułatwia roślinie pobieranie wody."},
+    {"t": "h2", "x": "Słoik z wodą i luźny woreczek"},
+    {"t": "p", "x": "Do czystego słoika należy nalać 2–3 cm zimnej wody i wstawić pęczek łodygami w dół. Liście powinny zostać nad powierzchnią wody."},
+    {"t": "p", "x": "Całość przykrywa się luźno woreczkiem, tak aby powietrze mogło swobodnie krążyć, i stawia w lodówce. Szczelne zamknięcie nie jest potrzebne, wystarczy osłona przed wysuszeniem. Jeśli pęczek się przechyla, słoik można ustawić w kącie półki albo wybrać węższe naczynie."},
+    {"t": "h2", "x": "Wymiana wody co dwa dni"},
+    {"t": "p", "x": "Woda w słoiku z czasem mętnieje, dlatego najlepiej zmieniać ją co dwa dni. Przy okazji warto przepłukać końcówki łodyg i zerwać listki, które zaczęły żółknąć."},
+    {"t": "tip", "x": "Karteczka z datą przyklejona do słoika przypomni, kiedy woda była wymieniana po raz ostatni."},
+    {"t": "h2", "x": "Bez mycia przed schowaniem"},
+    {"t": "p", "x": "Zioła myje się dopiero tuż przed użyciem. Krople wody na liściach przyspieszają ciemnienie i gnicie."},
+    {"t": "p", "x": "Jeśli pęczek jest zabrudzony ziemią, trzeba go opłukać i bardzo dokładnie osuszyć ręcznikiem papierowym, zanim trafi do słoika."},
+    {"t": "h2", "x": "Wyjątek: bazylia"},
+    {"t": "p", "x": "Bazylia źle znosi chłód, a w lodówce jej liście szybko czernieją. Lepiej postawić ją w szklance z wodą na blacie, z dala od kaloryfera i ostrego słońca. Wodę również warto zmieniać co kilka dni. Z czasem bazylia często wypuszcza w wodzie korzenie, a wtedy można ją przesadzić do doniczki."},
+    {"t": "h2", "x": "Inne sposoby i zastosowanie"},
+    {"t": "p", "x": "Gdy słoik zajmuje zbyt dużo miejsca, zioła można zawinąć w lekko wilgotny ręcznik papierowy i włożyć do pojemnika. Można je też posiekać i zamrozić w foremkach na kostki lodu, zalane odrobiną wody lub oliwy. Taką kostkę wystarczy wrzucić do garnka z zupą albo na patelnię z sosem."},
+    {"t": "p", "x": "Liście, które zmiękły, lepiej wykorzystać w zupach i sosach niż w sałatce. W gorących potrawach różnica w jędrności nie ma już znaczenia."},
+    {"t": "h2", "x": "W skrócie"},
+    {"t": "ul", "x": [
+      "Łodygi przyciąć, zwiędłe listki usunąć.",
+      "Do słoika 2–3 cm wody, na wierzch luźny woreczek.",
+      "Wodę wymieniać co dwa dni.",
+      "Zioła myć dopiero przed użyciem.",
+      "Bazylię trzymać w temperaturze pokojowej."
+    ]},
+    {"t": "p", "x": "Przy odrobinie regularności jeden pęczek wystarcza na wiele posiłków i rzadziej ląduje w koszu."}
+  ]
+}

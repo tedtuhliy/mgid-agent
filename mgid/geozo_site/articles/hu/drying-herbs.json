@@ -1,0 +1,36 @@
+{
+  "rubric": "Fűszernövények",
+  "title": "Így szárítsa és tárolja otthon a fűszernövényeket",
+  "teaser": "A nyáron termett vagy vásárolt zöldfűszerek egész évre eltehetők. Megmutatjuk, mikor érdemes szedni őket, hogyan szárítsa, és hogyan őrizheti meg az ízüket a tárolás során.",
+  "description": "Mikor szedje a fűszernövényeket, hogyan szárítsa kötegben, rácson vagy sütőben, honnan tudja, hogy elég száraz, és hogyan tárolja üvegben.",
+  "heroAlt": "Fehér tálkákban szárított fűszernövények, mögöttük fűszeres üvegek.",
+  "body": [
+    {"t": "p", "lead": true, "x": "A kertben vagy az ablakban nevelt fűszernövényekből nyáron bőven jut, és ami megmarad, azt egyszerűen el lehet tenni télre. A szárításhoz nem kell különleges eszköz, csak egy szellős hely és egy kis türelem."},
+    {"t": "p", "x": "Hat lépésben végigvesszük a szüretet, a szárítást és a tárolást."},
+    {"t": "h2", "x": "A szedés ideje"},
+    {"t": "p", "x": "Ideális a reggeli időpont, miután a harmat felszáradt, de a nap még nem erősödött meg. A legtöbb fűszernövényt a virágzás előtt érdemes szedni, mert a levelek ilyenkor különösen illatosak. Az esőben vagy harmatosan szedett növény hajlamosabb a penészedésre, ezért várja meg, míg megszárad."},
+    {"t": "h2", "x": "Szárítás kötegben"},
+    {"t": "p", "x": "Kössön kis csokrokat a szárakból, és akassza őket fejjel lefelé egy sötét, szellős helyre, például a kamrába vagy a padlásra. A fény kifakítja a leveleket, a szellős, száraz levegő viszont gyorsítja a száradást."},
+    {"t": "p", "x": "A kisebb kötegek gyorsabban száradnak, és kevésbé hajlamosak a penészedésre, ezért ne zsúfolja össze őket."},
+    {"t": "tip", "x": "Befőttesgumival fogja össze a csokrot, mert a szárak száradás közben összezsugorodnak, a madzag pedig meglazul."},
+    {"t": "h2", "x": "Rács, tálca vagy sütő"},
+    {"t": "p", "x": "A leveleket szedje le a szárról, és egy rétegben terítse szitára vagy tálcára, árnyékos, szellős helyen. Időnként forgassa át őket, hogy egyenletesen száradjanak."},
+    {"t": "p", "x": "Gyorsabb megoldás a sütő: állítsa a legalacsonyabb hőfokra, hagyja résnyire nyitva az ajtaját, és gyakran ellenőrizze a leveleket. Ilyenkor nagyjából egy-két óra is elég lehet, a növény fajtájától függően."},
+    {"t": "h2", "x": "Az elkészült szárítmány jelei"},
+    {"t": "p", "x": "A kész növény ropog, és az ujjai között könnyen szétmorzsolódik. Ha még hajlik vagy ragad, hagyja tovább száradni, mert a nedvesen eltett fűszer megpenészedhet. A sütőből kivett leveleket hagyja teljesen kihűlni, mielőtt üvegbe tölti."},
+    {"t": "h2", "x": "Tárolás üvegben"},
+    {"t": "p", "x": "Töltse a szárított leveleket légmentesen záródó üvegbe, és tartsa fénytől és hőtől védve, például a kamrában, ne a tűzhely fölött. Ragasszon rá címkét a dátummal: a szárított fűszerek nagyjából egy évig őrzik az ízüket."},
+    {"t": "p", "x": "A fűszert csak felhasználás előtt morzsolja szét, így több illata marad meg. Inkább kisebb üvegeket használjon, mert minden kinyitáskor friss levegő éri a fűszert."},
+    {"t": "h2", "x": "Szárításra és fagyasztásra alkalmas fűszerek"},
+    {"t": "p", "x": "Jól száradnak az oregánó, a kakukkfű, a rozmaring, a zsálya, a menta és a kapor. A bazsalikom, a petrezselyem, a koriander és a metélőhagyma szárítva sokat veszít az ízéből, ezért ezeket inkább aprítva fagyassza le. A fagyasztott fűszert nem kell felolvasztani, a főzés végén közvetlenül az ételbe teheti."},
+    {"t": "h2", "x": "Röviden: a szárítás lépései"},
+    {"t": "ul", "x": [
+      "Szedje reggel, a harmat felszáradása után, virágzás előtt.",
+      "Kis kötegek, fejjel lefelé, sötét, szellős helyen.",
+      "A sütőben a legalacsonyabb hőfokon, résnyire nyitott ajtóval.",
+      "Akkor kész, ha a levél ropog és szétmorzsolódik.",
+      "Légmentes üveg, fénytől és hőtől védve, dátumozva."
+    ]},
+    {"t": "p", "x": "A szárított fűszerek idővel elveszítik az illatukat, ezért érdemes évente megújítani a készletet."}
+  ]
+}

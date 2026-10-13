@@ -1,0 +1,37 @@
+{
+  "rubric": "Domov a kuchyňa",
+  "title": "Ako uložiť chlieb, aby dlhšie zostal čerstvý a mäkký",
+  "teaser": "Chlieb v chladničke rýchlo tvrdne, v chlebníku alebo plátennom vrecku vydrží lepšie. Prinášame postupy, ako ho nakrájať a zmraziť, oživiť tvrdnúci bochník a využiť zvyšky.",
+  "description": "Ako uložiť chlieb v chlebníku, plátne alebo mrazničke, oživiť tvrdnúci bochník v rúre a využiť aj tvrdé kúsky namiesto ich vyhodenia.",
+  "heroAlt": "Ruky držiace krajec tmavého chleba nad priehľadným vreckom na uskladnenie",
+  "body": [
+    {"t": "p", "lead": true, "x": "Chlieb vydrží vláčny a chutný aj niekoľko dní, ak ho uložíme správne. Rozhoduje vzduch, vlhkosť a teplota, pričom každý druh chleba potrebuje trochu iné podmienky. Stačí poznať pár jednoduchých zásad."},
+    {"t": "p", "x": "Nižšie nájdete šesť rád, od uloženia až po využitie posledných kúskov."},
+    {"t": "h2", "x": "Chladnička chlieb skôr vysušuje"},
+    {"t": "p", "x": "Chladnička pôsobí ako istá voľba, no chlieb v nej tvrdne a vysychá rýchlejšie než pri izbovej teplote. Na pár dní je preto lepšie iné miesto, a keď ho nestihnete zjesť, pomôže mraznička."},
+    {"t": "h2", "x": "Chlebník, plátno alebo papier"},
+    {"t": "p", "x": "Bochník s chrumkavou kôrkou sa dobre uchová v papierovom alebo ľanovom vrecku, kde kôrka nezmäkne a chlieb stále dýcha. Mäkký a toastový chlieb ostanú vláčnejšie v chlebníku alebo v zatvorenom vrecku."},
+    {"t": "p", "x": "Nakrojený bochník ukladajte rezom nadol, aby striedka nevysychala."},
+    {"t": "tip", "x": "Ešte teplý chlieb v zatvorenom vrecku sa zapotí, preto ho nechajte najprv úplne vychladnúť."},
+    {"t": "h2", "x": "Nakrájať a zmraziť"},
+    {"t": "p", "x": "Ak chlieb nestihnete zjesť, nakrájajte ho na krajce a zmrazte. Medzi krajce vložte kúsky papiera na pečenie, aby sa dali ľahko oddeliť, a uložte ich do vrecka alebo nádoby."},
+    {"t": "p", "x": "Potrebné množstvo vyberajte priamo z mrazničky a opečte v hriankovači, bez rozmrazovania. Raz rozmrazený chlieb už znova nezmrazujte."},
+    {"t": "h2", "x": "Ako oživiť tvrdnúci bochník"},
+    {"t": "p", "x": "Mierne tvrdý bochník zľahka pokvapkajte vodou a asi na 10 minút vložte do rúry vyhriatej na približne 180 °C. Kôrka bude opäť chrumkavá a vnútro zmäkne. Takto upravený chlieb zjedzte do pár hodín, kým je teplý, lebo za studena opäť rýchlo tvrdne. Najlepšie to funguje pri bochníkoch s hrubšou kôrkou."},
+    {"t": "h2", "x": "Čistý a suchý chlebník"},
+    {"t": "p", "x": "Chlebník raz týždenne vyprázdnite, vytrite omrvinky a nechajte dobre vyschnúť. Vo vlhkom a zašpinenom prostredí sa pleseň šíri ľahšie."},
+    {"t": "p", "x": "Ak sa na chlebe objaví pleseň, vyhoďte celý bochník, nielen viditeľné miesto. V mäkkom pečive sa totiž šíri aj tam, kde ju nevidno."},
+    {"t": "h2", "x": "Čo s tvrdým chlebom"},
+    {"t": "p", "x": "Tvrdé kúsky nemusia skončiť v koši. Nakrájané na kocky a opečené s trochou oleja a soli z nich budú krutóny do polievok a šalátov, rozomleté dajú strúhanku."},
+    {"t": "p", "x": "Z krajcov namočených do mlieka s vajcom a opečených na panvici urobíte chudobných rytierov, zo starších žemlí zasa sladkú žemľovku."},
+    {"t": "h2", "x": "V skratke"},
+    {"t": "ul", "x": [
+      "Chlieb nedávajte do chladničky, tvrdne v nej rýchlejšie.",
+      "Bochník s chrumkavou kôrkou uložte do papiera alebo plátna, mäkký chlieb do chlebníka.",
+      "Nakrájaný chlieb s papierom medzi krajcami zmrazte po porciách.",
+      "Tvrdnúci bochník oživte kvapkami vody a desiatimi minútami v rúre.",
+      "Chlebník udržiavajte čistý a suchý, plesnivý chlieb vyhoďte."
+    ]},
+    {"t": "p", "x": "S týmito návykmi vyhodíte menej chleba a aj posledný krajec sa zíde v kuchyni."}
+  ]
+}

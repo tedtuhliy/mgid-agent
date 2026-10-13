@@ -1,0 +1,39 @@
+{
+  "rubric": "Domov a záhrada",
+  "title": "Izbové rastliny na jeseň: 7 tipov, vďaka ktorým dobre prečkajú zimu",
+  "teaser": "S kratšími dňami a prvým kúrením sa rastlinám v byte mení všetko: svetlo, vlhkosť aj spotreba vody. Sedem krokov, ako upraviť starostlivosť, kým sa opäť oteplí.",
+  "description": "Sedem tipov pre izbové rastliny na jeseň: viac svetla, striedme zalievanie, vlhkosť vzduchu, menej hnojiva, kontrola škodcov a odklad presádzania.",
+  "heroAlt": "Malý stromček v hnedom keramickom kvetináči na drevenom stole pri svetlej stene",
+  "body": [
+    {"t": "p", "lead": true, "x": "S príchodom jesene sa dni skracujú, doma sa spúšťa kúrenie a vzduch v byte sa citeľne vysúša. Mnohé izbové rastliny na to reagujú zhadzovaním listov alebo vyťahovaním stoniek. Zvyčajne však stačí zmeniť pár návykov."},
+    {"t": "p", "x": "Tu je sedem tipov, ktoré sa hodia pre väčšinu izbových rastlín aj pre bylinky na okne."},
+    {"t": "h2", "x": "1. Dajte im viac svetla"},
+    {"t": "p", "x": "Cez okno prichádza na jeseň výrazne menej svetla než v lete. Rastliny presuňte bližšie k oknu, ale dbajte, aby sa listy nedotýkali studeného skla. Raz za dva týždne ich utrite vlhkou handričkou, pretože prach pohlcuje časť svetla."},
+    {"t": "h2", "x": "2. Zalievajte menej, ale zem kontrolujte"},
+    {"t": "p", "x": "V chladnejšom období rastliny rastú pomalšie a spotrebujú menej vody. Pred zalievaním strčte prst do zeminy: ak je suchá do hĺbky dvoch až troch centimetrov, môžete zaliať, ak je vlhká, počkajte. Prebytočnú vodu z misky vylejte do pol hodiny."},
+    {"t": "tip", "x": "Kvetináč so suchou zeminou je citeľne ľahší než vlhký, takže potrebu zálievky po čase spoznáte aj len nadvihnutím."},
+    {"t": "h2", "x": "3. Postarajte sa o vlhkosť vzduchu"},
+    {"t": "p", "x": "Radiátory vzduch výrazne vysušujú. Kvetináče postavte na misku s mokrými kamienkami tak, aby dno kvetináča nesiahalo do vody, alebo rastliny zoskupte, aby sa medzi nimi držalo trochu viac vlhkosti."},
+    {"t": "p", "x": "Rosenie listov nepomáha všetkým rastlinám: tie s chlpatými listami, napríklad africké fialky, ho nemusia znášať."},
+    {"t": "h2", "x": "4. Chráňte ich pred prievanom a radiátormi"},
+    {"t": "p", "x": "Prudké zmeny teploty sú častou príčinou opadávania listov. Rastliny nenechávajte pri otvorenom okne a nestavajte ich priamo nad radiátor."},
+    {"t": "p", "x": "Pri vetraní ich presuňte do inej miestnosti a na noc odsuňte od studeného skla."},
+    {"t": "h2", "x": "5. Obmedzte hnojenie"},
+    {"t": "p", "x": "V zime väčšina rastlín odpočíva a hnojivo nepotrebuje. Zvyčajne sa s ním prestáva na jeseň a začína znova na jar, keď sa objavia nové listy. Výnimkou sú druhy, ktoré kvitnú v zime: pri nich sa riaďte pokynmi pre daný druh."},
+    {"t": "h2", "x": "6. Raz týždenne prezrite listy"},
+    {"t": "p", "x": "Suchý vzduch vyhovuje roztočom aj voškám. Raz týždenne si prezrite hornú aj spodnú stranu listov: lepkavý povlak, drobné svetlé bodky či jemné pavučinky sú dôvodom na zásah."},
+    {"t": "p", "x": "Najprv stačí rastlinu opláchnuť vlažnou vodou; pri väčšom napadnutí použite prípravok podľa návodu na obale."},
+    {"t": "h2", "x": "7. S presádzaním sa neponáhľajte"},
+    {"t": "p", "x": "Ak rastlina vyzerá dobre, presádzanie radšej odložte na jar, keď sa korene lepšie ujmú. Teraz ho urobte len v nevyhnutnom prípade, napríklad keď korene vyrastajú z otvorov na dne a voda cez zeminu len prebehne."},
+    {"t": "h2", "x": "Stručne: na čo nezabudnúť"},
+    {"t": "ul", "x": [
+      "Viac svetla, ale nie pri studenom skle.",
+      "Menej vody a prst v zemine namiesto kalendára.",
+      "Vlhkosť pri radiátoroch zlepší miska s kamienkami alebo skupina rastlín.",
+      "Preč od prievanu a horúcich radiátorov.",
+      "Hnojenie pozastavte a listy raz týždenne prezrite.",
+      "Presádzanie odložte na jar."
+    ]},
+    {"t": "p", "x": "A hlavne: každý druh má vlastné nároky, preto sa pri konkrétnej rastline riaďte odporúčaniami práve pre ňu."}
+  ]
+}

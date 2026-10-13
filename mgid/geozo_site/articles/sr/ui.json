@@ -1,0 +1,32 @@
+{
+  "brand_tag": "saveti",
+  "read_also": "Pročitajte i",
+  "read_min": "{n} min čitanja",
+  "home_title": "Dom, kuhinja i bašta",
+  "home_intro": "Jednostavni saveti za svaki dan: kako da namirnice duže ostanu sveže, kako se brinuti o sobnim biljkama i kako da začinsko bilje uvek bude pri ruci.",
+  "all_articles": "Svi članci",
+  "nav_home": "Početna",
+  "nav_about": "O nama",
+  "nav_contact": "Kontakt",
+  "nav_privacy": "Politika privatnosti",
+  "disclosure": "Tekstovi na sajtu imaju informativni karakter. Sajt prikazuje reklame partnera i svaki reklamni blok je označen rečju „Reklama“, a za rad sajta i reklamnih blokova koriste se kolačići.",
+  "cookie": "Koristimo kolačiće za rad sajta i reklamnih blokova.",
+  "cookie_more": "Saznajte više",
+  "cookie_ok": "U redu",
+  "disclaimer": "Tekst ima informativni karakter: pridržavajte se uputstva proizvođača i prilagodite savete potrebama konkretne biljke ili namirnice.",
+  "months": [
+    "januar",
+    "februar",
+    "mart",
+    "april",
+    "maj",
+    "jun",
+    "jul",
+    "avgust",
+    "septembar",
+    "oktobar",
+    "novembar",
+    "decembar"
+  ],
+  "date_fmt": "{d}. {month} {y}."
+}

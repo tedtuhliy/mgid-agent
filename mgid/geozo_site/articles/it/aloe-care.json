@@ -1,0 +1,108 @@
+{
+  "rubric": "Casa e giardino",
+  "title": "Aloe vera in casa: luce, annaffiature e rinvaso",
+  "teaser": "L’aloe è una pianta resistente, ma teme soprattutto l’acqua in eccesso. Quanta luce dare, quando annaffiare, quale vaso e quale terriccio scegliere e come separare i piccoli polloni.",
+  "description": "Come prendersi cura dell’aloe vera in appartamento: luce, annaffiature, terriccio e vaso, riposo invernale, segnali delle foglie, polloni e rinvaso.",
+  "heroAlt": "Primo piano di grandi foglie verdi e carnose, con il margine dentellato e piccole gocce d’acqua.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "L’aloe vera è una pianta succulenta che perdona qualche dimenticanza, ma non l’eccesso d’acqua. Con la luce giusta e un vaso che scarica bene può restare in casa per molti anni."
+    },
+    {
+      "t": "p",
+      "x": "Ecco i punti essenziali: dove metterla, come annaffiarla, che vaso scegliere e quando rinvasarla."
+    },
+    {
+      "t": "h2",
+      "x": "Luce: molta, ma filtrata"
+    },
+    {
+      "t": "p",
+      "x": "L’aloe ama la luce intensa ma indiretta, per esempio vicino a una finestra luminosa. Un po’ di sole diretto non le dispiace, soprattutto al mattino o in inverno; quello forte di mezzogiorno dietro il vetro può invece bruciare le foglie."
+    },
+    {
+      "t": "p",
+      "x": "Se in estate la portate sul balcone, abituatela al sole poco alla volta: un cambio brusco lascia macchie secche sulle foglie."
+    },
+    {
+      "t": "h2",
+      "x": "Annaffiare a fondo, poi aspettare"
+    },
+    {
+      "t": "p",
+      "x": "Annaffiate abbondantemente, finché l’acqua esce dai fori di drenaggio, poi aspettate che il terriccio si asciughi del tutto prima di ripetere. In estate di solito basta una volta ogni due settimane circa, in inverno anche molto meno."
+    },
+    {
+      "t": "tip",
+      "x": "Dopo ogni annaffiatura svuotate il sottovaso: le radici dell’aloe non devono restare nell’acqua."
+    },
+    {
+      "t": "h2",
+      "x": "Terriccio drenante e vaso di terracotta"
+    },
+    {
+      "t": "p",
+      "x": "Il terriccio deve essere sabbioso e granuloso, per esempio quello per cactus e piante grasse con l’aggiunta di sabbia grossa o pomice."
+    },
+    {
+      "t": "p",
+      "x": "Il vaso, meglio se di terracotta perché lascia evaporare l’umidità, ha fori sul fondo e non è troppo grande."
+    },
+    {
+      "t": "h2",
+      "x": "Il riposo invernale"
+    },
+    {
+      "t": "p",
+      "x": "In inverno la crescita rallenta: tenete l’aloe in un luogo luminoso e fresco, riducete le annaffiature e non concimate."
+    },
+    {
+      "t": "p",
+      "x": "Il gelo la danneggia: meglio che la temperatura non scenda sotto i 10 °C circa."
+    },
+    {
+      "t": "h2",
+      "x": "Cosa dicono le foglie"
+    },
+    {
+      "t": "p",
+      "x": "Foglie molli, traslucide e quasi vitree indicano troppa acqua: sospendete le annaffiature e controllate che il vaso scarichi bene."
+    },
+    {
+      "t": "p",
+      "x": "Foglie sottili, arrotolate o rugose indicano invece mancanza d’acqua: annaffiate a fondo e riprendete il ritmo regolare."
+    },
+    {
+      "t": "h2",
+      "x": "Polloni e rinvaso"
+    },
+    {
+      "t": "p",
+      "x": "Alla base della pianta nascono piccole piantine laterali, i polloni. Quando hanno qualche foglia e radici proprie, si staccano con delicatezza, si lasciano asciugare un giorno e si piantano in vasetti con terriccio drenante."
+    },
+    {
+      "t": "p",
+      "x": "Il rinvaso serve ogni due o tre anni, in primavera, in un vaso appena più grande. Dopo, aspettate qualche giorno prima di annaffiare."
+    },
+    {
+      "t": "h2",
+      "x": "Da tenere a mente"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Luce intensa ma indiretta, con un po’ di sole al mattino.",
+        "Annaffiatura abbondante, poi pausa fino al terriccio completamente asciutto.",
+        "Terriccio granuloso e vaso di terracotta con fori di drenaggio.",
+        "In inverno riposo, poca acqua e mai sotto i 10 °C circa.",
+        "Rinvaso ogni due o tre anni e polloni staccati con delicatezza."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "L’aloe perdona molto, ma non l’umidità persistente: nel dubbio è meglio aspettare un giorno in più prima di annaffiare."
+    }
+  ]
+}

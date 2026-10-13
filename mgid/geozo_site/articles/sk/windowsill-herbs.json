@@ -1,0 +1,37 @@
+{
+  "rubric": "Domov a záhrada",
+  "title": "Bylinky na parapete: ktoré sa v byte darí a ako sa o ne starať",
+  "teaser": "Bazalka, mäta, petržlenová vňať, pažítka a tymián zvládnu život v byte, ak majú dosť svetla a primeranú zálievku. Prehľad ich nárokov a najčastejších problémov.",
+  "description": "Ktoré bylinky sa darí pestovať na okne, koľko svetla potrebujú, ako ich zalievať, zaštipovať a prihnojovať a čo robiť, keď žltnú alebo sa vyťahujú.",
+  "heroAlt": "Husté zelené lístky kuchynských bylín zblízka",
+  "body": [
+    {"t": "p", "lead": true, "x": "Čerstvé bylinky z vlastného okna sa hodia do polievky, na chlieb aj k vajíčkam. Ich pestovanie nie je zložité a zvládne ho aj začiatočník. Kľúčom sú správny druh, dosť svetla a striedme zalievanie."},
+    {"t": "p", "x": "Tu je prehľad toho, čo sa v byte darí, a základné zásady starostlivosti."},
+    {"t": "h2", "x": "Ktoré bylinky sa v byte darí"},
+    {"t": "p", "x": "Najľahšie sa pestuje bazalka, mäta, petržlenová vňať, pažítka a tymián. Všetky sa dajú vysiať zo semien alebo kúpiť ako hotové sadenice."},
+    {"t": "p", "x": "Bazalka a petržlenová vňať rastú rýchlo, tymián je nenáročný a mäta sa rozrastá tak bujno, že jej patrí samostatný kvetináč."},
+    {"t": "h2", "x": "Svetlo: južné alebo východné okno"},
+    {"t": "p", "x": "Bylinky potrebujú štyri až šesť hodín svetla denne, najlepšie z južného alebo východného okna. Na severnom parapete sa im darí oveľa horšie."},
+    {"t": "p", "x": "Na jeseň a v zime pomôže stolná lampa nad kvetináčmi, zapnutá na niekoľko hodín denne. Kvetináče raz týždenne pootočte, aby rastliny rástli rovnomerne a neprehýbali sa k oknu."},
+    {"t": "h2", "x": "Kvetináče s otvormi na odtok vody"},
+    {"t": "p", "x": "Kvetináč musí mať na dne otvory, inak voda zostáva pri koreňoch a tie začnú hniť. Pod kvetináč dajte misku a po zálievke z nej prebytočnú vodu vylejte."},
+    {"t": "p", "x": "Hlinené kvetináče vysychajú rýchlejšie ako plastové, preto v nich zeminu kontrolujte o niečo častejšie."},
+    {"t": "h2", "x": "Zalievajte, keď je zem pri povrchu suchá"},
+    {"t": "p", "x": "Pred zalievaním vyskúšajte zeminu prstom: ak je suchá do hĺbky jedného až dvoch centimetrov, zalejte. Bylinky nemajú rady stále mokrú zem, preto radšej zalejte menej a o pár dní zeminu skontrolujte znova. Používajte vodu izbovej teploty."},
+    {"t": "h2", "x": "Zaštipovanie a zber"},
+    {"t": "p", "x": "Špičky výhonkov pravidelne zaštipujte, aby bylinky rástli do šírky a nevytiahli sa do výšky. Zbierajte postupne a nikdy naraz nezoberajte viac než tretinu rastliny. Zaštipnuté špičky môžete rovno použiť do jedla, takže rez je zároveň zberom."},
+    {"t": "tip", "x": "Kúpené bylinky z malého plastového kvetináča presaďte do väčšieho s čerstvou zeminou, pretože v tesnom obale vydržia len krátko."},
+    {"t": "h2", "x": "Čo robiť, keď bylinky žltnú alebo sa vyťahujú"},
+    {"t": "p", "x": "Vytiahnuté, bledé stonky zvyčajne znamenajú nedostatok svetla, preto kvetináč presuňte na svetlejšie miesto. Žltnúce listy bývajú dôsledkom príliš častej zálievky alebo naopak prílišného sucha, takže najprv skontrolujte zeminu."},
+    {"t": "p", "x": "V období rastu, od jari do leta, bylinky raz mesačne prihnojte slabým roztokom hnojiva a dávkovanie si overte na obale. V zime hnojenie vynechajte."},
+    {"t": "h2", "x": "Bylinky na parapete v skratke"},
+    {"t": "ul", "x": [
+      "Vyberte bazalku, mätu, petržlenovú vňať, pažítku alebo tymián.",
+      "Zabezpečte štyri až šesť hodín svetla, v zime pomôže lampa.",
+      "Kvetináč musí mať otvory na odtok vody.",
+      "Zalievajte, keď je vrchné 1 až 2 cm zeminy suché.",
+      "Špičky zaštipujte a zbierajte najviac tretinu rastliny."
+    ]},
+    {"t": "p", "x": "S trochou pravidelnosti sa z parapetu stane malá záhradka, z ktorej si môžete odtrhnúť čerstvé lístky vždy, keď ich potrebujete."}
+  ]
+}

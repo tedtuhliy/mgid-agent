@@ -1,0 +1,37 @@
+{
+  "rubric": "Casa y cocina",
+  "title": "Frutas y verduras: qué guardar juntas y qué guardar por separado",
+  "teaser": "Algunas frutas aceleran la maduración de lo que tienen al lado, y por eso conviene guardarlas aparte. Estas son las combinaciones que ayudan a que la compra dure más.",
+  "description": "Qué frutas y verduras se guardan juntas y cuáles por separado: etileno, patatas y cebollas, tomates, cajones de la nevera y repaso semanal.",
+  "heroAlt": "Cajón de la nevera con pimientos rojos, amarillos y naranjas, pepinos, espinacas y zanahorias, cada cosa en su compartimento.",
+  "body": [
+    {"t": "p", "lead": true, "x": "No todas las frutas y verduras son buenas vecinas. Algunas aceleran la maduración de las que tienen al lado, y saberlo ayuda a que la compra no se estropee antes de tiempo."},
+    {"t": "p", "x": "Con unas pocas pautas, la fruta y la verdura duran más y se tira menos."},
+    {"t": "h2", "x": "El etileno, explicado con sencillez"},
+    {"t": "p", "x": "El etileno es un gas natural que muchas frutas desprenden al madurar. No se ve, pero hace que lo que está cerca madure y se ablande más deprisa."},
+    {"t": "p", "x": "Lo producen sobre todo las manzanas, las peras, los plátanos y los tomates maduros. Lo notan las verduras de hoja, los pepinos, las zanahorias y el brócoli, que se estropean antes."},
+    {"t": "h2", "x": "Patatas y cebollas: separadas y a oscuras"},
+    {"t": "p", "x": "Las patatas y las cebollas duran más en un lugar fresco, oscuro y bien ventilado, y mejor cada una por su lado, porque juntas se estropean antes. Una cesta o una caja de madera es preferible a una bolsa de plástico cerrada."},
+    {"t": "h2", "x": "El tomate y el frío no se llevan bien"},
+    {"t": "p", "x": "El frío de la nevera le quita sabor y lo vuelve harinoso. Por eso conviene dejarlo fuera, a temperatura ambiente, hasta que termine de madurar."},
+    {"t": "p", "x": "Una vez maduro, y solo si se va a gastar en pocos días, puede pasar a la nevera; antes de comerlo, se saca un rato para que recupere el aroma."},
+    {"t": "h2", "x": "Los dos cajones de la nevera"},
+    {"t": "p", "x": "Muchas neveras tienen dos cajones, a veces con regulador de humedad. El más húmedo es para las verduras, sobre todo las de hoja, y el más seco, para la fruta."},
+    {"t": "p", "x": "Si solo hay un cajón, es mejor dedicarlo a la verdura y dejar la fruta en una balda."},
+    {"t": "h2", "x": "Lo cortado, bien tapado"},
+    {"t": "p", "x": "Al cortarse, las frutas y verduras pierden humedad y se oxidan. Guardadas en recipientes cerrados o bien tapadas conservan mejor el aspecto, y los olores no pasan de unas a otras."},
+    {"t": "tip", "x": "Las mitades de melón o de sandía conviene guardarlas tapadas, para que no impregnen de olor el resto de la nevera."},
+    {"t": "h2", "x": "Un repaso semanal"},
+    {"t": "p", "x": "Una vez por semana merece la pena revisar los cajones y retirar lo que empiece a estropearse: una pieza en mal estado acelera el deterioro de las que tiene al lado."},
+    {"t": "p", "x": "Lo más maduro se gasta primero, y lo que está a punto de pasarse puede acabar en una compota o en una salsa."},
+    {"t": "h2", "x": "Lo esencial"},
+    {"t": "ul", "x": [
+      "Manzanas, peras y plátanos, lejos de las verduras de hoja.",
+      "Patatas y cebollas, en un sitio fresco y oscuro, y separadas.",
+      "Tomates fuera de la nevera hasta que maduren.",
+      "Verdura en el cajón húmedo; fruta, en el más seco.",
+      "Revisar cada semana y retirar lo que se estropee."
+    ]},
+    {"t": "p", "x": "Cada pieza madura a su ritmo, así que conviene mirar la fruta y la verdura de vez en cuando y no fiarse solo de la fecha de compra."}
+  ]
+}

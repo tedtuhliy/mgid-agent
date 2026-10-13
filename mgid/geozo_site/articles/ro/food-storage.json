@@ -1,0 +1,40 @@
+{
+  "rubric": "Casă și bucătărie",
+  "title": "9 reguli simple ca alimentele să rămână proaspete mai mult timp",
+  "teaser": "Un frigider bine aranjat, recipiente cu capac și câteva obiceiuri mici ajută alimentele să reziste mai mult. Iată nouă reguli simple, ușor de aplicat în orice bucătărie.",
+  "description": "Nouă reguli practice pentru păstrarea alimentelor: aranjarea frigiderului, carnea și peștele, legumele și fructele, congelarea și mâncarea gătită.",
+  "heroAlt": "Frigider deschis, cu alimente proaspete așezate ordonat: legume în sertare, fructe de pădure în cutii și sosuri pe raftul ușii.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Cu un frigider bine aranjat și câteva obiceiuri simple, alimentele rămân proaspete mai multe zile, iar la gunoi ajunge mai puțină mâncare. Nu e nevoie de aparate speciale, ci de puțină atenție la locul fiecărui lucru. Iată nouă reguli pe care le poate aplica oricine."},
+    {"t": "p", "x": "Nu trebuie să le aplicați pe toate deodată; începeți cu cele care vi se par mai ușoare."},
+    {"t": "h2", "x": "1. Aranjați frigiderul după temperatură"},
+    {"t": "p", "x": "Frigiderul nu e la fel de rece peste tot: cel mai frig este în spate și jos, iar ușa se încălzește la fiecare deschidere. Țineți în ușă sosurile și băuturile. Temperatura potrivită este între 2 și 5 °C."},
+    {"t": "tip", "x": "Un termometru mic de frigider vă arată dacă temperatura chiar este cea potrivită."},
+    {"t": "h2", "x": "2. Carnea crudă și peștele, pe raftul de jos"},
+    {"t": "p", "x": "Puneți-le în recipiente cu capac sau pe o farfurie acoperită. Așa, zeama nu picură peste alte alimente, iar mirosul nu se răspândește în tot frigiderul."},
+    {"t": "h2", "x": "3. Verdeața se ține ca florile în vază"},
+    {"t": "p", "x": "Pătrunjelul, mărarul și coriandrul stau mai bine cu tulpinile într-un pahar cu puțină apă și cu o pungă așezată ușor deasupra. Schimbați apa o dată la două zile."},
+    {"t": "h2", "x": "4. Fructele și legumele, separat"},
+    {"t": "p", "x": "Merele, perele și bananele, ca și roșiile coapte, degajă etilenă, un gaz natural care face ca produsele din apropiere să se coacă și să se strice mai repede. Țineți-le departe de salată, castraveți și morcovi."},
+    {"t": "p", "x": "Cartofii și ceapa merg în coșuri separate: fiecare vrea un loc întunecos, răcoros și aerisit, dar nu unul lângă celălalt."},
+    {"t": "h2", "x": "5. Spălați abia înainte de folosire"},
+    {"t": "p", "x": "Fructele de pădure, ciupercile și frunzele de salată se strică mai repede dacă rămân ude. Păstrați-le uscate, într-un recipient căptușit cu prosop de hârtie, și spălați-le chiar înainte de a le mânca."},
+    {"t": "h2", "x": "6. Pâine, cereale și nuci"},
+    {"t": "p", "x": "Pâinea stă mai bine într-o cutie sau într-un săculeț de pânză decât în frigider. Făina, orezul și fulgii de ovăz merg în borcane bine închise, la loc uscat, iar nucile și semințele, la răcoare, ca să nu râncezească."},
+    {"t": "h2", "x": "7. Congelați proaspăt și în porții"},
+    {"t": "p", "x": "Congelați alimentele cât sunt proaspete, în porții cât pentru o masă, în pungi sau cutii bine închise. Notați data pe fiecare pachet; congelatorul trebuie să țină −18 °C."},
+    {"t": "h2", "x": "8. Mâncarea gătită se răcește repede"},
+    {"t": "p", "x": "Lăsați mâncarea gătită să se răcească și puneți-o în frigider în cel mult două ore, de preferat în recipiente joase, în care se răcește mai repede. Consumați-o în trei-patru zile."},
+    {"t": "h2", "x": "9. Primul intrat, primul ieșit"},
+    {"t": "p", "x": "Ce ați cumpărat mai demult așezați în față, iar produsele noi în spate; așa nimic nu rămâne uitat. Ștergeți frigiderul din când în când cu apă călduță și puțin detergent, apoi uscați-l."},
+    {"t": "h2", "x": "Pe scurt"},
+    {"t": "ul", "x": [
+      "Cel mai frig e în spate și jos; ușa e pentru sosuri și băuturi.",
+      "Carnea crudă și peștele stau jos, în recipiente închise.",
+      "Fructele care se coc se țin departe de legume.",
+      "Congelați în porții, cu data scrisă.",
+      "Mâncarea gătită se răcește repede și se consumă în 3-4 zile."
+    ]},
+    {"t": "p", "x": "La produsele ambalate, termenul și condițiile de păstrare de pe etichetă au întotdeauna prioritate."}
+  ]
+}

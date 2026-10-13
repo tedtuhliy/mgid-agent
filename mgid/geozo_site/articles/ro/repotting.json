@@ -1,0 +1,36 @@
+{
+  "rubric": "Plante de apartament",
+  "title": "Rempotarea plantelor de apartament: când, cum și ce trebuie evitat",
+  "teaser": "Nu orice plantă are nevoie de un ghiveci nou în fiecare an. Iată semnele care arată că a venit momentul, perioada potrivită, pașii rempotării și greșelile de evitat.",
+  "description": "Cum rempotați corect plantele de apartament: semne că ghiveciul e mic, momentul potrivit, pașii, îngrijirea de după și alternativa fără rempotare.",
+  "heroAlt": "O palmă care ține puțin pământ proaspăt, din care iese o plăntuță tânără.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Un ghiveci prea strâmt poate încetini creșterea unei plante, dar nici o rempotare făcută în grabă nu o ajută. Totul depinde de momentul ales, de mărimea noului ghiveci și de felul în care sunt tratate rădăcinile. Cu câteva reguli simple, schimbarea decurge fără probleme."},
+    {"t": "p", "x": "Nu orice plantă trebuie rempotată în fiecare an. Iată cum recunoașteți că a venit timpul și cum procedați pas cu pas."},
+    {"t": "h2", "x": "Semne că ghiveciul e prea mic"},
+    {"t": "p", "x": "Rădăcinile ies prin orificiile de scurgere sau se răsucesc în cerc la suprafață. Apa trece direct prin ghiveci, fără să fie reținută de pământ, iar planta nu mai crește, deși o îngrijiți ca până acum."},
+    {"t": "tip", "x": "Dacă nu sunteți siguri, scoateți planta cu grijă din ghiveci: o rețea deasă de rădăcini pe margini arată că ghiveciul s-a făcut mic."},
+    {"t": "h2", "x": "Alegeți momentul potrivit"},
+    {"t": "p", "x": "Rempotați între primăvară și începutul verii, când planta intră în creștere și se reface repede. Iarna, în perioada de repaus, o rempotare doar o încurcă."},
+    {"t": "h2", "x": "Ghiveciul și pământul potrivit"},
+    {"t": "p", "x": "Alegeți un ghiveci mai lat cu doar 2-3 cm decât cel vechi. Într-unul prea mare pământul rămâne ud mult timp, iar rădăcinile nu reușesc să-l străbată."},
+    {"t": "p", "x": "Folosiți pământ proaspăt, potrivit speciei, și puneți pe fund un strat de argilă expandată sau pietriș, pentru scurgerea apei."},
+    {"t": "h2", "x": "Pașii rempotării"},
+    {"t": "p", "x": "Udați planta cu o zi înainte, ca pământul să se desprindă mai ușor. Scoateți-o din ghiveci, desfaceți ușor rădăcinile și tăiați-le cu o foarfecă curată pe cele uscate sau moi."},
+    {"t": "p", "x": "Așezați planta în noul ghiveci la aceeași adâncime ca înainte, completați cu pământ, bătându-l ușor, și udați. Timp de o săptămână, feriți-o de soarele puternic."},
+    {"t": "h2", "x": "Nu hrăniți imediat"},
+    {"t": "p", "x": "Pământul proaspăt conține deja substanțe nutritive, iar rădăcinile abia atinse nu au nevoie de îngrășământ în plus. Așteptați câteva săptămâni, până apar frunze noi, și abia apoi reluați hrănirea. Între timp udați moderat, ca rădăcinile să se prindă în pământul nou."},
+    {"t": "h2", "x": "Când amânați rempotarea"},
+    {"t": "p", "x": "Nu rempotați o plantă care înflorește sau care e atacată de dăunători: schimbarea o solicită în plus, iar florile sau frunzele pot cădea."},
+    {"t": "p", "x": "Alternativa este împrospătarea stratului de deasupra: scoateți 2-3 cm de pământ vechi și înlocuiți-l cu pământ proaspăt."},
+    {"t": "h2", "x": "Lista scurtă"},
+    {"t": "ul", "x": [
+      "Rădăcini la orificii, apă care trece direct, creștere oprită: semne că ghiveciul e mic.",
+      "Momentul potrivit: de la primăvară până la începutul verii.",
+      "Ghiveci mai lat cu doar 2-3 cm, pământ proaspăt și drenaj.",
+      "Udare cu o zi înainte și o săptămână ferită de soarele puternic.",
+      "Hrănirea se reia după câteva săptămâni."
+    ]},
+    {"t": "p", "x": "O rempotare făcută la timp și fără grabă ajută planta să-și continue creșterea în noul ghiveci."}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "rubric": "Domov a kuchyňa",
+  "title": "Ako doma usušiť a uchovať bylinky: postup krok za krokom",
+  "teaser": "Oregano, tymián, rozmarín, šalvia, mäta či kôpor sa dajú usušiť aj bez špeciálnej sušičky. Kedy ich zbierať, ako ich sušiť a ukladať a ktoré je lepšie zmraziť.",
+  "description": "Kedy zbierať bylinky, ako ich sušiť vo zväzkoch, na site alebo v rúre, ako ich uložiť a ktoré je lepšie zmraziť než sušiť.",
+  "heroAlt": "Biele misky so sušenými bylinkami, v pozadí sklenené dózy na koreniny",
+  "body": [
+    {"t": "p", "lead": true, "x": "Bylinky z vlastného okna alebo záhrady sa dajú usušiť bez akéhokoľvek špeciálneho vybavenia. Dôležitý je správny čas zberu, dôkladné vysušenie a uloženie v suchu a tme. Postup je rovnaký pre väčšinu druhov."},
+    {"t": "p", "x": "Tu je cesta od zberu až po uloženie do zásobných nádob."},
+    {"t": "h2", "x": "Zbierajte ráno, pred kvitnutím"},
+    {"t": "p", "x": "Bylinky strihajte v suchý deň, ráno po oschnutí rosy, kým ešte nie je horúco. Vlhké bylinky schnú pomalšie a ľahšie sa kazia. Listy majú najvýraznejšiu vôňu tesne pred kvitnutím."},
+    {"t": "p", "x": "Vyberte neporušené výhonky a odstráňte poškodené listy. Ak sú zaprášené, opatrne ich opláchnite a dôkladne osušte."},
+    {"t": "h2", "x": "Sušenie vo zväzkoch"},
+    {"t": "p", "x": "Z piatich až desiatich výhonkov zviažte malé zväzky, aby medzi nimi voľne prúdil vzduch, a zaveste ich hlavičkami nadol na tmavom, vzdušnom mieste. Na slnku bylinky vyblednú a stratia časť vône. Takto schnú zvyčajne jeden až dva týždne."},
+    {"t": "tip", "x": "Zväzky zaveste na šnúrku alebo vešiak s dostatočným odstupom, aby sa vzduch dostal ku každému z nich."},
+    {"t": "h2", "x": "Sušenie na site alebo v rúre"},
+    {"t": "p", "x": "Listy rozložte v tenkej vrstve na sito, rošt alebo plech vystlaný papierom na pečenie a občas ich premiešajte."},
+    {"t": "p", "x": "V rúre nastavte najnižšiu teplotu a dvierka nechajte pootvorené, aby unikala vlhkosť. Bylinky často kontrolujte, pretože sa vysušia rýchlejšie, než by ste čakali. Celé sušenie potom trvá len niekoľko hodín."},
+    {"t": "h2", "x": "Ako poznáte, že sú suché"},
+    {"t": "p", "x": "Dobre vysušené lístky sa pri stlačení medzi prstami drobia a stonky praskajú. Ak sú ešte ohybné alebo vlhké, nechajte ich schnúť ďalej, pretože zvyšková vlhkosť v uzavretej nádobe vedie k plesnivosti."},
+    {"t": "h2", "x": "Uloženie: vzduchotesne, v tme a s dátumom"},
+    {"t": "p", "x": "Bylinky vložte do čistých, dokonale suchých nádob s tesným uzáverom a uložte ich mimo svetla a tepla, teda nie nad sporák. Na nádobu napíšte názov a dátum, lebo sa sušené bylinky dajú na pohľad ľahko zameniť."},
+    {"t": "p", "x": "Takto vydržia približne rok. Drvte ich až tesne pred použitím, pretože celé lístky si vôňu držia dlhšie."},
+    {"t": "h2", "x": "Čo sušiť a čo radšej zmraziť"},
+    {"t": "p", "x": "Dobre sa sušia oregano, tymián, rozmarín, šalvia, mäta a kôpor. Ich aróma sa pri sušení zachová, u oregana a tymiánu je dokonca výraznejšia."},
+    {"t": "p", "x": "Mäkké bylinky, ako bazalka, petržlenová vňať, koriander a pažítka, strácajú po usušení väčšinu vône a farby, preto ich radšej nasekajte a zmrazte."},
+    {"t": "h2", "x": "Najdôležitejšie body"},
+    {"t": "ul", "x": [
+      "Zbierajte ráno po oschnutí rosy a pred kvitnutím.",
+      "Sušte vo zväzkoch hlavičkami nadol na tmavom a vzdušnom mieste.",
+      "V rúre použite najnižšiu teplotu a nechajte dvierka pootvorené.",
+      "Suché bylinky sa pod prstami drobia.",
+      "Ukladajte ich do vzduchotesných nádob s dátumom."
+    ]},
+    {"t": "p", "x": "Sušené bylinky sú praktická zásoba na celý rok, no vôňa časom slabne, preto ich obnovujte každú sezónu."}
+  ]
+}

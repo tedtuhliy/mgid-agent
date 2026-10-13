@@ -1,0 +1,116 @@
+{
+  "rubric": "Casa e cucina",
+  "title": "9 semplici regole per conservare più a lungo i cibi freschi",
+  "teaser": "Erbe che appassiscono, pane che si indurisce, frutti di bosco coperti di muffa: spesso dipende da come e dove vengono conservati. Nove regole semplici per far durare di più la spesa.",
+  "description": "Nove regole pratiche per conservare meglio gli alimenti: frigorifero, erbe aromatiche, frutta e verdura, pane, congelatore e piatti già cotti.",
+  "heroAlt": "Frigorifero aperto con gli alimenti in ordine: contenitori di vetro, un barattolo con il prezzemolo, frutti di bosco e verdure nei cassetti.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "La freschezza degli alimenti non dipende solo dalla data sulla confezione: contano temperatura, umidità e perfino i vicini di ripiano. Con qualche accorgimento la spesa dura più a lungo e si butta meno."
+    },
+    {
+      "t": "p",
+      "x": "Ecco nove regole semplici: non serve applicarle tutte insieme, si può cominciare da due o tre."
+    },
+    {
+      "t": "h2",
+      "x": "1. Un frigorifero ben organizzato"
+    },
+    {
+      "t": "p",
+      "x": "La temperatura giusta è tra 2 e 5 °C. Il punto più freddo è in fondo e in basso, il più tiepido è lo sportello, adatto a salse e bevande."
+    },
+    {
+      "t": "h2",
+      "x": "2. Carne e pesce crudi in basso"
+    },
+    {
+      "t": "p",
+      "x": "Carne e pesce crudi vanno sul ripiano più basso, in contenitori chiusi. Così nessun liquido può colare sulla verdura o sui cibi già pronti."
+    },
+    {
+      "t": "h2",
+      "x": "3. Le erbe, come fiori in un vaso"
+    },
+    {
+      "t": "p",
+      "x": "Prezzemolo, aneto e coriandolo durano di più se trattati come fiori recisi: gambi in poca acqua, dentro un barattolo, e un sacchetto appoggiato sopra. L’acqua va cambiata ogni due o tre giorni."
+    },
+    {
+      "t": "tip",
+      "x": "Unica eccezione, il basilico: il freddo lo annerisce, quindi sta meglio sul piano della cucina, in un bicchiere d’acqua."
+    },
+    {
+      "t": "h2",
+      "x": "4. Frutta e verdura, ciascuna per conto suo"
+    },
+    {
+      "t": "p",
+      "x": "Mele, pere, banane e pomodori rilasciano etilene, un gas che fa maturare più in fretta gli alimenti vicini. Teneteli lontani da insalata, cetrioli, carote e broccoli."
+    },
+    {
+      "t": "p",
+      "x": "Anche patate e cipolle stanno meglio lontane l’una dall’altra: le patate gradiscono il buio e la frescura, le cipolle l’aria asciutta."
+    },
+    {
+      "t": "h2",
+      "x": "5. Meglio non lavare in anticipo"
+    },
+    {
+      "t": "p",
+      "x": "Frutti di bosco, funghi e insalata si lavano poco prima di mangiarli: l’umidità favorisce muffe e marciume. Se sono già lavati, asciugateli bene e teneteli in un contenitore con carta da cucina sul fondo."
+    },
+    {
+      "t": "h2",
+      "x": "6. Pane, cereali e frutta secca"
+    },
+    {
+      "t": "p",
+      "x": "Il pane in frigorifero si indurisce prima: meglio un sacchetto di tela o di carta, a temperatura ambiente. Se avanza, si affetta e si congela. Farina, cereali e frutta secca vogliono contenitori ermetici, al buio e lontano dal caldo."
+    },
+    {
+      "t": "h2",
+      "x": "7. Congelare con metodo"
+    },
+    {
+      "t": "p",
+      "x": "Congelate gli alimenti quando sono ancora freschi, divisi in porzioni, in sacchetti o contenitori ben chiusi e senza aria. Scrivete la data sulla confezione e tenete il congelatore a −18 °C."
+    },
+    {
+      "t": "h2",
+      "x": "8. Piatti già cotti"
+    },
+    {
+      "t": "p",
+      "x": "Lasciate raffreddare i piatti cotti e metteteli in frigorifero entro due ore. Di solito si mangiano entro 3-4 giorni; in porzioni piccole riso, minestre e stufati si raffreddano prima."
+    },
+    {
+      "t": "h2",
+      "x": "9. I più vecchi davanti, e un frigorifero pulito"
+    },
+    {
+      "t": "p",
+      "x": "Mettete i prodotti nuovi dietro e quelli da consumare presto davanti. Una volta alla settimana eliminate ciò che si è rovinato e pulite i ripiani con acqua tiepida e un po’ di bicarbonato."
+    },
+    {
+      "t": "h2",
+      "x": "In breve: cosa ricordare"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Frigorifero tra 2 e 5 °C, congelatore a −18 °C.",
+        "Carne e pesce crudi in basso, in contenitori chiusi.",
+        "Erbe in un barattolo d’acqua, frutti di bosco non lavati in anticipo.",
+        "Frutta che matura in fretta lontana dalla verdura.",
+        "Piatti cotti in frigorifero entro due ore."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Per ogni prodotto, infine, valgono le indicazioni del produttore: quelle sulla confezione hanno la precedenza sui consigli generali."
+    }
+  ]
+}

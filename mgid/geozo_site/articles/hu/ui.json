@@ -1,0 +1,19 @@
+{
+  "brand_tag": "tippek",
+  "read_also": "Olvassa el ezeket is",
+  "read_min": "{n} perc olvasás",
+  "home_title": "Otthon, konyha, kert",
+  "home_intro": "Gyakorlati tanácsok az élelmiszerek tárolásához, a szobanövények és a fűszernövények gondozásához, egy kis kertészkedéshez. Rövid, jól követhető írások a mindennapokra.",
+  "all_articles": "Összes cikkünk",
+  "nav_home": "Főoldal",
+  "nav_about": "Rólunk",
+  "nav_contact": "Kapcsolat",
+  "nav_privacy": "Adatvédelem",
+  "disclosure": "Az itt olvasható írások tájékoztató jellegűek. Az oldalon partnereink hirdetései is megjelennek, amelyeket minden esetben a „Hirdetés” felirat jelöl; az oldal és a hirdetési blokkok működéséhez sütiket használunk.",
+  "cookie": "Az oldal és a hirdetési blokkok működéséhez sütiket használunk.",
+  "cookie_more": "Bővebben",
+  "cookie_ok": "Rendben",
+  "disclaimer": "A cikk tájékoztató jellegű: kérjük, kövesse a gyártó utasításait, és vegye figyelembe az adott növény vagy termék igényeit.",
+  "months": ["január", "február", "március", "április", "május", "június", "július", "augusztus", "szeptember", "október", "november", "december"],
+  "date_fmt": "{y}. {month} {d}."
+}

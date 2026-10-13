@@ -1,0 +1,19 @@
+{
+  "brand_tag": "porady",
+  "read_also": "Czytaj także",
+  "read_min": "{n} min czytania",
+  "home_title": "Dom, kuchnia i ogród na co dzień",
+  "home_intro": "Praktyczne porady na każdy dzień: jak przechowywać żywność, dbać o rośliny doniczkowe i uprawiać zioła. Krótkie artykuły, które czyta się spokojnie, bez pośpiechu.",
+  "all_articles": "Wszystkie artykuły",
+  "nav_home": "Strona główna",
+  "nav_about": "O nas",
+  "nav_contact": "Kontakt",
+  "nav_privacy": "Polityka prywatności",
+  "disclosure": "Materiały mają charakter informacyjny. Na stronie wyświetlane są reklamy naszych partnerów, a każdy blok reklamowy oznaczamy słowem „Reklama”; strona i bloki reklamowe korzystają z plików cookies.",
+  "cookie": "Używamy plików cookies na potrzeby strony i bloków reklamowych.",
+  "cookie_more": "Więcej",
+  "cookie_ok": "OK",
+  "disclaimer": "Materiał ma wyłącznie charakter informacyjny; warto kierować się zaleceniami producenta oraz potrzebami konkretnej rośliny lub produktu.",
+  "months": ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"],
+  "date_fmt": "{d} {month} {y}"
+}

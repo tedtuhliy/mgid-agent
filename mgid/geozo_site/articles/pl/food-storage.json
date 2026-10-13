@@ -1,0 +1,41 @@
+{
+  "rubric": "Dom i kuchnia",
+  "title": "9 prostych zasad, dzięki którym jedzenie dłużej pozostaje świeże",
+  "teaser": "O świeżości produktów decyduje nie tylko data na opakowaniu, ale też temperatura, wilgoć i to, co leży obok czego. Dziewięć prostych zasad, które łatwo wprowadzić w każdej kuchni.",
+  "description": "Dziewięć praktycznych zasad przechowywania: układ lodówki, zioła, owoce i warzywa, pieczywo, mrożenie oraz gotowe potrawy.",
+  "heroAlt": "Otwarta lodówka z uporządkowanymi produktami: warzywa w szufladach, owoce w pojemnikach, pęczek natki w słoiku i sosy w drzwiach",
+  "body": [
+    {"t": "p", "lead": true, "x": "Świeżość produktów zależy nie tylko od daty na opakowaniu. Liczą się też temperatura, wilgoć, a nawet to, co leży na sąsiedniej półce. Kilka prostych nawyków sprawia, że jedzenie dłużej zachowuje smak i wygląd."},
+    {"t": "p", "x": "Oto dziewięć zasad, które można wprowadzić w każdej kuchni."},
+    {"t": "h2", "x": "1. Przemyślany układ lodówki"},
+    {"t": "p", "x": "W lodówce powinno być od 2 do 5 °C, a w zamrażarce −18 °C. Najchłodniej jest przy tylnej ściance i na dolnych półkach, najcieplej w drzwiach. Dlatego w drzwiach najlepiej trzymać sosy, napoje i słoiki, a nabiał i resztki obiadu na półkach."},
+    {"t": "h2", "x": "2. Surowe mięso i ryby na dole"},
+    {"t": "p", "x": "Surowe mięso i ryby powinny leżeć na najniższej półce, w zamkniętych pojemnikach. Dzięki temu sok z mięsa lub ryb nie skapnie na gotowe potrawy, owoce ani warzywa."},
+    {"t": "h2", "x": "3. Zioła jak kwiaty w wazonie"},
+    {"t": "p", "x": "Pęczek natki lub koperku nie lubi ciasnego woreczka, w którym zbiera się wilgoć. Lepiej postawić go łodygami w słoiku z odrobiną wody i luźno przykryć. Wodę warto wymieniać co dwa dni."},
+    {"t": "tip", "x": "Bazylia nie znosi chłodu, więc najlepiej trzymać ją w szklance z wodą w temperaturze pokojowej."},
+    {"t": "h2", "x": "4. Owoce i warzywa osobno"},
+    {"t": "p", "x": "Jabłka, gruszki, banany i pomidory wydzielają etylen, czyli gaz przyspieszający dojrzewanie. Pod jego wpływem zielone liście, ogórki, marchew i brokuły szybciej więdną i żółkną, więc lepiej trzymać je z dala od tych owoców."},
+    {"t": "p", "x": "Osobno powinny też leżeć ziemniaki i cebula. Ziemniaki lubią ciemne, chłodne miejsce, a cebula suchy i przewiewny kąt."},
+    {"t": "h2", "x": "5. Bez mycia na zapas"},
+    {"t": "p", "x": "Truskawki, maliny, grzyby i liście sałaty lepiej myć dopiero przed jedzeniem, bo wilgoć sprzyja pleśni i gniciu. Jeśli są już umyte, trzeba je dokładnie osuszyć i schować do pojemnika wyłożonego ręcznikiem papierowym."},
+    {"t": "h2", "x": "6. Pieczywo, kasze i orzechy"},
+    {"t": "p", "x": "Chleb w lodówce twardnieje szybciej niż w chlebaku. Kasze, ryż i mąkę warto przesypać do szczelnych słoików, a orzechy trzymać w zamkniętym pojemniku, w chłodzie i ciemności."},
+    {"t": "h2", "x": "7. Mrożenie z głową"},
+    {"t": "p", "x": "Mrozić warto produkty świeże, podzielone na porcje i szczelnie zapakowane. Dobrze jest opisać woreczek datą, bo po kilku miesiącach trudno zgadnąć, co w nim leży. Rozmrażać najlepiej w lodówce, a nie na blacie."},
+    {"t": "h2", "x": "8. Gotowe dania szybko ostudzić"},
+    {"t": "p", "x": "Ugotowane danie powinno trafić do lodówki w ciągu dwóch godzin od zdjęcia z kuchenki. Rozłożone w płaskich naczyniach stygnie szybciej. Zjeść je warto w ciągu 3–4 dni."},
+    {"t": "h2", "x": "9. Starsze z przodu, czysto na półkach"},
+    {"t": "p", "x": "Nowe zakupy warto ustawiać z tyłu, za starszymi, a to, co trzeba zużyć w pierwszej kolejności, na widocznym miejscu. Sporo jedzenia marnuje się tylko dlatego, że zniknęło z oczu w głębi półki."},
+    {"t": "p", "x": "Raz w tygodniu dobrze jest przetrzeć półki i wyrzucić to, co się zepsuło. Raz w miesiącu można umyć lodówkę ciepłą wodą z dodatkiem sody."},
+    {"t": "h2", "x": "Najważniejsze w skrócie"},
+    {"t": "ul", "x": [
+      "W lodówce od 2 do 5 °C, w zamrażarce −18 °C.",
+      "Surowe mięso i ryby na dole, w zamkniętych pojemnikach.",
+      "Zioła w słoiku z wodą, a maliny, grzyby i sałata bez mycia na zapas.",
+      "Owoce wydzielające etylen osobno od warzyw, ziemniaki osobno od cebuli.",
+      "Gotowe dania do lodówki w ciągu dwóch godzin."
+    ]},
+    {"t": "p", "x": "Ponad ogólnymi zasadami liczą się zalecenia z etykiety: to producent określa, w jakich warunkach i jak długo produkt zachowuje jakość."}
+  ]
+}

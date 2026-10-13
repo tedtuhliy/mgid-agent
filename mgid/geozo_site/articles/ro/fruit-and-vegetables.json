@@ -1,0 +1,37 @@
+{
+  "rubric": "Casă și bucătărie",
+  "title": "Fructe și legume: ce se păstrează împreună și ce se ține separat",
+  "teaser": "Merele, bananele și roșiile coapte influențează legumele din apropiere. Iată ce se păstrează împreună și ce separat, de la cartofi și ceapă până la sertarele frigiderului.",
+  "description": "Cum păstrați fructele și legumele: etilena, cartofii și ceapa, roșiile, sertarele frigiderului, produsele tăiate și controlul săptămânal.",
+  "heroAlt": "Un sertar transparent de frigider cu ardei roșii, galbeni și portocalii, castraveți, morcovi și frunze verzi.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Nu toate fructele și legumele se înțeleg bine în același sertar. Unele eliberează un gaz care grăbește coacerea celor din jur, iar altele reacționează puternic la el. Câteva reguli simple de aranjare le ajută să rămână proaspete mai mult timp."},
+    {"t": "p", "x": "Iată ce merită ținut împreună, ce se ține separat și ce se verifică din când în când."},
+    {"t": "h2", "x": "Etilena, în cuvinte simple"},
+    {"t": "p", "x": "În timp ce se coc, unele fructe elimină etilenă, un gaz natural pe care nu-l vedem și nu-l simțim. Pentru ele e un semnal de coacere, dar produsele din apropiere se coc și se strică mai repede."},
+    {"t": "p", "x": "Multă etilenă produc merele, perele, bananele, caisele și roșiile coapte. La etilenă reacționează puternic salata verde, castraveții, morcovii și broccoli, care se ofilesc sau se îngălbenesc mai repede."},
+    {"t": "h2", "x": "Cartofii și ceapa, la distanță"},
+    {"t": "p", "x": "Cartofii și ceapa nu se țin în același loc. Ceapa vrea aer uscat, cartofii răcoare și întuneric, iar alături unii de alții se strică mai repede."},
+    {"t": "p", "x": "Păstrați-i într-un coș, într-o ladă cu șipci sau într-o pungă de hârtie, în cămară sau pe un raft aerisit, nu în pungi de plastic."},
+    {"t": "h2", "x": "Roșiile nu iubesc frigiderul"},
+    {"t": "p", "x": "La frig, roșiile își pierd din aromă și devin făinoase. Țineți-le la temperatura camerei, ferite de soarele direct, până se coc; după aceea, consumați-le în câteva zile."},
+    {"t": "h2", "x": "Cele două sertare ale frigiderului"},
+    {"t": "p", "x": "Multe frigidere au două sertare: unul cu umiditate mare, pentru legume, mai ales cele cu frunze, morcovi și broccoli, și unul cu umiditate mică, pentru fructe."},
+    {"t": "tip", "x": "Dacă frigiderul are un singur sertar, despărțiți fructele de legume cu o cutie sau cu o pungă."},
+    {"t": "h2", "x": "Produsele tăiate, în recipiente închise"},
+    {"t": "p", "x": "Fructele și legumele tăiate se usucă și se strică repede. Puneți-le în cutii cu capac sau în pungi bine închise, păstrați-le în frigider și consumați-le în una-două zile."},
+    {"t": "h2", "x": "O verificare pe săptămână"},
+    {"t": "p", "x": "O dată pe săptămână treceți în revistă tot ce aveți. Un fruct care începe să se strice îi poate strica și pe ceilalți, așa că scoateți imediat ce nu mai e bun."},
+    {"t": "p", "x": "Fructele prea coapte merg bine în compot sau în prăjituri, iar legumele moi, în supe și tocănițe."},
+    {"t": "h2", "x": "Într-o privire"},
+    {"t": "ul", "x": [
+      "Merele, perele, bananele și roșiile coapte stau departe de legumele cu frunze.",
+      "Cartofii și ceapa se țin separat, la întuneric și aerisit.",
+      "Roșiile nu se pun la frigider.",
+      "Sertarul cu umiditate mare e pentru legume, cel cu umiditate mică pentru fructe.",
+      "Produsele tăiate merg în recipiente închise.",
+      "Un control pe săptămână scoate din timp ce se strică."
+    ]},
+    {"t": "p", "x": "Puțină ordine în frigider și în cămară înseamnă mai puține fructe și legume aruncate."}
+  ]
+}

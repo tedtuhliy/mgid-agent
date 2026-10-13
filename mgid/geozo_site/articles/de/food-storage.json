@@ -1,0 +1,40 @@
+{
+  "rubric": "Küche und Haushalt",
+  "title": "9 einfache Regeln, damit Lebensmittel länger frisch bleiben",
+  "teaser": "Kühlschrank richtig einräumen, Obst und Gemüse trennen, Reste schnell abkühlen: Mit wenigen Handgriffen halten sich Vorräte oft länger, und es landet weniger im Abfall.",
+  "description": "Neun einfache Regeln für den Alltag: vom richtigen Platz im Kühlschrank über Obst und Gemüse bis zum Einfrieren und zum Umgang mit gekochten Resten.",
+  "heroAlt": "Geöffneter Kühlschrank mit übersichtlich eingeräumten Fächern, einem Glas Petersilie, Beeren, Dosen und Gemüse in den Schubladen.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Der richtige Platz im Kühlschrank und die richtige Nachbarschaft entscheiden mit darüber, wie lange Lebensmittel frisch bleiben. Mit wenigen festen Gewohnheiten halten sich Vorräte oft länger, und es landet weniger im Abfall."},
+    {"t": "p", "x": "Diese neun Regeln sind schnell umgesetzt und passen in fast jede Küche."},
+    {"t": "h2", "x": "1. Den Kühlschrank richtig einräumen"},
+    {"t": "p", "x": "Am kältesten ist es hinten und weiter unten, in der Tür am wärmsten. Dort stehen Saucen und Getränke gut, Milchprodukte und Aufschnitt lagern Sie weiter hinten. Die Temperatur sollte bei etwa 2 bis 5 °C liegen."},
+    {"t": "tip", "x": "Ein kleines Thermometer im Kühlschrank zeigt, ob die Temperatur wirklich stimmt."},
+    {"t": "h2", "x": "2. Fleisch und Fisch ganz unten"},
+    {"t": "p", "x": "Rohes Fleisch und roher Fisch gehören auf die unterste Ablage und in geschlossene Behälter. So tropft nichts auf andere Lebensmittel, und der Geruch verbreitet sich nicht."},
+    {"t": "h2", "x": "3. Kräuter wie Schnittblumen behandeln"},
+    {"t": "p", "x": "Petersilie und Dill halten länger, wenn die Stiele in einem Glas mit etwas Wasser stehen und ein lockerer Beutel über die Blätter gestülpt wird. Basilikum dagegen verträgt keine Kälte und bleibt bei Zimmertemperatur."},
+    {"t": "h2", "x": "4. Obst und Gemüse getrennt lagern"},
+    {"t": "p", "x": "Äpfel, Birnen, Bananen und Tomaten geben das Reifegas Ethylen ab. Es lässt anderes Obst und Gemüse schneller reifen und welken, deshalb brauchen diese Sorten ihren eigenen Platz. Kartoffeln und Zwiebeln liegen besser getrennt voneinander, dunkel und luftig."},
+    {"t": "h2", "x": "5. Empfindliches nicht auf Vorrat waschen"},
+    {"t": "p", "x": "Beeren, Pilze und Blattsalat werden durch Restfeuchte schneller matschig oder schimmelig. Waschen oder putzen Sie sie erst kurz vor dem Verzehr; bis dahin liegen sie locker in einer Schale mit Küchenpapier."},
+    {"t": "h2", "x": "6. Brot, Getreide und Nüsse"},
+    {"t": "p", "x": "Brot fühlt sich im Brotkasten wohler als im Kühlschrank. Mehl, Reis, Haferflocken und Nüsse halten sich in dicht schließenden Gläsern oder Dosen an einem kühlen, trockenen und dunklen Ort."},
+    {"t": "h2", "x": "7. Einfrieren: frisch, portioniert, beschriftet"},
+    {"t": "p", "x": "Frieren Sie Lebensmittel möglichst frisch und in Portionen ein, die Sie auf einmal verbrauchen. Luftdicht verpackt und mit Datum beschriftet, behalten Sie den Überblick. Im Gefrierfach sollten es −18 °C sein."},
+    {"t": "h2", "x": "8. Gekochtes schnell abkühlen"},
+    {"t": "p", "x": "Lassen Sie Gekochtes innerhalb von zwei Stunden abkühlen, am schnellsten in flachen Schalen, und stellen Sie es dann abgedeckt in den Kühlschrank. Dort hält es sich meist drei bis vier Tage."},
+    {"t": "h2", "x": "9. Älteres nach vorn, regelmäßig auswischen"},
+    {"t": "p", "x": "Stellen Sie neu gekaufte Packungen hinter die älteren, damit diese zuerst aufgebraucht werden. Wischen Sie den Kühlschrank regelmäßig mit warmem Wasser aus und sortieren Sie dabei aus, was nicht mehr gut ist."},
+    {"t": "h2", "x": "Kurz zusammengefasst"},
+    {"t": "ul", "x": [
+      "Kühlschrank bei etwa 2 bis 5 °C, Tür für Saucen und Getränke.",
+      "Rohes Fleisch und Fisch unten und gut verschlossen.",
+      "Obst und Gemüse getrennt lagern, Empfindliches erst später waschen.",
+      "Gekochtes zügig abkühlen und innerhalb von drei bis vier Tagen verbrauchen.",
+      "Beim Einfrieren portionieren, verpacken und das Datum notieren.",
+      "Ältere Packungen nach vorn stellen und den Kühlschrank sauber halten."
+    ]},
+    {"t": "p", "x": "Bei gekauften Produkten gelten außerdem immer die Angaben auf der Verpackung. Schon kleine Änderungen helfen, den Alltag in der Küche ein wenig zu erleichtern."}
+  ]
+}

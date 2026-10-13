@@ -1,0 +1,41 @@
+{
+  "rubric": "Casa e cozinha",
+  "title": "9 regras simples para conservar os alimentos frescos durante mais tempo",
+  "teaser": "A temperatura do frigorífico, a arrumação das prateleiras e o lugar das ervas, da fruta e do pão fazem mais diferença do que parece. Nove regras simples para desperdiçar menos comida.",
+  "description": "Nove regras práticas para a cozinha: como arrumar o frigorífico, guardar ervas, fruta e pão, congelar com método e aproveitar as sobras a tempo.",
+  "heroAlt": "Frigorífico aberto com alimentos frescos arrumados por prateleiras, gavetas e porta.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Os alimentos não se estragam apenas por passarem do prazo de validade: a temperatura, a humidade e até a vizinhança na prateleira também contam. Com nove hábitos simples, as compras duram bastante mais tempo."},
+    {"t": "p", "x": "Não é preciso nenhum equipamento especial, só ajustar algumas rotinas na cozinha."},
+    {"t": "h2", "x": "1. Um frigorífico bem arrumado"},
+    {"t": "p", "x": "O frigorífico deve estar entre 2 e 5 °C e o congelador a −18 °C. A zona mais fria é ao fundo e em baixo; a porta, mais quente, serve para molhos e bebidas."},
+    {"t": "h2", "x": "2. Carne e peixe crus, em baixo"},
+    {"t": "p", "x": "A carne e o peixe crus ficam na prateleira inferior, em recipientes fechados. Assim, nenhum líquido pinga para os alimentos já prontos a comer."},
+    {"t": "h2", "x": "3. Ervas como flores numa jarra"},
+    {"t": "p", "x": "Salsa, coentros e endro duram mais com os talos num frasco com um pouco de água e um saco solto por cima. O manjericão é a exceção: não gosta de frio e prefere a bancada."},
+    {"t": "h2", "x": "4. Fruta e legumes, cada um no seu canto"},
+    {"t": "p", "x": "Maçãs, peras, bananas e tomates libertam etileno, um gás natural que acelera o amadurecimento dos vizinhos. Convém afastá-los das verduras, dos pepinos e das cenouras."},
+    {"t": "p", "x": "Batatas e cebolas também se dão melhor afastadas uma da outra, num lugar escuro, seco e arejado."},
+    {"t": "h2", "x": "5. Não lavar com antecedência"},
+    {"t": "p", "x": "Frutos vermelhos, cogumelos e folhas de salada lavam-se só na altura de os usar, porque a água a mais favorece o bolor. Se já estiverem lavados, secam-se bem e guardam-se com papel de cozinha."},
+    {"t": "h2", "x": "6. Pão, arroz, farinha e frutos secos"},
+    {"t": "p", "x": "O pão prefere um saco de pano ou uma caixa própria; o frigorífico seca-o mais depressa. Arroz, farinha e frutos secos pedem frascos bem fechados, num armário fresco, seco e ao abrigo da luz."},
+    {"t": "h2", "x": "7. Congelar com método"},
+    {"t": "p", "x": "Congelam-se alimentos frescos, em porções pequenas e em recipientes bem fechados, com pouco ar. Vale a pena escrever a data em cada embalagem: passados uns meses, ninguém se lembra do que lá está."},
+    {"t": "tip", "x": "Os sacos de congelação achatados congelam mais depressa e ocupam menos espaço."},
+    {"t": "h2", "x": "8. Comida cozinhada: arrefecer depressa"},
+    {"t": "p", "x": "A comida cozinhada deve arrefecer e ir para o frigorífico em duas horas, e consumir-se, em regra, em três a quatro dias. Repartida por recipientes rasos, arrefece mais depressa."},
+    {"t": "h2", "x": "9. Primeiro a entrar, primeiro a sair"},
+    {"t": "p", "x": "As compras novas ficam atrás das mais antigas, e o que se deve consumir primeiro vai para a frente, bem à vista."},
+    {"t": "p", "x": "Uma vez por semana, convém limpar as prateleiras e deitar fora o que estragou; uma vez por mês, uma limpeza mais a fundo, com água morna."},
+    {"t": "h2", "x": "Em resumo"},
+    {"t": "ul", "x": [
+      "Frigorífico entre 2 e 5 °C, congelador a −18 °C.",
+      "Carne e peixe crus em baixo, em recipientes fechados.",
+      "Ervas num frasco com água; manjericão fora do frio.",
+      "Fruta que liberta etileno afastada dos legumes.",
+      "Congelar em porções e com data; comida cozinhada em três a quatro dias."
+    ]},
+    {"t": "p", "x": "E, acima de tudo, convém seguir as indicações de conservação e os prazos da embalagem de cada produto: prevalecem sobre qualquer regra geral."}
+  ]
+}

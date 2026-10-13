@@ -1,0 +1,37 @@
+{
+  "rubric": "Rośliny w domu",
+  "title": "Przesadzanie roślin doniczkowych: kiedy, jak i czego unikać",
+  "teaser": "Za ciasna doniczka ogranicza wzrost, ale zbyt duża też nie służy. Wyjaśniamy, po czym poznać, że roślina potrzebuje przesadzenia, kiedy to robić i jak krok po kroku przeprowadzić zabieg.",
+  "description": "Kiedy i jak przesadzać rośliny doniczkowe: oznaki ciasnej doniczki, termin, rozmiar nowego naczynia, podłoże, kolejne kroki i prosta alternatywa.",
+  "heroAlt": "Dłoń trzymająca małą sadzonkę z bryłką ziemi na rozmytym, zielonym tle",
+  "body": [
+    {"t": "p", "lead": true, "x": "Przesadzanie może roślinie pomóc, ale wykonane w złym czasie albo do zbyt dużej doniczki potrafi jej zaszkodzić. Kluczowe są termin, rozmiar nowego naczynia i spokojne tempo pracy. Kilka prostych zasad wystarczy, by wszystko poszło gładko."},
+    {"t": "p", "x": "Zanim sięgnie się po większą doniczkę, warto upewnić się, że roślina rzeczywiście jej potrzebuje."},
+    {"t": "h2", "x": "Znaki, że doniczka jest za ciasna"},
+    {"t": "p", "x": "Sygnały są dość czytelne: korzenie wyrastają przez otwory w dnie, a woda po podlaniu od razu przelewa się przez doniczkę. Roślina przestaje rosnąć mimo dobrych warunków."},
+    {"t": "p", "x": "Czasem korzenie wypychają ją ku górze albo tak mocno oplatają bryłę ziemi, że prawie nie widać podłoża."},
+    {"t": "h2", "x": "Odpowiednia pora"},
+    {"t": "p", "x": "Najlepiej przesadzać od wiosny do początku lata, gdy rośliny zaczynają intensywnie rosnąć i szybko się przyjmują. Zimą wiele gatunków odpoczywa, więc zabieg lepiej odłożyć. Młode, szybko rosnące rośliny przesadza się zwykle co rok lub dwa, a starsze okazy znacznie rzadziej."},
+    {"t": "h2", "x": "Rozmiar doniczki i podłoże"},
+    {"t": "p", "x": "Nowa doniczka powinna być szersza tylko o 2–3 cm. W zbyt dużej doniczce ziemia długo pozostaje mokra, co sprzyja gniciu korzeni."},
+    {"t": "p", "x": "Warto użyć świeżego podłoża dobranego do gatunku i zadbać o odpływ wody: na dnie może leżeć warstwa keramzytu lub grubszego żwirku."},
+    {"t": "h2", "x": "Krok po kroku"},
+    {"t": "p", "x": "Dzień wcześniej warto dokładnie podlać roślinę, aby bryła korzeniowa łatwiej wyszła z doniczki. Jeśli się opiera, wystarczy lekko postukać w ścianki albo przejechać nożem po wewnętrznym brzegu. Potem trzeba delikatnie rozluźnić korzenie palcami, a martwe lub zgniłe obciąć czystymi nożycami."},
+    {"t": "p", "x": "Następnie roślinę ustawia się w nowej doniczce na takiej samej głębokości jak dotąd, uzupełnia podłoże, lekko dociska i podlewa. Przy dużych roślinach, które trudno ruszyć, lepiej poprosić o pomoc drugą osobę, żeby nie uszkodzić łodyg."},
+    {"t": "h2", "x": "Po przesadzeniu"},
+    {"t": "p", "x": "Przez tydzień roślina powinna stać w jasnym miejscu, ale bez ostrego słońca. Z nawożeniem lepiej poczekać kilka tygodni, bo świeże podłoże ma zapas składników, a uszkodzone korzenie potrzebują spokoju."},
+    {"t": "tip", "x": "Jeśli ziemia po podlaniu osiądzie, wystarczy dosypać trochę podłoża, bez mocnego ugniatania."},
+    {"t": "h2", "x": "Kiedy nie przesadzać"},
+    {"t": "p", "x": "Nie warto przesadzać roślin w czasie kwitnienia ani osłabionych przez szkodniki lub niewłaściwe warunki. Najpierw trzeba poczekać, aż odzyskają siły."},
+    {"t": "p", "x": "Jeśli doniczka wciąż jest wystarczająca, można po prostu wymienić wierzchnią warstwę ziemi, kilka centymetrów, na świeżą. To prosty sposób na odświeżenie podłoża bez ruszania korzeni."},
+    {"t": "h2", "x": "Najważniejsze punkty"},
+    {"t": "ul", "x": [
+      "Znaki ciasnej doniczki: korzenie w otworach, woda przelewa się, brak wzrostu.",
+      "Pora na zabieg to wiosna i początek lata.",
+      "Nowa doniczka tylko o 2–3 cm szersza.",
+      "Świeże podłoże i dobry odpływ wody.",
+      "Po zabiegu tydzień bez ostrego słońca, nawożenie dopiero później."
+    ]},
+    {"t": "p", "x": "Jeśli roślina czuje się dobrze, nie ma powodu się spieszyć, bo przesadzanie nie jest obowiązkiem co roku."}
+  ]
+}

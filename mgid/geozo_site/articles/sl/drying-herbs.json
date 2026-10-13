@@ -1,0 +1,38 @@
+{
+  "rubric": "Dom in kuhinja",
+  "title": "Kako doma posušiti in shraniti zelišča, da ohranijo vonj",
+  "teaser": "Kdaj nabirati, kako sušiti v šopkih ali v pečici, kako preveriti, ali so zelišča suha, in kam jih shraniti. Pa tudi seznam zelišč, ki jih je bolje zamrzniti kot posušiti.",
+  "description": "Kdaj nabirati zelišča, kako jih posušiti na zraku ali v pečici, kako jih shraniti in katera je bolje zamrzniti kot sušiti.",
+  "heroAlt": "Bele skledice s posušenimi zelišči, v ozadju kozarci z začimbami.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Posušena zelišča iz vrta ali z okenske police so vedno pri roki in ohranijo bogat vonj. Postopek je preprost, pomembno pa je, da jih naberete v pravem trenutku in dobro posušite."},
+    {"t": "p", "x": "Postopek ima nekaj jasnih korakov, od nabiranja do shranjevanja, na koncu pa je še nasvet, katera zelišča je bolje zamrzniti."},
+    {"t": "h2", "x": "Kdaj nabirati"},
+    {"t": "p", "x": "Zelišča naberite zjutraj, ko se rosa že osuši, a sonce še ni močno. Najbolj aromatična so tik pred cvetenjem, zato jih režite, preden se razvijejo cvetovi."},
+    {"t": "p", "x": "Uporabite ostre škarje, da rastline ne poškodujete. Rumene in poškodovane liste odstranite, ostale pa le otresite: pranje raje izpustite, saj mokra zelišča težje posušite."},
+    {"t": "h2", "x": "Sušenje v šopkih"},
+    {"t": "p", "x": "Zelišča povežite v majhne šopke z vrvico ali elastiko in jih obesite z vršički navzdol, na temnem in zračnem mestu. Majhni šopki se sušijo enakomerno in manj gnijejo."},
+    {"t": "p", "x": "Mesto naj bo toplo in suho, na primer podstrešje ali shramba. Neposredno sonce barvo bledi, vonj pa se hitro izgubi. Če prostor ni dovolj temen ali je prašen, šopke ovijte v papirnato vrečko z nekaj luknjicami za zrak."},
+    {"t": "h2", "x": "Pladnji, mreže in pečica"},
+    {"t": "p", "x": "Za drobne liste so primerne mreže ali pladnji, obloženi s krpo: liste razporedite v eni plasti in jih občasno obrnite."},
+    {"t": "p", "x": "Če vam primanjkuje časa, uporabite pečico pri najnižji temperaturi. Vrata pustite rahlo odprta, da lahko vlaga uhaja, zelišča pa preverjajte vsakih nekaj minut, da se ne zapečejo."},
+    {"t": "h2", "x": "Kako veste, da so suha"},
+    {"t": "p", "x": "Suha zelišča se med prsti drobijo in lomijo, listi pa niso več upogljivi. Če so še mehki, jih sušite še nekaj ur ali dni."},
+    {"t": "p", "x": "Šele povsem suha zelišča shranite, saj ostanek vlage povzroči plesen."},
+    {"t": "h2", "x": "Shranjevanje"},
+    {"t": "p", "x": "Posušena zelišča shranite v dobro zaprte steklene kozarce na temnem mestu, stran od štedilnika in drugih virov toplote. Na vsak kozarec zapišite ime in datum; običajno ostanejo uporabna približno eno leto. Prozorne kozarce hranite v omari ali predalu, ne na polici ob oknu."},
+    {"t": "tip", "x": "Liste zdrobite šele, ko jih dodate v jed, saj tako ohranijo več vonja."},
+    {"t": "h2", "x": "Katera zelišča sušiti in katera zamrzniti"},
+    {"t": "p", "x": "Dobro se sušijo origano, timijan, rožmarin, žajbelj, meta in koper."},
+    {"t": "p", "x": "Bazilika, peteršilj, koriander in drobnjak v posušeni obliki izgubijo večino okusa, zato jih raje nasekljajte in zamrznite v pladnju za led ali ploščati vrečki."},
+    {"t": "h2", "x": "Kratek pregled"},
+    {"t": "ul", "x": [
+      "Zelišča naberite zjutraj, ko se rosa osuši, in pred cvetenjem.",
+      "Majhne šopke obesite na temno, zračno mesto.",
+      "Pečica na najnižji temperaturi z rahlo odprtimi vrati je hitrejša možnost.",
+      "Suha zelišča se med prsti drobijo.",
+      "Shranite jih v zaprtih kozarcih, stran od svetlobe in toplote."
+    ]},
+    {"t": "p", "x": "Najstarejše kozarce porabite prve, ob novi letini pa zalogo osvežite."}
+  ]
+}

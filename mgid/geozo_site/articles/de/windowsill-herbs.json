@@ -1,0 +1,36 @@
+{
+  "rubric": "Kräuter und Zimmerpflanzen",
+  "title": "Kräuter auf der Fensterbank: Welche Arten drinnen gedeihen und wie Sie sie pflegen",
+  "teaser": "Basilikum, Minze, Petersilie, Schnittlauch und Thymian wachsen auch in der Wohnung. Worauf es bei Licht, Topf und Wasser ankommt und wie man richtig erntet.",
+  "description": "Welche Kräuter auf der Fensterbank gedeihen, wie viel Licht sie brauchen, wann gegossen wird und wie Zupfen und Ernten die Pflanzen buschig halten.",
+  "heroAlt": "Dichte, kräftig grüne Kräuterblätter in Nahaufnahme.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Frische Kräuter aus dem eigenen Topf sind schnell geerntet und immer griffbereit, wenn man sie zum Kochen braucht. Mit einem hellen Platz und etwas Aufmerksamkeit gedeihen viele Arten auch in der Wohnung."},
+    {"t": "p", "x": "Hier steht, welche Kräuter sich besonders eignen und worauf es bei Licht, Topf und Wasser ankommt."},
+    {"t": "h2", "x": "Diese Kräuter wachsen drinnen gut"},
+    {"t": "p", "x": "Gut geeignet sind Basilikum, Minze, Petersilie, Schnittlauch und Thymian. Basilikum und Minze wachsen schnell, Petersilie und Schnittlauch sind genügsam, Thymian mag es sonnig und eher trocken."},
+    {"t": "p", "x": "Minze breitet sich kräftig aus und sollte einen eigenen Topf bekommen."},
+    {"t": "h2", "x": "Der richtige Platz am Fenster"},
+    {"t": "p", "x": "Ein Süd- oder Ostfenster passt gut. Die Kräuter brauchen täglich etwa 4 bis 6 Stunden Licht. In den dunklen Monaten hilft eine Tischlampe, die Sie einige Stunden am Tag einschalten."},
+    {"t": "tip", "x": "Drehen Sie die Töpfe alle paar Tage eine Vierteldrehung weiter, dann wachsen die Triebe gleichmäßig und neigen sich nicht zum Fenster."},
+    {"t": "h2", "x": "Töpfe mit Abzugsloch und richtiges Gießen"},
+    {"t": "p", "x": "Verwenden Sie Töpfe mit Löchern im Boden, damit überschüssiges Wasser abfließen kann. Ein Untersetzer fängt es auf; leeren Sie ihn nach einer halben Stunde."},
+    {"t": "p", "x": "Gegossen wird, sobald die Erde in den obersten 1 bis 2 cm trocken ist. Das prüfen Sie am einfachsten mit dem Finger. Lieber seltener und gründlich gießen als jeden Tag ein wenig."},
+    {"t": "h2", "x": "Zupfen und richtig ernten"},
+    {"t": "p", "x": "Kneifen Sie die Triebspitzen regelmäßig ab, dann verzweigen sich die Pflanzen und werden buschiger. Setzen Sie die Schere knapp über einem Blattpaar an, denn dort treibt die Pflanze neu aus. Ernten Sie nie mehr als ein Drittel auf einmal, damit genug Blattmasse nachwächst. Bei Basilikum entfernen Sie Blütenansätze früh."},
+    {"t": "h2", "x": "Lange Stängel und gelbe Blätter"},
+    {"t": "p", "x": "Dünne, lange Stängel mit blassen Blättern deuten meist auf Lichtmangel hin. Stellen Sie die Pflanze dann heller."},
+    {"t": "p", "x": "Gelbe Blätter haben oft mit zu viel Wasser zu tun, etwa durch einen dauernd nassen Untersetzer; manchmal fehlt auch einfach Licht."},
+    {"t": "h2", "x": "Im Sommerhalbjahr leicht düngen"},
+    {"t": "p", "x": "Von Frühjahr bis Spätsommer genügt etwa einmal im Monat eine schwach dosierte Gabe flüssigen Dünger. Halten Sie sich an die Packungsangabe und düngen Sie lieber etwas weniger als zu viel. Im Winter wird nicht gedüngt."},
+    {"t": "h2", "x": "Auf einen Blick"},
+    {"t": "ul", "x": [
+      "Basilikum, Minze, Petersilie, Schnittlauch und Thymian eignen sich gut.",
+      "Süd- oder Ostfenster, täglich 4 bis 6 Stunden Licht.",
+      "Töpfe mit Abzugsloch; gießen, wenn die oberen 1 bis 2 cm trocken sind.",
+      "Triebspitzen abkneifen und höchstens ein Drittel auf einmal ernten.",
+      "Von Frühjahr bis Spätsommer einmal im Monat leicht düngen."
+    ]},
+    {"t": "p", "x": "Schon drei, vier Töpfe am Fenster genügen, um öfter mit frischen Blättern zu würzen."}
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "rubric": "Szobanövények",
+  "title": "Szobanövények ősszel: 7 tipp, hogy szépen átvészeljék a telet",
+  "teaser": "Rövidülő nappalok és a fűtés száraz levegője: ősszel a legtöbb szobanövény gondozásán érdemes változtatni. Hét egyszerű tippet gyűjtöttünk össze a fényről, az öntözésről és a páratartalomról.",
+  "description": "Hét egyszerű tipp a szobanövények őszi gondozásához: fény, öntözés, páratartalom, huzatmentes hely, tápoldatozás, kártevők és az átültetés időzítése.",
+  "heroAlt": "Kis szobafa barna kerámiatálban egy fa asztalon, világos fal előtt.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Ősszel megrövidülnek a nappalok, beindul a fűtés, a levegő pedig érezhetően szárazabb lesz. Sok szobanövény ilyenkor hullatni kezdi a leveleit, vagy megnyúlik. A jó hír, hogy többnyire elég kicsit módosítani a megszokott gondozáson."},
+    {"t": "p", "x": "Hét tippet gyűjtöttünk össze, amelyek a legtöbb szobanövénynél beválnak."},
+    {"t": "h2", "x": "1. Adjon több fényt"},
+    {"t": "p", "x": "Ősszel még a déli ablaknál is kevesebb a fény, mint nyáron. Vigye a növényeket közelebb az ablakhoz, de ügyeljen arra, hogy a levelek ne érjenek a hideg üveghez."},
+    {"t": "p", "x": "Kéthetente törölje át a leveleket nedves ronggyal: a porréteg elvesz a fényből, amiből amúgy is kevés van."},
+    {"t": "h2", "x": "2. Öntözzön ritkábban, de nézze meg a földet"},
+    {"t": "p", "x": "A növények hidegebb időben lassabban nőnek, és kevesebb vizet vesznek fel. Öntözés előtt nyomja az ujját a földbe: ha a felső két-három centiméter száraz, jöhet a víz, ha nedves, várjon még. A felesleget fél óra múlva öntse ki az alátétből."},
+    {"t": "tip", "x": "Az öntözővizet előző este töltse a kannába, így reggelre szobahőmérsékletű és kiülepedett lesz."},
+    {"t": "h2", "x": "3. Figyeljen a páratartalomra"},
+    {"t": "p", "x": "A fűtőtestek kiszárítják a levegőt. Tegye a cserepet nedves kavicsréteggel borított tálcára, de úgy, hogy a víz ne érje a cserép alját, vagy csoportosítsa a növényeket, így körülöttük kicsit nagyobb marad a páratartalom."},
+    {"t": "p", "x": "A permetezés nem minden növénynek jó: a szőrös levelű fajoknak akár árthat is, a legtöbb növénynek viszont gyakran elég a tálca és a csoportosítás."},
+    {"t": "h2", "x": "4. Tartsa távol a huzattól és a fűtőtesttől"},
+    {"t": "p", "x": "A hirtelen hőmérséklet-ingadozás gyakori oka a levélhullásnak. Ne hagyja a növényeket nyitott ablak mellett, és ne tegye közvetlenül a radiátor fölé vagy mellé. Szellőztetéskor vigye át az érzékenyebb példányokat egy másik szobába."},
+    {"t": "h2", "x": "5. Csökkentse a tápoldatozást"},
+    {"t": "p", "x": "A legtöbb növény télen pihen, ezért ilyenkor nincs szüksége tápoldatra. Ősszel fokozatosan hagyja abba a tápoldatozást, és tavasszal, az első új levelek megjelenésekor kezdje újra. A télen virágzó fajoknál az adott növényre vonatkozó tanácsot kövesse."},
+    {"t": "h2", "x": "6. Hetente nézze át a leveleket"},
+    {"t": "p", "x": "A száraz levegőt kedvelik a takácsatkák és a levéltetvek. Nézze meg a leveleket mindkét oldalon: ragacsos bevonat, apró világos pontok vagy finom szövedék jelezheti a kártevők megjelenését."},
+    {"t": "p", "x": "Kezdetnek elég a növényt langyos vízzel lemosni, és szappanos vízbe mártott ronggyal áttörölni a leveleket. Erősebb fertőzésnél a csomagoláson olvasható használati utasítás szerint járjon el."},
+    {"t": "h2", "x": "7. Ne siessen az átültetéssel"},
+    {"t": "p", "x": "Ha a növény jó állapotban van, az átültetést érdemes tavaszra halasztani, mert ősszel a gyökerek nehezebben erednek meg. Csak akkor ültessen át most, ha a gyökerek kinőnek a vízelvezető nyílásokon, vagy a föld már nem szívja magába a vizet."},
+    {"t": "h2", "x": "Röviden: mit érdemes megjegyezni"},
+    {"t": "ul", "x": [
+      "Több fény: közelebb az ablakhoz, de nem a hideg üveghez.",
+      "Ritkább öntözés, előtte mindig ellenőrizze a földet.",
+      "Nedves kavics és csoportosítás a fűtőtestek közelében.",
+      "Távol a huzattól és a forró radiátortól.",
+      "A tápoldatozás tavaszig szünetel, a leveleket hetente át kell nézni.",
+      "Átültetés csak szükség esetén, inkább tavasszal."
+    ]},
+    {"t": "p", "x": "Minden növénynek megvannak a maga igényei, ezért a fenti tanácsokat mindig az adott fajhoz érdemes igazítani."}
+  ]
+}

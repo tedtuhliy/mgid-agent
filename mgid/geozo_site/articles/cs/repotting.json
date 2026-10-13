@@ -1,0 +1,38 @@
+{
+  "rubric": "Pokojové rostliny",
+  "title": "Přesazování pokojových rostlin: kdy, jak a čemu se vyhnout",
+  "teaser": "Jak poznat, že je květináč malý, kdy přesazovat, jakou zvolit novou nádobu a co po přesazení nedělat. Praktický přehled krok za krokem, od prvních signálů po péči v následujícím týdnu.",
+  "description": "Kdy rostlina potřebuje větší květináč, jak vybrat nádobu a substrát, jak postupovat krok za krokem a kdy raději s přesazením počkat.",
+  "heroAlt": "Dlaň držící malou sazenici s hrudkou zeminy před rozmazaným zeleným pozadím.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Přesazení je pro rostlinu větší zásah, než se zdá, a záleží na správném čase i na vhodné velikosti nádoby. Příliš velký květináč nebo termín uprostřed zimy jí může spíš uškodit. Několik jednoduchých zásad pomůže, aby se rostlina v novém květináči dobře ujala."},
+    {"t": "p", "x": "Tady je šest věcí, které stojí za to vědět dřív, než sáhnete po lopatce a novém květináči."},
+    {"t": "h2", "x": "Jak poznáte, že je květináč malý"},
+    {"t": "p", "x": "Typickým znamením jsou kořeny vyrůstající z otvorů ve dně. Dalšími signály jsou voda, která květináčem jen proteče a nenasákne, nebo růst, který se zastavil, ačkoli rostlina dostává dost světla i péče."},
+    {"t": "tip", "x": "Rostlinu opatrně vyklopte z květináče: pokud kořeny tvoří hustou spleť, je čas na větší nádobu."},
+    {"t": "h2", "x": "Kdy přesazovat"},
+    {"t": "p", "x": "Vhodná doba je od jara do začátku léta, kdy rostliny vyrážejí a rychle zakořeňují. Kořeny pak nový substrát rychle prorostou."},
+    {"t": "p", "x": "V zimě mají většinou období klidu a přesazení by je zbytečně vyčerpalo. Také na podzim se kořeny hůř ujímají."},
+    {"t": "h2", "x": "Květináč jen o dva až tři centimetry širší"},
+    {"t": "p", "x": "Nový květináč má být o dva až tři centimetry širší než dosavadní. V příliš velké nádobě kořeny dlouho nedosáhnou na celý objem substrátu."},
+    {"t": "p", "x": "Nevyužitá zemina zůstává dlouho vlhká a snadno začne zahnívat."},
+    {"t": "h2", "x": "Čerstvý substrát a drenáž"},
+    {"t": "p", "x": "Použijte čerstvý substrát vhodný pro daný druh, například pro kaktusy, orchideje nebo běžné pokojové rostliny. Na dno nasypte vrstvu keramzitu nebo hrubších kamínků, aby voda dobře odtékala. Otvory ve dně musí zůstat volné."},
+    {"t": "p", "x": "Starý substrát raději znovu nepoužívejte, bývá vyčerpaný a zhutněný."},
+    {"t": "h2", "x": "Postup krok za krokem"},
+    {"t": "p", "x": "Rostlinu den předem zalijte, pak ji opatrně vyjměte z květináče. Kořenový bal prsty lehce uvolněte a odstraňte suché nebo měkké kořeny. Potom rostlinu usaďte do nového květináče a nezasazujte ji hlouběji, než rostla dosud. Volný prostor doplňte substrátem, lehce ho přitlačte a zalijte."},
+    {"t": "p", "x": "Týden držte rostlinu mimo prudké slunce a nehnojte ji. Čerstvý substrát živiny obsahuje a kořeny si musí nejdřív zvyknout."},
+    {"t": "h2", "x": "Kdy raději nepřesazovat"},
+    {"t": "p", "x": "Kvetoucí rostlinu a rostlinu oslabenou nebo napadenou škůdci raději nechte na pokoji. Přesazení by jim ubralo sil, proto počkejte, až odkvetou nebo se zotaví."},
+    {"t": "p", "x": "Alternativou je výměna povrchové vrstvy: svrchních několik centimetrů substrátu opatrně odeberte a nahraďte čerstvým."},
+    {"t": "h2", "x": "Co si odnést"},
+    {"t": "ul", "x": [
+      "Kořeny u otvorů ve dně a voda, která jen protéká, signalizují čas na přesazení.",
+      "Vhodná doba je od jara do začátku léta.",
+      "Zvolte květináč jen o dva až tři centimetry širší.",
+      "Použijte čerstvý vhodný substrát a zajistěte odtok vody.",
+      "Po přesazení rostlinu týden nehnojte a chraňte před silným sluncem."
+    ]},
+    {"t": "p", "x": "Přesazování není každoroční povinnost. Mnohé rostliny dlouho dobře rostou v témže květináči, a pokud nejsou důvody ke změně, nechte je klidně na místě."}
+  ]
+}

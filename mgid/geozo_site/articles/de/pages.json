@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "Über uns",
+    "paras": [
+      "Arcadia Blog ist ein kleines Magazin rund um Haus, Küche und Garten. Wir veröffentlichen kurze, verständliche Beiträge über Vorratshaltung, Kräuter, Zimmerpflanzen und ein wenig Gartenpraxis.",
+      "Alle Beiträge dienen der allgemeinen Information. Bitte richten Sie sich bei Produkten nach den Angaben des Herstellers und bei Pflanzen nach den Ansprüchen der jeweiligen Art.",
+      "Die Website finanziert sich durch Werbung von Partnern. Jeder Werbeblock ist deutlich mit dem Wort „Anzeige“ gekennzeichnet und steht getrennt von den Texten."
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "paras": [
+      "Haben Sie eine Frage, einen Hinweis oder einen Wunsch für ein neues Thema? Schreiben Sie uns an contact@arcadiablog.com.",
+      "Wir lesen jede Nachricht und antworten in der Regel innerhalb weniger Werktage."
+    ]
+  },
+  "privacy": {
+    "title": "Datenschutz",
+    "paras": [
+      "Beim Besuch der Website fallen technische Daten an, etwa die aufgerufene Seite, Datum und Uhrzeit sowie Angaben zu Browser und Gerät. Außerdem verwendet die Website Cookies; das sind kleine Textdateien, die Ihr Browser speichert.",
+      "In den Werbeblöcken zeigen Partner Anzeigen. Diese Partner können Cookies und ähnliche Technologien verwenden, um Werbung anzuzeigen und deren Wirkung zu messen.",
+      "Auf der Website gibt es weder Benutzerkonten noch Zahlungsfunktionen. Um die Beiträge zu lesen, müssen Sie uns keine persönlichen Angaben machen.",
+      "Cookies können Sie jederzeit in den Einstellungen Ihres Browsers verwalten: Dort lassen sie sich ansehen, löschen oder für bestimmte Seiten blockieren. Bitte beachten Sie, dass die Website dann möglicherweise nicht mehr vollständig angezeigt wird.",
+      "Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns an contact@arcadiablog.com. Wir antworten in der Regel innerhalb weniger Werktage."
+    ]
+  }
+}

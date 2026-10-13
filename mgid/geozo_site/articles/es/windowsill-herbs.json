@@ -1,0 +1,37 @@
+{
+  "rubric": "Huerto en casa",
+  "title": "Hierbas aromáticas en el alféizar: cuáles crecen bien en casa y cómo cuidarlas",
+  "teaser": "Albahaca, menta, perejil, cebollino y tomillo se adaptan bien a una ventana luminosa. Luz, macetas, riego, poda de puntas y abono ligero: lo básico para tener hojas frescas a mano.",
+  "description": "Qué hierbas aromáticas crecen bien en el alféizar y cómo cuidarlas: luz, macetas con drenaje, riego, pellizcado de puntas, problemas habituales y abono ligero.",
+  "heroAlt": "Primer plano de una mata tupida de hierba aromática de hojas verdes y frescas.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Un par de macetas en la ventana de la cocina bastan para tener hojas frescas a mano a lo largo del año. Algunas aromáticas se adaptan al interior mejor que otras, y casi todas piden lo mismo: luz y riego moderado."},
+    {"t": "p", "x": "Estas son las más agradecidas y los cuidados que necesitan."},
+    {"t": "h2", "x": "Cinco aromáticas que se adaptan bien"},
+    {"t": "p", "x": "La albahaca, la menta, el perejil, el cebollino y el tomillo son buenas candidatas para empezar. Las cuatro primeras prefieren la tierra ligeramente húmeda; el tomillo, de clima seco, pide menos agua."},
+    {"t": "p", "x": "La menta crece con tanta fuerza que conviene darle una maceta para ella sola."},
+    {"t": "h2", "x": "Luz: lo que más importa"},
+    {"t": "p", "x": "Les va bien una ventana orientada al sur o al este, que reciba entre cuatro y seis horas de luz al día. En invierno, una lámpara de escritorio encendida unas horas por la tarde ayuda a que las plantas no se estiren."},
+    {"t": "tip", "x": "Girar la maceta un cuarto de vuelta cada pocos días hace que la planta crezca recta, sin inclinarse hacia el cristal."},
+    {"t": "h2", "x": "Macetas con drenaje"},
+    {"t": "p", "x": "La maceta debe tener agujeros en el fondo y un platillo debajo. Con un sustrato ligero y aireado, y vaciando el agua que se acumule en el platillo, las raíces no se encharcan."},
+    {"t": "p", "x": "El barro deja respirar mejor las raíces, pero se seca antes; el plástico retiene más agua y pide riegos más espaciados."},
+    {"t": "h2", "x": "Regar cuando la tierra se seca"},
+    {"t": "p", "x": "Se riega cuando los primeros uno o dos centímetros de tierra están secos: basta con hundir un dedo para comprobarlo."},
+    {"t": "p", "x": "Se echa agua hasta que salga por los agujeros y se vacía el platillo al cabo de un rato."},
+    {"t": "h2", "x": "Pellizcar las puntas y cosechar con moderación"},
+    {"t": "p", "x": "Pellizcar las puntas de los tallos hace que la planta se ramifique y quede más tupida. Al cosechar, conviene cortar justo encima de un par de hojas y no quitar más de un tercio de la planta de una vez."},
+    {"t": "h2", "x": "Problemas habituales y abono ligero"},
+    {"t": "p", "x": "Los tallos largos y pálidos suelen indicar falta de luz, y las hojas amarillas, exceso de riego. Acercar la planta a la ventana o espaciar los riegos suele bastar para corregirlo."},
+    {"t": "p", "x": "De primavera a otoño, que es cuando crecen, basta con un abono líquido suave una vez al mes, según las indicaciones del envase."},
+    {"t": "h2", "x": "Ideas clave"},
+    {"t": "ul", "x": [
+      "Albahaca, menta, perejil, cebollino y tomillo se adaptan bien al interior.",
+      "Ventana al sur o al este, con cuatro a seis horas de luz.",
+      "Macetas con agujeros de drenaje y un platillo que se vacía.",
+      "Regar cuando los primeros centímetros de tierra estén secos.",
+      "Pellizcar las puntas y cosechar como máximo un tercio."
+    ]},
+    {"t": "p", "x": "Con un poco de constancia, unas pocas macetas en la ventana dan hojas frescas durante gran parte del año."}
+  ]
+}

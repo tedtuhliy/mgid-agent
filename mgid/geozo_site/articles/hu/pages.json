@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "Rólunk",
+    "paras": [
+      "Az Arcadia Blog egy kis otthon-, konyha- és kertmagazin. Gyakorlatias, nyugodt hangvételű írásokat közlünk az élelmiszerek tárolásáról, a szobanövényekről, a fűszernövényekről és néhány kerti tudnivalóról.",
+      "Az írásaink tájékoztató jellegűek, általános háztartási tapasztalatokra épülnek, és nem helyettesítik a termékek gyártói utasításait. Az egyes növények és élelmiszerek igényei eltérhetnek, ezért mindig érdemes az adott termék vagy növény sajátosságait is figyelembe venni.",
+      "Az oldal működését partnereink hirdetései finanszírozzák. A hirdetéseket mindig megjelöljük a „Hirdetés” felirattal, így könnyen megkülönböztethetők a szerkesztett tartalomtól."
+    ]
+  },
+  "contact": {
+    "title": "Kapcsolat",
+    "paras": [
+      "Ha kérdése, észrevétele vagy javaslata van egy cikkel kapcsolatban, írjon nekünk e-mailben a contact@arcadiablog.com címre.",
+      "Az üzenetekre néhány munkanapon belül válaszolunk. Köszönjük a türelmét."
+    ]
+  },
+  "privacy": {
+    "title": "Adatvédelmi tájékoztató",
+    "paras": [
+      "Az oldal látogatásakor technikai adatok keletkeznek, például a böngésző típusa, az eszköz, a megtekintett oldalak és a látogatás ideje. Az oldal sütiket is használ, hogy megfelelően működjön.",
+      "Az oldalon megjelenő hirdetési blokkokat partnereink szolgáltatják. Ők sütiket és hasonló technológiákat használhatnak a hirdetések megjelenítéséhez és méréséhez.",
+      "Az oldalon nincs regisztráció, felhasználói fiók vagy fizetés, így nem kell személyes adatokat megadnia.",
+      "A sütiket a böngésző beállításaiban bármikor törölheti vagy letilthatja. Ilyenkor előfordulhat, hogy az oldal egyes részei nem működnek megfelelően.",
+      "Ha kérdése van az adatkezeléssel vagy a sütikkel kapcsolatban, írjon e-mailben a contact@arcadiablog.com címre."
+    ]
+  }
+}

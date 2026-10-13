@@ -1,0 +1,36 @@
+{
+  "rubric": "Casă și bucătărie",
+  "title": "Cum păstrați pâinea ca să rămână proaspătă și moale mai multe zile",
+  "teaser": "Frigiderul învechește pâinea mai repede decât un loc potrivit din bucătărie. Iată unde și în ce o păstrați, cum congelați feliile și cum reîmprospătați o pâine învechită.",
+  "description": "Cum păstrați pâinea: cutie, săculeț de pânză sau hârtie, congelarea feliilor, reîmprospătarea în cuptor și idei pentru pâinea veche.",
+  "heroAlt": "Mâini care țin o felie de pâine rustică, cu miez aerat, deasupra unei pungi transparente.",
+  "body": [
+    {"t": "p", "lead": true, "x": "O pâine proaspătă se învechește repede dacă nu e păstrată cum trebuie. Cu un loc potrivit, un ambalaj care o lasă să respire și câteva obiceiuri simple, ea rămâne bună de mâncat mai multe zile. Iar bucățile care se învechesc totuși se pot folosi mai departe în bucătărie."},
+    {"t": "p", "x": "Iată cum procedați, de la cutia de pâine până la crutoane."},
+    {"t": "h2", "x": "De ce nu e locul pâinii în frigider"},
+    {"t": "p", "x": "La temperaturile din frigider, miezul pâinii se învechește și se usucă mai repede decât la temperatura camerei. Frigiderul e potrivit pentru multe alimente, dar nu și pentru pâine."},
+    {"t": "h2", "x": "Cutie, săculeț de pânză sau hârtie"},
+    {"t": "p", "x": "O cutie de pâine, un săculeț de in sau o pungă de hârtie lasă pâinea să respire și o ferește de aerul prea uscat. Pâinea cu coajă crocantă stă mai bine în hârtie sau în pânză, iar cea moale, pentru sandvișuri, într-o pungă sau într-o cutie închisă."},
+    {"t": "p", "x": "O pâine începută se așază cu partea tăiată în jos, pe un tocător sau pe fundul cutiei, ca miezul să nu se usuce."},
+    {"t": "h2", "x": "Feliați și congelați"},
+    {"t": "p", "x": "Dacă nu terminați pâinea în două-trei zile, feliați-o și congelați-o, cu o foaie de hârtie de copt între felii, ca să se desprindă ușor. Feliile se scot pe rând și se pot prăji direct din congelator, în prăjitorul de pâine."},
+    {"t": "tip", "x": "Congelați pâinea în ziua în care a fost coaptă sau cumpărată, cât e încă proaspătă."},
+    {"t": "h2", "x": "Cum reîmprospătați o pâine învechită"},
+    {"t": "p", "x": "Stropiți coaja cu câteva picături de apă și țineți pâinea aproximativ 10 minute într-un cuptor încins la 180 °C. Miezul se înmoaie, iar coaja devine din nou crocantă; cel mai bine se consumă în aceeași zi."},
+    {"t": "h2", "x": "Cutia de pâine, curată și uscată"},
+    {"t": "p", "x": "Ștergeți cutia de firimituri și spălați-o periodic, apoi lăsați-o să se usuce complet înainte de a pune pâinea înapoi. Mucegaiul apare tocmai acolo unde sunt umezeală și firimituri."},
+    {"t": "p", "x": "Dacă totuși apare mucegai, pâinea se aruncă în întregime, nu doar felia sau bucata afectată."},
+    {"t": "h2", "x": "Ce faceți cu pâinea veche"},
+    {"t": "p", "x": "Pâinea uscată nu trebuie aruncată. Tăiată în cubulețe și rumenită în cuptor cu puțin ulei, devine crutoane pentru supe și salate, iar uscată și mărunțită, pesmet."},
+    {"t": "p", "x": "Feliile vechi, înmuiate în ou și lapte și rumenite în tigaie, se transformă într-o gustare simplă, bună și pentru micul dejun."},
+    {"t": "h2", "x": "În câteva rânduri"},
+    {"t": "ul", "x": [
+      "Frigiderul învechește pâinea mai repede; alegeți o cutie, un săculeț de pânză sau hârtie.",
+      "Pâinea începută stă cu partea tăiată în jos.",
+      "Feliile se congelează cu hârtie de copt între ele.",
+      "O pâine învechită se reîmprospătează 10 minute în cuptor.",
+      "Cutia de pâine se ține curată și uscată."
+    ]},
+    {"t": "p", "x": "Cu aceste obiceiuri, pâinea se termină la timp, iar bucățile rămase își găsesc un rost în bucătărie."}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "rubric": "Domov a kuchyňa",
+  "title": "Ovocie a zelenina: čo uložiť spolu a čo radšej oddelene",
+  "teaser": "Niektoré plody dozrievajú a kazia sa rýchlejšie, ak ležia vedľa jabĺk či banánov. Prehľad toho, čo uložiť spolu, čo zvlášť a čo radšej nechať mimo chladničky.",
+  "description": "Jednoduché vysvetlenie etylénu, uloženie zemiakov, cibule a paradajok a využitie dvoch zásuviek v chladničke, aby ovocie a zelenina vydržali dlhšie.",
+  "heroAlt": "Červené, žlté a oranžové papriky, uhorky, špenát a mrkva v priehľadných priehradkách zásuvky na zeleninu",
+  "body": [
+    {"t": "p", "lead": true, "x": "Ovocie a zelenina sa v chladničke aj v špajzi navzájom ovplyvňujú. Niektoré plody dozrievajú rýchlejšie a kazia sa skôr, ak ležia vedľa iných. Keď viete, ktoré to sú, stačí pár drobných zmien v ukladaní."},
+    {"t": "p", "x": "Tu je šesť zásad, ktoré sa dajú uplatniť doma bez akéhokoľvek dodatočného vybavenia."},
+    {"t": "h2", "x": "Čo je etylén a kto ho vylučuje"},
+    {"t": "p", "x": "Etylén je prírodný plyn, ktorý niektoré plody uvoľňujú pri dozrievaní. Urýchľuje dozrievanie a neskôr aj kazenie plodov v okolí."},
+    {"t": "p", "x": "Veľa ho vylučujú jablká, hrušky, banány, broskyne a zrelé paradajky. Citlivé naň sú listová zelenina, uhorky, mrkva a brokolica, ktoré v ich blízkosti žltnú a rýchlejšie ochabnú."},
+    {"t": "h2", "x": "Zemiaky a cibuľa: oddelene, tmavo a vzdušne"},
+    {"t": "p", "x": "Zemiaky a cibuľa si neprospievajú: vedľa seba sa kazia rýchlejšie. Každú plodinu uložte do vlastného koša alebo škatule na tmavé, suché a vzdušné miesto."},
+    {"t": "p", "x": "Nehodia sa na to uzavreté plastové vrecká, v ktorých sa zráža vlhkosť. Lepšia je drevená debnička, košík alebo papierová taška."},
+    {"t": "h2", "x": "Paradajky chlad nemajú rady"},
+    {"t": "p", "x": "V chladničke paradajky strácajú chuť a ich dužina zmäkne. Nechajte ich pri izbovej teplote na tienistom mieste a po dozretí ich spotrebujte do niekoľkých dní. Ak sú už veľmi zrelé a nestihnete ich zjesť, na deň či dva ich môžete dať do chladničky."},
+    {"t": "tip", "x": "Tvrdé hrušky alebo avokádo dozrejú rýchlejšie v papierovom vrecku spolu s jablkom alebo banánom."},
+    {"t": "h2", "x": "Dve zásuvky, dve úlohy"},
+    {"t": "p", "x": "Mnohé chladničky majú dve zásuvky na zeleninu. Do tej s vyššou vlhkosťou patrí zelenina, ktorá rýchlo vädne, najmä listová, uhorky a mrkva, do suchšej zasa ovocie."},
+    {"t": "p", "x": "Ak sa vlhkosť nedá nastaviť, rozdeľte zásuvky aspoň podľa druhu: jedna pre ovocie, druhá pre zeleninu. Ovocie, ktoré vylučuje etylén, tak nebude ležať vedľa citlivej zeleniny."},
+    {"t": "h2", "x": "Nakrájané plody patria do uzavretých nádob"},
+    {"t": "p", "x": "Rozrezané ovocie a zeleninu uložte do uzavretej nádoby alebo ich zabaľte do potravinovej fólie. Miesto rezu rýchlo vysychá a nasiakne pachmi z chladničky. Nakrájané kúsky spotrebujte v priebehu niekoľkých dní."},
+    {"t": "h2", "x": "Raz týždenne všetko prezrite"},
+    {"t": "p", "x": "Raz za týždeň prejdite zásoby a vyberte všetko, čo začína hniť alebo plesnivieť. Jeden pokazený plod môže rýchlo poškodiť aj ostatné."},
+    {"t": "p", "x": "Čo sa ešte dá použiť, spracujte hneď, napríklad do polievky alebo kompótu."},
+    {"t": "h2", "x": "Zhrnutie"},
+    {"t": "ul", "x": [
+      "Jablká, hrušky, banány a zrelé paradajky držte zvlášť od citlivej zeleniny.",
+      "Zemiaky a cibuľu skladujte oddelene na tmavom, suchom a vzdušnom mieste.",
+      "Paradajky nechajte pri izbovej teplote, nie v chladničke.",
+      "Využite obe zásuvky: vlhšiu pre zeleninu, suchšiu pre ovocie.",
+      "Nakrájané plody uzavrite do nádob a raz týždenne všetko prezrite."
+    ]},
+    {"t": "p", "x": "Každý druh je trochu iný, preto si overte, čo vám doma funguje, a pri balených potravinách sa riaďte údajmi na obale."}
+  ]
+}

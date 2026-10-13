@@ -1,0 +1,38 @@
+{
+  "rubric": "Dom in kuhinja",
+  "title": "Kako shranjevati kruh, da ostane svež in mehak",
+  "teaser": "Kruh v hladilniku se hitreje posuši, zato mu ustreza drugačno mesto. Kako ga shraniti, zamrzniti po rezinah, osvežiti suh hlebec in porabiti ostanke: preprosti nasveti za domačo kuhinjo.",
+  "description": "Zakaj kruh ne sodi v hladilnik, kako ga shraniti v škatli ali vrečki, zamrzniti po rezinah, osvežiti in porabiti, ko postane suh.",
+  "heroAlt": "Roke držijo rezino kruha nad belo vrečko v kuhinji.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Prvi dan je hlebec še povsem svež, nato pa kruh počasi postane trd in suh. Pri tem je odločilno, kje in v čem ga hranimo. Z nekaj preprostimi navadami ostane mehak precej dlje."},
+    {"t": "p", "x": "Posebni pripomočki niso nujni. Dovolj je, da veste, kaj kruhu ne ustreza, in da ga pravilno pospravite."},
+    {"t": "h2", "x": "Zakaj hladilnik kruhu ne ustreza"},
+    {"t": "p", "x": "Pri nizki temperaturi sredica kruha hitreje otrdi, zato v hladilniku kruh postane trd, drobljiv in manj okusen. Pri sobni temperaturi ostane mehak dlje, hladilnik pa je zanj slaba izbira."},
+    {"t": "h2", "x": "Škatla za kruh, platnena vrečka ali papir"},
+    {"t": "p", "x": "Hlebec s hrustljavo skorjo je dobro hraniti v papirnati vrečki ali zavit v laneno krpo, da skorja ostane suha in hrustljava. Mehek kruh in kruh za toast bolje ohranita vlago v škatli za kruh ali platneni vrečki."},
+    {"t": "p", "x": "Načet hlebec polagajte na desko s prerezano stranjo navzdol: tako se sredica manj izsuši."},
+    {"t": "h2", "x": "Narežite in zamrznite"},
+    {"t": "p", "x": "Kruha, ki ga ne boste pojedli v dveh ali treh dneh, ne puščajte na pultu. Narežite ga na rezine in med rezine položite listke peki papirja, da se ne zlepijo."},
+    {"t": "p", "x": "Zamrznjene rezine jemljite po potrebi: neposredno jih položite v opekač ali za nekaj minut v pečico. Tako je kruh spet kot svež."},
+    {"t": "h2", "x": "Kako osvežite suh hlebec"},
+    {"t": "p", "x": "Suh hlebec lahko oživite. Skorjo narahlo navlažite z nekaj kapljicami vode in hlebec pecite 10 minut v dobro ogreti pečici, pri približno 180 °C."},
+    {"t": "p", "x": "Skorja bo spet hrustljava, sredica pa mehkejša."},
+    {"t": "tip", "x": "Osvežen kruh pojejte še isti dan, saj se hitro znova posuši."},
+    {"t": "h2", "x": "Škatla za kruh naj bo čista in suha"},
+    {"t": "p", "x": "Drobtine in vlaga ustvarjajo ugodne razmere za plesen, zato škatlo za kruh enkrat na teden izpraznite, obrišite in dobro posušite. Papirnate vrečke in krpe redno menjajte ali perite."},
+    {"t": "p", "x": "Če na kruhu opazite plesen, ga zavrzite v celoti in ne režite le prizadetega dela. Škatlo nato temeljito očistite."},
+    {"t": "h2", "x": "Kaj s suhim kruhom"},
+    {"t": "p", "x": "Suh kruh še ni za v smeti. Iz njega lahko naredite krutone za juho in solato ali nastrgate drobtine za pohanje."},
+    {"t": "p", "x": "Dobro se obnese tudi v kruhovih cmokih. Za francoski toast rezine namočite v mleko in jajce ter jih popecite na ponvi."},
+    {"t": "h2", "x": "V nekaj točkah"},
+    {"t": "ul", "x": [
+      "Kruh ne sodi v hladilnik, ker se tam hitreje posuši.",
+      "Hrustljav hlebec hranite v papirju ali platnu, mehkega v škatli za kruh.",
+      "Kruh, ki ga ne boste porabili, narežite in zamrznite.",
+      "Suh hlebec osvežite z nekaj kapljicami vode in 10 minutami v pečici.",
+      "Škatlo za kruh redno čistite, kruh s plesnijo pa zavrzite."
+    ]},
+    {"t": "p", "x": "Če kruha pogosto ostane, kupujte manjše hlebce ali pa polovico takoj narežite in zamrznite."}
+  ]
+}

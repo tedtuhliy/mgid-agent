@@ -1,0 +1,41 @@
+{
+  "rubric": "Domov a kuchyňa",
+  "title": "9 jednoduchých pravidiel, vďaka ktorým potraviny vydržia čerstvé dlhšie",
+  "teaser": "Bylinky rýchlo vädnú, chlieb tvrdne a maliny plesnivejú. Často záleží len na tom, kde a ako potraviny uložíme. Deväť pravidiel, vďaka ktorým vyhodíte menej jedla.",
+  "description": "Deväť praktických pravidiel pre kuchyňu: ako usporiadať chladničku, uložiť bylinky a ovocie, zmraziť zvyšky a vyhodiť menej potravín.",
+  "heroAlt": "Otvorená chladnička s prehľadne uloženými čerstvými potravinami a zeleninou v zásuvkách",
+  "body": [
+    {"t": "p", "lead": true, "x": "O tom, ako dlho potraviny vydržia, nerozhoduje len dátum na obale. Dôležitá je aj teplota, vlhkosť a dokonca to, čo leží vedľa čoho. Týchto deväť pravidiel sa dá zaviesť v každej kuchyni."},
+    {"t": "p", "x": "Nič z toho nie je náročné: stačí raz zmeniť pár návykov a nákup vydrží zvyčajne citeľne dlhšie."},
+    {"t": "h2", "x": "1. Usporiadajte chladničku s rozmyslom"},
+    {"t": "p", "x": "V chladničke by malo byť približne 2 až 5 °C, v mrazničke −18 °C alebo menej. Najchladnejšie je pri zadnej stene a na spodných policiach, najteplejšie v dvierkach, takže tam patria omáčky a nápoje."},
+    {"t": "h2", "x": "2. Surové mäso a ryby patria na spodnú policu"},
+    {"t": "p", "x": "Surové mäso a ryby uložte celkom dole a vždy do uzavretej nádoby. Šťava, ktorá z nich môže vytiecť, sa tak nedostane na zeleninu ani na hotové jedlo."},
+    {"t": "h2", "x": "3. Bylinky uložte ako kvety vo váze"},
+    {"t": "p", "x": "Petržlenovú vňať, kôpor a koriander nedávajte do tesného vrecka, v ktorom sa zráža vlhkosť. Konce stoniek orežte, zväzok postavte do pohára s trochou vody a voľne ho prikryte sáčkom. Výnimkou je bazalka, ktorá chlad nemá rada."},
+    {"t": "h2", "x": "4. Ovocie a zeleninu držte od seba"},
+    {"t": "p", "x": "Jablká, hrušky, banány a paradajky vylučujú plyn etylén, ktorý urýchľuje dozrievanie okolitých plodov. Listová zelenina, uhorky a mrkva sa v ich blízkosti kazia rýchlejšie."},
+    {"t": "p", "x": "Oddeliť treba aj zemiaky a cibuľu. Ukladajte ich zvlášť, na tmavom mieste a v priedušnom obale."},
+    {"t": "h2", "x": "5. Jahody, huby a šalát neumývajte vopred"},
+    {"t": "p", "x": "Jahody, huby a šalát umývajte až tesne pred jedlom, lebo vlhkosť urýchľuje plesnivenie. Ak sú už umyté, dobre ich osušte a uložte do nádoby vystlanej papierovou utierkou."},
+    {"t": "h2", "x": "6. Chlieb, obilniny a orechy"},
+    {"t": "p", "x": "Chlieb v chladničke tvrdne rýchlejšie než v chlebníku. Ak ho nestihnete zjesť, nakrájajte ho a zmrazte po porciách."},
+    {"t": "p", "x": "Múku, ryžu a strukoviny držte v dobre uzavretých dózach na suchom mieste. Orechy a semienka patria do vzduchotesnej nádoby na chladné a tmavé miesto, v teple rýchlejšie žlknú."},
+    {"t": "h2", "x": "7. Zmrazujte čerstvé, po porciách a s dátumom"},
+    {"t": "p", "x": "Potraviny zmrazujte, kým sú čerstvé, po porciách a v tesných vreckách či nádobách, z ktorých vytlačíte vzduch. Napíšte dátum, inak už o pár mesiacov neviete, čo je vnútri. Rozmrazujte v chladničke, nie na kuchynskej linke."},
+    {"t": "h2", "x": "8. Hotové jedlá ochlaďte do dvoch hodín"},
+    {"t": "p", "x": "Uvarené jedlo nechajte vychladnúť a do dvoch hodín ho dajte do chladničky. Zjesť by sa malo zvyčajne do troch až štyroch dní. Polievky a dusené jedlá ochladzujte v menších porciách, aby vychladli rýchlejšie."},
+    {"t": "h2", "x": "9. Staršie dopredu a čistá chladnička"},
+    {"t": "p", "x": "Nové nákupy zasúvajte dozadu a staršie potraviny dávajte dopredu, aby ste na ne nezabudli. Škatuľa s nápisom „zjesť dnes“ pomáha, aby nič nezostalo schované v kúte police."},
+    {"t": "p", "x": "Raz týždenne poličky poutierajte a vyhoďte všetko, čo sa kazí. Raz za mesiac chladničku dôkladne umyte teplou vodou."},
+    {"t": "h2", "x": "Stručne: čo si zapamätať"},
+    {"t": "ul", "x": [
+      "Chladnička má mať približne 2 až 5 °C, mraznička −18 °C.",
+      "Surové mäso a ryby patria v uzavretej nádobe na spodnú policu.",
+      "Etylénové ovocie držte zvlášť, jahody a huby neumývajte vopred.",
+      "Chlieb radšej zmrazte, než by tvrdol v chladničke.",
+      "Staršie potraviny dávajte dopredu a poličky raz týždenne poutierajte."
+    ]},
+    {"t": "p", "x": "A hlavne: riaďte sa dátumom a podmienkami skladovania, ktoré uvádza výrobca na obale. Majú prednosť pred všeobecnými radami."}
+  ]
+}

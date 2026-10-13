@@ -1,0 +1,37 @@
+{
+  "rubric": "Domov a kuchyňa",
+  "title": "Petržlenová vňať, kôpor a koriander vydržia čerstvé aj týždne: metóda s pohárom",
+  "teaser": "Bylinky v tesnom vrecku často tmavnú a hnijú. V pohári s vodou, podobne ako rezané kvety, vydržia zvyčajne dlhšie. Postup krok za krokom aj s výnimkou pre bazalku.",
+  "description": "Ako uložiť petržlenovú vňať, kôpor a koriander v pohári s vodou, kedy vodu meniť, prečo bazalka nepatrí do chladničky a čo so zvyškami.",
+  "heroAlt": "Zväzok petržlenovej vňate a kôpru postavený v sklenenom pohári s vodou",
+  "body": [
+    {"t": "p", "lead": true, "x": "Zväzok petržlenovej vňate alebo koriandra býva po pár dňoch v chladničke ochabnutý a listy tmavnú. Pritom stačí obyčajný pohár s vodou a bylinky zostanú čerstvé zvyčajne jeden až dva týždne, niekedy aj dlhšie. Princíp je rovnaký ako pri rezaných kvetoch."},
+    {"t": "p", "x": "Postup je jednoduchý a nepotrebuje nič navyše, stačí pohár, voda a pár minút."},
+    {"t": "h2", "x": "Skráťte stonky a odstráňte nevzhľadné listy"},
+    {"t": "p", "x": "Zväzok najprv rozviažte a prezrite. Žltnúce, slizké alebo suché lístky odstráňte, lebo urýchľujú kazenie zvyšku."},
+    {"t": "p", "x": "Konce stoniek skráťte asi o centimeter, aby mohli lepšie nasávať vodu."},
+    {"t": "h2", "x": "Pohár s vodou, voľný sáčok a chladnička"},
+    {"t": "p", "x": "Do pohára nalejte 2 až 3 cm vody a zväzok doň postavte tak, aby boli stonky ponorené a listy zostali nad hladinou. Navrch voľne navlečte priesvitný sáčok, ktorý chráni listy pred vysušením. Neuväzujte ho, aby pod ním mohol vzduch obiehať."},
+    {"t": "p", "x": "Pohár dajte do chladničky na miesto, kde sa nemôže prevrátiť."},
+    {"t": "h2", "x": "Vodu meňte každé dva dni"},
+    {"t": "p", "x": "Voda sa časom zakalí a stonky v nej začnú hniť. Preto ju približne každé dva dni vymeňte a ak sú konce stoniek zafarbené, opäť ich trochu skráťte."},
+    {"t": "tip", "x": "Vyšší a užší pohár drží zväzok vzpriamene a menej sa prevracia."},
+    {"t": "h2", "x": "Pred uložením bylinky neumývajte"},
+    {"t": "p", "x": "Vlhkosť na listoch urýchľuje hnilobu, preto bylinky umývajte až tesne pred použitím."},
+    {"t": "p", "x": "Ak ste ich predsa len umyli, nechajte ich oschnúť na utierke a až potom ich postavte do pohára."},
+    {"t": "h2", "x": "Výnimka: bazalka nemá rada chlad"},
+    {"t": "p", "x": "Listy bazalky v chladničke tmavnú a rýchlo ochabnú. Postavte ju do pohára s vodou pri izbovej teplote, mimo priameho slnka, a vodu meňte rovnako ako pri ostatných bylinkách. Takto vydrží aspoň niekoľko dní."},
+    {"t": "h2", "x": "Ďalšie možnosti: vlhká utierka a mrazenie"},
+    {"t": "p", "x": "Ak sa pohár do chladničky nezmestí, zabaľte bylinky do mierne navlhčenej papierovej utierky a uložte ich do uzavretej nádoby. Utierku vymeňte, keď je príliš mokrá."},
+    {"t": "p", "x": "Na dlhšie uchovanie bylinky nasekajte, rozdeľte do foriem na ľad a zalejte trochou vody alebo oleja. Kocky s vodou sa potom hodia priamo do polievok a omáčok, kocky s olejom na opekanie."},
+    {"t": "h2", "x": "Stručne o metóde"},
+    {"t": "ul", "x": [
+      "Stonky skráťte a nevzhľadné listy odstráňte.",
+      "Pohár s 2 až 3 cm vody, voľný sáčok navrch, chladnička.",
+      "Vodu meňte približne každé dva dni.",
+      "Bylinky neumývajte vopred, bazalku nechajte pri izbovej teplote.",
+      "Zvyšky nasekajte a zmrazte alebo použite do polievok."
+    ]},
+    {"t": "p", "x": "Mäkké listy, ktoré už nevyzerajú pekne na ozdobu, sa ešte hodia do polievok a omáčok. Ako dlho bylinky vydržia, závisí aj od toho, aké čerstvé boli pri kúpe, preto berte uvedené časy len orientačne."}
+  ]
+}

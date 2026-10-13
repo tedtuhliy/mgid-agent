@@ -1,0 +1,36 @@
+{
+  "rubric": "Küche und Haushalt",
+  "title": "Petersilie, Dill und Koriander bleiben wochenlang frisch: die Glas-Methode",
+  "teaser": "Ein Glas mit etwas Wasser, ein lockerer Beutel darüber und der Kühlschrank: So halten sich Petersilie, Dill und Koriander oft zwei Wochen und länger. Dazu Alternativen und eine Ausnahme.",
+  "description": "So bleiben Petersilie, Dill und Koriander länger frisch: Stiele kürzen, ins Glas mit Wasser stellen, locker abdecken – dazu Tipps zu Basilikum und Einfrieren.",
+  "heroAlt": "Ein Schraubglas mit einem dichten Strauß aus frischer Petersilie und Dill.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Ein Bund Petersilie, Dill oder Koriander ist oft schon nach wenigen Tagen welk, obwohl erst die Hälfte verbraucht ist. Mit einem Glas Wasser und einem lockeren Beutel halten die Kräuter im Kühlschrank meist zwei Wochen und länger."},
+    {"t": "p", "x": "Die Methode ist schnell erklärt und braucht nur Dinge, die in jeder Küche vorhanden sind."},
+    {"t": "h2", "x": "Stiele kürzen und müde Blätter entfernen"},
+    {"t": "p", "x": "Kürzen Sie die Stiele mit einem scharfen Messer um etwa einen Zentimeter, wie bei Schnittblumen. Über die frische Schnittfläche nehmen die Kräuter das Wasser besser auf."},
+    {"t": "p", "x": "Gelbe, welke oder matschige Blätter zupfen Sie ab, denn sie lassen auch die übrigen Blätter schneller altern."},
+    {"t": "h2", "x": "Ins Glas stellen und locker abdecken"},
+    {"t": "p", "x": "Füllen Sie ein Glas 2 bis 3 cm hoch mit kühlem Wasser und stellen Sie die Kräuter hinein. Die Blätter sollten dabei nicht ins Wasser tauchen."},
+    {"t": "p", "x": "Ein lockerer Beutel darüber schützt vor dem Austrocknen; er darf nicht dicht verschlossen sein. Stellen Sie das Glas so in den Kühlschrank, dass es nicht umkippen kann."},
+    {"t": "h2", "x": "Das Wasser alle zwei Tage wechseln"},
+    {"t": "p", "x": "Gießen Sie das Wasser alle zwei Tage aus und füllen Sie frisches nach. Kürzen Sie die Stiele dabei ruhig noch einmal um ein kleines Stück. Trübes Wasser ist ein Zeichen, dass der Wechsel überfällig ist."},
+    {"t": "tip", "x": "Ein Streifen Klebeband mit dem Datum am Glas erinnert Sie an den nächsten Wasserwechsel."},
+    {"t": "h2", "x": "Vor dem Lagern nicht waschen"},
+    {"t": "p", "x": "Feuchte Blätter werden schneller matschig. Waschen Sie die Kräuter deshalb erst kurz vor dem Verwenden und tupfen Sie sie trocken. Sind sie schon nass, lassen Sie sie vorher auf einem Küchentuch abtrocknen."},
+    {"t": "h2", "x": "Die Ausnahme: Basilikum mag keine Kälte"},
+    {"t": "p", "x": "Im Kühlschrank wird Basilikum schnell dunkel und fleckig. Besser eignet sich ein Glas Wasser bei Zimmertemperatur, an einem hellen Platz und ohne Beutel. Auch hier sollte das Wasser alle ein bis zwei Tage gewechselt werden."},
+    {"t": "h2", "x": "Weitere Möglichkeiten: Küchenpapier und Einfrieren"},
+    {"t": "p", "x": "Wickeln Sie die Kräuter in leicht angefeuchtetes Küchenpapier und legen Sie sie in eine Dose in den Kühlschrank. Fein gehackt lassen sie sich auch einfrieren: Verteilen Sie sie in Eiswürfelformen und gießen Sie etwas Wasser oder Öl darüber."},
+    {"t": "p", "x": "Die Würfel kommen später direkt in Suppen, Saucen und Eintöpfe. Die weichen Blätter eignen sich dafür gut, weniger als Garnitur."},
+    {"t": "h2", "x": "Noch einmal in Kürze"},
+    {"t": "ul", "x": [
+      "Stiele frisch anschneiden und welke Blätter entfernen.",
+      "Glas mit 2 bis 3 cm Wasser, lockerer Beutel darüber, Kühlschrank.",
+      "Wasser alle zwei Tage wechseln.",
+      "Erst kurz vor dem Verwenden waschen.",
+      "Basilikum bei Zimmertemperatur halten."
+    ]},
+    {"t": "p", "x": "Probieren Sie die Methode zunächst mit einem Bund aus. Meist zeigt sich schon nach wenigen Tagen, wie viel länger die Kräuter durchhalten."}
+  ]
+}

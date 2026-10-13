@@ -1,0 +1,37 @@
+{
+  "rubric": "Zimmerpflanzen",
+  "title": "Zimmerpflanzen umtopfen: Wann, wie und was Sie vermeiden sollten",
+  "teaser": "Wurzeln in den Abzugslöchern oder Wasser, das sofort durchläuft: Daran erkennen Sie, dass ein Topf zu klein ist. Wann der richtige Zeitpunkt ist und wie das Umtopfen Schritt für Schritt gelingt.",
+  "description": "Woran Sie erkennen, dass eine Zimmerpflanze einen größeren Topf braucht, wann der richtige Zeitpunkt zum Umtopfen ist und welche Schritte dazugehören.",
+  "heroAlt": "Eine Hand hält einen kleinen Setzling mit einem Klumpen dunkler Erde vor grünem, unscharfem Hintergrund.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Irgendwann ist jeder Topf zu eng, auch wenn die Pflanze noch kräftig aussieht. Wer den richtigen Zeitpunkt und die Handgriffe kennt, tut sich beim Umtopfen leichter und schont die Wurzeln."},
+    {"t": "p", "x": "Hier die wichtigsten Punkte, vom Erkennen des richtigen Moments bis zur Pflege danach."},
+    {"t": "h2", "x": "Zeichen für einen zu engen Topf"},
+    {"t": "p", "x": "Wachsen Wurzeln aus den Abzugslöchern oder an der Erdoberfläche heraus, wird es eng. Läuft das Gießwasser sofort durch, ohne dass die Erde es aufnimmt, ist der Topf meist durchwurzelt. Auch stockendes Wachstum trotz guter Pflege kann ein Hinweis sein."},
+    {"t": "h2", "x": "Der passende Zeitpunkt: Frühjahr bis Frühsommer"},
+    {"t": "p", "x": "Dann sind die Pflanzen im Wachstum, und die Wurzeln finden in frischer Erde rasch Halt. In der Winterruhe sollten Sie nicht umtopfen, denn die Pflanze kann die neue Erde kaum nutzen."},
+    {"t": "h2", "x": "Der neue Topf: nur etwas größer"},
+    {"t": "p", "x": "Wählen Sie einen Topf, der im Durchmesser nur 2 bis 3 cm größer ist. In einem zu großen Topf bleibt die Erde lange nass, und die Wurzeln leiden."},
+    {"t": "p", "x": "Nehmen Sie frische, zur Pflanze passende Erde und decken Sie das Abzugsloch mit einer Tonscherbe oder etwas Blähton ab, damit das Wasser gut abfließt."},
+    {"t": "h2", "x": "Schritt für Schritt umtopfen"},
+    {"t": "p", "x": "Gießen Sie die Pflanze am Vortag, dann löst sich der Wurzelballen leichter. Lockern Sie die Wurzeln vorsichtig und schneiden Sie abgestorbene, braune oder weiche Teile ab."},
+    {"t": "p", "x": "Setzen Sie die Pflanze in den neuen Topf, füllen Sie Erde auf und drücken Sie sie leicht an. Danach gießen Sie an und schützen die Pflanze etwa eine Woche vor praller Sonne."},
+    {"t": "tip", "x": "Die Pflanze sollte nach dem Umtopfen nicht tiefer sitzen als vorher."},
+    {"t": "h2", "x": "Danach nicht sofort düngen"},
+    {"t": "p", "x": "Frische Blumenerde enthält meist schon Nährstoffe. Warten Sie mit dem Düngen deshalb einige Wochen, bis die Pflanze neu austreibt, und beachten Sie dabei die Angaben auf der Packung."},
+    {"t": "h2", "x": "Wann Sie besser nicht umtopfen"},
+    {"t": "p", "x": "Während der Blüte oder wenn die Pflanze geschwächt ist, belastet das Umtopfen sie zusätzlich. Warten Sie in diesem Fall lieber ab."},
+    {"t": "p", "x": "Als Alternative können Sie die obersten Zentimeter Erde vorsichtig abtragen und durch frische ersetzen. So bekommt die Pflanze frische Erde, ohne dass die Wurzeln gestört werden."},
+    {"t": "h2", "x": "Zusammengefasst"},
+    {"t": "ul", "x": [
+      "Wurzeln an den Abzugslöchern, durchlaufendes Wasser und stockendes Wachstum sind Zeichen.",
+      "Im Frühjahr bis Frühsommer umtopfen, nicht in der Winterruhe.",
+      "Der neue Topf ist nur 2 bis 3 cm weiter und hat Abzugslöcher.",
+      "Am Vortag gießen, Wurzeln lockern, Abgestorbenes abschneiden.",
+      "Danach eine Woche vor praller Sonne schützen und noch nicht düngen.",
+      "Bei Blüte oder geschwächter Pflanze nur die oberste Erde erneuern."
+    ]},
+    {"t": "p", "x": "Mit etwas Geduld und dem passenden Zeitpunkt gewöhnt sich eine Pflanze meist schnell an ihr neues Zuhause."}
+  ]
+}

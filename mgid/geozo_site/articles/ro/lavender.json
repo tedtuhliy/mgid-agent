@@ -1,0 +1,37 @@
+{
+  "rubric": "Grădină",
+  "title": "Lavanda în grădină și în ghiveci: soare, sol bine drenat și tăiere",
+  "teaser": "Lavanda se mulțumește cu puțin: un loc însorit, un sol ușor și udare măsurată. Iată cum o plantați, cum o tăiați și cum o păstrați peste iarnă, în grădină sau în ghiveci.",
+  "description": "Cum cultivați lavanda: locul însorit, solul ușor, plantarea, tăierea după înflorire, iarna în grădină sau în ghiveci și uscarea florilor pentru decor.",
+  "heroAlt": "Rânduri de lavandă înflorită într-un câmp, cu un deal verde și copaci în fundal.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Lavanda este o plantă mediteraneană, obișnuită cu soarele, cu solul sărac și cu verile uscate. Tocmai de aceea greșelile vin, de obicei, din prea multă grijă: prea multă apă și un pământ prea bogat. Câteva reguli simple sunt de ajuns ca să crească frumos."},
+    {"t": "p", "x": "Iată ce îi trebuie, de la plantare până la tăiere, atât în grădină, cât și în ghiveci."},
+    {"t": "h2", "x": "Soare din plin"},
+    {"t": "p", "x": "Lavanda are nevoie de un loc în care primește soare mai multe ore pe zi, cel puțin șase. La umbră crește subțire și înflorește puțin."},
+    {"t": "p", "x": "Se simte bine mai ales lângă un zid însorit, care păstrează căldura."},
+    {"t": "h2", "x": "Un sol ușor, bine drenat"},
+    {"t": "p", "x": "Preferă un sol permeabil, nisipos sau pietros, mai degrabă sărac. Dacă pământul din grădină e greu și argilos, amestecați-l cu nisip sau cu pietriș mărunt, ca apa să nu stea la rădăcini."},
+    {"t": "h2", "x": "Plantarea și udarea"},
+    {"t": "p", "x": "Plantați primăvara, la 40-60 cm între plante, ca aerul să circule printre ele. Până se înrădăcinează, udați regulat, apoi tot mai rar, doar în perioadele lungi de secetă."},
+    {"t": "p", "x": "Greșelile obișnuite sunt pământul prea bogat, udarea prea deasă și un loc prea umbrit."},
+    {"t": "h2", "x": "Tăierea după înflorire"},
+    {"t": "p", "x": "După înflorire scurtați ușor tulpinile, tăind florile trecute și puțin din frunziș. Nu tăiați niciodată în lemnul vechi și golaș, pentru că din el lăstarii noi pornesc greu sau deloc. O tăiere făcută în fiecare an păstrează tufa compactă."},
+    {"t": "h2", "x": "Iarna, umezeala contează mai mult decât gerul"},
+    {"t": "p", "x": "Lavanda suportă gerul mai bine decât apa care stagnează la rădăcini. În ghivece folosiți un amestec cu pietriș, puneți dedesubt un strat de drenaj și goliți mereu farfuria."},
+    {"t": "tip", "x": "Un ghiveci de lut ars lasă pământul să se usuce mai repede decât unul de plastic."},
+    {"t": "h2", "x": "Flori pentru decor și săculeți parfumați"},
+    {"t": "p", "x": "Tăiați tulpinile florale în stadiul de boboc, când primele flori abia se deschid, dimineața, după ce s-a uscat roua. Legați-le în buchete mici și lăsați-le să se usuce suspendate, cu florile în jos, într-o încăpere aerisită și ferită de soare."},
+    {"t": "p", "x": "Uscate, florile se pun într-o vază, ca decor, sau în săculeți care parfumează dulapul."},
+    {"t": "h2", "x": "Ce merită reținut"},
+    {"t": "ul", "x": [
+      "Soare cel puțin șase ore pe zi.",
+      "Sol ușor, permeabil, mai degrabă sărac.",
+      "Plantare primăvara, la 40-60 cm distanță.",
+      "Udare rară după înrădăcinare.",
+      "Tăiere ușoară după înflorire, niciodată în lemnul vechi.",
+      "În ghivece, amestec cu pietriș și drenaj bun pentru iarnă."
+    ]},
+    {"t": "p", "x": "Un loc însorit, un sol ușor și puțină apă: asta cere lavanda, iar în schimb oferă flori și parfum an de an."}
+  ]
+}

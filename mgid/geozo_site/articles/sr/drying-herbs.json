@@ -1,0 +1,105 @@
+{
+  "rubric": "Dom i kuhinja",
+  "title": "Kako osušiti i čuvati začinsko bilje kod kuće",
+  "teaser": "Origano, timijan, ruzmarin, žalfija, nana i mirođija dobro se suše, a bosiljak i peršun bolje je zamrznuti. Evo kada brati, kako sušiti i u čemu čuvati bilje.",
+  "description": "Kako osušiti začinsko bilje kod kuće: vreme berbe, svežnjevi, mrežica ili rerna, provera suvoće, čuvanje u tegli i šta je bolje zamrznuti.",
+  "heroAlt": "Bele činije sa osušenim začinskim biljem, a u pozadini tegle sa začinima.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Sušenje je jednostavan način da miris letnje bašte ostane u kuhinji i preko zime. Treba vam samo malo vremena, vazduh i strpljenje."
+    },
+    {
+      "t": "p",
+      "x": "Ovako se bilje bere, suši i čuva tako da zadrži miris."
+    },
+    {
+      "t": "h2",
+      "x": "Kada brati"
+    },
+    {
+      "t": "p",
+      "x": "Bilje se bere ujutru, pošto se rosa osuši, a sunce još nije jako zagrejalo biljke. Najbolje je brati pre cvetanja, kad su listovi puni mirisa. Ako je jutro vlažno ili kišovito, sačekajte suv dan."
+    },
+    {
+      "t": "p",
+      "x": "Uzimajte samo čiste, nepovređene grančice i otresite ih od insekata."
+    },
+    {
+      "t": "h2",
+      "x": "Mali svežnjevi na vazduhu"
+    },
+    {
+      "t": "p",
+      "x": "Grančice povežite gumicom ili kanapom u male svežnjeve od pet do deset stabljika, jer se veliki lošije suše. Obesite ih glavom nadole na tamnom, suvom i prozračnom mestu, na primer u ostavi ili na tavanu. Pazite da se svežnjevi ne dodiruju, da vazduh slobodno kruži."
+    },
+    {
+      "t": "tip",
+      "x": "Bilje je najbolje ne prati, a ako ste ga ipak oprali, pre vezivanja ga potpuno osušite krpom."
+    },
+    {
+      "t": "h2",
+      "x": "Mrežica, tacna ili rerna"
+    },
+    {
+      "t": "p",
+      "x": "Listove možete razastrti u tankom sloju na mrežici ili na tacni obloženoj papirom, na prozračnom mestu van direktnog sunca, i povremeno ih okretati."
+    },
+    {
+      "t": "p",
+      "x": "Kad vam se žuri, koristite rernu na najnižoj temperaturi. Listove rasporedite na pleh obložen papirom za pečenje, a vrata rerne ostavite odškrinuta da vlaga može da izađe. Često proveravajte, jer bilje lako zagori."
+    },
+    {
+      "t": "h2",
+      "x": "Kako znati da je bilje suvo"
+    },
+    {
+      "t": "p",
+      "x": "Dobro osušeno lišće se mrvi među prstima, a stabljike pucaju umesto da se savijaju. Ako je još malo žilavo, ostavite ga dan-dva, jer će vlaga u tegli izazvati buđ."
+    },
+    {
+      "t": "h2",
+      "x": "Čuvanje u tegli"
+    },
+    {
+      "t": "p",
+      "x": "Suvo bilje stavite u dobro zatvorene tegle i sklonite od svetlosti i toplote, dalje od šporeta. Na svaku napišite naziv i datum. Bilje sušeno u rerni pre pakovanja potpuno ohladite."
+    },
+    {
+      "t": "p",
+      "x": "Tako zatvoreno obično traje oko godinu dana, posle čega miris slabi. Bilje ne mrvite unapred, već ga izmrvite među prstima tek pred upotrebu."
+    },
+    {
+      "t": "h2",
+      "x": "Šta se dobro suši, a šta je bolje zamrznuti"
+    },
+    {
+      "t": "p",
+      "x": "Origano, timijan, ruzmarin, žalfija, nana i mirođija dobro podnose sušenje i zadržavaju miris."
+    },
+    {
+      "t": "p",
+      "x": "Bosiljak, peršun, koriander i vlašac sušenjem gube većinu mirisa, pa ih je bolje sitno iseckati i zamrznuti u kalupu za led. Zamrznute kockice stavljajte direktno u jelo dok se kuva."
+    },
+    {
+      "t": "h2",
+      "x": "Ukratko"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Berite ujutru, pošto se rosa osuši, i pre cvetanja.",
+        "Male svežnjeve obesite glavom nadole na tamnom, prozračnom mestu.",
+        "Mrežica ili rerna na najnižoj temperaturi sa odškrinutim vratima.",
+        "Suvo je ono što se mrvi među prstima.",
+        "Tegle sa poklopcem čuvajte na tamnom mestu i upišite datum.",
+        "Bosiljak, peršun, koriander i vlašac bolje zamrznite."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Osušeno bilje se ne kvari naglo, ali mu miris s vremenom slabi, pa ga obnovite iz nove berbe."
+    }
+  ]
+}

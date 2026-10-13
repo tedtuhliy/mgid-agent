@@ -1,0 +1,19 @@
+{
+  "brand_tag": "rady",
+  "read_also": "Čtěte také",
+  "read_min": "{n} min čtení",
+  "home_title": "Domov, kuchyně a zahrada",
+  "home_intro": "Praktické rady pro každodenní život doma: jak uchovat potraviny čerstvé, pěstovat bylinky na parapetu a pečovat o pokojové rostliny i o zahradu. Krátké články, které se dobře čtou i na telefonu.",
+  "all_articles": "Všechny články",
+  "nav_home": "Úvodní stránka",
+  "nav_about": "O magazínu",
+  "nav_contact": "Kontakt",
+  "nav_privacy": "Ochrana soukromí",
+  "disclosure": "Obsah tohoto webu má pouze informativní charakter. Na stránkách se zobrazuje reklama partnerů a každý reklamní blok je označen slovem „Reklama“; pro provoz stránek i reklamních bloků používáme soubory cookies.",
+  "cookie": "Pro provoz stránek a reklamních bloků používáme soubory cookies.",
+  "cookie_more": "Více",
+  "cookie_ok": "OK",
+  "disclaimer": "Článek má pouze informativní charakter, vždy se řiďte pokyny výrobce a potřebami konkrétní rostliny či potraviny.",
+  "months": ["ledna", "února", "března", "dubna", "května", "června", "července", "srpna", "září", "října", "listopadu", "prosince"],
+  "date_fmt": "{d}. {month} {y}"
+}

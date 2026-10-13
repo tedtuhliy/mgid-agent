@@ -1,0 +1,37 @@
+{
+  "rubric": "Plantas de interior",
+  "title": "Trasplantar plantas de interior: cuándo, cómo y qué errores evitar",
+  "teaser": "No todas las plantas necesitan una maceta nueva cada año. Estas son las señales que indican que ha llegado el momento, la época adecuada y los pasos para hacerlo sin dañar las raíces.",
+  "description": "Cuándo trasplantar una planta de interior, qué maceta elegir, cómo hacerlo paso a paso y en qué casos es mejor esperar o renovar solo la capa superior.",
+  "heroAlt": "Una mano sostiene un puñado de tierra oscura con una plántula de tallo fino y hojas pequeñas, sobre un fondo verde desenfocado.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Una planta cuya maceta se ha quedado pequeña deja de crecer, pero trasplantar sin necesidad tampoco le hace bien. Lo importante es saber cuándo, cómo y con qué margen de tamaño hacerlo."},
+    {"t": "p", "x": "Estos son los puntos básicos para trasplantar con acierto y evitar los fallos más comunes."},
+    {"t": "h2", "x": "Señales de que necesita más espacio"},
+    {"t": "p", "x": "Las raíces asoman por los agujeros de drenaje o forman una maraña apretada al sacar la planta. Otra señal es que el agua atraviese la maceta de golpe, sin que la tierra la retenga."},
+    {"t": "p", "x": "Si además lleva meses sin crecer, aunque reciba luz y riego adecuados, probablemente ha llegado el momento de cambiarla de maceta."},
+    {"t": "h2", "x": "La época: de primavera a principios de verano"},
+    {"t": "p", "x": "En esos meses la planta está en pleno crecimiento y se recupera enseguida. En invierno, cuando descansa, el trasplante le resulta más duro y tarda más en adaptarse."},
+    {"t": "h2", "x": "Una maceta solo un poco más grande"},
+    {"t": "p", "x": "La nueva maceta debe ser apenas dos o tres centímetros más ancha que la anterior. Si es demasiado grande, retiene agua de más y las raíces tardan en llenarla."},
+    {"t": "p", "x": "Conviene usar un sustrato fresco, adecuado a la especie y bien drenante, en una maceta con agujeros en el fondo."},
+    {"t": "h2", "x": "Paso a paso"},
+    {"t": "p", "x": "El día anterior se riega la planta, para que el cepellón salga entero. Se sueltan con cuidado las raíces, se recortan las secas o negras, se coloca en la maceta nueva, se rellena con sustrato y se riega."},
+    {"t": "p", "x": "Durante una semana conviene mantenerla alejada del sol fuerte, para que se recupere con tranquilidad."},
+    {"t": "tip", "x": "Una cuchara larga o un cuchillo sin filo ayudan a despegar el cepellón de las paredes de la maceta."},
+    {"t": "h2", "x": "Cuándo es mejor esperar"},
+    {"t": "p", "x": "Tras el trasplante, el abono puede esperar unas semanas: el sustrato nuevo ya aporta nutrientes y las raíces están sensibles."},
+    {"t": "p", "x": "Tampoco conviene trasplantar una planta en plena floración o debilitada, salvo urgencia; primero hay que dejar que se recupere."},
+    {"t": "h2", "x": "Una alternativa: renovar la capa superior"},
+    {"t": "p", "x": "Si la planta ya es grande y no cabe una maceta mayor, cada año se retiran unos centímetros de sustrato de la superficie y se reponen con tierra fresca. Es sencillo y no molesta a las raíces."},
+    {"t": "h2", "x": "Puntos clave"},
+    {"t": "ul", "x": [
+      "Raíces por los agujeros, agua que pasa de largo y crecimiento parado: señales de falta de espacio.",
+      "Época adecuada: de primavera a principios de verano.",
+      "Maceta solo dos o tres centímetros más ancha.",
+      "Regar el día anterior y proteger del sol fuerte durante una semana.",
+      "Sin abono inmediato; si no se puede trasplantar, renovar la capa superior."
+    ]},
+    {"t": "p", "x": "Hecho con calma y en el momento oportuno, el trasplante suele notarse pronto en forma de brotes nuevos."}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "brand_tag": "sfaturi",
+  "read_also": "Citiți și",
+  "read_min": "{n} min de citit",
+  "home_title": "Casă, bucătărie și grădină",
+  "home_intro": "Sfaturi practice, scrise pe înțelesul tuturor, despre păstrarea alimentelor, plantele de apartament, verdețuri și puțin grădinărit. Articole scurte, de citit pe îndelete, ori de câte ori aveți câteva minute.",
+  "all_articles": "Toate articolele",
+  "nav_home": "Acasă",
+  "nav_about": "Despre noi",
+  "nav_contact": "Contact",
+  "nav_privacy": "Confidențialitate",
+  "disclosure": "Materialele de pe acest site au caracter informativ. Site-ul afișează publicitate din partea partenerilor, iar fiecare bloc publicitar este marcat cu cuvântul „Publicitate”; pentru funcționarea site-ului și a acestor blocuri se folosesc cookie-uri.",
+  "cookie": "Folosim cookie-uri pentru funcționarea site-ului și a blocurilor publicitare.",
+  "cookie_more": "Detalii",
+  "cookie_ok": "OK",
+  "disclaimer": "Materialul are doar caracter informativ: urmați instrucțiunile producătorului și țineți cont de nevoile fiecărei plante sau ale fiecărui produs în parte.",
+  "months": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"],
+  "date_fmt": "{d} {month} {y}"
+}

@@ -1,0 +1,38 @@
+{
+  "rubric": "Sobne rastline",
+  "title": "Sobne rastline jeseni: 7 nasvetov, da jih brez težav pripeljete do pomladi",
+  "teaser": "Dnevi so krajši, radiatorji sušijo zrak, marsikatera lončnica pa začne izgubljati liste. Sedem nasvetov o svetlobi, zalivanju, vlažnosti zraka in gnojenju, ki rastlinam olajšajo jesen in zimo.",
+  "description": "Sedem nasvetov za sobne rastline jeseni: svetloba, zalivanje, vlažnost zraka, prepih, gnojenje, pregled listov in presajanje.",
+  "heroAlt": "Majhno sobno drevesce v keramični skledi na leseni mizi ob svetli steni.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Jeseni so dnevi krajši, v stanovanjih se začne ogrevalna sezona in zrak postane opazno suh. Marsikatera sobna rastlina v tem času odvrže liste ali se potegne proti svetlobi. Pogosto zadošča že majhna sprememba običajne oskrbe."},
+    {"t": "p", "x": "Zbrali smo sedem nasvetov, ki ustrezajo večini lončnic in tudi zeliščem na okenski polici."},
+    {"t": "h2", "x": "1. Dajte jim več svetlobe"},
+    {"t": "p", "x": "Jeseni je svetlobe tudi ob južnem oknu občutno manj kot poleti. Rastline premaknite bliže oknu, vendar naj se listi ne dotikajo hladnega stekla. Enkrat na dva tedna jih obrišite z vlažno krpo, saj plast prahu zadrži del svetlobe, ki je že tako malo."},
+    {"t": "p", "x": "Če se zelišča na okenski polici potegnejo in obledijo, jih postavite na najsvetlejše mesto ali jim zvečer za nekaj ur prižgite namizno svetilko."},
+    {"t": "h2", "x": "2. Zalivajte redkeje, vendar preverjajte zemljo"},
+    {"t": "p", "x": "V hladnejšem delu leta rastline rastejo počasneje in porabijo manj vode. Pred zalivanjem pritisnite prst v zemljo: če je zgornji sloj suh do globine dveh ali treh centimetrov, zalijte, sicer še počakajte. Vodo uporabite sobne temperature, odvečno iz podstavka pa odlijte po pol ure."},
+    {"t": "tip", "x": "Lonec s suho zemljo je občutno lažji od mokrega, zato boste sčasoma potrebo po zalivanju znali oceniti že, ko ga privzdignete."},
+    {"t": "h2", "x": "3. Poskrbite za vlažnost zraka"},
+    {"t": "p", "x": "Radiatorji zrak močno izsušijo. Lonce postavite na pladenj z mokrimi kamenčki, a tako, da dno lonca ne sega v vodo, ali pa rastline združite v skupino, saj si tako ustvarijo nekoliko vlažnejše okolje."},
+    {"t": "p", "x": "Škropljenje ne ustreza vsem: rastlinam z dlakavimi listi, na primer vijolicam, lahko celo škodi. Ostalim zadošča razpršilka z mlačno vodo."},
+    {"t": "h2", "x": "4. Odmaknite jih od prepiha in radiatorjev"},
+    {"t": "p", "x": "Nenadna nihanja temperature so pogost vzrok za odpadanje listov. Rastlin ne puščajte ob odprtem oknu in jih ne postavljajte neposredno nad radiator. Ob zračenju občutljive rastline prenesite v drugo sobo, čez noč pa jih odmaknite od hladnega stekla."},
+    {"t": "h2", "x": "5. Zmanjšajte gnojenje"},
+    {"t": "p", "x": "Pozimi večina rastlin počiva in dodatnih hranil ne potrebuje. Z gnojenjem običajno prenehate jeseni in ga začnete znova spomladi, ko se pojavijo novi listi. Izjema so rastline, ki cvetijo pozimi: pri njih upoštevajte priporočila za posamezno vrsto."},
+    {"t": "h2", "x": "6. Vsak teden preglejte liste"},
+    {"t": "p", "x": "Suh zrak ustreza pršicam in listnim ušem. Enkrat na teden poglejte liste z obeh strani: lepljiv sloj, drobne svetle pikice in tanka pajčevina kažejo, da je čas za ukrepanje."},
+    {"t": "p", "x": "Za začetek rastlino izperite s toplo vodo in liste obrišite z milnico. Pri močnejšem napadu škodljivcev uporabite sredstvo za zaščito rastlin po navodilih na embalaži."},
+    {"t": "h2", "x": "7. S presajanjem ne hitite"},
+    {"t": "p", "x": "Če je rastlina videti zdrava, presajanje raje odložite na pomlad, saj se korenine jeseni slabše prijemljejo. Zdaj presadite le, če je res nujno, na primer ko korenine silijo iz lonca skozi odtočne odprtine in zemlja ne vpija več vode."},
+    {"t": "h2", "x": "Hitri pregled"},
+    {"t": "ul", "x": [
+      "Rastline premaknite bliže svetlobi, a ne ob hladno steklo.",
+      "Zalivajte redkeje in vedno najprej preverite zemljo.",
+      "Ob radiatorjih pazite na vlažnost zraka.",
+      "Rastline odmaknite od prepiha in vročih radiatorjev.",
+      "Gnojenje do pomladi prekinite, liste pa pregledujte vsak teden."
+    ]},
+    {"t": "p", "x": "Vsaka vrsta ima svoje zahteve, zato upoštevajte priporočila za rastlino, ki jo imate doma."}
+  ]
+}

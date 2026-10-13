@@ -1,0 +1,39 @@
+{
+  "rubric": "Casa y cocina",
+  "title": "9 reglas sencillas para conservar los alimentos frescos durante más tiempo",
+  "teaser": "Una nevera bien ordenada y unos pocos hábitos bastan para que la compra dure más y se tire menos comida. Estas nueve reglas sirven para cualquier cocina.",
+  "description": "Nueve reglas prácticas para conservar mejor los alimentos: cómo ordenar la nevera, qué guardar por separado, cómo congelar y cuánto tiempo mantener las sobras.",
+  "heroAlt": "Nevera abierta y ordenada, con recipientes de cristal, un tarro de perejil, frutos rojos, verduras en los cajones y salsas en la puerta.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Una nevera bien organizada y unos pocos hábitos sencillos bastan para que los alimentos duren más y se tire menos comida. No hacen falta aparatos especiales: casi todo se resuelve con orden y un poco de atención."},
+    {"t": "p", "x": "Son nueve reglas que valen para cualquier cocina, sea cual sea el tamaño de la nevera."},
+    {"t": "h2", "x": "1. Cada cosa en su sitio"},
+    {"t": "p", "x": "Conviene mantener la nevera entre 2 y 5 °C. La parte trasera y la balda inferior son las zonas más frías; la puerta, la más cálida, se reserva para salsas y bebidas."},
+    {"t": "tip", "x": "Un pequeño termómetro dentro de la nevera permite comprobar la temperatura real."},
+    {"t": "h2", "x": "2. Carne y pescado, abajo y cerrados"},
+    {"t": "p", "x": "La carne y el pescado crudos van en la balda inferior, dentro de recipientes cerrados o sobre un plato hondo. Así no gotean sobre otros alimentos ni les transmiten su olor."},
+    {"t": "h2", "x": "3. Hierbas como flores en un jarrón"},
+    {"t": "p", "x": "El perejil, el cilantro y otras hierbas de tallo largo duran más si se colocan de pie en un vaso con un poco de agua y se cubren con una bolsa suelta."},
+    {"t": "h2", "x": "4. Fruta y verdura, por separado"},
+    {"t": "p", "x": "Manzanas, peras, plátanos y tomates maduros desprenden etileno, un gas natural que acelera la maduración de lo que tienen cerca. Conviene alejarlos de las verduras de hoja, y las patatas, de las cebollas."},
+    {"t": "h2", "x": "5. Frutos rojos y setas, sin lavar de antemano"},
+    {"t": "p", "x": "La humedad acorta la vida de las fresas, los arándanos, las setas y las hojas verdes. Es preferible guardarlos secos, con un papel de cocina en el recipiente, y lavarlos justo antes de usarlos."},
+    {"t": "h2", "x": "6. Pan, cereales y frutos secos"},
+    {"t": "p", "x": "El pan se guarda mejor fuera de la nevera, en una panera o en una bolsa de tela. El arroz, la pasta y los frutos secos van en un sitio fresco y seco, dentro de recipientes bien cerrados."},
+    {"t": "h2", "x": "7. Congelar en porciones y con fecha"},
+    {"t": "p", "x": "Los alimentos se congelan cuando aún están frescos, en porciones y en recipientes bien cerrados. El congelador debe estar a −18 °C, y anotar la fecha en cada envase ayuda a gastar antes lo más antiguo."},
+    {"t": "h2", "x": "8. Sobras: enfriar pronto"},
+    {"t": "p", "x": "Las sobras se dejan enfriar y se guardan en la nevera antes de que pasen dos horas. Conviene consumirlas en tres o cuatro días; si no, se congelan."},
+    {"t": "h2", "x": "9. Lo antiguo delante y todo limpio"},
+    {"t": "p", "x": "Al guardar la compra, lo nuevo va detrás y lo más antiguo delante, para gastarlo primero. Un repaso semanal y una limpieza a fondo de vez en cuando evitan olores y comida olvidada."},
+    {"t": "h2", "x": "Para recordar"},
+    {"t": "ul", "x": [
+      "Nevera entre 2 y 5 °C; la puerta, para salsas y bebidas.",
+      "Carne y pescado crudos, abajo y en recipientes cerrados.",
+      "Fruta y verdura separadas; patatas y cebollas, aparte.",
+      "Congelar en porciones, con fecha y a −18 °C.",
+      "Sobras: enfriar pronto y consumirlas en tres o cuatro días."
+    ]},
+    {"t": "p", "x": "Los plazos de conservación varían según el producto: ante la duda, conviene seguir siempre lo que indique la etiqueta."}
+  ]
+}

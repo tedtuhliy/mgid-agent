@@ -1,0 +1,37 @@
+{
+  "rubric": "Otthon és konyha",
+  "title": "Petrezselyem, kapor, koriander: az üveges módszerrel akár hetekig frissek maradnak",
+  "teaser": "A zacskóban a zöldfűszerek gyakran néhány nap alatt megereszkednek, vízzel teli üvegben viszont jóval tovább frissek maradnak. Lépésről lépésre bemutatjuk, hogyan működik az üveges módszer.",
+  "description": "Hogyan tárolja a petrezselymet, a kaprot és a koriandert üvegben, vízzel, hogy tovább friss maradjon, és mit tegyen a bazsalikommal.",
+  "heroAlt": "Befőttesüvegben, vízben álló friss petrezselyem- és kaporcsokor.",
+  "body": [
+    {"t": "p", "lead": true, "x": "A zacskóba zárt zöldfűszerek gyakran már néhány nap alatt megereszkednek. Ha viszont úgy bánik velük, mint a vázába tett virággal, a petrezselyem, a kapor és a koriander jóval tovább megőrzik az üdeségüket. A szárak vizet szívnak fel, a levelek körül pedig a laza zacskó párás levegőt tart."},
+    {"t": "p", "x": "A módszerhez nincs szükség különleges eszközre: egy magasabb üveg, kevés víz és egy laza zacskó elég."},
+    {"t": "h2", "x": "Szárvágás és a fonnyadt levelek eltávolítása"},
+    {"t": "p", "x": "Vegye le a gumit vagy a madzagot, és lazítsa fel a csokrot, hogy a levelek között áramolhasson a levegő. A szárak alját vágja le egy-két centiméternyit, hogy a növény jobban felszívja a vizet."},
+    {"t": "p", "x": "A sárguló, megbarnult vagy nyálkás leveleket szedje ki, mert a többit is hamarabb tönkreteszik. A vízbe kerülő szárakról szintén szedje le a leveleket, különben elrothadnak, és megzavarosítják a vizet."},
+    {"t": "h2", "x": "Üveg, víz és laza zacskó"},
+    {"t": "p", "x": "Töltsön az üvegbe két-három centiméter vizet, és állítsa bele a zöldfűszereket úgy, hogy csak a szárak merüljenek a vízbe. Az üveg legyen elég magas és stabil, hogy a csokor ne dőljön ki belőle."},
+    {"t": "p", "x": "A leveleket borítsa be egy laza zacskóval, az egészet pedig tegye a hűtőbe. A zacskót ne húzza szorosra, hogy a levegő szabadon áramolhasson; a tiszta, újrahasználható zacskó is megfelel."},
+    {"t": "h2", "x": "A víz cseréje kétnaponta"},
+    {"t": "p", "x": "Két naponta, vagy hamarabb, ha zavarossá válik, cserélje ki a vizet. Ilyenkor a szárak végéből vágjon le egy vékony szeletet is, és szedje ki az időközben megbarnult leveleket."},
+    {"t": "tip", "x": "Írja fel egy cetlire a csere napját, és ragassza az üvegre, így nem kell fejben tartania."},
+    {"t": "h2", "x": "Mosás csak használat előtt"},
+    {"t": "p", "x": "A levelek között rekedt nedvesség elősegíti a rothadást, ezért a zöldfűszert csak felhasználás előtt öblítse le. A kapor és a koriander finom levelei különösen érzékenyek a nedvességre."},
+    {"t": "p", "x": "Ha a vásárláskor vizes volt, itassa fel papírtörlővel, mielőtt az üvegbe állítja."},
+    {"t": "h2", "x": "A bazsalikom kivétel"},
+    {"t": "p", "x": "A bazsalikom nem bírja a hideget: a hűtőben a levelei hamar megfeketednek. Szobahőmérsékleten tartsa, pohár vízbe állítva, és ne tegye közvetlen napfényre. Mindig csak annyi levelet szedjen le belőle, amennyi éppen kell."},
+    {"t": "h2", "x": "Más megoldások, és a puha levelek felhasználása"},
+    {"t": "p", "x": "Ha az üveg nem fér be a hűtőbe, csavarja a zöldfűszert enyhén nedves papírtörlőbe, és zárható dobozban tárolja. A felaprított petrezselymet vagy kaprot jégkockatartóban is lefagyaszthatja: kevés vízzel vagy olajjal töltse fel a mélyedéseket."},
+    {"t": "p", "x": "A megpuhult vagy lefagyasztott leveleket nem érdemes salátához használni, levesekbe és szószokba viszont még jó szolgálatot tesznek. A megfagyott kockát elég közvetlenül a forró ételbe dobni."},
+    {"t": "h2", "x": "A lényeg dióhéjban"},
+    {"t": "ul", "x": [
+      "Vágja le a szárak végét, és szedje ki a fonnyadt leveleket.",
+      "Két-három centiméter víz az üvegben, laza zacskó a levelek fölött, mindez a hűtőben.",
+      "A vizet kétnaponta cserélje.",
+      "Mosás csak használat előtt.",
+      "A bazsalikomot szobahőmérsékleten tartsa."
+    ]},
+    {"t": "p", "x": "Ez néhány perc munka, a friss zöldfűszer viszont a héten végig kéznél lesz a konyhában."}
+  ]
+}

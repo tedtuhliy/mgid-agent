@@ -1,0 +1,36 @@
+{
+  "rubric": "Rośliny w domu",
+  "title": "Zioła na parapecie: co dobrze rośnie w domu i jak o nie dbać",
+  "teaser": "Bazylia, mięta, natka, szczypiorek i tymianek dobrze czują się nawet na niewielkim parapecie. Wyjaśniamy, jakiego potrzebują światła, jak je podlewać i przycinać, by rosły gęsto.",
+  "description": "Co uprawiać na parapecie i jak o to dbać: wybór ziół, światło, doniczki, podlewanie, przycinanie, nawożenie oraz najczęstsze kłopoty.",
+  "heroAlt": "Zbliżenie na gęste, soczyście zielone listki świeżych ziół",
+  "body": [
+    {"t": "p", "lead": true, "x": "Garść własnych ziół pod ręką to wygoda, która nie wymaga ogrodu. Na parapecie dobrze radzą sobie bazylia, mięta, natka pietruszki, szczypiorek i tymianek. Potrzebują tylko światła, odpowiedniej doniczki i rozsądnego podlewania."},
+    {"t": "p", "x": "Poniżej podstawowe zasady, dzięki którym zioła mogą rosnąć w kuchni przez wiele miesięcy."},
+    {"t": "h2", "x": "Co wybrać na początek"},
+    {"t": "p", "x": "Najmniej kłopotu sprawiają mięta, szczypiorek i natka pietruszki. Bazylia rośnie szybko, ale lubi ciepło i dużo światła. Tymianek najlepiej czuje się w suchszej ziemi i na słonecznym oknie, dlatego warto posadzić go w osobnej doniczce. Wszystkie można wysiać z nasion albo wyhodować z sadzonek."},
+    {"t": "h2", "x": "Światło"},
+    {"t": "p", "x": "Zioła potrzebują zwykle 4–6 godzin światła dziennie, więc najlepiej sprawdza się parapet południowy lub wschodni. Okno północne rzadko wystarcza. Doniczki dobrze jest co kilka dni obracać, żeby rośliny rosły równo, a nie ciągnęły się w stronę szyby."},
+    {"t": "p", "x": "Zimą, gdy dni są krótkie, pomaga zwykła lampka biurkowa, która świeci nad roślinami przez kilka godzin dziennie."},
+    {"t": "h2", "x": "Doniczka i podlewanie"},
+    {"t": "p", "x": "Doniczka musi mieć otwory odpływowe, a pod nią powinien stać spodek. Podlewać warto wtedy, gdy ziemia na głębokość 1–2 cm jest sucha, a wodę ze spodka trzeba wylać. Zbyt mokre podłoże to najczęstsza przyczyna kłopotów. Wodę lepiej lać przy brzegu doniczki niż na same liście."},
+    {"t": "tip", "x": "Mięta rozrasta się bardzo szybko i zagłusza sąsiadów, dlatego najlepiej dać jej osobną doniczkę."},
+    {"t": "h2", "x": "Przycinanie i zbiór"},
+    {"t": "p", "x": "Aby zioła rosły gęsto, trzeba regularnie przycinać wierzchołki pędów tuż nad parą liści. Z jednego miejsca wyrastają wtedy dwa nowe pędy."},
+    {"t": "p", "x": "Za jednym razem lepiej zebrać nie więcej niż jedną trzecią rośliny, żeby miała siłę do dalszego wzrostu. Zebrane końcówki można od razu dodać do potrawy."},
+    {"t": "h2", "x": "Lekkie nawożenie"},
+    {"t": "p", "x": "W sezonie wzrostu, od wiosny do końca lata, zioła można nawozić raz w miesiącu, w niewielkiej dawce, zgodnie z instrukcją producenta nawozu. Zbyt duża dawka sprzyja bujnemu wzrostowi, ale osłabia aromat liści. Zimą, gdy rosną wolniej, nawożenie lepiej wstrzymać."},
+    {"t": "h2", "x": "Typowe kłopoty"},
+    {"t": "p", "x": "Jeśli łodygi robią się długie, cienkie i blade, roślinie brakuje światła. Wystarczy przenieść ją bliżej okna albo doświetlić lampką."},
+    {"t": "p", "x": "Żółknące liście najczęściej oznaczają zbyt dużo wody lub brak odpływu, dlatego warto sprawdzić ziemię i otwory w doniczce. Czasem to po prostu naturalne starzenie się najniższych listków, które wystarczy usunąć."},
+    {"t": "h2", "x": "Zasady w skrócie"},
+    {"t": "ul", "x": [
+      "Jasne okno południowe lub wschodnie, 4–6 godzin światła dziennie.",
+      "Doniczki z otworami odpływowymi i spodkiem.",
+      "Podlewać, gdy ziemia jest sucha na 1–2 cm.",
+      "Przycinać wierzchołki i zbierać najwyżej jedną trzecią rośliny.",
+      "Nawozić lekko, raz w miesiącu, tylko w sezonie wzrostu."
+    ]},
+    {"t": "p", "x": "Nawet trzy–cztery doniczki na parapecie dają garść świeżych liści do codziennych potraw."}
+  ]
+}

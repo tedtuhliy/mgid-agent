@@ -1,0 +1,38 @@
+{
+  "rubric": "Casa e jardim",
+  "title": "Aloé vera em casa: luz, rega e mudança de vaso",
+  "teaser": "O aloé vera é uma planta de interior fácil de manter, desde que tenha luz clara, pouca água e um vaso que deixe escoar. Eis os cuidados essenciais, da rega à mudança de vaso.",
+  "description": "Como cuidar do aloé vera em casa: luz, rega, substrato, repouso de inverno, sinais de excesso de água, rebentos e mudança de vaso.",
+  "heroAlt": "Pormenor de folhas verdes e carnudas de aloé vera com gotas de água.",
+  "body": [
+    {"t": "p", "lead": true, "x": "O aloé vera é uma suculenta que guarda água nas folhas e, por isso, perdoa esquecimentos na rega. O que mais o prejudica é o excesso de água, não a falta dela."},
+    {"t": "p", "x": "Os cuidados resumem-se a luz clara, rega moderada e um vaso que deixe a água escoar."},
+    {"t": "h2", "x": "Luz clara, com algum sol"},
+    {"t": "p", "x": "Gosta de muita luz, de preferência indireta, junto de uma janela clara. Algumas horas de sol suave, de manhã ou ao fim da tarde, não fazem mal."},
+    {"t": "p", "x": "O sol forte do meio-dia, através do vidro, pode queimar as folhas, sobretudo se a planta estava habituada a menos luz."},
+    {"t": "h2", "x": "Regar bem, mas só com a terra seca"},
+    {"t": "p", "x": "Rega-se com abundância, até a água sair pelos furos, e só se volta a regar quando a terra estiver completamente seca. Em casa, isso pode levar duas semanas ou mais."},
+    {"t": "tip", "x": "Esvaziar o prato meia hora depois da rega evita que as raízes fiquem mergulhadas em água."},
+    {"t": "h2", "x": "Substrato arenoso e vaso de barro"},
+    {"t": "p", "x": "Pede uma mistura leve e arenosa, própria para cactos e suculentas, e um vaso com furos de drenagem."},
+    {"t": "p", "x": "O barro é uma boa escolha, porque deixa a terra secar mais depressa do que o plástico."},
+    {"t": "h2", "x": "Repouso de inverno, sem frio"},
+    {"t": "p", "x": "No inverno, a planta abranda: rega-se pouco e mantém-se num sítio claro e fresco. Não suporta geada, por isso convém mantê-la acima de cerca de 10 °C, longe de janelas muito frias."},
+    {"t": "p", "x": "O vaso também não deve ficar junto de aquecedores nem de frestas por onde entre ar frio."},
+    {"t": "h2", "x": "Sinais de rega a mais ou a menos"},
+    {"t": "p", "x": "Folhas moles, translúcidas e como que vidradas indicam excesso de água. Nesse caso, espera-se que a terra seque por completo e confirma-se se o vaso escoa bem."},
+    {"t": "p", "x": "Folhas finas, enrugadas ou enroladas para dentro indicam falta de água; costuma bastar uma rega abundante para as ver recuperar."},
+    {"t": "h2", "x": "Rebentos e mudança de vaso"},
+    {"t": "p", "x": "De dois em dois ou de três em três anos, ou quando o vaso fica apertado, convém passar o aloé para um vaso um pouco maior."},
+    {"t": "p", "x": "É a ocasião para separar os rebentos que nascem junto à base: retiram-se com algumas raízes e plantam-se em substrato arenoso, sem regar durante alguns dias."},
+    {"t": "h2", "x": "Em resumo"},
+    {"t": "ul", "x": [
+      "Luz clara, com algumas horas de sol suave.",
+      "Rega abundante, mas só com a terra completamente seca.",
+      "Substrato arenoso e vaso com furos de drenagem.",
+      "No inverno, pouca água e nunca abaixo de cerca de 10 °C.",
+      "Mudança de vaso de dois em dois ou de três em três anos."
+    ]},
+    {"t": "p", "x": "Com luz, pouca água e um vaso que escoa bem, o aloé vera é uma planta de interior muito resistente."}
+  ]
+}

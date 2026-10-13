@@ -1,0 +1,36 @@
+{
+  "rubric": "Küche und Garten",
+  "title": "Kräuter selbst trocknen und richtig aufbewahren",
+  "teaser": "Oregano, Thymian, Rosmarin und Salbei lassen sich leicht selbst trocknen. Wann Sie ernten, wie die Kräuter trocknen und wie sie sich im Glas etwa ein Jahr halten.",
+  "description": "Kräuter selbst trocknen: der richtige Erntezeitpunkt, Aufhängen, Backofen, Trockenprobe, luftdichte Gläser und welche Sorten sich besser einfrieren lassen.",
+  "heroAlt": "Weiße Schalen mit getrockneten Kräutern, im Hintergrund Gläser mit Gewürzen.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Wer Kräuter im Garten oder auf dem Balkon zieht, hat im Sommer oft mehr, als er gleich verbrauchen kann. Getrocknet lässt sich der Überschuss lange aufbewahren und kommt später in Suppen, Saucen und Bratengerichte."},
+    {"t": "p", "x": "Das Trocknen ist einfach und braucht wenig Platz. Entscheidend sind der Erntezeitpunkt und die richtige Lagerung."},
+    {"t": "h2", "x": "Zur richtigen Zeit ernten"},
+    {"t": "p", "x": "Ernten Sie an einem trockenen Vormittag, sobald der Tau abgetrocknet ist. Die meisten Kräuter sind kurz vor der Blüte besonders aromatisch."},
+    {"t": "p", "x": "Schneiden Sie nur saubere, unversehrte Triebe ab. Gewaschen werden die Kräuter nur, wenn es nötig ist, und danach gründlich trocken getupft."},
+    {"t": "h2", "x": "In kleinen Sträußen aufhängen"},
+    {"t": "p", "x": "Binden Sie fünf bis zehn Stängel zu einem lockeren Strauß, damit überall Luft an die Blätter kommt, und hängen Sie ihn kopfüber an einem luftigen, dunklen und trockenen Ort auf, etwa in der Speisekammer oder auf dem Dachboden. Direktes Sonnenlicht lässt Farbe und Aroma verblassen."},
+    {"t": "h2", "x": "Auf Gittern oder im Backofen trocknen"},
+    {"t": "p", "x": "Einzelne Blätter oder abgezupfte Zweige legen Sie locker auf ein Gitter, ein Sieb oder ein Tuch und wenden sie gelegentlich."},
+    {"t": "p", "x": "Schneller geht es im Backofen bei niedrigster Temperatur und leicht geöffneter Tür; ein eingeklemmter Kochlöffel hält sie einen Spalt offen. Sehen Sie dabei öfter nach den Kräutern."},
+    {"t": "tip", "x": "Bei Thymian und Rosmarin streifen Sie die Blättchen erst nach dem Trocknen vom Zweig, dann geht es ganz leicht."},
+    {"t": "h2", "x": "Wann die Kräuter trocken sind"},
+    {"t": "p", "x": "Trocken sind sie, wenn die Blätter rascheln und sich zwischen den Fingern leicht zerbröseln lassen. Dünne Stängel sollten beim Biegen brechen. Sind sie noch biegsam, brauchen die Kräuter mehr Zeit, sonst können sie im Glas schimmeln."},
+    {"t": "h2", "x": "Aufbewahren und beschriften"},
+    {"t": "p", "x": "Füllen Sie die getrockneten Blätter in luftdichte Gläser oder Dosen und stellen Sie diese dunkel und nicht neben den Herd. Ein Etikett mit Name und Datum verhindert Verwechslungen; gut gelagert halten sich die Kräuter etwa ein Jahr."},
+    {"t": "p", "x": "Zerreiben Sie die Blätter erst unmittelbar vor dem Verwenden zwischen den Fingern, so bleibt das Aroma länger erhalten."},
+    {"t": "h2", "x": "Geeignete Kräuter zum Trocknen"},
+    {"t": "p", "x": "Gut trocknen lassen sich Oregano, Thymian, Rosmarin, Salbei, Minze und Dill. Basilikum, Petersilie, Koriander und Schnittlauch verlieren beim Trocknen viel von ihrem Aroma; sie frieren Sie besser ein."},
+    {"t": "h2", "x": "Kurz notiert"},
+    {"t": "ul", "x": [
+      "Am Vormittag ernten, wenn der Tau abgetrocknet ist.",
+      "In kleinen Sträußen kopfüber aufhängen oder auf Gittern trocknen.",
+      "Im Backofen nur bei niedriger Temperatur und mit geöffneter Tür.",
+      "Trocken ist, was raschelt und leicht zerbröselt.",
+      "Luftdicht, dunkel und beschriftet lagern, erst vor dem Gebrauch zerreiben."
+    ]},
+    {"t": "p", "x": "So wird aus dem Überschuss des Sommers ein kleiner Vorrat für das ganze Jahr."}
+  ]
+}

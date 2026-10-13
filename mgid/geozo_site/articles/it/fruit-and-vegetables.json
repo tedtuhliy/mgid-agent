@@ -1,0 +1,104 @@
+{
+  "rubric": "Casa e cucina",
+  "title": "Frutta e verdura: cosa tenere insieme e cosa tenere separato",
+  "teaser": "Alcuni frutti fanno maturare in fretta tutto ciò che hanno accanto, mentre verdure e insalate ne risentono. Ecco chi sta bene con chi in frigorifero e in dispensa, e dove conservare patate, cipolle e pomodori.",
+  "description": "Come conservare frutta e verdura: quali tenere separate, dove mettere patate, cipolle e pomodori, come usare i cassetti del frigorifero.",
+  "heroAlt": "Peperoni rossi, gialli e arancioni, cetrioli e carote ordinati in un cassetto trasparente del frigorifero, accanto a foglie di spinaci.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Alcuni frutti fanno maturare in fretta tutto ciò che hanno vicino, mentre verdure e insalate ne risentono e appassiscono prima del tempo. Sapere chi sta bene con chi aiuta a far durare più a lungo frutta e verdura."
+    },
+    {
+      "t": "p",
+      "x": "Non servono attrezzi particolari: basta scegliere con un po’ di attenzione il posto di ogni cosa."
+    },
+    {
+      "t": "h2",
+      "x": "Il gas della maturazione"
+    },
+    {
+      "t": "p",
+      "x": "Mentre maturano, molti frutti producono etilene, un gas incolore che accelera la maturazione di ciò che hanno accanto. È un processo del tutto normale, ma in cucina conviene tenerne conto."
+    },
+    {
+      "t": "p",
+      "x": "Ne producono molto mele, pere, banane, pesche mature e pomodori. Ne risentono insalata, spinaci, cetrioli, carote e broccoli, che ingialliscono o si ammorbidiscono più in fretta."
+    },
+    {
+      "t": "h2",
+      "x": "Patate e cipolle, ciascuna al suo posto"
+    },
+    {
+      "t": "p",
+      "x": "Patate e cipolle non vanno d’accordo: vicine, di solito si rovinano prima."
+    },
+    {
+      "t": "p",
+      "x": "Le patate vogliono un posto buio, fresco e ventilato, in una cassetta o in un sacchetto di carta; le cipolle un angolo asciutto e arieggiato, per esempio in una retina."
+    },
+    {
+      "t": "h2",
+      "x": "Il pomodoro non ama il freddo"
+    },
+    {
+      "t": "p",
+      "x": "In frigorifero i pomodori diventano farinosi e perdono sapore."
+    },
+    {
+      "t": "p",
+      "x": "Lasciateli maturare fuori, in un cestino lontano dal sole diretto, e metteteli in frigorifero solo quando sono molto maturi e vanno consumati presto."
+    },
+    {
+      "t": "h2",
+      "x": "I due cassetti del frigorifero"
+    },
+    {
+      "t": "p",
+      "x": "Molti frigoriferi hanno due cassetti con regolazione dell’umidità. Quello più umido è adatto alla verdura, quello più asciutto alla frutta."
+    },
+    {
+      "t": "p",
+      "x": "Se il cassetto è uno solo, riservatelo alla verdura e tenete la frutta in un’altra zona."
+    },
+    {
+      "t": "h2",
+      "x": "Frutta e verdura già tagliate"
+    },
+    {
+      "t": "p",
+      "x": "Metà cipolla, un pezzo di zucca o mezzo melone vanno in contenitori chiusi: così non si asciugano e non trasmettono odori agli altri cibi."
+    },
+    {
+      "t": "h2",
+      "x": "Un controllo alla settimana"
+    },
+    {
+      "t": "p",
+      "x": "Una volta alla settimana date un’occhiata al frigorifero e alla dispensa. Un frutto che comincia a guastarsi va usato per primo, per esempio in una macedonia o in una zuppa, oppure tolto subito: così non intacca quelli vicini."
+    },
+    {
+      "t": "tip",
+      "x": "Un cestino sul piano della cucina, riservato a mele e banane, le tiene lontane dalla verdura e ricorda di consumarle."
+    },
+    {
+      "t": "h2",
+      "x": "Punti da ricordare"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Frutti che maturano in fretta lontani da insalata e verdure.",
+        "Patate al buio e al fresco, cipolle all’asciutto, mai vicine.",
+        "Pomodori fuori dal frigorifero finché non sono molto maturi.",
+        "Cassetto umido per la verdura, cassetto asciutto per la frutta.",
+        "Un controllo alla settimana per togliere ciò che si sta guastando."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Ogni casa ha il suo frigorifero e le sue abitudini: provate questi suggerimenti uno alla volta e adattateli a ciò che vi è più comodo."
+    }
+  ]
+}

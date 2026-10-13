@@ -1,0 +1,104 @@
+{
+  "rubric": "Dom i kuhinja",
+  "title": "Kako čuvati hleb da duže ostane svež i mekan",
+  "teaser": "Hleb u frižideru brže otvrdne, a u pogrešnom omotu kora omekša ili se osuši. Gde i u čemu ga držati, kako ga zamrznuti i šta napraviti od bajatog hleba.",
+  "description": "Kako da hleb duže ostane mekan: kutija za hleb, platnena kesa, zamrzavanje po kriškama, oživljavanje u rerni i upotreba bajatog hleba.",
+  "heroAlt": "Ruke drže krišku tamnog hleba sa hrskavom korom iznad posude za čuvanje.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Hleb je najukusniji prvog dana, ali uz malo pažnje može da ostane mekan i svež još nekoliko dana. Važni su pravo mesto, pravi omot i nekoliko navika."
+    },
+    {
+      "t": "p",
+      "x": "U nastavku su načini koji se lako primenjuju i ne traže nikakvu posebnu opremu."
+    },
+    {
+      "t": "h2",
+      "x": "Zašto frižider nije dobro mesto za hleb"
+    },
+    {
+      "t": "p",
+      "x": "Na hladnom se u hlebu menja skrob, pa hleb u frižideru otvrdne i osuši se brže nego na sobnoj temperaturi."
+    },
+    {
+      "t": "p",
+      "x": "Zato mu je mesto na kuhinjskom pultu ili u ormariću, na suvom, podalje od šporeta i direktnog sunca."
+    },
+    {
+      "t": "h2",
+      "x": "Kutija, platnena kesa ili papir"
+    },
+    {
+      "t": "p",
+      "x": "Hleb sa čvrstom korom najbolje je držati u papirnoj ili platnenoj kesi, kroz koju vazduh prolazi, pa kora ostaje hrskava. Meke vekne i tost hleb bolje podnose kutiju za hleb ili dobro zatvorenu kesu, koja zadržava vlagu."
+    },
+    {
+      "t": "p",
+      "x": "Presečenu veknu stavite presekom nadole na dasku ili je prekrijte čistom krpom, da se ne suši."
+    },
+    {
+      "t": "h2",
+      "x": "Sečenje i zamrzavanje"
+    },
+    {
+      "t": "p",
+      "x": "Ako ne možete da pojedete celu veknu za dva do tri dana, isecite je na kriške i zamrznite. Između kriški stavite listove papira za pečenje da se ne slepe, pa ćete lako uzimati samo onoliko koliko vam treba. Zamrznute kriške mogu direktno u toster."
+    },
+    {
+      "t": "tip",
+      "x": "Hleb zamrznite što svežiji, najbolje istog dana kad ste ga kupili."
+    },
+    {
+      "t": "h2",
+      "x": "Kako oživeti bajat hleb"
+    },
+    {
+      "t": "p",
+      "x": "Ako je vekna otvrdnula, nije sve izgubljeno. Poprskajte koru sa nekoliko kapi vode i stavite veknu na desetak minuta u zagrejanu rernu, na oko 180 °C. Jedite je dok je topla, jer posle hlađenja brzo ponovo otvrdne."
+    },
+    {
+      "t": "h2",
+      "x": "Čistoća kutije i pojava buđi"
+    },
+    {
+      "t": "p",
+      "x": "Kutiju za hleb jednom nedeljno ispraznite, istresite mrvice i obrišite je, a zatim je potpuno osušite. Vlaga i mrvice podstiču razvoj buđi, a platnenu kesu povremeno operite i osušite."
+    },
+    {
+      "t": "p",
+      "x": "Ako se na hlebu pojavi buđ, bacite ga; ne isecajte samo zahvaćeni deo."
+    },
+    {
+      "t": "h2",
+      "x": "Šta uraditi sa starim hlebom"
+    },
+    {
+      "t": "p",
+      "x": "Bajat hleb retko mora u smeće. Isecite ga na kockice, pospite uljem i začinima i ispecite krutone za supu ili salatu."
+    },
+    {
+      "t": "p",
+      "x": "Samleven ili izrendan, postaje prezle za šnicle i pohovanje, a od kriški se prave prženice: umočite ih u jaje razmućeno sa mlekom i ispržite na tiganju."
+    },
+    {
+      "t": "h2",
+      "x": "Ukratko"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Hleb držite u kutiji za hleb ili u platnenoj ili papirnoj kesi, a ne u frižideru.",
+        "Presečenu veknu okrenite presekom nadole.",
+        "Višak isecite i zamrznite, sa papirom za pečenje između kriški.",
+        "Bajat hleb oživite kapljicama vode i desetak minuta u rerni.",
+        "Kutiju održavajte čistom i suvom, a hleb sa buđi bacite."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Pakovani hleb i pecivo čuvajte prema uputstvu na pakovanju, jer se sastav i rok trajanja razlikuju."
+    }
+  ]
+}

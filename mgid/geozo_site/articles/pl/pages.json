@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "O nas",
+    "paras": [
+      "Arcadia Blog to niewielki magazyn o domu, kuchni i ogrodzie. Piszemy o tym, jak przechowywać żywność, opiekować się roślinami doniczkowymi, uprawiać zioła i radzić sobie z drobnymi sprawami, które ułatwiają codzienność.",
+      "Artykuły mają charakter wyłącznie informacyjny. Opisujemy proste, ogólne zasady, a szczegółowe zalecenia dla konkretnego produktu czy gatunku rośliny zawsze warto sprawdzić na etykiecie lub w instrukcji producenta.",
+      "Strona utrzymuje się z reklam naszych partnerów. Każdy blok reklamowy jest wyraźnie oznaczony słowem „Reklama”, aby łatwo było odróżnić go od treści artykułów."
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "paras": [
+      "Pytania, uwagi i propozycje tematów można wysyłać na adres contact@arcadiablog.com. Każdą wiadomość czytamy z uwagą.",
+      "Staramy się odpowiadać w ciągu kilku dni roboczych. W wiadomości warto podać tytuł artykułu, którego dotyczy pytanie."
+    ]
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "paras": [
+      "Podczas wizyty na stronie zbierane są podstawowe dane techniczne, takie jak typ przeglądarki i urządzenia, odwiedzone podstrony oraz czas wizyty. Strona korzysta też z plików cookies, czyli niewielkich plików zapisywanych w przeglądarce.",
+      "Bloki reklamowe naszych partnerów mogą korzystać z plików cookies i podobnych technologii, aby wyświetlać reklamy i mierzyć ich skuteczność.",
+      "Na stronie nie ma kont użytkowników ani płatności, więc nie prosimy o podanie imienia, adresu ani danych karty.",
+      "Pliki cookies można w każdej chwili usunąć lub zablokować w ustawieniach przeglądarki. Odpowiednie opcje zwykle znajdują się w sekcji dotyczącej prywatności.",
+      "Pytania dotyczące prywatności prosimy kierować na adres contact@arcadiablog.com. Odpowiadamy na nie w ciągu kilku dni roboczych."
+    ]
+  }
+}

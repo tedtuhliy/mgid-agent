@@ -1,0 +1,37 @@
+{
+  "rubric": "Casa e cozinha",
+  "title": "Como guardar o pão para que fique fresco e macio durante mais tempo",
+  "teaser": "No frigorífico, o pão endurece mais depressa do que fora dele. Saco de pano, face cortada para baixo, fatias congeladas: o que ajuda a manter o pão macio e o que fazer ao que já endureceu.",
+  "description": "Como guardar o pão em casa: porque o frigorífico o seca, que saco usar, como congelar às fatias e o que fazer com o pão que já endureceu.",
+  "heroAlt": "Mãos a guardar uma fatia de pão escuro num saco transparente.",
+  "body": [
+    {"t": "p", "lead": true, "x": "O pão é dos alimentos que mais depressa perdem a graça: a côdea amolece, o miolo seca e, ao fim de dois ou três dias, já pouco apetece. Com alguns cuidados, dura bastante mais e mantém-se macio."},
+    {"t": "p", "x": "Não é preciso comprar nada de especial: o que conta é onde e como se guarda."},
+    {"t": "h2", "x": "O frigorífico seca o pão mais depressa"},
+    {"t": "p", "x": "O frio faz o miolo endurecer e secar mais depressa do que à temperatura ambiente. Por isso, o frigorífico não é o lugar do pão."},
+    {"t": "p", "x": "O congelador é outra coisa: serve muito bem quando o pão vai demorar mais de uns dias a ser consumido."},
+    {"t": "h2", "x": "Caixa do pão, saco de pano ou de papel"},
+    {"t": "p", "x": "O pão de côdea estaladiça conserva-se melhor num saco de pano ou de papel, que o deixa respirar. O pão mais macio, como o de forma, prefere uma caixa do pão ou um saco bem fechado."},
+    {"t": "p", "x": "Depois de cortado, o pão pousa-se na tábua com a face cortada virada para baixo, para o miolo não secar."},
+    {"t": "h2", "x": "Fatiar e congelar"},
+    {"t": "p", "x": "O pão que não vai ser comido em dois ou três dias corta-se às fatias e congela-se, com uma folha de papel vegetal entre elas para não colarem. Tira-se só o que é preciso e torra-se ainda congelado."},
+    {"t": "tip", "x": "Antes de guardar um pão acabado de sair do forno, o ideal é deixá-lo arrefecer por completo, porque o vapor preso no saco amolece a côdea."},
+    {"t": "h2", "x": "Dar nova vida a um pão duro"},
+    {"t": "p", "x": "Um pão que endureceu ainda se recupera: borrifa-se a côdea com umas gotas de água e leva-se ao forno quente, a cerca de 180 °C, durante uns 10 minutos."},
+    {"t": "p", "x": "O resultado dura pouco, por isso é melhor comê-lo logo."},
+    {"t": "h2", "x": "Uma caixa do pão limpa e seca"},
+    {"t": "p", "x": "As migalhas e a humidade são o ponto de partida do bolor. Convém esvaziar a caixa do pão de vez em quando, limpá-la com um pano húmido e deixá-la secar bem antes de voltar a usá-la."},
+    {"t": "p", "x": "Se aparecer bolor, o pão deve ser deitado fora por inteiro, e não só a parte visível."},
+    {"t": "h2", "x": "Aproveitar o pão que sobra"},
+    {"t": "p", "x": "O pão duro ainda tem muito para dar: em cubos e torrado no forno, faz croutons para sopas e saladas; ralado, dá pão ralado para panar; em fatias, embebido em leite e ovo, dá rabanadas. É também a base de açordas e migas."},
+    {"t": "h2", "x": "Em poucas palavras"},
+    {"t": "ul", "x": [
+      "Pão fora do frigorífico, num saco de pano ou numa caixa do pão.",
+      "Face cortada virada para baixo.",
+      "Fatias congeladas com papel vegetal entre elas.",
+      "Pão duro: gotas de água e forno quente.",
+      "Bolor: deitar fora o pão inteiro."
+    ]},
+    {"t": "p", "x": "Guardado assim, o pão acompanha bem a semana, e o que sobrar tem sempre um destino na cozinha."}
+  ]
+}

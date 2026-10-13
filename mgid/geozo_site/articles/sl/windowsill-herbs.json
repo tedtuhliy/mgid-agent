@@ -1,0 +1,37 @@
+{
+  "rubric": "Dom in vrt",
+  "title": "Zelišča na okenski polici: kaj uspeva v stanovanju in kako skrbeti zanje",
+  "teaser": "Bazilika, meta, peteršilj, drobnjak in timijan uspevajo že na svetli okenski polici. Kaj potrebujejo glede svetlobe, vode in rezanja, da ostanejo gosta in košata.",
+  "description": "Katera zelišča uspevajo na okenski polici, koliko svetlobe in vode potrebujejo ter kako jih ščipamo, režemo in gnojimo.",
+  "heroAlt": "Gosti svetlo zeleni listi zelišča, posneti od blizu.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Za sveža zelišča v kuhinji ne potrebujete vrta: več vrst dobro uspeva tudi na okenski polici. Če imajo dovolj svetlobe in zmerno zalivanje, jih lahko obirate skoraj vse leto."},
+    {"t": "p", "x": "Najprej o vrstah, ki jih je v stanovanju najlažje gojiti, nato o navadah, ki naredijo razliko."},
+    {"t": "h2", "x": "Katera zelišča izbrati"},
+    {"t": "p", "x": "V stanovanju se običajno dobro počutijo bazilika, meta, peteršilj, drobnjak in timijan. Bazilika in meta hitro rasteta, peteršilj in drobnjak sta manj zahtevna, timijan pa potrebuje več sonca in manj vode. Za začetek izberite dve ali tri vrste, ki jih najpogosteje uporabljate v kuhinji."},
+    {"t": "h2", "x": "Dovolj svetlobe"},
+    {"t": "p", "x": "Najbolj so primerna južna in vzhodna okna, kjer rastline dobijo 4–6 ur svetlobe na dan. Na severni strani se zelišča potegnejo in obledijo."},
+    {"t": "p", "x": "Pozimi, ko je svetlobe manj, pomaga namizna svetilka, ki jo prižgete za nekaj ur na dan. Lonce premaknite bliže steklu in jih občasno zavrtite, da rastline rastejo enakomerno."},
+    {"t": "h2", "x": "Lonci z odprtinami za odtok"},
+    {"t": "p", "x": "Izberite lonce z odprtinami na dnu, da lahko odvečna voda odteče, in pod njih postavite podstavek. Zemlja naj bo rahla in prepustna, na primer mešanica za zelišča ali lončnice."},
+    {"t": "p", "x": "Lonec naj bo prostoren, a ne prevelik, saj v veliki količini mokre zemlje korenine hitreje začnejo gniti. Glineni lonci dihajo in se hitreje presušijo, plastični pa dlje zadržijo vlago."},
+    {"t": "h2", "x": "Zalivanje: preverite zgornji sloj"},
+    {"t": "p", "x": "Zalijte, ko je zemlja v zgornjih 1–2 cm suha: s prstom preverite, kako vlažna je. Vodo vlivajte počasi, dokler ne steče skozi odprtine, vodo v podstavku pa po nekaj minutah odlijte."},
+    {"t": "tip", "x": "Meta in drobnjak imata rada nekoliko bolj vlažno zemljo, timijan pa raje suhejšo."},
+    {"t": "h2", "x": "Ščipanje in obiranje"},
+    {"t": "p", "x": "Redno ščipajte vršičke, da se rastlina razraste in ostane gosta. Cvetne popke pri baziliki in meti odstranite, preden se razvijejo, saj rastlina sicer porabi moči za cvetenje, ne za liste."},
+    {"t": "p", "x": "Naenkrat naberite največ tretjino rastline, da si opomore. Poganjke prirežite tik nad parom listov, od koder bosta pognala nova poganjka."},
+    {"t": "h2", "x": "Pogoste težave in redko gnojenje"},
+    {"t": "p", "x": "Dolgi, tanki in bledi poganjki običajno pomenijo premalo svetlobe, rumeni listi pa pogosto preveč vode ali stoječo vodo v podstavku. Najprej preverite položaj in zalivanje, šele nato iščite druge vzroke."},
+    {"t": "p", "x": "V rastni dobi, od pomladi do jeseni, enkrat na mesec rahlo pognojite z gnojilom za zelišča, in sicer s polovičnim odmerkom, kot ga priporoča proizvajalec. Pozimi gnojenje ni potrebno."},
+    {"t": "h2", "x": "Zapomnite si"},
+    {"t": "ul", "x": [
+      "Izberite baziliko, meto, peteršilj, drobnjak ali timijan.",
+      "Poskrbite za 4–6 ur svetlobe, pozimi dodajte svetilko.",
+      "Zalijte, ko je zgornjih 1–2 cm zemlje suhih.",
+      "Vršičke redno ščipajte, naberite največ tretjino rastline.",
+      "Gnojite le v rastni dobi, enkrat na mesec in z majhnim odmerkom."
+    ]},
+    {"t": "p", "x": "Pogosto je dovolj majhen popravek pri svetlobi ali zalivanju, da zelišča spet zaživijo."}
+  ]
+}

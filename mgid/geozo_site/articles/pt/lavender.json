@@ -1,0 +1,39 @@
+{
+  "rubric": "Casa e jardim",
+  "title": "Como cultivar lavanda no jardim ou em vaso: sol, solo e poda",
+  "teaser": "A lavanda gosta de sol, de solo leve e de pouca água. Plantação, rega, poda depois da floração, cuidados no inverno e como secar as hastes para perfumar a casa.",
+  "description": "Guia prático para cultivar lavanda: sol, solo que escoa bem, plantação na primavera, poda depois da floração e cuidados em vaso.",
+  "heroAlt": "Filas de lavanda em flor num campo, com colinas verdes ao fundo.",
+  "body": [
+    {"t": "p", "lead": true, "x": "A lavanda é uma planta mediterrânica, habituada ao sol, aos verões secos e aos solos pobres. Pede pouco e, em troca, dá flores perfumadas durante vários anos."},
+    {"t": "p", "x": "O que importa é imitar essas condições, no jardim ou num vaso."},
+    {"t": "h2", "x": "Sol em abundância"},
+    {"t": "p", "x": "A lavanda precisa de sol direto durante a maior parte do dia, pelo menos 6 horas. À sombra, os caules esticam, a planta fica rala e floresce pouco."},
+    {"t": "p", "x": "Junto a um muro virado a sul, onde o calor se acumula, costuma sentir-se em casa."},
+    {"t": "h2", "x": "Solo leve e bem drenado"},
+    {"t": "p", "x": "O solo ideal é leve, arenoso ou pedregoso, e escoa bem. Pode até ser um pouco pobre: a lavanda não precisa de terra rica."},
+    {"t": "p", "x": "Em terra pesada ou argilosa, convém misturar areia grossa ou gravilha antes de plantar, para melhorar o escoamento."},
+    {"t": "h2", "x": "Plantar na primavera, com espaço"},
+    {"t": "p", "x": "Planta-se na primavera, com 40 a 60 cm entre cada pé, para o ar circular e o solo secar depressa depois da chuva."},
+    {"t": "p", "x": "Depois de enraizada, a lavanda dispensa quase toda a rega e só precisa de água nas semanas muito secas e quentes."},
+    {"t": "h2", "x": "Podar com mão leve"},
+    {"t": "p", "x": "Depois da floração, cortam-se as hastes secas e mais 2 a 3 cm da parte verde, para manter uma forma arredondada."},
+    {"t": "p", "x": "Nunca se corta até à madeira velha, sem folhas, porque dali raramente rebenta de novo. A poda leve mantém a planta compacta e com mais flores no ano seguinte."},
+    {"t": "h2", "x": "O frio incomoda menos do que a água parada"},
+    {"t": "p", "x": "No inverno, a geada prejudica menos a lavanda do que o solo encharcado, onde as raízes podem apodrecer."},
+    {"t": "p", "x": "Em vaso, usa-se uma mistura com muita areia grossa ou gravilha e um vaso com bons furos de drenagem."},
+    {"t": "h2", "x": "Flores para a casa"},
+    {"t": "p", "x": "As hastes cortam-se quando os botões ainda estão fechados e atam-se em molhos pequenos. Secam de cabeça para baixo, num sítio arejado e à sombra."},
+    {"t": "p", "x": "Depois, servem para decorar ou para encher saquinhos de tecido que perfumam gavetas e armários."},
+    {"t": "tip", "x": "Esmagar de leve as flores secas entre os dedos, antes de as meter nos saquinhos, reaviva o perfume."},
+    {"t": "h2", "x": "Em poucas palavras"},
+    {"t": "ul", "x": [
+      "Sol direto durante a maior parte do dia.",
+      "Solo leve, arenoso e bem drenado.",
+      "Plantar na primavera, com 40 a 60 cm entre cada pé.",
+      "Poda leve depois da floração, sem cortar a madeira velha.",
+      "Em vaso, mistura com muita areia grossa ou gravilha."
+    ]},
+    {"t": "p", "x": "Os erros mais comuns são o solo rico, a rega a mais e a sombra. Sem estes três, a lavanda costuma durar muitos anos."}
+  ]
+}

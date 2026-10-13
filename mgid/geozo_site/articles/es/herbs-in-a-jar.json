@@ -1,0 +1,37 @@
+{
+  "rubric": "Casa y cocina",
+  "title": "Perejil, eneldo y cilantro frescos durante semanas: el método del tarro",
+  "teaser": "Con un tarro de cristal, un poco de agua y una bolsa suelta, el perejil, el eneldo y el cilantro se conservan frescos mucho más tiempo en la nevera. Este es el paso a paso.",
+  "description": "Cómo conservar perejil, eneldo y cilantro durante semanas: tallos recortados, tarro con agua, bolsa suelta, cambio de agua y alternativas como la congelación.",
+  "heroAlt": "Un tarro de cristal con ramas de perejil y eneldo frescos, con los tallos sumergidos en agua.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Un manojo de hierbas frescas olvidado en el cajón de la nevera se marchita en pocos días. Con un tarro, un poco de agua y una bolsa, el perejil, el eneldo y el cilantro pueden mantenerse frescos durante semanas."},
+    {"t": "p", "x": "El método es casi el mismo para todas las hierbas de tallo y lleva solo unos minutos."},
+    {"t": "h2", "x": "Recortar los tallos y retirar las hojas cansadas"},
+    {"t": "p", "x": "Al llegar a casa se corta un centímetro de la base de los tallos, igual que con las flores de un ramo. Después se retiran las hojas amarillas o blandas, porque aceleran el deterioro de las demás."},
+    {"t": "p", "x": "También conviene quitar la goma o la cinta que ata el manojo, para que los tallos no queden aplastados."},
+    {"t": "h2", "x": "Un tarro con agua y una bolsa suelta"},
+    {"t": "p", "x": "En un tarro de cristal o en un vaso alto se echan dos o tres centímetros de agua y se colocan dentro las hierbas, de pie y sin apretarlas."},
+    {"t": "p", "x": "Por encima se coloca una bolsa de plástico, sin cerrarla del todo, y el tarro se guarda en la nevera. La bolsa mantiene la humedad y la abertura deja circular el aire."},
+    {"t": "h2", "x": "Cambiar el agua cada dos días"},
+    {"t": "p", "x": "Cuando el agua se enturbia, toca cambiarla. Lo normal es renovarla cada dos días y retirar, de paso, las hojas que se hayan ablandado. Así suelen aguantar de una a dos semanas, y a veces más."},
+    {"t": "tip", "x": "Un tarro estrecho y algo pesado evita que el ramo se vuelque al abrir y cerrar la puerta de la nevera."},
+    {"t": "h2", "x": "No lavar antes de guardar"},
+    {"t": "p", "x": "La humedad sobre las hojas hace que se pongan negras y blandas más deprisa. Conviene lavar solo la cantidad que se va a usar, justo antes de cocinar, y secarla bien."},
+    {"t": "h2", "x": "La excepción: la albahaca"},
+    {"t": "p", "x": "La albahaca no soporta el frío: en la nevera sus hojas se oscurecen enseguida."},
+    {"t": "p", "x": "Conviene tratarla como un ramo de flores: con los tallos en un vaso de agua, a temperatura ambiente y en un sitio luminoso, sin sol directo."},
+    {"t": "h2", "x": "Otras formas de conservarlas"},
+    {"t": "p", "x": "Otra opción es envolver las hierbas en papel de cocina ligeramente húmedo y guardarlas en un recipiente cerrado. Para conservarlas más tiempo sirve la congelación: se pican, se reparten en una cubitera y se cubren con un poco de agua o de aceite."},
+    {"t": "p", "x": "Las hojas que han perdido firmeza ya no lucen en una ensalada, pero van muy bien en sopas, caldos y salsas."},
+    {"t": "h2", "x": "En pocas palabras"},
+    {"t": "ul", "x": [
+      "Recortar la base de los tallos y quitar las hojas cansadas.",
+      "Tarro con dos o tres centímetros de agua y una bolsa suelta encima.",
+      "Cambiar el agua cada dos días.",
+      "No lavar hasta el momento de usarlas; la albahaca, fuera de la nevera.",
+      "Congelar picadas, en cubitos, las que sobren."
+    ]},
+    {"t": "p", "x": "Con este sencillo hábito, las hierbas están a mano cuando hacen falta y se tira mucho menos."}
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "rubric": "Rośliny w domu",
+  "title": "Rośliny doniczkowe jesienią: 7 porad, które pomogą im dotrwać do wiosny",
+  "teaser": "Dni są coraz krótsze, a grzejniki wysuszają powietrze, więc wiele roślin zaczyna tracić liście. Siedem prostych zmian w pielęgnacji, które pomagają im spokojnie przezimować.",
+  "description": "Siedem porad dla roślin doniczkowych na jesień i zimę: światło, podlewanie, wilgotność powietrza, nawożenie, kontrola szkodników i przesadzanie.",
+  "heroAlt": "Niewielkie drzewko w brązowej ceramicznej doniczce na drewnianym blacie przy jasnej ścianie",
+  "body": [
+    {"t": "p", "lead": true, "x": "Jesienią dni robią się krótsze, a w mieszkaniach włącza się ogrzewanie, które mocno wysusza powietrze. Wiele roślin doniczkowych reaguje na to zrzucaniem liści albo wyciąganiem się w stronę okna. Zwykle wystarczy kilka drobnych zmian w pielęgnacji."},
+    {"t": "p", "x": "Poniżej siedem porad, które pasują do większości roślin doniczkowych."},
+    {"t": "h2", "x": "1. Więcej światła i czyste liście"},
+    {"t": "p", "x": "Jesienią nawet przy południowym oknie światła jest wyraźnie mniej niż latem. Doniczki warto przestawić bliżej szyby, ale tak, by liście nie dotykały zimnego szkła."},
+    {"t": "p", "x": "Co dwa tygodnie dobrze jest przetrzeć liście wilgotną ściereczką. Warstwa kurzu zatrzymuje część światła, którego i tak jest mało."},
+    {"t": "h2", "x": "2. Mniej wody, ale z kontrolą"},
+    {"t": "p", "x": "Jesienią i zimą rośliny rosną wolniej i potrzebują mniej wody. Przed podlaniem trzeba sprawdzić ziemię palcem: jeśli górna warstwa na głębokość 2–3 cm jest sucha, można podlewać, a jeśli wilgotna, lepiej poczekać. Wodę ze spodka warto wylać po pół godzinie."},
+    {"t": "tip", "x": "Do podlewania najlepiej używać wody o temperaturze pokojowej, więc konewkę można napełnić wieczorem i użyć jej rano."},
+    {"t": "h2", "x": "3. Wilgotniejsze powietrze przy kaloryferze"},
+    {"t": "p", "x": "Ogrzewanie wysusza powietrze, co widać po brązowiejących końcówkach liści. Pomaga ustawienie doniczek na tacy z mokrymi kamykami, tak by dno doniczki nie dotykało wody. Dobrze działa też zgrupowanie roślin, bo razem utrzymują wokół siebie nieco więcej wilgoci."},
+    {"t": "p", "x": "Zraszanie nie służy każdej roślinie: gatunkom z owłosionymi liśćmi, na przykład fiołkom afrykańskim, lepiej je oszczędzić."},
+    {"t": "h2", "x": "4. Z dala od przeciągów i grzejników"},
+    {"t": "p", "x": "Gwałtowne zmiany temperatury to częsta przyczyna opadających liści. Nie warto stawiać roślin tuż nad grzejnikiem ani przy uchylonym oknie. Podczas wietrzenia delikatne gatunki lepiej na chwilę przenieść do innego pokoju, a na noc odsunąć od zimnej szyby."},
+    {"t": "h2", "x": "5. Mniej nawożenia"},
+    {"t": "p", "x": "Gdy dni są krótkie, większość roślin odpoczywa i nie potrzebuje dodatkowego nawozu. Zwykle przerywa się nawożenie jesienią i wznawia na wiosnę, gdy pojawiają się nowe listki. Wyjątkiem są gatunki kwitnące zimą, dla nich warto sprawdzić osobne zalecenia."},
+    {"t": "h2", "x": "6. Cotygodniowy przegląd liści"},
+    {"t": "p", "x": "Suche powietrze sprzyja przędziorkom i mszycom. Raz w tygodniu warto obejrzeć liście z obu stron: lepki nalot, drobne jasne kropki i delikatna pajęczynka to sygnał, że trzeba zareagować. Na początek wystarczy spłukać roślinę letnią wodą."},
+    {"t": "p", "x": "Przy większej liczbie szkodników można użyć środka ochrony roślin zgodnie z instrukcją na opakowaniu. Silnie zaatakowaną roślinę warto na ten czas odizolować od pozostałych."},
+    {"t": "h2", "x": "7. Przesadzanie raczej na wiosnę"},
+    {"t": "p", "x": "Jeśli roślina wygląda dobrze, przesadzanie lepiej odłożyć do wiosny, bo jesienią korzenie słabiej się przyjmują. Wyjątkiem są sytuacje, gdy korzenie wyrastają przez otwory w dnie doniczki, a woda przelewa się przez ziemię bez wsiąkania."},
+    {"t": "h2", "x": "Co warto zapamiętać"},
+    {"t": "ul", "x": [
+      "Doniczki bliżej okna, ale nie przy samej zimnej szybie.",
+      "Podlewać rzadziej i najpierw sprawdzić ziemię.",
+      "Zadbać o wilgotność powietrza przy grzejnikach.",
+      "Chronić rośliny przed przeciągami i gorącem kaloryfera.",
+      "Wstrzymać nawożenie do wiosny.",
+      "Raz w tygodniu obejrzeć liście, a przesadzanie odłożyć na wiosnę."
+    ]},
+    {"t": "p", "x": "Każdy gatunek ma własne potrzeby, dlatego warto sprawdzić zalecenia dla konkretnej rośliny."}
+  ]
+}

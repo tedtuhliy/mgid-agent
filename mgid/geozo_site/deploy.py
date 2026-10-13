@@ -1,8 +1,9 @@
 """Put the /dom/ pages and the nginx relay for block-click conversions on the Inferno server.
 
-    python3 deploy.py static [--stage DIR] [--route dom|dom2]
-                                             # build output of one variant -> /var/www/arcadiablog.com/<route>/ (nothing else
-                                             # is touched; dom is the variant MGID approved, deploy it only to restore it)
+    python3 deploy.py static [--stage DIR] [--route dom|dom2|blog]
+                                             # build output of one route -> /var/www/arcadiablog.com/<route>/ (nothing else
+                                             # is touched; dom is the variant MGID approved, deploy it only to restore it;
+                                             # blog is the multilingual site of build_multi.py, /blog/<lang>/)
     python3 deploy.py nginx                  # relay location /dom/lead + log format, with backup, nginx -t, reload
     python3 deploy.py check                  # read-only: what is on the server now
 
@@ -63,9 +64,13 @@ def ssh(cmd, stdin=None, timeout=240):
 
 
 def static(stage, route="dom"):
+    """Upload the whole tree stage/<route>/ to /var/www/arcadiablog.com/<route>/ (merge, nothing else on the server is
+    touched; stale <route>.<hash>.js files of older builds are removed)."""
     src = Path(stage) / route
-    if not (src / "index.html").exists():
+    if not (src / "index.html").exists() and route != "blog":
         raise SystemExit(f"нет сборки в {src}: сначала python3 build.py --out {stage}")
+    if route == "blog" and not any(src.glob("*/index.html")):
+        raise SystemExit(f"нет сборки в {src}: сначала python3 build_multi.py --out {stage}")
     web = f"{WEB_ROOT}/{route}"
     buf = io.BytesIO()
     with tarfile.open(fileobj=buf, mode="w:gz") as t:
@@ -75,14 +80,17 @@ def static(stage, route="dom"):
     script = f"""set -e
 rm -rf /tmp/{route}_stage && mkdir -p /tmp/{route}_stage
 base64 -d | tar -xz -C /tmp/{route}_stage
-install -d -o www-data -g www-data -m 755 {web} {web}/img
-for f in /tmp/{route}_stage/{route}/*; do [ -f "$f" ] && install -o www-data -g www-data -m 644 "$f" {web}/; done
-for f in /tmp/{route}_stage/{route}/img/*; do install -o www-data -g www-data -m 644 "$f" {web}/img/; done
+install -d -o www-data -g www-data -m 755 {web}
+cp -a /tmp/{route}_stage/{route}/. {web}/
+chown -R www-data:www-data {web}
+find {web} -type d -exec chmod 755 {{}} +
+find {web} -type f -exec chmod 644 {{}} +
 for f in {web}/{route}.*.js; do [ "$(basename $f)" = "{new_js}" ] || rm -f "$f"; done
 rm -rf /tmp/{route}_stage
-ls -la {web} {web}/img
+ls {web} | head -30
+find {web} -type f | wc -l
 """
-    code, out = ssh(f"bash -c {shell_quote(script)}", stdin=b64)
+    code, out = ssh(f"bash -c {shell_quote(script)}", stdin=b64, timeout=600)
     print(out)
     return code
 
@@ -123,7 +131,7 @@ grep -n -A3 'location = /dom/lead' {SITE_CONF} | head -8
 
 
 def check():
-    code, out = ssh(f"ls -la {WEB} {WEB_ROOT}/dom2 2>&1 | head -24; echo ---; grep -c 'location = /dom/lead' {SITE_CONF}; "
+    code, out = ssh(f"ls -la {WEB} {WEB_ROOT}/dom2 {WEB_ROOT}/blog 2>&1 | head -40; echo ---; grep -c 'location = /dom/lead' {SITE_CONF}; "
                     f"ls -la {LOGFMT_CONF} /var/log/nginx/arcadiablog.dom.log 2>&1 | head; echo ---; "
                     "tail -n 5 /var/log/nginx/arcadiablog.dom.log 2>/dev/null")
     print(out)
@@ -134,6 +142,6 @@ if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
     stage = sys.argv[sys.argv.index("--stage") + 1] if "--stage" in sys.argv else "/tmp/dom_stage_build"
     route = sys.argv[sys.argv.index("--route") + 1] if "--route" in sys.argv else "dom"
-    if route not in ("dom", "dom2"):
-        raise SystemExit("--route: dom или dom2")
+    if route not in ("dom", "dom2", "blog"):
+        raise SystemExit("--route: dom, dom2 или blog")
     sys.exit({"static": lambda: static(stage, route), "nginx": nginx, "check": check}[cmd]())

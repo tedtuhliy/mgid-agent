@@ -1,0 +1,38 @@
+{
+  "rubric": "Casa e jardim",
+  "title": "Ervas aromáticas no peitoril da janela: o que cresce bem e como cuidar delas",
+  "teaser": "Manjericão, hortelã, salsa, cebolinho e tomilho adaptam-se bem a vasos pequenos. Luz, rega, corte das pontas e um pouco de adubo bastam para ter folhas frescas ao alcance da mão.",
+  "description": "Que ervas aromáticas crescem bem no peitoril da janela e como cuidar delas: luz, vasos, rega, colheita, problemas comuns e adubo.",
+  "heroAlt": "Folhas verdes e viçosas de uma erva aromática em crescimento.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Uns poucos vasos no peitoril da janela bastam para ter ervas frescas ao alcance da mão, mesmo numa cozinha pequena. O essencial é dar-lhes luz suficiente e não exagerar na água."},
+    {"t": "p", "x": "Estas são as ervas que se adaptam bem à vida dentro de casa e os cuidados de que precisam."},
+    {"t": "h2", "x": "Cinco ervas que se dão bem dentro de casa"},
+    {"t": "p", "x": "Manjericão, hortelã, salsa, cebolinho e tomilho adaptam-se a vasos pequenos. O manjericão e o tomilho pedem mais sol; a hortelã, a salsa e o cebolinho toleram melhor a meia-sombra."},
+    {"t": "p", "x": "A hortelã espalha-se depressa e convém dar-lhe um vaso só para ela, senão toma o lugar das outras."},
+    {"t": "h2", "x": "Luz suficiente"},
+    {"t": "p", "x": "O ideal é uma janela virada a sul ou a este, com 4 a 6 horas de sol por dia. No inverno, um candeeiro de secretária ligado umas horas ao fim da tarde ajuda a compensar os dias curtos."},
+    {"t": "p", "x": "Numa janela virada a norte, a hortelã e a salsa são as mais tolerantes, mas a colheita será menor."},
+    {"t": "h2", "x": "Vasos com drenagem"},
+    {"t": "p", "x": "Os vasos precisam de furos no fundo, para a água a mais escoar, e de um prato por baixo. Convém esvaziar o prato pouco depois da rega, porque as raízes não gostam de ficar em água parada."},
+    {"t": "h2", "x": "Quando regar e quanto"},
+    {"t": "p", "x": "Rega-se quando os primeiros 1 a 2 cm de terra estiverem secos ao toque. É melhor regar bem de vez em quando do que dar um pouco de água todos os dias."},
+    {"t": "p", "x": "No inverno, com menos luz e menos calor, a rega espaça-se: a terra demora mais a secar."},
+    {"t": "h2", "x": "Cortar as pontas e colher com moderação"},
+    {"t": "p", "x": "Cortar a ponta dos ramos, logo acima de um par de folhas, faz a planta ramificar e ficar mais cheia."},
+    {"t": "p", "x": "Pode colher-se com regularidade, mas nunca mais de um terço das folhas de cada vez, para a planta recuperar."},
+    {"t": "h2", "x": "Problemas comuns e adubo"},
+    {"t": "p", "x": "Caules compridos e pálidos indicam falta de luz; folhas amarelas apontam quase sempre para excesso de rega ou para um vaso que não escoa."},
+    {"t": "p", "x": "Na época de crescimento, da primavera ao fim do verão, basta um adubo líquido bem diluído uma vez por mês."},
+    {"t": "tip", "x": "Rodar o vaso um quarto de volta todas as semanas evita que a planta se incline para o vidro."},
+    {"t": "h2", "x": "O essencial"},
+    {"t": "ul", "x": [
+      "Manjericão, hortelã, salsa, cebolinho e tomilho dão-se bem em vasos pequenos.",
+      "Janela a sul ou a este, com 4 a 6 horas de sol.",
+      "Vasos com furos e prato esvaziado depois da rega.",
+      "Regar quando os primeiros centímetros de terra estão secos.",
+      "Colher, no máximo, um terço das folhas de cada vez."
+    ]},
+    {"t": "p", "x": "Com luz suficiente, rega moderada e colheitas regulares, um pequeno canto de ervas dá folhas frescas durante grande parte do ano."}
+  ]
+}

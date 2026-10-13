@@ -1,0 +1,38 @@
+{
+  "rubric": "Dom in kuhinja",
+  "title": "Sadje in zelenjava: kaj shranjevati skupaj in kaj narazen",
+  "teaser": "Banane ob jabolkih hitreje zorijo, listnata zelenjava ob zrelem paradižniku pa rada porumeni. Razložimo, kaj lahko leži skupaj, kaj naj bo narazen in kam v hladilniku sodi katera vrsta.",
+  "description": "Katero sadje sprošča etilen, katera zelenjava ga ne prenaša in kako razporediti krompir, čebulo, paradižnik ter predale v hladilniku.",
+  "heroAlt": "Rdeče, rumene in oranžne paprike, kumare, korenje in špinača v prozornem predalu hladilnika.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Marsikdo je že opazil, da se sadje v skledi hitreje zmehča, če leži ob zrelih bananah ali jabolkih. Pri shranjevanju torej ni vseeno, kaj leži ob čem. Nekaj preprostih navad pomaga, da vse skupaj zdrži dlje."},
+    {"t": "p", "x": "Razlog je predvsem naraven plin etilen, pa tudi to, kako različne vrste prenašajo hlad in vlago."},
+    {"t": "h2", "x": "Etilen v preprostih besedah"},
+    {"t": "p", "x": "Nekateri plodovi med zorenjem oddajajo plin etilen. Za sosednje pridelke je to znak, naj tudi oni dozorijo: zmehčajo se, spremenijo barvo in hitreje se pokvarijo."},
+    {"t": "p", "x": "Pri sadju je to včasih koristno: trden avokado, ki ga želite pojesti prej, shranite skupaj z jabolkom v papirnati vrečki. Pri zelenjavi pa zorenje ni zaželeno."},
+    {"t": "h2", "x": "Kdo ga oddaja in kdo ga ne prenaša"},
+    {"t": "p", "x": "Veliko etilena oddajajo jabolka, hruške, banane in zrel paradižnik. Najbolj ga občutijo listnata zelenjava, kumare, korenje in brokoli: listi rumenijo, plodovi se mehčajo, okus pa slabi."},
+    {"t": "p", "x": "Zato sadje, ki zori, ne sodi v isto posodo ali predal z zelenjavo. Postavite ga v ločeno skledo ali v svoj predal."},
+    {"t": "h2", "x": "Krompir in čebula naj bosta narazen"},
+    {"t": "p", "x": "Krompir in čebula se skupaj običajno hitreje kvarita, zato ju hranite ločeno. Obema ustrezajo temen, hladen in zračen prostor, na primer klet, shramba ali lesen zaboj."},
+    {"t": "p", "x": "Plastična vrečka za to ni primerna, ker zadržuje vlago. Krompirja tudi ne dajajte v hladilnik, saj na mrazu postane sladkast."},
+    {"t": "h2", "x": "Paradižnik ne mara hladilnika"},
+    {"t": "p", "x": "Na mrazu paradižnik izgubi aromo, meso pa postane moknato. Shranjujte ga pri sobni temperaturi, stran od neposrednega sonca."},
+    {"t": "tip", "x": "Hladilnik prihranite za zelo zrele plodove, ki jih ne boste mogli porabiti v dveh dneh, in jih nekaj ur pred uporabo vzemite ven."},
+    {"t": "h2", "x": "Dva predala za dve vrsti pridelkov"},
+    {"t": "p", "x": "Večina hladilnikov ima dva predala za sadje in zelenjavo. Zelenjavi ustreza predal z višjo vlago, kjer je zračnik zaprt, sadju pa predal z nižjo vlago in odprtim zračnikom."},
+    {"t": "p", "x": "Narezane pridelke hranite v zaprtih posodah, da se ne posušijo in da ne prevzamejo vonja drugih živil."},
+    {"t": "h2", "x": "Enkrat na teden preglejte zaloge"},
+    {"t": "p", "x": "Enkrat na teden preglejte predale, košare in zaboje ter odstranite vse, kar začenja gniti ali plesneti. Ena pokvarjena jagoda ali čebula namreč hitro pokvari še sosede."},
+    {"t": "p", "x": "Najbolj zrele pridelke porabite prve, ostale pa po potrebi razporedite na novo."},
+    {"t": "h2", "x": "Kaj si zapomniti"},
+    {"t": "ul", "x": [
+      "Jabolka, banane in zrel paradižnik ne sodijo ob listnato zelenjavo.",
+      "Krompir in čebulo hranite narazen, v hladnem in zračnem prostoru.",
+      "Paradižnik naj ostane zunaj hladilnika.",
+      "Zelenjavo hranite v predalu z več vlage, sadje v predalu z manj vlage.",
+      "Enkrat na teden preglejte zaloge in odstranite pokvarjeno."
+    ]},
+    {"t": "p", "x": "Vsega ni treba spremeniti naenkrat: že ena ali dve novi navadi lahko opazno zmanjšata količino zavrženih pridelkov."}
+  ]
+}

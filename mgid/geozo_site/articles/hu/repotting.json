@@ -1,0 +1,36 @@
+{
+  "rubric": "Szobanövények",
+  "title": "Szobanövények átültetése: mikor, hogyan, és mit érdemes elkerülni",
+  "teaser": "A nagyobb cserép nem mindig jelent jót: az időzítés és a megfelelő méret sokat számít. Összefoglaljuk, miből ismerheti fel, hogy ideje átültetni a növényt, és hogyan járjon el lépésről lépésre.",
+  "description": "Mikor kell nagyobb cserép, melyik évszak alkalmas az átültetésre, milyen földet és cserepet válasszon, és mire figyeljen utána.",
+  "heroAlt": "Tenyérben tartott kis növény gyökérlabdával, elmosódott zöld háttér előtt.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Előbb-utóbb minden szobanövény kinövi a cserepét. Az átültetés nem bonyolult, de az időzítés és a cserép mérete sokat számít abban, hogy a növény zökkenők nélkül megeredjen az új helyén."},
+    {"t": "p", "x": "Az alábbiakban végigmegyünk a jelzésektől az átültetés utáni teendőkig."},
+    {"t": "h2", "x": "Jelek, hogy nagyobb cserépre van szükség"},
+    {"t": "p", "x": "A jelek jól felismerhetők: a gyökerek kikandikálnak a vízelvezető nyílásokon, az öntözővíz azonnal átfolyik a cserépen, vagy a növény hosszabb ideje nem hoz új hajtást. Ha ezek közül többet is lát, ideje átültetni."},
+    {"t": "tip", "x": "Ha bizonytalan, emelje ki óvatosan a növényt a cserépből: ha a gyökerek sűrű hálót alkotnak a föld körül, nagyobb cserép kell."},
+    {"t": "h2", "x": "A megfelelő időszak"},
+    {"t": "p", "x": "Az átültetésre a tavasztól nyár elejéig tartó időszak a legalkalmasabb, mert a növény ilyenkor erőre kap, és a gyökerei gyorsan növekednek. Télen, a pihenőidőszakban jobb nem háborgatni."},
+    {"t": "h2", "x": "Cserépméret, föld és vízelvezetés"},
+    {"t": "p", "x": "Az új cserép csak 2–3 centiméterrel legyen szélesebb a réginél. A túl nagy cserépben sokáig nedves marad a föld, ezért a gyökerek könnyebben megrothadnak."},
+    {"t": "p", "x": "Friss, a fajhoz illő földkeveréket használjon: a legtöbb zöld növénynek laza virágföld jó, a pozsgásoknak szemcsésebb keverék. A cserép alján mindenképp legyen vízelvezető nyílás."},
+    {"t": "h2", "x": "Lépésről lépésre"},
+    {"t": "p", "x": "Az átültetés előtti napon öntözze meg a növényt, így a gyökérlabda könnyebben kijön a cserépből. Óvatosan lazítsa meg a gyökereket, a barna, puha vagy elszáradt részeket pedig vágja le tiszta ollóval."},
+    {"t": "p", "x": "Tegye a növényt az új cserépbe, töltse körbe friss földdel, finoman nyomkodja meg, majd öntözze meg. A föld felszíne maradjon két-három centiméterrel a cserép pereme alatt, hogy az öntözővíz ne folyjon ki. Az első héten ne tegye erős napfényre."},
+    {"t": "h2", "x": "Tápoldatozás csak később"},
+    {"t": "p", "x": "Az átültetés után ne tápoldatozzon azonnal: a friss földben van némi tápanyag, a gyökerek pedig még sérülékenyek. Néhány hétig csak öntözze a növényt, a tápoldatozást az új hajtások megjelenése után kezdje újra."},
+    {"t": "h2", "x": "Átültetés helyett: felszíni földcsere"},
+    {"t": "p", "x": "Virágzó vagy legyengült növényt ne ültessen át: a virágzó növény könnyen elhullatja a bimbóit, a legyengült pedig nehezebben viseli a változást."},
+    {"t": "p", "x": "Ha a cserép még elég nagy, elég a föld felső 2–3 centiméterét kicserélni frissre. Így a növény új tápanyagot kap, a cserép pedig marad. Ez különösen a nagy, nehezen mozdítható növényeknél praktikus."},
+    {"t": "h2", "x": "Mit érdemes megjegyezni"},
+    {"t": "ul", "x": [
+      "Átültetni akkor kell, ha a gyökerek kinőnek a nyílásokon, vagy a víz azonnal átfolyik.",
+      "A legalkalmasabb időszak tavasztól nyár elejéig tart.",
+      "Az új cserép csak 2–3 centiméterrel legyen nagyobb.",
+      "Friss, a fajnak megfelelő föld és vízelvezető nyílás kell.",
+      "A tápoldatozással érdemes néhány hetet várni."
+    ]},
+    {"t": "p", "x": "A legtöbb növény türelmes: ha az átültetést jól időzíti, és nem sietteti a tápoldatozást, általában gond nélkül megered."}
+  ]
+}

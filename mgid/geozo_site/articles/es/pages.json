@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "Quiénes somos",
+    "paras": [
+      "Arcadia Blog es una pequeña revista digital sobre la vida en casa. Publicamos consejos prácticos de cocina, plantas de interior y jardinería sencilla, en textos breves y claros que se leen con comodidad desde el móvil.",
+      "Todos los artículos tienen carácter informativo. Recogen costumbres domésticas de uso común y no sustituyen las indicaciones del fabricante de cada producto ni las necesidades propias de cada planta.",
+      "El sitio se financia con publicidad de empresas colaboradoras. Cada bloque publicitario se distingue con claridad del contenido de la revista y está marcado con la palabra «Publicidad»."
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "paras": [
+      "Para cualquier pregunta, sugerencia o comentario sobre los artículos, puede escribirnos a contact@arcadiablog.com.",
+      "Leemos todos los mensajes y respondemos en un plazo de unos pocos días laborables."
+    ]
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "paras": [
+      "Al visitar este sitio se recogen automáticamente algunos datos técnicos, como el tipo de navegador y de dispositivo, las páginas consultadas y la hora de acceso. El sitio también utiliza cookies, pequeños archivos que el navegador guarda en el dispositivo para que todo funcione bien.",
+      "Los bloques publicitarios de empresas colaboradoras pueden utilizar cookies y tecnologías similares para mostrar anuncios y medir su rendimiento. Cada una de esas empresas gestiona esos datos con sus propias normas de privacidad.",
+      "En este sitio no hay cuentas de usuario ni pagos, y no se pide ningún dato personal para leer los artículos.",
+      "Las cookies pueden gestionarse desde los ajustes del navegador, donde es posible borrarlas o bloquearlas. Si se bloquean, algunas partes del sitio o de los anuncios podrían no mostrarse correctamente.",
+      "Si tiene cualquier duda sobre esta política, puede escribirnos a contact@arcadiablog.com y le responderemos en pocos días laborables."
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "brand_tag": "rady",
+  "read_also": "Prečítajte si aj",
+  "read_min": "{n} min čítania",
+  "home_title": "Domov, kuchyňa a záhrada",
+  "home_intro": "Praktické rady na každý deň: ako uchovať potraviny čerstvé, postarať sa o izbové rastliny a využiť bylinky z okna či zo záhrady.",
+  "all_articles": "Všetky články",
+  "nav_home": "Úvod",
+  "nav_about": "O nás",
+  "nav_contact": "Kontakt",
+  "nav_privacy": "Ochrana súkromia",
+  "disclosure": "Články na tejto stránke majú informatívny charakter; stránka zobrazuje reklamu partnerov a každý reklamný blok je označený slovom „Reklama“. Na fungovanie stránky a reklamných blokov používame súbory cookie.",
+  "cookie": "Na fungovanie stránky a reklamných blokov používame súbory cookie.",
+  "cookie_more": "Viac informácií",
+  "cookie_ok": "Rozumiem",
+  "disclaimer": "Článok má informatívny charakter; riaďte sa pokynmi výrobcu a potrebami konkrétnej rastliny alebo potraviny.",
+  "months": ["januára", "februára", "marca", "apríla", "mája", "júna", "júla", "augusta", "septembra", "októbra", "novembra", "decembra"],
+  "date_fmt": "{d}. {month} {y}"
+}

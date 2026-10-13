@@ -1,0 +1,38 @@
+{
+  "rubric": "Ogród",
+  "title": "Uprawa lawendy: słońce, gleba i przycinanie",
+  "teaser": "Lawenda nie jest wymagająca, jeśli ma dużo słońca i przepuszczalną ziemię. Wyjaśniamy, jak ją sadzić, przycinać i przezimować w ogrodzie albo w donicy oraz jak wysuszyć kwiaty do domu.",
+  "description": "Jak uprawiać lawendę w ogrodzie i w donicy: stanowisko, ziemia, sadzenie, podlewanie, przycinanie, zimowanie oraz suszenie kwiatów na ozdoby.",
+  "heroAlt": "Rzędy kwitnącej lawendy na polu, a w tle zielone wzgórze z drzewami i zabudowaniami",
+  "body": [
+    {"t": "p", "lead": true, "x": "Lawenda zdobi ogrody i balkony nie tylko kolorem, ale także zapachem. Wbrew pozorom nie jest wymagająca, o ile ma dużo słońca i przepuszczalną ziemię. Najczęściej szkodzi jej nadmiar troski: za dużo wody i zbyt żyzne podłoże."},
+    {"t": "p", "x": "Poniżej sześć zasad, które pomagają uprawiać ją w ogrodzie lub w donicy."},
+    {"t": "h2", "x": "Pełne słońce"},
+    {"t": "p", "x": "Lawenda potrzebuje stanowiska słonecznego, najlepiej osłoniętego od chłodnego wiatru. W cieniu rośnie słabo, wyciąga się i skąpo kwitnie. Im więcej słońca, tym zwarciejszy pokrój i obfitsze kwitnienie. Na balkonie dobrze sprawdza się miejsce przy południowej ścianie, która długo trzyma ciepło."},
+    {"t": "h2", "x": "Lekka, przepuszczalna ziemia"},
+    {"t": "p", "x": "Najlepiej czuje się w ziemi lekkiej, piaszczystej albo żwirowej, w której woda szybko odpływa. Żyzna, ciężka gleba jej nie służy: po mocnym nawożeniu lawenda rośnie bujnie, ale kwitnie słabiej."},
+    {"t": "p", "x": "W ciężkiej, gliniastej ziemi warto dosypać piasku lub drobnego żwiru, żeby woda lepiej odpływała."},
+    {"t": "h2", "x": "Sadzenie i podlewanie"},
+    {"t": "p", "x": "Lawendę sadzi się wiosną, w odstępach 40–60 cm, aby krzewy miały miejsce na rozrost i dobry przewiew. Sadzonki umieszcza się na takiej samej głębokości, na jakiej rosły w doniczce."},
+    {"t": "p", "x": "Ukorzeniona lawenda potrzebuje niewiele wody. Podlewać trzeba tylko w czasie długiej suszy, a ziemia powinna zdążyć przeschnąć między podlewaniami."},
+    {"t": "h2", "x": "Przycinanie"},
+    {"t": "p", "x": "Lekkie przycięcie zaraz po kwitnieniu pomaga zachować zwarty pokrój. Wystarczy skrócić pędy o około jedną trzecią, tak by zostały na nich zielone listki. Nie należy ciąć w stare, zdrewniałe, gołe pędy, bo z nich lawenda zwykle już nie odbija."},
+    {"t": "tip", "x": "Regularne, lekkie cięcie co roku jest znacznie bezpieczniejsze niż radykalne skracanie zaniedbanego krzewu."},
+    {"t": "h2", "x": "Zima i uprawa w donicach"},
+    {"t": "p", "x": "Większym zagrożeniem zimą niż mróz bywa wilgoć: w mokrej ziemi korzenie łatwo gniją."},
+    {"t": "p", "x": "W donicy lawenda potrzebuje otworów odpływowych i mieszanki ziemi z piaskiem lub drobnym żwirem. Zimą donicę dobrze jest ustawić w osłoniętym miejscu, na przykład przy ścianie domu, by deszcz jej nie zalewał."},
+    {"t": "h2", "x": "Kwiaty do suszenia"},
+    {"t": "p", "x": "Kwiatostany warto ścinać w fazie pąków, gdy dopiero zaczynają się otwierać, bo wtedy najlepiej zachowują kolor i zapach. Potem wiąże się je w małe pęczki i suszy zawieszone główkami w dół, w przewiewnym, zacienionym miejscu."},
+    {"t": "p", "x": "Suszone kwiaty można wstawić do wazonu albo wykorzystać do uszycia saszetek zapachowych, które dają w szafie lub szufladzie delikatny aromat. Całe pęczki same stają się ozdobą kuchni albo przedpokoju."},
+    {"t": "h2", "x": "Lawenda w skrócie"},
+    {"t": "ul", "x": [
+      "Pełne słońce i lekka, przepuszczalna ziemia.",
+      "Sadzenie wiosną, w odstępach 40–60 cm.",
+      "Po ukorzenieniu podlewać oszczędnie.",
+      "Przycinać lekko po kwitnieniu, nigdy w stare, gołe pędy.",
+      "Zimą unikać wilgoci, w donicy używać mieszanki z piaskiem lub żwirem.",
+      "Najczęstsze błędy to żyzna ziemia, nadmiar wody i cień."
+    ]},
+    {"t": "p", "x": "Kilka krzewów lawendy wystarcza, by co roku mieć własny zapas pachnących kwiatów i spokojny, fioletowy akcent w ogrodzie."}
+  ]
+}

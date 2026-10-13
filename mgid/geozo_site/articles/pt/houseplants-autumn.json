@@ -1,0 +1,39 @@
+{
+  "rubric": "Casa e jardim",
+  "title": "Plantas de interior no outono: 7 conselhos para chegarem bem à primavera",
+  "teaser": "Com os dias mais curtos e o ar seco dos aquecedores, muitas plantas deixam cair folhas ou esticam. Sete ajustes simples nos cuidados do dia a dia ajudam-nas a chegar à primavera.",
+  "description": "Sete conselhos simples para cuidar das plantas de interior no outono: luz, rega, humidade do ar, adubo, pragas e mudança de vaso.",
+  "heroAlt": "Pequena árvore de interior num vaso de cerâmica castanho, sobre uma mesa de madeira.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Com a chegada do outono, os dias encurtam, os aquecedores secam o ar e muitas plantas de interior perdem folhas ou esticam. Na maior parte dos casos, basta ajustar alguns cuidados."},
+    {"t": "p", "x": "Eis sete conselhos que servem à maioria das plantas de interior e das ervas aromáticas do peitoril."},
+    {"t": "h2", "x": "1. Mais luz e folhas limpas"},
+    {"t": "p", "x": "Mesmo uma janela virada a sul recebe bastante menos luz do que no verão. Convém aproximar as plantas da janela, sem encostar as folhas ao vidro frio, e limpar as folhas com um pano húmido de quinze em quinze dias, porque o pó lhes tira luz."},
+    {"t": "h2", "x": "2. Regar menos, mas verificar a terra"},
+    {"t": "p", "x": "Com menos luz e menos calor, as plantas crescem devagar e bebem menos. Antes de regar, toca-se na terra: se os 2 a 3 cm de cima estiverem secos, é altura de regar; se estiverem húmidos, espera-se mais uns dias."},
+    {"t": "tip", "x": "Um vaso com a terra seca pesa muito menos do que depois de regado, e levantá-lo costuma bastar para decidir."},
+    {"t": "h2", "x": "3. Humidade perto dos aquecedores"},
+    {"t": "p", "x": "O ar seco incomoda muitas plantas. Um tabuleiro com seixos molhados debaixo do vaso, sem que a água toque na base, ou várias plantas agrupadas ajudam a manter alguma humidade à volta."},
+    {"t": "h2", "x": "4. Longe de correntes de ar e de aquecedores"},
+    {"t": "p", "x": "As mudanças bruscas de temperatura fazem cair folhas. Convém afastar as plantas de janelas abertas e de portas que batem, e não as pôr mesmo junto de um aquecedor."},
+    {"t": "p", "x": "Ao arejar a divisão, as plantas mais sensíveis podem passar uns minutos para outro sítio."},
+    {"t": "h2", "x": "5. Menos adubo"},
+    {"t": "p", "x": "No inverno, a maioria das plantas descansa e dispensa adubo. A adubação suspende-se no outono e retoma-se na primavera, quando surgem folhas novas."},
+    {"t": "p", "x": "Se o crescimento abrandar ou parar, é o repouso normal da planta. As plantas que florescem no inverno são a exceção e seguem as indicações da sua espécie."},
+    {"t": "h2", "x": "6. Olhar para as folhas uma vez por semana"},
+    {"t": "p", "x": "O ar seco favorece os ácaros e os pulgões. Olhar para os dois lados das folhas permite apanhar a tempo teias finas, pontinhos claros ou uma película peganhosa."},
+    {"t": "p", "x": "Para começar, lava-se a planta com água morna e limpam-se as folhas com um pano e um pouco de sabão neutro; se for preciso mais, usa-se um produto adequado, conforme as indicações da embalagem."},
+    {"t": "h2", "x": "7. Sem pressa para mudar de vaso"},
+    {"t": "p", "x": "Se a planta está bem, a mudança de vaso pode esperar pela primavera. Só justifica pressa se as raízes saírem pelos furos de drenagem ou se a água escorrer logo, sem ser absorvida."},
+    {"t": "h2", "x": "Em resumo"},
+    {"t": "ul", "x": [
+      "Mais luz, mas sem encostar as folhas ao vidro frio.",
+      "Regar menos e confirmar a terra antes.",
+      "Mais humidade junto dos aquecedores, sem molhar a base do vaso.",
+      "Plantas longe de correntes de ar e de aquecedores.",
+      "Adubo em pausa e folhas inspecionadas todas as semanas.",
+      "Mudança de vaso adiada para a primavera."
+    ]},
+    {"t": "p", "x": "Cada espécie tem as suas necessidades, por isso vale a pena consultar as indicações da planta em causa."}
+  ]
+}

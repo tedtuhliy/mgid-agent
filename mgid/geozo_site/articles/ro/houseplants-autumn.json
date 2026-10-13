@@ -1,0 +1,40 @@
+{
+  "rubric": "Plante de apartament",
+  "title": "Plantele de apartament toamna: 7 sfaturi ca să ajungă bine până în primăvară",
+  "teaser": "Zilele mai scurte și aerul uscat din locuințele încălzite schimbă nevoile plantelor. Iată șapte ajustări simple, de la lumină și udare până la rempotare.",
+  "description": "Șapte sfaturi pentru plantele de apartament toamna: lumină, udare, umezeala aerului, curenți, hrănire, controlul frunzelor și rempotarea.",
+  "heroAlt": "Un bonsai mic, cu frunze verzi lucioase, într-un vas ceramic maroniu, pe o masă de lemn, în fața unui perete luminos.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Toamna zilele se scurtează, iar odată cu pornirea încălzirii aerul din casă devine mai uscat. Multe plante de apartament reacționează: își pierd frunzele, se alungesc sau încetează să crească. De cele mai multe ori e de ajuns să schimbați puțin felul în care le îngrijiți."},
+    {"t": "p", "x": "Iată șapte lucruri care ajută la majoritatea plantelor de apartament."},
+    {"t": "h2", "x": "1. Dați-le mai multă lumină"},
+    {"t": "p", "x": "Toamna lumina scade chiar și la ferestrele dinspre sud. Apropiați plantele de geam, dar nu lăsați frunzele să atingă sticla rece."},
+    {"t": "p", "x": "Ștergeți frunzele cu o cârpă umedă din două în două săptămâni: stratul de praf reține o parte din lumina de care au nevoie."},
+    {"t": "tip", "x": "Rotiți ghiveciul cu un sfert de tură o dată pe săptămână, ca planta să crească drept."},
+    {"t": "h2", "x": "2. Udați mai rar, dar verificați pământul"},
+    {"t": "p", "x": "Plantele cresc mai încet și beau mai puțină apă. Înainte de udare înfigeți un deget în pământ: dacă primii 2-3 cm sunt uscați, puteți uda; dacă nu, mai așteptați."},
+    {"t": "p", "x": "Folosiți apă la temperatura camerei și goliți farfuria de sub ghiveci după o jumătate de oră."},
+    {"t": "h2", "x": "3. Mai multă umezeală lângă calorifere"},
+    {"t": "p", "x": "Caloriferele usucă aerul. Puneți ghivecele pe o tavă cu pietriș ud, fără ca apa să atingă fundul ghiveciului, sau grupați mai multe plante: împreună rețin ceva mai multă umezeală în jurul lor."},
+    {"t": "h2", "x": "4. Departe de curenți și de surse de căldură"},
+    {"t": "p", "x": "Schimbările bruște de temperatură fac frunzele să cadă. Nu lăsați plantele lângă geamul deschis la aerisire și nu le puneți chiar deasupra caloriferului. Noaptea, mutați-le puțin mai departe de sticla rece."},
+    {"t": "h2", "x": "5. Hrăniți mai rar sau deloc"},
+    {"t": "p", "x": "În lunile reci majoritatea plantelor se odihnesc, iar un îngrășământ în plus nu le ajută. Opriți hrănirea toamna și reluați-o primăvara, când apar frunze noi."},
+    {"t": "p", "x": "Fac excepție plantele care înfloresc iarna: pentru ele urmați indicațiile specifice speciei."},
+    {"t": "h2", "x": "6. Controlați frunzele în fiecare săptămână"},
+    {"t": "p", "x": "Aerul uscat atrage păduchii de frunze și păianjenul roșu. Priviți frunzele pe ambele fețe: un luciu lipicios, puncte mici și deschise la culoare sau fire fine ca de păianjen arată că ceva nu e în regulă."},
+    {"t": "p", "x": "Duceți planta la duș cu apă călduță și ștergeți frunzele; dacă nu ajunge, folosiți un produs special pentru plante, după instrucțiunile de pe ambalaj."},
+    {"t": "h2", "x": "7. Nu vă grăbiți cu rempotarea"},
+    {"t": "p", "x": "Toamna rădăcinile se acomodează mai greu într-un ghiveci nou, așa că rempotarea poate aștepta până în primăvară. Faceți-o acum doar dacă ghiveciul a devenit evident prea mic: rădăcini care se văd pe la fund sau apă care trece prin pământ fără să-l îmbibe."},
+    {"t": "h2", "x": "Esențialul"},
+    {"t": "ul", "x": [
+      "Mai multă lumină, dar nu lângă sticla rece.",
+      "Udare mai rară, după verificarea pământului.",
+      "Umezeală în plus lângă calorifere.",
+      "Fără curenți și fără căldură directă.",
+      "Hrănirea se oprește până în primăvară.",
+      "Frunzele se controlează săptămânal, iar rempotarea poate aștepta."
+    ]},
+    {"t": "p", "x": "Fiecare plantă are nevoile ei, așa că ghidați-vă și după indicațiile pentru specia pe care o aveți."}
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "rubric": "Domov a záhrada",
+  "title": "Pestovanie levandule v záhrade: slnko, pôda a správny rez",
+  "teaser": "Levanduľa nie je náročná, no vyžaduje slnko, ľahkú priepustnú pôdu a málo vody. Prinášame zásady výsadby, rezu a zimovania aj nápady na sušené kvety do bytu.",
+  "description": "Ako pestovať levanduľu: slnečné miesto, ľahká priepustná pôda, výsadba na jar, striedme zalievanie, rez po odkvitnutí a sušenie kvetov na dekoráciu.",
+  "heroAlt": "Rady kvitnúcej levandule na poli, v pozadí kopce so stromami a hospodárska budova",
+  "body": [
+    {"t": "p", "lead": true, "x": "Levanduľa je obľúbená pre fialové kvety a výraznú vôňu, no nie je vôbec náročná. Potrebuje slnko, ľahkú pôdu a čo najmenej zalievania. Väčšina neúspechov pramení z toho, že sa o ňu staráme príliš."},
+    {"t": "p", "x": "Tu je šesť zásad, od výberu miesta až po sušenie kvetov."},
+    {"t": "h2", "x": "Plné slnko"},
+    {"t": "p", "x": "Levanduľa potrebuje slnečné, teplé a závetrné miesto, kde má priame slnko aspoň šesť hodín denne. V tieni rastie riedko a kvitne len slabo. Vhodný je južný svah alebo okraj záhonu pri múre či dlažbe, kde sa teplo drží dlhšie."},
+    {"t": "h2", "x": "Ľahká, priepustná a skôr chudobná pôda"},
+    {"t": "p", "x": "Darí sa jej v kyprej, piesočnatej alebo štrkovitej pôde, v ktorej voda rýchlo odtečie. Ťažkú hlinitú zem zlepšíte pridaním piesku alebo drobného štrku."},
+    {"t": "p", "x": "Bohatá a silne hnojená pôda levanduli neprospieva: rastlina vyháňa mäkké výhonky a kvitne menej."},
+    {"t": "tip", "x": "Priepustnosť pôdy si môžete overiť jamkou: naplňte ju vodou a ak v nej voda po niekoľkých hodinách stále stojí, pôdu treba zlepšiť."},
+    {"t": "h2", "x": "Výsadba na jar a striedme zalievanie"},
+    {"t": "p", "x": "Levanduľa sa sadí na jar, aby sa do zimy dobre zakorenila. Medzi jednotlivé rastliny nechajte 40 až 60 cm, lebo sa postupne rozrastú do širokých, okrúhlych kríčkov. Sadenice zasaďte do rovnakej hĺbky, v akej rástli v kvetináči, a po výsadbe ich dobre zalejte."},
+    {"t": "p", "x": "Prvé týždne po výsadbe zalievajte pravidelne, kým sa rastliny ujmú. Potom už len striedmo, v lete iba pri dlhšom suchu."},
+    {"t": "h2", "x": "Rez po odkvitnutí"},
+    {"t": "p", "x": "Po odkvitnutí kríky zľahka zastrihnite: odstráňte odkvitnuté stonky a kúsok zelených výhonkov."},
+    {"t": "p", "x": "Nikdy nestrihajte do starého holého dreva, z ktorého už nové výhonky nevyrastú. Bez pravidelného rezu kríky drevnatejú a rozpadajú sa od stredu."},
+    {"t": "h2", "x": "Zimovanie: mokré korene sú horšie než mráz"},
+    {"t": "p", "x": "Levanduľa zvyčajne znesie aj poriadny mráz, horšie je, keď v zime stojí v premočenej pôde. Dbajte preto na dobrý odtok vody. V kvetináči použite substrát s prímesou štrku a samotný kvetináč na zimu premiestnite na chránené miesto, kde ho nebude premáčať dážď. Mladé kríky môžete v prvých zimách voľne prikryť chvojím, ktoré prepúšťa vzduch."},
+    {"t": "h2", "x": "Sušené kvety na dekoráciu"},
+    {"t": "p", "x": "Kvetné stonky zrežte vo fáze pukov, keď sa kvety práve začínajú otvárať. Zviažte ich do malých zväzkov a zavesené hlavičkami nadol nechajte vyschnúť na tmavom, vzdušnom mieste. Vysušenie zvyčajne trvá približne dva týždne."},
+    {"t": "p", "x": "Sušené kvety slúžia ako ozdoba vo váze a vo voňavých vrecúškach dodajú skrini príjemnú vôňu."},
+    {"t": "h2", "x": "Najčastejšie chyby"},
+    {"t": "ul", "x": [
+      "Príliš bohatá pôda a hnojenie.",
+      "Časté zalievanie a mokrá zem v zime.",
+      "Tieň namiesto slnka.",
+      "Strih do starého holého dreva."
+    ]},
+    {"t": "p", "x": "Keď levanduli dáte slnko a priepustnú pôdu, odmení sa vám každý rok kvetmi a vôňou."}
+  ]
+}

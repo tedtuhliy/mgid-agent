@@ -1,0 +1,36 @@
+{
+  "rubric": "Casă și bucătărie",
+  "title": "Cum uscați și păstrați acasă ierburile aromatice",
+  "teaser": "Oregano, cimbru, rozmarin, salvie, mentă sau mărar se usucă bine acasă, fără aparate speciale. Iată când le recoltați, cum le uscați și cum le păstrați în borcane.",
+  "description": "Când recoltați, cum uscați ierburile aromatice în legături, pe sită sau în cuptor, cum recunoașteți că sunt uscate și cum le păstrați în borcane.",
+  "heroAlt": "Două farfurioare albe cu ierburi aromatice uscate și, în fundal, borcane cu condimente.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Ierburile aromatice uscate acasă păstrează un parfum plăcut și nu cer decât puțin timp. Aparatele speciale nu sunt necesare: ajung un loc aerisit, câteva sfori sau, la nevoie, cuptorul. Iată cum le recoltați, cum le uscați și cum le păstrați."},
+    {"t": "p", "x": "Pașii sunt aceiași pentru aproape toate plantele; la final vedeți care se usucă bine și care se congelează."},
+    {"t": "h2", "x": "Recoltați la momentul potrivit"},
+    {"t": "p", "x": "Momentul potrivit e dimineața, după ce roua s-a uscat, dar înainte să se încingă soarele. Alegeți tulpini întregi și curate, de preferat înainte de înflorire, când frunzele au mult parfum."},
+    {"t": "p", "x": "Dacă ierburile trebuie spălate, uscați-le foarte bine înainte de a continua."},
+    {"t": "h2", "x": "Legături atârnate sau tăvi"},
+    {"t": "p", "x": "Faceți legături mici, de 5-8 tulpini, legate cu sfoară, și atârnați-le cu capul în jos, într-un loc întunecos, uscat și aerisit. Legăturile prea groase se usucă greu la mijloc."},
+    {"t": "p", "x": "Dacă nu aveți unde să le atârnați, întindeți frunzele într-un singur strat pe o sită sau pe o tavă acoperită cu hârtie, la umbră, și răsturnați-le din când în când."},
+    {"t": "h2", "x": "Cuptorul, la cea mai mică temperatură"},
+    {"t": "p", "x": "Întindeți frunzele într-un singur strat pe tava de copt și țineți cuptorul la cea mai mică temperatură, cu ușa întredeschisă. Verificați des și scoateți ierburile imediat ce s-au uscat, ca să nu se rumenească."},
+    {"t": "h2", "x": "Cum recunoașteți că sunt uscate"},
+    {"t": "p", "x": "Ierburile uscate se sfărâmă ușor între degete, iar tulpinile se rup, nu se îndoaie. Dacă încă par moi, mai lăsați-le. Înainte de a le pune în borcan, așteptați să se răcească complet."},
+    {"t": "tip", "x": "După uscare, frunzele se desprind ușor, trecând degetele peste tulpină, de la vârf spre bază."},
+    {"t": "h2", "x": "Borcane închise, ferite de lumină"},
+    {"t": "p", "x": "Păstrați ierburile în borcane curate și uscate, închise ermetic, într-un loc ferit de lumină și de căldură, nu deasupra aragazului. Scrieți pe fiecare borcan numele plantei și data."},
+    {"t": "p", "x": "Ele își păstrează aroma aproximativ un an. Frunzele se sfărâmă între degete abia în momentul folosirii, ca parfumul să rămână intact."},
+    {"t": "h2", "x": "Ce se usucă bine și ce se congelează"},
+    {"t": "p", "x": "Oregano, cimbru, rozmarin, salvie, menta și mărarul se usucă bine. Busuiocul, pătrunjelul, coriandrul și arpagicul își pierd mult din aromă prin uscare, așa că e mai bine să le tocați și să le congelați."},
+    {"t": "h2", "x": "De ținut minte"},
+    {"t": "ul", "x": [
+      "Recoltați dimineața, după ce roua s-a uscat, înainte de înflorire.",
+      "Legături mici, atârnate cu capul în jos, în loc întunecos și aerisit.",
+      "Cuptor la cea mai mică temperatură, cu ușa întredeschisă.",
+      "Sunt uscate când se sfărâmă între degete.",
+      "Borcane închise, ferite de lumină, cu data scrisă."
+    ]},
+    {"t": "p", "x": "Cu puțină răbdare și un loc aerisit, ierburile culese vara vă rămân la îndemână și în lunile reci."}
+  ]
+}

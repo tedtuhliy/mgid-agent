@@ -1,0 +1,36 @@
+{
+  "rubric": "Küche und Haushalt",
+  "title": "Brot richtig lagern: So bleibt es länger frisch und weich",
+  "teaser": "Im Kühlschrank wird Brot schneller trocken. Besser aufgehoben ist es im Brotkasten, im Leinenbeutel oder in Papier. Dazu: einfrieren, auffrischen und altes Brot verwerten.",
+  "description": "Wo Brot gut aufgehoben ist, wie man Scheiben einfriert, altbackenes Brot auffrischt und was aus Resten werden kann: Croutons, Paniermehl und Arme Ritter.",
+  "heroAlt": "Zwei Hände halten eine Scheibe Brot mit grober Krume über einem durchsichtigen Beutel.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Ein frisch gekaufter Laib wird manchmal schon nach zwei, drei Tagen trocken oder zäh. Mit dem richtigen Platz und ein paar Handgriffen bleibt Brot meist deutlich länger weich und aromatisch."},
+    {"t": "p", "x": "Hier steht, wie Sie Brot lagern, einfrieren und auffrischen und was sich aus Resten machen lässt."},
+    {"t": "h2", "x": "Warum der Kühlschrank Brot austrocknet"},
+    {"t": "p", "x": "Bei niedrigen Temperaturen wird Brot schneller altbacken: Die Krume trocknet aus, die Kruste wird zäh. Der Kühlschrank ist deshalb für Brot meist kein guter Platz."},
+    {"t": "p", "x": "Bei Zimmertemperatur bleibt es deutlich länger weich, solange es luftig und trocken liegt."},
+    {"t": "h2", "x": "Brotkasten, Leinenbeutel oder Papier"},
+    {"t": "p", "x": "Ein Brotkasten mit kleinen Lüftungsöffnungen, ein Leinenbeutel oder ein Bogen Papier sind gute Plätze. Sie gleichen Feuchtigkeit aus, ohne das Brot luftdicht einzuschließen."},
+    {"t": "p", "x": "Brot mit fester Kruste, etwa Bauernbrot oder Baguette, hält sich in Papier oder Leinen besser, weil die Kruste knusprig bleibt. Weiche Sorten wie Toastbrot mögen den Brotkasten oder einen Beutel. Angeschnittene Laibe legen Sie mit der Schnittfläche nach unten ab."},
+    {"t": "h2", "x": "Scheiben einfrieren"},
+    {"t": "p", "x": "Schneiden Sie das Brot in Scheiben und legen Sie Backpapier dazwischen, dann lassen sich die Scheiben einzeln entnehmen. In einem Gefrierbeutel halten sie sich mehrere Wochen. Zum Toasten kommen sie direkt aus dem Gefrierfach in den Toaster."},
+    {"t": "tip", "x": "Frieren Sie Brot schon am Tag des Einkaufs ein, nicht erst, wenn es trocken wird."},
+    {"t": "h2", "x": "Altbackenes Brot auffrischen"},
+    {"t": "p", "x": "Ein hartes Brot lässt sich oft noch retten. Befeuchten Sie die Kruste mit ein paar Tropfen Wasser und legen Sie das Brot für etwa zehn Minuten in den heißen Backofen (rund 180 °C). Danach ist es wieder knusprig, sollte aber noch am selben Tag gegessen werden."},
+    {"t": "h2", "x": "Brotkasten sauber und trocken halten"},
+    {"t": "p", "x": "Wischen Sie den Brotkasten regelmäßig aus, entfernen Sie Krümel und lassen Sie ihn vollständig trocknen, bevor das Brot wieder hineinkommt. Warmes Brot sollte vorher abkühlen."},
+    {"t": "p", "x": "Zeigt sich Schimmel, werfen Sie das ganze Brot weg, nicht nur die betroffene Stelle. Reinigen Sie den Brotkasten danach gründlich."},
+    {"t": "h2", "x": "Altes Brot sinnvoll verwenden"},
+    {"t": "p", "x": "Aus trockenem Brot lassen sich Croutons für Suppe und Salat rösten, Paniermehl reiben oder Arme Ritter (French Toast) in der Pfanne ausbacken. Für Croutons würfeln Sie das Brot und rösten es mit etwas Öl und Gewürzen goldbraun. So landet kaum ein Rest im Abfall."},
+    {"t": "h2", "x": "Zum Merken"},
+    {"t": "ul", "x": [
+      "Brot gehört nicht in den Kühlschrank, sondern in Brotkasten, Leinenbeutel oder Papier.",
+      "Angeschnittene Laibe mit der Schnittfläche nach unten ablegen.",
+      "Scheiben mit Backpapier dazwischen einfrieren und gefroren toasten.",
+      "Altbackenes mit Wasser und Hitze auffrischen.",
+      "Brotkasten sauber und trocken halten; bei Schimmel das ganze Brot entsorgen."
+    ]},
+    {"t": "p", "x": "So bleibt Brot länger angenehm frisch, und aus Resten entsteht oft noch ein zweites Gericht."}
+  ]
+}

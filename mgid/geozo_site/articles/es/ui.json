@@ -1,0 +1,19 @@
+{
+  "brand_tag": "consejos",
+  "read_also": "Para seguir leyendo",
+  "read_min": "{n} min de lectura",
+  "home_title": "Hogar, cocina y jardín",
+  "home_intro": "Consejos prácticos para la cocina, las plantas de interior y un pequeño jardín. Textos breves y claros, pensados para leer con calma.",
+  "all_articles": "Todos los artículos",
+  "nav_home": "Inicio",
+  "nav_about": "Quiénes somos",
+  "nav_contact": "Contacto",
+  "nav_privacy": "Política de privacidad",
+  "disclosure": "Los textos de este sitio tienen carácter informativo. Mostramos publicidad de empresas colaboradoras —cada bloque publicitario lleva la indicación «Publicidad»— y utilizamos cookies para el funcionamiento del sitio y de esos bloques.",
+  "cookie": "Utilizamos cookies para el funcionamiento del sitio y de los bloques publicitarios.",
+  "cookie_more": "Más información",
+  "cookie_ok": "Entendido",
+  "disclaimer": "Este texto tiene un fin meramente informativo: conviene seguir siempre las indicaciones del fabricante y atender a las necesidades de cada planta o producto.",
+  "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+  "date_fmt": "{d} de {month} de {y}"
+}

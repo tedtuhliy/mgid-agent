@@ -1,0 +1,36 @@
+{
+  "rubric": "Fűszernövények",
+  "title": "Fűszernövények az ablakpárkányon: mi díszlik bent, és hogyan gondozza őket",
+  "teaser": "Néhány fűszernövény a legtöbb lakásban is jól érzi magát, ha elég fényt kap, és nem öntözik túl. Áttekintjük, melyik fajt érdemes választani, és mire figyeljen a gondozás során.",
+  "description": "Bazsalikom, menta, petrezselyem, metélőhagyma és kakukkfű az ablakpárkányon: fény, cserép, öntözés, visszacsípés és a gyakori gondok röviden.",
+  "heroAlt": "Dús, üde zöld levelű fűszernövény közelről.",
+  "body": [
+    {"t": "p", "lead": true, "x": "A konyhaablakban nevelt fűszernövények szépek, és főzés közben mindig kéznél vannak. Néhány faj a legtöbb lakásban is jól érzi magát, ha elég fényt kap, és nem öntözik túl."},
+    {"t": "p", "x": "Végigmegyünk az alapvető tudnivalókon, a fajválasztástól a tápoldatozásig."},
+    {"t": "h2", "x": "A fajok kiválasztása"},
+    {"t": "p", "x": "Kezdőknek jó választás a bazsalikom, a menta, a petrezselyem, a metélőhagyma és a kakukkfű. A bazsalikom a meleget, a menta a nedvesebb földet kedveli, a kakukkfű viszont jól bírja a szárazabb talajt. A metélőhagyma szinte gondozásmentes, a petrezselyem pedig lassabban kel, de sokáig szedhető."},
+    {"t": "h2", "x": "Fény: a megfelelő ablak"},
+    {"t": "p", "x": "A fűszernövényeknek naponta 4–6 óra fényre van szükségük, ezért a déli vagy keleti fekvésű ablak való nekik. A nyugati ablaknál is megállják a helyüket, az északi ablaknál viszont általában kevés a fény."},
+    {"t": "p", "x": "Télen, amikor rövidek a nappalok, egy asztali lámpa is segíthet: reggel vagy este néhány órára kapcsolja be a növények fölött. A cserepeket hetente fordítsa el, hogy ne dőljenek a fény felé."},
+    {"t": "h2", "x": "Cserép lyukkal, laza földdel"},
+    {"t": "p", "x": "A cserép alján mindenképp legyen vízelvezető nyílás, alatta alátét, amelyből a felesleges vizet érdemes kiönteni. Laza, jó vízelvezetésű virágföldet használjon, mert a pangó vízben a gyökerek megrothadhatnak. Az agyagcserép szellősebb, a műanyag tovább tartja a nedvességet, ezért az öntözés gyakorisága is más lesz."},
+    {"t": "tip", "x": "A vásárolt, sűrűn álló cserepes bazsalikomot érdemes két-három részre osztani, és külön cserépbe ültetni, így hosszabb ideig megmarad."},
+    {"t": "h2", "x": "Öntözés: akkor, ha a föld felszíne száraz"},
+    {"t": "p", "x": "Akkor öntözzön, ha a föld felső 1–2 centimétere már száraz. Ilyenkor öntse meg alaposan a növényt, hogy a víz átjárja az egész földet, de ne hagyja a vízben állni a cserepet. Hűvösebb, felhős időben ritkábban lesz rá szükség, mint a nyári melegben."},
+    {"t": "h2", "x": "Visszacsípés és szedés"},
+    {"t": "p", "x": "A hajtások csúcsát időnként csípje vissza, mert így a növény elágazik, és bokrosabb lesz. A bazsalikomnál a virágbimbókat is vegye le, hogy a levelek tovább fejlődjenek."},
+    {"t": "p", "x": "Egyszerre legfeljebb a növény egyharmadát szedje le, hogy a maradék gyorsan újra kihajtson. A szedést a hajtások tetejéről kezdje, mert a fiatal levelek aromásabbak."},
+    {"t": "h2", "x": "Gyakori gondok és a tápoldat"},
+    {"t": "p", "x": "A megnyúlt, halvány szárak általában fényhiányt jeleznek, ilyenkor vigye világosabb helyre a növényt. Ha a levelek sárgulnak, gyakran a túl sok víz az oka: várja meg, míg a föld felszíne megszárad."},
+    {"t": "p", "x": "A növekedési időszakban, tavasztól nyár végéig havonta egyszer adjon az öntözővízhez kevés tápoldatot, a gyártó utasítását követve."},
+    {"t": "h2", "x": "Tudnivalók röviden"},
+    {"t": "ul", "x": [
+      "Kezdésnek bazsalikom, menta, petrezselyem, metélőhagyma vagy kakukkfű.",
+      "Déli vagy keleti ablak, télen asztali lámpa.",
+      "Vízelvezető nyílásos cserép és laza föld.",
+      "Akkor öntözzön, ha a föld felső 1–2 centimétere száraz.",
+      "A hajtások visszacsípése és mértékletes szedés."
+    ]},
+    {"t": "p", "x": "Egy-két cserép is elég ahhoz, hogy a konyhában mindig legyen kéznél valami friss, a gondozás pedig könnyen belefér a napi rutinba."}
+  ]
+}

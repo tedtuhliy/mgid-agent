@@ -1,0 +1,37 @@
+{
+  "rubric": "Domov a záhrada",
+  "title": "Presádzanie izbových rastlín: kedy, ako a čomu sa vyhnúť",
+  "teaser": "Väčší kvetináč nie je vždy lepší. Prinášame znaky, podľa ktorých poznáte, že rastlina potrebuje viac miesta, vhodný čas na presádzanie a postup krok za krokom.",
+  "description": "Znaky, že izbová rastlina potrebuje väčší kvetináč, vhodné obdobie, výber substrátu, postup krok za krokom a náhrada vrchnej vrstvy zeminy.",
+  "heroAlt": "Dlaň s hrudkou zeminy a malou mladou rastlinkou na rozmazanom zelenom pozadí",
+  "body": [
+    {"t": "p", "lead": true, "x": "Presádzanie patrí k bežnej starostlivosti o izbové rastliny, no netreba ho robiť tak často, ako si mnohí myslia. Rozhoduje správny čas, primeraná veľkosť kvetináča a šetrný postup. Väčšine chýb sa dá ľahko vyhnúť."},
+    {"t": "p", "x": "Tu je postup od rozpoznania správneho momentu až po starostlivosť po presadení."},
+    {"t": "h2", "x": "Znaky, že je čas presadiť"},
+    {"t": "p", "x": "Jedným zo znakov je, že korene vyrastajú z otvorov na dne kvetináča alebo vytŕčajú nad zeminou."},
+    {"t": "p", "x": "Voda preteká substrátom takmer okamžite a rastlina nerastie, hoci má dosť svetla. Vyššie rastliny sa pod vlastnou váhou môžu prevracať. V takom prípade potrebujú väčší kvetináč."},
+    {"t": "h2", "x": "Vhodný čas: od jari do začiatku leta"},
+    {"t": "p", "x": "Najlepšie sa presádza od jari do začiatku leta, keď rastliny naberajú silu a korene rýchlo rastú. V zime, keď rastlina odpočíva, presádzanie radšej nechajte, ak nie je nevyhnutné."},
+    {"t": "h2", "x": "Kvetináč len o kúsok väčší, zemina čerstvá"},
+    {"t": "p", "x": "Nový kvetináč má byť širší len o dva až tri centimetre. Vo veľkom kvetináči zostáva veľa vlhkej zeminy, ktorú korene nevyužijú, a hrozí prelievanie."},
+    {"t": "p", "x": "Použite čerstvý substrát vhodný pre daný druh. Ak sa kvetináč už používal, najprv ho umyte teplou vodou."},
+    {"t": "h2", "x": "Postup krok za krokom"},
+    {"t": "p", "x": "Deň vopred rastlinu zalejte, aby sa hrudka ľahšie vybrala. Opatrne ju vytiahnite z kvetináča, korene jemne uvoľnite prstami a odstráňte suché, mäkké alebo tmavé časti."},
+    {"t": "p", "x": "Na dno nového kvetináča dajte vrstvu keramzitu alebo drobných kamienkov, aby voda dobre odtekala, a na ňu trochu substrátu. Rastlinu vložte do stredu, po bokoch dosypte zeminu, dobre zalejte a na týždeň ju nechajte mimo silného slnka."},
+    {"t": "tip", "x": "Zeminu netlačte príliš silno, aby zostala kyprá a ku koreňom sa dostal vzduch."},
+    {"t": "h2", "x": "Po presadení nehnojte"},
+    {"t": "p", "x": "Čerstvý substrát obsahuje dosť živín, preto rastlinu nehnojte hneď po presadení. Počkajte niekoľko týždňov, kým sa ujme a začne rásť. Zalievajte striedmo a sledujte nové listy: ukazujú, že sa rastlina ujala."},
+    {"t": "h2", "x": "Kedy nepresádzať a čo namiesto toho"},
+    {"t": "p", "x": "Rastlinu, ktorá práve kvitne alebo je chorá, radšej nepresádzajte. Presádzanie je pre ňu záťaž a mohla by zhodiť kvety či listy, preto počkajte, kým odkvitne alebo sa jej stav zlepší."},
+    {"t": "p", "x": "Ak je kvetináč dostatočne veľký, no zemina je vyčerpaná, stačí vymeniť vrchnú vrstvu. Odoberte približne 2 až 3 cm starej zeminy a nahraďte ju čerstvou."},
+    {"t": "h2", "x": "Presádzanie v bodoch"},
+    {"t": "ul", "x": [
+      "Presádzajte, keď korene vyrastajú z otvorov alebo voda preteká priamo.",
+      "Vhodný čas je od jari do začiatku leta.",
+      "Nový kvetináč má byť širší len o 2 až 3 cm.",
+      "Deň vopred rastlinu zalejte a po presadení nehnojte.",
+      "Kvitnúce alebo choré rastliny nepresádzajte, stačí vymeniť vrchnú vrstvu zeminy."
+    ]},
+    {"t": "p", "x": "S trochou trpezlivosti sa rastlina po presadení ujme a zvyčajne sa už po pár týždňoch opäť rozrastie."}
+  ]
+}

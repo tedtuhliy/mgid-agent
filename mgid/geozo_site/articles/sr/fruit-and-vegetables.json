@@ -1,0 +1,104 @@
+{
+  "rubric": "Dom i kuhinja",
+  "title": "Voće i povrće: šta čuvati zajedno, a šta odvojeno",
+  "teaser": "Jabuke i banane ubrzavaju kvarenje salate, a krompir i luk bolje je razdvojiti. Evo šta u kuhinji ide zajedno, a šta ne, uz jednostavno objašnjenje zašto.",
+  "description": "Zašto neko voće i povrće treba držati odvojeno: etilen, krompir i luk, paradajz, fioke u frižideru i nedeljni pregled zaliha.",
+  "heroAlt": "Fioka frižidera sa crvenim i žutim paprikama, krastavcima, lisnatim povrćem i šargarepom, razvrstanim po pregradama.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Neko voće i povrće ne podnosi zajedničko društvo. Razlog je gas koji plodovi sami ispuštaju, a koji susedima ubrzava zrenje i kvarenje."
+    },
+    {
+      "t": "p",
+      "x": "Kad znate šta sa čim ide, voće i povrće obično duže ostaje sveže, a u smeće odlazi manje."
+    },
+    {
+      "t": "h2",
+      "x": "Etilen: gas koji ubrzava zrenje"
+    },
+    {
+      "t": "p",
+      "x": "Mnogi plodovi dok zru ispuštaju prirodni gas etilen. Za njih je to znak da sazrevaju, ali isti gas ubrzava starenje svega što stoji u blizini."
+    },
+    {
+      "t": "p",
+      "x": "Najviše ga ispuštaju jabuke, kruške, banane i zreo paradajz. Osetljivi su lisnato povrće, krastavci, šargarepa i brokoli, koji pored njih brže venu, žute i gube hrskavost."
+    },
+    {
+      "t": "tip",
+      "x": "Ako želite da tvrda kruška brže dozri, zatvorite je u papirnu kesu zajedno sa bananom."
+    },
+    {
+      "t": "h2",
+      "x": "Krompir i luk: odvojeno, tamno i prozračno"
+    },
+    {
+      "t": "p",
+      "x": "Krompir i crni luk zajedno se obično brže kvare, pa svaki čuvajte u svojoj korpi ili gajbici."
+    },
+    {
+      "t": "p",
+      "x": "Oba traže tamno i prozračno mesto, a ne zatvorenu plastičnu kesu. Krompir ne ide u frižider, a luku je potreban suv vazduh."
+    },
+    {
+      "t": "h2",
+      "x": "Paradajz ne voli frižider"
+    },
+    {
+      "t": "p",
+      "x": "Na hladnom paradajz gubi aromu i postaje brašnast, pa ga je bolje držati na sobnoj temperaturi, van direktnog sunca. Samo veoma zreo paradajz može nekoliko dana u frižider, a pre jela ga izvadite da se ugreje."
+    },
+    {
+      "t": "h2",
+      "x": "Dve fioke u frižideru"
+    },
+    {
+      "t": "p",
+      "x": "Mnogi frižideri imaju dve fioke, a razlika među njima ima smisla. U onu sa većom vlažnošću stavite povrće, naročito lisnato, jer ono najbrže vene."
+    },
+    {
+      "t": "p",
+      "x": "U drugu, suvlju fioku stavite voće: ono bolje podnosi suvlji vazduh, a usput je odvojeno od osetljivog povrća. Ako imate samo jednu fioku, podelite je posudama."
+    },
+    {
+      "t": "h2",
+      "x": "Isečeno čuvajte u zatvorenim posudama"
+    },
+    {
+      "t": "p",
+      "x": "Isečeno voće i povrće brže se suši i upija mirise iz frižidera. Polovinu krastavca, paprike ili luka stavite u posudu sa poklopcem i potrošite u narednih nekoliko dana."
+    },
+    {
+      "t": "h2",
+      "x": "Jednom nedeljno pregledajte zalihe"
+    },
+    {
+      "t": "p",
+      "x": "Jedan mekan ili buđav plod može da pokvari ostale u istoj fioci."
+    },
+    {
+      "t": "p",
+      "x": "Zato jednom nedeljno pregledajte zalihe, izvadite ono što počinje da se kvari, a najzrelije stavite napred da ih prvo potrošite. Ono što je samo malo omekšalo još može da se iskoristi u čorbi ili sosu, ili da se zamrzne."
+    },
+    {
+      "t": "h2",
+      "x": "Ukratko"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Jabuke, kruške, banane i zreo paradajz držite dalje od lisnatog povrća i krastavaca.",
+        "Krompir i luk čuvajte odvojeno, na tamnom i prozračnom mestu.",
+        "Paradajz ostavite na sobnoj temperaturi.",
+        "Povrće stavite u vlažniju, a voće u suvlju fioku.",
+        "Isečeno držite u posudama sa poklopcem, a zalihe pregledajte jednom nedeljno."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Vrste se međusobno razlikuju, pa vremenom zapazite šta u vašoj kuhinji daje najbolje rezultate. Za pakovane proizvode važi uputstvo na pakovanju."
+    }
+  ]
+}

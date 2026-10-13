@@ -1,0 +1,37 @@
+{
+  "rubric": "Dom i kuchnia",
+  "title": "Owoce i warzywa: co przechowywać razem, a co osobno",
+  "teaser": "Niektóre owoce przyspieszają dojrzewanie sąsiadów, a ziemniaki, cebula i pomidory mają własne wymagania. Prosto wyjaśniamy, jak ułożyć zapasy w kuchni i lodówce, żeby dłużej zachowały świeżość.",
+  "description": "Jak przechowywać owoce i warzywa: co z czym trzymać razem, czego unikać obok siebie i jak wykorzystać szuflady w lodówce.",
+  "heroAlt": "Kolorowe papryki, ogórki, marchewki i liście szpinaku ułożone w przezroczystej szufladzie lodówki",
+  "body": [
+    {"t": "p", "lead": true, "x": "Owoce i warzywa psują się w różnym tempie, a niektóre z nich przyspieszają psucie się sąsiadów. Winowajcą jest zwykle etylen, naturalny gaz wydzielany przez dojrzewające owoce. Wystarczy wiedzieć, co z czym nie powinno leżeć obok siebie."},
+    {"t": "p", "x": "Kilka prostych zasad pozwala zachować zakupy w dobrej formie na dłużej."},
+    {"t": "h2", "x": "Etylen w prostych słowach"},
+    {"t": "p", "x": "Etylen to bezwonny gaz, który owoce wydzielają podczas dojrzewania. Dla samego owocu to sygnał do zmięknięcia i osłodzenia. Kłopot pojawia się wtedy, gdy ten sygnał trafia do produktów, które powinny pozostać jędrne."},
+    {"t": "h2", "x": "Kto wydziela etylen, a kto źle go znosi"},
+    {"t": "p", "x": "Dużo etylenu wydzielają jabłka, gruszki, banany i pomidory. Wrażliwe są na niego zielone liście, ogórki, marchew i brokuły: żółkną, miękną albo nabierają goryczy."},
+    {"t": "p", "x": "Dlatego obie grupy lepiej trzymać w osobnych miejscach, na przykład w różnych szufladach lub pojemnikach. Ten sam gaz można wykorzystać z pożytkiem: twarde awokado albo zielone pomidory szybciej dojrzeją w papierowej torbie razem z jabłkiem."},
+    {"t": "h2", "x": "Ziemniaki i cebula osobno"},
+    {"t": "p", "x": "Ziemniaki najlepiej przechowywać w ciemnym, chłodnym i przewiewnym miejscu, ale nie w lodówce. Cebula woli suchy kąt z dobrym obiegiem powietrza. Leżąc obok siebie, zwykle szybciej się psują."},
+    {"t": "p", "x": "Dobrze sprawdzają się skrzynki, kosze i papierowe torby, gorzej plastikowe worki, w których zbiera się wilgoć."},
+    {"t": "h2", "x": "Pomidory nie lubią lodówki"},
+    {"t": "p", "x": "W chłodzie pomidory tracą aromat, a ich miąższ robi się mączysty. Lepiej trzymać je w temperaturze pokojowej, z dala od słońca, aż w pełni dojrzeją. Jeśli jednak trzeba je schować do lodówki, warto wyjąć je na godzinę przed jedzeniem, by choć częściowo odzyskały smak."},
+    {"t": "p", "x": "Podobnie działa chłód na banany: skórka szybko ciemnieje, choć w środku bywają jeszcze jędrne."},
+    {"t": "h2", "x": "Dwie szuflady w lodówce"},
+    {"t": "p", "x": "Wiele lodówek ma dwie szuflady z regulacją wilgotności. Wilgotniejsza jest przeznaczona dla warzyw, zwłaszcza liściastych, a bardziej sucha dla owoców. Dzięki temu warzywa wolniej więdną, a owoce rzadziej pleśnieją. Marchew i burak najdłużej zachowują jędrność właśnie w wilgotnej szufladzie."},
+    {"t": "tip", "x": "Jeśli lodówka nie ma takich szuflad, wystarczy rozdzielić owoce i warzywa na różne półki albo do osobnych pojemników."},
+    {"t": "h2", "x": "Zamknięte pojemniki i cotygodniowy przegląd"},
+    {"t": "p", "x": "Przekrojona papryka, kawałek ogórka czy połówka cebuli szybko wysychają i chłoną zapachy z lodówki. Lepiej schować je do zamkniętego pojemnika lub słoika ze szczelną pokrywką."},
+    {"t": "p", "x": "Raz w tygodniu warto przejrzeć zapasy i usunąć to, co zaczyna się psuć. Jedno gnijące jabłko potrafi szybko zepsuć pozostałe."},
+    {"t": "h2", "x": "Do zapamiętania"},
+    {"t": "ul", "x": [
+      "Jabłka, gruszki, banany i pomidory osobno od warzyw liściastych, ogórków i marchwi.",
+      "Ziemniaki i cebula osobno, w ciemnym i przewiewnym miejscu.",
+      "Pomidory poza lodówką, dopóki nie dojrzeją.",
+      "Wilgotna szuflada dla warzyw, sucha dla owoców.",
+      "Pokrojone produkty w zamkniętych pojemnikach."
+    ]},
+    {"t": "p", "x": "Taki porządek wymaga kilku minut przy układaniu zakupów, a potem działa już sam."}
+  ]
+}

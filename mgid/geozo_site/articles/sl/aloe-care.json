@@ -1,0 +1,37 @@
+{
+  "rubric": "Sobne rastline",
+  "title": "Aloe vera doma: svetloba, zalivanje in presajanje",
+  "teaser": "Aloe vera ima raje premalo vode kot preveč. Svetloba, redko zalivanje, rahla zemlja z dobrim odtokom in zimski počitek: kako skrbeti za to sukulento, da ostane čvrsta in zelena.",
+  "description": "Kako skrbeti za aloe vero kot sobno rastlino: svetlo mesto, zalivanje, primerna zemlja in lonec, zimski počitek, mlade rastline in presajanje.",
+  "heroAlt": "Tesen posnetek mesnatih zelenih listov z drobnimi kapljicami vode.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Aloe vera je sukulenta, ki vodo shranjuje v mesnatih listih, zato ji bolj kot pogosto zalivanje ustreza svetlo mesto in zemlja, ki se med zalivanji povsem posuši. Kdor si zapomni to načelo, ima z njo malo dela."},
+    {"t": "p", "x": "Če upoštevate nekaj osnovnih pravil, od svetlobe in zalivanja do presajanja, bo rastlina skozi vse leto ostala čvrsta in zelena."},
+    {"t": "h2", "x": "Svetlo mesto in malo sonca"},
+    {"t": "p", "x": "Aloe vera najbolje uspeva na svetlem mestu, kjer dobi veliko posredne svetlobe, na primer ob vzhodnem ali zahodnem oknu. Nekaj neposrednega sonca zjutraj ali zvečer ji ne škodi, opoldanski žarki skozi steklo pa lahko ožgejo liste."},
+    {"t": "p", "x": "Pri premalo svetlobe se listi stanjšajo in izdolžijo, rastlina pa se začne upogibati proti oknu. Lonec zato občasno zavrtite, da raste enakomerno."},
+    {"t": "h2", "x": "Zalivanje: obilno, a redko"},
+    {"t": "p", "x": "Rastlino zalijte temeljito, tako da voda steče skozi odprtine na dnu lonca, nato pa počakajte, da se zemlja povsem posuši. To običajno traja dva do tri tedne, pozimi pa še dlje."},
+    {"t": "p", "x": "Odvečno vodo iz podstavka odlijte po nekaj minutah, da korenine ne stojijo v vlagi."},
+    {"t": "h2", "x": "Zemlja in lonec"},
+    {"t": "p", "x": "Izberite rahlo mešanico, ki dobro odvaja vodo: zemlji za kaktuse primešajte nekaj peska ali perlita. Lonec mora imeti odprtine na dnu, saj stoječa voda koreninam ne ustreza."},
+    {"t": "p", "x": "Dobra izbira je terakotni lonec, ker porozna glina vlago oddaja in zemlja hitreje presahne."},
+    {"t": "h2", "x": "Zimski počitek"},
+    {"t": "p", "x": "Pozimi rastlina miruje, zato jo zalivajte le malo in je ne gnojite. Postavite jo na svetlo, a ne prehladno mesto, kjer temperatura ne pade pod približno 10 °C. Zmrzali ne prenese, zato jo ob mrzlih nočeh odmaknite od okenskega stekla."},
+    {"t": "h2", "x": "Znaki, da je z zalivanjem nekaj narobe"},
+    {"t": "p", "x": "Če so listi mehki, steklasti in vodeni, je rastlina verjetno dobila preveč vode: zalivanje omejite in preverite odtok. Tanki, zviti in nagubani listi pa običajno kažejo, da je bila zemlja predolgo suha."},
+    {"t": "tip", "x": "Pred vsakim zalivanjem potisnite prst nekaj centimetrov v zemljo: če je še vlažna, počakajte."},
+    {"t": "h2", "x": "Mlade rastlinice in presajanje"},
+    {"t": "p", "x": "Ob matični rastlini sčasoma zrastejo mlade rastlinice. Ko imajo nekaj listov in lastne korenine, jih previdno ločite in posadite v svoj lonec z rahlo zemljo. Pred sajenjem naj se rezna mesta en dan sušijo na zraku."},
+    {"t": "p", "x": "Presajajte, ko je lonec poln korenin, običajno vsako drugo ali tretje leto, in sicer spomladi. Novi lonec izberite le nekoliko večji od starega."},
+    {"t": "h2", "x": "Na kratko o oskrbi"},
+    {"t": "ul", "x": [
+      "Postavite jo na svetlo mesto in se izogibajte opoldanskemu soncu.",
+      "Zalijte temeljito, nato počakajte, da se zemlja povsem posuši.",
+      "Uporabite rahlo zemljo in lonec z odprtinami na dnu.",
+      "Pozimi jo hranite na svetlem in pri več kot 10 °C.",
+      "Presadite jo vsako drugo ali tretje leto, spomladi."
+    ]},
+    {"t": "p", "x": "Pri aloe veri velja preprosto pravilo: raje premalo vode kot preveč."}
+  ]
+}

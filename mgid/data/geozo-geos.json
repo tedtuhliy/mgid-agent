@@ -1,0 +1,268 @@
+{
+ "BG": {
+  "id": 12512632,
+  "name": "Arcadia BG content mobile CPA 0.01",
+  "cpa": 0.01,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160036,
+    "status": 200,
+    "title": "Магданоз и копър в буркан с вода: свежи по-дълго в хладилника"
+   },
+   {
+    "slug": "bread-storage",
+    "id": 28160037,
+    "status": 200,
+    "title": "Хлябът изсъхва в хладилника: къде и как да го запазим мек"
+   }
+  ]
+ },
+ "PL": {
+  "id": 12512633,
+  "name": "Arcadia PL content mobile CPA 0.02",
+  "cpa": 0.02,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160038,
+    "status": 200,
+    "title": "Słoik z wodą zamiast ciasnego woreczka: sposób na świeże zioła"
+   },
+   {
+    "slug": "fruit-and-vegetables",
+    "id": 28160039,
+    "status": 200,
+    "title": "Owoce i warzywa w kuchni: co trzymać razem, a co osobno"
+   }
+  ]
+ },
+ "CZ": {
+  "id": 12512634,
+  "name": "Arcadia CZ content mobile CPA 0.02",
+  "cpa": 0.02,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160040,
+    "status": 200,
+    "title": "Bylinky ve sklenici s vodou: jak je udržet čerstvé déle"
+   },
+   {
+    "slug": "bread-storage",
+    "id": 28160041,
+    "status": 200,
+    "title": "Chléb v lednici tvrdne rychleji: jak ho uložit lépe"
+   }
+  ]
+ },
+ "PT": {
+  "id": 12512635,
+  "name": "Arcadia PT content mobile CPA 0.02",
+  "cpa": 0.02,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160042,
+    "status": 200,
+    "title": "Ervas frescas por mais tempo: o método do frasco com água"
+   },
+   {
+    "slug": "fruit-and-vegetables",
+    "id": 28160043,
+    "status": 200,
+    "title": "Fruta e legumes: o que guardar junto e o que guardar à parte"
+   }
+  ]
+ },
+ "IT": {
+  "id": 12512636,
+  "name": "Arcadia IT content mobile CPA 0.02",
+  "cpa": 0.02,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160044,
+    "status": 200,
+    "title": "Erbe aromatiche fresche più a lungo con un barattolo d’acqua"
+   },
+   {
+    "slug": "houseplants-autumn",
+    "id": 28160045,
+    "status": 200,
+    "title": "Piante di casa in autunno: 7 consigli per arrivare a primavera"
+   }
+  ]
+ },
+ "ES": {
+  "id": 12512638,
+  "name": "Arcadia ES content mobile CPA 0.02",
+  "cpa": 0.02,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160046,
+    "status": 200,
+    "title": "Perejil, eneldo y cilantro duran más con un tarro de agua"
+   },
+   {
+    "slug": "bread-storage",
+    "id": 28160047,
+    "status": 200,
+    "title": "El pan se endurece antes en la nevera: así se guarda mejor"
+   }
+  ]
+ },
+ "DE": {
+  "id": 12512639,
+  "name": "Arcadia DE content mobile CPA 0.04",
+  "cpa": 0.04,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160048,
+    "status": 200,
+    "title": "Kräuter im Glas Wasser aufbewahren: So bleiben sie länger frisch"
+   },
+   {
+    "slug": "fruit-and-vegetables",
+    "id": 28160050,
+    "status": 200,
+    "title": "Obst und Gemüse richtig lagern: Was zusammenpasst und was nicht"
+   }
+  ]
+ },
+ "CH": {
+  "id": 12512640,
+  "name": "Arcadia CH content mobile CPA 0.05",
+  "cpa": 0.05,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160051,
+    "status": 200,
+    "title": "Kräuter im Glas Wasser aufbewahren: So bleiben sie länger frisch"
+   },
+   {
+    "slug": "houseplants-autumn",
+    "id": 28160066,
+    "status": 200,
+    "title": "Zimmerpflanzen im Herbst: 7 Tipps für die kalte Jahreszeit"
+   }
+  ]
+ },
+ "AT": {
+  "id": 12512641,
+  "name": "Arcadia AT content mobile CPA 0.04",
+  "cpa": 0.04,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160068,
+    "status": 200,
+    "title": "Kräuter im Glas Wasser aufbewahren: So bleiben sie länger frisch"
+   },
+   {
+    "slug": "bread-storage",
+    "id": 28160069,
+    "status": 200,
+    "title": "Brot richtig lagern: Warum der Kühlschrank dafür nicht taugt"
+   }
+  ]
+ },
+ "RS": {
+  "id": 12512643,
+  "name": "Arcadia RS content mobile CPA 0.01",
+  "cpa": 0.01,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160070,
+    "status": 200,
+    "title": "Peršun i mirođija: tegla sa vodom umesto zatvorene kese"
+   },
+   {
+    "slug": "fruit-and-vegetables",
+    "id": 28160071,
+    "status": 200,
+    "title": "Koje voće i povrće ne treba čuvati zajedno i zašto"
+   }
+  ]
+ },
+ "RO": {
+  "id": 12512647,
+  "name": "Arcadia RO content mobile CPA 0.01",
+  "cpa": 0.01,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160088,
+    "status": 200,
+    "title": "Cum păstrați verdeața proaspătă: metoda borcanului cu apă"
+   },
+   {
+    "slug": "houseplants-autumn",
+    "id": 28160089,
+    "status": 200,
+    "title": "Plantele de apartament toamna: 7 sfaturi de îngrijire"
+   }
+  ]
+ },
+ "HU": {
+  "id": 12512648,
+  "name": "Arcadia HU content mobile CPA 0.015",
+  "cpa": 0.015,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160090,
+    "status": 200,
+    "title": "Pohár víz a hűtőben: így marad friss a petrezselyem és a kapor"
+   },
+   {
+    "slug": "fruit-and-vegetables",
+    "id": 28160091,
+    "status": 200,
+    "title": "Gyümölcs és zöldség: mit tároljon együtt, és mit külön"
+   }
+  ]
+ },
+ "SK": {
+  "id": 12512649,
+  "name": "Arcadia SK content mobile CPA 0.01",
+  "cpa": 0.01,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160092,
+    "status": 200,
+    "title": "Ako udržať bylinky čerstvé: pohár s vodou namiesto vrecka"
+   },
+   {
+    "slug": "houseplants-autumn",
+    "id": 28160093,
+    "status": 200,
+    "title": "Izbové rastliny na jeseň: 7 tipov, ako sa o ne postarať"
+   }
+  ]
+ },
+ "SI": {
+  "id": 12512650,
+  "name": "Arcadia SI content mobile CPA 0.01",
+  "cpa": 0.01,
+  "teasers": [
+   {
+    "slug": "herbs-in-a-jar",
+    "id": 28160094,
+    "status": 200,
+    "title": "Zelišča v kozarcu z vodo: preprost način, da ostanejo sveža dlje"
+   },
+   {
+    "slug": "bread-storage",
+    "id": 28160095,
+    "status": 200,
+    "title": "Kruh v hladilniku se posuši: kako ga shraniti, da ostane mehak"
+   }
+  ]
+ }
+}

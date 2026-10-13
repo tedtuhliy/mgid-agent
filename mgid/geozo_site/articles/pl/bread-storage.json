@@ -1,0 +1,36 @@
+{
+  "rubric": "Dom i kuchnia",
+  "title": "Jak przechowywać chleb, żeby długo pozostał świeży i miękki",
+  "teaser": "W lodówce chleb twardnieje szybciej niż na blacie, a w odpowiednim opakowaniu długo pozostaje miękki. Wyjaśniamy, gdzie i w czym go trzymać oraz jak odświeżyć czerstwy bochenek.",
+  "description": "Gdzie i w czym trzymać chleb, jak go mrozić i odświeżać oraz co zrobić z czerstwym pieczywem, żeby nic się nie zmarnowało.",
+  "heroAlt": "Dłonie wkładające kromkę ciemnego chleba z chrupiącą skórką do przezroczystego woreczka",
+  "body": [
+    {"t": "p", "lead": true, "x": "Świeży chleb szybko traci miękkość, zwłaszcza gdy trafi w niewłaściwe miejsce. Najczęstszy błąd to schowanie go do lodówki. Kilka prostych nawyków pozwala utrzymać pieczywo w dobrej formie znacznie dłużej."},
+    {"t": "p", "x": "Zasady dotyczą zarówno chrupiących bochenków, jak i miękkiego chleba krojonego."},
+    {"t": "h2", "x": "Dlaczego nie w lodówce"},
+    {"t": "p", "x": "W chłodzie pieczywo traci wilgoć i twardnieje szybciej niż w temperaturze pokojowej, choć mogłoby się wydawać, że chłód mu służy. Lepsza jest sucha, ciemna szafka lub chlebak, z dala od kuchenki i okna."},
+    {"t": "h2", "x": "Chlebak, lniany woreczek albo papier"},
+    {"t": "p", "x": "Najlepiej sprawdza się chlebak z drewna lub ceramiki, woreczek z lnu albo zwykła papierowa torba. Chleb potrzebuje odrobiny powietrza, dlatego szczelne plastikowe opakowanie nie jest dobrym pomysłem: w środku zbiera się wilgoć, a skórka robi się gumowata."},
+    {"t": "p", "x": "Chrupiące bochenki lepiej trzymać w papierze, który pozwala skórce oddychać. Miękki chleb na kanapki dłużej zachowa świeżość w lnianej ściereczce lub w chlebaku. Rozkrojony bochenek warto kłaść przekrojem do dołu, na desce, by miąższ nie wysychał."},
+    {"t": "h2", "x": "Krojenie i mrożenie"},
+    {"t": "p", "x": "Jeśli chleba jest za dużo, najlepiej pokroić go jeszcze tego samego dnia i zamrozić. Między kromki warto włożyć kawałki papieru do pieczenia, żeby się nie zlepiły, a całość zapakować w szczelny woreczek."},
+    {"t": "p", "x": "Kromki wyjmuje się pojedynczo i wkłada prosto do tostera, więc nie trzeba rozmrażać całego bochenka. W zamrażarce chleb może poczekać kilka tygodni."},
+    {"t": "h2", "x": "Odświeżanie czerstwego bochenka"},
+    {"t": "p", "x": "Lekko czerstwy bochenek da się odświeżyć. Wystarczy skropić skórkę kilkoma kroplami wody i na około 10 minut włożyć do gorącego piekarnika. Chleb znów jest chrupiący, ale najlepiej zjeść go od razu, bo po wystygnięciu szybko wraca do poprzedniego stanu."},
+    {"t": "tip", "x": "Do piekarnika lepiej włożyć cały bochenek niż pojedyncze kromki, bo te łatwo przesuszyć."},
+    {"t": "h2", "x": "Czysty i suchy chlebak"},
+    {"t": "p", "x": "Okruchy i wilgoć sprzyjają pleśni, dlatego chlebak warto raz w tygodniu opróżnić, przetrzeć i dokładnie wysuszyć. Nie należy wkładać do niego chleba jeszcze ciepłego."},
+    {"t": "p", "x": "Jeśli na bochenku pojawi się pleśń, lepiej nie odkrawać zepsutego fragmentu. Cały chleb powinien trafić do kosza, a chlebak trzeba przemyć i wysuszyć."},
+    {"t": "h2", "x": "Co zrobić z czerstwym chlebem"},
+    {"t": "p", "x": "Chleb, który stracił miękkość, nie musi się marnować. Pokrojony w kostkę i podpieczony zamieni się w grzanki do zup i sałatek, a wysuszony i zmielony w domową bułkę tartą. Z kromek namoczonych w mleku z jajkiem można usmażyć tosty francuskie."},
+    {"t": "h2", "x": "Krótkie podsumowanie"},
+    {"t": "ul", "x": [
+      "Chleb trzymać poza lodówką: w chlebaku, lnianym woreczku lub papierze.",
+      "Rozkrojony bochenek kłaść przekrojem do dołu.",
+      "Nadmiar pokroić i zamrozić, przekładając kromki papierem do pieczenia.",
+      "Czerstwy bochenek odświeżać kroplami wody i gorącym piekarnikiem.",
+      "Chlebak regularnie wycierać i suszyć, a spleśniałe pieczywo wyrzucić."
+    ]},
+    {"t": "p", "x": "Przy odrobinie uwagi chleb zostanie zjedzony, zanim zdąży się zmarnować."}
+  ]
+}

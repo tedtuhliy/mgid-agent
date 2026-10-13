@@ -1,0 +1,39 @@
+{
+  "rubric": "Dom in vrt",
+  "title": "Kako gojiti sivko: sonce, zemlja in obrezovanje",
+  "teaser": "Sivka potrebuje predvsem sonce, rahlo zemljo in zmerno zalivanje. Kdaj jo posaditi, kako jo obrezati in zakaj ji pozimi bolj škoduje mokra zemlja kot mraz.",
+  "description": "Kako gojiti sivko na vrtu ali v loncu: sončna lega, prepustna zemlja, sajenje, zalivanje, obrezovanje, zimovanje in sušenje cvetov.",
+  "heroAlt": "Polje cvetoče sivke z griči in drevjem v ozadju.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Sivka, ki jo mnogi poznajo tudi kot lavando, ne zahteva veliko pozornosti, če ji ponudite prave razmere. Največ ji pomenijo sonce, rahla zemlja in zmerno zalivanje."},
+    {"t": "p", "x": "Osnove so preproste in segajo od izbire lege do obrezovanja, zimovanja in nabiranja cvetov."},
+    {"t": "h2", "x": "Polno sonce"},
+    {"t": "p", "x": "Sivka je sredozemska rastlina in potrebuje sončno lego, najmanj šest ur neposrednega sonca na dan. V senci raste redko in cveti skromno."},
+    {"t": "p", "x": "Dobro se počuti tudi ob južni steni ali ograji, ki čez dan shrani toploto."},
+    {"t": "h2", "x": "Rahla, prepustna in dokaj revna zemlja"},
+    {"t": "p", "x": "Najbolj ji ustreza rahla, dobro odcedna in dokaj revna zemlja. Težka glinasta tla izboljšajte s peskom ali drobnim prodom, bogate vrtne zemlje in komposta pa sivka ne potrebuje."},
+    {"t": "p", "x": "Preveč hranil spodbudi bujno rast listov na račun cvetov, zato sivke praviloma ne gnojite."},
+    {"t": "h2", "x": "Sajenje in zalivanje"},
+    {"t": "p", "x": "Sadike posadite spomladi, v razmaku 40–60 cm, da imajo dovolj prostora in da zrak med njimi lahko kroži."},
+    {"t": "p", "x": "V prvih tednih zalivajte redno, da se korenine primejo. Ko se sivka ukorenini, jo zalivajte le v daljših sušah, redko, a obilno."},
+    {"t": "tip", "x": "Ob sajenju na dno jamice nasujte pest peska ali drobnega proda, da voda lažje odteče."},
+    {"t": "h2", "x": "Obrezovanje po cvetenju"},
+    {"t": "p", "x": "Po cvetenju sivko rahlo obrežite: odstranite odcvetela stebla in še nekaj centimetrov zelenih poganjkov, da ostane zaobljena in kompaktna."},
+    {"t": "p", "x": "Nikoli ne režite do golih, olesenelih delov brez listov, saj iz njih sivka navadno ne požene več. Redno, a rahlo rezanje pomaga, da grm čez leta ne postane visok, redek in olesenel."},
+    {"t": "h2", "x": "Pozimi je mokrota večja težava kot mraz"},
+    {"t": "p", "x": "Zmrzal sivka običajno prenese, težave pa ji dela zimska mokrota ob koreninah. Zato je pomembna dobra drenaža, v težkih tleh pa je smiselna dvignjena greda."},
+    {"t": "p", "x": "Sivko v loncu posadite v zemljo, pomešano s peskom ali drobnim prodom. Lonec naj ima odprtine na dnu, pozimi pa ga postavite na zavetno mesto in poskrbite, da v podstavku ne obstane voda."},
+    {"t": "h2", "x": "Cvetovi za dom in pogoste napake"},
+    {"t": "p", "x": "Cvetove režite, ko so popki že obarvani, a se še niso odprli. Povežite jih v majhne šopke in posušite na zračnem, senčnem mestu. Posušene šopke lahko uporabite za okras, cvetove pa za dišeče vrečke v omari."},
+    {"t": "p", "x": "Najpogostejše napake so bogata zemlja, preveč vode in senčna lega. Če se jim izognete, sivka raste in cveti več let."},
+    {"t": "h2", "x": "Na kratko o sivki"},
+    {"t": "ul", "x": [
+      "Sivki ponudite polno sonce in prepustno zemljo.",
+      "Sadite spomladi, v razmaku 40–60 cm.",
+      "Ko se ukorenini, zalivajte redko.",
+      "Po cvetenju jo rahlo obrežite, golih olesenelih delov pa ne režite.",
+      "Pozimi ji bolj kot mraz škoduje mokra zemlja."
+    ]},
+    {"t": "p", "x": "Sivka ne zahteva veliko: dovolj ji je sonce, malo vode in zemlja, ki ni preveč bogata."}
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "rubric": "Casa e giardino",
+  "title": "Rinvasare le piante da appartamento: quando, come e cosa evitare",
+  "teaser": "Radici che escono dal fondo, acqua che scorre via subito, crescita ferma: sono i segnali che una pianta ha bisogno di più spazio. Quando e come rinvasare, passo dopo passo, senza stressarla.",
+  "description": "Come capire quando una pianta va rinvasata, il momento giusto, il vaso e il terriccio da scegliere, i passaggi da seguire e i casi in cui aspettare.",
+  "heroAlt": "Una mano aperta regge un piccolo mucchio di terra con una giovane piantina verde.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Una pianta cresce, e prima o poi il suo vaso diventa stretto. Rinvasare nel momento giusto e con pochi accorgimenti le permette di svilupparsi meglio; farlo troppo presto o nel periodo sbagliato, invece, può metterla in difficoltà."
+    },
+    {
+      "t": "p",
+      "x": "Ecco come riconoscere i segnali, scegliere il vaso e procedere con calma."
+    },
+    {
+      "t": "h2",
+      "x": "I segnali di un vaso troppo stretto"
+    },
+    {
+      "t": "p",
+      "x": "Radici che spuntano dai fori di drenaggio o affiorano in superficie sono il segnale più evidente."
+    },
+    {
+      "t": "p",
+      "x": "Altri indizi: l’acqua attraversa il vaso e scorre subito via, perché ormai c’è più radice che terriccio, e la pianta non produce più foglie nuove."
+    },
+    {
+      "t": "h2",
+      "x": "Il momento giusto"
+    },
+    {
+      "t": "p",
+      "x": "Il periodo più adatto va dalla primavera all’inizio dell’estate, quando la pianta riprende a crescere e le radici attecchiscono in fretta. Evitate l’inverno: le piante sono a riposo e reagiscono male a ogni disturbo."
+    },
+    {
+      "t": "h2",
+      "x": "Il vaso e il terriccio"
+    },
+    {
+      "t": "p",
+      "x": "Scegliete un vaso più largo di soli 2-3 cm: uno troppo grande trattiene troppa acqua e le radici rischiano di marcire. Deve avere fori di drenaggio sul fondo; sopra, uno strato di argilla espansa aiuta l’acqua a defluire."
+    },
+    {
+      "t": "p",
+      "x": "Usate terriccio fresco e adatto alla specie: universale per le piante verdi più comuni, più sabbioso per cactus e succulente."
+    },
+    {
+      "t": "tip",
+      "x": "Un vaso nuovo di terracotta va tenuto un’ora in ammollo prima dell’uso, così non sottrae subito acqua al terriccio."
+    },
+    {
+      "t": "h2",
+      "x": "I passaggi, uno per uno"
+    },
+    {
+      "t": "p",
+      "x": "Annaffiate la pianta il giorno prima, così la zolla si stacca più facilmente. Sfilatela dal vaso, sciogliete con delicatezza le radici attorcigliate e tagliate quelle secche o molli con forbici pulite."
+    },
+    {
+      "t": "p",
+      "x": "Sistematela nel vaso nuovo alla stessa altezza di prima, riempite i vuoti con terriccio, premete leggermente e annaffiate. Per una settimana tenetela lontana dal sole forte."
+    },
+    {
+      "t": "h2",
+      "x": "Niente concime subito"
+    },
+    {
+      "t": "p",
+      "x": "Il terriccio nuovo spesso contiene già un po’ di concime e le radici appena sistemate non sono pronte a ricevere altro. Aspettate che compaiano nuove foglie, di solito dopo qualche settimana, prima di riprendere a concimare."
+    },
+    {
+      "t": "h2",
+      "x": "Quando è meglio aspettare"
+    },
+    {
+      "t": "p",
+      "x": "Non rinvasate una pianta in fiore, perché potrebbe perdere i boccioli, né una pianta malata: prima va risolto il problema."
+    },
+    {
+      "t": "p",
+      "x": "Se il vaso è ancora adatto ma il terriccio è impoverito, basta sostituire i primi centimetri con terriccio fresco: la pianta ne trae vantaggio senza lo stress del rinvaso."
+    },
+    {
+      "t": "h2",
+      "x": "Per riassumere"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Radici fuori dai fori, acqua che scorre via e crescita ferma: serve più spazio.",
+        "Il periodo più adatto è dalla primavera all’inizio dell’estate.",
+        "Vaso più largo di soli 2-3 cm, con fori di drenaggio.",
+        "Terriccio fresco e adatto, radici secche tagliate.",
+        "Niente concime subito dopo il rinvaso."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Dopo il rinvaso basta un po’ di pazienza: nelle settimane successive osservate la pianta e annaffiatela con moderazione."
+    }
+  ]
+}

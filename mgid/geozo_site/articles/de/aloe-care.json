@@ -1,0 +1,36 @@
+{
+  "rubric": "Zimmerpflanzen",
+  "title": "Aloe vera im Zimmer: Licht, Gießen und Umtopfen",
+  "teaser": "Die Aloe vera ist genügsam, wenn Standort und Wasser stimmen. Wie viel Licht sie mag, wie man richtig gießt, wann sie umgetopft wird und wie man Kindel abtrennt.",
+  "description": "Pflege der Aloe vera als Zimmerpflanze: heller Standort, durchdringend gießen und abtrocknen lassen, durchlässige Erde, Winterruhe, Kindel und Umtopfen.",
+  "heroAlt": "Nahaufnahme kräftig grüner, fleischiger Blätter mit kleinen Wassertropfen.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Die Aloe vera mit ihren dicken, fleischigen Blättern gilt als pflegeleichte Zimmerpflanze. Sie speichert Wasser in den Blättern und verzeiht eine vergessene Gießrunde deshalb leichter als zu viel Wasser."},
+    {"t": "p", "x": "Mit Licht, sparsamem Gießen und der passenden Erde fühlt sie sich in vielen Wohnungen wohl."},
+    {"t": "h2", "x": "Viel Licht, wenig pralle Mittagssonne"},
+    {"t": "p", "x": "Die Aloe mag einen hellen Platz mit viel indirektem Licht, etwa nahe an einem Süd- oder Westfenster. Etwas direkte Sonne am Morgen oder Abend ist in Ordnung."},
+    {"t": "p", "x": "Stand die Pflanze lange im Dunkeln, gewöhnen Sie sie langsam an mehr Licht. Sonst können die Blätter braune Flecken bekommen."},
+    {"t": "h2", "x": "Gründlich gießen, dann abtrocknen lassen"},
+    {"t": "p", "x": "Gießen Sie durchdringend, bis Wasser aus den Abzugslöchern läuft, und warten Sie dann, bis die Erde vollständig trocken ist. Im Sommer ist das meist nach zwei bis drei Wochen der Fall. Überschüssiges Wasser im Untersetzer entfernen Sie nach kurzer Zeit."},
+    {"t": "tip", "x": "Ein Holzstäbchen in der Erde zeigt es: Kommt es trocken heraus, kann gegossen werden."},
+    {"t": "h2", "x": "Erde, Topf und Abzug"},
+    {"t": "p", "x": "Verwenden Sie eine körnige, durchlässige Erde, etwa Kakteenerde, die Sie zusätzlich mit etwas grobem Sand auflockern."},
+    {"t": "p", "x": "Der Topf braucht Abzugslöcher. Terrakotta ist gut geeignet, weil der Ton Feuchtigkeit nach außen abgibt und die Erde schneller abtrocknet. Da die Aloe eher flach wurzelt, passt ein breiter, nicht zu tiefer Topf."},
+    {"t": "h2", "x": "Winterruhe ohne Frost"},
+    {"t": "p", "x": "Im Winter wächst die Aloe kaum. Stellen Sie sie hell und eher kühl, bei etwa 10 bis 15 °C, und gießen Sie nur sehr selten. Unter etwa 10 °C sollte es nicht fallen, Frost verträgt sie nicht."},
+    {"t": "h2", "x": "Woran Sie Gießfehler erkennen"},
+    {"t": "p", "x": "Zu viel Wasser zeigt sich an weichen, glasig wirkenden Blättern, die am Ansatz faulen können. Bei zu wenig Wasser werden die Blätter dünn und rollen sich ein. Prüfen Sie in beiden Fällen zuerst, wie feucht die Erde ist."},
+    {"t": "h2", "x": "Kindel abtrennen und umtopfen"},
+    {"t": "p", "x": "Mit der Zeit bilden sich seitlich kleine Tochterpflanzen, sogenannte Kindel. Lösen Sie größere Kindel samt Wurzeln vorsichtig ab und setzen Sie sie in einen eigenen Topf."},
+    {"t": "p", "x": "Alle zwei bis drei Jahre braucht die Mutterpflanze frische Erde und einen etwas größeren Topf. Im Frühjahr ist dafür der richtige Zeitpunkt."},
+    {"t": "h2", "x": "Das Wichtigste im Überblick"},
+    {"t": "ul", "x": [
+      "Heller Platz mit viel indirektem Licht, etwas Sonne ist in Ordnung.",
+      "Durchdringend gießen, danach die Erde vollständig abtrocknen lassen.",
+      "Körnige Erde, Abzugslöcher und ein Terrakottatopf.",
+      "Im Winter hell, kühl und frostfrei, nicht unter etwa 10 °C.",
+      "Kindel abtrennen und alle zwei bis drei Jahre umtopfen."
+    ]},
+    {"t": "p", "x": "Wer die Aloe eher etwas zu trocken als zu nass hält, hat meist wenig Mühe mit ihr."}
+  ]
+}

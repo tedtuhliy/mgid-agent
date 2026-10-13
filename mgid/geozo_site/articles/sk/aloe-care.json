@@ -1,0 +1,37 @@
+{
+  "rubric": "Domov a záhrada",
+  "title": "Aloe vera v byte: svetlo, zalievanie a presádzanie",
+  "teaser": "Aloe vera je nenáročná izbová rastlina, ktorá však zle znáša premočenú zem. Prinášame zásady pre svetlo, zalievanie, zimovanie a presádzanie, aby sa jej v byte darilo.",
+  "description": "Starostlivosť o izbovú aloe vera: vhodné svetlo, zalievanie, substrát a kvetináč, zimný odpočinok, odrastky a presádzanie každé dva až tri roky.",
+  "heroAlt": "Zelené mäsité listy aloe s kvapkami vody na povrchu",
+  "body": [
+    {"t": "p", "lead": true, "x": "Aloe vera je sukulent, ktorý si zásoby vody ukladá do mäsitých listov, a preto znesie aj občasné zabudnutie na zálievku. Horšie znáša premáčanie a nedostatok svetla. Pri správnej starostlivosti rastie v byte spoľahlivo mnoho rokov."},
+    {"t": "p", "x": "Tu je všetko podstatné o svetle, vode, substráte a presádzaní."},
+    {"t": "h2", "x": "Svetlo: jasné, ale nie páliace"},
+    {"t": "p", "x": "Aloe sa darí na jasnom mieste s rozptýleným svetlom, napríklad pri východnom alebo západnom okne. Trochu priameho slnka neuškodí, no páliace poludňajšie lúče cez sklo môžu listy zhnednúť. Rastlinu, ktorá bola dlhšie v tieni, privykajte na priame slnko postupne."},
+    {"t": "h2", "x": "Zalievajte vydatne, ale zriedka"},
+    {"t": "p", "x": "Zalejte tak, aby sa zemina dôkladne zmočila, a prebytočnú vodu z misky vylejte. Voda nesmie zostať stáť ani v ozdobnom obale."},
+    {"t": "p", "x": "Potom počkajte, kým zemina úplne vyschne. V lete to zvyčajne býva približne raz za dva týždne, v zime ešte zriedkavejšie."},
+    {"t": "h2", "x": "Substrát a kvetináč"},
+    {"t": "p", "x": "Vhodný je kyprý substrát s prímesou piesku alebo drobného štrku, ktorý nezadržiava vodu. Dobre sa hodí aj hotová zmes určená pre kaktusy a sukulenty."},
+    {"t": "p", "x": "Kvetináč musí mať otvory na odtok a dobre sa hodí hlinený, pretože cez steny odparuje vlhkosť. Pri plastovom kvetináči, ktorý drží vlhkosť dlhšie, zalievajte o niečo zriedkavejšie."},
+    {"t": "h2", "x": "Zimný odpočinok"},
+    {"t": "p", "x": "V zime rastlina spomaľuje rast, preto ju zalievajte len veľmi zriedka a nehnojte. Vyhovuje jej svetlé a chladnejšie miesto, no teplota by nemala klesnúť pod približne 10 °C a v žiadnom prípade nesmie zamrznúť."},
+    {"t": "tip", "x": "Kvetináč postavte na korkovú alebo drevenú podložku, aby ho nechladil studený parapet."},
+    {"t": "h2", "x": "Čo prezrádzajú listy"},
+    {"t": "p", "x": "Mäkké, sklovité a priesvitné listy sú znakom prelievania: zemina je dlho mokrá a korene to zle znášajú."},
+    {"t": "p", "x": "Tenké, zvinuté a zvrásnené listy naopak ukazujú, že rastline chýba voda. V takom prípade rastlinu poriadne zalejte a potom dodržiavajte pravidelný odstup medzi zálievkami."},
+    {"t": "h2", "x": "Odrastky a presádzanie"},
+    {"t": "p", "x": "Pri základe rastliny vyrastajú malé odrastky. Keď majú niekoľko listov a vlastné korene, opatrne ich oddeľte a zasaďte do samostatných kvetináčov s kyprým substrátom."},
+    {"t": "p", "x": "Presádza sa zvyčajne raz za dva až tri roky na jar, do kvetináča len o niečo väčšieho. Ten má byť skôr širší než hlboký, pretože korene aloe sa rozrastajú najmä do šírky. Po presadení počkajte s prvou zálievkou niekoľko dní."},
+    {"t": "h2", "x": "Aloe v skratke"},
+    {"t": "ul", "x": [
+      "Svetlé miesto, trochu priameho slnka neuškodí.",
+      "Zalievajte dôkladne a nechajte zeminu úplne vyschnúť.",
+      "Kyprý substrát s pieskom a kvetináč s otvormi na odtok.",
+      "V zime chladnejšie, bez mrazu, nad približne 10 °C.",
+      "Presádzajte raz za dva až tri roky a odrastky oddeľujte pri presádzaní."
+    ]},
+    {"t": "p", "x": "Aloe vera zvládne aj začiatočník, stačí si pamätať jedno pravidlo: radšej menej vody než viac."}
+  ]
+}

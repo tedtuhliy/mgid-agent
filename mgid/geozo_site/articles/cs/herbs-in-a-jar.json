@@ -1,0 +1,38 @@
+{
+  "rubric": "Domácnost a kuchyně",
+  "title": "Petržel, kopr a koriandr zůstanou čerstvé déle: metoda se sklenicí",
+  "teaser": "Bylinky zabalené v sáčku rychle povadnou. Sklenice s trochou vody funguje jako váza a petržel, kopr nebo koriandr v ní zůstanou čerstvé déle. Stačí pár minut přípravy.",
+  "description": "Jak uchovat petržel, kopr a koriandr ve sklenici s vodou: příprava stonků, výměna vody, výjimka pro bazalku a další způsoby uchování.",
+  "heroAlt": "Svazek čerstvé petržele a kopru ve vysoké skleněné sklenici.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Svazek čerstvé petržele nebo kopru ztratí v lednici za pár dní šťavnatost i vůni a zbytek skončí v koši. Přitom stačí postavit bylinky do sklenice s vodou, stejně jako řezané květiny. Takto uložené často vydrží týden i dva."},
+    {"t": "p", "x": "Postup je jednoduchý, zabere jen pár minut a hodí se pro petržel, kopr i koriandr. U většího množství použijte vyšší nádobu nebo bylinky rozdělte do dvou sklenic."},
+    {"t": "h2", "x": "Zkraťte stonky a přeberte listy"},
+    {"t": "p", "x": "Hned po nákupu rozvažte svazek a odstraňte žluté, slizké nebo povadlé listy. Jinak by kazily i ty zdravé."},
+    {"t": "p", "x": "Spodní konce stonků seřízněte asi o centimetr ostrým nožem, podobně jako u květin. Lépe pak nasávají vodu."},
+    {"t": "h2", "x": "Sklenice s vodou a volný sáček"},
+    {"t": "p", "x": "Do sklenice nalijte dva až tři centimetry studené vody a bylinky do ní postavte stonky dolů. Listy musí zůstat nad hladinou, jinak by ve vodě zahnívaly."},
+    {"t": "p", "x": "Navrch volně nasaďte průhledný sáček a sklenici postavte na polici v lednici. Sáček nezavazujte, vzduch má mít možnost proudit."},
+    {"t": "tip", "x": "Nejlépe se hodí vyšší a užší sklenice, ve které svazek stojí rovně a listy se nemačkají."},
+    {"t": "h2", "x": "Vodu měňte každé dva dny"},
+    {"t": "p", "x": "Každý druhý den vodu vyměňte za čerstvou a konce stonků krátce opláchněte. Pokud se voda zakalí, vyměňte ji dřív. Listy, které zežloutly, rovnou odeberte."},
+    {"t": "p", "x": "Po týdnu stonky znovu o kousek zkraťte, aby dál dobře nasávaly vodu."},
+    {"t": "h2", "x": "Před uložením bylinky neumývejte"},
+    {"t": "p", "x": "Vlhké listy se v lednici kazí rychleji, proto bylinky myjte až těsně před použitím. Pokud jsou po nákupu mokré, nechte je nejdřív oschnout na čisté utěrce."},
+    {"t": "p", "x": "Bylinky z vlastní zahrady jen jemně otřepejte, aby z nich odpadla zemina a drobný hmyz, a teprve pak je uložte."},
+    {"t": "h2", "x": "Výjimka: bazalka nemá ráda chlad"},
+    {"t": "p", "x": "Bazalka pochází z teplých krajů a chlad jí nesvědčí, v lednici by jí rychle černaly listy. Postavte ji proto do sklenice s vodou při pokojové teplotě, mimo přímé slunce a bez sáčku. Vodu měňte stejně často jako u ostatních bylinek."},
+    {"t": "h2", "x": "Další možnosti: utěrka a mrazák"},
+    {"t": "p", "x": "Bylinky můžete také zabalit do lehce navlhčené papírové utěrky a uložit do uzavřené dózy v lednici. Utěrku podle potřeby vyměňte."},
+    {"t": "p", "x": "Na delší dobu je nasekejte, nasypte do formy na led, zalijte trochou vody nebo oleje a zmrazte. Kostičky pak přidávejte přímo do polévek a omáček. Mírně povadlé listy se k vaření hodí také, tam na vzhledu nezáleží."},
+    {"t": "h2", "x": "V kostce"},
+    {"t": "ul", "x": [
+      "Seřízněte konce stonků a odstraňte povadlé listy.",
+      "Do sklenice nalijte dva až tři centimetry vody.",
+      "Navrch volně nasaďte sáček a sklenici uložte do lednice.",
+      "Vodu měňte každé dva dny, bylinky předem neumývejte.",
+      "Bazalku nechte při pokojové teplotě."
+    ]},
+    {"t": "p", "x": "S trochou péče vám jeden svazek vystačí na několik jídel. Doba čerstvosti se liší podle druhu bylinky a podle stavu, v jakém jste ji koupili."}
+  ]
+}

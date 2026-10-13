@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "O nas",
+    "paras": [
+      "Arcadia Blog je majhna spletna revija o domu, kuhinji in vrtu. Objavljamo kratke, praktične članke o shranjevanju hrane, zeliščih, sobnih rastlinah in vsakdanjih opravilih na vrtu, ki jih lahko preizkusite brez posebne opreme.",
+      "Vsa besedila so informativne narave in ne nadomeščajo strokovnega svetovanja. Pri hrani vedno upoštevajte navodila proizvajalca, pri rastlinah pa potrebe posamezne vrste.",
+      "Spletno stran financiramo z oglasi partnerjev. Vsak oglasni blok je jasno označen z besedo »Oglas« in ločen od uredniških besedil."
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "paras": [
+      "Vprašanja, predloge tem in opažanja nam lahko pošljete na elektronski naslov contact@arcadiablog.com.",
+      "Na sporočila odgovorimo v nekaj delovnih dneh. Prosimo, da v sporočilo ne vpisujete občutljivih osebnih podatkov."
+    ]
+  },
+  "privacy": {
+    "title": "Zasebnost in piškotki",
+    "paras": [
+      "Ko obiščete spletno stran, se lahko samodejno zabeležijo tehnični podatki o obisku, na primer vrsta brskalnika in naprave, ogledane strani ter približen čas obiska. Stran za delovanje uporablja tudi piškotke, majhne datoteke, ki jih brskalnik shrani v vaši napravi.",
+      "Oglasni bloki naših partnerjev lahko za prikaz in merjenje oglasov uporabljajo piškotke in podobne tehnologije. Vsak tak blok je označen z besedo »Oglas«.",
+      "Na strani ni uporabniških računov, prijave ali plačil, zato ne zbiramo imen, gesel ali podatkov o plačilnih karticah.",
+      "Piškotke lahko kadar koli izbrišete ali blokirate v nastavitvah brskalnika. Upoštevajte, da lahko po tem nekateri deli strani delujejo drugače.",
+      "Če imate vprašanje o zasebnosti ali piškotkih, nam pišite na contact@arcadiablog.com."
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "rubric": "Jardín",
+  "title": "Cómo cultivar lavanda en el jardín o en maceta: sol, suelo y poda",
+  "teaser": "La lavanda pide poco, pero lo que pide es fijo: mucho sol, un suelo ligero y que no se encharque. Así se planta, se riega y se poda para que se mantenga compacta y florezca cada verano.",
+  "description": "Guía práctica para cultivar lavanda: pleno sol, suelo drenado y más bien pobre, plantación en primavera, riego moderado, poda ligera y flores para secar.",
+  "heroAlt": "Hileras de lavanda en flor en un campo, con una colina cultivada y una casa de campo al fondo.",
+  "body": [
+    {"t": "p", "lead": true, "x": "La lavanda es una planta mediterránea poco exigente: pide mucho sol, un suelo que drene bien y escasa atención. Con unas pocas ideas claras florece cada verano y perfuma el jardín o la terraza."},
+    {"t": "p", "x": "Estas son las claves para plantarla, cuidarla y aprovechar sus flores."},
+    {"t": "h2", "x": "Pleno sol"},
+    {"t": "p", "x": "La lavanda necesita sol directo durante la mayor parte del día. A la sombra se estira, florece poco y se vuelve más sensible al exceso de humedad."},
+    {"t": "p", "x": "En el jardín, un muro orientado al sur o una ladera soleada son lugares muy adecuados."},
+    {"t": "h2", "x": "Un suelo ligero, drenado y más bien pobre"},
+    {"t": "p", "x": "Prefiere las tierras sueltas, arenosas o pedregosas. Un suelo rico y pesado, que retiene el agua, le sienta peor que uno pobre; si el terreno es arcilloso, se mejora con arena gruesa o grava."},
+    {"t": "h2", "x": "Plantación y riego"},
+    {"t": "p", "x": "Conviene plantarla en primavera, dejando entre 40 y 60 cm de una mata a otra para que circule el aire."},
+    {"t": "p", "x": "Hasta que enraíza se riega con regularidad; después, con muy poca agua. Un riego a fondo de vez en cuando es preferible a mojar un poco cada día."},
+    {"t": "h2", "x": "Una poda ligera"},
+    {"t": "p", "x": "Después de la floración se recorta la parte que ha florecido y un poco de tallo verde, para que la mata conserve una forma redondeada. No hay que cortar nunca hasta la madera vieja y desnuda, porque suele brotar mal desde ella."},
+    {"t": "tip", "x": "Podar un poco cada año es más prudente que hacerlo de golpe cada varios años."},
+    {"t": "h2", "x": "El invierno y las macetas"},
+    {"t": "p", "x": "En invierno, la lavanda tolera mejor el frío que el encharcamiento: lo que más la daña es el exceso de humedad en las raíces."},
+    {"t": "p", "x": "En maceta necesita un sustrato con mucha grava o arena, agujeros de drenaje y un lugar soleado, protegido de la lluvia continua."},
+    {"t": "h2", "x": "Flores para secar y errores habituales"},
+    {"t": "p", "x": "Para secar las flores se cortan cuando los capullos empiezan a abrirse, se atan en ramilletes pequeños y se cuelgan boca abajo en un lugar seco y aireado. Después sirven para decorar o para rellenar saquitos que perfuman los armarios."},
+    {"t": "p", "x": "Los fallos más comunes son plantarla en tierra rica, regarla demasiado o ponerla a la sombra."},
+    {"t": "h2", "x": "Lo básico"},
+    {"t": "ul", "x": [
+      "Sol directo la mayor parte del día.",
+      "Suelo ligero, drenado y más bien pobre.",
+      "Plantar en primavera, entre 40 y 60 cm de distancia, y regar poco una vez arraigada.",
+      "Podar con suavidad tras la floración, sin llegar a la madera vieja.",
+      "En invierno, más cuidado con el agua que con el frío."
+    ]},
+    {"t": "p", "x": "Con sol, un suelo que drene bien y una poda suave, la lavanda se mantiene compacta y florece cada año."}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "rubric": "Otthon és konyha",
+  "title": "Gyümölcs és zöldség: mit tároljon együtt, és mit tartson külön",
+  "teaser": "Egyes gyümölcsök olyan gázt bocsátanak ki, amelytől a szomszédos zöldségek hamarabb megromlanak. Megmutatjuk, mit tegyen egymás mellé a hűtőben és a kamrában, és mit tartson külön.",
+  "description": "Az etilén egyszerűen elmagyarázva, és gyakorlati tanácsok: mi kerüljön külön a hűtőben és a kamrában, hová való a paradicsom, a burgonya és a hagyma.",
+  "heroAlt": "Színes paprikák, uborka, spenót és sárgarépa egy átlátszó hűtőfiókban.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Nem mindegy, mi kerül egymás mellé a hűtőben és a konyhapulton. Néhány gyümölcs ugyanis olyan gázt bocsát ki, amely a közelben tárolt zöldségek romlását is meggyorsítja. A jó hír, hogy néhány apró szokással ez könnyen elkerülhető."},
+    {"t": "p", "x": "Hat szempontot veszünk sorra, az alapoktól a heti átnézésig."},
+    {"t": "h2", "x": "Az etilén egyszerűen"},
+    {"t": "p", "x": "Az etilén egy láthatatlan, természetes gáz: egyes gyümölcsök érés közben bocsátják ki. A gyümölcsnek ez az érés része, a szomszédos élelmiszerekre viszont hatással van."},
+    {"t": "p", "x": "Gyorsítja az érést, vagyis a közelben lévő érzékeny élelmiszerek is hamarabb megpuhulnak, megsárgulnak, végül megromlanak."},
+    {"t": "h2", "x": "Etilént termelő és arra érzékeny élelmiszerek"},
+    {"t": "p", "x": "Sok etilént termel az érett alma, a körte, a banán, a barack és a paradicsom. Érzékeny rá a leveles saláta, az uborka, a sárgarépa és a brokkoli: mellettük hamar sárgulnak, puhulnak, a répa pedig keserűvé válhat."},
+    {"t": "p", "x": "Az etilént kibocsátó gyümölcsöket ezért tartsa külön fiókban vagy a konyhapulton, a zöldségektől távol. A leveles zöldeket kissé nedves papírtörlőbe csomagolva, zárt dobozban érdemes tartani."},
+    {"t": "tip", "x": "Ha egy kemény körtét vagy barackot gyorsabban szeretne megérlelni, zárja papírzacskóba egy érett banán mellé."},
+    {"t": "h2", "x": "Burgonya és hagyma: külön, sötétben, szellősen"},
+    {"t": "p", "x": "A burgonya és a hagyma nem tesz jót egymásnak, ezért tartsa őket külön helyen."},
+    {"t": "p", "x": "Mindkettőnek a hűvös, sötét és szellős kamra való; fából készült ládában vagy papírzsákban tárolja őket, műanyag zacskóban ugyanis befülledhetnek. A hidegben a burgonya keményítője cukorrá alakul, ezért a hűtőben édeskés ízűvé válik."},
+    {"t": "h2", "x": "A paradicsom nem szereti a hűtőt"},
+    {"t": "p", "x": "A hideg a paradicsom ízét és állagát is rontja: lisztessé, vizenyőssé válhat. Amíg nem érik meg teljesen, tartsa a konyhapulton, közvetlen napfénytől védve. A teljesen érett darabot rövid időre a hűtőbe is teheti, de fogyasztás előtt hagyja szobahőmérsékletűre melegedni."},
+    {"t": "h2", "x": "A két zöldségtartó fiók"},
+    {"t": "p", "x": "Sok hűtőben két zöldségtartó fiók van, és az egyiken állítható a páratartalom. A zöldségeknek a párásabb, a gyümölcsöknek a szárazabb fiók való. Ha nincs ilyen szabályozás, a gyümölcsöket tegye külön fiókba vagy dobozba."},
+    {"t": "h2", "x": "Szeletelt gyümölcs és heti átnézés"},
+    {"t": "p", "x": "A felszeletelt gyümölcsöt és zöldséget tegye zárt dobozba, így nem szárad ki, és nem veszi át a környező ételek szagát."},
+    {"t": "p", "x": "Hetente egyszer nézze át a készletet, és azonnal vegye ki, ami romlani kezd, mert egy rothadó darab a többit is hamar tönkreteheti."},
+    {"t": "h2", "x": "Összefoglalva: mire érdemes figyelni"},
+    {"t": "ul", "x": [
+      "Az etilént kibocsátó gyümölcsöket tartsa külön a zöldségektől.",
+      "A burgonya és a hagyma külön, sötét, szellős helyre kerüljön.",
+      "A paradicsom a konyhapulton érzi jól magát, nem a hűtőben.",
+      "Két fiók esetén a zöldségek a párásabb, a gyümölcsök a szárazabb fiókba kerüljenek.",
+      "A felvágott darabok zárt dobozba kerüljenek, a készletet pedig hetente érdemes átnézni."
+    ]},
+    {"t": "p", "x": "Egy kis odafigyeléssel a hűtő és a kamra rendezettebb lesz, a készlet pedig áttekinthetőbb."}
+  ]
+}

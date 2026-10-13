@@ -1,0 +1,37 @@
+{
+  "rubric": "Szobanövények",
+  "title": "Aloe vera otthon: fény, öntözés és átültetés",
+  "teaser": "Az aloé a legtöbb lakásban jól érzi magát, ha elég fényt kap, és ritkán, de alaposan öntözik. Összefoglaljuk a föld, a cserép, a téli pihenő, a sarjak és az átültetés tudnivalóit.",
+  "description": "Az aloe vera gondozása lépésről lépésre: világos hely, ritka, alapos öntözés, szemcsés föld, téli pihenő, a sarjak leválasztása és az átültetés.",
+  "heroAlt": "Vízcseppekkel borított zöld aloélevelek közelről.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Az aloe vera a pozsgások közé tartozik, ezért a szárazságot jobban bírja, mint a bőséges vizet. Ha világos helyet és megfelelő földet kap, évekig könnyen gondozható szobanövény marad."},
+    {"t": "p", "x": "Sorra vesszük, mire van szüksége, és mit jeleznek a levelei."},
+    {"t": "h2", "x": "Világos hely, kevés közvetlen nap"},
+    {"t": "p", "x": "Az aloé a világos, de közvetett fényt kedveli, például egy keleti vagy nyugati ablak közelében. Egy kis közvetlen napsütést is elvisel."},
+    {"t": "p", "x": "A forró nyári déli napsütéstől viszont az üveg mögött is megbarnulhatnak a levelei, ezért a napra fokozatosan szoktassa."},
+    {"t": "tip", "x": "A cserepet időnként fordítsa el negyed fordulattal, hogy a növény egyenletesen fejlődjön, és ne dőljön a fény felé."},
+    {"t": "h2", "x": "Alaposan, de ritkán"},
+    {"t": "p", "x": "Öntözzön bőven, hogy a víz átjárja a földet, majd hagyja a talajt teljesen kiszáradni, mielőtt újra öntöz. Nyáron ez általában két-három hetenként esedékes, télen még ritkábban."},
+    {"t": "p", "x": "Az alátétben felgyűlt vizet mindig öntse ki, mert az aloé nem szereti, ha a gyökerei vízben állnak. Hűvösebb, borús időben a föld lassabban szárad, ilyenkor érdemes tovább várni az öntözéssel."},
+    {"t": "h2", "x": "Szemcsés föld, lyukas cserép"},
+    {"t": "p", "x": "Használjon laza, szemcsés keveréket: kaktuszföldet, amelyhez durva homokot vagy apró kavicsot is keverhet. A cserép alján legyen vízelvezető nyílás; a terrakotta cserép ráadásul átereszti a nedvességet, így a föld hamarabb megszárad. A cserép ne legyen sokkal nagyobb a növénynél, mert a sok föld sokáig nedves marad."},
+    {"t": "h2", "x": "Téli pihenő"},
+    {"t": "p", "x": "Télen az aloé lassabban nő, ezért ritkábban kell öntözni, és hűvösebb, de fagymentes helyen érzi jól magát. Ügyeljen rá, hogy a hőmérséklet 10 °C fölött maradjon, és védje a hideg ablaküvegtől és a huzattól. Ilyenkor elég havonta keveset öntözni, vagy akár egyáltalán nem."},
+    {"t": "h2", "x": "A levelek jelzései"},
+    {"t": "p", "x": "A túl sok vizet a puha, üvegesen áttetsző, esetleg barnuló levelek jelzik. Ilyenkor hagyja abba az öntözést, amíg a föld teljesen ki nem szárad, és ellenőrizze a gyökereket."},
+    {"t": "p", "x": "A vízhiányra vékony, begöngyölődő levelek utalnak. Egy alapos öntözés után általában hamar visszanyerik a formájukat."},
+    {"t": "h2", "x": "Sarjak leválasztása és átültetés"},
+    {"t": "p", "x": "A tő mellett idővel kis sarjak jelennek meg. Érdemes megvárni, amíg néhány leveles, saját gyökerű sarjak lesznek, majd óvatosan leválasztani őket, és külön cserépbe ültetni kaktuszföldbe; az első napokban ne öntözze."},
+    {"t": "p", "x": "Az aloét két-három évente érdemes átültetni, tavasszal, egy mérettel nagyobb cserépbe, és a régi földet is cserélje frissre."},
+    {"t": "h2", "x": "Összefoglalás"},
+    {"t": "ul", "x": [
+      "Világos, közvetett fény, kevés közvetlen nap.",
+      "Alapos öntözés, majd a föld teljes kiszáradása.",
+      "Szemcsés föld és vízelvezető nyílásos, lehetőleg terrakotta cserép.",
+      "Télen hűvös, de fagymentes hely, legalább 10 °C.",
+      "Puha, üveges levél: túl sok víz; vékony, begöngyölődő levél: kevés víz."
+    ]},
+    {"t": "p", "x": "Az aloé nem kíván sok törődést, csak a megfelelő helyet és egy kis türelmet: a ritkább, de alapos öntözés a fő szabály."}
+  ]
+}

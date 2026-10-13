@@ -1,0 +1,40 @@
+{
+  "rubric": "Domácnost a kuchyně",
+  "title": "9 jednoduchých pravidel, jak udržet potraviny déle čerstvé",
+  "teaser": "Kam v lednici patří syrové maso, proč jablka nepatří vedle salátu a jak správně mrazit. Devět praktických pravidel, díky kterým skončí v koši méně jídla.",
+  "description": "Devět praktických pravidel pro lednici, mrazák a spíž: rozmístění potravin, ovoce a zelenina, chléb, mrazení i skladování uvařeného jídla.",
+  "heroAlt": "Otevřená lednice s přehledně srovnanými potravinami: dózy s hotovými jídly, mísa se salátem, sklenice s petrželí, bobule a zelenina v zásuvkách.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Potraviny se doma kazí často dřív, než je nutné, a bývá to jen otázka uložení. Několik drobných návyků stačí k tomu, aby suroviny vydržely déle čerstvé a méně jídla skončilo v koši. Následujících devět pravidel se dá zavést hned dnes."},
+    {"t": "p", "x": "Žádné z nich nevyžaduje speciální vybavení, stačí trochu pozornosti při ukládání."},
+    {"t": "h2", "x": "1. Správná teplota a rozložení lednice"},
+    {"t": "p", "x": "V lednici by mělo být zhruba 2 až 5 °C. Nejchladněji bývá u zadní stěny a na spodních policích, nejtepleji ve dvířkách. Tam proto patří omáčky a nápoje, které drobné výkyvy teploty snesou."},
+    {"t": "h2", "x": "2. Syrové maso a ryby na spodní polici"},
+    {"t": "p", "x": "Syrové maso a ryby ukládejte na nejnižší polici a vždy do zavřených nádob nebo do pevného obalu. Šťáva tak nemůže kapat na hotová jídla ani na zeleninu a ovoce, které se jedí syrové."},
+    {"t": "h2", "x": "3. Bylinky jako kytice ve váze"},
+    {"t": "p", "x": "Čerstvou petrželovou nať nebo kopr postavte stonky dolů do sklenice s trochou vody, podobně jako řezané květiny. Volně je přikryjte sáčkem a dejte do lednice. Takto vydrží svěží déle než zabalené natěsno."},
+    {"t": "h2", "x": "4. Ovoce a zelenina patří od sebe"},
+    {"t": "p", "x": "Jablka, hrušky, banány a rajčata uvolňují plyn etylen, který u okolního ovoce a zeleniny urychluje zrání i stárnutí. Nedávejte je proto vedle salátu, okurek, mrkve ani brokolice."},
+    {"t": "p", "x": "Brambory a cibuli skladujte odděleně od sebe, na tmavém a vzdušném místě."},
+    {"t": "h2", "x": "5. Mytí bobulí, hub a listů až před jídlem"},
+    {"t": "p", "x": "Jahody, maliny, žampiony i listový salát opláchněte až těsně před jídlem nebo vařením. Vlhkost, která na nich zůstane, urychluje kažení i plesnivění. Bobule skladujte v mělké nádobě vyložené papírovou utěrkou."},
+    {"t": "h2", "x": "6. Chléb, obiloviny a ořechy"},
+    {"t": "p", "x": "Chléb patří do chlebníku nebo plátěného sáčku, ne do lednice. Mouku, rýži, těstoviny i ořechy uchovávejte v dobře uzavřených dózách na suchém a tmavém místě. Ořechy a semínka v teple časem žluknou, proto jich mějte raději menší zásobu."},
+    {"t": "h2", "x": "7. Mrazení po porcích a s datem"},
+    {"t": "p", "x": "Do mrazáku dávejte jen čerstvé potraviny a rozdělte je na porce, které spotřebujete najednou. Zabalte je těsně, aby uvnitř zůstalo co nejméně vzduchu, a označte je obsahem a datem. V mrazáku by mělo být −18 °C nebo méně."},
+    {"t": "h2", "x": "8. Uvařené jídlo včas vychladit a spotřebovat"},
+    {"t": "p", "x": "Uvařené jídlo nenechávejte při pokojové teplotě déle než dvě hodiny. Uložte ho do uzavřené nádoby v lednici a spotřebujte do tří až čtyř dnů. Před jídlem ho vždy důkladně prohřejte."},
+    {"t": "tip", "x": "Horké jídlo rozdělte do několika mělkých nádob, ve velkém hrnci by chladlo mnohem déle."},
+    {"t": "h2", "x": "9. Starší dopředu a čistá lednice"},
+    {"t": "p", "x": "Nově nakoupené potraviny dávejte dozadu a starší dopředu, abyste je spotřebovali včas. Jednou týdně zkontrolujte data na obalech a jednou za měsíc lednici vytřete vlažnou vodou s trochou jedlé sody."},
+    {"t": "h2", "x": "Stručně: co si zapamatovat"},
+    {"t": "ul", "x": [
+      "V lednici mějte 2 až 5 °C, nejchladněji je dole a vzadu.",
+      "Syrové maso patří dolů do zavřených nádob.",
+      "Ovoce uvolňující etylen držte stranou od zeleniny.",
+      "Bobule, houby a listy myjte až těsně před použitím.",
+      "Mrazte čerstvé, po porcích, těsně zabalené a s datem."
+    ]},
+    {"t": "p", "x": "Nemusíte zavádět všechno najednou. Začněte lednicí a mrazákem, ostatní návyky se pak přidají samy. U balených potravin se vždy řiďte údaji na obalu."}
+  ]
+}

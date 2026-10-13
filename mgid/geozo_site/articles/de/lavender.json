@@ -1,0 +1,36 @@
+{
+  "rubric": "Garten",
+  "title": "Lavendel anbauen: Sonne, Boden und der richtige Schnitt",
+  "teaser": "Lavendel mag Sonne und durchlässigen, mageren Boden. Hier steht, wie Sie ihn pflanzen und zurückschneiden, wie er den Winter übersteht und was sich aus den Blüten machen lässt.",
+  "description": "Lavendel im Beet und im Topf: Sonne, durchlässiger Boden, Pflanzabstand, sparsames Gießen, Rückschnitt und das Trocknen der Blüten für Duftsäckchen.",
+  "heroAlt": "Reihen von blühendem Lavendel auf einem Feld vor sanften, bewaldeten Hügeln.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Lavendel gehört zu den Pflanzen, die mit wenig Aufwand viel Freude machen: Er duftet, blüht lange und wird gern von Insekten besucht. Voraussetzung ist ein Platz, der seinen Vorlieben entspricht."},
+    {"t": "p", "x": "Hier lesen Sie, worauf es bei Standort, Boden, Schnitt und Überwinterung ankommt."},
+    {"t": "h2", "x": "Ein Platz in voller Sonne"},
+    {"t": "p", "x": "Lavendel stammt aus dem Mittelmeerraum und braucht möglichst viele Sonnenstunden am Tag. Im Schatten wächst er locker und blüht nur spärlich. Ein warmer Platz, an dem die Luft nach Regen schnell abtrocknet, tut ihm gut."},
+    {"t": "h2", "x": "Durchlässiger, eher magerer Boden"},
+    {"t": "p", "x": "Lavendel wächst in lockerem, gut durchlässigem Boden, der nicht zu nährstoffreich ist. Schwere, lehmige Erde mischen Sie vor dem Pflanzen mit Sand oder feinem Kies. Viel Kompost und Dünger braucht er nicht."},
+    {"t": "tip", "x": "Wer nur schweren Boden hat, pflanzt Lavendel auf einen kleinen Hügel oder in ein Hochbeet."},
+    {"t": "h2", "x": "Pflanzen und Gießen"},
+    {"t": "p", "x": "Gepflanzt wird im Frühjahr. Halten Sie zwischen den Pflanzen 40 bis 60 cm Abstand, damit die Luft zirkulieren kann und die Büsche genug Platz bekommen."},
+    {"t": "p", "x": "Nach dem Anwachsen gießen Sie nur noch sparsam, etwa in langen Trockenperioden. Zu viel Wasser schadet mehr als zu wenig."},
+    {"t": "h2", "x": "Der richtige Schnitt"},
+    {"t": "p", "x": "Schneiden Sie Lavendel nach der Blüte leicht zurück: Entfernen Sie die verblühten Stiele und ein kurzes Stück der grünen Triebe. Gehen Sie nie ins alte, kahle Holz, denn daraus treibt die Pflanze kaum noch aus. So bleibt der Busch kompakt."},
+    {"t": "h2", "x": "Überwintern im Beet und im Topf"},
+    {"t": "p", "x": "Mäßiger Frost schadet Lavendel meist weniger als Nässe um die Wurzeln. Wichtig ist deshalb ein Boden, in dem das Wasser gut abläuft."},
+    {"t": "p", "x": "Im Topf braucht er eine kiesige, durchlässige Mischung und Löcher im Boden. Im Winter stellen Sie den Topf an einen geschützten Platz, etwa an eine Hauswand, und gießen nur selten."},
+    {"t": "h2", "x": "Blüten ernten und trocknen"},
+    {"t": "p", "x": "Schneiden Sie die Stiele im Knospenstadium, kurz bevor sich die ersten Blüten öffnen, und binden Sie sie zu kleinen Sträußen. Kopfüber an einem luftigen, schattigen Platz aufgehängt, trocknen sie in ein bis zwei Wochen."},
+    {"t": "p", "x": "Getrocknet eignen sich die Blüten als Dekoration und für kleine Duftsäckchen aus Stoff, die Schrank oder Schublade einen angenehmen Duft geben."},
+    {"t": "h2", "x": "Kurz und bündig"},
+    {"t": "ul", "x": [
+      "Volle Sonne und ein Platz, an dem Nässe schnell abtrocknet.",
+      "Lockerer, durchlässiger, eher magerer Boden.",
+      "Im Frühjahr pflanzen, 40 bis 60 cm Abstand, danach sparsam gießen.",
+      "Nach der Blüte leicht zurückschneiden, nie ins kahle Holz.",
+      "Häufige Fehler: nährstoffreiche Erde, zu viel Wasser und zu wenig Licht."
+    ]},
+    {"t": "p", "x": "Lavendel verzeiht vieles, nur keine nassen Füße. Mit einem sonnigen Standort und durchlässigem Boden steht dem Duft im Beet oder im Kübel wenig im Weg."}
+  ]
+}

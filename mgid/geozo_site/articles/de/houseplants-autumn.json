@@ -1,0 +1,38 @@
+{
+  "rubric": "Zimmerpflanzen",
+  "title": "Zimmerpflanzen im Herbst: 7 Tipps, damit sie gut durch den Winter kommen",
+  "teaser": "Weniger Licht, trockene Heizungsluft und seltener gießen: Im Herbst ändern sich die Bedürfnisse der Zimmerpflanzen. Sieben Tipps, worauf es jetzt ankommt.",
+  "description": "Sieben Tipps für Zimmerpflanzen im Herbst: mehr Licht, vorsichtiger gießen, mehr Luftfeuchtigkeit an der Heizung, weniger düngen und das Umtopfen verschieben.",
+  "heroAlt": "Ein kleiner Baum mit dunkelgrünen Blättern in einer braunen Keramikschale auf einem Holztisch vor heller Wand.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Im Herbst werden die Tage kürzer, und in den Wohnungen läuft wieder die Heizung. Viele Zimmerpflanzen reagieren darauf mit abfallenden Blättern oder langen, blassen Trieben. Meist genügt es, die Pflege ein wenig anzupassen."},
+    {"t": "p", "x": "Diese sieben Tipps passen zu den meisten Zimmerpflanzen und zu Kräutern auf der Fensterbank."},
+    {"t": "h2", "x": "1. Mehr Licht und saubere Blätter"},
+    {"t": "p", "x": "Auch am Südfenster ist es im Herbst deutlich dunkler als im Sommer. Rücken Sie die Pflanzen näher ans Licht, aber nicht an die kalte Scheibe. Ein feuchtes Tuch befreit die Blätter alle zwei Wochen vom Staub, der Licht schluckt."},
+    {"t": "h2", "x": "2. Weniger gießen, Erde prüfen"},
+    {"t": "p", "x": "Bei kühleren Temperaturen wachsen Pflanzen langsamer und brauchen weniger Wasser. Prüfen Sie vor dem Gießen mit dem Finger, ob die oberen 2 bis 3 cm der Erde trocken sind. Wasser im Untersetzer gießen Sie nach etwa einer halben Stunde aus."},
+    {"t": "tip", "x": "Ein Topf mit trockener Erde ist spürbar leichter als ein durchfeuchteter; mit etwas Übung genügt es, ihn kurz anzuheben."},
+    {"t": "h2", "x": "3. Die Luft an der Heizung befeuchten"},
+    {"t": "p", "x": "Heizungsluft ist sehr trocken. Stellen Sie die Töpfe auf einen Untersetzer mit feuchten Kieselsteinen, ohne dass der Topfboden im Wasser steht, oder gruppieren Sie mehrere Pflanzen: So bleibt rund um die Blätter etwas mehr Feuchtigkeit."},
+    {"t": "p", "x": "Besprühen hilft nicht jeder Pflanze. Arten mit behaarten Blättern, etwa Usambaraveilchen, vertragen es schlecht."},
+    {"t": "h2", "x": "4. Zugluft und Heizkörper meiden"},
+    {"t": "p", "x": "Plötzliche Temperaturwechsel sind eine häufige Ursache für abfallende Blätter. Stellen Sie Pflanzen weder direkt über den Heizkörper noch in den Luftzug eines gekippten Fensters. Beim Lüften tragen Sie empfindliche Arten kurz in einen anderen Raum."},
+    {"t": "h2", "x": "5. Weniger düngen"},
+    {"t": "p", "x": "Im Winter ruhen die meisten Pflanzen und brauchen keinen Dünger. Beenden Sie das Düngen im Herbst und beginnen Sie im Frühjahr wieder, sobald neue Blätter erscheinen. Pflanzen, die im Winter blühen, versorgen Sie nach den Angaben für die jeweilige Art."},
+    {"t": "h2", "x": "6. Einmal pro Woche auf Schädlinge achten"},
+    {"t": "p", "x": "Trockene Luft begünstigt Spinnmilben und Blattläuse. Sehen Sie sich die Blätter auch von unten an: klebrige Beläge, winzige helle Punkte oder feine Gespinste sind Hinweise auf Schädlinge."},
+    {"t": "p", "x": "Brausen Sie die Pflanze zunächst lauwarm ab. Bei starkem Befall richten Sie sich nach der Packungsanleitung eines geeigneten Mittels."},
+    {"t": "h2", "x": "7. Mit dem Umtopfen nicht eilen"},
+    {"t": "p", "x": "Sieht die Pflanze kräftig aus, warten Sie mit dem Umtopfen bis zum Frühjahr, denn im Herbst wachsen die Wurzeln schlechter an. Nur wenn Wurzeln aus den Abzugslöchern wachsen oder das Wasser sofort durchläuft, kann es früher nötig sein."},
+    {"t": "h2", "x": "Die wichtigsten Punkte"},
+    {"t": "ul", "x": [
+      "Näher ans Licht, aber nicht an die kalte Scheibe.",
+      "Seltener gießen und vorher die Erde prüfen.",
+      "Luftfeuchtigkeit an der Heizung erhöhen.",
+      "Zugluft und direkte Heizungsluft meiden.",
+      "Düngen bis zum Frühjahr pausieren, Blätter wöchentlich kontrollieren.",
+      "Umtopfen auf das Frühjahr verschieben."
+    ]},
+    {"t": "p", "x": "Jede Pflanzenart hat eigene Ansprüche – schauen Sie deshalb auch in die Pflegehinweise zu Ihrer Pflanze."}
+  ]
+}

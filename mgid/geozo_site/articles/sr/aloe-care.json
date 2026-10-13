@@ -1,0 +1,105 @@
+{
+  "rubric": "Dom i bašta",
+  "title": "Aloja vera u kući: svetlost, zalivanje i presađivanje",
+  "teaser": "Aloja vera voli puno svetlosti, a zalivanje joj prija retko, ali temeljno. Evo šta joj je potrebno od zemlje i saksije, kako izgledaju listovi kad je vode previše ili premalo i kada je presaditi.",
+  "description": "Nega aloje vere kod kuće: svetlost, zalivanje, zemlja i saksija, zimsko mirovanje, znaci previše i premalo vode, izdanci i presađivanje.",
+  "heroAlt": "Krupni plan mesnatih zelenih listova sa sitnim kapljicama vode.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Aloja vera je sukulent koji vodu čuva u mesnatim listovima, zbog čega joj više prijaju strpljenje i retko zalivanje nego svakodnevna pažnja. Uz nekoliko osnovnih pravila lako se gaji na prozoru."
+    },
+    {
+      "t": "p",
+      "x": "U nastavku su svetlost, voda, zemlja i presađivanje, korak po korak."
+    },
+    {
+      "t": "h2",
+      "x": "Svetlost: jaka, ali rasuta"
+    },
+    {
+      "t": "p",
+      "x": "Aloji prija mesto sa puno svetlosti, kraj istočnog ili zapadnog prozora, a malo direktnog sunca joj ne smeta. Ako je do sada rasla u senci, na jako podnevno sunce je navikavajte postepeno, jer listovi mogu da dobiju smeđe fleke."
+    },
+    {
+      "t": "tip",
+      "x": "Saksiju povremeno okrenite za četvrt kruga, da aloja raste ravnomerno, a ne samo ka prozoru."
+    },
+    {
+      "t": "h2",
+      "x": "Zalivajte temeljno, pa sačekajte da se zemlja osuši"
+    },
+    {
+      "t": "p",
+      "x": "Zalivajte obilno, dok voda ne iscuri kroz otvore na dnu, a zatim sačekajte da se zemlja potpuno osuši pre sledećeg zalivanja. Leti je to često jednom u nekoliko nedelja, a zimi još ređe. Višak vode iz tacne uvek izlijte."
+    },
+    {
+      "t": "p",
+      "x": "Zemlja je potpuno suva tek kad je suva i dublje, a ne samo na površini, pa je proverite do dubine od nekoliko centimetara."
+    },
+    {
+      "t": "h2",
+      "x": "Zemlja i saksija"
+    },
+    {
+      "t": "p",
+      "x": "Potreban je rastresit, peskovit supstrat, na primer onaj za kaktuse i sukulente, ili obična zemlja pomešana sa peskom ili sitnim šljunkom."
+    },
+    {
+      "t": "p",
+      "x": "Saksija obavezno mora da ima otvore na dnu. Terakota je dobar izbor, jer upija vlagu i brže se suši."
+    },
+    {
+      "t": "h2",
+      "x": "Zimsko mirovanje"
+    },
+    {
+      "t": "p",
+      "x": "Zimi aloja miruje, pa je zalivajte samo povremeno, tek toliko da zemlja ne ostane potpuno suva mesecima. Najbolje joj je na svetlom i hladnijem mestu, ali bez mraza: temperatura ne bi trebalo da padne ispod 10 °C. Čuvajte je i od hladnog stakla i promaje."
+    },
+    {
+      "t": "h2",
+      "x": "Šta listovi govore o zalivanju"
+    },
+    {
+      "t": "p",
+      "x": "Mekani, providni, gotovo staklasti listovi, često sa smeđim tragovima pri osnovi, znak su da je vode previše. Tada prestanite sa zalivanjem i proverite da li u tacni stoji voda."
+    },
+    {
+      "t": "p",
+      "x": "Tanki, uvijeni i naborani listovi govore suprotno: biljci nedostaje vode. Zalijte je temeljno i ubuduće skratite razmak između zalivanja."
+    },
+    {
+      "t": "h2",
+      "x": "Izdanci i presađivanje"
+    },
+    {
+      "t": "p",
+      "x": "Pored matične biljke vremenom izrastu mladi izdanci. Kad dostignu nekoliko centimetara, nežno ih odvojite, ostavite dan-dva da se mesto odvajanja prosuši i posadite u zasebne saksije sa suvim, peskovitim supstratom."
+    },
+    {
+      "t": "p",
+      "x": "Aloju presađujte svake dve do tri godine, kad koren popuni saksiju, najbolje u proleće, u saksiju malo širu od stare."
+    },
+    {
+      "t": "h2",
+      "x": "Ukratko"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Jaka rasuta svetlost i malo direktnog sunca.",
+        "Zalivajte temeljno, pa sačekajte da se zemlja potpuno osuši.",
+        "Rastresit peskovit supstrat i saksija sa otvorima, po mogućnosti od terakote.",
+        "Zimi mirovanje, retko zalivanje i temperatura iznad 10 °C.",
+        "Mekani listovi znače previše, a tanki i uvijeni premalo vode.",
+        "Izdanke odvajajte u proleće, a presađujte na svake dve do tri godine."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Aloja je izdržljiva, ali pratite kako reaguje u vašem domu i po potrebi prilagodite svetlost i zalivanje."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "Sobre o Arcadia Blog",
+    "paras": [
+      "O Arcadia Blog é uma pequena revista digital sobre a casa, a cozinha e o jardim. Reúne conselhos práticos, escritos com calma e em linguagem simples: como conservar os alimentos, cuidar das plantas de interior, cultivar ervas aromáticas e tratar do jardim.",
+      "Os textos têm caráter meramente informativo. Cada casa, cada planta e cada produto são diferentes, por isso as indicações do fabricante e as necessidades de cada caso devem prevalecer sempre sobre as recomendações gerais.",
+      "O site é financiado por publicidade de parceiros. Os blocos publicitários estão sempre assinalados com a palavra «Publicidade» e distinguem-se claramente do conteúdo da revista."
+    ]
+  },
+  "contact": {
+    "title": "Contactos",
+    "paras": [
+      "Sugestões, correções e perguntas sobre os textos são bem-vindas e podem ser enviadas para contact@arcadiablog.com.",
+      "As mensagens são lidas com atenção e respondemos no prazo de alguns dias úteis."
+    ]
+  },
+  "privacy": {
+    "title": "Privacidade",
+    "paras": [
+      "Ao visitar o site, são registados dados técnicos da visita, como o tipo de dispositivo e de navegador, o idioma e as páginas consultadas. O site utiliza também cookies, pequenos ficheiros guardados no dispositivo, para funcionar corretamente e recordar que o aviso de cookies já foi lido.",
+      "Os blocos publicitários de parceiros podem utilizar cookies e tecnologias semelhantes para mostrar e medir anúncios. Esses parceiros têm as suas próprias regras de privacidade.",
+      "No site não existem contas de utilizador, registos nem pagamentos: não são pedidos nem guardados nomes, moradas ou dados bancários.",
+      "Os cookies podem ser geridos ou apagados nas definições do navegador, onde também é possível bloqueá-los. O bloqueio pode afetar o funcionamento de alguns elementos do site.",
+      "Para qualquer pergunta sobre privacidade, basta escrever para contact@arcadiablog.com."
+    ]
+  }
+}

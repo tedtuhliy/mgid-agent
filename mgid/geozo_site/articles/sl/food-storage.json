@@ -1,0 +1,39 @@
+{
+  "rubric": "Dom in kuhinja",
+  "title": "9 preprostih pravil, da hrana v kuhinji ostane dlje sveža",
+  "teaser": "Zelišča hitro ovenejo, kruh se posuši, jagode splesnijo. Pogosto je vzrok v tem, kje in kako hrano shranjujemo. Devet preprostih pravil pomaga, da zavržemo manj hrane.",
+  "description": "Devet preprostih pravil za shranjevanje hrane: razporeditev hladilnika, zelišča, sadje in zelenjava, kruh, zamrzovanje in ostanki.",
+  "heroAlt": "Odprt hladilnik z lepo razporejeno svežo hrano: zelišča v kozarcu, jagode v posodicah in zelenjava v predalih.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Hrana se ne pokvari le zato, ker poteče rok uporabnosti: na svežost vplivajo tudi temperatura, vlaga in celo sosedstvo na isti polici. Zbrali smo devet preprostih pravil, ki jih zlahka uvedete v vsaki kuhinji."},
+    {"t": "p", "x": "Za to ni treba kupovati nič posebnega. Dovolj je, da spremenite nekaj navad, in vse, kar kupite, bo zdržalo opazno dlje."},
+    {"t": "h2", "x": "1. Hladilnik razporedite premišljeno"},
+    {"t": "p", "x": "Temperatura v hladilniku naj bo od 2 do 5 °C. Najhladneje je ob zadnji steni in na spodnjih policah, najtopleje pa na vratih. Na vrata zato postavite omake in pijače, mlečne izdelke in jajca pa shranite na policah."},
+    {"t": "h2", "x": "2. Surovo meso in ribe na spodnjo polico"},
+    {"t": "p", "x": "Surovo meso in ribe shranjujte v zaprtih posodah na najnižji polici. Tako sokovi ne bodo kapljali na kuhano hrano, solato ali sadje."},
+    {"t": "h2", "x": "3. Zelišča shranite kot rože v vazi"},
+    {"t": "p", "x": "Šopek zelišč, na primer peteršilja ali koriandra, postavite v kozarec z nekaj centimetri vode, čez liste pa rahlo nataknite vrečko. V tesni vrečki se nabere vlaga in listi hitro potemnijo."},
+    {"t": "tip", "x": "Bazilika hlada ne mara: pustite jo v kozarcu z vodo na kuhinjskem pultu."},
+    {"t": "h2", "x": "4. Sadje in zelenjavo hranite narazen"},
+    {"t": "p", "x": "Jabolka, hruške, banane in paradižnik sproščajo plin etilen, ki pospeši zorenje in kvarjenje sosednjih pridelkov. Hranite jih ločeno od listnate zelenjave, kumar in korenja. Tudi krompir in čebulo shranite narazen, v temnem in prezračenem prostoru."},
+    {"t": "h2", "x": "5. Jagod, gob in listov ne perite vnaprej"},
+    {"t": "p", "x": "Jagodičevje, gobe in solatne liste operite šele tik pred uporabo, saj odvečna vlaga pospeši plesnenje in gnitje. Če ste jih že oprali, jih dobro osušite in shranite v posodi, na dno katere položite papirnato brisačo."},
+    {"t": "h2", "x": "6. Kruh, moka in oreščki"},
+    {"t": "p", "x": "Kruh v hladilniku hitreje postane trd, zato ga raje narežite in zamrznite. Moko, riž in kašo hranite v dobro zaprtih posodah na suhem, oreščke in semena pa na hladnem in temnem, da ne postanejo žarki."},
+    {"t": "h2", "x": "7. Zamrzujte sveže, v porcijah in z datumom"},
+    {"t": "p", "x": "Zamrzujte sveža živila v porcijah, v tesno zaprtih vrečkah ali posodah, pri vrečkah pa iztisnite zrak. Na vsako zapišite datum. Temperatura v zamrzovalniku naj bo −18 °C ali nižja, odmrzujte pa v hladilniku."},
+    {"t": "h2", "x": "8. Kuhane jedi ohladite v dveh urah"},
+    {"t": "p", "x": "Kuhano hrano ohladite in jo v dveh urah pospravite v hladilnik, pojejte pa jo običajno v treh do štirih dneh. Juhe, riž in enolončnice razdelite v manjše posode, da se hitreje ohladijo."},
+    {"t": "h2", "x": "9. Prvi noter, prvi ven in čist hladilnik"},
+    {"t": "p", "x": "Novejše nakupe postavite za starejše, hrano, ki jo je treba pojesti prej, pa naprej. Enkrat na teden obrišite police in odstranite pokvarjeno hrano, vsak mesec pa hladilnik temeljito umijte s toplo vodo."},
+    {"t": "h2", "x": "Na kratko"},
+    {"t": "ul", "x": [
+      "V hladilniku naj bo od 2 do 5 °C, v zamrzovalniku −18 °C.",
+      "Zelišča hranite kot rože v vazi, jagod pa ne perite vnaprej.",
+      "Sadje, ki sprošča etilen, hranite ločeno od zelenjave.",
+      "Kruh raje zamrznite, kot da ga držite v hladilniku.",
+      "Kuhano hrano v dveh urah ohladite in pospravite v hladilnik."
+    ]},
+    {"t": "p", "x": "Vedno pa upoštevajte rok uporabnosti in navodila za shranjevanje na embalaži: ta so pomembnejša od splošnih nasvetov."}
+  ]
+}

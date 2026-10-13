@@ -1,0 +1,37 @@
+{
+  "rubric": "Casa e jardim",
+  "title": "Mudar plantas de vaso: quando fazer, como fazer e o que evitar",
+  "teaser": "Raízes a espreitar pelos furos, água que escorre logo e crescimento parado são sinais de que o vaso ficou pequeno. Quando, como e com que substrato mudar uma planta, e o que convém evitar.",
+  "description": "Como saber se uma planta precisa de um vaso maior, qual é a melhor altura para a mudar, que substrato escolher e como fazer, passo a passo.",
+  "heroAlt": "Uma mão aberta a segurar um punhado de terra com uma pequena planta.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Mudar uma planta de vaso é simples, mas, feito na altura errada ou com um vaso demasiado grande, pode ter o efeito contrário ao pretendido. Um pouco de método evita contratempos."},
+    {"t": "p", "x": "Estes são os pontos a ter em conta antes de pegar na terra nova."},
+    {"t": "h2", "x": "Sinais de que o vaso ficou pequeno"},
+    {"t": "p", "x": "Raízes a espreitar pelos furos de drenagem, água que escorre logo sem ser absorvida e crescimento parado há meses são os sinais mais claros."},
+    {"t": "p", "x": "Terra que seca em poucos dias e uma planta que tomba com facilidade também apontam para um vaso apertado."},
+    {"t": "h2", "x": "A altura certa: da primavera ao início do verão"},
+    {"t": "p", "x": "Nessa altura as plantas estão em crescimento e recuperam depressa. No outono e no inverno, em repouso, é preferível deixá-las em paz, salvo se houver necessidade."},
+    {"t": "h2", "x": "Um vaso só 2 a 3 cm mais largo"},
+    {"t": "p", "x": "Um vaso demasiado grande guarda muita terra húmida à volta das raízes e favorece o apodrecimento. Basta um diâmetro 2 a 3 cm acima do anterior."},
+    {"t": "p", "x": "O substrato deve ser novo e adequado à planta, e o vaso precisa de furos de drenagem. Para plantas que preferem terra leve, mistura-se um pouco de areia grossa ou perlite."},
+    {"t": "h2", "x": "Passo a passo"},
+    {"t": "p", "x": "Rega-se a planta na véspera e retira-se do vaso com cuidado. Soltam-se as raízes com os dedos e cortam-se as secas ou moles com uma tesoura limpa."},
+    {"t": "p", "x": "Coloca-se a planta no centro do vaso novo, à mesma altura de antes, enche-se com substrato e rega-se. Durante cerca de uma semana, fica num sítio claro, sem sol forte."},
+    {"t": "tip", "x": "Se o torrão não sair, uma pancada leve na parede do vaso e uma faca de ponta romba passada junto ao rebordo costumam soltá-lo."},
+    {"t": "h2", "x": "Adubo só mais tarde"},
+    {"t": "p", "x": "O substrato novo já traz reservas, e adubar logo a seguir só sobrecarrega as raízes que acabaram de ser mexidas. Convém esperar quatro a seis semanas."},
+    {"t": "h2", "x": "Quando não mudar de vaso"},
+    {"t": "p", "x": "Uma planta em floração ou debilitada não deve ser mexida: a mudança é um esforço extra de que ela não precisa nesse momento."},
+    {"t": "p", "x": "A alternativa é renovar só a camada de cima: retiram-se os 2 a 3 cm superiores de substrato e repõe-se terra nova."},
+    {"t": "h2", "x": "Para recordar"},
+    {"t": "ul", "x": [
+      "Raízes nos furos e água que escorre logo: sinais de vaso pequeno.",
+      "Mudar da primavera ao início do verão.",
+      "Vaso só 2 a 3 cm mais largo, com furos de drenagem.",
+      "Adubo só quatro a seis semanas depois.",
+      "Planta em floração ou debilitada: renovar apenas a camada de cima."
+    ]},
+    {"t": "p", "x": "Feita com calma e no momento certo, a mudança de vaso dá à planta espaço para crescer sem sobressaltos."}
+  ]
+}

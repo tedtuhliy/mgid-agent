@@ -1,0 +1,36 @@
+{
+  "rubric": "Kert",
+  "title": "Levendula nevelése: napfény, talaj és metszés",
+  "teaser": "A levendula nem igényes, ha jó helyre kerül: napot, laza talajt és mértékletes öntözést kér. Összefoglaljuk az ültetést, a metszést, a téli teendőket és a virágok szárítását.",
+  "description": "A levendula gondozása röviden: napos hely, laza és szegényesebb talaj, takarékos öntözés, könnyű metszés virágzás után, a virágok szárítása.",
+  "heroAlt": "Virágzó levendulasorok napsütésben, dombos vidéken, a háttérben fákkal.",
+  "body": [
+    {"t": "p", "lead": true, "x": "A levendula nem igényes növény, ha olyan helyre kerül, ahol jól érzi magát. Napfényt, laza talajt és mértékletes öntözést kér, a gondozása ennél többet alig igényel."},
+    {"t": "p", "x": "Az ültetéstől a virágok szárításáig hat dolgot érdemes szem előtt tartani."},
+    {"t": "h2", "x": "Napos hely"},
+    {"t": "p", "x": "A levendula teljes napfényt kíván, naponta legalább 6–8 órát. Árnyékban megnyúlik, kevesebb virágot hoz, és az illata is gyengébb lesz. Különösen jól érzi magát déli fekvésű, szélvédett helyen, például egy fal tövében, ahol a hő visszaverődik."},
+    {"t": "h2", "x": "Talaj és ültetés"},
+    {"t": "p", "x": "A levendula a laza, jó vízelvezetésű, inkább szegényes talajt szereti, a nehéz, agyagos földet nem. Az agyagos talajt homokkal vagy apró kaviccsal lazíthatja. Trágyázásra nincs szüksége, a túl gazdag talajtól inkább kevesebbet virágzik."},
+    {"t": "p", "x": "Tavasszal ültesse, a töveket 40–60 centiméterre egymástól, hogy a bokrok kinőhessenek, és a levegő átjárhassa őket."},
+    {"t": "h2", "x": "Takarékos öntözés"},
+    {"t": "p", "x": "Az ültetés után az első hetekben rendszeresen öntözze, amíg a növény meggyökerezik. Utána csak ritkán, de alaposan öntözze, főleg száraz időszakban; a levendula a kevés vizet jobban tűri, mint a sokat. A meggyökerezett, idősebb bokrok a legtöbb nyáron már alig igényelnek öntözést."},
+    {"t": "h2", "x": "Metszés virágzás után"},
+    {"t": "p", "x": "Virágzás után enyhén metssze meg a bokrot: vágja le a virágszárakat, és alattuk még egy kevés zöld hajtást. Ez segít abban, hogy a bokor tömött maradjon, és ne nyíljon szét."},
+    {"t": "p", "x": "Az öreg, csupasz, fás részbe sose vágjon, mert abból a levendula többnyire már nem hajt újra."},
+    {"t": "h2", "x": "Télen a fagynál veszélyesebb a pangó víz"},
+    {"t": "p", "x": "A levendula a fagyot általában jobban bírja, mint a téli nedvességet: a vizes, nehéz talajban a gyökerek hajlamosak a rothadásra. Ezért inkább emelt ágyba vagy lejtős helyre ültesse."},
+    {"t": "p", "x": "Cserépben nevelve használjon laza, kavicsos keveréket, ügyeljen a vízelvezető nyílásra, és télen csak nagyon keveset öntözze. Tartós esőben vagy havazásban érdemes fedett helyre állítani, hogy a föld ne ázzon át."},
+    {"t": "h2", "x": "Szüret és szárítás"},
+    {"t": "p", "x": "A virágszárakat akkor vágja le, amikor a bimbók már színesednek, de még nem nyíltak ki teljesen. Kötegekbe kötve, fejjel lefelé szárítsa száraz, szellős, árnyékos helyen."},
+    {"t": "p", "x": "A szárítás általában két-három hétig tart. A megszáradt virágok vázában díszként is szépek, kis zsákocskába töltve pedig kellemesen illatosítják a szekrényt."},
+    {"t": "h2", "x": "Röviden: mire figyeljen, és mit kerüljön"},
+    {"t": "ul", "x": [
+      "Napos hely: árnyékban a levendula megnyúlik, és kevesebbet virágzik.",
+      "Laza, szegényesebb talaj: a gazdag, nehéz föld nem neki való.",
+      "Takarékos öntözés: a túlöntözés gyakori hiba.",
+      "Metszéskor kerülje az öreg, csupasz, fás részeket.",
+      "Cserépben kavicsos keverék és vízelvezető nyílás kell."
+    ]},
+    {"t": "p", "x": "A levendula türelmes növény: az első évben főleg a gyökerezéssel van elfoglalva, később viszont évről évre szebb bokrot nevel."}
+  ]
+}

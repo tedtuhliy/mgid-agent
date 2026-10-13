@@ -1,0 +1,38 @@
+{
+  "rubric": "Casa e cozinha",
+  "title": "Fruta e legumes: o que guardar junto e o que guardar à parte",
+  "teaser": "Algumas frutas libertam um gás natural que acelera o amadurecimento de tudo o que está por perto. Saber quem fica com quem, na bancada e no frigorífico, ajuda as compras a durar mais dias.",
+  "description": "Fruta e legumes duram mais quando se sabe o que guardar junto e o que guardar à parte: etileno, batatas e cebolas, tomates e gavetas do frigorífico.",
+  "heroAlt": "Pimentos de várias cores, pepinos, espinafres e cenouras arrumados numa gaveta transparente do frigorífico.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Fruta e legumes nem sempre se dão bem uns com os outros: alguns aceleram o estrago dos vizinhos, outros sofrem com o frio. Meia dúzia de regras simples evita muito desperdício."},
+    {"t": "p", "x": "A explicação é simples e a arrumação que daí resulta dá pouco trabalho, tanto na bancada como no frigorífico."},
+    {"t": "h2", "x": "O que é o etileno"},
+    {"t": "p", "x": "O etileno é um gás natural que algumas frutas libertam à medida que amadurecem. Ajuda-as a ficar maduras, mas também acelera o amadurecimento, e o estrago, de tudo o que estiver por perto."},
+    {"t": "p", "x": "Não tem cheiro nem cor: nota-se apenas pelos efeitos, como as bananas que escurecem depressa ou as verduras que amarelecem."},
+    {"t": "h2", "x": "Quem liberta e quem sofre"},
+    {"t": "p", "x": "Maçãs, peras, bananas, pêssegos e tomates maduros libertam muito etileno. Verduras de folha, pepinos, cenouras e brócolos são sensíveis: amarelecem, amolecem e perdem frescura mais depressa."},
+    {"t": "p", "x": "Por isso, convém manter os dois grupos em sítios diferentes: a fruta na fruteira, as verduras e os legumes na gaveta do frigorífico."},
+    {"t": "tip", "x": "Para amadurecer um abacate ou uma pera ainda duros, costuma ajudar um saco de papel fechado com uma banana madura."},
+    {"t": "h2", "x": "Batatas e cebolas, também separadas"},
+    {"t": "p", "x": "Batatas e cebolas não devem partilhar o mesmo espaço: juntas, estragam-se mais depressa. Ambas preferem um lugar escuro, fresco e arejado, como um cesto aberto num armário ventilado."},
+    {"t": "p", "x": "As batatas também não gostam do frigorífico: o frio faz o amido transformar-se em açúcar e o sabor muda."},
+    {"t": "h2", "x": "Tomates fora do frigorífico"},
+    {"t": "p", "x": "O frio tira sabor aos tomates e deixa a polpa farinhenta. Ficam melhor na bancada, longe do sol direto, e só vão ao frigorífico quando já estão muito maduros e é preciso ganhar mais uns dias."},
+    {"t": "h2", "x": "As duas gavetas do frigorífico"},
+    {"t": "p", "x": "Muitos frigoríficos têm duas gavetas, por vezes com um regulador de humidade. A mais húmida é para legumes e verduras; a mais seca, para a fruta."},
+    {"t": "p", "x": "Os produtos já cortados guardam-se em recipientes fechados, para não secarem nem passarem o cheiro aos vizinhos."},
+    {"t": "h2", "x": "Rever tudo uma vez por semana"},
+    {"t": "p", "x": "Uma vez por semana, vale a pena passar em revista a fruta e os legumes e retirar o que começa a estragar. Uma peça podre depressa estraga as que estão ao lado."},
+    {"t": "p", "x": "O que está mais maduro é para usar primeiro: fica à frente, bem à vista."},
+    {"t": "h2", "x": "Para recordar"},
+    {"t": "ul", "x": [
+      "Maçãs, peras, bananas e tomates libertam etileno.",
+      "Verduras, pepinos e cenouras ficam longe dessas frutas.",
+      "Batatas e cebolas em separado, num lugar escuro e arejado.",
+      "Tomates fora do frigorífico, salvo se estiverem muito maduros.",
+      "Gaveta húmida para legumes, gaveta seca para fruta."
+    ]},
+    {"t": "p", "x": "Com uma revisão semanal e alguma arrumação, a fruta e os legumes duram bem mais dias."}
+  ]
+}

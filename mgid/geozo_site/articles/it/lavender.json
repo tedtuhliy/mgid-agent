@@ -1,0 +1,108 @@
+{
+  "rubric": "Casa e giardino",
+  "title": "Coltivare la lavanda in giardino e in vaso: sole, terreno e potatura",
+  "teaser": "Piena luce, terreno leggero e drenante, poca acqua e una potatura leggera dopo la fioritura: ecco che cosa chiede la lavanda per crescere bene, in giardino come in vaso, e per profumare la casa.",
+  "description": "Come coltivare la lavanda: esposizione, terreno, messa a dimora, annaffiature, potatura, inverno, fiori secchi per sacchetti profumati ed errori comuni.",
+  "heroAlt": "File di lavanda in fiore in un campo, con colline coltivate sullo sfondo.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "La lavanda ama il sole, il terreno leggero e le annaffiature misurate. Con queste condizioni di base forma di solito cespugli compatti e ricchi di fiori profumati."
+    },
+    {
+      "t": "p",
+      "x": "Si coltiva in giardino, in aiuola o in vaso sul balcone. Ecco che cosa conta di più."
+    },
+    {
+      "t": "h2",
+      "x": "Tanto sole"
+    },
+    {
+      "t": "p",
+      "x": "La lavanda ha bisogno di piena luce: almeno sei ore di sole diretto al giorno. All’ombra i fusti si allungano, la pianta si dirada e fiorisce poco."
+    },
+    {
+      "t": "p",
+      "x": "In vaso, scegliete il punto più soleggiato del balcone o della terrazza e tenetela lontana dagli angoli riparati e ombrosi."
+    },
+    {
+      "t": "h2",
+      "x": "Un terreno leggero e povero"
+    },
+    {
+      "t": "p",
+      "x": "La lavanda predilige terreni sciolti, ben drenati e piuttosto poveri, anche sassosi. Di concime ne serve pochissimo: in un terreno troppo ricco la pianta fa molte foglie e pochi fiori."
+    },
+    {
+      "t": "p",
+      "x": "Se la terra del giardino è pesante e argillosa, conviene mescolarla con sabbia o ghiaia fine, oppure piantare la lavanda su un piccolo rialzo."
+    },
+    {
+      "t": "h2",
+      "x": "Messa a dimora e annaffiature"
+    },
+    {
+      "t": "p",
+      "x": "Il periodo giusto per piantare è la primavera: lasciate 40-60 cm tra una pianta e l’altra, perché i cespugli si allargano con gli anni."
+    },
+    {
+      "t": "p",
+      "x": "Nei primi tempi annaffiate con regolarità; quando la pianta ha attecchito basta poca acqua, soprattutto se il terreno drena bene."
+    },
+    {
+      "t": "h2",
+      "x": "Potare dopo la fioritura"
+    },
+    {
+      "t": "p",
+      "x": "Quando i fiori sono sfioriti, accorciate leggermente i rametti, tagliando sotto le spighe appassite e lasciando un po’ di verde."
+    },
+    {
+      "t": "p",
+      "x": "Non tagliate mai nel legno vecchio e spoglio: da lì la lavanda difficilmente ributta."
+    },
+    {
+      "t": "h2",
+      "x": "In inverno l’umidità conta più del freddo"
+    },
+    {
+      "t": "p",
+      "x": "Molte varietà sopportano bene il gelo, mentre i ristagni d’acqua attorno alle radici le fanno soffrire. In vaso usate un terriccio sabbioso e ghiaioso, con buoni fori di drenaggio, e mettete il vaso al riparo dalla pioggia continua."
+    },
+    {
+      "t": "tip",
+      "x": "Un sottile strato di ghiaia sul terreno tiene asciutto il colletto della pianta."
+    },
+    {
+      "t": "h2",
+      "x": "Raccolta ed errori da evitare"
+    },
+    {
+      "t": "p",
+      "x": "Per i mazzetti secchi tagliate gli steli quando i fiori stanno per aprirsi, legateli in piccoli mazzi e lasciateli asciugare capovolti, all’ombra e all’aria. Una volta secchi servono per decorare la casa o per riempire sacchetti profumati per cassetti e armadi."
+    },
+    {
+      "t": "p",
+      "x": "Gli errori più comuni sono tre: terra troppo ricca, annaffiature troppo frequenti e un posto in ombra. Evitandoli, la pianta si mantiene compatta per anni."
+    },
+    {
+      "t": "h2",
+      "x": "Le regole di base"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Sole pieno e terreno leggero, drenante e povero.",
+        "Piantare in primavera, a 40-60 cm di distanza.",
+        "Poca acqua dopo che la pianta ha attecchito.",
+        "Potatura leggera dopo la fioritura, mai nel legno vecchio.",
+        "Niente ristagni d’acqua in inverno, soprattutto in vaso."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Con poche accortezze la lavanda resta compatta e regala all’aiuola o al balcone colore e profumo ogni estate."
+    }
+  ]
+}

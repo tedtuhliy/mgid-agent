@@ -1,0 +1,37 @@
+{
+  "rubric": "Plante de apartament",
+  "title": "Aloe vera în casă: lumina potrivită, udarea și rempotarea",
+  "teaser": "Aloe vera se mulțumește cu puțin, dar are câteva cerințe clare: lumină multă, pământ drenant și udare rară. Iată cum o îngrijiți pe parcursul anului și când o rempotați.",
+  "description": "Cum îngrijiți aloe vera ca plantă de apartament: lumina, udarea, pământul și ghiveciul, iarna, semnele de udare greșită, lăstarii și rempotarea.",
+  "heroAlt": "Frunze late și cărnoase, de un verde intens, cu margini fin dințate și picături de apă pe suprafață.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Aloe vera este o plantă de apartament rezistentă, care iartă greșelile mici, dar nu suportă apa în exces. Își păstrează rezerva de apă în frunzele groase, așa că are nevoie de multă lumină și de un pământ care se usucă între două udări. Iată ce contează în îngrijirea ei de-a lungul anului."},
+    {"t": "p", "x": "Le luăm pe rând, de la lumină până la rempotare."},
+    {"t": "h2", "x": "Lumină multă, dar nu arzătoare"},
+    {"t": "p", "x": "Aloea preferă un loc foarte luminos, cu lumină difuză, de exemplu lângă o fereastră spre est sau spre vest. Puțin soare direct dimineața sau seara nu o deranjează, dar soarele puternic de la prânz poate arde frunzele."},
+    {"t": "h2", "x": "Udați bine, apoi lăsați pământul să se usuce"},
+    {"t": "p", "x": "Udați din belșug, până iese apă prin orificiile de scurgere, apoi așteptați până când pământul se usucă complet."},
+    {"t": "p", "x": "Vara asta înseamnă, de regulă, o udare la una-două săptămâni, iar iarna mult mai rar."},
+    {"t": "h2", "x": "Pământ granulos și ghiveci cu drenaj"},
+    {"t": "p", "x": "Folosiți un amestec granulos, de tipul celui pentru cactuși și suculente, cu puțin nisip grosier sau perlit. Ghiveciul trebuie să aibă orificii de scurgere; teracota, fiind poroasă, elimină mai ușor umezeala în exces."},
+    {"t": "h2", "x": "Iarna: odihnă, răcoare moderată, fără îngheț"},
+    {"t": "p", "x": "Iarna aloea își încetinește creșterea. Udați-o foarte rar și țineți-o într-o cameră luminoasă și mai răcoroasă, dar nu sub aproximativ 10 °C."},
+    {"t": "p", "x": "Frunzele nu rezistă la îngheț, așa că nu o lăsați lângă un geam foarte rece."},
+    {"t": "h2", "x": "Cum arată o aloe udată greșit"},
+    {"t": "p", "x": "Frunzele moi, translucide, ca sticloase, arată prea multă apă: lăsați pământul să se usuce complet și nu udați până atunci."},
+    {"t": "p", "x": "Frunzele subțiri și încrețite sau răsucite arată prea puțină apă: udați bine și verificați din nou peste câteva zile."},
+    {"t": "tip", "x": "Un băț de lemn înfipt în pământ arată cât de umed e: dacă iese uscat și curat, puteți uda."},
+    {"t": "h2", "x": "Lăstari și rempotare"},
+    {"t": "p", "x": "Pe lângă planta mare apar lăstari mici. Când au câteva frunze și rădăcini proprii, îi puteți despărți cu grijă și plantați fiecare în ghiveciul lui, în pământ ușor umed."},
+    {"t": "p", "x": "Aloea se rempotează o dată la doi-trei ani, primăvara, într-un ghiveci ceva mai larg."},
+    {"t": "h2", "x": "Totul pe scurt"},
+    {"t": "ul", "x": [
+      "Lumină puternică și difuză; puțin soare direct nu strică.",
+      "Udare din belșug, dar rară: pământul se usucă complet între udări.",
+      "Amestec granulos și ghiveci cu orificii de scurgere.",
+      "Iarna, răcoare moderată, peste 10 °C, și udare foarte rară.",
+      "Frunze moi și sticloase: prea multă apă; frunze subțiri și încrețite: prea puțină."
+    ]},
+    {"t": "p", "x": "Aloea tolerează uitarea mai bine decât excesul de apă, așa că, la îndoială, mai bine așteptați o zi în plus."}
+  ]
+}

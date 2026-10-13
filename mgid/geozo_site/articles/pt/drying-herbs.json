@@ -1,0 +1,38 @@
+{
+  "rubric": "Casa e cozinha",
+  "title": "Como secar e guardar ervas aromáticas em casa, passo a passo",
+  "teaser": "Colher na altura certa, pendurar em molhos pequenos, confirmar que estão bem secas e guardar em frascos fechados: assim as ervas aromáticas mantêm o aroma durante cerca de um ano.",
+  "description": "Como secar ervas aromáticas em casa: quando colher, secar em molhos, tabuleiros ou no forno, guardar em frascos e quais é melhor congelar.",
+  "heroAlt": "Pratos brancos com alecrim e outras ervas aromáticas secas.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Orégãos, tomilho, alecrim ou salva secam muito bem em casa, sem equipamento especial. Com um pouco de paciência, ficam guardados e prontos a usar durante grande parte do ano."},
+    {"t": "p", "x": "O processo é simples e tem poucos passos, do corte ao frasco."},
+    {"t": "h2", "x": "Colher no momento certo"},
+    {"t": "p", "x": "As ervas colhem-se de manhã, depois de o orvalho secar e antes de o calor apertar, e de preferência antes de a planta florescer, quando o aroma é mais intenso."},
+    {"t": "p", "x": "Escolhem-se ramos viçosos e sem manchas, de um dia seco, e sacode-se com cuidado qualquer terra ou insetos."},
+    {"t": "h2", "x": "Molhos pendurados"},
+    {"t": "p", "x": "Os ramos atam-se em molhos pequenos, com um cordel ou um elástico, e penduram-se de cabeça para baixo num local escuro, seco e arejado."},
+    {"t": "p", "x": "Molhos grandes demais secam mal e podem criar bolor no centro. Em casas húmidas, é preferível secar poucos ramos de cada vez."},
+    {"t": "tip", "x": "Um saco de papel com alguns furos, colocado sobre o molho, protege as ervas do pó e apanha as folhas que se soltem."},
+    {"t": "h2", "x": "Tabuleiros, redes e forno"},
+    {"t": "p", "x": "Com pouco espaço, as folhas podem secar espalhadas numa rede ou num tabuleiro forrado com papel, em camada fina e viradas de vez em quando para secarem por igual."},
+    {"t": "p", "x": "O forno à temperatura mínima, com a porta entreaberta, também serve, mas exige vigilância para as ervas não queimarem."},
+    {"t": "h2", "x": "Como saber se estão secas"},
+    {"t": "p", "x": "Estão prontas quando as folhas esfarelam entre os dedos e os caules partem com um estalido. Se ainda dobram, precisam de mais tempo: ervas húmidas guardadas num frasco estragam-se depressa."},
+    {"t": "h2", "x": "Frascos fechados, longe da luz e do calor"},
+    {"t": "p", "x": "Guardam-se em frascos herméticos, num armário longe da luz e do calor, por exemplo afastado do fogão. Uma etiqueta com o nome e a data ajuda: bem conservadas, duram cerca de um ano."},
+    {"t": "p", "x": "Mantidas inteiras, as folhas conservam mais aroma: só se esfarelam com os dedos na hora de usar."},
+    {"t": "h2", "x": "O que seca bem e o que é melhor congelar"},
+    {"t": "p", "x": "Orégãos, tomilho, alecrim, salva, hortelã e endro secam bem. Manjericão, salsa, coentros e cebolinho perdem muito aroma e cor, por isso é preferível congelá-los."},
+    {"t": "p", "x": "Como as ervas secas têm um sabor mais concentrado, usa-se menos: costuma bastar cerca de um terço da quantidade de ervas frescas."},
+    {"t": "h2", "x": "O essencial"},
+    {"t": "ul", "x": [
+      "Colher de manhã, com o orvalho já seco.",
+      "Molhos pequenos, pendurados de cabeça para baixo.",
+      "Estão secas quando esfarelam entre os dedos.",
+      "Frascos herméticos, longe da luz e do calor, com data.",
+      "Manjericão, salsa, coentros e cebolinho: melhor congelar."
+    ]},
+    {"t": "p", "x": "Com um pouco de tempo e frascos limpos, é possível ter ervas aromáticas à mão durante o ano inteiro."}
+  ]
+}

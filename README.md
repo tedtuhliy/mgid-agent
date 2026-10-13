@@ -115,6 +115,96 @@ MGID teaser (KZ, Russian, mobile, targetCpa $0.01)
 - **Risks to read before scaling.** The site was approved for «TikTok Ads (paid), audience 45+, GEO RO/KZ»; MGID is another source.
   OpenRouter's balance is empty (images need at least $1), so the second article uses photos already on the site.
 
+### The dense layout /dom2/ and its own campaign (13.10 evening)
+
+Owner: «Почему так мало блоков? Нужно максимально агрессивно для максимальной монетизации блоки расставить и максимум тизеров
+в блок». Four slots with one ad each was a deliberate start (moderation, readability); the Geozo panel allows **10 x 10 ads in a
+block of template 16003** (feedCount = mediaHorizontal x mediaVertical; on a phone the cards stand in one column, so 10 is the
+ceiling). So:
+
+- Three new blocks of the same template, one column wide, made with `geozo_site/geozo_blocks.py create NAME FEED` (a changed number
+  of ads means a new block: Geozo's render nodes serve the old settings of an edited block for 20+ minutes, and a new block needs
+  a few minutes before every node knows it, in between it answers 200 with an empty body): `dom3-a` (id 1283940, 3 ads, right after
+  the lead), `dom3-b` (1283941, 4 ads, after every second block of text), `dom3-c` (1283942, 10 ads, end of the article).
+- `dense.css`: compact cards (thumbnail left, headline right, 3-10 of them take a third of a screen to two, not one screen per ad).
+  Selectors by substring of the class because the loader gives the classes a random prefix.
+- A page now has 8-9 slots and 37-41 ads (the moderate one: 4 slots, 4 ads). All slots keep the label «Реклама»; none above the
+  title; never between a heading and its text; never two in a row.
+- **Not done in place.** The moderate pages `/dom/` had just been approved by MGID (teasers `active`). Editing an approved landing page
+  into an ad-heavier one would be moderation evasion even though every visitor sees the same page, so the dense version has its own
+  address `/dom2/`, its own campaign **12512618** «Arcadia KZ content mobile CPA 0.01 dense» (`geozo_campaign.py --variant dom2`), its
+  own six teasers (28159916-28159921) and its own moderation: MGID moderators opened it within two minutes and approved all six
+  teasers in about seven (all `active` at 20:29 UTC). `/dom/` stays byte for byte what was approved (`build.py` reproduces it;
+  `test_geozo_site.py` checks that the dense blocks never leak into it).
+- Two layouts side by side is also the A/B test: same teasers, same bid, same geo.
+
+### Multilingual site /blog/<lang>/ and 14 geo campaigns (13.10 night)
+
+Owner: «Нужно сделать сайт мультиязычным и взять все гео, что монетизирует ЛакиФид, кроме России и Беларуси; на них минимум по
+10 статей на каждое гео, картинки те же самые, блоки те же самые; запустить кампании на эти гео и языки с 1-2 креативами в самом
+MGID. Начни с Болгарии, Польши, Румынии, Чехии, Португалии, Италии, Испании, немецкоговорящих Германии, Швейцарии, Австрии,
+Венгрии, Словакии, Словении, Сербии». (Казахстан-вопрос «показы есть?»: да, см. отчёт `geozo_report.py`.)
+
+**Geos.** LuckyFeed income by country, USD wallet, 15.08-13.10 (`api.luckyfeed.pro/v5/stats/full`, `groups[0]=country_code`; RU/BY/KZ
+are on the rouble wallet and not in this list): BG $2446, HU $1757, RO $1239, CZ $787, PL $519, RS $494, DE $444, **HR $297**, PT $167,
+SK $155, IT $126, **FR $64**, **NL $29**, ES $26, SI $9, AT $9, CH $1 (GB $7, MX $6, BE $2, TR $1, GR $1 and 130 rows of zero). The
+owner's fourteen are all in the list; Croatia (8th by income), France and the Netherlands are not in his list: next wave.
+
+**Site.** `arcadiablog.com/blog/<lang>/`, 12 routes plus `ch`: bg pl ro cs pt it es de hu sk sl sr; Austria uses `/blog/de/`,
+Switzerland `/blog/ch/` = the German text with ss for ß. Why `/blog/` and not `/<lang>/`: the server already holds the old
+gardening blog (March 2026) in `/cs/`, `/sk/`, `/sl/` and nginx redirects everything that starts with `/ro` to `/`
+(`location ^~ /ro`); neither is touched. `/blog/` is a plain language chooser; each route has a home page with the ten
+articles, the ten articles, about / contact / privacy, a footer language switcher; the home and the service pages carry no ads
+and do not load the Geozo loader. The article pages use the dense layout (same three blocks, label «advertisement» in the local
+word: Реклама, Reklama, Publicitate, Publicidade, Pubblicità, Publicidad, Anzeige, Hirdetés, Oglas) and the same relay
+(`/dom/lead`, one signal per real click on a block).
+- Code: `geozo_site/multi_config.py` (languages, geos, MGID ids, the ten topics), `build_multi.py` (build; shared hashed script, hero
+  1200x700, list thumbnail 360x240, teaser creative 1200x800 once under `/blog/{h,t,c}/`), `make_images.py`, `check_articles.py`,
+  `deploy.py static --route blog` (the whole tree, ~2.5 min). Tests: `test_multi_site.py` (synthetic folders, 14 checks).
+- **Texts.** Ten topics (food storage x4, herbs in a jar, bread, houseplants x3, windowsill herbs, repotting, lavender, aloe
+  care, drying herbs), outlined in `articles/BRIEF.md`; twelve parallel writers each wrote their language natively (about 4300
+  words, ten articles, `ui.json`, `pages.json`, `teasers.json`), the checker enforces format, length, script, language markers and
+  flags health-claim stems. No health claims, no brands, no prices. Nobody native has proofread them: Hungarian and Slovak writers
+  said so, Italian and Romanian writers noticed that the aloe photo looks more like an agave.
+- **Images.** The same photos as the Kazakhstan test plus three of the old blog (lavender field, aloe leaf, dried herbs; the
+  spice-jar photo is cropped to the bowls and the brand label is blurred). Ten topics, ten pictures.
+
+**Campaigns** (`mgid/geozo_geos.py`; `--apply` creates them paused with the teasers, `--start` starts, `--status`): one per geo,
+mobile, targetCpa on goal 1280981 (no dedup), language of the geo, type `product`, daily limit $20, cap $3 by mgid-spend-stop. Two
+teasers each: always the jar-of-water herbs article and a second one that rotates (bread, fruit and vegetables, houseplants) from geo
+to geo so that the first data also says which article wins.
+
+| geo | campaign | targetCpa | teasers |
+|---|---|---|---|
+| BG | 12512632 | 0.01 | 28160036, 28160037 |
+| PL | 12512633 | 0.02 | 28160038, 28160039 |
+| CZ | 12512634 | 0.02 | 28160040, 28160041 |
+| PT | 12512635 | 0.02 | 28160042, 28160043 |
+| IT | 12512636 | 0.02 | 28160044, 28160045 |
+| ES | 12512638 | 0.02 | 28160046, 28160047 |
+| DE | 12512639 | 0.04 | 28160048, 28160050 |
+| CH | 12512640 | 0.05 | 28160051, 28160066 |
+| AT | 12512641 | 0.04 | 28160068, 28160069 |
+| RS | 12512643 | 0.01 | 28160070, 28160071 |
+| RO | 12512647 | 0.01 | 28160088, 28160089 |
+| HU | 12512648 | 0.015 | 28160090, 28160091 |
+| SK | 12512649 | 0.01 | 28160092, 28160093 |
+| SI | 12512650 | 0.01 | 28160094, 28160095 |
+
+The bids are a first guess, not a measurement: the cheap geos start at the one cent of the Kazakhstan test, the geos with a higher
+floor price higher. Set them by what delivers. Wallet at launch $12.90, 16 campaigns with a $3 cap each: the wallet runs out first.
+
+**Report.** `geozo_report.py` is one row per campaign (MGID impressions / clicks / spend / conversions, page views and distinct
+32-character click ids from the nginx log by the campaign id in `source=mgid_<campaign>_`, relay signals and MGID's answer to
+them). Geozo's `/stats` has answered 429 every time so far, so Geozo clicks and revenue are still unread: until they are, nobody
+knows what a block click earns in these geos. NodeMaven cannot be used from this container to test the Geozo fill per geo (the agent
+proxy swallows the nested CONNECT), the first live traffic is the test.
+
+**Open.** Whether MGID approves all 28 teasers; whether Geozo fills blocks in each geo and what it pays (LuckyFeed income is another
+product and says nothing about Geozo's CPC); the Geozo site was approved for «TikTok 45+, RO/KZ», so the manager should be told that
+the traffic now also comes from MGID and from fourteen more geos; German-speaking pages have no Impressum (the DE writer's note);
+LuckyFeed's HR, FR, NL for the next wave.
+
 ## Spend stop-loss on Inferno (11.10)
 
 Owner: «настрой на инферно бота который стопнет кампании после спенда в 3 бакса». `mgid/spend_stop.py` runs on

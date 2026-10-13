@@ -1,0 +1,38 @@
+{
+  "rubric": "Bylinky a kuchyně",
+  "title": "Jak doma usušit bylinky a správně je uchovávat",
+  "teaser": "Tymián, oregano, rozmarýn nebo kopr se dají usušit i bez speciálního vybavení. Kdy je sklidit, jak je sušit na vzduchu nebo v troubě a jak je uložit, aby si podržely vůni.",
+  "description": "Kdy sbírat bylinky, jak je usušit ve svazečcích, na sítu nebo v troubě, jak poznat, že jsou hotové, a jak je uložit na dlouhou dobu.",
+  "heroAlt": "Bílá miska se sušenými bylinkami, v pozadí sklenice s dalšími bylinkami.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Domácí sušení je jednoduchý způsob, jak si úrodu bylinek uchovat na celou zimu. Stačí je ve správnou chvíli sklidit, pomalu usušit a vhodně uložit. Popsané postupy zvládnete v běžné domácnosti."},
+    {"t": "p", "x": "Tady je šest kroků od sklizně až po uložení."},
+    {"t": "h2", "x": "Kdy bylinky sklízet"},
+    {"t": "p", "x": "Vhodné je ráno, až oschne rosa, ale než slunce listy příliš vyhřeje. Sklízejte před rozkvětem, kdy je vůně nejvýraznější."},
+    {"t": "p", "x": "Poškozené, zašpiněné nebo povadlé části hned vyřaďte. Bylinky nemyjte, jen je jemně otřepejte, a pokud jsou mokré od rosy nebo deště, nechte je nejdřív oschnout."},
+    {"t": "h2", "x": "Svazečky a sítka"},
+    {"t": "p", "x": "Bylinky svažte do malých svazečků, aby jimi dobře proudil vzduch, a zavěste je hlavou dolů na tmavém, suchém a vzdušném místě. Na přímém slunci by ztratily barvu i vůni. Použijte gumičku, ta se při smršťování stonků sama utáhne."},
+    {"t": "p", "x": "Drobné listy, třeba tymián nebo mátu, můžete rozložit v jedné vrstvě na síto, pletivo nebo čistý papír a občas je obrátit."},
+    {"t": "h2", "x": "Trouba na nejnižší teplotu"},
+    {"t": "p", "x": "Když spěcháte, použijte troubu. Nastavte nejnižší možnou teplotu, plech vyložte pečicím papírem a dvířka nechte lehce pootevřená, aby unikala vlhkost."},
+    {"t": "p", "x": "Bylinky rozložte v jedné vrstvě a co chvíli je kontrolujte, aby se nepřipálily. Drobné listy bývají hotové dřív než silnější stonky."},
+    {"t": "h2", "x": "Jak poznáte, že jsou suché"},
+    {"t": "p", "x": "Dobře usušené listy se drolí mezi prsty a stonky křehce praskají. Pokud jsou ještě ohebné, nechte je schnout dál. Zbylá vlhkost by v uzavřené nádobě mohla způsobit plíseň."},
+    {"t": "tip", "x": "Před uložením nechte usušené bylinky ještě pár hodin vychladnout při pokojové teplotě."},
+    {"t": "h2", "x": "Uložení v uzavřených sklenicích"},
+    {"t": "p", "x": "Usušené bylinky uložte do dobře uzavíratelných sklenic nebo dóz, mimo světlo a teplo. Každou popište názvem a datem, vydrží zhruba rok, pak postupně ztrácejí vůni. Pokud se na stěnách sklenice objeví kapky vlhkosti, bylinky vyjměte a nechte ještě dosušit."},
+    {"t": "p", "x": "Rozdrťte je mezi prsty až těsně před použitím, aby si zachovaly co nejvíc vůně."},
+    {"t": "h2", "x": "Co se suší dobře a co raději zmrazit"},
+    {"t": "p", "x": "Dobře se suší oregano, tymián, rozmarýn, šalvěj, máta a kopr. Měkké, šťavnaté bylinky, tedy bazalka, petržel, koriandr nebo pažitka, po usušení hodně ztrácejí z chuti i barvy."},
+    {"t": "p", "x": "Ty raději nasekejte, rozdělte do malých porcí a zmrazte. Do teplých jídel je pak přidáte rovnou z mrazáku."},
+    {"t": "h2", "x": "Shrnutí postupu"},
+    {"t": "ul", "x": [
+      "Sklízejte dopoledne po oschnutí rosy a před rozkvětem.",
+      "Sušte ve svazečcích nebo na sítu na tmavém vzdušném místě.",
+      "Trouba na nejnižší teplotu s pootevřenými dvířky je záložní řešení.",
+      "Hotové bylinky se drolí, uložte je do uzavřených sklenic s datem.",
+      "Bazalku, petržel, koriandr a pažitku raději zmrazte."
+    ]},
+    {"t": "p", "x": "Domácí sušení je otázka trpělivosti, ne složitého vybavení. Dobře uložené bylinky si podrží vůni zhruba rok a v zimě se vám vrátí v polévkách i omáčkách."}
+  ]
+}

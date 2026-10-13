@@ -1,0 +1,39 @@
+{
+  "rubric": "Plantas de interior",
+  "title": "Plantas de interior en otoño: 7 consejos para que lleguen bien a la primavera",
+  "teaser": "Con el otoño llegan los días cortos y las calefacciones que resecan el ambiente, y muchas plantas lo notan. Siete ajustes sencillos en el cuidado diario ayudan a que lleguen bien a la primavera.",
+  "description": "Siete consejos para cuidar las plantas de interior en otoño: más luz, menos riego, humedad junto a los radiadores, menos abono, revisión de plagas y trasplante.",
+  "heroAlt": "Un pequeño árbol de interior de hojas verdes y brillantes, en una maceta de cerámica marrón sobre una mesa de madera.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Con el otoño, los días se acortan, llega la calefacción y el aire de casa se reseca. Muchas plantas de interior lo notan: pierden hojas, se estiran o dejan de crecer."},
+    {"t": "p", "x": "Unos pocos ajustes en el cuidado diario suelen bastar para que pasen el invierno sin sobresaltos."},
+    {"t": "h2", "x": "1. Más luz y hojas limpias"},
+    {"t": "p", "x": "La luz de octubre es mucho más débil que la de verano, incluso junto a una ventana orientada al sur. Conviene acercar las plantas al cristal, sin que las hojas toquen el vidrio frío."},
+    {"t": "p", "x": "Cada dos semanas se pueden limpiar las hojas con un paño húmedo: el polvo les roba parte de la poca luz que llega."},
+    {"t": "h2", "x": "2. Menos agua, pero comprobando la tierra"},
+    {"t": "p", "x": "Con menos luz y menos calor, las plantas gastan menos agua. Antes de regar se comprueba la tierra con un dedo: si los dos o tres primeros centímetros están secos, es hora de regar; si siguen húmedos, se espera unos días."},
+    {"t": "tip", "x": "Una maceta con la tierra seca pesa claramente menos que una húmeda, y levantarla ayuda a decidir."},
+    {"t": "h2", "x": "3. Algo más de humedad junto a los radiadores"},
+    {"t": "p", "x": "La calefacción reseca el ambiente. Una bandeja con guijarros húmedos, sin que el agua llegue a tocar la base de la maceta, o varias plantas agrupadas ayudan a que haya más humedad alrededor."},
+    {"t": "h2", "x": "4. Lejos de corrientes de aire y de fuentes de calor"},
+    {"t": "p", "x": "Los cambios bruscos de temperatura son una causa frecuente de caída de hojas. Conviene apartar las plantas de las puertas y ventanas que se abren a menudo, y también de los radiadores y las estufas."},
+    {"t": "p", "x": "Por la noche, además, es buena idea separarlas del cristal, que se enfría mucho."},
+    {"t": "h2", "x": "5. Menos abono"},
+    {"t": "p", "x": "En invierno la mayoría de las plantas descansan y no necesitan abono. Lo habitual es reducirlo en otoño y retomarlo en primavera, cuando aparecen brotes nuevos."},
+    {"t": "h2", "x": "6. Una revisión semanal en busca de plagas"},
+    {"t": "p", "x": "El aire seco favorece a la araña roja, a los pulgones y a la cochinilla. Una vez por semana conviene mirar las hojas por ambas caras: manchitas claras, telarañas finas o un residuo pegajoso son motivo para actuar."},
+    {"t": "p", "x": "Para empezar basta con limpiar las hojas con un paño y agua con un poco de jabón neutro; si la plaga persiste, se usa un producto adecuado, siguiendo las instrucciones del envase."},
+    {"t": "h2", "x": "7. Sin prisa por trasplantar"},
+    {"t": "p", "x": "Si la planta tiene buen aspecto, puede esperar a la primavera para el trasplante, cuando se adapta mejor al cambio. Solo se adelanta si las raíces asoman por los agujeros de drenaje o el agua pasa sin ser absorbida."},
+    {"t": "h2", "x": "En resumen"},
+    {"t": "ul", "x": [
+      "Acercar las plantas a la luz, sin pegarlas al cristal frío.",
+      "Regar menos y tocar la tierra antes de hacerlo.",
+      "Dar algo de humedad al ambiente cerca de los radiadores.",
+      "Evitar corrientes de aire y fuentes de calor directo.",
+      "Reducir el abono y revisar las hojas cada semana.",
+      "Dejar el trasplante para la primavera."
+    ]},
+    {"t": "p", "x": "Cada especie tiene sus propias necesidades, así que conviene consultar las indicaciones de cada planta."}
+  ]
+}

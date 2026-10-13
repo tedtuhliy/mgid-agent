@@ -1,0 +1,37 @@
+{
+  "rubric": "Otthon és konyha",
+  "title": "Így tárolja a kenyeret, hogy friss és puha maradjon",
+  "teaser": "A hűtő nem a kenyér helye: ott gyorsabban megszikkad. Megmutatjuk, mi a jobb megoldás a kenyértartótól a fagyasztásig, és mit lehet kezdeni a megszáradt kenyérrel.",
+  "description": "Miért szikkad meg gyorsabban a kenyér a hűtőben, hol marad puha és friss, hogyan fagyasztható, éleszthető fel, és mire használható a megszáradt darab.",
+  "heroAlt": "Két kéz egy szelet rusztikus kenyeret tart egy áttetsző zacskó fölött.",
+  "body": [
+    {"t": "p", "lead": true, "x": "A kenyér ropogós héja és puha belseje gyorsan elvész, ha rossz helyre kerül. Sokan a hűtőbe teszik, hogy tovább eltartsák, pedig ott éppen hamarabb megszikkad."},
+    {"t": "p", "x": "Néhány egyszerű fogással a kenyér hosszabb ideig élvezhető marad, és a megszáradt darabból is lehet még valami finomat készíteni."},
+    {"t": "h2", "x": "A hűtő nem a kenyér helye"},
+    {"t": "p", "x": "A hűtőben a kenyér hamarabb megszikkad és megkeményedik, mint szobahőmérsékleten. A hideg, száraz levegő ráadásul kiszívja a nedvességét, és a kenyér átveszi a hűtő szagait is. Hűvös, szellős helyen a belseje hosszabb ideig puha marad."},
+    {"t": "h2", "x": "Kenyértartó, vászonzsák vagy papír"},
+    {"t": "p", "x": "A kenyérnek hűvös, száraz helyen kenyértartó vagy vászonzsák való. A ropogós héjú vekni papírzacskóban vagy vászonban jobban szellőzik, a puha héjú kenyér pedig zárt kenyértartóban marad puhább. Műanyag zacskóban a héj hamar megpuhul, mert a pára nem tud eltávozni."},
+    {"t": "p", "x": "A megkezdett vekni vágott felével lefelé kerüljön a vágódeszkára, így a belseje nem szárad ki olyan gyorsan."},
+    {"t": "tip", "x": "A frissen sült kenyeret hagyja teljesen kihűlni, mielőtt zacskóba vagy tartóba teszi, különben a pára összegyűlik körülötte."},
+    {"t": "h2", "x": "Szeletelés és fagyasztás"},
+    {"t": "p", "x": "Ha a vekni nem fogy el két-három nap alatt, szeletelje fel, és a szeletek közé tegyen sütőpapírt, hogy ne ragadjanak össze. A szeletelt kenyeret zárt zacskóban fagyassza le, a zacskóból pedig nyomja ki a levegőt."},
+    {"t": "p", "x": "A szeleteket egyenként, fagyottan is kiveheti, és közvetlenül a kenyérpirítóba teheti. Így mindig csak annyit vesz ki, amennyit meg is eszik."},
+    {"t": "h2", "x": "A megszikkadt kenyér felfrissítése"},
+    {"t": "p", "x": "A megszikkadt vekni még feléleszthető: néhány csepp vízzel nedvesítse meg a héját, és tegye 10 percre előmelegített, forró sütőbe. Így újra ropogós és puha lesz, de még aznap érdemes elfogyasztani."},
+    {"t": "p", "x": "A zsemlével és a kiflivel is működik a módszer, azoknál már 5–6 perc is elég."},
+    {"t": "h2", "x": "Tiszta, száraz kenyértartó"},
+    {"t": "p", "x": "A kenyértartót időnként mossa ki, és hagyja teljesen megszáradni, mielőtt újra használja. A morzsát is rázza ki, mert a nedvesség és a megmaradt morzsa elősegíti a penész kialakulását."},
+    {"t": "p", "x": "Ha a kenyéren penész jelenik meg, dobja ki az egész darabot, ne csak a penészes részt vágja le."},
+    {"t": "h2", "x": "A megszáradt kenyér felhasználása"},
+    {"t": "p", "x": "A megszikkadt kenyérből sütőben krutont lehet pirítani, reszelve zsemlemorzsát készíteni, tojásos-tejes keverékbe mártva pedig a jól ismert bundás kenyeret kisütni. A krutont levesekbe és salátákba is érdemes tenni, a morzsa pedig zárt dobozban hosszabb ideig eltartható."},
+    {"t": "h2", "x": "Röviden: a kenyér tárolása"},
+    {"t": "ul", "x": [
+      "A kenyér ne a hűtőbe, hanem kenyértartóba vagy vászonzsákba kerüljön.",
+      "A megkezdett vekni vágott felével lefelé álljon.",
+      "Ha sok a kenyér, szeletelje fel, és fagyassza le.",
+      "A megszikkadt kenyér forró sütőben felfrissíthető.",
+      "A penészes kenyeret dobja ki."
+    ]},
+    {"t": "p", "x": "Kis odafigyeléssel a kenyér a héten végig élvezhető marad, a maradékból pedig még más finom étel is készülhet."}
+  ]
+}

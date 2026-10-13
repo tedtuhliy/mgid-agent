@@ -75,9 +75,9 @@ def sha8(b):
     return hashlib.sha256(b).hexdigest()[:8]
 
 
-def slot(uuid, compact=False):
+def slot(uuid, compact=False, label="Реклама"):
     cls = "ad-slot compact" if compact else "ad-slot"
-    return f'<div class="{cls}"><span class="ad-label">Реклама</span><div data-gz-block="{uuid}"></div></div>'
+    return f'<div class="{cls}"><span class="ad-label">{label}</span><div data-gz-block="{uuid}"></div></div>'
 
 
 def render(b):
@@ -104,9 +104,10 @@ def body_html(blocks):
     return "\n".join(out)
 
 
-def body_html_dense(blocks):
+def body_html_dense(blocks, label="Реклама"):
     """A slot right after the lead, then after every DENSE_EVERY-th block of text (the lead counts as the first); never
-    between a heading and its first paragraph, never right before the closing slot of the page."""
+    between a heading and its first paragraph, never right before the closing slot of the page. `label` is the word
+    for «advertisement» in the page's language."""
     out, texts = [], 0
     last = len(blocks) - 1
     for i, b in enumerate(blocks):
@@ -117,9 +118,9 @@ def body_html_dense(blocks):
         if i == last:
             continue
         if texts == 1:
-            out.append(slot(BLOCK_DENSE_A, compact=True))
+            out.append(slot(BLOCK_DENSE_A, compact=True, label=label))
         elif texts % DENSE_EVERY == 1:
-            out.append(slot(BLOCK_DENSE_B, compact=True))
+            out.append(slot(BLOCK_DENSE_B, compact=True, label=label))
     return "\n".join(out)
 
 

@@ -1,0 +1,37 @@
+{
+  "rubric": "Plante de apartament",
+  "title": "Ierburi aromatice pe pervaz: ce crește bine în casă și cum le îngrijiți",
+  "teaser": "Busuioc, mentă, pătrunjel, arpagic sau cimbru: ce plante aromatice se simt bine la fereastră și cum le îngrijiți ca să aveți verdeață proaspătă la îndemână.",
+  "description": "Ce ierburi aromatice cresc bine în casă și cum le îngrijiți: lumina, ghivecele, udarea, ciupitul vârfurilor, problemele frecvente și hrănirea ușoară.",
+  "heroAlt": "O tufă deasă de plante aromatice, cu frunze verzi și proaspete.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Nu aveți nevoie de grădină ca să tăiați verdeață proaspătă chiar înainte de gătit: câteva ghivece pe un pervaz luminos sunt de ajuns. Contează mai ales lumina și cantitatea de apă. Restul sunt câteva obiceiuri simple."},
+    {"t": "p", "x": "Iată ce plante se potrivesc pentru început și cum le îngrijiți pe tot parcursul anului, chiar dacă nu ați mai cultivat până acum."},
+    {"t": "h2", "x": "Ce crește bine în ghiveci"},
+    {"t": "p", "x": "Busuiocul, menta, pătrunjelul, arpagicul și cimbrul se pot cultiva fără probleme în casă. Pentru început alegeți două-trei, pe care le folosiți cel mai des."},
+    {"t": "p", "x": "Menta crește repede și e mai bine să aibă ghiveciul ei; cimbrul e mai lent și se mulțumește cu puțină apă."},
+    {"t": "h2", "x": "Lumină: 4-6 ore pe zi"},
+    {"t": "p", "x": "Potrivit este un pervaz spre sud sau spre est, unde plantele primesc 4-6 ore de lumină. Iarna, când zilele sunt scurte, o lampă de birou aprinsă câteva ore seara completează lumina zilei."},
+    {"t": "h2", "x": "Ghivece cu orificii de scurgere"},
+    {"t": "p", "x": "Alegeți ghivece cu orificii în fund și puneți dedesubt o farfurie. Apa care stă mult în pământ strică rădăcinile, așa că goliți farfuria la o jumătate de oră după udare."},
+    {"t": "p", "x": "Folosiți un pământ ușor, pentru plante aromatice sau legume, eventual amestecat cu puțin nisip."},
+    {"t": "h2", "x": "Udați când pământul e uscat la suprafață"},
+    {"t": "p", "x": "Udați atunci când primii 1-2 cm de pământ s-au uscat; verificați cu degetul. Mai bine udați rar și din belșug decât puțin și în fiecare zi."},
+    {"t": "h2", "x": "Ciupiți vârfurile, recoltați cu măsură"},
+    {"t": "p", "x": "Ciupiți vârfurile lăstarilor chiar deasupra unei perechi de frunze: planta se ramifică și devine mai stufoasă. Nu luați dintr-o dată mai mult de o treime din frunziș, ca să aibă din ce să se refacă."},
+    {"t": "tip", "x": "Tăiați frunzele cu o foarfecă mică, nu le smulgeți, ca să nu rupeți și tulpina."},
+    {"t": "h2", "x": "Probleme frecvente și hrănire"},
+    {"t": "p", "x": "Tulpinile lungi și palide arată lipsă de lumină: mutați ghiveciul într-un loc mai luminos. Frunzele galbene vin adesea de la prea multă apă."},
+    {"t": "p", "x": "În sezonul de creștere, o dată pe lună, adăugați în apa de udare puțin îngrășământ lichid, foarte diluat; iarna nu mai e nevoie."},
+    {"t": "h2", "x": "Rezumat"},
+    {"t": "ul", "x": [
+      "Alegeți două-trei plante pe care le folosiți des.",
+      "Lumină 4-6 ore pe zi, iar iarna o lampă de birou.",
+      "Ghivece cu orificii de scurgere.",
+      "Udare atunci când primii 1-2 cm de pământ sunt uscați.",
+      "Ciupiți vârfurile și luați cel mult o treime din frunziș.",
+      "Îngrășământ foarte diluat, o dată pe lună, doar în sezonul de creștere."
+    ]},
+    {"t": "p", "x": "Cu puțină răbdare, un pervaz luminos devine o grădină în miniatură, de unde luați verdeață proaspătă pentru farfurie."}
+  ]
+}

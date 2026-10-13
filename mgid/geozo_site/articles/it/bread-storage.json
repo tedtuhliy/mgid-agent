@@ -1,0 +1,100 @@
+{
+  "rubric": "Casa e cucina",
+  "title": "Come conservare il pane perché resti fresco e morbido più a lungo",
+  "teaser": "In frigorifero il pane si secca più in fretta. Dove tenerlo, in che cosa avvolgerlo, come congelarlo a fette e come ravvivare un filone duro: indicazioni semplici per usarlo fino all’ultima briciola.",
+  "description": "Dove e come conservare il pane: portapane, sacchetto di tela, congelatore, come ravvivare un filone duro e come usare il pane avanzato.",
+  "heroAlt": "Due mani sistemano una fetta di pane casereccio in un sacchetto trasparente riutilizzabile.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Il pane fresco ha la crosta croccante e un profumo inconfondibile, ma bastano un paio di giorni perché diventi duro. Con poche abitudini giuste resta buono più a lungo, e quello che avanza non va sprecato."
+    },
+    {
+      "t": "p",
+      "x": "Ecco dove tenerlo, in che cosa avvolgerlo e come recuperarlo quando è diventato duro."
+    },
+    {
+      "t": "h2",
+      "x": "Perché il frigorifero lo secca"
+    },
+    {
+      "t": "p",
+      "x": "Il freddo e l’aria asciutta del frigorifero fanno indurire il pane più in fretta che a temperatura ambiente. Meglio lasciarlo fuori, in un posto fresco e asciutto, lontano dai fornelli e dal sole."
+    },
+    {
+      "t": "tip",
+      "x": "Un canovaccio di lino pulito avvolto attorno al filone lo protegge dall’aria e aiuta la crosta a restare croccante."
+    },
+    {
+      "t": "h2",
+      "x": "Portapane, tela o carta"
+    },
+    {
+      "t": "p",
+      "x": "Il posto più adatto è il portapane, oppure un sacchetto di tela. I filoni dalla crosta croccante stanno bene anche in un sacchetto di carta; il pane in cassetta, più morbido, in un contenitore ben chiuso."
+    },
+    {
+      "t": "p",
+      "x": "Una volta tagliato, appoggiatelo con il taglio rivolto verso il basso: la mollica resta riparata dall’aria."
+    },
+    {
+      "t": "h2",
+      "x": "Affettare e congelare"
+    },
+    {
+      "t": "p",
+      "x": "Se sapete che non lo finirete in due o tre giorni, affettatelo e congelatelo. Mettete un foglio di carta da forno tra le fette, così si staccano senza fatica, e chiudete tutto in un sacchetto adatto al congelatore."
+    },
+    {
+      "t": "p",
+      "x": "Le fette si tostano direttamente da congelate; i panini e i pezzi più grandi si lasciano scongelare a temperatura ambiente e si scaldano qualche minuto in forno."
+    },
+    {
+      "t": "h2",
+      "x": "Ravvivare un filone duro"
+    },
+    {
+      "t": "p",
+      "x": "Un filone diventato duro si può recuperare: inumiditelo con qualche goccia d’acqua e mettetelo per circa 10 minuti in forno già caldo. Va mangiato subito, perché tende a indurirsi di nuovo."
+    },
+    {
+      "t": "h2",
+      "x": "Un portapane pulito e asciutto"
+    },
+    {
+      "t": "p",
+      "x": "Ogni tanto svuotate il portapane, eliminate le briciole e lavatelo con acqua e un po’ di aceto, poi asciugatelo bene prima di rimettere il pane. Briciole e umidità favoriscono la muffa."
+    },
+    {
+      "t": "h2",
+      "x": "Muffa e pane avanzato"
+    },
+    {
+      "t": "p",
+      "x": "Se compare la muffa, anche solo in un punto, il pane va buttato per intero. Lavate poi bene il contenitore prima di riutilizzarlo."
+    },
+    {
+      "t": "p",
+      "x": "Il pane raffermo, invece, ha mille usi: crostini per le zuppe, pangrattato, pane perduto a colazione e, in estate, una buona panzanella."
+    },
+    {
+      "t": "h2",
+      "x": "In sintesi"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Pane fuori dal frigorifero, in un luogo fresco e asciutto.",
+        "Portapane o sacchetto di tela; pane tagliato appoggiato con il taglio verso il basso.",
+        "Fette separate da carta da forno e congelate.",
+        "Un filone duro si ravviva con qualche goccia d’acqua e 10 minuti di forno.",
+        "Pane ammuffito da buttare, pane raffermo da riutilizzare."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Scegliete il metodo più comodo per le vostre abitudini: così il pane resta buono più a lungo e se ne butta meno."
+    }
+  ]
+}

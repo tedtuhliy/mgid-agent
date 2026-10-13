@@ -1,0 +1,37 @@
+{
+  "rubric": "Dom i kuchnia",
+  "title": "Jak suszyć zioła w domu i jak je potem przechowywać",
+  "teaser": "Własne zioła można wysuszyć bez specjalnego sprzętu. Opisujemy, kiedy je zbierać, jak suszyć w pęczkach lub w piekarniku oraz jak przechowywać, by jak najdłużej zachowały aromat.",
+  "description": "Jak suszyć zioła w domu: termin zbioru, suszenie w pęczkach i w piekarniku, rozpoznawanie suchych ziół, przechowywanie oraz zioła lepsze do mrożenia.",
+  "heroAlt": "Biała miseczka z dwiema porcjami suszonych ziół, a w tle druga miska i słoiczki z ziołami",
+  "body": [
+    {"t": "p", "lead": true, "x": "Suszenie to prosty sposób, by zachować aromat ziół z balkonu, działki czy parapetu na cały rok. Nie wymaga specjalnego sprzętu, wystarczą cierpliwość i przewiewne miejsce. Ważne są trzy rzeczy: termin zbioru, spokojne suszenie i dobre przechowywanie."},
+    {"t": "p", "x": "Poniżej wszystko po kolei, od zbioru po słoik."},
+    {"t": "h2", "x": "Kiedy zbierać"},
+    {"t": "p", "x": "Zioła najlepiej ścinać rano, gdy rosa już obeschła, a słońce jeszcze nie nagrzało roślin. Zbiera się je zwykle tuż przed kwitnieniem, kiedy liście mają najwięcej aromatu."},
+    {"t": "p", "x": "Przed suszeniem wystarczy strzepnąć kurz i usunąć uszkodzone listki. Zioła lepiej nie myć, a jeśli to konieczne, trzeba je bardzo dokładnie osuszyć."},
+    {"t": "h2", "x": "Pęczki w przewiewnym miejscu"},
+    {"t": "p", "x": "Łodygi wiąże się w małe pęczki, żeby powietrze swobodnie między nimi krążyło, i zawiesza głowami w dół. Miejsce powinno być ciemne, suche i przewiewne, na przykład spiżarnia, strych albo kuchnia z dala od pary znad kuchenki."},
+    {"t": "p", "x": "Światło odbarwia liście i osłabia aromat, dlatego okno nie jest dobrym miejscem."},
+    {"t": "tip", "x": "Pęczek można owinąć gazą lub zawiesić w papierowej torebce z otworami, żeby nie osiadał na nim kurz."},
+    {"t": "h2", "x": "Sitka, tacki i piekarnik"},
+    {"t": "p", "x": "Drobne liście, na przykład mięty czy oregano, można rozłożyć cienką warstwą na sitku lub blasze wyłożonej papierem i od czasu do czasu przewrócić."},
+    {"t": "p", "x": "Gdy brakuje czasu, pomoże piekarnik nastawiony na najniższą temperaturę, z lekko uchylonymi drzwiczkami. Suszenie trwa wtedy od jednej do kilku godzin, a zioła trzeba co jakiś czas sprawdzać."},
+    {"t": "h2", "x": "Kiedy zioła są gotowe"},
+    {"t": "p", "x": "Dobrze wysuszone zioła są kruche: liście rozsypują się w palcach, a łodyżki łamią się z trzaskiem. Jeśli listki wciąż są giętkie, trzeba suszyć je dłużej, bo resztki wilgoci sprzyjają pleśni w słoiku."},
+    {"t": "h2", "x": "Słoiki, etykiety i data"},
+    {"t": "p", "x": "Suche zioła przechowuje się w szczelnych słoikach, z dala od światła i ciepła, czyli nie nad kuchenką. Warto opisać zawartość i datę, bo po kilku miesiącach wiele suszonych ziół wygląda podobnie. Aromat zachowują przez około rok."},
+    {"t": "p", "x": "Najlepiej kruszyć je dopiero przed dodaniem do potrawy, wtedy zapach jest wyraźniejszy."},
+    {"t": "h2", "x": "Co suszyć, a co mrozić"},
+    {"t": "p", "x": "Dobrze schną oregano, tymianek, rozmaryn, szałwia, mięta i koperek. Delikatne liście bazylii, natki pietruszki, kolendry i szczypiorku po wysuszeniu tracą większość aromatu, dlatego lepiej je posiekać i zamrozić w woreczkach lub foremkach do lodu."},
+    {"t": "h2", "x": "Podsumowanie"},
+    {"t": "ul", "x": [
+      "Zbierać rano, po obeschnięciu rosy, przed kwitnieniem.",
+      "Pęczki zawieszać głowami w dół w ciemnym, przewiewnym miejscu.",
+      "Piekarnik tylko na najniższej temperaturze, z uchylonymi drzwiczkami.",
+      "Zioła są gotowe, gdy kruszą się w palcach.",
+      "Przechowywać w szczelnych słoikach, z datą, przez około rok."
+    ]},
+    {"t": "p", "x": "Własnoręcznie wysuszone zioła mogą też ozdobić kuchenną półkę, a ich zapach przypomina o lecie nawet w środku zimy."}
+  ]
+}

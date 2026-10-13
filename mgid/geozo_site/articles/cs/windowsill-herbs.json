@@ -1,0 +1,38 @@
+{
+  "rubric": "Bylinky doma",
+  "title": "Bylinky na parapetu: co doma roste dobře a jak o ně pečovat",
+  "teaser": "Bazalka, máta, petržel, pažitka nebo tymián se v bytě dají vypěstovat i bez zahrady. Přehled, kolik potřebují světla, jak je zalévat, zaštipovat a sklízet.",
+  "description": "Jak pěstovat bazalku, mátu, petržel, pažitku a tymián doma: světlo, květináče, zalévání, zaštipování, sklizeň, běžné potíže a hnojení.",
+  "heroAlt": "Hustý porost čerstvých zelených bylinek s drobnými listy, zblízka.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Čerstvá bazalka nebo pár stébel pažitky na vlastním parapetu se hodí při vaření a těší i oko. Bylinky se v bytě pěstují překvapivě snadno, potřebují hlavně dost světla a mírné zalévání. Stačí dodržet několik pravidel."},
+    {"t": "p", "x": "Tady je přehled, které druhy se v bytě daří a jak o ně pečovat."},
+    {"t": "h2", "x": "Co se v bytě daří"},
+    {"t": "p", "x": "Nejsnáze se pěstují bazalka, máta, petržel, pažitka a tymián. Bazalka je jednoletá bylina a potřebuje teplo, tymián naopak snese sušší prostředí a méně vody. Pro začátek stačí dva nebo tři druhy, které opravdu používáte při vaření."},
+    {"t": "p", "x": "Máta se rychle rozrůstá, proto jí dopřejte vlastní květináč. Vedle ostatních bylinek by je brzy přerostla. Pažitka a petržel snesou i chladnější okno, bazalka ne."},
+    {"t": "h2", "x": "Světlo: jižní nebo východní okno"},
+    {"t": "p", "x": "Většina bylinek potřebuje čtyři až šest hodin světla denně, nejlépe na jižním nebo východním okně. Bez dostatku světla se stonky protahují a listy blednou."},
+    {"t": "p", "x": "V zimě bylinkám pomůže stolní lampa, kterou nad nimi necháte svítit několik hodin večer."},
+    {"t": "h2", "x": "Květináče s otvory pro odtok vody"},
+    {"t": "p", "x": "Každý květináč musí mít ve dně otvory, kterými odteče přebytečná voda. Stojatá voda kořenům škodí a bylinky v ní snadno zahnívají. Hodí se lehký propustný substrát a na dně vrstva keramzitu."},
+    {"t": "p", "x": "Pokud květináč vložíte do ozdobného obalu, vodu z něj po zalití vždy vylijte."},
+    {"t": "h2", "x": "Zalévání podle suchosti substrátu"},
+    {"t": "p", "x": "Zalévejte, až když je svrchních jeden až dva centimetry substrátu suché. Zalijte důkladně a vodu z misky po chvíli vylijte. Tymián a další středomořské bylinky snášejí sucho lépe než bazalka nebo petržel."},
+    {"t": "tip", "x": "Prst zapíchnutý do substrátu je spolehlivější než kalendář, řiďte se tím, jak je půda suchá, ne dnem v týdnu."},
+    {"t": "h2", "x": "Zaštipování a sklizeň"},
+    {"t": "p", "x": "Vršky výhonů zaštipujte nebo zastřihujte těsně nad párem listů. Rostlina se pak větví a je hustší."},
+    {"t": "p", "x": "Najednou sklízejte nejvýš třetinu rostliny, aby měla sílu znovu obrůst. U bazalky navíc odstraňujte poupata, jinak listy zhořknou. Do teplých jídel ji přidávejte až nakonec, aby neztratila vůni."},
+    {"t": "h2", "x": "Když se rostliny protahují nebo žloutnou"},
+    {"t": "p", "x": "Dlouhé, bledé a řídké stonky znamenají nedostatek světla: přesuňte rostlinu na světlejší místo nebo jí přisviťte lampou. Žloutnoucí listy bývají nejčastěji znamením trvale vlhkého substrátu, pomůže zalévat méně."},
+    {"t": "p", "x": "V období růstu, od jara do konce léta, bylinky jednou měsíčně přihnojte slabým roztokem hnojiva podle návodu na obalu."},
+    {"t": "h2", "x": "Stručné shrnutí"},
+    {"t": "ul", "x": [
+      "Vybírejte bazalku, mátu, petržel, pažitku a tymián.",
+      "Dopřejte jim čtyři až šest hodin světla denně.",
+      "Používejte květináče s otvory ve dně a zalévejte podle suchosti substrátu.",
+      "Vršky zaštipujte a sklízejte nejvýš třetinu rostliny.",
+      "V období růstu slabě přihnojujte jednou měsíčně."
+    ]},
+    {"t": "p", "x": "Bylinky odpouštějí drobné chyby a rychle odrůstají. Dopřejte jim světlo, mírné zalévání a pravidelný odběr, a budete je mít stále po ruce."}
+  ]
+}

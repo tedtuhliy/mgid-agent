@@ -1,0 +1,37 @@
+{
+  "rubric": "Casa y cocina",
+  "title": "Cómo guardar el pan para que se mantenga fresco y tierno",
+  "teaser": "El pan se endurece antes en la nevera. Estas son las formas de guardarlo en casa, congelarlo en rebanadas y recuperarlo cuando ya está duro, además de ideas para aprovecharlo.",
+  "description": "Por qué el pan se endurece antes en la nevera, cómo guardarlo en la panera o en una bolsa, cómo congelarlo en rebanadas y qué hacer con el pan duro.",
+  "heroAlt": "Unas manos sostienen una rebanada de pan de miga densa junto a una bolsa reutilizable translúcida.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Una barra de pan recién comprada es un placer, pero al segundo día suele estar más seca y dura. Casi siempre la causa está en cómo y dónde se guarda."},
+    {"t": "p", "x": "Con unos pocos gestos, el pan se mantiene tierno más días y, cuando se endurece, todavía tiene arreglo."},
+    {"t": "h2", "x": "Por qué la nevera no le conviene al pan"},
+    {"t": "p", "x": "A la temperatura de la nevera, el pan se reseca y se endurece más deprisa que en la cocina. Aunque el frío parezca conservar, en el pan tiene el efecto contrario."},
+    {"t": "p", "x": "Lo habitual es guardarlo a temperatura ambiente, en un lugar fresco y seco, y reservar el frío para el congelador."},
+    {"t": "h2", "x": "Panera, bolsa de tela o de papel"},
+    {"t": "p", "x": "Una panera con tapa o una bolsa de lino o de algodón mantienen la humedad justa. Las barras de corteza crujiente van bien en bolsa de papel o de tela; el pan de molde y los panes blandos, en su bolsa cerrada."},
+    {"t": "p", "x": "Una vez empezada la pieza, conviene apoyarla sobre la cara cortada, para que la miga no se reseque al aire."},
+    {"t": "h2", "x": "Cortar y congelar en rebanadas"},
+    {"t": "p", "x": "Si no se va a consumir todo en un par de días, es preferible cortarlo en rebanadas y congelarlo con una hoja de papel de horno entre ellas. Así se separan sin esfuerzo y se sacan solo las que hacen falta."},
+    {"t": "p", "x": "Las rebanadas se tuestan directamente del congelador; las piezas enteras se dejan descongelar unas horas a temperatura ambiente."},
+    {"t": "tip", "x": "Congelar el pan el mismo día de la compra permite recuperarlo en buenas condiciones."},
+    {"t": "h2", "x": "Cómo reanimar una barra dura"},
+    {"t": "p", "x": "Si el pan ha perdido frescura, se humedece la corteza con unas gotas de agua y se mete unos 10 minutos en el horno bien caliente, a unos 180 °C. Queda crujiente por fuera y tierno por dentro, aunque conviene comerlo ese mismo día."},
+    {"t": "h2", "x": "Una panera limpia y seca"},
+    {"t": "p", "x": "Las migas y la humedad favorecen la aparición de moho. Conviene vaciar la panera de vez en cuando, limpiarla con un paño, dejarla secar del todo y lavar con regularidad la bolsa de tela."},
+    {"t": "p", "x": "Si el pan tiene moho, lo más prudente es tirar la pieza entera, y no solo la parte afectada."},
+    {"t": "h2", "x": "Aprovechar el pan duro"},
+    {"t": "p", "x": "El pan duro da mucho juego: pan rallado para empanar, picatostes para sopas y ensaladas, torrijas o unas migas. El pan rallado casero se guarda en un bote cerrado o en el congelador."},
+    {"t": "h2", "x": "Resumen rápido"},
+    {"t": "ul", "x": [
+      "Pan a temperatura ambiente, en panera o en bolsa de tela o de papel.",
+      "La nevera endurece el pan antes; el congelador lo conserva mejor.",
+      "Rebanadas separadas con papel de horno, para sacar solo las necesarias.",
+      "Unas gotas de agua y diez minutos de horno reaniman una barra dura.",
+      "Con moho, tirar la pieza entera."
+    ]},
+    {"t": "p", "x": "Cuidar el pan no exige gran esfuerzo: con un poco de atención rara vez hará falta tirarlo."}
+  ]
+}

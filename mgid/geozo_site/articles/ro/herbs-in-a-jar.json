@@ -1,0 +1,37 @@
+{
+  "rubric": "Casă și bucătărie",
+  "title": "Pătrunjel, mărar, coriandru: metoda borcanului pentru verdeață proaspătă",
+  "teaser": "Un borcan cu puțină apă și o pungă așezată lejer deasupra păstrează verdeața proaspătă mult mai mult în frigider. Iată pașii pentru pătrunjel, mărar și coriandru, de la tăiere până la congelare.",
+  "description": "Cum păstrați pătrunjelul, mărarul și coriandrul într-un borcan cu apă, în frigider, plus alternative: prosop umed și congelare în forme pentru gheață.",
+  "heroAlt": "Un borcan de sticlă cu apă, în care stă un buchet de pătrunjel și mărar proaspăt.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Pătrunjelul, mărarul și coriandrul se ofilesc repede dacă rămân în punga în care le-ați adus acasă. Există însă o metodă simplă, care cere doar un borcan și puțină apă: verdeața se ține în frigider ca un buchet de flori. Așa rămâne proaspătă mult mai mult timp decât în pungă."},
+    {"t": "p", "x": "Iată pașii, inclusiv ce faceți cu busuiocul, care e o excepție."},
+    {"t": "h2", "x": "Pregătiți tulpinile"},
+    {"t": "p", "x": "Tăiați capătul tulpinilor cu 1-2 cm, de preferat oblic, cu un cuțit bine ascuțit. Scoateți frunzele galbene, moi sau ofilite, pentru că ele le strică repede pe cele din jur."},
+    {"t": "p", "x": "Dacă mănunchiul e legat cu elastic sau cu sfoară, desfaceți legătura, ca tulpinile să nu rămână strânse."},
+    {"t": "h2", "x": "Un borcan cu apă și o pungă deasupra"},
+    {"t": "p", "x": "Turnați în borcan 2-3 cm de apă și puneți în el mănunchiul, astfel încât frunzele să nu atingă apa. Așezați deasupra o pungă transparentă și puneți borcanul în frigider, pe un raft."},
+    {"t": "p", "x": "Punga se așază lejer, fără să fie strânsă, ca aerul să poată circula în jurul frunzelor."},
+    {"t": "h2", "x": "Schimbați apa din două în două zile"},
+    {"t": "p", "x": "Apa se tulbură în câteva zile. Turnați apă curată din două în două zile și scoateți atunci frunzele care s-au înmuiat."},
+    {"t": "p", "x": "Cu aceste îngrijiri, pătrunjelul și mărarul se păstrează de obicei una-două săptămâni, iar coriandrul puțin mai puțin, în funcție de prospețimea lor de la început."},
+    {"t": "h2", "x": "Nu spălați verdeața înainte"},
+    {"t": "p", "x": "Frunzele ude se înmoaie și se înnegresc mai repede. Spălați doar cât folosiți, chiar înainte de gătit, și scuturați bine apa."},
+    {"t": "h2", "x": "Excepția: busuiocul"},
+    {"t": "p", "x": "Busuiocul nu suportă frigul: în frigider frunzele se pătează și se înnegresc. Țineți-l într-un pahar cu apă, la temperatura camerei, ferit de soarele puternic și de curent."},
+    {"t": "p", "x": "Dacă îl aveți în ghiveci, lăsați-l acolo, pe pervaz, și udați-l atunci când pământul se usucă la suprafață."},
+    {"t": "h2", "x": "Alternative: prosop umed și congelare"},
+    {"t": "p", "x": "Dacă nu aveți loc pentru un borcan, înfășurați verdeața într-un prosop de hârtie ușor umed și puneți-o într-un recipient închis. Pentru păstrare mai îndelungată, tocați-o mărunt și congelați-o în forme pentru cuburi de gheață, cu puțină apă sau ulei."},
+    {"t": "tip", "x": "Frunzele care s-au înmuiat nu trebuie aruncate: sunt bune în ciorbe, supe și sosuri, unde se gătesc oricum."},
+    {"t": "h2", "x": "Ce reținem"},
+    {"t": "ul", "x": [
+      "Tăiați tulpinile și scoateți frunzele ofilite.",
+      "Borcan cu 2-3 cm de apă, pungă lejeră deasupra, frigider.",
+      "Apa se schimbă din două în două zile.",
+      "Verdeața se spală abia înainte de folosire.",
+      "Busuiocul rămâne la temperatura camerei."
+    ]},
+    {"t": "p", "x": "Cu un borcan și puțină apă, verdeața rămâne la îndemână pentru orice masă, iar ce nu apucați să folosiți la timp se poate congela."}
+  ]
+}

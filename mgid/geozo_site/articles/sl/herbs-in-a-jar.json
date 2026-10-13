@@ -1,0 +1,37 @@
+{
+  "rubric": "Dom in kuhinja",
+  "title": "Peteršilj, koper in koriander ostanejo sveži tudi več tednov: metoda s kozarcem",
+  "teaser": "Šop peteršilja, kopra ali koriandra v hladilniku rad oveni že po nekaj dneh. S kozarcem vode in rahlo nataknjeno vrečko ostane svež precej dlje. Opisan je celoten postopek po korakih.",
+  "description": "Kako shraniti peteršilj, koper in koriander v kozarcu z vodo: priprava šopa, menjava vode, izjema bazilika in druge možnosti.",
+  "heroAlt": "Šop peteršilja in kopra v prozornem steklenem kozarcu.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Šop peteršilja, kopra ali koriandra v hladilniku pogosto oveni že po nekaj dneh. Z zelišči je podobno kot z rezanim cvetjem: stebla potrebujejo vodo, listi pa zračno okolje. Z navadnim kozarcem lahko ostanejo sveža dva tedna ali dlje."},
+    {"t": "p", "x": "Za metodo potrebujete le kozarec, vodo in navadno vrečko, priprava pa traja nekaj minut."},
+    {"t": "h2", "x": "Pripravite šop"},
+    {"t": "p", "x": "Spodnje konce stebel prirežite za centimeter ali dva, tako kot pri šopku rož. Odstranite rumene, ovenele ali sluzaste liste, saj hitro pokvarijo še druge."},
+    {"t": "p", "x": "Zelišč pred shranjevanjem ne perite, ker vlaga na listih pospeši gnitje. Operite jih šele, ko jih boste uporabili."},
+    {"t": "h2", "x": "Kozarec, voda in vrečka čez liste"},
+    {"t": "p", "x": "V kozarec nalijte 2–3 cm vode in vanj postavite šop, tako da so v vodi le stebla. Listi naj ne segajo v vodo, sicer se hitro zmehčajo."},
+    {"t": "p", "x": "Čez liste rahlo nataknite prozorno vrečko, ne da bi jo zavezali, in kozarec postavite v hladilnik. Tako se okoli listov ohrani vlaga, zrak pa še vedno kroži."},
+    {"t": "h2", "x": "Vodo menjajte vsak drugi dan"},
+    {"t": "p", "x": "Čista voda upočasni kvarjenje stebel, zato jo zamenjajte vsak drugi dan ali takoj, ko se skali. Ob tem stebla znova malo prirežite in odstranite liste, ki so kljub vsemu ovenili."},
+    {"t": "tip", "x": "Vsako vrsto zelišč postavite v svoj kozarec: tako lažje menjate vodo in vzamete le toliko, kolikor potrebujete."},
+    {"t": "h2", "x": "Bazilika je izjema"},
+    {"t": "p", "x": "Bazilika v hladilniku hitro počrni, zato zanjo velja drugačen postopek. Šop postavite v kozarec z vodo pri sobni temperaturi, vendar ne na sonce in ne na prepih, vodo pa menjajte enako pogosto kot pri drugih zeliščih."},
+    {"t": "h2", "x": "Druge možnosti: brisača in zamrzovanje"},
+    {"t": "p", "x": "Zelišča lahko zavijete tudi v rahlo navlaženo kuhinjsko brisačo in jih položite v posodo s pokrovom. Tako običajno zdržijo nekaj dni, včasih celo teden dni."},
+    {"t": "p", "x": "Nasekljana zelišča zamrznite v pladnju za ledene kocke: vsak prekat do polovice napolnite z zelišči in dolijte malo vode ali olja. Ko se kocke strdijo, jih preložite v vrečko in nanjo napišite datum."},
+    {"t": "h2", "x": "Mehke liste uporabite v juhah in omakah"},
+    {"t": "p", "x": "Če so zelišča po nekaj dneh nekoliko mehkejša, so za kuhanje še povsem uporabna. Dodajte jih juham, omakam in enolončnicam, kjer mehkoba ni opazna."},
+    {"t": "p", "x": "Najčvrstejše liste prihranite za solato in za okras, mehkejše pa nasekljajte in vmešajte v jed proti koncu kuhanja, da obdržijo vonj."},
+    {"t": "h2", "x": "Povzetek postopka"},
+    {"t": "ul", "x": [
+      "Stebla prirežite, ovenele liste odstranite, zelišč pa ne perite.",
+      "V kozarec nalijte 2–3 cm vode, čez liste rahlo nataknite vrečko.",
+      "Vodo menjajte vsak drugi dan.",
+      "Baziliko hranite pri sobni temperaturi.",
+      "Nasekljana zelišča lahko zamrznete v pladnju za led."
+    ]},
+    {"t": "p", "x": "Nekaj dni opazujte, kako se zelišča obnesejo v vašem hladilniku, in postopek po potrebi prilagodite."}
+  ]
+}

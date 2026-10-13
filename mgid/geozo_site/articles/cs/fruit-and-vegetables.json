@@ -1,0 +1,38 @@
+{
+  "rubric": "Domácnost a kuchyně",
+  "title": "Ovoce a zelenina: co uchovávat spolu a co zvlášť",
+  "teaser": "Banány vedle jablek rychleji zrají a salát vedle zralého ovoce žloutne. Přehled, co s čím uložit, kam patří brambory a proč rajčata nepatří do lednice.",
+  "description": "Přehled, které druhy ovoce a zeleniny se při uložení ovlivňují: etylen, brambory a cibule, rajčata, zásuvky v lednici a týdenní kontrola zásob.",
+  "heroAlt": "Zásuvka v lednici s červenými, žlutými a oranžovými paprikami, okurkami, mrkví a listy špenátu.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Banán položený vedle jablek zhnědne dřív a salát v sousedství zralého ovoce rychle žloutne. Není to náhoda: některé druhy ovoce a zeleniny uvolňují plyn, který urychluje zrání i stárnutí všeho okolo. Když víte, co s čím uložit, vydrží zásoby déle."},
+    {"t": "p", "x": "Tady je přehled toho, co se k sobě hodí a co je lepší držet od sebe."},
+    {"t": "h2", "x": "Etylen jednoduše vysvětlený"},
+    {"t": "p", "x": "Etylen je přirozený plyn, který ovoce uvolňuje při zrání. Urychluje dozrávání plodů v okolí a u citlivější zeleniny také žloutnutí a měknutí."},
+    {"t": "p", "x": "Kvůli němu se zelenina uložená vedle zralého ovoce kazí dřív. Je to zcela běžný jev, stačí s ním při ukládání počítat."},
+    {"t": "h2", "x": "Kdo etylen vyrábí a komu vadí"},
+    {"t": "p", "x": "Hodně ho uvolňují jablka, hrušky, banány, meruňky a zralá rajčata. Citlivé jsou naopak listový salát, okurky, mrkev, brokolice nebo zelené fazolky."},
+    {"t": "p", "x": "Ovoce, které etylen vyrábí, proto dávejte stranou od těchto druhů, nejlépe do jiné zásuvky nebo nádoby."},
+    {"t": "h2", "x": "Brambory a cibule zvlášť"},
+    {"t": "p", "x": "Brambory a cibuli skladujte odděleně od sebe, protože spolu si nesvědčí a obojí se pak kazí rychleji. Pro obojí se hodí tmavé, suché a vzdušné místo, například košík nebo bedna ve spíži."},
+    {"t": "p", "x": "Na světle brambory zelenají a klíčí, proto je případně přikryjte látkou. Uzavřený plastový sáček se pro ně ani pro cibuli nehodí, drží vlhkost."},
+    {"t": "h2", "x": "Rajčata nepatří do lednice"},
+    {"t": "p", "x": "V chladu rajčata ztrácejí vůni a dužina jim zmoučnatí. Nechte je proto při pokojové teplotě, mimo přímé slunce. Zralá spotřebujte během několika dnů, nakrojená patří v uzavřené nádobě do lednice."},
+    {"t": "tip", "x": "Nezralá rajčata dozrají rychleji v papírovém sáčku spolu s jablkem, které jim etylenem pomůže."},
+    {"t": "h2", "x": "Dvě zásuvky na zeleninu a ovoce"},
+    {"t": "p", "x": "Má-li lednice dvě zásuvky, jednu využijte na zeleninu a druhou na ovoce. Zelenina se cítí dobře ve vlhčím prostředí, ovoce v sušším."},
+    {"t": "p", "x": "Pokud lze vlhkost zásuvky regulovat, nastavte ji podle obsahu. Listový salát a mrkev vydrží déle, když je zabalíte do lehce vlhké utěrky nebo uložíte do děrovaného sáčku."},
+    {"t": "h2", "x": "Nakrájené kousky a týdenní kontrola"},
+    {"t": "p", "x": "Rozkrojené ovoce a zeleninu uložte do uzavřených nádob, aby nevyschly a nepřebraly pachy z okolí."},
+    {"t": "p", "x": "Jednou týdně zásoby projděte a hned vyřaďte, co se začíná kazit. Jedno nahnilé jablko dokáže zkazit celou zásobu."},
+    {"t": "h2", "x": "Shrnutí"},
+    {"t": "ul", "x": [
+      "Jablka, hrušky a banány držte stranou od zeleniny.",
+      "Brambory a cibuli skladujte zvlášť, ve tmě a ve vzduchu.",
+      "Rajčata patří na linku, ne do lednice.",
+      "Zeleninu dejte do vlhčí zásuvky, ovoce do sušší.",
+      "Nakrájené kusy uzavřete a zásoby jednou týdně projděte."
+    ]},
+    {"t": "p", "x": "Nejde o složitá pravidla, spíš o malé změny v tom, kam co položíte. Doby uchování se liší podle druhu i zralosti, proto zásoby sledujte a u balených výrobků dbejte na datum na obalu."}
+  ]
+}

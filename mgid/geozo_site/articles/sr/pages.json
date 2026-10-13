@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "O nama",
+    "paras": [
+      "Arcadia Blog je mali časopis o kući, kuhinji i bašti. Pišemo o svakodnevnim stvarima: kako čuvati namirnice, kako se brinuti o sobnim biljkama i kako uzgajati začinsko bilje na prozoru ili u bašti.",
+      "Svi tekstovi imaju informativni karakter i ne zamenjuju uputstva proizvođača. Potrebe pojedinih biljaka i namirnica se razlikuju, pa savete uvek prilagodite svojoj situaciji.",
+      "Sajt se finansira reklamama naših partnera. Svaki reklamni blok je jasno označen rečju „Reklama“ i odvojen od teksta članaka."
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "paras": [
+      "Imate pitanje, predlog teme ili primedbu na neki tekst? Pišite nam na adresu contact@arcadiablog.com.",
+      "Na poruke odgovaramo u roku od nekoliko radnih dana. Molimo vas da u poruci ne navodite podatke koji nisu potrebni za odgovor."
+    ]
+  },
+  "privacy": {
+    "title": "Politika privatnosti",
+    "paras": [
+      "Kada posetite sajt, automatski se beleže tehnički podaci o poseti, na primer vrsta pregledača i uređaja, jezik i vreme pristupa. Sajt koristi i kolačiće koji omogućavaju njegov pravilan rad.",
+      "Reklamni blokovi naših partnera mogu da koriste kolačiće i slične tehnologije da bi prikazali i izmerili reklame.",
+      "Na sajtu nema korisničkih naloga ni plaćanja, pa od vas ne tražimo ime, adresu ni podatke o platnoj kartici.",
+      "Kolačićima možete da upravljate u podešavanjima pregledača: moguće je da ih obrišete ili da blokirate njihovo čuvanje, s tim što neki delovi sajta tada možda neće raditi kako treba.",
+      "Ako imate pitanje o privatnosti, pišite nam na contact@arcadiablog.com."
+    ]
+  }
+}

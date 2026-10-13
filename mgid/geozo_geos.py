@@ -1,0 +1,207 @@
+"""MGID campaigns for the multilingual site arcadiablog.com/blog/<lang>/: one campaign per geo, two teasers each.
+
+Owner, 13.10 night: «запустить кампании на эти гео и языки с 1-2 креативами в самом МГИД. По гео начни с Болгарии, Польши,
+Румынии, Чехии, Португалии, Италии, Испании, немецкоговорящих Германии, Швейцарии, Австрии, Венгрии, Словакии, Словении,
+Сербии».
+
+    python3 geozo_geos.py                       # plan: prints what would be created, changes nothing
+    python3 geozo_geos.py --apply [--only PL,BG]  # create the campaigns PAUSED and add their two teasers (moderation)
+    python3 geozo_geos.py --start [--only PL,BG]  # start them (needs a positive balance)
+    python3 geozo_geos.py --status              # campaigns, teaser states, today's numbers
+
+Everything but the geo is the Kazakhstan test (geozo_campaign.py): campaign type `product`, bidding targetCpa with the
+goal «Geozo block click» (target 1280981, event geozoclick, no deduplication: one conversion per counted click on a
+block), mobile OS list of the dating copies, daily limit $20 (MGID's minimum); the real cap is mgid-spend-stop on
+Inferno, which pauses any campaign at $3 of spend. Language targeting is the geo's language (not Russian).
+
+Teasers: the creative of the article (teasers/<slug>.jpg, 1200x800, served from /blog/c/) and the headline written
+by the language's writer (articles/<lang>/teasers.json). Every geo gets the herbs-in-a-jar creative and one more,
+rotating over the other food and plant articles from geo to geo, so that the first data also says which article wins.
+
+The target CPA per geo is a starting guess, not a measurement: the cheap geos start at the one cent of the Kazakhstan
+test, the geos where MGID's floor price is higher start higher. After the first hours it is set by what delivers.
+"""
+import argparse
+import json
+import sys
+import time
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(HERE / "geozo_site"))
+
+import build_multi as bm  # noqa: E402
+import mgid_geo_copies as cp  # noqa: E402
+import multi_config as mc  # noqa: E402
+from mgid_api import CID1, CID2, V1, V2, buy_cpa, call, pause, report, v2_campaigns  # noqa: E402
+
+SITE = "https://arcadiablog.com"
+TARGET_ID = 1280981                    # «Geozo block click», eventName geozoclick
+LINK = SITE + "/blog/{route}/{slug}.html?click_id={{click_id}}&source=mgid_{{campaign_id}}_{{widget_id}}"
+IMAGE = SITE + "/blog/c/{slug}.jpg"
+ORDER = ["BG", "PL", "RO", "CZ", "PT", "IT", "ES", "DE", "CH", "AT", "HU", "SK", "SI", "RS"]    # the owner's order
+CPA = {"BG": 0.01, "RO": 0.01, "RS": 0.01, "SK": 0.01, "SI": 0.01, "HU": 0.015,
+       "PL": 0.02, "CZ": 0.02, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.04, "AT": 0.04, "CH": 0.05}
+SECOND = ["bread-storage", "fruit-and-vegetables", "houseplants-autumn"]           # the rotating second creative
+FIRST = "herbs-in-a-jar"
+OUT = HERE / "data" / "geozo-geos.json"
+
+
+def name_of(geo):
+    return f"Arcadia {geo} content mobile CPA {CPA[geo]:g}"
+
+
+def picks(geo):
+    """The two article slugs advertised in the geo."""
+    return [FIRST, SECOND[ORDER.index(geo) % len(SECOND)]]
+
+
+def teaser_titles(route):
+    _, _, _, tz = bm.load_lang(route)
+    return {x["article"]: x["title"] for x in tz}
+
+
+def body(src, geo, ids):
+    route = mc.GEOS[geo][1]
+    lang = mc.LANGS[mc.DERIVED[route]["from"] if route in mc.DERIVED else route]["mgid_lang"]
+    b = cp.body_for(geo, ids[geo], CPA[geo], src)
+    b.update({"name": name_of(geo), "showName": "Arcadia Blog", "type": "product", "isAutoLaunchAdsAfterApproval": True,
+              "languageTargeting": {"mode": "include", "value": [lang]}})
+    b["conversionTracking"] = {"type": "sensors", "decisionStage": None, "interestStage": None,
+                               "buyStage": {"targetId": TARGET_ID, "deduplicateConversions": False,
+                                            "conversionValue": CPA[geo]}}
+    return b
+
+
+def teaser_form(cid, geo, slug, title):
+    route = mc.GEOS[geo][1]
+    return {"campaignId": cid, "url": LINK.format(route=route, slug=slug), "title": title,
+            "imageLink": IMAGE.format(slug=slug), "priceOfClick": cp.TEASER_CENTS, "whetherShowGoodPrice": 0}
+
+
+def plan_rows(geos):
+    rows = []
+    for g in geos:
+        route = mc.GEOS[g][1]
+        titles = teaser_titles(route)
+        for slug in picks(g):
+            rows.append((g, route, slug, titles.get(slug, "?")))
+    return rows
+
+
+def apply(geos, live, src, ids):
+    saved = json.loads(OUT.read_text()) if OUT.exists() else {}
+    for g in geos:
+        name = name_of(g)
+        cid = next((i for i, x in live.items() if x.get("name") == name), None)
+        if not cid:
+            st, d = call("POST", V2 + f"account/{CID2}/campaigns", body(src, g, ids))
+            if st not in (200, 201) or not isinstance(d, dict) or not d.get("id"):
+                print(f"{g}: создание {st} {json.dumps(d, ensure_ascii=False)[:500]}")
+                continue
+            cid = int(d["id"])
+            print(f"{g}: создана {cid} «{name}»")
+            time.sleep(2)
+        s = pause(cid)
+        print(f"{g}: пауза {s.get('name')}/{s.get('reason')}")
+        have = {t.get("imageLink") for t in cp.teasers(cid).values() if isinstance(t, dict)}
+        titles = teaser_titles(mc.GEOS[g][1])
+        rec = {"id": cid, "name": name, "cpa": CPA[g], "teasers": []}
+        for slug in picks(g):
+            if IMAGE.format(slug=slug) in have:
+                print(f"  тизер {slug}: уже есть")
+                continue
+            form = teaser_form(cid, g, slug, titles[slug])
+            st, d = call("POST", V1 + f"goodhits/clients/{CID1}/teasers", form, form=True)
+            tid = d.get("id") if isinstance(d, dict) else None
+            print(f"  тизер {slug}: {st} {tid or json.dumps(d, ensure_ascii=False)[:300]}")
+            rec["teasers"].append({"slug": slug, "id": tid, "status": st, "title": titles[slug]})
+            if isinstance(d, dict) and any("LS_TEASER_ADD_LIMIT_ERROR" in e for e in (d.get("errors") or [])):
+                print("  лимит добавления тизеров: остальные позже")
+                break
+            time.sleep(1)
+        saved[g] = rec
+        time.sleep(1)
+    OUT.parent.mkdir(exist_ok=True)
+    json.dump(saved, open(OUT, "w"), ensure_ascii=False, indent=1)
+    print(f"записано: {OUT}")
+
+
+def start(geos, live):
+    st, w = call("GET", V1 + f"clients/{CID1}")
+    bal = ((w or {}).get("wallet") or {}).get("balance") if isinstance(w, dict) else None
+    print(f"баланс аккаунта: {bal}")
+    if bal is None or float(bal) <= 0:
+        raise SystemExit("баланс не положительный, не запускаю")
+    for g in geos:
+        cid = next((i for i, x in live.items() if x.get("name") == name_of(g)), None)
+        if not cid:
+            print(f"{g}: кампании нет")
+            continue
+        s = pause(cid, on=False)
+        print(f"{g}: {cid} {s.get('name')}/{s.get('reason')}")
+        time.sleep(1)
+
+
+def status(geos, live):
+    day = time.strftime("%Y-%m-%d", time.gmtime(time.time() + 3 * 3600))        # MGID day = UTC+3
+    rep = {}
+    try:
+        for x in report(day, day, ("impressions", "clicks", "spent", "conversionsBuy"), ("campaignId",)):
+            rep[int(x["campaignId"])] = x
+    except Exception as e:          # the report must not hide the states
+        print("отчёт MGID недоступен:", str(e)[:120])
+    for g in geos:
+        name = name_of(g)
+        cid = next((i for i, x in live.items() if x.get("name") == name), None)
+        if not cid:
+            print(f"{g}: нет кампании")
+            continue
+        r = live[cid]
+        tz = {}
+        for t in cp.teasers(cid).values():
+            if isinstance(t, dict):
+                c = (t.get("status") or {}).get("code")
+                tz[c] = tz.get(c, 0) + 1
+        x = rep.get(cid) or {}
+        money = lambda v: float(v.get("amount") if isinstance(v, dict) else (v or 0))        # noqa: E731
+        print(f"{g} {cid}: {(r.get('status') or {}).get('name')}/{(r.get('status') or {}).get('reason')}, "
+              f"тизеры {tz}, показы {int(money(x.get('impressions')))}, клики {int(money(x.get('clicks')))}, "
+              f"расход ${money(x.get('spent')):.4f}, конверсии {int(money(x.get('conversionsBuy')))}")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--start", action="store_true")
+    ap.add_argument("--status", action="store_true")
+    ap.add_argument("--only", default="")
+    a = ap.parse_args()
+    geos = [g for g in ORDER if not a.only or g in a.only.split(",")]
+    bad = [g for g in (a.only.split(",") if a.only else []) if g not in ORDER]
+    if bad:
+        raise SystemExit(f"нет таких гео в списке: {bad}")
+    live = v2_campaigns(("name", "status", "bidding"))
+    if a.status:
+        return status(geos, live)
+    if a.start:
+        return start(geos, live)
+    src = v2_campaigns().get(cp.SOURCE)
+    if not src:
+        raise SystemExit(f"исходной кампании {cp.SOURCE} нет в v2")
+    ids = cp.country_ids()
+    for g in geos:
+        if ids.get(g) != mc.GEOS[g][0]:
+            raise SystemExit(f"{g}: id страны в MGID {ids.get(g)}, в конфиге {mc.GEOS[g][0]}")
+    print(f"план: {len(geos)} кампаний, targetCpa по гео {[(g, CPA[g]) for g in geos]}, цель {TARGET_ID}, тип product")
+    for g, route, slug, title in plan_rows(geos):
+        print(f"  {g} (/blog/{route}/) {slug}: {title}")
+    if not a.apply:
+        print("(без --apply ничего не создаётся)")
+        return
+    apply(geos, live, src, ids)
+
+
+if __name__ == "__main__":
+    main()

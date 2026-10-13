@@ -1,0 +1,105 @@
+{
+  "rubric": "Dom i bašta",
+  "title": "Gajenje lavande: sunce, zemlja i orezivanje",
+  "teaser": "Lavanda traži malo, ali pravo: puno sunca, propusnu i prilično siromašnu zemlju i orezivanje u pravo vreme. Evo kako da je posadite, negujete i prezimite, u bašti i u saksiji.",
+  "description": "Kako gajiti lavandu: sunčano mesto, propusna zemlja, sadnja, orezivanje posle cvetanja, prezimljavanje u bašti i saksiji i sušenje cvetova za ukras.",
+  "heroAlt": "Redovi lavande u punom cvatu na polju, a u pozadini šumovito brdo i vinogradi.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Lavanda je biljka sunčanih i suvih mesta i retko traži mnogo nege. Ako joj date dovoljno sunca i propusnu zemlju, više godina će krasiti vašu baštu ili terasu."
+    },
+    {
+      "t": "p",
+      "x": "Evo šta lavanda voli, a šta joj ne prija."
+    },
+    {
+      "t": "h2",
+      "x": "Lavandi treba puno sunca"
+    },
+    {
+      "t": "p",
+      "x": "Posadite je na najsunčanije mesto u bašti, gde sunce stoji većinu dana. U hladu se izdužuje, slabije cveta i gubi gust, zaobljen oblik. Posebno joj prija mesto uz zid okrenut ka jugu, koji preko dana upija, a uveče odaje toplotu."
+    },
+    {
+      "t": "h2",
+      "x": "Laka, propusna i prilično siromašna zemlja"
+    },
+    {
+      "t": "p",
+      "x": "Najbolje uspeva u rastresitoj, propusnoj i prilično siromašnoj zemlji, čak i kamenitoj. Bogato đubrivo joj ne treba, jer od njega daje više lišća nego cvetova."
+    },
+    {
+      "t": "tip",
+      "x": "Ako je zemlja teška i glinovita, u jamu za sadnju umešajte pesak ili sitan šljunak, da voda lakše otiče."
+    },
+    {
+      "t": "h2",
+      "x": "Sadnja u proleće i retko zalivanje"
+    },
+    {
+      "t": "p",
+      "x": "Sadnice se najčešće sade u proleće, na razmaku od 40 do 60 cm, jer lavanda vremenom izraste u okruglast žbun. Površinu oko biljke možete prekriti slojem sitnog šljunka, koji pomaže da se zemlja oko korena brže osuši."
+    },
+    {
+      "t": "p",
+      "x": "Prvih nedelja posle sadnje zalivajte redovnije, dok se ne primi, a kasnije retko, samo u dužim sušama."
+    },
+    {
+      "t": "h2",
+      "x": "Orezivanje posle cvetanja"
+    },
+    {
+      "t": "p",
+      "x": "Kad cvetanje prođe, skratite izdanke zajedno sa cvastima za otprilike trećinu, tako da žbun ostane zaobljen. Nikad ne secite u staro, golo, odrvenelo drvo, jer iz njega lavanda teško ponovo propupi."
+    },
+    {
+      "t": "p",
+      "x": "Najbolje je orezivati svake godine, makar malo, jer se neorezana lavanda s vremenom ogoli i odrveni."
+    },
+    {
+      "t": "h2",
+      "x": "Zima: vlaga je opasnija od mraza"
+    },
+    {
+      "t": "p",
+      "x": "Zimi lavandi više šteti stajaća voda oko korena nego mraz. Zato je važno da se na mestu sadnje voda ne zadržava."
+    },
+    {
+      "t": "p",
+      "x": "Za saksije koristite supstrat sa dosta peska ili sitnog šljunka, otvore za odvod i zaklonjeno mesto, da ih ne natapa kiša. U saksiji se zemlja brže suši, pa leti zalivajte nešto češće nego u bašti, ali tek kad se gornji sloj osuši."
+    },
+    {
+      "t": "h2",
+      "x": "Cvetovi za sušenje i najčešće greške"
+    },
+    {
+      "t": "p",
+      "x": "Cvetne stabljike režite u fazi pupoljka, pre nego što se otvori većina cvetova, vežite ih u male svežnjeve i sušite na tamnom, prozračnom mestu. Mogu da posluže za ukras i mirisne kesice, samo zbog prijatnog mirisa."
+    },
+    {
+      "t": "p",
+      "x": "Najčešće greške su bogata zemlja, previše zalivanja i senovito mesto. Ako ih izbegnete, lavanda će lepo cvetati iz godine u godinu."
+    },
+    {
+      "t": "h2",
+      "x": "Ukratko"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Najsunčanije mesto i propusna, prilično siromašna zemlja.",
+        "Sadnja u proleće, na razmaku od 40 do 60 cm.",
+        "Posle ukorenjivanja zalivajte retko.",
+        "Orezujte posle cvetanja, ne u golo drvo.",
+        "Zimi izbegavajte stajaću vodu oko korena.",
+        "Cvetove režite u fazi pupoljka."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Lavanda je skromna: kad pronađe sunce i suvu zemlju, ostalo uglavnom obavi sama."
+    }
+  ]
+}

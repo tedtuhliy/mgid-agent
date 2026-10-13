@@ -1,0 +1,19 @@
+{
+  "brand_tag": "conselhos",
+  "read_also": "Leia também",
+  "read_min": "{n} min de leitura",
+  "home_title": "Casa, cozinha e jardim",
+  "home_intro": "Conselhos práticos para conservar melhor os alimentos, cuidar das plantas de interior e aproveitar as ervas aromáticas, em textos curtos e fáceis de ler.",
+  "all_articles": "Todos os artigos",
+  "nav_home": "Início",
+  "nav_about": "Sobre nós",
+  "nav_contact": "Contactos",
+  "nav_privacy": "Privacidade",
+  "disclosure": "Os textos têm caráter meramente informativo. O site apresenta publicidade de parceiros, sempre assinalada com a palavra «Publicidade», e utiliza cookies para o seu funcionamento e para os blocos publicitários.",
+  "cookie": "Utilizamos cookies para o funcionamento do site e dos blocos publicitários.",
+  "cookie_more": "Saber mais",
+  "cookie_ok": "OK",
+  "disclaimer": "Conteúdo meramente informativo: as indicações do fabricante e as necessidades de cada planta ou produto têm sempre prioridade.",
+  "months": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
+  "date_fmt": "{d} de {month} de {y}"
+}

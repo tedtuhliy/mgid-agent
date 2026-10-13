@@ -1,0 +1,37 @@
+{
+  "rubric": "Pokojové rostliny",
+  "title": "Aloe vera doma: světlo, zalévání a přesazování",
+  "teaser": "Aloe vera se v bytě daří, když má dost světla, propustný substrát a střídmé zalévání. Přehled péče po celý rok, od zimního klidu po oddělování odnoží a přesazování.",
+  "description": "Péče o aloe vera jako o pokojovou rostlinu: světlo, zalévání, substrát a květináč, zimní klid, rozpoznání potíží, odnože a přesazování.",
+  "heroAlt": "Detail zelených masitých listů aloe s kapkami vody a drobnými ostny na okrajích.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Aloe vera je oblíbená pokojová rostlina s masitými listy, která snese i drobné prohřešky v péči. Pokud má dost světla a nepřemokřený substrát, roste spokojeně řadu let. Tady jsou zásady, jak o ni pečovat po celý rok."},
+    {"t": "p", "x": "Pár jednoduchých pravidel stačí k tomu, aby aloe zůstala pevná a svěže zelená."},
+    {"t": "h2", "x": "Světlo: jasné, ale rozptýlené"},
+    {"t": "p", "x": "Aloe nejlépe vyhovuje jasné rozptýlené světlo, například u okna orientovaného na východ nebo na západ. Trocha přímého slunce nevadí. V zimě, kdy je světla méně, jí vyberte co nejsvětlejší místo."},
+    {"t": "p", "x": "Pokud rostlinu přesouváte z pološera na slunné místo, navykejte ji postupně, jinak mohou listy zhnědnout."},
+    {"t": "h2", "x": "Zalévání: důkladně a pak počkat"},
+    {"t": "p", "x": "Zalévejte vydatně, ale až když je substrát úplně suchý, a vodu z misky vždy vylijte. Lijte vodu na substrát, ne do středu růžice, kde by mohla zůstat stát. V létě to obvykle bývá jednou za dva až tři týdny, v zimě mnohem méně často."},
+    {"t": "h2", "x": "Propustný substrát a vhodný květináč"},
+    {"t": "p", "x": "Aloe potřebuje hrubší, štěrkovitý substrát, třeba směs pro kaktusy a sukulenty doplněnou o písek nebo drobné kamínky. Kořeny se rozrůstají hlavně do šířky, proto se hodí širší a nižší nádoba."},
+    {"t": "p", "x": "Květináč musí mít otvory ve dně. Dobře se hodí nepolévaná terakota, která přes stěny část vody odpaří."},
+    {"t": "h2", "x": "Zimní klid"},
+    {"t": "p", "x": "V zimě aloe odpočívá: nechte ji na světlém místě, zalévejte jen výjimečně a nehnojte. Teplota by neměla klesnout pod zhruba 10 °C a mráz rostlina nesnese. Pozor na místa těsně u okna, kde se může rostlina v mrazivých nocích poškodit chladem."},
+    {"t": "h2", "x": "Poznáte přemokření i sucho"},
+    {"t": "p", "x": "Příliš mnoho vody prozradí měkké, sklovité a průsvitné listy, někdy i hnědé skvrny u báze. Zalévání v takovém případě zastavte a substrát nechte dobře vyschnout."},
+    {"t": "p", "x": "Nedostatek vody se projeví tenkými, svinutými a svraštělými listy. Rostlinu pak vydatně zalijte a sledujte, jak se zotaví."},
+    {"t": "h2", "x": "Odnože a přesazování"},
+    {"t": "p", "x": "Kolem mateřské rostliny vyrůstají mladé odnože. Až dorostou do výšky několika centimetrů a vytvoří vlastní kořeny, opatrně je oddělte a zasaďte do malých květináčů. Mladé rostlinky zalévejte zpočátku jen střídmě, dokud nezakoření."},
+    {"t": "p", "x": "Mateřskou rostlinu přesazujte přibližně jednou za dva až tři roky, nejlépe na jaře, do nádoby o něco větší."},
+    {"t": "tip", "x": "Oddělenou odnož nechte před zasazením den až dva oschnout na vzduchu, aby se místo řezu zacelilo."},
+    {"t": "h2", "x": "Zkráceně"},
+    {"t": "ul", "x": [
+      "Jasné rozptýlené světlo, trocha přímého slunce nevadí.",
+      "Zalévat vydatně, ale až když substrát úplně proschne.",
+      "Propustný štěrkovitý substrát a květináč s otvory ve dně.",
+      "V zimě chladněji, ale ne pod 10 °C, a jen málo vody.",
+      "Přesazovat jednou za dva až tři roky, odnože oddělovat na jaře."
+    ]},
+    {"t": "p", "x": "Aloe dává přednost suchu před přemokřením. Když ji budete sledovat, listy samy napoví, co jí chybí."}
+  ]
+}

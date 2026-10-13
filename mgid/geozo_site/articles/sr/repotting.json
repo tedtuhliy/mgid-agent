@@ -1,0 +1,105 @@
+{
+  "rubric": "Dom i bašta",
+  "title": "Presađivanje sobnih biljaka: kada, kako i šta izbegavati",
+  "teaser": "Koren viri kroz otvore na dnu, voda odmah protekne kroz zemlju, a rast je stao: to su znaci da je saksija tesna. Evo kada, kako i u kakvu saksiju presaditi biljku, a kada je bolje sačekati.",
+  "description": "Znaci da je saksija tesna, pravo vreme, veličina saksije, zemlja i koraci presađivanja, kao i slučajevi kada je bolje ne presađivati.",
+  "heroAlt": "Otvorena šaka drži mladu biljčicu sa grumenom tamne zemlje ispred zamućene zelene pozadine.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Presađivanje nije posao za svaku godinu i svaku biljku. Obavljeno u pravo vreme i na pravi način daje korenu prostora za novi rast, a obavljeno olako može da uspori celu biljku."
+    },
+    {
+      "t": "p",
+      "x": "Evo kako da procenite da li je vreme za novu saksiju i kako da promena prođe što mirnije."
+    },
+    {
+      "t": "h2",
+      "x": "Znaci da je saksija tesna"
+    },
+    {
+      "t": "p",
+      "x": "Koren koji viri kroz otvore na dnu najjasniji je znak. Drugi znaci su voda koja odmah protekne kroz saksiju i ne upije se, kao i rast koji je stao uprkos redovnoj nezi."
+    },
+    {
+      "t": "p",
+      "x": "Ako biljku nežno izvadite iz saksije i vidite da je koren ispleo gust splet, a zemlje gotovo da nema, vreme je za veću saksiju."
+    },
+    {
+      "t": "h2",
+      "x": "Najbolje vreme: od proleća do početka leta"
+    },
+    {
+      "t": "p",
+      "x": "Biljke najlakše podnose presađivanje kad kreću u rast, a to je od proleća do početka leta. Tada se koren brzo oporavlja i zauzima novi prostor. U zimskom mirovanju biljku je bolje ne uznemiravati."
+    },
+    {
+      "t": "h2",
+      "x": "Saksija samo malo veća i svež supstrat"
+    },
+    {
+      "t": "p",
+      "x": "Nova saksija treba da bude samo dva do tri centimetra šira od stare. U prevelikoj saksiji zemlja dugo ostaje vlažna, pa koren stoji u vlazi dok biljka ne stigne da je popuni."
+    },
+    {
+      "t": "p",
+      "x": "Uzmite svež supstrat koji odgovara vrsti: za većinu sobnih biljaka rastresit, a za kaktuse i sukulente propusniji, sa dodatkom peska ili sitnog šljunka. Na dno stavite sloj drenaže, a otvori moraju ostati slobodni."
+    },
+    {
+      "t": "h2",
+      "x": "Presađivanje korak po korak"
+    },
+    {
+      "t": "p",
+      "x": "Dan ranije zalijte biljku, jer se iz vlažne zemlje lakše vadi. Zatim je nežno izvadite iz saksije, prstima razmrsite koren i čistim makazama odrežite mrtve, tamne i mekane delove."
+    },
+    {
+      "t": "p",
+      "x": "Postavite biljku u novu saksiju na sloj zemlje, dopunite supstratom oko korena, lagano pritisnite i dobro zalijte. Narednih sedam dana držite je van jakog sunca."
+    },
+    {
+      "t": "h2",
+      "x": "Ne prihranjujte odmah"
+    },
+    {
+      "t": "p",
+      "x": "Sveža zemlja već sadrži hranljive materije, pa đubrivo ne dodajte odmah posle presađivanja. Sačekajte da se pojave novi listovi, što obično traje nekoliko nedelja, a tada nastavite sa prihranom prema uputstvu."
+    },
+    {
+      "t": "tip",
+      "x": "Novu saksiju od terakote pre upotrebe potopite u vodu, da ne bi povukla vlagu iz sveže zemlje."
+    },
+    {
+      "t": "h2",
+      "x": "Kada ne presađivati i šta je alternativa"
+    },
+    {
+      "t": "p",
+      "x": "Biljku koja cveta ili je oslabila, na primer zbog štetočina, ne presađujte; sačekajte da se oporavi."
+    },
+    {
+      "t": "p",
+      "x": "Ako je saksija još odgovarajuća, dovoljno je da gornjih nekoliko centimetara zemlje zamenite svežom. Tako biljka dobija novi supstrat, a koren ostaje netaknut."
+    },
+    {
+      "t": "h2",
+      "x": "Ukratko"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Koren iz otvora, voda koja odmah protekne i zastoj u rastu pokazuju da je saksija tesna.",
+        "Najbolje vreme je od proleća do početka leta.",
+        "Nova saksija neka bude samo dva do tri centimetra šira.",
+        "Svež supstrat, drenaža i zalivanje dan ranije.",
+        "Prvu nedelju bez jakog sunca i bez prihrane.",
+        "Cvetajuće i oslabljene biljke ne presađujte, već zamenite samo gornji sloj zemlje."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Biljka je najbolji putokaz: ako raste i dobro izgleda, nema razloga za žurbu, a za svaku vrstu proverite njene posebne zahteve."
+    }
+  ]
+}

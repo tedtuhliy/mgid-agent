@@ -1,0 +1,36 @@
+{
+  "rubric": "Plantas de interior",
+  "title": "El aloe vera en casa: cuidados de luz, riego y trasplante",
+  "teaser": "El aloe vera es una planta resistente, pero tiene sus manías: luz abundante, riego espaciado y una maceta que drene bien. Así se cuida a lo largo del año.",
+  "description": "Cómo cuidar un aloe vera en casa: luz intensa pero indirecta, riego a fondo y espaciado, sustrato drenante, reposo invernal, hijuelos y trasplante.",
+  "heroAlt": "Primer plano de unas hojas verdes y carnosas de aloe, con gotas de agua en la superficie.",
+  "body": [
+    {"t": "p", "lead": true, "x": "El aloe vera es una suculenta que se da bien en casa si se acierta con tres cosas: la luz, el riego y el sustrato. Casi todos los problemas nacen de regarlo en exceso."},
+    {"t": "p", "x": "Estos son los cuidados básicos para mantenerlo en buen estado y con hojas nuevas."},
+    {"t": "h2", "x": "Luz abundante, pero filtrada"},
+    {"t": "p", "x": "Le conviene un sitio muy luminoso, junto a una ventana, con luz indirecta. Un poco de sol directo, sobre todo el de primera hora de la mañana, no le hace daño, pero el sol fuerte del mediodía tras el cristal puede quemar las hojas."},
+    {"t": "h2", "x": "Regar a fondo y dejar secar"},
+    {"t": "p", "x": "Se riega con abundancia, hasta que el agua salga por los agujeros, y se espera a que el sustrato se seque por completo antes del siguiente riego. En la práctica suele ser cada dos o tres semanas, y con menos frecuencia en invierno."},
+    {"t": "p", "x": "Si la maceta tiene platillo, conviene vaciarlo a los pocos minutos, para que las raíces no queden en el agua."},
+    {"t": "h2", "x": "Sustrato drenante y maceta de barro"},
+    {"t": "p", "x": "Necesita una mezcla arenosa, con grava o perlita, de las que se emplean para cactus y suculentas. La maceta debe tener agujeros de drenaje, y el barro, que es poroso, ayuda a que el sustrato se seque antes."},
+    {"t": "h2", "x": "El reposo del invierno"},
+    {"t": "p", "x": "En invierno crece poco y casi no necesita agua. Conviene tenerlo en un sitio luminoso, sin corrientes de aire y a una temperatura que no baje de unos 10 °C, porque no soporta las heladas."},
+    {"t": "h2", "x": "Señales de exceso o de falta de agua"},
+    {"t": "p", "x": "Las hojas blandas, translúcidas o de aspecto vidrioso indican exceso de agua: hay que dejar de regar y comprobar que el sustrato drena bien."},
+    {"t": "p", "x": "Si las hojas se ven finas, arrugadas o enrolladas, es que falta agua; basta con regar a fondo y volver a espaciar los riegos."},
+    {"t": "h2", "x": "Hijuelos y trasplante"},
+    {"t": "p", "x": "Con el tiempo aparecen pequeños hijuelos al pie de la planta. Cuando tienen varias hojas y raíces propias, se separan con cuidado y se plantan en macetas individuales con sustrato para suculentas."},
+    {"t": "p", "x": "El aloe suele pedir una maceta mayor cada dos o tres años, preferiblemente en primavera."},
+    {"t": "tip", "x": "Antes de plantar un hijuelo conviene dejar que el corte se seque un día o dos a la sombra."},
+    {"t": "h2", "x": "Cuidados básicos, en breve"},
+    {"t": "ul", "x": [
+      "Luz brillante e indirecta, con algo de sol suave y sin sol fuerte del mediodía.",
+      "Riego a fondo y espaciado, con el sustrato seco entre riegos.",
+      "Mezcla arenosa y maceta de barro con agujeros de drenaje.",
+      "En invierno, poca agua y una temperatura que no baje de unos 10 °C.",
+      "Hojas blandas, exceso de agua; hojas finas y enrolladas, falta de agua."
+    ]},
+    {"t": "p", "x": "Observar la planta con regularidad es una buena guía: ella misma muestra si necesita más o menos agua."}
+  ]
+}

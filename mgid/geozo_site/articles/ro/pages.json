@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "Despre noi",
+    "paras": [
+      "Arcadia Blog este o mică revistă online despre casă, bucătărie și grădină. Scriem sfaturi practice, pe înțelesul tuturor: cum păstrăm mai bine alimentele, cum îngrijim plantele de apartament și verdețurile, ce putem face într-o grădină mică.",
+      "Textele au caracter informativ și nu înlocuiesc instrucțiunile producătorilor. Fiecare casă, fiecare plantă și fiecare produs au particularitățile lor, de aceea vă recomandăm să țineți cont și de ele.",
+      "Site-ul este finanțat din publicitatea partenerilor. Fiecare bloc publicitar este marcat clar cu cuvântul „Publicitate”, ca să-l puteți deosebi ușor de articole."
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "paras": [
+      "Aveți o întrebare, o sugestie de temă sau ați observat o greșeală într-un text? Scrieți-ne la adresa contact@arcadiablog.com.",
+      "Răspundem, de obicei, în câteva zile lucrătoare. Vă rugăm să precizați despre ce text este vorba, ca să vă putem ajuta mai repede."
+    ]
+  },
+  "privacy": {
+    "title": "Confidențialitate și cookie-uri",
+    "paras": [
+      "La fiecare vizită pe site se înregistrează date tehnice obișnuite, precum tipul browserului și al dispozitivului, pagina accesată și momentul vizitei. Site-ul folosește și cookie-uri, adică mici fișiere pe care browserul le salvează pe dispozitiv, pentru funcționarea sa normală.",
+      "Blocurile publicitare ale partenerilor pot folosi cookie-uri și tehnologii similare pentru a afișa și a măsura publicitatea. Fiecare astfel de bloc este marcat cu cuvântul „Publicitate”.",
+      "Pe site nu există conturi de utilizator și nu se fac plăți, așa că nu vi se cer parole sau date bancare.",
+      "Cookie-urile pot fi șterse sau blocate oricând din setările browserului. Este posibil ca unele părți ale site-ului să funcționeze atunci mai puțin bine.",
+      "Dacă aveți o întrebare despre confidențialitate, ne puteți scrie la contact@arcadiablog.com."
+    ]
+  }
+}

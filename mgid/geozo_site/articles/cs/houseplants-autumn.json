@@ -1,0 +1,39 @@
+{
+  "rubric": "Pokojové rostliny",
+  "title": "Pokojové rostliny na podzim: 7 tipů, jak je dovést do jara",
+  "teaser": "Kratší dny a suchý vzduch od topení dělají pokojovým rostlinám starosti. Sedm tipů o světle, zalévání, vlhkosti a dalších drobnostech, na kterých při přezimování záleží.",
+  "description": "Sedm jednoduchých tipů pro péči o pokojové rostliny na podzim: světlo, zalévání, vlhkost vzduchu, průvan, hnojení, škůdci a přesazování.",
+  "heroAlt": "Malý stromek v hnědé keramické nádobě na dřevěném stole před světlou stěnou.",
+  "body": [
+    {"t": "p", "lead": true, "x": "S příchodem podzimu ubývá denního světla, v bytech se začíná topit a vzduch je najednou suchý. Pokojovým rostlinám se pak často sypou listy nebo se natahují za světlem. Většinou ale stačí trochu upravit péči a přezimují bez větších potíží."},
+    {"t": "p", "x": "Sedm tipů platí pro většinu pokojových rostlin i pro bylinky na parapetu."},
+    {"t": "h2", "x": "1. Dopřejte rostlinám víc světla"},
+    {"t": "p", "x": "Na podzim je i na jižním okně světla výrazně míň než v létě. Přesuňte květináče blíž k oknu, jen aby se listy nedotýkaly studeného skla. Jednou za dva týdny listy otřete vlhkým hadříkem, prach totiž pohlcuje část světla, kterého je teď tak málo."},
+    {"t": "p", "x": "Jednou týdně květináče pootočte o čtvrt otáčky, aby rostliny rostly rovnoměrně a netáhly se jen jedním směrem."},
+    {"t": "h2", "x": "2. Zalévejte méně, ale substrát kontrolujte"},
+    {"t": "p", "x": "V chladnějším období rostliny rostou pomaleji a berou si méně vody. Před zaléváním strčte prst do substrátu: je-li suchý do hloubky dvou až tří centimetrů, zalijte, jinak ještě počkejte. Vodu z misky pod květináčem po půl hodině vylijte."},
+    {"t": "tip", "x": "Květináč se suchým substrátem je znatelně lehčí než zalitý, časem poznáte, kdy zalévat, jen podle váhy."},
+    {"t": "h2", "x": "3. Postarejte se o vlhkost vzduchu"},
+    {"t": "p", "x": "Radiátory vzduch hodně vysušují. Postavte květináče na misku s mokrými oblázky, dno květináče se ale nesmí dotýkat vody. Pomáhá také seskupit rostliny k sobě, kolem nich je pak vzduch o něco vlhčí."},
+    {"t": "p", "x": "Postřik z rozprašovače nesvědčí všem. Rostlinám s chlupatými listy, třeba africkým fialkám, může škodit, ostatním stačí jemná mlha odstáté vody."},
+    {"t": "h2", "x": "4. Pryč od průvanu a přímého tepla"},
+    {"t": "p", "x": "Prudké změny teploty bývají častou příčinou opadávajících listů. Nenechávejte rostliny u dokořán otevřeného okna ani přímo nad radiátorem. Při větrání citlivější druhy přeneste jinam a na noc je odsuňte od studeného skla."},
+    {"t": "h2", "x": "5. Omezte přihnojování"},
+    {"t": "p", "x": "V zimě většina rostlin odpočívá a hnojivo nepotřebuje. Přihnojování se obvykle na podzim ukončí a na jaře obnoví, až se objeví nové listy. Výjimkou jsou druhy kvetoucí v zimě, u nich se řiďte pokyny pro konkrétní rostlinu."},
+    {"t": "h2", "x": "6. Jednou týdně zkontrolujte listy"},
+    {"t": "p", "x": "V suchém vzduchu se daří sviluškám a mšicím. Prohlédněte listy z obou stran: lepkavý povlak, drobné světlé tečky nebo jemné pavučinky jsou důvodem k zásahu."},
+    {"t": "p", "x": "Pomůže opláchnout rostlinu vlažnou vodou a otřít listy roztokem jemného mýdla. Při silnějším napadení postupujte podle návodu na obalu přípravku."},
+    {"t": "h2", "x": "7. S přesazováním nespěchejte"},
+    {"t": "p", "x": "Pokud rostlina vypadá dobře, odložte přesazení na jaro, protože na podzim se kořeny hůř ujímají. Přesazujte jen tehdy, když je to opravdu nutné, například když kořeny vyrůstají z otvorů ve dně a voda květináčem jen proteče."},
+    {"t": "h2", "x": "Přehled na závěr"},
+    {"t": "ul", "x": [
+      "Více světla, ale ne těsně u studeného skla.",
+      "Méně vody, substrát vždy předem zkontrolovat prstem.",
+      "Vlhčí vzduch: miska s mokrými oblázky a seskupené květináče.",
+      "Rostliny držet dál od průvanu a radiátorů.",
+      "Přihnojování i přesazování nechat do jara.",
+      "Jednou týdně prohlédnout listy z obou stran."
+    ]},
+    {"t": "p", "x": "Pokud rostlina shodí pár spodních listů, bývá to běžná reakce na kratší dny. Sledujte nové výhony, ty prozradí, jestli péče sedí."}
+  ]
+}

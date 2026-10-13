@@ -1,0 +1,36 @@
+{
+  "rubric": "Casa y cocina",
+  "title": "Cómo secar y conservar hierbas aromáticas en casa",
+  "teaser": "Secar hierbas en casa es sencillo y no requiere aparatos: cuándo cortarlas, cómo colgarlas o secarlas en el horno y cómo guardarlas para que conserven el aroma durante cerca de un año.",
+  "description": "Cuándo cosechar las hierbas, cómo secarlas en ramilletes, bandejas o en el horno, cómo guardarlas en tarros y cuáles se secan bien y cuáles es mejor congelar.",
+  "heroAlt": "Platitos blancos con hierbas aromáticas secas, como eneldo y orégano, junto a unos botes de cristal.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Secar las hierbas en casa permite disfrutar durante meses del aroma de las plantas del huerto o de la ventana. No hacen falta aparatos: bastan un poco de aire, de sombra y de paciencia."},
+    {"t": "p", "x": "El proceso es parecido para casi todas, y estos son los pasos, de la cosecha al tarro."},
+    {"t": "h2", "x": "Cuándo cosechar"},
+    {"t": "p", "x": "Conviene cortarlas por la mañana, cuando el rocío se ha evaporado pero el sol aún no calienta. Se cosechan justo antes de la floración, cuando las hojas concentran más aroma."},
+    {"t": "p", "x": "Se eligen ramas sanas, sin manchas, y se sacuden con suavidad para quitar el polvo y los insectos; si hace falta lavarlas, se secan bien con un paño antes de empezar."},
+    {"t": "h2", "x": "Ramilletes colgados"},
+    {"t": "p", "x": "Se atan en manojos pequeños, para que el aire circule entre las ramas, y se cuelgan boca abajo en un lugar oscuro, seco y bien ventilado. La luz directa les quita color y aroma."},
+    {"t": "h2", "x": "Bandejas, rejillas y horno"},
+    {"t": "p", "x": "También se pueden extender en una sola capa sobre una rejilla o una bandeja cubierta con una tela, removiéndolas de vez en cuando."},
+    {"t": "p", "x": "Si hay prisa, sirve el horno a la temperatura más baja y con la puerta entreabierta: en un par de horas suelen estar secas, pero hay que vigilarlas para que no se tuesten."},
+    {"t": "h2", "x": "Cómo saber si están secas"},
+    {"t": "p", "x": "Están listas cuando las hojas se desmenuzan entre los dedos y los tallos se parten con facilidad. Si todavía se doblan, necesitan más tiempo."},
+    {"t": "h2", "x": "Guardarlas en tarros herméticos"},
+    {"t": "p", "x": "Una vez secas y frías, se guardan en tarros herméticos, lejos de la luz y del calor, con una etiqueta con el nombre y la fecha. Conservan bien el aroma durante un año, aproximadamente."},
+    {"t": "p", "x": "Conviene guardar las hojas enteras y triturarlas justo antes de usarlas, porque así mantienen más sabor."},
+    {"t": "h2", "x": "Cuáles se secan bien y cuáles es mejor congelar"},
+    {"t": "p", "x": "El orégano, el tomillo, el romero, la salvia, la menta y el eneldo se secan muy bien. La albahaca, el perejil, el cilantro y el cebollino pierden mucho aroma al secarse, por lo que es preferible congelarlos."},
+    {"t": "tip", "x": "Un tarro de cristal oscuro, o uno claro guardado dentro de un armario, protege las hierbas de la luz."},
+    {"t": "h2", "x": "Resumen de los pasos"},
+    {"t": "ul", "x": [
+      "Cortar por la mañana y antes de la floración.",
+      "Secar en manojos pequeños, colgados boca abajo en un lugar oscuro y aireado.",
+      "Comprobar que se desmenuzan antes de guardarlas.",
+      "Tarros herméticos con fecha, lejos de la luz y del calor.",
+      "Secar orégano, tomillo, romero, salvia, menta y eneldo; congelar albahaca, perejil, cilantro y cebollino."
+    ]},
+    {"t": "p", "x": "Preparadas así, las hierbas del verano sirven para aromatizar guisos y sopas durante el resto del año."}
+  ]
+}

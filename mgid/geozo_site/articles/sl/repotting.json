@@ -1,0 +1,37 @@
+{
+  "rubric": "Sobne rastline",
+  "title": "Presajanje sobnih rastlin: kdaj, kako in česa se izogibati",
+  "teaser": "Korenine gledajo iz odprtin, voda steče skozi lonec, rast se ustavi: to so znaki, da je lonec premajhen. Kdaj presajati, kakšen lonec izbrati in kaj storiti po presajanju.",
+  "description": "Kdaj in kako presaditi sobne rastline: znaki, primeren čas, velikost lonca, postopek po korakih in kdaj je bolje zamenjati le vrhnjo plast zemlje.",
+  "heroAlt": "Dlan drži majhno sadiko s kepo zemlje pred zamegljenim zelenim ozadjem.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Sobna rastlina, ki dolgo raste v istem loncu, začne zaostajati: koreninam zmanjka prostora, zemlja pa se izčrpa. Presajanje ni zapleteno, vendar je pomembno, da ga opravite ob pravem času in brez nepotrebnih korakov."},
+    {"t": "p", "x": "Poglejmo, po čem prepoznate, da je čas za presajanje, in kako ga opravite po korakih."},
+    {"t": "h2", "x": "Kako prepoznate, da je lonec premajhen"},
+    {"t": "p", "x": "Najbolj očiten znak so korenine, ki gledajo iz odprtin na dnu lonca ali se vijejo po površini zemlje. Drugi znak je voda, ki steče skozi lonec, ne da bi jo zemlja vpila."},
+    {"t": "p", "x": "Tretji znak je rast, ki se kljub dovolj svetlobe in rednemu zalivanju ustavi. Če opazite več teh znakov hkrati, je presajanje smiselno."},
+    {"t": "h2", "x": "Pravi čas: od pomladi do zgodnjega poletja"},
+    {"t": "p", "x": "Rastline najlažje presadite spomladi in v začetku poletja, ko se začne nova rast in si hitro opomorejo. Pozimi, v času mirovanja, presajanje običajno ni priporočljivo."},
+    {"t": "h2", "x": "Lonec naj bo le malo večji, zemlja pa sveža"},
+    {"t": "p", "x": "Nov lonec naj bo le 2–3 cm širši od starega. V prevelikem loncu zemlja dolgo ostane mokra, korenine pa lažje začnejo gniti."},
+    {"t": "p", "x": "Uporabite svežo zemljo, primerno za vrsto rastline, in poskrbite za odtok: odprtine na dnu in po potrebi plast grobega peska ali keramzita."},
+    {"t": "h2", "x": "Postopek po korakih"},
+    {"t": "p", "x": "Rastlino dan prej zalijte, da se kepa zemlje lažje loči od lonca. Previdno jo izvlecite, rahlo razrahljajte korenine in odrežite suhe ali počrnele dele."},
+    {"t": "p", "x": "Rastlino postavite v nov lonec na plast zemlje, ob robovih nasujte svežo zemljo in jo rahlo potlačite, nato dobro zalijte. Prvi teden naj stoji stran od močnega sonca."},
+    {"t": "tip", "x": "Nov terakotni lonec pred uporabo za nekaj ur namočite, sicer lahko iz zemlje potegne preveč vode."},
+    {"t": "h2", "x": "Po presajanju: brez takojšnjega gnojenja"},
+    {"t": "p", "x": "Sveža zemlja že vsebuje hranila, zato z gnojenjem počakajte nekaj tednov. Rastlino v tem času zmerno zalivajte in jo opazujte."},
+    {"t": "h2", "x": "Kdaj ne presajati in kaj storiti namesto tega"},
+    {"t": "p", "x": "Cvetočih in bolnih rastlin običajno ne presajajte, saj bi jim s tem dodatno otežili življenje. Počakajte, da cvetenje mine ali da si rastlina opomore."},
+    {"t": "p", "x": "Če je rastlina velika in težko premakljiva ali če lonca ne želite menjati, jo osvežite z novo vrhnjo plastjo. Odstranite zgornjih nekaj centimetrov stare zemlje in jo nadomestite s svežo."},
+    {"t": "h2", "x": "Povzetek"},
+    {"t": "ul", "x": [
+      "Presajajte, ko korenine gledajo iz odprtin ali rast zastane.",
+      "Najprimernejši čas je od pomladi do zgodnjega poletja.",
+      "Izberite lonec, ki je le 2–3 cm širši od starega.",
+      "Po presajanju z gnojenjem počakajte nekaj tednov.",
+      "Cvetočih in bolnih rastlin ne presajajte, zamenjajte le vrhnjo plast zemlje."
+    ]},
+    {"t": "p", "x": "Po presajanju rastlina potrebuje nekaj časa, da se privadi, zato ne skrbite, če se nekaj tednov kaže le malo rasti."}
+  ]
+}

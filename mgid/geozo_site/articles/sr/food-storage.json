@@ -1,0 +1,117 @@
+{
+  "rubric": "Dom i kuhinja",
+  "title": "9 jednostavnih pravila da namirnice duže ostanu sveže",
+  "teaser": "Od rasporeda u frižideru do zamrzavanja u porcijama: devet jednostavnih pravila koja pomažu da hrana duže ostane sveža i da se manje baca. Dovoljno je promeniti nekoliko navika.",
+  "description": "Devet praktičnih pravila za čuvanje hrane: raspored frižidera, začinsko bilje, voće i povrće, hleb, zamrzavanje i kuvana jela.",
+  "heroAlt": "Otvoren frižider sa pregledno složenim namirnicama: tegla sa peršunom, posudice sa bobicama, povrće u fiokama i sosovi na vratima.",
+  "body": [
+    {
+      "t": "p",
+      "lead": true,
+      "x": "Hrana se ne kvari samo zato što joj ističe rok. Na svežinu utiču temperatura, vlaga, pa čak i to ko stoji pored koga na polici. Evo devet pravila za svaku kuhinju."
+    },
+    {
+      "t": "p",
+      "x": "Nijedno nije komplikovano, a kad pređu u naviku, kupljeno obično duže traje i manje se baca."
+    },
+    {
+      "t": "h2",
+      "x": "1. Pravilno razmestite frižider"
+    },
+    {
+      "t": "p",
+      "x": "U frižideru treba da bude otprilike od 2 do 5 °C. Najhladnije je pozadi i pri dnu, a najtoplije na vratima, pa tamo ostavite sosove i pića."
+    },
+    {
+      "t": "h2",
+      "x": "2. Meso i ribu spustite na donju policu"
+    },
+    {
+      "t": "p",
+      "x": "Sirovo meso i ribu držite na najnižoj polici, u zatvorenim posudama sa poklopcem. Tako sok ne može da dospe na gotova jela i povrće koje se jede sirovo."
+    },
+    {
+      "t": "h2",
+      "x": "3. Začinsko bilje čuvajte kao cveće u vazi"
+    },
+    {
+      "t": "p",
+      "x": "Peršun, mirođiju i koriander ne držite u tesno zatvorenoj kesi, jer se u njoj skuplja vlaga i listovi brzo potamne. Odrežite krajeve stabljika, vezicu stavite u teglu sa malo vode i preko nje labavo navucite kesu."
+    },
+    {
+      "t": "tip",
+      "x": "Bosiljak ne voli hladnoću, pa ga držite u čaši sa vodom na sobnoj temperaturi."
+    },
+    {
+      "t": "h2",
+      "x": "4. Voće i povrće držite odvojeno"
+    },
+    {
+      "t": "p",
+      "x": "Jabuke, kruške, banane i paradajz ispuštaju gas etilen, koji ubrzava kvarenje susedne hrane. Zato ih držite dalje od lisnatog povrća, krastavaca, brokolija i šargarepe."
+    },
+    {
+      "t": "p",
+      "x": "Krompir i crni luk takođe razdvojite: krompiru prija tamno i hladno mesto, ali ne frižider, a luku suv i prozračan kutak."
+    },
+    {
+      "t": "h2",
+      "x": "5. Bobice, pečurke i salatu ne perite unapred"
+    },
+    {
+      "t": "p",
+      "x": "Bobičasto voće, pečurke i listove salate perite tek neposredno pre upotrebe, jer vlaga ubrzava pojavu buđi. Ako su već oprani, dobro ih osušite."
+    },
+    {
+      "t": "h2",
+      "x": "6. Hleb, žitarice i orašasti plodovi"
+    },
+    {
+      "t": "p",
+      "x": "Hleb u frižideru brže otvrdne nego u kuhinji, pa višak isecite i zamrznite. Brašno i pirinač čuvajte u zatvorenim teglama, a orašaste plodove na hladnom i tamnom mestu, jer na toploti i svetlosti brže užegnu."
+    },
+    {
+      "t": "h2",
+      "x": "7. Zamrzavajte sveže i u porcijama"
+    },
+    {
+      "t": "p",
+      "x": "Zamrzavajte samo sveže namirnice, podeljene na porcije, u zatvorenim kesama ili posudama, bez vazduha. Napišite sadržaj i datum, jer posle nekoliko meseci niko ne zna šta je u kesi. U zamrzivaču treba da bude −18 °C ili hladnije."
+    },
+    {
+      "t": "h2",
+      "x": "8. Kuvana jela ohladite za dva sata"
+    },
+    {
+      "t": "p",
+      "x": "Skuvano jelo ohladite i sklonite u frižider u roku od dva sata, a pojedite ga u narednih tri do četiri dana. Veće količine, na primer supu, podelite u plitke posude da se brže ohlade."
+    },
+    {
+      "t": "h2",
+      "x": "9. Prvo staro, pa novo, i čist frižider"
+    },
+    {
+      "t": "p",
+      "x": "Nove namirnice stavljajte iza starih, a ono što treba uskoro potrošiti postavite napred. Jednom nedeljno obrišite police i bacite ono što se pokvarilo, a jednom mesečno frižider operite toplom vodom i malo sode bikarbone."
+    },
+    {
+      "t": "h2",
+      "x": "Ukratko: šta treba zapamtiti"
+    },
+    {
+      "t": "ul",
+      "x": [
+        "Frižider od 2 do 5 °C, zamrzivač −18 °C ili hladnije.",
+        "Meso i ribu držite dole, u zatvorenim posudama.",
+        "Bilje stavite u teglu sa vodom, a bobice ne perite unapred.",
+        "Voće koje ispušta etilen držite odvojeno od povrća.",
+        "Zamrzavajte sveže, u porcijama i uz oznaku datuma.",
+        "Kuvana jela ohladite za dva sata, pojedite za tri do četiri dana."
+      ]
+    },
+    {
+      "t": "p",
+      "x": "I na kraju: rok upotrebe i uslovi čuvanja navedeni na pakovanju uvek imaju prednost nad opštim savetima."
+    }
+  ]
+}

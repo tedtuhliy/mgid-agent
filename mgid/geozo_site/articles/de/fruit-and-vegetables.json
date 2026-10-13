@@ -1,0 +1,36 @@
+{
+  "rubric": "Küche und Haushalt",
+  "title": "Obst und Gemüse: Was zusammen lagern darf und was getrennt bleiben sollte",
+  "teaser": "Warum manche Früchte andere schneller reifen lassen, wohin Kartoffeln, Zwiebeln und Tomaten gehören und wie Sie die Fächer im Kühlschrank nutzen: ein kurzer Überblick.",
+  "description": "Das Reifegas Ethylen in einfachen Worten, dazu Tipps für Kartoffeln, Zwiebeln und Tomaten, die beiden Gemüsefächer und die wöchentliche Kontrolle des Vorrats.",
+  "heroAlt": "Gemüsefach im Kühlschrank mit bunten Paprika, Gurken, Karotten und Spinat, durch Trennwände sortiert.",
+  "body": [
+    {"t": "p", "lead": true, "x": "Legt man Obst und Gemüse zusammen in eine Schale, wird manches schneller weich oder welk. Der Grund ist ein natürliches Gas, das viele Früchte beim Reifen abgeben. Wer das weiß, kann den Vorrat besser einteilen."},
+    {"t": "p", "x": "Hier ein kurzer Überblick, was zusammenpasst und was lieber Abstand hält."},
+    {"t": "h2", "x": "Das Reifegas Ethylen in einfachen Worten"},
+    {"t": "p", "x": "Ethylen ist ein Gas, das reifende Früchte von selbst abgeben. Es ist völlig natürlich, beschleunigt aber das Reifen und Altern von Obst und Gemüse in der Nähe."},
+    {"t": "h2", "x": "Wer viel abgibt und wer empfindlich reagiert"},
+    {"t": "p", "x": "Viel Ethylen geben vor allem reife Bananen, Äpfel, Birnen und Tomaten ab. Das ist praktisch, wenn etwas nachreifen soll, aber lästig, wenn sie neben empfindlichem Gemüse liegen."},
+    {"t": "p", "x": "Empfindlich reagieren Blattsalat, Gurken, Karotten und Brokkoli: Sie werden schneller gelb, welk oder bitter. Lagern Sie beide Gruppen deshalb nicht im selben Fach."},
+    {"t": "tip", "x": "Harte Avocados, Kiwis oder Birnen reifen schneller, wenn sie zusammen mit einem reifen Apfel in einem Papierbeutel liegen."},
+    {"t": "h2", "x": "Kartoffeln und Zwiebeln: dunkel und luftig"},
+    {"t": "p", "x": "Kartoffeln mögen es kühl, dunkel und luftig, zum Beispiel in einem Korb oder einer Kiste, nicht in einem Plastikbeutel. Auch Zwiebeln brauchen Luft."},
+    {"t": "p", "x": "Halten Sie beide getrennt voneinander, denn nebeneinander verderben sie oft schneller. Ein Platz in der Speisekammer oder im Keller eignet sich gut, solange es dort nicht feucht ist."},
+    {"t": "h2", "x": "Tomaten gehören nicht in den Kühlschrank"},
+    {"t": "p", "x": "Kälte nimmt Tomaten Aroma und Biss, sie werden mehlig. Bei Zimmertemperatur und nicht in der prallen Sonne behalten sie ihren Geschmack. Weil sie selbst Ethylen abgeben, lagern Sie sie getrennt von Salat und Gurken."},
+    {"t": "h2", "x": "Zwei Gemüsefächer, zwei Klimazonen"},
+    {"t": "p", "x": "Haben Sie zwei Schubladen, nutzen Sie sie unterschiedlich: Die feuchtere ist für Gemüse und Salat gedacht, die trockenere für Obst. Bei vielen Geräten lässt sich die Luftfeuchtigkeit mit einem kleinen Regler einstellen."},
+    {"t": "p", "x": "Angeschnittenes Obst und Gemüse kommt in geschlossene Dosen, damit die Schnittflächen nicht austrocknen."},
+    {"t": "h2", "x": "Einmal pro Woche durchsehen"},
+    {"t": "p", "x": "Gehen Sie den Vorrat einmal pro Woche durch. Ein einzelnes faules Stück steckt die Nachbarn an, deshalb sortieren Sie Weiches oder Schimmeliges sofort aus. Was nur eine Druckstelle hat, verbrauchen Sie zuerst. Ein kleiner Zettel an der Kühlschranktür erinnert daran, was bald weg muss."},
+    {"t": "h2", "x": "Das Wichtigste in Kürze"},
+    {"t": "ul", "x": [
+      "Reife Bananen, Äpfel und Tomaten getrennt von empfindlichem Gemüse lagern.",
+      "Kartoffeln und Zwiebeln dunkel und luftig, aber nicht beieinander.",
+      "Tomaten bei Zimmertemperatur, nicht im Kühlschrank.",
+      "Gemüse in die feuchtere, Obst in die trockenere Schublade.",
+      "Angeschnittenes verpacken und den Vorrat einmal pro Woche prüfen."
+    ]},
+    {"t": "p", "x": "Etwas Ordnung in der Nachbarschaft zahlt sich aus: Vieles hält länger, und es muss seltener etwas weggeworfen werden."}
+  ]
+}
