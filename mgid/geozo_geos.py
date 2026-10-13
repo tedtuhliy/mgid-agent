@@ -44,20 +44,26 @@ SITE = "https://arcadiablog.com"
 TARGET_ID = 1280981                    # «Geozo block click», eventName geozoclick
 LINK = SITE + "/blog/{route}/{slug}.html?click_id={{click_id}}&source=mgid_{{campaign_id}}_{{widget_id}}"
 IMAGE = SITE + "/blog/c/{slug}.jpg"
-ORDER = ["BG", "PL", "RO", "CZ", "PT", "IT", "ES", "DE", "CH", "AT", "HU", "SK", "SI", "RS"]    # the owner's order
+ORDER = ["BG", "PL", "RO", "CZ", "PT", "IT", "ES", "DE", "CH", "AT", "HU", "SK", "SI", "RS",       # the owner's order
+         "KZ"]      # 14.10 night: Kazakhstan moves to the Russian version of the blog (/blog/ru/) with the e-book
 # 14.10 ~01:25 MSK: after 80 minutes of approved teasers and no impressions in BG RO SK SI HU PL CZ DE AT the target was raised
 # (--set-cpa); PT ES IT CH already delivered at the starting values and keep them. The names of the campaigns carry the value.
 CPA = {"BG": 0.03, "RO": 0.03, "RS": 0.01, "SK": 0.03, "SI": 0.03, "HU": 0.04,
-       "PL": 0.05, "CZ": 0.05, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.10, "AT": 0.10, "CH": 0.05}
+       "PL": 0.05, "CZ": 0.05, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.10, "AT": 0.10, "CH": 0.05, "KZ": 0.01}
 START_CPA = {"BG": 0.01, "RO": 0.01, "RS": 0.01, "SK": 0.01, "SI": 0.01, "HU": 0.015,
-             "PL": 0.02, "CZ": 0.02, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.04, "AT": 0.04, "CH": 0.05}
+             "PL": 0.02, "CZ": 0.02, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.04, "AT": 0.04, "CH": 0.05, "KZ": 0.01}
 SECOND = ["bread-storage", "fruit-and-vegetables", "houseplants-autumn"]           # the rotating second creative
 FIRST = "herbs-in-a-jar"
+# Kazakhstan is the cheapest geo (MGID's click costs $0.0001) and has the four teaser headlines of the old tests: all four.
+# The older Kazakhstan campaigns (geozo_campaign.py: /dom/, /dom2/) are named «Arcadia KZ content mobile CPA 0.01[ dense]»,
+# so this one carries «blog» in its name and cid_of() never mixes them up.
+PICKS = {"KZ": [FIRST] + SECOND}
+TAG = {"KZ": " blog"}
 OUT = HERE / "data" / "geozo-geos.json"
 
 
 def name_of(geo):
-    return f"Arcadia {geo} content mobile CPA {CPA[geo]:g}"
+    return f"Arcadia {geo}{TAG.get(geo, '')} content mobile CPA {CPA[geo]:g}"
 
 
 def saved():
@@ -73,8 +79,8 @@ def cid_of(geo, live):
 
 
 def picks(geo):
-    """The two article slugs advertised in the geo."""
-    return [FIRST, SECOND[ORDER.index(geo) % len(SECOND)]]
+    """The article slugs advertised in the geo: two (the jar article and one that rotates), four in Kazakhstan."""
+    return PICKS.get(geo) or [FIRST, SECOND[ORDER.index(geo) % len(SECOND)]]
 
 
 def teaser_titles(route):

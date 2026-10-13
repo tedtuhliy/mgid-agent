@@ -61,10 +61,11 @@ LOCATION = r"""
 """
 
 
-BOOK_LOCATION = r"""
-    # blog: free e-book (PDF). A download with an MGID click id (?click_id=<32 hex>, put there by the page script) is a
-    # conversion of the goal «E-book download» (event ebook): the mirror sub-request tells a.mgid.com/postback while the
-    # visitor gets the file. No click id, no signal. The log line carries MGID's status (up=) of the postback.
+BOOK_DL = r"""
+    # blog: free e-book (PDF). A download with an MGID click id (?click_id=<32 hex>, put there by the page script) is one more
+    # conversion of the same goal as a click on an ad block (event geozoclick, goal «Geozo block click»): the mirror
+    # sub-request tells a.mgid.com/postback while the visitor gets the file. No click id, no signal. The log line carries
+    # MGID's status (up=) of the postback.
     location ~ "^/blog/dl/(?<bl>@@LANGS@@)\.pdf$" {
         access_log /var/log/nginx/arcadiablog.dom.log arcadia_dom;
         mirror /_ebook_pb;
@@ -74,14 +75,23 @@ BOOK_LOCATION = r"""
         add_header X-Robots-Tag "noindex" always;
         rewrite ^ /blog/ebook/$bl.pdf break;
     }
-    location = /_ebook_pb {
+""".replace("@@LANGS@@", "|".join(sorted(list(mc.LANGS) + list(mc.DERIVED))))    # only the languages that have a book
+
+# one postback per click id and minute: a second tap on the button, or a script, does not make a second conversion (the visitor
+# still gets the file). The zone lives in the http context (LIMIT_ZONE, in conf.d next to the log format).
+LIMIT_ZONE = "limit_req_zone $arg_click_id zone=arcadia_book:2m rate=1r/m;\n"
+
+BOOK_PB = r"""    location = /_ebook_pb {
         internal;
         access_log /var/log/nginx/arcadiablog.dom.log arcadia_dom;
         log_subrequest on;
+        limit_req zone=arcadia_book;
+        limit_req_status 429;
+        limit_req_log_level warn;
         if ($arg_click_id !~ "^[A-Za-z0-9_.-]{6,128}$") { return 204; }
         resolver 1.1.1.1 8.8.8.8 valid=300s ipv6=off;
         resolver_timeout 3s;
-        proxy_pass https://a.mgid.com/postback?c=$arg_click_id&e=ebook&r=0.05;
+        proxy_pass https://a.mgid.com/postback?c=$arg_click_id&e=geozoclick&r=0.01;
         proxy_ssl_server_name on;
         proxy_http_version 1.1;
         proxy_set_header Host a.mgid.com;
@@ -91,7 +101,9 @@ BOOK_LOCATION = r"""
         proxy_connect_timeout 3s;
         proxy_read_timeout 5s;
     }
-""".replace("@@LANGS@@", "|".join(sorted(list(mc.LANGS) + list(mc.DERIVED))))    # only the languages that have a book
+"""
+
+BOOK_LOCATION = BOOK_DL + BOOK_PB
 
 
 BOOK_LOCATION_LINE = [l for l in BOOK_LOCATION.splitlines() if "blog/dl/(?<bl>" in l][0]
@@ -198,9 +210,16 @@ p = "{SITE_CONF}"
 s = open(p, encoding="utf-8").read()
 new = {BOOK_LOCATION_LINE!r}
 s2 = re.sub(r'    location ~ "\\^/blog/dl/\\(\\?<bl>[^\\n]*\\\\\\.pdf\\$" \\{{', new, s)
+pb = {BOOK_PB!r}
+s2 = re.sub(r'    location = /_ebook_pb \\{{\\n.*?\\n    \\}}\\n', lambda m: pb, s2, count=1, flags=re.S)
 if s2 != s:
     open(p, "w", encoding="utf-8").write(s2)
-    print("строка location скачивания обновлена")
+    print("строки скачивания книги обновлены")
+q = "{LOGFMT_CONF}"
+t = open(q, encoding="utf-8").read()
+if "arcadia_book" not in t:
+    open(q, "a", encoding="utf-8").write({LIMIT_ZONE!r})
+    print("зона ограничения частоты добавлена")
 PY
 if nginx -t 2>/tmp/nginx_t.out; then
   systemctl reload nginx && echo "nginx перечитан"

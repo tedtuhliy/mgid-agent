@@ -238,8 +238,9 @@ class Nginx(unittest.TestCase):
         import deploy
         loc = deploy.BOOK_LOCATION
         self.assertIn("mirror /_ebook_pb;", loc)
-        self.assertIn("e=ebook", loc)
-        self.assertNotIn("geozoclick", loc)
+        # 14.10 night, owner: conversions as before for every click, plus the download: the same goal and event as a block click
+        self.assertIn("e=geozoclick&r=0.01;", loc)
+        self.assertNotIn("e=ebook", loc)
         self.assertIn('$arg_click_id !~ "^[A-Za-z0-9_.-]{6,128}$") { return 204; }', loc)
         self.assertIn("rewrite ^ /blog/ebook/$bl.pdf break;", loc)
         # quoted: nginx reads a bare { as a block; the alternation lists exactly the real routes, so that a made-up language
@@ -248,6 +249,15 @@ class Nginx(unittest.TestCase):
         self.assertTrue(m, loc[:400])
         self.assertEqual(set(m.group(1).split("|")), set(mc.LANGS) | set(mc.DERIVED))
         self.assertEqual(deploy.BOOK_LOCATION_LINE.strip(), m.group(0))
+
+    def test_one_postback_per_click_id_and_minute(self):
+        import deploy
+        self.assertIn("limit_req zone=arcadia_book;", deploy.BOOK_PB)                     # the zone is keyed by the click id
+        self.assertIn("zone=arcadia_book:", deploy.LIMIT_ZONE)
+        self.assertIn("$arg_click_id", deploy.LIMIT_ZONE)
+        self.assertIn("rate=1r/m", deploy.LIMIT_ZONE)
+        self.assertTrue(deploy.LIMIT_ZONE.rstrip().endswith(";"))
+        self.assertTrue(deploy.BOOK_LOCATION.endswith(deploy.BOOK_PB))                    # the patch replaces exactly this block
 
 
 class Config(unittest.TestCase):

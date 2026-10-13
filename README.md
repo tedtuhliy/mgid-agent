@@ -196,6 +196,7 @@ to geo so that the first data also says which article wins.
 | HU | 12512648 | 0.04 (0.015) | 28160090, 28160091 |
 | SK | 12512649 | 0.03 (0.01) | 28160092, 28160093 |
 | SI | 12512650 | 0.03 (0.01) | 28160094, 28160095 |
+| KZ (`/blog/ru/`, 14.10 night) | 12512714 | 0.01 | 28161033, 28161034, 28161035, 28161036 |
 
 The bids were a first guess, not a measurement: the cheap geos started at the one cent of the Kazakhstan test, the geos with a
 higher floor price higher. **14.10 ~01:25 MSK**: after 80 minutes of approved teasers and no impressions at all in BG RO SK SI HU PL
@@ -222,42 +223,54 @@ LuckyFeed's HR, FR, NL for the next wave.
 
 Owner: «у нас просто контент арбитраж, а он запрещён по CPA-tune модели, тоесть нам нужно добавить на сайте ещё действие, которое будет
 параллельно кликам. Сбор имейл, например, или что-то в этом роде ... мы пытаемся стать compliant для MGID и использовать их CPA tune»,
-then «А что может быть кроме подписки? Может скачивание электронной книги?». What exactly MGID's rules say about arbitrage inside
-CPA tune is **not known** (the question to MGID support is drafted, not sent); this is the part that does not depend on the answer:
-a real, free action of the visitor that is not a click on an ad.
+then «А что может быть кроме подписки? Может скачивание электронной книги?», and after the book was live: «Сделай так, что мы всё льём
+на версии с книгой, конверсии шлём как раньше за каждый клик, но теперь плюс скачивание книги, и всё». What exactly MGID's rules say
+about arbitrage inside CPA tune is **not known** (the question to MGID support is drafted, not sent); this is the part that does not
+depend on the answer: a real, free action of the visitor that is not a click on an ad, counted next to the clicks.
 
 - **The book.** Every language has a free PDF compiled from its own ten articles (`geozo_site/make_ebooks.py`): A5, cover with a
   mosaic of four photos, «about this book», contents, the ten articles as chapters, a closing page, no ads inside, no registration, no
-  e-mail; 34 pages, about 870 KB (photos at 800 px). The strings (title, subtitle, introduction, the offer card's text) are written by
+  e-mail; 34 pages, about 850 KB (photos at 800 px). The strings (title, subtitle, introduction, the offer card's text) are written by
   the language's writer into `articles/<lang>/ebook.json` (`articles/EBOOK_BRIEF.md`, checked by `check_articles.py`); Switzerland derives
   from German like everything else. Output goes under `blog/ebook/` (`<lang>.pdf`, `cover-<lang>.jpg`, `pages.json` with the real page
   counts for the card); `build_multi.py` calls it, `--no-ebook` skips it (a route without `ebook.json` gets no book and no card).
+  Chromium writes a new creation date into every PDF, so a rebuild changes the bytes of all books: to upload only what changed, copy
+  the unchanged `ebook/<lang>.pdf` and `cover-<lang>.jpg` of the previous stage over the new build before `deploy.py static`.
 - **The card.** `<aside class="book">` after the second block of text and again before the last ad slot of every article, and on the
   home page; it is not an ad (no label, own colour, outside `.ad-slot`, so a tap on it never sends the ad-click signal: tested), a plain
   link to `/blog/dl/<lang>.pdf` that `dom.js` decorates with `click_id` and `source` like every internal link.
-- **Counting.** nginx location `~ "^/blog/dl/(?<bl>bg|ch|...)\.pdf$"` (the alternation is exactly the list of real routes; a made-up
-  language gets a plain 404 and no signal; the regex must be quoted, a bare `{2}` makes `nginx -t` fail) serves `blog/ebook/$bl.pdf` as
-  an attachment (`Cache-Control: private, no-store`, `X-Robots-Tag: noindex`) and `mirror`s the request to the internal location
-  `= /_ebook_pb`, which calls `https://a.mgid.com/postback?c=<click_id>&e=ebook&r=0.05` and returns 204 when there is no valid click id
-  (a download without an MGID click is not reported). The log `arcadiablog.dom.log` has two lines per download: the request (`up=-`) and the
-  postback (`up=<MGID status>`, `log_subrequest on`). `deploy.py nginx` is idempotent: it adds the locations or rewrites the location
-  line of an older generic version (backup, `nginx -t`, reload).
-- **MGID goal.** `E-book download` (id **1280985**, event `ebook`, category «Other» = 9): v2 postback targets accept only categories 1
-  and 9 ("Selected category is not available" for 2-5). `geozo_geos.py --make-goal ebook` creates it, `--goal ebook --only KZ,PT`
-  makes it the buy-stage goal of those campaigns (`--goal geozoclick` back; the learning of the campaign starts over). **No campaign
-  uses it yet**: the book is live and its downloads are only logged and sent to the goal; the targetCpa campaigns still optimise for
-  the block click. The conversion value would have to be much higher than one cent because the share of visitors who download is
-  expected to be a few percent (not measured).
-- **Verified live (14.10):** PDF with attachment headers, 34 pages; fake click id `0000...` gives mirror line `up=200`; no click id gives
-  204 and no call; a made-up language gives 404 and no line; offer card 2x per article. `geozo_report.py` shows `скач` (downloads with
-  a click id) and `ebook200` (postbacks answered 200) per campaign.
-- **Russian for Kazakhstan.** `ru` is a route in `multi_config.py` (`GEOS["KZ"] = (5, "ru")`, MGID language 39) so that the Kazakhstan
-  campaigns can later point to `/blog/ru/` with the book and the same ten articles instead of the two articles under `/dom/` and
-  `/dom2/`, which stay as MGID approved them.
-- **Not done / for the owner:** switching the campaign goals to the download (starting with Kazakhstan); an e-mail newsletter as
-  another action (needs an e-mail service provider and a legal operator's name and address on the site); a cookie banner that asks
-  before the ad scripts load (the current one only informs) and an Impressum for the German-speaking pages: both matter before EU
-  traffic is scaled.
+- **Counting: the download is one more conversion of the same goal as a block click.** nginx location
+  `~ "^/blog/dl/(?<bl>bg|ch|...)\.pdf$"` (the alternation is exactly the list of real routes; a made-up language gets a plain 404 and no
+  signal; the regex must be quoted, a bare `{2}` makes `nginx -t` fail) serves `blog/ebook/$bl.pdf` as an attachment
+  (`Cache-Control: private, no-store`, `X-Robots-Tag: noindex`) and `mirror`s the request to the internal location `= /_ebook_pb`, which
+  calls `https://a.mgid.com/postback?c=<click_id>&e=geozoclick&r=0.01` (exactly what the block relay `/dom/lead` sends, goal 1280981 «Geozo
+  block click», deduplication off, so a campaign's conversions are block clicks plus downloads and its CPA tune is not restarted) and
+  returns 204 when there is no valid click id (a download without an MGID click is not reported). **One postback per click id and
+  minute** (`limit_req_zone $arg_click_id zone=arcadia_book:2m rate=1r/m` in conf.d, `limit_req` in the mirror location, status 429):
+  a second tap or a script does not make a second conversion, the visitor still gets the file (tested live: first request `up=200`,
+  next two `st=429 up=-`, other click id `up=200`). The log `arcadiablog.dom.log` has two lines per download: the request (`up=-`) and the
+  postback (`up=<MGID status>` or `st=429`; `log_subrequest on`). `deploy.py nginx` is idempotent: it adds the locations, rewrites the
+  location line and the mirror block of older versions, adds the zone (backup, `nginx -t`, reload, automatic rollback).
+- **The separate goal.** `E-book download` (id **1280985**, event `ebook`, category «Other» = 9; v2 postback targets accept only
+  categories 1 and 9, "Selected category is not available" for 2-5) exists (`geozo_geos.py --make-goal ebook`) but **no campaign uses it**:
+  the first version of the mirror sent `e=ebook` and the plan was to switch the campaigns' goal to the download (`--goal ebook --only ..`,
+  still in the script, the learning starts over); the owner chose «clicks as before plus the download» instead. The count of downloads
+  is in our log (`скач`), not in MGID's report.
+- **Everything on the version with the book.** The fourteen geo campaigns already point to `/blog/<lang>/`. Kazakhstan did not: the
+  approved `/dom/` and `/dom2/` have no book and are not edited (an approved page is never made heavier). So `ru` is a route
+  (`GEOS["KZ"] = (5, "ru")`, MGID language 39, ten articles, ui, pages, teasers and `ebook.json` written by a Russian writer for
+  readers in Kazakhstan, 34-page book) and Kazakhstan has a campaign of its own, **12512714** «Arcadia KZ blog content mobile CPA 0.01»
+  (`geozo_geos.py` geo `KZ`, name tag «blog» so it is never mixed up with the two older ones; four teasers 28161033-28161036 with the
+  Russian headlines of the herbs, bread, fruit-and-vegetables and houseplants articles; targetCpa $0.01 on the same goal; created
+  paused, started with auto-launch after approval). The two older Kazakhstan campaigns (12512609 on `/dom/`, 12512618 on `/dom2/`) are
+  paused once the new one has been approved and delivers; their pages stay on the server.
+- **Verified live (14.10):** PDF with attachment headers, 34 pages in all 14 routes; fake click id gives mirror line `up=200`, repeats
+  `st=429`; no click id gives 204 and no call; a made-up language gives 404 and no line; offer card 2x per article; the Russian pages and
+  the language switcher. `geozo_report.py` shows `скач` (downloads with a click id) and `ebook200` (postbacks answered 200) per campaign;
+  MGID's `конв` of a campaign should be about `up=200` + `ebook200`.
+- **Not done / for the owner:** an e-mail newsletter as another action (needs an e-mail service provider and a legal operator's name
+  and address on the site); a cookie banner that asks before the ad scripts load (the current one only informs) and an Impressum for
+  the German-speaking pages: both matter before EU traffic is scaled.
 
 ## Spend stop-loss on Inferno (11.10)
 

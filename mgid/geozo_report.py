@@ -7,8 +7,9 @@ tomorrow's date, and the nginx logs (UTC) are cut by the same Moscow window, not
 run after 21:00 UTC asked MGID for the day that had just ended and showed zero impressions for campaigns that had started
 after midnight Moscow time.)
 
-Campaigns: the two Kazakhstan layouts (/dom/ moderate, /dom2/ dense, geozo_campaign.py) and the fourteen geos of the
-multilingual site (/blog/<lang>/, geozo_geos.py). Four sources, each on its own so that a gap in one shows up:
+Campaigns: the two Kazakhstan layouts (/dom/ moderate, /dom2/ dense, geozo_campaign.py; both paused once the blog campaign
+runs), the fourteen geos of the multilingual site (/blog/<lang>/, geozo_geos.py) and, since 14.10 night, Kazakhstan on the
+Russian version of the blog (/blog/ru/, label «KZ blog»; geozo_geos.py KZ). Four sources, each on its own so that a gap in one shows up:
  1. MGID v2 report by campaign (impressions, clicks, spend, conversions of the goal geozoclick) and the moderation state
     of the teasers;
  2. page views in the site's nginx log, counted by the campaign id inside `source=mgid_<campaign>_<widget>` (so Germany,
@@ -17,7 +18,8 @@ multilingual site (/blog/<lang>/, geozo_geos.py). Four sources, each on its own 
  3. the relay log /var/log/nginx/arcadiablog.dom.log: one line per signal sent to MGID after a real click on an ad block,
     with MGID's HTTP status (up=); the page that sent it is in ref=, which carries the same source=. The free e-book
     (/blog/dl/<lang>.pdf?click_id=..&source=..) writes two lines per download: the request itself (up=-) and the mirrored
-    postback of the goal «E-book download» (up=<MGID's status>); the first is counted as «скач», the second as «ebook up=200»;
+    postback (up=<MGID's status>); the first is counted as «скач», the second as «ebook200». Since 14.10 night the download is one more
+    conversion of the same goal as a block click (event geozoclick), so MGID's «конв» of a campaign is about «up=200» + «ebook200»;
  4. Geozo publisher statistics of the blocks (clicks, revenue), when the API answers (it has answered 429 so far).
 RPV = Geozo revenue / MGID clicks; a click costs more than it earns when RPV < MGID cost per click.
 """
@@ -45,6 +47,7 @@ TS_SOCK = os.environ.get("TS_SOCK", "/tmp/claude-0/ts/ts.sock")
 NAME = "Arcadia KZ content mobile CPA 0.01"            # kept: older notes import it
 CAMPAIGNS = [("KZ /dom/", "Arcadia KZ content mobile CPA 0.01"),
              ("KZ /dom2/", "Arcadia KZ content mobile CPA 0.01 dense")] + [(g, gg.name_of(g)) for g in gg.ORDER]
+SHOW = {"KZ": "KZ blog"}     # how a label is printed (the geo code KZ is the campaign on /blog/ru/, the other two are /dom/ and /dom2/)
 BLOCKS = {   # Geozo block id -> (name, where, ads in the block)
     1283938: ("dom2-header", "KZ /dom/", 1), 1283939: ("dom2-feed", "KZ /dom/", 1),
     1283940: ("dom3-a", "dense and /blog/", 3), 1283941: ("dom3-b", "dense and /blog/", 4),
@@ -185,18 +188,19 @@ def one_day(day):
     for label, _ in CAMPAIGNS:
         r = rows[label]
         if not r:
-            print(f"{label:10} нет кампании")
+            print(f"{SHOW.get(label, label):10} нет кампании")
             continue
         cid = r["cid"]
         s = sig.get(cid, Counter())
         v = [r["imp"], r["clk"], r["spent"], r["conv"], views.get(cid, 0), uniq.get(cid, 0), sum(s.values()), s.get("200", 0),
              dl.get(cid, 0), dl_up.get(cid, 0)]
         tot = [a + b for a, b in zip(tot, v)]
-        print(f"{label:10} {r['status'][:22]:22} {r['bid']!s:>6} {str(r['teasers'])[:26]:26} {v[0]:>6} {v[1]:>5} {v[2]:>8.4f} "
+        print(f"{SHOW.get(label, label):10} {r['status'][:22]:22} {r['bid']!s:>6} {str(r['teasers'])[:26]:26} {v[0]:>6} {v[1]:>5} {v[2]:>8.4f} "
               f"{v[3]:>4} {v[4]:>6} {v[5]:>7} {v[6]:>7} {v[7]:>6} {v[8]:>4} {v[9]:>8}")
     print(f"{'ИТОГО':10} {'':22} {'':>6} {'':26} {tot[0]:>6} {tot[1]:>5} {tot[2]:>8.4f} {tot[3]:>4} {tot[4]:>6} {tot[5]:>7} {tot[6]:>7} "
           f"{tot[7]:>6} {tot[8]:>4} {tot[9]:>8}")
-    print("(заходы = страницы с source=mgid_<кампания>_ и 32-значным click_id; среди них и проверки модераторов MGID)")
+    print("(заходы = страницы с source=mgid_<кампания>_ и 32-значным click_id; среди них и проверки модераторов MGID;")
+    print(" конв MGID = сигналы up=200 с блоков + скачивания книги ebook200, одна цель geozoclick)")
     if sig.get(0):
         print(f"сигналов без кампании в ref: {sum(sig[0].values())} (наши проверки)")
 
