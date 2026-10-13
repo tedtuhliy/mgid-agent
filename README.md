@@ -4,6 +4,42 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## State on the evening of 13.10: the account is blocked by MGID moderators, the old dating campaigns are paused
+
+**Nothing has run on 816929 (v2 939031) since about 18:30 MSK.** All 240 teasers of the account are `blocked` (83,
+`blocked_by: moderator`, no reason given) or `rejected` (157); none is active. The blocked ones include the old paused
+spy campaigns of other verticals (AL, IT), so this is an action on the account, not on one campaign. It was not the bid
+changes of the same afternoon: campaigns nobody touched (CIS, KZ, Baltics) stopped in the same hour. MGID hours are MSK.
+
+- **Tinely girls (dating).** 12 campaigns with `blocked` teasers; the two LATAM copies 12510729 and 12510766 are
+  `rejected` "Explicit content". The moderator's screenshots show the mobile lander of Tinely LATAM (offer 8326): a
+  "WARNING! You will see nude photos" gate and a topless photo.
+- **The 36 flow teasers of 13.10 12:42 were all rejected "Explicit content".** The screenshots (moderator in Arlington, US)
+  show the offers' own landers behind the flow: "WARNING! You will see nude photos. Please be discreet." So the account
+  trafficback was only part of it: with flow `0-Olte` the moderator reaches an offer's lander, and the lander is what
+  is refused. Flirtooy (AU, CA, NZ) was not part of that batch and stays rejected.
+- **MindHue = the push-subscription funnel monetized by ProPush** (13 campaigns `MindHue cpatune 0.01 <geo> mobile`, a
+  personality quiz on the lander `omnitr.com`, not created by anything in `mgid/`; the owner called them «наши пропуш
+  объявления»). All 95 teasers are `rejected`: "Suspected cloaking" (most; two campaigns "too many redirects"),
+  "Landing page issue", "The webpage has formatting issues: clicking the link to continue the survey opens ...",
+  "Restricted or Illegal product/service" (4, EN-MULTIGEO). They delivered from 12.10 15:00 to 13.10 about 15:15 (hour 15
+  had 2065 impressions against ~8900 in the hours before): 189k impressions, 3.7k clicks, $0.37 in all, then stopped, three
+  hours before the Tinely block. They are left `active`; with every teaser rejected nothing is served.
+- **Old account 816921.** 175 teasers: 62 `campaignBlocked`, 106 `rejected`, 7 `blocked`; none active. Its v2 answers 401
+  with that token, v1 works.
+
+**Owner, 13.10 evening: «Можешь стопнуть все старые объявления».** The 14 active Tinely girls campaigns were paused with
+the v1 flag (`mgid_api.pause`), each read back `paused/clientManuallyPaused`: 12502227, 12502228, 12502229, 12502230,
+12502231, 12502232, 12510622, 12510623, 12510625, 12510626, 12510729, 12510730, 12510766, 12511469. All were
+`active/unfulfilled` before. To start one again: `pause(cid, False)`. The guard watches only active campaigns, so it
+has nothing to do until they are started. MindHue and the old paused campaigns were not touched; the bids of the same day
+stay (PL 1.60, LATAM 0.336, UA 0.30, CIS 0.12, KZ 0.168, LT 0.22, LV 0.16, EE 0.74).
+
+**Open.** Only MGID support can lift the block (the moderator sets `blocked`), and a lander the moderators accept is
+needed: each offer has several landers (`pages` in the offer card, e.g. Tinely LP_2 / LP_10, Singles-meets GZH...), so the
+first step is to look at them and pick the ones without nudity or the "nude photos" gate. No cloaking: every visitor,
+moderators included, gets the same page.
+
 ## Spend stop-loss on Inferno (11.10)
 
 Owner: «настрой на инферно бота который стопнет кампании после спенда в 3 бакса». `mgid/spend_stop.py` runs on
