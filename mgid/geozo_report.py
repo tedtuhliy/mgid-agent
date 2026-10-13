@@ -1,6 +1,11 @@
 """Read-only report of the MGID -> arcadiablog.com -> Geozo tests: one row per campaign.
 
-    CLAUDE_VAULT_FILE=~/.claude/secrets/vault.enc.json node vault.mjs exec mgid geozo -- python3 geozo_report.py [YYYY-MM-DD]
+    CLAUDE_VAULT_FILE=~/.claude/secrets/vault.enc.json node vault.mjs exec mgid geozo -- python3 geozo_report.py [YYYY-MM-DD ...]
+
+The day is the MGID day, Moscow time (UTC+3), and it defaults to today in Moscow: right after 21:00 UTC that is already
+tomorrow's date, and the nginx logs (UTC) are cut by the same Moscow window, not by their own date. (13.10 night: the first
+run after 21:00 UTC asked MGID for the day that had just ended and showed zero impressions for campaigns that had started
+after midnight Moscow time.)
 
 Campaigns: the two Kazakhstan layouts (/dom/ moderate, /dom2/ dense, geozo_campaign.py) and the fourteen geos of the
 multilingual site (/blog/<lang>/, geozo_geos.py). Four sources, each on its own so that a gap in one shows up:
@@ -20,7 +25,7 @@ import subprocess
 import sys
 import time
 from collections import Counter
-from datetime import date
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -31,6 +36,7 @@ import geozo_geos as gg  # noqa: E402
 import mgid_geo_copies as cp  # noqa: E402
 from mgid_api import report, v2_campaigns  # noqa: E402
 
+MSK = timezone(timedelta(hours=3))
 HOST = "root@100.121.239.113"
 TS_BIN = os.environ.get("TS_BIN", "/tmp/claude-0/ts/tailscale_1.104.1_amd64/tailscale")
 TS_SOCK = os.environ.get("TS_SOCK", "/tmp/claude-0/ts/ts.sock")
@@ -89,23 +95,36 @@ def hourly(day, cid):
     return out
 
 
+def msk_window(day):
+    d0 = datetime.strptime(day, "%Y-%m-%d").replace(tzinfo=MSK)
+    return d0, d0 + timedelta(days=1)
+
+
 def site_rows(day):
     """views[cid]: page views whose URL carries that campaign's source and a 32-character click id; ids[cid]: how many
-    different click ids; sig[cid]: Counter of MGID's answer (up=) to the relay signals sent from pages of that campaign."""
-    d = time.strftime("%d/%b/%Y", time.strptime(day, "%Y-%m-%d"))
-    out = ssh(f"grep -a '{d}' /var/log/nginx/arcadiablog.access.log | grep -a -E 'GET /(dom2?|blog)/' | "
-              "grep -a -v -E '\\.(jpg|js|png|css)'")
+    different click ids; sig[cid]: Counter of MGID's answer (up=) to the relay signals sent from pages of that campaign.
+    Only lines inside the Moscow day are counted (the logs are UTC)."""
+    d0, d1 = msk_window(day)
+    utc_days = sorted({d0.astimezone(timezone.utc).date(), (d1 - timedelta(seconds=1)).astimezone(timezone.utc).date()})
+    acc, rel = "", ""
+    for u in utc_days:
+        acc += ssh(f"grep -a '{u.strftime('%d/%b/%Y')}' /var/log/nginx/arcadiablog.access.log | grep -a -E 'GET /(dom2?|blog)/' | "
+                   "grep -a -v -E '\\.(jpg|js|png|css)'")
+        rel += ssh(f"grep -a '{u.isoformat()}' /var/log/nginx/arcadiablog.dom.log")
     views, ids = Counter(), {}
-    for l in out.splitlines():
+    for l in acc.splitlines():
+        t = re.search(r"\[(\d\d/\w{3}/\d{4}:\d\d:\d\d:\d\d [+-]\d{4})\]", l)
+        if not t or not d0 <= datetime.strptime(t.group(1), "%d/%b/%Y:%H:%M:%S %z") < d1:
+            continue
         m = re.search(r"source=mgid_(\d+)_", l)
         c = re.search(r"click_id=([0-9a-f]{32})\b", l)
         if m and c:
             views[int(m.group(1))] += 1
             ids.setdefault(int(m.group(1)), set()).add(c.group(1))
-    out = ssh(f"grep -a '{time.strftime('%Y-%m-%d', time.strptime(day, '%Y-%m-%d'))}' /var/log/nginx/arcadiablog.dom.log")
     sig = {}
-    for l in out.splitlines():
-        if "/dom/lead" not in l:
+    for l in rel.splitlines():
+        t = re.search(r"\[(\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d)\]", l)
+        if "/dom/lead" not in l or not t or not d0 <= datetime.fromisoformat(t.group(1)) < d1:
             continue
         m = re.search(r"source=mgid_(\d+)_", l)
         u = re.search(r"up=(\S+)", l)
@@ -139,7 +158,14 @@ def geozo_part(day):
 
 
 def main():
-    day = sys.argv[1] if len(sys.argv) > 1 else date.today().isoformat()
+    days = sys.argv[1:] or [datetime.now(MSK).date().isoformat()]
+    for day in days:
+        one_day(day)
+    print()
+    geozo_part(days[-1])
+
+
+def one_day(day):
     rows = mgid_rows(day)
     views, uniq, sig = site_rows(day)
     print(f"отчёт за {day} (сутки MGID = МСК)")
@@ -161,8 +187,6 @@ def main():
     print("(заходы = страницы с source=mgid_<кампания>_ и 32-значным click_id; среди них и проверки модераторов MGID)")
     if sig.get(0):
         print(f"сигналов без кампании в ref: {sum(sig[0].values())} (наши проверки)")
-    print()
-    geozo_part(day)
 
 
 if __name__ == "__main__":
