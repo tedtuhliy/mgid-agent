@@ -1,6 +1,8 @@
 """Put the /dom/ pages and the nginx relay for block-click conversions on the Inferno server.
 
-    python3 deploy.py static [--stage DIR]   # build output -> /var/www/arcadiablog.com/dom/ (nothing else is touched)
+    python3 deploy.py static [--stage DIR] [--route dom|dom2]
+                                             # build output of one variant -> /var/www/arcadiablog.com/<route>/ (nothing else
+                                             # is touched; dom is the variant MGID approved, deploy it only to restore it)
     python3 deploy.py nginx                  # relay location /dom/lead + log format, with backup, nginx -t, reload
     python3 deploy.py check                  # read-only: what is on the server now
 
@@ -24,7 +26,8 @@ HERE = Path(__file__).resolve().parent
 HOST = "root@100.121.239.113"
 TS_BIN = os.environ.get("TS_BIN", "/tmp/claude-0/ts/tailscale_1.104.1_amd64/tailscale")
 TS_SOCK = os.environ.get("TS_SOCK", "/tmp/claude-0/ts/ts.sock")
-WEB = "/var/www/arcadiablog.com/dom"
+WEB_ROOT = "/var/www/arcadiablog.com"
+WEB = WEB_ROOT + "/dom"
 SITE_CONF = "/etc/nginx/sites-available/arcadiablog.com"
 LOGFMT_CONF = "/etc/nginx/conf.d/arcadia-dom.conf"
 
@@ -59,24 +62,25 @@ def ssh(cmd, stdin=None, timeout=240):
     return r.returncode, (r.stdout + r.stderr).strip()
 
 
-def static(stage):
-    src = Path(stage) / "dom"
+def static(stage, route="dom"):
+    src = Path(stage) / route
     if not (src / "index.html").exists():
         raise SystemExit(f"нет сборки в {src}: сначала python3 build.py --out {stage}")
+    web = f"{WEB_ROOT}/{route}"
     buf = io.BytesIO()
     with tarfile.open(fileobj=buf, mode="w:gz") as t:
-        t.add(src, arcname="dom")
+        t.add(src, arcname=route)
     b64 = base64.b64encode(buf.getvalue()).decode()
-    new_js = next(p.name for p in src.glob("dom.*.js"))
+    new_js = next(p.name for p in src.glob(f"{route}.*.js"))
     script = f"""set -e
-rm -rf /tmp/dom_stage && mkdir -p /tmp/dom_stage
-base64 -d | tar -xz -C /tmp/dom_stage
-install -d -o www-data -g www-data -m 755 {WEB} {WEB}/img
-for f in /tmp/dom_stage/dom/*; do [ -f "$f" ] && install -o www-data -g www-data -m 644 "$f" {WEB}/; done
-for f in /tmp/dom_stage/dom/img/*; do install -o www-data -g www-data -m 644 "$f" {WEB}/img/; done
-for f in {WEB}/dom.*.js; do [ "$(basename $f)" = "{new_js}" ] || rm -f "$f"; done
-rm -rf /tmp/dom_stage
-ls -la {WEB} {WEB}/img
+rm -rf /tmp/{route}_stage && mkdir -p /tmp/{route}_stage
+base64 -d | tar -xz -C /tmp/{route}_stage
+install -d -o www-data -g www-data -m 755 {web} {web}/img
+for f in /tmp/{route}_stage/{route}/*; do [ -f "$f" ] && install -o www-data -g www-data -m 644 "$f" {web}/; done
+for f in /tmp/{route}_stage/{route}/img/*; do install -o www-data -g www-data -m 644 "$f" {web}/img/; done
+for f in {web}/{route}.*.js; do [ "$(basename $f)" = "{new_js}" ] || rm -f "$f"; done
+rm -rf /tmp/{route}_stage
+ls -la {web} {web}/img
 """
     code, out = ssh(f"bash -c {shell_quote(script)}", stdin=b64)
     print(out)
@@ -119,7 +123,7 @@ grep -n -A3 'location = /dom/lead' {SITE_CONF} | head -8
 
 
 def check():
-    code, out = ssh(f"ls -la {WEB} 2>&1 | head -12; echo ---; grep -c 'location = /dom/lead' {SITE_CONF}; "
+    code, out = ssh(f"ls -la {WEB} {WEB_ROOT}/dom2 2>&1 | head -24; echo ---; grep -c 'location = /dom/lead' {SITE_CONF}; "
                     f"ls -la {LOGFMT_CONF} /var/log/nginx/arcadiablog.dom.log 2>&1 | head; echo ---; "
                     "tail -n 5 /var/log/nginx/arcadiablog.dom.log 2>/dev/null")
     print(out)
@@ -129,4 +133,7 @@ def check():
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
     stage = sys.argv[sys.argv.index("--stage") + 1] if "--stage" in sys.argv else "/tmp/dom_stage_build"
-    sys.exit({"static": lambda: static(stage), "nginx": nginx, "check": check}[cmd]())
+    route = sys.argv[sys.argv.index("--route") + 1] if "--route" in sys.argv else "dom"
+    if route not in ("dom", "dom2"):
+        raise SystemExit("--route: dom или dom2")
+    sys.exit({"static": lambda: static(stage, route), "nginx": nginx, "check": check}[cmd]())

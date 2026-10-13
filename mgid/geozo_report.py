@@ -1,13 +1,17 @@
-"""Read-only report of the MGID -> arcadiablog.com/dom -> Geozo test: spend, visits, block-click signals, Geozo revenue.
+"""Read-only report of the MGID -> arcadiablog.com/dom and /dom2 -> Geozo test: spend, visits, block-click signals, Geozo revenue.
 
-    node ~/.claude/skills/secrets/vault.mjs exec mgid geozo -- python3 geozo_report.py [YYYY-MM-DD]
+    CLAUDE_VAULT_FILE=~/.claude/secrets/vault.enc.json node vault.mjs exec mgid geozo -- python3 geozo_report.py [YYYY-MM-DD]
 
+Two layouts run side by side, each with its own MGID campaign (see geozo_campaign.py): /dom/ (4 slots a page, one ad
+each, the pages MGID approved first) and /dom2/ (8-9 slots a page, 3-10 ads each). Every number is printed per variant.
 Four sources, each printed on its own so a gap in one shows up instead of being averaged away:
- 1. MGID v2 report of the campaign (impressions, clicks, spend, conversions of the goal geozoclick), by hour;
- 2. the page views of /dom/ in the site's nginx log (those with a click_id came from MGID, the rest are moderators,
-    bots and direct visits);
+ 1. MGID v2 report of each campaign (impressions, clicks, spend, conversions of the goal geozoclick), by hour, and the
+    moderation state of its teasers;
+ 2. the page views of /dom/ and /dom2/ in the site's nginx log (those with a click_id came from MGID, the rest are
+    moderators, bots and direct visits);
  3. the relay log /var/log/nginx/arcadiablog.dom.log: one line per signal sent to MGID, with MGID's HTTP status (up=);
- 4. Geozo publisher statistics of the blocks dom-header / dom-feed (clicks, revenue), when the API answers.
+    the page that sent it is in ref=, which tells the variants apart;
+ 4. Geozo publisher statistics of the blocks (clicks, revenue), when the API answers.
 RPV = Geozo revenue / MGID clicks; a click costs more than it earns when RPV < MGID cost per click.
 """
 import json
@@ -23,13 +27,21 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
+import mgid_geo_copies as cp  # noqa: E402
 from mgid_api import report, v2_campaigns  # noqa: E402
 
-NAME = "Arcadia KZ content mobile CPA 0.01"
+VARIANTS = {   # route -> MGID campaign name
+    "dom": "Arcadia KZ content mobile CPA 0.01",
+    "dom2": "Arcadia KZ content mobile CPA 0.01 dense",
+}
+NAME = VARIANTS["dom"]
 HOST = "root@100.121.239.113"
 TS_BIN = os.environ.get("TS_BIN", "/tmp/claude-0/ts/tailscale_1.104.1_amd64/tailscale")
 TS_SOCK = os.environ.get("TS_SOCK", "/tmp/claude-0/ts/ts.sock")
-BLOCKS = {1283938: "dom2-header", 1283939: "dom2-feed"}
+BLOCKS = {   # Geozo block id -> (name, variant, ads in the block)
+    1283938: ("dom2-header", "dom", 1), 1283939: ("dom2-feed", "dom", 1),
+    1283940: ("dom3-a", "dom2", 3), 1283941: ("dom3-b", "dom2", 4), 1283942: ("dom3-c", "dom2", 10),
+}
 
 
 def money(x):
@@ -41,15 +53,17 @@ def ssh(cmd):
     return r.stdout
 
 
-def mgid_part(day):
+def mgid_part(day, route="dom", name=NAME):
     live = v2_campaigns(("name", "status", "bidding"))
-    cid = next((i for i, x in live.items() if x.get("name") == NAME), None)
+    cid = next((i for i, x in live.items() if x.get("name") == name), None)
     if not cid:
-        print("MGID: кампании нет")
+        print(f"MGID [{route}]: кампании нет")
         return None
     r = live[cid]
-    print(f"MGID: кампания {cid}, {(r.get('status') or {}).get('name')}/{(r.get('status') or {}).get('reason')}, "
+    print(f"MGID [{route}]: кампания {cid}, {(r.get('status') or {}).get('name')}/{(r.get('status') or {}).get('reason')}, "
           f"ставка {(r.get('bidding') or {}).get('strategy')} {(r.get('bidding') or {}).get('price')}")
+    tz = Counter((t.get("status") or {}).get("code") for t in cp.teasers(cid).values() if isinstance(t, dict))
+    print(f"  тизеры: {dict(tz)}")
     rows = report(day, day, ("impressions", "clicks", "spent", "conversionsBuy"), ("campaignId", "hour"), camps=[cid])
     hours = defaultdict(lambda: [0, 0, 0.0, 0])
     for x in rows:
@@ -66,20 +80,33 @@ def mgid_part(day):
     return tot
 
 
-def site_part(day):
+def site_part(day, route="dom"):
     d = time.strftime("%d/%b/%Y", time.strptime(day, "%Y-%m-%d"))
-    out = ssh(f"grep -a '{d}' /var/log/nginx/arcadiablog.access.log | grep -a -E 'GET /dom/' | grep -a -v -E '\\.(jpg|js|png|css)'")
+    out = ssh(f"grep -a '{d}' /var/log/nginx/arcadiablog.access.log | grep -a -E 'GET /{route}/' | grep -a -v -E '\\.(jpg|js|png|css)'")
     views = [l for l in out.splitlines() if l.strip()]
     withid = [l for l in views if "click_id=" in l and "click_id=%7B" not in l and "click_id={" not in l]
-    print(f"САЙТ: просмотры страниц /dom/ за {day}: {len(views)}, из них с click_id MGID {len(withid)}")
-    print(f"  с click_id без макросов, уникальных id: {len({re.search(r'click_id=([^& ]+)', l).group(1) for l in withid})}")
-    out = ssh(f"grep -a '{time.strftime('%Y-%m-%d', time.strptime(day, '%Y-%m-%d'))}' /var/log/nginx/arcadiablog.dom.log")
+    ids = {re.search(r"click_id=([^& ]+)", l).group(1) for l in withid}
+    print(f"САЙТ [{route}]: просмотры страниц за {day}: {len(views)}, из них с click_id MGID {len(withid)}, "
+          f"уникальных click_id {len(ids)}")
+    return len(views), len(withid), len(ids)
+
+
+def relay_part(day):
+    """The relay log has no route of its own: the page that sent the signal is in ref=."""
+    out = ssh(f"grep -a '{day}' /var/log/nginx/arcadiablog.dom.log")
     leads = [l for l in out.splitlines() if "/dom/lead" in l]
-    st = Counter(re.search(r"up=(\S+)", l).group(1) for l in leads if re.search(r"up=(\S+)", l))
-    print(f"РЕЛЕЙ: сигналов за {day}: {len(leads)}, ответ MGID (up=): {dict(st)}")
-    for l in leads[-3:]:
-        print("   ", l[:200])
-    return len(views), len(withid), len(leads)
+    res = {}
+    for route in VARIANTS:
+        mine = [l for l in leads if f'ref="https://arcadiablog.com/{route}/' in l]
+        st = Counter(re.search(r"up=(\S+)", l).group(1) for l in mine if re.search(r"up=(\S+)", l))
+        res[route] = len(mine)
+        print(f"РЕЛЕЙ [{route}]: сигналов за {day}: {len(mine)}, ответ MGID (up=): {dict(st)}")
+        for l in mine[-2:]:
+            print("   ", l[:200])
+    other = len(leads) - sum(res.values())
+    if other:
+        print(f"РЕЛЕЙ [без страницы-источника]: {other}")
+    return res
 
 
 def geozo_part(day):
@@ -88,6 +115,7 @@ def geozo_part(day):
         print("GEOZO: нет ключа в окружении (vault exec geozo)")
         return
     import requests
+    print("GEOZO блоки: " + ", ".join(f"{i} {n} ({v}, {k} об.)" for i, (n, v, k) in BLOCKS.items()))
     params = {"filters[date_from]": day, "filters[date_to]": day, "groups[]": "block_id",
               "order_by[0][column]": "block_id", "order_by[0][direction]": "asc",
               "filters[block_id_in][]": list(BLOCKS)}
@@ -101,15 +129,19 @@ def geozo_part(day):
         if r.status_code == 429:
             time.sleep(10 * (i + 1))
             continue
-        print(f"GEOZO: stats {r.status_code}: {r.text[:900]}")
+        print(f"GEOZO: stats {r.status_code}: {r.text[:1500]}")
         return
     print("GEOZO: статистика не ответила")
 
 
 if __name__ == "__main__":
     day = sys.argv[1] if len(sys.argv) > 1 else date.today().isoformat()
-    mgid_part(day)
+    for route, name in VARIANTS.items():
+        mgid_part(day, route, name)
+        print()
+    for route in VARIANTS:
+        site_part(day, route)
     print()
-    site_part(day)
+    relay_part(day)
     print()
     geozo_part(day)

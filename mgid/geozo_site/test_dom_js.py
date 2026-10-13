@@ -107,6 +107,23 @@ with sync_playwright() as p:
     page.wait_for_timeout(1000); page.click("#fakead"); page.wait_for_timeout(300)
     check("second article sends a lead too", len(leads) == 1 and "TESTCLICK654321" in leads[0], leads)
     page.context.close()
+
+    # 5. dense variant /dom2/: same script, same relay (/dom/lead), many slots, internal links stay inside /dom2/
+    page, leads = new_page(BASE + "/dom2/?click_id=TESTCLICK777777&source=mgid_9_9")
+    page.wait_for_timeout(1000); page.click("#fakead"); page.wait_for_timeout(300)
+    check("dense page sends a lead to the shared relay", len(leads) == 1 and "/dom/lead?c=TESTCLICK777777" in leads[0], leads)
+    n = page.evaluate("document.querySelectorAll('.ad-slot.compact').length")
+    check("dense page has the compact slots", n >= 8, n)
+    hrefs = page.evaluate("Array.from(document.querySelectorAll('a.js-int')).map(a => a.getAttribute('href'))")
+    check("dense internal link stays under /dom2/ and carries the attribution",
+          len(hrefs) == 1 and hrefs[0].startswith("/dom2/") and "click_id=TESTCLICK777777" in hrefs[0], hrefs)
+    # a real click on a link inside any later slot counts too (the loader fills every slot, not just the first)
+    page.evaluate("""() => { const d = document.querySelectorAll('.ad-slot.compact')[3].querySelector('div');
+        d.innerHTML = '<a id="fakead2" href="javascript:void(0)" style="display:block;height:80px;background:#ccc">fake ad 2</a>'; }""")
+    page.wait_for_timeout(1300)
+    page.click("#fakead2"); page.wait_for_timeout(300)
+    check("a click in a later slot sends a lead", len(leads) == 2 and "n=2" in leads[1], leads)
+    page.context.close()
     b.close()
 print(f"{sum(results)} / {len(results)} passed")
 sys.exit(0 if all(results) else 1)

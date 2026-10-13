@@ -7,8 +7,14 @@ Owner, 13.10 evening: «Давай попробуем запустить на cp
 
     python3 geozo_campaign.py            # plan: prints what would be created, changes nothing
     python3 geozo_campaign.py --apply    # create the campaign PAUSED (no teasers yet), read the settings back
-    python3 geozo_campaign.py --teasers  # add the six teasers (they go to moderation at once), read back
+    python3 geozo_campaign.py --teasers  # add the teasers (they go to moderation at once), read back
     python3 geozo_campaign.py --start    # start it (needs a positive balance); approved teasers then serve
+    ... --variant dom2                   # the same for the dense pages (/dom2/), a campaign of its own
+
+Two campaigns, one per layout, because a landing page that MGID has approved is not edited afterwards (an ad-heavier
+page than the approved one would be moderation evasion) and a denser page has to pass moderation as it is:
+  dom  «Arcadia KZ content mobile CPA 0.01»        -> /dom/   4 slots a page, one ad each (approved 13.10 ~20:00 UTC)
+  dom2 «Arcadia KZ content mobile CPA 0.01 dense»  -> /dom2/  8-9 slots a page, 3-10 ads each, compact cards
 
 - Conversion goal: MGID postback target 1280981 «Geozo block click» (eventName geozoclick), created 13.10 with
   POST v2 account/939031/targets. NOT the dating target 1274200, so mgid-guard does not read it. Deduplication is OFF:
@@ -33,35 +39,38 @@ sys.path.insert(0, str(HERE))
 import mgid_geo_copies as cp  # noqa: E402
 from mgid_api import CID1, CID2, V1, V2, buy_cpa, call, campaign, pause, v2_campaigns  # noqa: E402
 
-NAME = "Arcadia KZ content mobile CPA 0.01"
+VARIANTS = {   # name of the MGID campaign, URL prefix of the landing pages, file with the ids
+    "dom": {"name": "Arcadia KZ content mobile CPA 0.01", "prefix": "/dom", "out": "geozo-campaign.json"},
+    "dom2": {"name": "Arcadia KZ content mobile CPA 0.01 dense", "prefix": "/dom2", "out": "geozo-campaign-dom2.json"},
+}
+NAME = VARIANTS["dom"]["name"]                      # kept for geozo_report.py and older notes
 GEO = "KZ"
 CPA = 0.01
 TARGET_ID = 1280981                    # «Geozo block click», eventName geozoclick
 SITE = "https://arcadiablog.com"
 LINK = SITE + "{path}?click_id={{click_id}}&source=mgid_{{campaign_id}}_{{widget_id}}"
-TEASERS = [   # (image, title, page)
-    ("t1", "Банка с водой вместо пакета: простой способ сохранить зелень", "/dom/"),
-    ("t2", "Как разложить холодильник, чтобы реже выбрасывать еду", "/dom/"),
-    ("t3", "Хлеб черствеет в холодильнике? Есть способ лучше", "/dom/"),
-    ("t4", "Комнатные растения осенью: 7 советов, чтобы они дожили до весны", "/dom/rasteniya-osenyu.html"),
-    ("t5", "Зелень на подоконнике осенью: как сохранить её до весны", "/dom/rasteniya-osenyu.html"),
-    ("t6", "Пересаживать комнатные растения осенью или лучше весной?", "/dom/rasteniya-osenyu.html"),
+TEASERS = [   # (image, title, page under the variant's prefix)
+    ("t1", "Банка с водой вместо пакета: простой способ сохранить зелень", "/"),
+    ("t2", "Как разложить холодильник, чтобы реже выбрасывать еду", "/"),
+    ("t3", "Хлеб черствеет в холодильнике? Есть способ лучше", "/"),
+    ("t4", "Комнатные растения осенью: 7 советов, чтобы они дожили до весны", "/rasteniya-osenyu.html"),
+    ("t5", "Зелень на подоконнике осенью: как сохранить её до весны", "/rasteniya-osenyu.html"),
+    ("t6", "Пересаживать комнатные растения осенью или лучше весной?", "/rasteniya-osenyu.html"),
 ]
-OUT = HERE / "data" / "geozo-campaign.json"
 
 
-def body(src):
+def body(src, v):
     b = cp.body_for(GEO, cp.country_ids()[GEO], CPA, src)
-    b.update({"name": NAME, "showName": "Arcadia Blog", "type": "product", "isAutoLaunchAdsAfterApproval": True})
+    b.update({"name": v["name"], "showName": "Arcadia Blog", "type": "product", "isAutoLaunchAdsAfterApproval": True})
     b["conversionTracking"] = {"type": "sensors", "decisionStage": None, "interestStage": None,
                                "buyStage": {"targetId": TARGET_ID, "deduplicateConversions": False,
                                             "conversionValue": CPA}}
     return b
 
 
-def teaser_form(cid, image, title, path):
-    return {"campaignId": cid, "url": LINK.format(path=path), "title": title,
-            "imageLink": f"{SITE}/dom/img/{image}.jpg", "priceOfClick": cp.TEASER_CENTS, "whetherShowGoodPrice": 0}
+def teaser_form(cid, image, title, path, prefix):
+    return {"campaignId": cid, "url": LINK.format(path=prefix + path), "title": title,
+            "imageLink": f"{SITE}{prefix}/img/{image}.jpg", "priceOfClick": cp.TEASER_CENTS, "whetherShowGoodPrice": 0}
 
 
 def main():
@@ -69,9 +78,13 @@ def main():
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--teasers", action="store_true")
     ap.add_argument("--start", action="store_true")
+    ap.add_argument("--variant", choices=sorted(VARIANTS), default="dom")
     a = ap.parse_args()
+    v = VARIANTS[a.variant]
+    name, prefix = v["name"], v["prefix"]
+    out_file = HERE / "data" / v["out"]
     live = v2_campaigns()
-    exists = next((i for i, x in live.items() if x.get("name") == NAME), None)
+    exists = next((i for i, x in live.items() if x.get("name") == name), None)
 
     if a.start:
         if not exists:
@@ -88,11 +101,11 @@ def main():
     src = live.get(cp.SOURCE)
     if not src:
         raise SystemExit(f"исходной кампании {cp.SOURCE} нет в v2")
-    print(f"план: {NAME} | {GEO}, targetCpa ${CPA}, конверсия ${CPA}, цель {TARGET_ID} без дедупа, тип product, "
+    print(f"план: {name} | {GEO}, targetCpa ${CPA}, конверсия ${CPA}, цель {TARGET_ID} без дедупа, тип product, "
           f"${cp.DAILY_USD:.0f}/сутки, язык {src.get('languageTargeting')}, {len(TEASERS)} тизеров; "
           f"{'уже есть ' + str(exists) if exists else 'будет создана на паузе'}")
     for image, title, path in TEASERS:
-        print(f"  {image}: {title}\n      {LINK.format(path=path)}")
+        print(f"  {image}: {title}\n      {LINK.format(path=prefix + path)}")
     if not (a.apply or a.teasers):
         print("(без --apply / --teasers ничего не создаётся)")
         return
@@ -100,7 +113,7 @@ def main():
     if exists:
         cid = exists
     else:
-        st, d = call("POST", V2 + f"account/{CID2}/campaigns", body(src))
+        st, d = call("POST", V2 + f"account/{CID2}/campaigns", body(src, v))
         if st not in (200, 201) or not isinstance(d, dict) or not d.get("id"):
             raise SystemExit(f"создание: {st} {json.dumps(d, ensure_ascii=False)[:600]}")
         cid = int(d["id"])
@@ -112,10 +125,10 @@ def main():
     have = {t.get("imageLink") for t in cp.teasers(cid).values() if isinstance(t, dict)}
     rows = []
     for image, title, path in (TEASERS if a.teasers else []):
-        if f"{SITE}/dom/img/{image}.jpg" in have:
+        if f"{SITE}{prefix}/img/{image}.jpg" in have:
             print(f"  тизер {image}: уже есть")
             continue
-        form = teaser_form(cid, image, title, path)
+        form = teaser_form(cid, image, title, path, prefix)
         st, d = call("POST", V1 + f"goodhits/clients/{CID1}/teasers", form, form=True)
         new_id = d.get("id") if isinstance(d, dict) else None
         print(f"  тизер {image}: {st} {new_id or json.dumps(d, ensure_ascii=False)[:300]}")
@@ -137,10 +150,10 @@ def main():
           f"лимит v1 {(c.get('limitsFilter') or {})}")
     now = cp.teasers(cid)
     print(f"тизеров {len(now)}: {sorted({(t.get('status') or {}).get('code') for t in now.values() if isinstance(t, dict)})}")
-    OUT.parent.mkdir(exist_ok=True)
-    json.dump({"id": cid, "name": NAME, "geo": GEO, "cpa": CPA, "target": TARGET_ID, "teasers": rows},
-              open(OUT, "w"), ensure_ascii=False, indent=1)
-    print(f"записано: {OUT}")
+    out_file.parent.mkdir(exist_ok=True)
+    json.dump({"id": cid, "name": name, "geo": GEO, "cpa": CPA, "target": TARGET_ID, "teasers": rows},
+              open(out_file, "w"), ensure_ascii=False, indent=1)
+    print(f"записано: {out_file}")
 
 
 if __name__ == "__main__":
