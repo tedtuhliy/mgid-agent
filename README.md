@@ -27,6 +27,22 @@ changes of the same afternoon: campaigns nobody touched (CIS, KZ, Baltics) stopp
   hours before the Tinely block. They are left `active`; with every teaser rejected nothing is served.
 - **Old account 816921.** 175 teasers: 62 `campaignBlocked`, 106 `rejected`, 7 `blocked`; none active. Its v2 answers 401
   with that token, v1 works.
+- **Why MindHue is rejected (checked the same evening, `omnitr.com/mgidcis/`).** The page is the same file for every
+  visitor (mobile, desktop, no parameters, raw macros: identical 33443 bytes), so nothing is hidden from anyone. What it
+  does on a click is what MGID refuses: its own `survey.js` fires a tab-under on EVERY answer (the current tab goes to the
+  offer, a new tab reopens the quiz on the next step); `reverse.js` takes over the back button after the first click
+  (`pushState` + `popstate` -> redirect, `back_count` 10); `autoexit.js` redirects the tab after 90 s without interaction;
+  the final "REVEAL" is a popunder plus a redirect; `pushScript.js` loads the ProPush push SDK (`kmnts.com`) and opens a
+  tab or redirects on permission. The moderator texts match: "Clicking the link to continue the survey opens an
+  additional link", "too many redirects", "Suspected cloaking" (68 of 95). Fixing it means changing the page for
+  everyone (no tab-under, back or auto exit; a visible link to the offer), which removes the monetization it was built
+  for. It must not be done by showing moderators another page.
+- **Dr.Cash nutra.** The owner asked whether a new campaign on the Dr.Cash nutra can be launched. The keychain has no
+  Dr.Cash or AdCombo entry (vault refreshed over git, 92 services), and the stream link and creatives of that bundle are
+  not known here. The old nutra copies (AL, IT, BA "spy" campaigns, AdCombo links on `uewhbgfvds.cc` and `axdsz.pro`)
+  ran on this account with real volume until today (IT weight loss: 166k impressions, 3661 clicks, $58.58 on one
+  teaser) and are now `blocked` by the moderator like everything else. Nothing new was submitted: while the account is
+  blocked a test teaser can only add one more rejection record.
 
 **Owner, 13.10 evening: «Можешь стопнуть все старые объявления».** The 14 active Tinely girls campaigns were paused with
 the v1 flag (`mgid_api.pause`), each read back `paused/clientManuallyPaused`: 12502227, 12502228, 12502229, 12502230,
