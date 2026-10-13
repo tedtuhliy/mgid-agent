@@ -117,8 +117,11 @@ loosens it, so the statistics window stays at 12.10.
 | CIS (x2) | 12502231, 12502232, 12510730 | 0.6 of AZ $0.20 | 0.06 -> 0.12 |
 | Poland | 12502227, 12502228 | 0.5 of PL $2.00 | 0.60 -> 1.00 |
 | LATAM | 12502229, 12502230, 12510729, 12510766 | 0.4 of PA $0.48 | 0.144 -> 0.192 |
+| Baltics (later, same day) | 12510623 LT, 12510625 LV, 12510626 EE | 0.5 of LT $0.44, LV $0.32, EE $1.48 | 0.132 -> 0.22, 0.096 -> 0.16, 0.444 -> 0.74 |
 
-The KZ, LT, LV and EE copies (12510622, 12510623, 12510625, 12510626) were not part of «cis» and keep their 30%.
+Owner, 13.10, after the first three: «Я Балтике подними до 50% от выплаты также». The Baltic copies were not part of
+«cis» and had stayed at 30%. The KZ copy (12510622) is not Baltic and keeps its 30%; the owner's message quoted its id
+together with the others, so say if it was meant too (50% of $0.56 = 0.28).
 `cpa_share.py --share 0.6|0.5|0.4` reproduces the new numbers; without `--share` it puts a campaign back to 30%.
 
 ```bash
