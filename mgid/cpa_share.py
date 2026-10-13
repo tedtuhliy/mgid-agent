@@ -8,6 +8,11 @@ Owner, 12.10: «Точней поставь 10% от выплат на гео с
 then «Подними все до 30% от выплаты ставки по всем гео дейтинг». Ukraine is in the list too: its payout is $1.00
 (data/rates-8395.json), so its bid is $0.30.
 
+13.10, region by region: «Нужно на cis поднять ставку в 2 раза» (0.06 -> 0.12, which is 60% of the lowest CIS payout,
+AZ/MD $0.20), «На польшу поставить половину от выплаты ставку» (50% of $2.00 = 1.00), «Латам тоже на 10% от выплаты
+подними ставку» (read as 30% + 10 points = 40% of the lowest LATAM payout, PA $0.48 = 0.192). Those are --share 0.6,
+0.5 and 0.4. Run without --share, the script puts a campaign back to 30%.
+
 - One campaign has one bid: MGID cannot price geos apart inside a campaign. A campaign on several geos gets
   30% of the LOWEST payout among them, so no geo is bid above 30% of its own payout. Exact per-geo bids would
   need one campaign per geo, which is a new campaign rather than a setting.
@@ -60,13 +65,14 @@ def by_country(payouts):
     return {k.split(" - ")[0].strip(): v for k, v in payouts.items()}
 
 
-def bid(geos, payouts):
-    """(CPA in $, the geo it was taken from) for a campaign on `geos`, given {ISO: $} of its offer."""
+def bid(geos, payouts, share=SHARE):
+    """(CPA in $, the geo it was taken from) for a campaign on `geos`, given {ISO: $} of its offer.
+    `share` is the part of the lowest payout; 30% unless the owner set another one for a region."""
     missing = sorted(g for g in geos if g not in payouts)
     if missing:
         raise ValueError(f"в карточке оффера нет выплаты по гео {missing}")
     low = min(geos, key=lambda g: payouts[g])
-    return round(SHARE * payouts[low], 4), low
+    return round(share * payouts[low], 4), low
 
 
 def state_of(row):
@@ -98,9 +104,11 @@ def patch_campaign(cid, name, cpa):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="CPA bid = 30% of the cabinet payout per geo")
+    ap = argparse.ArgumentParser(description="CPA bid = a share (30% unless told) of the cabinet payout per geo")
     ap.add_argument("cids", nargs="+", type=int)
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--share", type=float, default=SHARE,
+                    help="share of the lowest payout, default 0.30; the 13.10 regions: CIS 0.6, PL 0.5, LATAM 0.4")
     a = ap.parse_args()
     rows = v2_campaigns(FIELDS)
     failed = 0
@@ -114,7 +122,7 @@ def main():
             geos = geos_of(row)
             offer = offer_of(cid)
             pay = by_country(load(offer)["payouts"])
-            cpa, low = bid(geos, pay)
+            cpa, low = bid(geos, pay, a.share)
         except (ValueError, OSError) as e:
             print(f"{cid} {row['name']}: пропуск, {e}")
             failed += 1

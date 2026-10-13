@@ -106,6 +106,21 @@ sibling mobile campaign. Their OS targeting was the desktop ids 8, 9, 10; now it
 41 in total, so they serve mobile and desktop. The names were changed to match. Bids and conversion cost were not
 touched, and all nine of their teasers were already active.
 
+**13.10, bids by region (owner).** «Нужно на cis поднять ставку в 2 раза», «На польшу поставить половину от выплаты
+ставку», «Латам тоже на 10% от выплаты подними ставку». The last one is read as +10 points of the payout on top of
+the 30% (a bid cannot be "raised" by setting 10%); say if 0.158 (10% more of the old bid) was meant. Each PATCH was
+read back (204, bid and conversion cost equal). The guard's threshold follows (2 x the new cost); a higher cost only
+loosens it, so the statistics window stays at 12.10.
+
+| region | campaigns | share of the lowest payout | bid before -> now |
+|---|---|---|---|
+| CIS (x2) | 12502231, 12502232, 12510730 | 0.6 of AZ $0.20 | 0.06 -> 0.12 |
+| Poland | 12502227, 12502228 | 0.5 of PL $2.00 | 0.60 -> 1.00 |
+| LATAM | 12502229, 12502230, 12510729, 12510766 | 0.4 of PA $0.48 | 0.144 -> 0.192 |
+
+The KZ, LT, LV and EE copies (12510622, 12510623, 12510625, 12510626) were not part of «cis» and keep their 30%.
+`cpa_share.py --share 0.6|0.5|0.4` reproduces the new numbers; without `--share` it puts a campaign back to 30%.
+
 ```bash
 node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/cpa_share.py 12502227 ...           # plan, changes nothing
 node ~/.claude/skills/secrets/vault.mjs exec mgid -- python3 mgid/cpa_share.py --apply 12502227 ...   # PATCH, then read back

@@ -21,6 +21,12 @@ class Bid(unittest.TestCase):
         self.assertEqual(bid(["LV"], {"LV": 0.32}), (0.096, "LV"))
         self.assertEqual(bid(["KZ"], {"KZ": 0.56}), (0.168, "KZ"))
 
+    def test_share_can_be_changed_per_region(self):
+        self.assertEqual(bid(["PL"], {"PL": 2.0}, 0.5), (1.0, "PL"))                          # 13.10: half of the payout
+        pay = {"CR": 0.8, "DO": 0.62, "GT": 0.7, "PA": 0.48}
+        self.assertEqual(bid(["CR", "DO", "GT", "PA"], pay, 0.4), (0.192, "PA"))             # 30% + 10 points
+        self.assertEqual(bid(["AZ", "KZ"], {"AZ": 0.2, "KZ": 0.56}, 0.6), (0.12, "AZ"))      # CIS doubled
+
     def test_geo_without_a_payout_is_refused(self):
         with self.assertRaises(ValueError):
             bid(["KZ", "PL"], {"KZ": 0.56})
