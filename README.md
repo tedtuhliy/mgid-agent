@@ -7,9 +7,14 @@ MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard 
 ## State on the evening of 13.10: the account is blocked by MGID moderators, the old dating campaigns are paused
 
 **Nothing has run on 816929 (v2 939031) since about 18:30 MSK.** All 240 teasers of the account are `blocked` (83,
-`blocked_by: moderator`, no reason given) or `rejected` (157); none is active. The blocked ones include the old paused
-spy campaigns of other verticals (AL, IT), so this is an action on the account, not on one campaign. It was not the bid
-changes of the same afternoon: campaigns nobody touched (CIS, KZ, Baltics) stopped in the same hour. MGID hours are MSK.
+`blocked_by: moderator`, no reason given) or `rejected` (157); none is active. Of the 83 blocked, 43 are the dating
+teasers (taken down about 18:30 MSK) and 40 are the old nutra "spy" teasers (AL, IT) of campaigns that have had no
+delivery since before 01.09, so those were blocked at some earlier, unknown time. What is proven: every teaser that was
+serving on 13.10 went down (MindHue rejected at about 15:15, dating blocked at about 18:30). That it is an action on
+the whole account is NOT proven; a bulk block of everything linking through the cpamatica tracker `go.cm-trk6.com`
+(all 43 dating teasers do) fits as well. It was not the bid changes of the same afternoon: campaigns nobody touched
+(CIS, KZ, Baltics) stopped in the same hour. MGID hours are MSK. (The first version of this note said "account-wide" on
+the strength of the nutra blocks; the report-by-day check corrected it.)
 
 - **Tinely girls (dating).** 12 campaigns with `blocked` teasers; the two LATAM copies 12510729 and 12510766 are
   `rejected` "Explicit content". The moderator's screenshots show the mobile lander of Tinely LATAM (offer 8326): a
@@ -32,17 +37,18 @@ changes of the same afternoon: campaigns nobody touched (CIS, KZ, Baltics) stopp
   does on a click is what MGID refuses: its own `survey.js` fires a tab-under on EVERY answer (the current tab goes to the
   offer, a new tab reopens the quiz on the next step); `reverse.js` takes over the back button after the first click
   (`pushState` + `popstate` -> redirect, `back_count` 10); `autoexit.js` redirects the tab after 90 s without interaction;
-  the final "REVEAL" is a popunder plus a redirect; `pushScript.js` loads the ProPush push SDK (`kmnts.com`) and opens a
-  tab or redirects on permission. The moderator texts match: "Clicking the link to continue the survey opens an
+  the final "REVEAL" is a popunder plus a redirect (`pushScript.js`, the ProPush push SDK, is included too, but the page
+  config carries no push zone, so it looks inactive here). The moderator texts match: "Clicking the link to continue the survey opens an
   additional link", "too many redirects", "Suspected cloaking" (68 of 95). Fixing it means changing the page for
   everyone (no tab-under, back or auto exit; a visible link to the offer), which removes the monetization it was built
   for. It must not be done by showing moderators another page.
 - **Dr.Cash nutra.** The owner asked whether a new campaign on the Dr.Cash nutra can be launched. The keychain has no
   Dr.Cash or AdCombo entry (vault refreshed over git, 92 services), and the stream link and creatives of that bundle are
   not known here. The old nutra copies (AL, IT, BA "spy" campaigns, AdCombo links on `uewhbgfvds.cc` and `axdsz.pro`)
-  ran on this account with real volume until today (IT weight loss: 166k impressions, 3661 clicks, $58.58 on one
-  teaser) and are now `blocked` by the moderator like everything else. Nothing new was submitted: while the account is
-  blocked a test teaser can only add one more rejection record.
+  ran on this account with real volume (IT weight loss: 166k impressions, 3661 clicks, $58.58 on one teaser; no delivery
+  since before 01.09) and their teasers are `blocked` by a moderator, at an unknown earlier time. Nothing new was
+  submitted: whether a clean new teaser passes is not known, and one more rejection on this account is a cost; a test
+  needs the Dr.Cash stream link and creatives, and a link that does not go through `go.cm-trk6.com`.
 
 **Owner, 13.10 evening: «Можешь стопнуть все старые объявления».** The 14 active Tinely girls campaigns were paused with
 the v1 flag (`mgid_api.pause`), each read back `paused/clientManuallyPaused`: 12502227, 12502228, 12502229, 12502230,
