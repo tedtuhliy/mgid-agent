@@ -180,29 +180,30 @@ mobile, targetCpa on goal 1280981 (no dedup), language of the geo, type `product
 teasers each: always the jar-of-water herbs article and a second one that rotates (bread, fruit and vegetables, houseplants) from geo
 to geo so that the first data also says which article wins.
 
-| geo | campaign | targetCpa now (start) | teasers |
+| geo | campaign | targetCpa now (before, start) | teasers |
 |---|---|---|---|
-| BG | 12512632 | 0.03 (0.01) | 28160036, 28160037 |
-| PL | 12512633 | 0.05 (0.02) | 28160038, 28160039 |
+| BG | 12512632 | 0.06 (0.03, 0.01) | 28160036, 28160037 |
+| PL | 12512633 | 0.10 (0.05, 0.02) | 28160038, 28160039 |
 | CZ | 12512634 | 0.05 (0.02) | 28160040, 28160041 |
 | PT | 12512635 | 0.02 | 28160042, 28160043 |
 | IT | 12512636 | 0.02 | 28160044, 28160045 |
 | ES | 12512638 | 0.02 | 28160046, 28160047 |
-| DE | 12512639 | 0.10 (0.04) | 28160048, 28160050 |
+| DE | 12512639 | 0.20 (0.10, 0.04) | 28160048, 28160050 |
 | CH | 12512640 | 0.05 | 28160051, 28160066 |
-| AT | 12512641 | 0.10 (0.04) | 28160068, 28160069 |
+| AT | 12512641 | 0.20 (0.10, 0.04) | 28160068, 28160069 |
 | RS | 12512643 | 0.01 | 28160070, 28160071 |
-| RO | 12512647 | 0.03 (0.01) | 28160088, 28160089 |
-| HU | 12512648 | 0.04 (0.015) | 28160090, 28160091 |
-| SK | 12512649 | 0.03 (0.01) | 28160092, 28160093 |
-| SI | 12512650 | 0.03 (0.01) | 28160094, 28160095 |
+| RO | 12512647 | 0.06 (0.03, 0.01) | 28160088, 28160089 |
+| HU | 12512648 | 0.08 (0.04, 0.015) | 28160090, 28160091 |
+| SK | 12512649 | 0.06 (0.03, 0.01) | 28160092, 28160093 |
+| SI | 12512650 | 0.06 (0.03, 0.01) | 28160094, 28160095 |
 | KZ (`/blog/ru/`, 14.10 night) | 12512714 | 0.01 | 28161033, 28161034, 28161035, 28161036 |
 
 The bids were a first guess, not a measurement: the cheap geos started at the one cent of the Kazakhstan test, the geos with a
 higher floor price higher. **14.10 ~01:25 MSK**: after 80 minutes of approved teasers and no impressions at all in BG RO SK SI HU PL
 CZ DE AT the target was raised (`geozo_geos.py --set-cpa BG=0.03,...`, PATCH of `bidding` plus the new value in the campaign name);
 PT ES IT CH delivered at the starting values (a few dozen impressions an hour at MGID's $0.0001 click) and keep them, RS waits for its
-moderation. The values live in `CPA` in `geozo_geos.py`, the starting ones in `START_CPA`. Wallet at launch $12.90, 16 campaigns with a
+moderation. **02:33 MSK, second step:** a full hour after the first raise BG PL RO SK SI HU DE AT still had no impression (only CZ
+had started, 13 impressions in the first half hour and none since), so these eight were doubled once more (table). The values live in `CPA` in `geozo_geos.py`, the starting ones in `START_CPA`. Wallet at launch $12.90, 16 campaigns with a
 $3 cap each: the wallet runs out first.
 
 **Report.** `geozo_report.py` is one row per campaign (MGID impressions / clicks / spend / conversions, page views and distinct

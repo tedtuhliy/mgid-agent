@@ -47,9 +47,11 @@ IMAGE = SITE + "/blog/c/{slug}.jpg"
 ORDER = ["BG", "PL", "RO", "CZ", "PT", "IT", "ES", "DE", "CH", "AT", "HU", "SK", "SI", "RS",       # the owner's order
          "KZ"]      # 14.10 night: Kazakhstan moves to the Russian version of the blog (/blog/ru/) with the e-book
 # 14.10 ~01:25 MSK: after 80 minutes of approved teasers and no impressions in BG RO SK SI HU PL CZ DE AT the target was raised
-# (--set-cpa); PT ES IT CH already delivered at the starting values and keep them. The names of the campaigns carry the value.
-CPA = {"BG": 0.03, "RO": 0.03, "RS": 0.01, "SK": 0.03, "SI": 0.03, "HU": 0.04,
-       "PL": 0.05, "CZ": 0.05, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.10, "AT": 0.10, "CH": 0.05, "KZ": 0.01}
+# (--set-cpa); PT ES IT CH already delivered at the starting values and keep them. 02:33 MSK: a full hour later BG PL RO SK SI HU DE
+# AT still had no impression (CZ had started after the first raise), so these eight were doubled (second step; the first is START_CPA
+# -> the values of 01:25 MSK). The names of the campaigns carry the value.
+CPA = {"BG": 0.06, "RO": 0.06, "RS": 0.01, "SK": 0.06, "SI": 0.06, "HU": 0.08,
+       "PL": 0.10, "CZ": 0.05, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.20, "AT": 0.20, "CH": 0.05, "KZ": 0.01}
 START_CPA = {"BG": 0.01, "RO": 0.01, "RS": 0.01, "SK": 0.01, "SI": 0.01, "HU": 0.015,
              "PL": 0.02, "CZ": 0.02, "PT": 0.02, "ES": 0.02, "IT": 0.02, "DE": 0.04, "AT": 0.04, "CH": 0.05, "KZ": 0.01}
 SECOND = ["bread-storage", "fruit-and-vegetables", "houseplants-autumn"]           # the rotating second creative
