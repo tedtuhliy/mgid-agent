@@ -262,8 +262,9 @@ depend on the answer: a real, free action of the visitor that is not a click on 
   readers in Kazakhstan, 34-page book) and Kazakhstan has a campaign of its own, **12512714** «Arcadia KZ blog content mobile CPA 0.01»
   (`geozo_geos.py` geo `KZ`, name tag «blog» so it is never mixed up with the two older ones; four teasers 28161033-28161036 with the
   Russian headlines of the herbs, bread, fruit-and-vegetables and houseplants articles; targetCpa $0.01 on the same goal; created
-  paused, started with auto-launch after approval). The two older Kazakhstan campaigns (12512609 on `/dom/`, 12512618 on `/dom2/`) are
-  paused once the new one has been approved and delivers; their pages stay on the server.
+  paused, started with auto-launch after approval). MGID approved all four teasers within about ten minutes of the start (22:54 UTC = 01:54 MSK, 14.10), and then the
+  two older Kazakhstan campaigns (12512609 on `/dom/`, 12512618 on `/dom2/`) were paused by hand (`pause()` of `mgid_api.py`); their
+  pages stay on the server and the old teasers still open them.
 - **Verified live (14.10):** PDF with attachment headers, 34 pages in all 14 routes; fake click id gives mirror line `up=200`, repeats
   `st=429`; no click id gives 204 and no call; a made-up language gives 404 and no line; offer card 2x per article; the Russian pages and
   the language switcher. `geozo_report.py` shows `скач` (downloads with a click id) and `ebook200` (postbacks answered 200) per campaign;
