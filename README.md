@@ -56,6 +56,47 @@ German, Danish, Norwegian), all 45 teasers on moderation. Nothing runs until the
   (UK, SE, NL, NO at $5; DE, CH, AT, US, IT, ES, FR at $4; others $2), which need a campaign and a title per geo; the
   adult-recommended Tinely offers (AR, MX, BR, IL, UK male-only) and the Gentlove offers.
 
+### Moderation of the first batch, and the cpamatica flow behind the new teasers (13.10)
+
+**Result.** Of the 15 campaigns none passed: all 42 teasers of 14 campaigns were rejected, "Explicit content", with
+screenshot links; Date4you US (12511745) showed `campaignBlocked`. The screenshots (three of six opened) are not our
+photos but pages after the click: a nude-photo warning ("Tits Tok"), "PICK THE HOTTEST SEX POSE", a "START SEXTING" chat.
+
+**Cause.** Owner, 13.10: «Да они скорей всего зашли на трафикбек ссылки». Checked with `cpamatica.mjs redirect` from the
+server pool (exit DE, which cpamatica geolocates as UK): the direct link of Tinely ES (9960) and of Tinely CIS (8394), which
+did pass moderation on 30.09, goes `aff_c?offer_id=<n>` -> `aff_c?offer_id=8978&...&last=3` -> flirtoooy.com/direct_short.
+So a click that cpamatica cannot hand to the offer (outside its geo or device, a datacenter address, a capped or paused
+offer) goes to the account's trafficback, **Flirtooy WW (8978)**, whose pages are explicit although the card says
+"(Mainstream)". Even the Mainstream Dating Smartlink WW (6011) opened directly went there from that address.
+
+**What cpamatica allows.** A flow can have its own last offer (the trafficback), but it must be an OFFER from the
+catalogue: the cabinet FAQ says "Select the last offer (trafficback) ... We recommend using general smartlinks". A URL such as
+google.com cannot be set; that would need our own redirect by country on Inferno (CF-IPCountry), not built.
+
+**Flow `0-Olte`** (owner: «Создай flow», then «Те что откровенны сами по себе мы не делай»). Created with
+`cpamatica.mjs post flow '{"data":{"lastOffer":6011,"lastOfferPages":[0],"offers":null,"comment":"..."}}'`, offers added
+with `cpamatica.mjs flowadd 0-Olte plan.json` (read back in `mgid/data/flow-0-Olte.json`): 26 entries, one per offer and
+geo, for mobile (`device_type_mobile, iOs, Android`) and for desktop/tablet, Tinely PL (9962) added for Poland, and as last
+offer the Mainstream Dating Smartlink WW (6011) in place of the adult smartlink. **Flirtooy (8978) is not in it**: its
+landing pages are explicit themselves, so its three campaigns (12511761 AU, 12511763 CA, 12511764 NZ) stay as they were,
+paused. The three US offers (5368, 9047, 9014) rotate on US traffic.
+
+```
+https://go.cm-trk6.com/aff_f?h=0-Olte&aff_sub5=mgid&aff_sub={campaign_id}&aff_sub3={widget_id}
+```
+
+Tests (`redirect` from the pool, mobile and desktop): flow -> iDates UK (5655) -> bl.idates.com, with `click_id`,
+`source`, `aff_sub`, `aff_sub3` handed on to the offer link, so MGID's UTM and the postback pipeline still work. The flow
+link answered 400 for the first few minutes after creation, then worked.
+
+**Not covered.** The last offer 6011 accepts 220 countries but **not UK, CA, AU, NZ, IE, PL, MX, ZA**. UK, IE, ZA and PL
+are covered by the flow's own entries, CA, AU, NZ and MX are not: a click from there (or on an offer that is capped or
+paused) can still reach the account trafficback, i.e. Flirtooy. The only complete cure is our own country gate in front.
+
+**Teasers.** `mgid/flow_teasers.py --apply` (12:42 MSK): 3 new teasers per campaign (same photos and titles) with the flow
+link in the 12 campaigns except Flirtooy, all `onModeration`, the 36 rejected ones they replace deleted (including the
+three `campaignBlocked` of Date4you US). `data/flow-teasers.json`. Campaigns stay paused.
+
 ## Dating campaigns on CPA = 30% of the payout per geo (12.10)
 
 Owner, 12.10: «Точней поставь 10% от выплат на гео ставку cpatune» (replaces the flat 5 cents asked earlier that day).

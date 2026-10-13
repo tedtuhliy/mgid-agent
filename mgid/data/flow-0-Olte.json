@@ -1,0 +1,337 @@
+{
+ "flow": "0-Olte",
+ "link": "https://go.cm-trk6.com/aff_f?h=0-Olte&aff_sub5=mgid&aff_sub={campaign_id}&aff_sub3={widget_id}",
+ "comment": "MGID dating test: own trafficback, no adult",
+ "last_offer": {
+  "id": 6011,
+  "name": "Mainstream Dating Smartlink - Desktop/Mobile [WW] SOI"
+ },
+ "entries": [
+  {
+   "offer": 9960,
+   "name": "Tinely - Mobile/Desktop [ES] SOI 18+ (Exclusive)",
+   "countries": [
+    "ES"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 8331,
+   "name": "Tinely - Mobile/Desktop [ZA] SOI 25+ (Exclusive)",
+   "countries": [
+    "ZA"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 8330,
+   "name": "Tinely - Mobile/Desktop [HT] SOI 25+ (Exclusive)",
+   "countries": [
+    "HT"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 8329,
+   "name": "Tinely - Mobile/Desktop [CO] SOI 25+ (Exclusive)",
+   "countries": [
+    "CO"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 5368,
+   "name": "Date4you - Desktop/Mobile [US] SOI (Mainstream)",
+   "countries": [
+    "US"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 5655,
+   "name": "iDates - Desktop/Mobile [UK] SOI (Mainstream)",
+   "countries": [
+    "UK"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 5656,
+   "name": "iDates - Desktop/Mobile [DE] SOI (Mainstream)",
+   "countries": [
+    "DE"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9047,
+   "name": "Singles-Meets - Desktop/Mobile [US] SOI (Mainstream)",
+   "countries": [
+    "US"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9014,
+   "name": "Singles-meets - Desktop/Mobile [US] SOI",
+   "countries": [
+    "US"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9018,
+   "name": "Singles-meets- Desktop/Mobile [DK] SOI",
+   "countries": [
+    "DK"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 10233,
+   "name": "SingleMeets - Desktop/Mobile [NO] SOI",
+   "countries": [
+    "NO"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9045,
+   "name": "Singles-Meets - Desktop/Mobile [Multi-Geo] SOI (Mainstream)",
+   "countries": [
+    "IE"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9960,
+   "name": "Tinely - Mobile/Desktop [ES] SOI 18+ (Exclusive)",
+   "countries": [
+    "ES"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 8331,
+   "name": "Tinely - Mobile/Desktop [ZA] SOI 25+ (Exclusive)",
+   "countries": [
+    "ZA"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 8330,
+   "name": "Tinely - Mobile/Desktop [HT] SOI 25+ (Exclusive)",
+   "countries": [
+    "HT"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 8329,
+   "name": "Tinely - Mobile/Desktop [CO] SOI 25+ (Exclusive)",
+   "countries": [
+    "CO"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 5368,
+   "name": "Date4you - Desktop/Mobile [US] SOI (Mainstream)",
+   "countries": [
+    "US"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 5655,
+   "name": "iDates - Desktop/Mobile [UK] SOI (Mainstream)",
+   "countries": [
+    "UK"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 5656,
+   "name": "iDates - Desktop/Mobile [DE] SOI (Mainstream)",
+   "countries": [
+    "DE"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9047,
+   "name": "Singles-Meets - Desktop/Mobile [US] SOI (Mainstream)",
+   "countries": [
+    "US"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9014,
+   "name": "Singles-meets - Desktop/Mobile [US] SOI",
+   "countries": [
+    "US"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9018,
+   "name": "Singles-meets- Desktop/Mobile [DK] SOI",
+   "countries": [
+    "DK"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 10233,
+   "name": "SingleMeets - Desktop/Mobile [NO] SOI",
+   "countries": [
+    "NO"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9045,
+   "name": "Singles-Meets - Desktop/Mobile [Multi-Geo] SOI (Mainstream)",
+   "countries": [
+    "IE"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9962,
+   "name": "Tinely - Mobile/Desktop [PL] SOI 18+ (Exclusive)",
+   "countries": [
+    "PL"
+   ],
+   "devices": [
+    "Tablet",
+    "Desktop"
+   ],
+   "live": 1
+  },
+  {
+   "offer": 9962,
+   "name": "Tinely - Mobile/Desktop [PL] SOI 18+ (Exclusive)",
+   "countries": [
+    "PL"
+   ],
+   "devices": [
+    "Mobile",
+    "iOs",
+    "Android"
+   ],
+   "live": 1
+  }
+ ],
+ "note": "read back from cpamatica on 13.10 after the two flowadd runs; Flirtooy WW (8978) is not in it on purpose"
+}
