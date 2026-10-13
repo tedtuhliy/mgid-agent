@@ -62,6 +62,52 @@ needed: each offer has several landers (`pages` in the offer card, e.g. Tinely L
 first step is to look at them and pick the ones without nudity or the "nude photos" gate. No cloaking: every visitor,
 moderators included, gets the same page.
 
+## Content-arbitrage test: MGID (Kazakhstan) -> arcadiablog.com/dom -> Geozo blocks (13.10 evening)
+
+Owner: «Давай попробуем запустить на cpa tune с ценой в 1 цент контент арбитраж, у нас апрувнули на geozo паблишерский
+сайт, цель за лид сделать клик на самих блоках geozo», then «Запусти на этом сайте версию под Казахстан для теста, статьи
+обычные под аудитории 40+, блоки органично вписать, трафик на мгид со ставкой в 1 цент cpa tune. Нужно будет слать
+конверсию на каждый учтённый платный клик на geozo».
+
+```
+MGID teaser (KZ, Russian, mobile, targetCpa $0.01)
+  -> https://arcadiablog.com/dom/[article].html?click_id={click_id}&source=mgid_{campaign_id}_{widget_id}
+     article for 40+ with 4 labelled Geozo slots (none above the title)
+  -> real click on an ad link inside a slot -> GET /dom/lead?c=<click_id>  (same origin)
+  -> nginx relay -> https://a.mgid.com/postback?c=<click_id>&e=geozoclick&r=0.01   (goal 1280981, no dedup)
+```
+
+- **Site.** The Geozo publisher site arcadiablog.com (id 25953) is Confirmed (status 3). New folder `/var/www/arcadiablog.com/dom/`
+  on Inferno, built by `mgid/geozo_site/build.py` (two articles that link to each other: food storage, house plants in
+  autumn; the first is the TikTok version's text, the second is new), deployed by `geozo_site/deploy.py static`. The
+  TikTok versions `/sovety/` and `/sfaturi/` are untouched. No TikTok pixel, no beacon, no redirect, no pop-up and no back-button tricks on
+  `/dom/` (the build test fails if the script contains any), unlike the omnitr.com quiz that MGID rejected.
+- **Geozo blocks.** Two own blocks so the statistics of this traffic are apart from TikTok's: `dom-header` (id 1283936,
+  uuid a4ecaca6-cb0b-4e44-9323-355326c78357) and `dom-feed` (id 1283937, uuid eb58d5e5-77a6-4b0b-9a4c-b5233e12418b). Template
+  16003 (image on top, 16:9, no button): the first version, 16006 "Post", draws a fake clock chip and fake like/comment/share
+  counters on every ad, and 16001 (image left) breaks into one-letter lines in a narrow column. Bodies of all nine format-16
+  templates were captured with the local panel mock (see the Tedbolt branch claude/dr-cash-automation-20xngo, ops/geozo/webmaster);
+  the one in use is `geozo_site/geozo_blocks/block_post_16003_16x9_nobtn.json`, applied with `webmaster.py put-block` (the image-left body is kept next to it). Geozo's render cache keeps serving
+  the previous template for a while after a PUT (observed: mixed old/new slots for 20+ minutes).
+- **Conversion = a real click on an ad link in a slot** (`dom.js`): trusted event, at least 0.7 s after load, at least 1.2 s
+  between signals, at most 6 per visit, only with a valid click id (MGID's are 32 hex characters). It is the closest thing
+  to «each counted paid click» that exists: Geozo's publisher API has no per-click callback, only aggregates
+  (`GET /v1/webmaster/stats`, needs `filters[date_from]`, `filters[date_to]`, `groups[]`, `order_by[0][column]`,
+  `order_by[0][direction]`). Set our count (relay log) against Geozo's clicks to see how many clicks it did not count.
+- **Relay.** nginx location `= /dom/lead` in `/etc/nginx/sites-available/arcadiablog.com` (backup in /root/backups, `nginx -t` before
+  reload), log `/var/log/nginx/arcadiablog.dom.log` with MGID's HTTP status (`up=`). MGID answers 200 and a 1x1 GIF to any click
+  id, real or not, so only the report of the campaign shows whether a conversion was counted.
+- **MGID.** Postback target `Geozo block click` (id 1280981, eventName geozoclick), created with `POST /v2/ads/account/939031/targets`;
+  not the dating target 1274200, so mgid-guard does not judge this campaign. Campaign created by `mgid/geozo_campaign.py`.
+  The real cap of the test is `mgid-spend-stop` (pauses any active campaign at $3 spend); MGID's own daily minimum here is $20.
+- **Report.** `geozo_report.py` prints MGID by hour (spend, clicks, conversions), page views and signals from the logs, and
+  Geozo's block statistics.
+- **Found on the way.** On the TikTok pages `/sovety/` and (same code) `/sfaturi/` the «Реклама» label never shows: the
+  loader replaces the block container, and `template/site.js` keeps a reference to the old one, so the slot is never marked
+  filled. `dom.js` looks the container up again on each check. The TikTok versions were not changed.
+- **Risks to read before scaling.** The site was approved for «TikTok Ads (paid), audience 45+, GEO RO/KZ»; MGID is another source.
+  OpenRouter's balance is empty (images need at least $1), so the second article uses photos already on the site.
+
 ## Spend stop-loss on Inferno (11.10)
 
 Owner: «настрой на инферно бота который стопнет кампании после спенда в 3 бакса». `mgid/spend_stop.py` runs on
