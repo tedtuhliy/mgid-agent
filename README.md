@@ -137,6 +137,12 @@ ceiling). So:
   teasers in about seven (all `active` at 20:29 UTC). `/dom/` stays byte for byte what was approved (`build.py` reproduces it;
   `test_geozo_site.py` checks that the dense blocks never leak into it).
 - Two layouts side by side is also the A/B test: same teasers, same bid, same geo.
+- **First real chain (14.10 00:49 MSK).** One visitor from Kazakhstan (nginx `cc=KZ`, Android 10 Chrome, referrer clck.mgid.com) came
+  to the dense page and clicked ad blocks four times (two within the first 20 s, two more 13 minutes later in the same open tab);
+  the relay logged four signals with `up=200` and MGID's report showed two conversions of the goal at the time (the report lags).
+  MGID's price of that click was $0.0001, so the one-cent target is far above what Kazakhstan costs; the limit is volume
+  (about 500 impressions an hour), not price. One visitor proves the chain, not the rate. The other visits in the log are MGID's
+  moderators (referrer clck.mgid.com/ghits/<teaser>, Android 8 / Android 16 WebView, IPs outside Kazakhstan).
 
 ### Multilingual site /blog/<lang>/ and 14 geo campaigns (13.10 night)
 
@@ -196,8 +202,11 @@ floor price higher. Set them by what delivers. Wallet at launch $12.90, 16 campa
 
 **Report.** `geozo_report.py` is one row per campaign (MGID impressions / clicks / spend / conversions, page views and distinct
 32-character click ids from the nginx log by the campaign id in `source=mgid_<campaign>_`, relay signals and MGID's answer to
-them). Geozo's `/stats` has answered 429 every time so far, so Geozo clicks and revenue are still unread: until they are, nobody
-knows what a block click earns in these geos. NodeMaven cannot be used from this container to test the Geozo fill per geo (the agent
+them). Geozo's `/stats` has answered 429 ("Whoops, looks like something went wrong") to every valid query so far, so Geozo clicks and
+revenue are still unread: until they are, nobody knows what a block click earns in these geos. Probed 13.10: the valid `groups[]`
+values are `date`, `site_id`, `block_id`, `country_code` (they pass validation and then fail with 429; `day`, `country`, `geo`,
+`block`, `site`, `hour` get a 422 `validation.in`), with and without `filters[site_id]`, for one day and for a week. The panel
+of the Geozo cabinet shows the numbers; its login is not in the vault. NodeMaven cannot be used from this container to test the Geozo fill per geo (the agent
 proxy swallows the nested CONNECT), the first live traffic is the test.
 
 **Open.** Whether MGID approves all 28 teasers; whether Geozo fills blocks in each geo and what it pays (LuckyFeed income is another
