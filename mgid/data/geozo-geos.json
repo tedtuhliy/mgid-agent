@@ -1,8 +1,8 @@
 {
  "BG": {
   "id": 12512632,
-  "name": "Arcadia BG content mobile CPA 0.06",
-  "cpa": 0.06,
+  "name": "Arcadia BG content mobile CPA 0.12",
+  "cpa": 0.12,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -20,8 +20,8 @@
  },
  "PL": {
   "id": 12512633,
-  "name": "Arcadia PL content mobile CPA 0.1",
-  "cpa": 0.1,
+  "name": "Arcadia PL content mobile CPA 0.2",
+  "cpa": 0.2,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -39,8 +39,8 @@
  },
  "CZ": {
   "id": 12512634,
-  "name": "Arcadia CZ content mobile CPA 0.05",
-  "cpa": 0.05,
+  "name": "Arcadia CZ content mobile CPA 0.1",
+  "cpa": 0.1,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -58,8 +58,8 @@
  },
  "PT": {
   "id": 12512635,
-  "name": "Arcadia PT content mobile CPA 0.02",
-  "cpa": 0.02,
+  "name": "Arcadia PT content mobile CPA 0.04",
+  "cpa": 0.04,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -77,8 +77,8 @@
  },
  "IT": {
   "id": 12512636,
-  "name": "Arcadia IT content mobile CPA 0.02",
-  "cpa": 0.02,
+  "name": "Arcadia IT content mobile CPA 0.04",
+  "cpa": 0.04,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -96,8 +96,8 @@
  },
  "ES": {
   "id": 12512638,
-  "name": "Arcadia ES content mobile CPA 0.02",
-  "cpa": 0.02,
+  "name": "Arcadia ES content mobile CPA 0.04",
+  "cpa": 0.04,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -115,8 +115,8 @@
  },
  "DE": {
   "id": 12512639,
-  "name": "Arcadia DE content mobile CPA 0.2",
-  "cpa": 0.2,
+  "name": "Arcadia DE content mobile CPA 0.4",
+  "cpa": 0.4,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -134,8 +134,8 @@
  },
  "CH": {
   "id": 12512640,
-  "name": "Arcadia CH content mobile CPA 0.05",
-  "cpa": 0.05,
+  "name": "Arcadia CH content mobile CPA 0.1",
+  "cpa": 0.1,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -153,8 +153,8 @@
  },
  "AT": {
   "id": 12512641,
-  "name": "Arcadia AT content mobile CPA 0.2",
-  "cpa": 0.2,
+  "name": "Arcadia AT content mobile CPA 0.4",
+  "cpa": 0.4,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -191,8 +191,8 @@
  },
  "RO": {
   "id": 12512647,
-  "name": "Arcadia RO content mobile CPA 0.06",
-  "cpa": 0.06,
+  "name": "Arcadia RO content mobile CPA 0.12",
+  "cpa": 0.12,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -210,8 +210,8 @@
  },
  "HU": {
   "id": 12512648,
-  "name": "Arcadia HU content mobile CPA 0.08",
-  "cpa": 0.08,
+  "name": "Arcadia HU content mobile CPA 0.16",
+  "cpa": 0.16,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -229,8 +229,8 @@
  },
  "SK": {
   "id": 12512649,
-  "name": "Arcadia SK content mobile CPA 0.06",
-  "cpa": 0.06,
+  "name": "Arcadia SK content mobile CPA 0.12",
+  "cpa": 0.12,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
@@ -248,8 +248,8 @@
  },
  "SI": {
   "id": 12512650,
-  "name": "Arcadia SI content mobile CPA 0.06",
-  "cpa": 0.06,
+  "name": "Arcadia SI content mobile CPA 0.12",
+  "cpa": 0.12,
   "teasers": [
    {
     "slug": "herbs-in-a-jar",
