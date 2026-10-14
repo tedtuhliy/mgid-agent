@@ -4,6 +4,35 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## State on 14.10, ~12:35 MSK: MGID has blocked the whole account (API 401), everything on MGID stopped
+
+**What MGID says.** v1: `401 "Your account is blocked due to suspicious activity. Please contact your account manager for details. Your
+account manager contact has been sent to your email."`; v2: `401 AUTHENTICATION_FAILED "Identity is under godmodeBlock"`. Every call
+with the token of 816929 / 939031 is refused (clients, campaigns, targets, teasers). The old account 816921 (its own token) still
+answers v1 (balance $-0.04); its token gets `403` on 816929, so it is the identity of 816929 that is blocked.
+
+**When.** The last call that worked was the dry run of `geozo_step.py` at 08:55 UTC, the first refusal came at 10:00:41 UTC (round 1
+of the bid ladder). The site log shows the traffic itself: MGID visitors with a click id arrived about three per ten minutes all
+morning, the last at 09:33:44 UTC (12:33 MSK), then nothing until 10:02 UTC. So serving stopped at about 09:35 UTC.
+
+**State at the last read (08:55 UTC, MSK day 14.10).** 15 active campaigns (14 geos + KZ blog), 13171 impressions, 105 clicks, $0.0166
+spent, 50 conversions in MGID's report (47 of them in KZ blog), 51 relay signals `up=200`, no e-book download; wallet $12.88.
+
+**What was not done.** No new account, no other way around the block: that would be evasion and MGID links accounts. The ladder was
+not re-armed (`geozo_step.py` stops with the 401; rounds 2-6 were not scheduled). The pages, the relay and the e-book stay on the
+server; Geozo is not involved.
+
+**Why: not known.** MGID gives no reason. What could look suspicious, none of it proven: (1) the account was already sanctioned the day
+before (13.10 ~18:30 MSK all dating teasers blocked by moderators, MindHue rejected for «suspected cloaking», see below) and a new
+site with its own campaigns went in the same night; (2) 17 campaigns and ~45 teasers created within twelve hours and three rounds of
+bid changes; (3) conversions that are clicks on third-party ad blocks, about 60 % of all MGID clicks in KZ blog, which is far above
+what a goal normally converts at; (4) a handful of test postbacks with made-up click ids (`TESTRELAY0001XYZ`, `0000...0001-4`, 13-14.10);
+(5) the pages are monetized by third-party widgets, the setup the owner feared MGID's CPA-tune rules forbid.
+
+**Next.** The owner writes to the account manager (the mail with the contact went to the account's e-mail): draft in
+`mgid/MGID_SUPPORT_DRAFT.md`, honest, not sent. Until MGID answers nothing can be read or changed on the account. Do not open another
+account for the same site and traffic.
+
 ## State on the evening of 13.10: the account is blocked by MGID moderators, the old dating campaigns are paused
 
 **Nothing has run on 816929 (v2 939031) since about 18:30 MSK.** All 240 teasers of the account are `blocked` (83,
