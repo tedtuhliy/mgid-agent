@@ -60,7 +60,11 @@ def money(x):
 
 
 def ssh(cmd):
+    """Output of a command on the server. A dead tunnel raises (the userspace tailscaled of the session dies now and then), so
+    that «no log» is never mistaken for «no visits»; grep's own exit code 1 (no match) is fine."""
     r = subprocess.run([TS_BIN, "--socket", TS_SOCK, "ssh", HOST, cmd], capture_output=True, text=True, timeout=180)
+    if r.returncode > 1 or "Failed to connect" in r.stderr or "tailscaled" in r.stderr:
+        raise RuntimeError(f"ssh к серверу не удался (код {r.returncode}): {r.stderr.strip()[:160]}")
     return r.stdout
 
 
@@ -114,9 +118,9 @@ def site_rows(day):
     utc_days = sorted({d0.astimezone(timezone.utc).date(), (d1 - timedelta(seconds=1)).astimezone(timezone.utc).date()})
     acc, rel = "", ""
     for u in utc_days:
-        acc += ssh(f"grep -a '{u.strftime('%d/%b/%Y')}' /var/log/nginx/arcadiablog.access.log | grep -a -E 'GET /(dom2?|blog)/' | "
+        acc += ssh(f"zgrep -a -h '{u.strftime('%d/%b/%Y')}' /var/log/nginx/arcadiablog.access.log* | grep -a -E 'GET /(dom2?|blog)/' | "
                    "grep -a -v -E '\\.(jpg|js|png|css)'")
-        rel += ssh(f"grep -a '{u.isoformat()}' /var/log/nginx/arcadiablog.dom.log")
+        rel += ssh(f"zgrep -a -h '{u.isoformat()}' /var/log/nginx/arcadiablog.dom.log*")
     views, ids = Counter(), {}
     for l in acc.splitlines():
         t = re.search(r"\[(\d\d/\w{3}/\d{4}:\d\d:\d\d:\d\d [+-]\d{4})\]", l)
@@ -180,7 +184,13 @@ def main():
 
 def one_day(day):
     rows = mgid_rows(day)
-    views, uniq, sig, dl, dl_up = site_rows(day)
+    site_ok = True
+    try:
+        views, uniq, sig, dl, dl_up = site_rows(day)
+    except Exception as e:          # no tunnel: say so and print dashes, never zeros
+        site_ok = False
+        views, uniq, sig, dl, dl_up = Counter(), {}, {}, Counter(), Counter()
+        print(f"!! ЛОГИ САЙТА НЕ ПРОЧИТАНЫ ({str(e)[:140]}): колонки заходы ... ebook200 ниже пустые, это НЕ нули")
     print(f"отчёт за {day} (сутки MGID = МСК)")
     print(f"{'кампания':10} {'статус':22} {'ставка':>6} {'тизеры':26} {'показы':>6} {'клики':>5} {'расход$':>8} {'конв':>4} "
           f"{'заходы':>6} {'клик-id':>7} {'сигналы':>7} {'up=200':>6} {'скач':>4} {'ebook200':>8}")
@@ -195,10 +205,12 @@ def one_day(day):
         v = [r["imp"], r["clk"], r["spent"], r["conv"], views.get(cid, 0), uniq.get(cid, 0), sum(s.values()), s.get("200", 0),
              dl.get(cid, 0), dl_up.get(cid, 0)]
         tot = [a + b for a, b in zip(tot, v)]
+        site = [str(x) if site_ok else "-" for x in v[4:]]
         print(f"{SHOW.get(label, label):10} {r['status'][:22]:22} {r['bid']!s:>6} {str(r['teasers'])[:26]:26} {v[0]:>6} {v[1]:>5} {v[2]:>8.4f} "
-              f"{v[3]:>4} {v[4]:>6} {v[5]:>7} {v[6]:>7} {v[7]:>6} {v[8]:>4} {v[9]:>8}")
-    print(f"{'ИТОГО':10} {'':22} {'':>6} {'':26} {tot[0]:>6} {tot[1]:>5} {tot[2]:>8.4f} {tot[3]:>4} {tot[4]:>6} {tot[5]:>7} {tot[6]:>7} "
-          f"{tot[7]:>6} {tot[8]:>4} {tot[9]:>8}")
+              f"{v[3]:>4} {site[0]:>6} {site[1]:>7} {site[2]:>7} {site[3]:>6} {site[4]:>4} {site[5]:>8}")
+    st = [str(x) if site_ok else "-" for x in tot[4:]]
+    print(f"{'ИТОГО':10} {'':22} {'':>6} {'':26} {tot[0]:>6} {tot[1]:>5} {tot[2]:>8.4f} {tot[3]:>4} {st[0]:>6} {st[1]:>7} {st[2]:>7} "
+          f"{st[3]:>6} {st[4]:>4} {st[5]:>8}")
     print("(заходы = страницы с source=mgid_<кампания>_ и 32-значным click_id; среди них и проверки модераторов MGID;")
     print(" конв MGID = сигналы up=200 с блоков + скачивания книги ebook200, одна цель geozoclick)")
     if sig.get(0):

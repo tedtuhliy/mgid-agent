@@ -206,6 +206,14 @@ moderation. **02:33 MSK, second step:** a full hour after the first raise BG PL 
 had started, 13 impressions in the first half hour and none since), so these eight were doubled once more (table). The values live in `CPA` in `geozo_geos.py`, the starting ones in `START_CPA`. Wallet at launch $12.90, 16 campaigns with a
 $3 cap each: the wallet runs out first.
 
+**First live chains on the blog (14.10 night).** 03:10-03:12 MSK a Bulgarian visitor (cc=BG, Android 12, from the Bulgarian teaser) read
+the herbs article and clicked an ad block: relay `up=200`, and MGID's report shows one conversion in the Bulgarian campaign (it started
+to deliver after the second bid step, 24 impressions in the first 50 minutes). 03:28-03:29 MSK a visitor from Kazakhstan on the Russian
+bread article clicked ad blocks twice (two signals `up=200`; MGID's report lags a few minutes behind). No book has been downloaded with a
+click id yet. At 03:30 MSK PL RO DE AT HU SK SI were still without an impression; their settings are identical to those of the
+delivering campaigns (type, limits, OS list, goal without dedup, no browser targeting; only country, language and target CPA differ),
+so what is missing is price or MGID's learning, not configuration.
+
 **Report.** `geozo_report.py` is one row per campaign (MGID impressions / clicks / spend / conversions, page views and distinct
 32-character click ids from the nginx log by the campaign id in `source=mgid_<campaign>_`, relay signals and MGID's answer to
 them). Geozo's `/stats` has answered 429 ("Whoops, looks like something went wrong") to every valid query so far, so Geozo clicks and
@@ -214,6 +222,13 @@ values are `date`, `site_id`, `block_id`, `country_code` (they pass validation a
 `block`, `site`, `hour` get a 422 `validation.in`), with and without `filters[site_id]`, for one day and for a week. The panel
 of the Geozo cabinet shows the numbers; its login is not in the vault. NodeMaven cannot be used from this container to test the Geozo fill per geo (the agent
 proxy swallows the nested CONNECT), the first live traffic is the test.
+The site columns come from the nginx logs on the server: the access log is rotated daily at ~23:55 UTC (`.1` uncompressed, older
+ones `.gz`) and the Moscow day starts at 21:00 UTC, so the report reads `arcadiablog.access.log*` with `zgrep` (a plain `grep` of the
+current file lost the evening hours after the rotation and showed too few visits). The userspace tailscaled of a session dies now
+and then (twice in three hours on 14.10 night, the HTTPS proxy port of the container changes under it): when the tunnel is down
+the report prints a warning and dashes in those columns, never zeros; `geozo_site/ts_up.sh [suffix]` starts it again under a new node
+name (key from the vault, 0600 file deleted at once). Old offline nodes (`cc-mgid-arcadia-*`) are deleted with the tailscale API when
+the work with the server is over.
 
 **Open.** Whether MGID approves all 28 teasers; whether Geozo fills blocks in each geo and what it pays (LuckyFeed income is another
 product and says nothing about Geozo's CPC); the Geozo site was approved for «TikTok 45+, RO/KZ», so the manager should be told that
