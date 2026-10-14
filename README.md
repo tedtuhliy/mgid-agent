@@ -180,25 +180,26 @@ mobile, targetCpa on goal 1280981 (no dedup), language of the geo, type `product
 teasers each: always the jar-of-water herbs article and a second one that rotates (bread, fruit and vegetables, houseplants) from geo
 to geo so that the first data also says which article wins.
 
-| geo | campaign | targetCpa now (earlier steps, start) | teasers |
+| geo | campaign | targetCpa at the start | teasers |
 |---|---|---|---|
-| BG | 12512632 | 0.12 (0.06, 0.03, 0.01) | 28160036, 28160037 |
-| PL | 12512633 | 0.20 (0.10, 0.05, 0.02) | 28160038, 28160039 |
-| CZ | 12512634 | 0.10 (0.05, 0.02) | 28160040, 28160041 |
-| PT | 12512635 | 0.04 (0.02) | 28160042, 28160043 |
-| IT | 12512636 | 0.04 (0.02) | 28160044, 28160045 |
-| ES | 12512638 | 0.04 (0.02) | 28160046, 28160047 |
-| DE | 12512639 | 0.40 (0.20, 0.10, 0.04) | 28160048, 28160050 |
-| CH | 12512640 | 0.10 (0.05) | 28160051, 28160066 |
-| AT | 12512641 | 0.40 (0.20, 0.10, 0.04) | 28160068, 28160069 |
+| BG | 12512632 | 0.01 | 28160036, 28160037 |
+| PL | 12512633 | 0.02 | 28160038, 28160039 |
+| CZ | 12512634 | 0.02 | 28160040, 28160041 |
+| PT | 12512635 | 0.02 | 28160042, 28160043 |
+| IT | 12512636 | 0.02 | 28160044, 28160045 |
+| ES | 12512638 | 0.02 | 28160046, 28160047 |
+| DE | 12512639 | 0.04 | 28160048, 28160050 |
+| CH | 12512640 | 0.05 | 28160051, 28160066 |
+| AT | 12512641 | 0.04 | 28160068, 28160069 |
 | RS | 12512643 | 0.01 | 28160070, 28160071 |
-| RO | 12512647 | 0.12 (0.06, 0.03, 0.01) | 28160088, 28160089 |
-| HU | 12512648 | 0.16 (0.08, 0.04, 0.015) | 28160090, 28160091 |
-| SK | 12512649 | 0.12 (0.06, 0.03, 0.01) | 28160092, 28160093 |
-| SI | 12512650 | 0.12 (0.06, 0.03, 0.01) | 28160094, 28160095 |
+| RO | 12512647 | 0.01 | 28160088, 28160089 |
+| HU | 12512648 | 0.015 | 28160090, 28160091 |
+| SK | 12512649 | 0.01 | 28160092, 28160093 |
+| SI | 12512650 | 0.01 | 28160094, 28160095 |
 | KZ (`/blog/ru/`, 14.10 night) | 12512714 | 0.01 | 28161033, 28161034, 28161035, 28161036 |
 
-The bids were a first guess, not a measurement: the cheap geos started at the one cent of the Kazakhstan test, the geos with a
+**The current targets are not in this table** (they move every hour or so): `python3 geozo_geos.py --status` and `cpa` in
+`data/geozo-geos.json`; the clock of the ladder is `data/geozo-ladder.json`. The bids were a first guess, not a measurement: the cheap geos started at the one cent of the Kazakhstan test, the geos with a
 higher floor price higher. **14.10 ~01:25 MSK**: after 80 minutes of approved teasers and no impressions at all in BG RO SK SI HU PL
 CZ DE AT the target was raised (`geozo_geos.py --set-cpa BG=0.03,...`, PATCH of `bidding` plus the new value in the campaign name);
 PT ES IT CH delivered at the starting values (a few dozen impressions an hour at MGID's $0.0001 click) and keep them, RS waits for its
@@ -213,6 +214,14 @@ ceiling of what MGID may pay, not what it pays, so the risk of a raise is low wh
 KZ blog by then: 11342 impressions, 76 clicks, 46 conversions in MGID's report (47 relay signals up=200), $0.0076 spent, no download.
 RS (Serbian) has had both teasers on moderation for 14 hours, SI one of two. The values live in `CPA` in `geozo_geos.py`, the starting ones in `START_CPA`. Wallet at launch $12.90, 16 campaigns with a
 $3 cap each: the wallet runs out first.
+
+**The ladder as a script (`geozo_step.py`, 14.10 midday).** What the owner called «raise the bids gradually, the way you did» is written
+down so that it repeats without anyone adding it up again. `python3 geozo_step.py` is a dry run, `--apply` PATCHes (through
+`geozo_geos.set_cpa`) and remembers the time in `data/geozo-ladder.json`. A geo (all but KZ) is doubled when it has an active teaser, its
+target was last changed at least 0.9 h ago, and the mean of the impressions of the last two COMPLETED Moscow hours is under 50;
+never above $0.50. Guards that leave the geo alone and print why: wallet under $4 (nothing is raised anywhere), more than $1 spent
+today with under 5 conversions, realized cost per click over $0.01. KZ blog (about a thousand impressions an hour at $0.0001 a click)
+is raised only by the owner's word. Tests: `test_geozo_step.py` (the policy is the pure function `decide`).
 
 **First live chains on the blog (14.10 night).** 03:10-03:12 MSK a Bulgarian visitor (cc=BG, Android 12, from the Bulgarian teaser) read
 the herbs article and clicked an ad block: relay `up=200`, and MGID's report shows one conversion in the Bulgarian campaign (it started
