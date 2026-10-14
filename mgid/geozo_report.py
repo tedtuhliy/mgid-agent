@@ -142,10 +142,11 @@ def site_rows(day):
         if "/dom/lead" in l:
             sig.setdefault(cid, Counter())[u.group(1) if u else "-"] += 1
         elif "/blog/dl/" in l and re.search(r"click_id=[0-9a-f]{32}\b", l):
+            code = re.search(r"st=(\d+)", l)
             if u and u.group(1) != "-":
-                dl_up[cid] += (u.group(1) == "200")
-            else:
-                dl[cid] += 1
+                dl_up[cid] += (u.group(1) == "200")                  # the mirrored postback and MGID's answer to it
+            elif code and code.group(1) == "200":
+                dl[cid] += 1                                          # the download itself (404: no such book; 429: the mirror was rate limited)
     return views, {k: len(v) for k, v in ids.items()}, sig, dl, dl_up
 
 
