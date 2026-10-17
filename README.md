@@ -64,6 +64,24 @@ reset at 16:40 UTC on 17.10; token in `/etc/mgid-second.env`, mode 600, delivere
 owner has to top up; then `MGID_ACCOUNT=second python3 geozo_geos.py --start --only KZ`; the other 14 geos with `--apply` once KZ has
 delivered (their targets in `geozo_geos.CPA` are the main account's last ladder values).
 
+**17.10 evening: dating campaigns deleted, nutra audit, decision.** Owner: delete the dating campaigns of the account; collect the working nutra
+setups of all accounts, re-check the links, launch them on the second account as CPA tune at 1 cent. **Done:** the 12 dating campaigns of the
+second account (`UA Tinely 8395 dating test` and `Dating 6011` x11, all paused, every teaser rejected or blocked, links through go.cm-trk6.com)
+were deleted with `DELETE v2 .../campaigns/{id}` after their names had been checked, and the list was read back (15 campaigns are left: 14
+old tests and the new KZ one); the dating campaigns of the main account cannot be reached (blocked). **Audit, read only:** the second MGID
+account keeps crypto, home-equity and sweepstakes tests and three garlic/health tests (Turkey, LATAM, Germany); Adskeeper 848676 (173
+campaigns), 849458 (156) and 872274 (54, EUR) are all paused with a balance near zero, and their garlic, egg-water and aloe campaigns are
+Dr.Cash streams (`/v1/full/<id>?stream_uuid=...` on reportixwire.com, pressreportzone.com, instantnewsbriefdaily.com) or our own pages
+(naturkost-guide.online); there is no Dr.Cash login or API in the keychain, so streams, offers and postbacks cannot be read. Link checks
+17.10: the Turkish garlic-milk stream is alive (302 to plackattir.store, an advertorial without a form), the LATAM one
+(accuratenewsupdate.online) no longer resolves, naturkost-guide.online answers. **Not relaunched, on purpose:** these funnels are
+fake-news-styled advertorials with health claims (the Turkish one: garlic in milk as a «youth elixir», «modern science has proven» it
+cures many diseases; teasers such as «grandma's recipe: garlic boiled in milk for blood pressure» and «egg-cooking water is worth gold»);
+MGID had already rejected or blocked most of their teasers, and the second account is the one MGID let the owner use. What can run: the
+white content (the KZ campaign waits for the balance and for moderation), and honest nutra only: teasers without disease or cure claims,
+no fake news layout, the same page for everyone, click id passthrough and a postback that works (needs Dr.Cash access or the owner's
+list of offers; the second account already has the goal `lead` 1272844 for postbacks).
+
 ## State on the evening of 13.10: the account is blocked by MGID moderators, the old dating campaigns are paused
 
 **Nothing has run on 816929 (v2 939031) since about 18:30 MSK.** All 240 teasers of the account are `blocked` (83,
