@@ -33,6 +33,20 @@ what a goal normally converts at; (4) a handful of test postbacks with made-up c
 `mgid/MGID_SUPPORT_DRAFT.md`, honest, not sent. Until MGID answers nothing can be read or changed on the account. Do not open another
 account for the same site and traffic.
 
+**17.10 midday: the second account, and the request for a new domain.** Still blocked three days later (both APIs 401). The owner:
+the block was for adult content that got onto mainstream offers by mistake (his reading; MGID's own text gives no reason), so the white
+content-arbitrage test can go on in the second account; and it should use a new domain «so as not to link it with the domain that
+hangs in the blocked account». What the read-only look at the second account (816921, token valid for v1 only) showed: balance $-0.04;
+26 campaigns, all paused (19 by hand, 7 `outOfClientFunds`), names of older tests (crypto, equity, LATAM and Turkey tests, garlic), 106
+rejected and 62 `campaignBlocked` teasers from before; two campaigns carry a postback buy-stage target on manual bidding, **none
+answers like a targetCpa campaign, and v2 (where CPA tune is set) answers `Invalid token` to this token, so CPA tune on this account
+is NOT confirmed**; the dashboard (new campaign -> bidding strategy) or a v2 token would show it. **Declined:** a new domain whose
+purpose is that MGID does not connect it with the blocked account is block evasion; MGID links accounts by people, payment, IP and
+content, not by the domain alone, and being caught would cost the second account and the chance to settle the first. Proposed instead:
+tell the account manager that the adult campaigns are gone and only clean content runs, ask whether the white content test may run and
+to lift the block (the draft has an optional paragraph for it); and look for other traffic sources for the same site, each under its
+own rules and account.
+
 ## State on the evening of 13.10: the account is blocked by MGID moderators, the old dating campaigns are paused
 
 **Nothing has run on 816929 (v2 939031) since about 18:30 MSK.** All 240 teasers of the account are `blocked` (83,

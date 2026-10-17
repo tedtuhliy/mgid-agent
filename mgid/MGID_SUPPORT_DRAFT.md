@@ -25,6 +25,12 @@ What was running at that moment, so that you can compare it with what you see:
   moderators. They are not running now: none of them has an active teaser.
 - The balance at the time of the block was $12.88.
 
+[Optional paragraph, only if the manager's own mail says that the reason was adult content; the owner confirms before it is sent:]
+We understand that the block is due to adult content that got onto mainstream offers of this account by mistake. All of those
+campaigns are stopped and none of them has an active teaser. What is left is clean content only (articles about food storage,
+houseplants and herbs with a free e-book). Please confirm that this is the reason, and tell us whether this clean content test is
+acceptable for CPA-tune campaigns on MGID, so that we can restore the account in line with your rules.
+
 Please tell us (1) the exact reason of the block, (2) what has to be changed on our side, (3) whether and how the account can be
 restored, and otherwise how the remaining balance will be handled under your rules.
 
