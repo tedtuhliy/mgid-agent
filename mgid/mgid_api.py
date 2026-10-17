@@ -24,7 +24,19 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
-CID1, CID2 = 816929, 939031
+# Two accounts of the owner. `main` (v1 816929 / v2 939031) was blocked by MGID on 14.10 (API 401, «Identity is under godmodeBlock»).
+# `second` is the older account (v1 816921); its v2 client id 939023 and its token come from the cabinet page «API» (owner, 17.10);
+# the owner says the account manager allowed running from it. MGID_ACCOUNT=second makes every script of this folder use it
+# (ids, token, and the per-account data files of geozo_geos.py); the default stays `main`.
+ACCOUNTS = {
+    "main": {"cid1": 816929, "cid2": 939031, "token": "MGID_816929_TOKEN"},
+    "second": {"cid1": 816921, "cid2": 939023, "token": "MGID_816921_TOKEN"},
+}
+ACCOUNT = os.environ.get("MGID_ACCOUNT", "main")
+if ACCOUNT not in ACCOUNTS:
+    raise SystemExit(f"MGID_ACCOUNT={ACCOUNT!r}: нет такого аккаунта, есть {sorted(ACCOUNTS)}")
+CID1, CID2 = ACCOUNTS[ACCOUNT]["cid1"], ACCOUNTS[ACCOUNT]["cid2"]
+TOKEN_ENV = ACCOUNTS[ACCOUNT]["token"]
 V1 = "https://api.mgid.com/v1/"
 V2 = "https://api.mgid.com/v2/ads/"
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -40,7 +52,7 @@ V2_FIELDS = ("name", "type", "bidding", "status", "limits", "geoTargeting", "con
 
 def call(method, url, body=None, form=False, timeout=90):
     """(status, parsed json | text). Never raises on HTTP errors: the caller decides."""
-    h = {"Authorization": "Bearer " + os.environ["MGID_816929_TOKEN"],
+    h = {"Authorization": "Bearer " + os.environ[TOKEN_ENV],
          "Accept": "application/json", "User-Agent": UA}
     data = None
     if body is not None:

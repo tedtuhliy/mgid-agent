@@ -47,6 +47,23 @@ tell the account manager that the adult campaigns are gone and only clean conten
 to lift the block (the draft has an optional paragraph for it); and look for other traffic sources for the same site, each under its
 own rules and account.
 
+**17.10 evening: the second account is set up and holds a paused Kazakhstan campaign.** The owner says the account manager allowed running
+from it (not seen by me; the wording is worth asking for). The cabinet page «API» gave the v2 client id **939023** (v1 816921) and
+the token, the same one as `MGID_816921_TOKEN` in the vault (the token was pasted into the chat, so it is disclosed: rotate it in the
+cabinet when convenient, and replace the vault entry then). With it v2 works for the account: 26 old campaigns, all `manualBidding`,
+all paused; goals `lead` 1272844, `aray_lead` 1278025, `aray_buy` 1278024 (this account accepts goal category 18; the first one
+accepted only 1 and 9). **CPA tune is available there:** a `targetCpa` campaign was accepted and read back. `MGID_ACCOUNT=second` makes every
+script of this folder use the account (`mgid_api.ACCOUNTS`: ids and token; `data/geozo-geos.second.json` and `data/geozo-ladder.second.json`
+instead of the main files; the mobile OS list the geo campaigns start from is saved in `geozo_geos.MOBILE_OS` because the main account can
+no longer be read), e.g. `node vault.mjs exec mgid -- bash -c 'MGID_ACCOUNT=second python3 geozo_geos.py --status'`. **Created:**
+goal `geozoclick` **1281145**; campaign **12516093** «Arcadia KZ blog content mobile CPA 0.01» (Kazakhstan, Russian, mobile, targetCpa
+$0.01, goal 1281145 without dedup, paused) with four teasers 28194286-28194289 on moderation; the same site arcadiablog.com and the
+same relay (`/dom/lead` and the e-book mirror send `e=geozoclick`, which the new goal listens to). **Stop-loss:**
+`deploy_spend_stop_second_inferno.sh` installed `mgid-spend-stop-second.timer` on Inferno (every 2 minutes, $3 per campaign counted from the
+reset at 16:40 UTC on 17.10; token in `/etc/mgid-second.env`, mode 600, delivered through a pipe). **Open:** the balance is $-0.04, the
+owner has to top up; then `MGID_ACCOUNT=second python3 geozo_geos.py --start --only KZ`; the other 14 geos with `--apply` once KZ has
+delivered (their targets in `geozo_geos.CPA` are the main account's last ladder values).
+
 ## State on the evening of 13.10: the account is blocked by MGID moderators, the old dating campaigns are paused
 
 **Nothing has run on 816929 (v2 939031) since about 18:30 MSK.** All 240 teasers of the account are `blocked` (83,

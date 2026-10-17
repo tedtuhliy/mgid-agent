@@ -42,7 +42,10 @@ MIN_CONV = 5
 MIN_BALANCE = 4.0
 SKIP = {"KZ"}
 MSK = timezone(timedelta(hours=3))
-STATE = HERE / "data" / "geozo-ladder.json"       # {geo: {"cpa": target, "at": ISO time of the last change or first sight}}
+from mgid_api import ACCOUNT  # noqa: E402  (no side effects: it only reads MGID_ACCOUNT)
+
+# {geo: {"cpa": target, "at": ISO time of the last change or first sight}}, one file per account
+STATE = HERE / "data" / ("geozo-ladder.json" if ACCOUNT == "main" else f"geozo-ladder.{ACCOUNT}.json")
 
 
 def decide(cur, gap_h, per_hour, spend, clicks, conv, active, balance):
@@ -153,7 +156,7 @@ def main():
             for g, v in changes.items():
                 new_state[g] = {"cpa": v, "at": stamp}
         STATE.write_text(json.dumps(new_state, ensure_ascii=False, indent=1))
-        if changes:
+        if changes and ACCOUNT == "main":          # the CPA table of geozo_geos.py is the main account's; the second one keeps its values in its data file
             sync_cpa_literal(gg.CPA)
         print(f"состояние записано: {STATE}")
 

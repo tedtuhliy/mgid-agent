@@ -38,10 +38,16 @@ sys.path.insert(0, str(HERE / "geozo_site"))
 import build_multi as bm  # noqa: E402
 import mgid_geo_copies as cp  # noqa: E402
 import multi_config as mc  # noqa: E402
-from mgid_api import CID1, CID2, V1, V2, buy_cpa, call, pause, report, v2_campaigns  # noqa: E402
+from mgid_api import ACCOUNT, CID1, CID2, V1, V2, buy_cpa, call, pause, report, v2_campaigns  # noqa: E402
 
 SITE = "https://arcadiablog.com"
-TARGET_ID = 1280981                    # «Geozo block click», eventName geozoclick
+# «Geozo block click», eventName geozoclick. Fixed for the main account; the second account gets a goal of its own
+# (--make-goal geozoclick) whose id is looked up by the event name (target_id()).
+TARGET_ID = 1280981 if ACCOUNT == "main" else None
+# The mobile OS list of the dating copies, read from the live source campaign of the main account on 14.10 (the main account can no
+# longer be read, and the second one has no such campaign): every geo campaign of the second account starts from it.
+MOBILE_OS = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 39, 42, 43, 45, 48, 50, 53, 55, 57, 59, 61, 79, 81, 85, 89, 92, 93,
+             98, 100, 103, 105, 108, 110, 113]
 LINK = SITE + "/blog/{route}/{slug}.html?click_id={{click_id}}&source=mgid_{{campaign_id}}_{{widget_id}}"
 IMAGE = SITE + "/blog/c/{slug}.jpg"
 ORDER = ["BG", "PL", "RO", "CZ", "PT", "IT", "ES", "DE", "CH", "AT", "HU", "SK", "SI", "RS",       # the owner's order
@@ -63,7 +69,28 @@ FIRST = "herbs-in-a-jar"
 # so this one carries «blog» in its name and cid_of() never mixes them up.
 PICKS = {"KZ": [FIRST] + SECOND}
 TAG = {"KZ": " blog"}
-OUT = HERE / "data" / "geozo-geos.json"
+OUT = HERE / "data" / ("geozo-geos.json" if ACCOUNT == "main" else f"geozo-geos.{ACCOUNT}.json")     # ids of the campaigns of the account in use
+
+
+def target_id():
+    """The id of the goal «Geozo block click» of the account in use."""
+    global TARGET_ID
+    if TARGET_ID is None:
+        TARGET_ID = goal_id("geozoclick")
+        if not TARGET_ID:
+            raise SystemExit("в аккаунте нет цели geozoclick: сначала python3 geozo_geos.py --make-goal geozoclick")
+    return TARGET_ID
+
+
+def source_campaign(live):
+    """The settings a geo campaign starts from: the live source campaign of the main account, a saved copy of its mobile
+    OS list for the second one."""
+    if ACCOUNT == "main":
+        src = live.get(cp.SOURCE)
+        if not src:
+            raise SystemExit(f"исходной кампании {cp.SOURCE} нет в v2")
+        return src
+    return {"type": "product", "operatingSystemTargeting": {"mode": "include", "value": MOBILE_OS}}
 
 
 def name_of(geo):
@@ -99,7 +126,7 @@ def body(src, geo, ids):
     b.update({"name": name_of(geo), "showName": "Arcadia Blog", "type": "product", "isAutoLaunchAdsAfterApproval": True,
               "languageTargeting": {"mode": "include", "value": [lang]}})
     b["conversionTracking"] = {"type": "sensors", "decisionStage": None, "interestStage": None,
-                               "buyStage": {"targetId": TARGET_ID, "deduplicateConversions": False,
+                               "buyStage": {"targetId": target_id(), "deduplicateConversions": False,
                                             "conversionValue": CPA[geo]}}
     return b
 
@@ -188,7 +215,7 @@ def set_cpa(changes, live):
         body = {"name": name_of(g), "isAutoLaunchAdsAfterApproval": True,
                 "bidding": {"strategy": "targetCpa", "price": new},
                 "conversionTracking": {"type": "sensors", "decisionStage": None, "interestStage": None,
-                                       "buyStage": {"targetId": TARGET_ID, "deduplicateConversions": False,
+                                       "buyStage": {"targetId": target_id(), "deduplicateConversions": False,
                                                     "conversionValue": new}}}
         st, d = call("PATCH", V2 + f"account/{CID2}/campaigns/{cid}", body)
         print(f"{g} {cid}: {old:g} -> {new:g}  PATCH {st} {'' if st in (200, 204) else json.dumps(d, ensure_ascii=False)[:300]}")
@@ -302,14 +329,12 @@ def main():
         return status(geos, live)
     if a.start:
         return start(geos, live)
-    src = v2_campaigns().get(cp.SOURCE)
-    if not src:
-        raise SystemExit(f"исходной кампании {cp.SOURCE} нет в v2")
+    src = source_campaign(v2_campaigns())
     ids = cp.country_ids()
     for g in geos:
         if ids.get(g) != mc.GEOS[g][0]:
             raise SystemExit(f"{g}: id страны в MGID {ids.get(g)}, в конфиге {mc.GEOS[g][0]}")
-    print(f"план: {len(geos)} кампаний, targetCpa по гео {[(g, CPA[g]) for g in geos]}, цель {TARGET_ID}, тип product")
+    print(f"план: {len(geos)} кампаний, targetCpa по гео {[(g, CPA[g]) for g in geos]}, аккаунт {ACCOUNT}, цель {target_id()}, тип product")
     for g, route, slug, title in plan_rows(geos):
         print(f"  {g} (/blog/{route}/) {slug}: {title}")
     if not a.apply:
