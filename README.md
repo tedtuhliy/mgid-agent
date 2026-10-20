@@ -4,6 +4,55 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 20.10: RollerAds offer LendingTree Mortgage Refinance CPL (1537) on the second account, CPA tune $0.05
+
+The owner, 19-20.10: retest the leadgen offer 1537 of the RollerAds CPA network on MGID with CPA tune, in the second account
+(816921 / v2 939023), through RollerAds' own tracker domain, with attribution and postbacks; target CPA 5 cents (his screenshot of
+the Target CPA field); stop every campaign that is not on CPA tune; run the CPA tune ones as soon as the link works. The offer:
+payout floats $0.50-$45 by filters, weekdays 8:00-21:00 EST, US. RollerAds' own history of it: 9612 clicks, 4 leads, $52, CR 0.04 %.
+
+**What stands.**
+- Goal `rr1537lead` (target 1281221, postback, `categoryId` 9). Every campaign below has it as the buy stage, deduplication on, value 0.05.
+- Active: 12520626 «US 1537 equity | A docs | CPA 0.05» (4 teasers) and 12520627 «... | C calc | CPA 0.05» (1 of 9 teasers; the other 8 follow
+  when MGID's teaser add limit lifts: `python3 rr1537_teasers.py --apply`). Both are `product` campaigns, `targetCpa` $0.05, daily limit
+  2000 (the $20 of `mgid_geo_copies.DAILY_USD`), geo and OS copied from the old campaigns 12467638 / 12467640, auto-launch after approval; all
+  teasers are on moderation. A content campaign refuses targetCpa and the type cannot be changed, so these are new product campaigns, not
+  conversions of the old ones.
+- Paused, CPA tune $0.05 with the same goal: 12468703 (G), 12468751 (E v2), 12468752 (F v2), 12518795 (the refi shell). Their teasers are still on
+  the old links (`source_id={widget_id}`, no `aff_click_id`, some on montopolivaldarno.net / judigratis.top): **replace the links before resuming
+  any of them**, otherwise their leads cannot be matched. Every manual-bid campaign of the account is paused. The $3 stop-loss per campaign
+  (`mgid-spend-stop-second`) covers all of them.
+
+**Link and attribution.** Teaser link:
+`https://bbcwebhosting.com/or/baap/aopwqk?source_id={widget_id}_{teaser_id}&aff_click_id={click_id}`.
+bbcwebhosting.com is the tracker domain that `GET /api/offers/1537/tracking-link` returns. The tracker keeps `source_id`, `aff_click_id`,
+`subid1` and `subid2` from the query and drops everything else (test clicks `MGIDTEST0003` and `74475766_28220704`, read back in
+`/api/statistics/aff-clicks`). `source_id` is what RollerAds groups its statistics by, so it carries placement and teaser; the MGID click id
+goes into `aff_click_id`. RollerAds offer postback 1373 `mgid-1537-lead`, targeted to offer 1537 only:
+`https://a.mgid.com/postback?c={affClickId}&e=rr1537lead&r={trx}`. The five postbacks that were already on the aff account (PropellerAds, Adsterra,
+peerclick, RollerAds adv) have no targeting and fire on every conversion with the same `{affClickId}`; their receivers ignore ids they do not know.
+Created with `POST /api/offers/postbacks` (cabinet session, JSON `{postback_title, postback_url, postback_targeting_offer: {allow: [1537]}}`,
+read from the cabinet's own form code in `/_nuxt/*.js`); the only macros are `{affClickId}`, `{cost}`, `{trx}`, `{goal}`.
+**Not proven yet:** no conversion has gone through this chain. At the first lead check the click's row in `aff-clicks` (`earnings` above 0,
+`aff_click_id` a 32-hex MGID id) and then goal 1281221 in MGID's report. No made-up click id was sent to MGID.
+
+**Clicks (20.10 evening).** RollerAds `aff-clicks` for 20.10 UTC: 302 clicks on offer 1537, 296 of them real US visitors on residential ISPs
+(T-Mobile, Comcast, AT&T, Verizon), mobile, all `validation 0` and unique; the other six are our test clicks and two hits from MGID's
+moderation (32-hex `source_id`, MGID's `{click_id}`). MGID's side, same day, the nine equity campaigns: 319 clicks, $18.31. So the clicks
+arrive, ~7 % fewer on the tracker; no lead today.
+
+**Found on the way.**
+- MGID v1 has no teaser edit. `POST goodhits/clients/{cid}/teasers/{id}` answers 200 and creates a **duplicate**; the link of a teaser
+  cannot be changed. Create a new one, delete the old one (a deleted teaser cannot be restored). The add limit
+  (`LS_TEASER_ADD_LIMIT_ERROR`) came after about 19 teasers in 25 minutes.
+- The chain from a datacenter address (the sandbox, Inferno) ends at `http://127.0.0.1`: the tracker filters it, the click is counted
+  anyway. A check as a real US user needs a residential exit, and NodeMaven's residential package has been empty since 20.10 (HTTP 402; the ISP pool
+  answers 407). The offer page itself has not been opened by us as a US user.
+- The cabinet of RollerAds is a Nuxt app, its API routes can be read from `https://my.rollerads.com/_nuxt/*.js`.
+
+**Open.** The 8 teasers of C calc (`rr1537_teasers.py`); moderation of the 13 teasers on the bbcwebhosting.com domain (the older ones on the
+RollerAds domains were rejected for type, landing and malware); the first lead; a real-user check of the link once the proxy is topped up.
+
 ## State on 14.10, ~12:35 MSK: MGID has blocked the whole account (API 401), everything on MGID stopped
 
 **What MGID says.** v1: `401 "Your account is blocked due to suspicious activity. Please contact your account manager for details. Your
