@@ -1,0 +1,418 @@
+{
+ "source": "main account 816929 / v2 939031 (blocked by MGID on 14.10): names, geo, conversion values, links, image links and titles recovered from the session log of 13.10, no API access to the account",
+ "note": "titles marked title_exact=false were not in the log and take one of the campaign's known titles; one title cut at 60 characters in the log was not used",
+ "campaigns": [
+  {
+   "src": 12469227,
+   "name": "AL | Osteflex joints (spy) | CPA 0.05",
+   "show": "Osteflex",
+   "geo": 66,
+   "iso": "AL",
+   "lang": 46,
+   "value": 17.0,
+   "link": "https://uh1fadd1a6uh.uewhbgfvds.cc/?rid=-7EBNQCgQAAHDlfQYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc={click_id}&subacc2={widget_id}",
+   "teasers": [
+    {
+     "src_tid": 27658250,
+     "title": "Shumë dhimbje në kyçe? Bëje këtë sapo të zgjohesh",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/8644bbb9f8fd590e7ffefc84f1ecc2c7.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27658251,
+     "title": "Shumë dhimbje në kyçe? Bëje këtë sapo të zgjohesh",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/d0a7716ee370d0800bc52b757f339445.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27658252,
+     "title": "Shumë dhimbje në kyçe? Bëje këtë sapo të zgjohesh",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/ac5047bdddf7ea50852afec5f693c9d5.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27658253,
+     "title": "Shumë dhimbje në kyçe? Bëje këtë sapo të zgjohesh",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/1587b6003f4326e3edd9acbdbd82f53f.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27658254,
+     "title": "Shumë dhimbje në kyçe? Bëje këtë sapo të zgjohesh",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/59d2a154fe9fe878c29800482f0df008.jpg",
+     "advertText": ""
+    }
+   ],
+   "skip_teasers": null
+  },
+  {
+   "src": 12469368,
+   "name": "AL | Hypertea hypertension (spy) | CPA 0.05",
+   "show": "Hypertea",
+   "geo": 66,
+   "iso": "AL",
+   "lang": 46,
+   "value": 18.5,
+   "link": "https://uh1fadd1a6uh.uewhbgfvds.cc/?rid=-7EBNQCgQAAHDqfQYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc={click_id}&subacc2={widget_id}",
+   "teasers": [
+    {
+     "src_tid": 27660519,
+     "title": "Për ta normalizuar tensionin në 120/80, pini 1 gotë nga kjo!",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/b9eed3b4adbeebb7674b8249c2556a2a.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27660520,
+     "title": "Bëra këtë çdo mëngjes – tensioni u stabilizua vetë",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/f7541035fd9520165ca60486a19693b6.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27660521,
+     "title": "Bëra këtë çdo mëngjes – tensioni u stabilizua vetë",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/243eefa69f4514a7f36b8c69e9ff52c6.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27660522,
+     "title": "Për ta normalizuar tensionin në 120/80, pini 1 gotë nga kjo!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/c38e628bcce2ea6656bdcea594c45387.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27660523,
+     "title": "Bëra këtë çdo mëngjes – tensioni u stabilizua vetë",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/da0cde082d7d70f58b51edf28924472b.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27660524,
+     "title": "Për ta normalizuar tensionin në 120/80, pini 1 gotë nga kjo!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/e8d99f2f32dac5e29dd5873cf6718570.jpg",
+     "advertText": ""
+    }
+   ],
+   "skip_teasers": null
+  },
+  {
+   "src": 12469369,
+   "name": "AL | Varcosin varicose (spy) | CPA 0.05",
+   "show": "Varcosin",
+   "geo": 66,
+   "iso": "AL",
+   "lang": 46,
+   "value": 17.0,
+   "link": "https://uh1fadd1a6uh.uewhbgfvds.cc/?rid=-7EBNQCgQAAHDrfQYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc={click_id}&subacc2={widget_id}",
+   "teasers": [
+    {
+     "src_tid": 27660525,
+     "title": "Venat varikoze zhduken për 24 orë – bëjeni para gjumit!",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/6b7d66470f72925c0d0c24bc758b447a.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27660526,
+     "title": "Venat varikoze zhduken për 24 orë – bëjeni para gjumit!",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/422bb6684477cebc2bad1f30ae8bd03a.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27693108,
+     "title": "Zhduk dhimbjet nga venat me variçe në 5 ditë",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/6b7d66470f72925c0d0c24bc758b447a.jpg",
+     "advertText": "Zbulo metodën e fshehtë që rikthen këmbët elegante pa kirurgji"
+    },
+    {
+     "src_tid": 27693167,
+     "title": "Venat varikoze zhduken për 24 orë – bëjeni para gjumit!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/2311a2db730e0610559000a37d1063b7.jpg",
+     "advertText": "Lirohu nga enjtja dhe dhimbjet e këmbëve, zbulo metodën unike sot"
+    }
+   ],
+   "skip_teasers": null
+  },
+  {
+   "src": 12470345,
+   "name": "IT | joints Cortitron (spy) | CPA 0.05",
+   "show": "Cortitron",
+   "geo": 22,
+   "iso": "IT",
+   "lang": 7,
+   "value": 39.0,
+   "link": "https://uh1fadd1a6uh.axdsz.pro/?rid=-7EBNQCgQAAHArfgYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc={click_id}&subacc2={widget_id}",
+   "teasers": [
+    {
+     "src_tid": 27678142,
+     "title": "Forti dolori articolari? Fai questo appena sveglio!",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/dc45f10c39fd68b46518a983422e139e.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678143,
+     "title": "Forti dolori articolari? Fai questo appena sveglio!",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/4086f6b04025aec51d966b472b892985.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678168,
+     "title": "Forti dolori articolari? Fai questo appena sveglio!",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/514edf1e09032032c200b4ec51f44030.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678169,
+     "title": "Forti dolori articolari? Fai questo appena sveglio!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/9495274d9ae1508a78e44932dc3bd372.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678170,
+     "title": "Forti dolori articolari? Fai questo appena sveglio!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/0db33cacc3cb5a27e90704cd476a1d20.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678171,
+     "title": "Forti dolori articolari? Fai questo appena sveglio!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/06766c270d9703ac29b860673103fbc7.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678172,
+     "title": "Forti dolori articolari? Fai questo appena sveglio!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/7637629df7711659cbb2f6fc4a6155ba.jpeg",
+     "advertText": ""
+    }
+   ],
+   "skip_teasers": null
+  },
+  {
+   "src": 12470346,
+   "name": "IT | hypertension Cardiotensive (spy) | CPA 0.05",
+   "show": "Cardiotensive",
+   "geo": 22,
+   "iso": "IT",
+   "lang": 7,
+   "value": 45.5,
+   "link": "https://uh1fadd1a6uh.axdsz.pro/?rid=-7EBNQCgQAAHAsfgYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc={click_id}&subacc2={widget_id}",
+   "teasers": [
+    {
+     "src_tid": 27678144,
+     "title": "Pressione a 120/80 e arterie pulite in 10 giorni!",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/814a5436ce535d26a3894ad1c5a621da.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678173,
+     "title": "Pressione a 120/80 e arterie pulite in 10 giorni!",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/e055163b2f5effab3609af5bf9c2f14f.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678174,
+     "title": "Pressione a 120/80 e arterie pulite in 10 giorni!",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/97e9ff3e5508aff31494c04ec8a70b85.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678175,
+     "title": "Pressione a 120/80 e arterie pulite in 10 giorni!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/b52726a4b1e17295c6a99a2c9a755c3f.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678176,
+     "title": "Pressione a 120/80 e arterie pulite in 10 giorni!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/b883421b2eab5bfe3a9806432a8d4f8e.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678177,
+     "title": "Pressione a 120/80 e arterie pulite in 10 giorni!",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/8614b2136d4135604c89693f6d5a9768.jpeg",
+     "advertText": ""
+    }
+   ],
+   "skip_teasers": null
+  },
+  {
+   "src": 12470347,
+   "name": "IT | parasites ToxicOFF (spy) | CPA 0.05",
+   "show": "ToxicOFF",
+   "geo": 22,
+   "iso": "IT",
+   "lang": 7,
+   "value": 26.0,
+   "link": "https://uh1fadd1a6uh.uewhbgfvds.cc/?rid=-7EBNQCgQAAHAtfgYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc={click_id}&subacc2={widget_id}",
+   "teasers": [
+    {
+     "src_tid": 27678145,
+     "title": "Parassiti nel corpo? Questi sono i sintomi da non ignorare",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/a35cc909fc7ccd140ef9b8780d540a96.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678146,
+     "title": "Parassiti nel corpo? Questi sono i sintomi da non ignorare",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/83e4a50f83c5507d01da601b2c6e3244.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678178,
+     "title": "Parassiti nel corpo? Questi sono i sintomi da non ignorare",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/9418da24670d2092fef9020205e4a12b.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678179,
+     "title": "Parassiti nel corpo? Questi sono i sintomi da non ignorare",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/9620c624212c15ed38423710ee8e684f.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678180,
+     "title": "Parassiti nel corpo? Questi sono i sintomi da non ignorare",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/c1f1d1651b4d5783a9b17d1d33ce7aca.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678181,
+     "title": "Parassiti nel corpo? Questi sono i sintomi da non ignorare",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/b3c085d60e24aefca43365bd9b0f2b20.jpeg",
+     "advertText": ""
+    }
+   ],
+   "skip_teasers": null
+  },
+  {
+   "src": 12470348,
+   "name": "IT | weightloss MatchaSlim (spy) | CPA 0.05",
+   "show": "MatchaSlim",
+   "geo": 22,
+   "iso": "IT",
+   "lang": 7,
+   "value": 32.0,
+   "link": "https://uh1fadd1a6uh.uewhbgfvds.cc/?rid=-7EBNQCgQAAHAufgYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc={click_id}&subacc2={widget_id}",
+   "teasers": [
+    {
+     "src_tid": 27678147,
+     "title": "Un cucchiaio a digiuno aiuta a dimagrire a un ritmo folle",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/3bd8fc8de6b295d5b10de1d277b90673.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678182,
+     "title": "Bevi questo ogni mattina per dimagrire più in fretta",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/9a841f7be0cc9bc95d9ae01ae4587e79.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678183,
+     "title": "Bevi questo ogni mattina per dimagrire più in fretta",
+     "title_exact": true,
+     "image": "https://imghosts.com/t/2026-08/939031/c759f72f0cc3b7ea77082f7c83175a1c.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678184,
+     "title": "Un cucchiaio a digiuno aiuta a dimagrire a un ritmo folle",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/f1c1da79b8a3b2370689bc68c29036e5.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678185,
+     "title": "Bevi questo ogni mattina per dimagrire più in fretta",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/05a8e45f600721af20c49a4df8266a79.jpeg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27678186,
+     "title": "Un cucchiaio a digiuno aiuta a dimagrire a un ritmo folle",
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/fb531dd16b56cab039c69943f3a66ce0.jpeg",
+     "advertText": ""
+    }
+   ],
+   "skip_teasers": null
+  },
+  {
+   "src": 12473511,
+   "name": "BA Nautubone joints spy | CPA 0.05",
+   "show": "Nautubone",
+   "geo": 68,
+   "iso": "BA",
+   "lang": 26,
+   "value": 24.0,
+   "link": "https://uh1fadd1a6uh.axdsz.pro/?rid=-7EBNQCgQAAHDJfgYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc={click_id}&subacc2={widget_id}",
+   "teasers": [
+    {
+     "src_tid": 27720019,
+     "title": null,
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/ed4d954bd70d98e23bb09082671938af.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27720020,
+     "title": null,
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/6d420b2314ade3235f0d2e94a4b4f7bd.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27720021,
+     "title": null,
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/7a8fe6c6a978559034196a70ba31b0d5.jpg",
+     "advertText": ""
+    },
+    {
+     "src_tid": 27720022,
+     "title": null,
+     "title_exact": false,
+     "image": "https://imghosts.com/t/2026-08/939031/e0c709605767ef040ceb84861d71c79f.jpg",
+     "advertText": ""
+    }
+   ],
+   "skip_teasers": "BA: all 4 teasers were rejected with a malware reason on the lander"
+  }
+ ]
+}

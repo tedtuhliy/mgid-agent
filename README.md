@@ -4,6 +4,44 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 20.10 night: direct-offer nutra copies on the second account, paused, CPA tune $0.05
+
+Owner: «найди все нутра кампании на прямые оферы что мы делали раньше на всех акаунтах и сделай их копии на нашем акаунте с cpa tune и
+5 центов ставкой. Все на паузе».
+
+**Where they are.** A read-only look at every account the keychain can read: MGID 816921 (17 campaigns, 98 teasers) and Adskeeper 848676
+(173 / 1506), 849458 (156 / 1136), 872274 (54 / 327): 400 campaigns, 3067 teasers, 946k clicks, $16.4k spent, 2804 conversions by the
+networks' counters. **None of them holds a nutra campaign on a direct offer.** 372 of the 400 link to LuckyFeed streams
+(`/v1/full/<news_id>?stream_uuid=...&subid1={teaser_id}...&subid5={click_id}` on reportixwire.com, pressreportzone.com, mediahubpulse.com,
+dailymediapress.com, instantnewsbriefdaily.com, globaldeskpro.com; 216 streams, 236 stream x geo bundles, 89 of them with conversions):
+that is the LF article plus ad feed funnel (skill `luckyfeed`), not an offer, and the note of 17.10 that called them «Dr.Cash streams»
+was wrong. The other 28 are the equity and sweeps tests on RollerAds, the KZ blog and empty shells. The direct-offer nutra campaigns were on
+the main account (blocked): eight «spy» copies with teasers straight to AdCombo (`uh1fadd1a6uh.uewhbgfvds.cc` / `axdsz.pro`,
+`?rid=...&subacc={click_id}&subacc2={widget_id}`): AL Osteflex joints, AL Hypertea hypertension, AL Varcosin varicose, IT joints Cortitron,
+IT hypertension Cardiotensive, IT parasites ToxicOFF, IT weightloss MatchaSlim, BA Nautubone joints. Real volume until 01.09 (IT: $108 and
+6.8k clicks, $32, $43, $102 and 6.4k clicks; AL: $1, $15, $7), in an earlier listing of 13.10 their teasers were approved (`campaignBlocked` = approved in a
+paused campaign), later `blocked by moderator`; the BA ones were rejected with a malware reason (the log cuts the text at «Malware has bee»).
+
+**What the copies are made from.** The main account answers 401, so everything comes from the session log of 13.10, which printed the
+campaigns, the image link of every teaser and, for the first three teasers of each campaign, title and link: `data/nutra-direct-copies.json`.
+Titles that were not in the log take one of the campaign's known titles (`title_exact: false`), one title cut off at 60 characters was
+not used, the OS and browser targeting of the sources was not recorded (left open), the language is the geo's. All 44 image files still
+download and are large enough. The eight links were opened from the sandbox (datacenter address): all answer 302 to AdCombo's tracker and
+200 on the lander (CortiTron product page with a form, Matcha Slim, Toxic OFF, Nautubone, Osteflex and Varcosin Albanian advertorials,
+Cardiotensive a news-styled page about «the Italian pharmacies' conspiracy», Hypertea a Czech-language page behind an Albanian campaign, as a
+US datacenter address sees it; the tracker may serve real visitors another version).
+
+**Created (`python3 nutra_direct.py --campaigns`, all read back):** 12520656 AL Osteflex, 12520657 AL Hypertea, 12520658 AL Varcosin,
+12520659 IT Cortitron, 12520660 IT Cardiotensive, 12520661 IT ToxicOFF, 12520662 IT MatchaSlim, 12520663 BA Nautubone: `product`,
+`targetCpa` $0.05, goal `lead` 1272844 (the conversion value of the source: 17.0, 18.5, 17.0, 39.0, 45.5, 26.0, 32.0, 24.0), daily limit
+$20, geo and language of the source, **paused, auto-launch after approval off**. The teasers go in with `--teasers` (one per campaign per
+round, stops at the add limit), BA gets none.
+
+**Before any of them runs.** (1) AdCombo's S2S postback has to call `https://a.mgid.com/postback?c={subacc}&e=lead&r=<payout>`; the keychain
+has no AdCombo entry, so this is the owner's. (2) These creatives carry disease and cure claims («pressure at 120/80 in 10 days», «varicose
+veins disappear in 24 hours»); MGID moderators blocked them on the main account, and they are being submitted to the account MGID let the
+owner use. A teaser is moderated the moment it is created, paused or not.
+
 ## 20.10: RollerAds offer LendingTree Mortgage Refinance CPL (1537) on the second account, CPA tune $0.05
 
 The owner, 19-20.10: retest the leadgen offer 1537 of the RollerAds CPA network on MGID with CPA tune, in the second account
