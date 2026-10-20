@@ -37,9 +37,9 @@ read from the cabinet's own form code in `/_nuxt/*.js`); the only macros are `{a
 `aff_click_id` a 32-hex MGID id) and then goal 1281221 in MGID's report. No made-up click id was sent to MGID.
 
 **Clicks (20.10 evening).** RollerAds `aff-clicks` for 20.10 UTC: 302 clicks on offer 1537, 296 of them real US visitors on residential ISPs
-(T-Mobile, Comcast, AT&T, Verizon), mobile, all `validation 0` and unique; the other six are our test clicks and two hits from MGID's
-moderation (32-hex `source_id`, MGID's `{click_id}`). MGID's side, same day, the nine equity campaigns: 319 clicks, $18.31. So the clicks
-arrive, ~7 % fewer on the tracker; no lead today.
+(T-Mobile, Comcast, AT&T, Verizon), mobile, all `validation 0` and unique; the other six are three test clicks of ours and three hits
+from MGID's moderation (one desktop hit from Croatia with the unexpanded `{widget_id}`, two with a 32-hex `source_id`, MGID's `{click_id}`).
+MGID's side, same day, the nine equity campaigns: 319 clicks, $18.31. So the clicks arrive, ~7 % fewer on the tracker; no lead today.
 
 **Found on the way.**
 - MGID v1 has no teaser edit. `POST goodhits/clients/{cid}/teasers/{id}` answers 200 and creates a **duplicate**; the link of a teaser
