@@ -34,8 +34,9 @@ US datacenter address sees it; the tracker may serve real visitors another versi
 **Created (`python3 nutra_direct.py --campaigns`, all read back):** 12520656 AL Osteflex, 12520657 AL Hypertea, 12520658 AL Varcosin,
 12520659 IT Cortitron, 12520660 IT Cardiotensive, 12520661 IT ToxicOFF, 12520662 IT MatchaSlim, 12520663 BA Nautubone: `product`,
 `targetCpa` $0.05, goal `lead` 1272844 (the conversion value of the source: 17.0, 18.5, 17.0, 39.0, 45.5, 26.0, 32.0, 24.0), daily limit
-$20, geo and language of the source, **paused, auto-launch after approval off**. The teasers go in with `--teasers` (one per campaign per
-round, stops at the add limit), BA gets none.
+$20, geo and language of the source, **paused, auto-launch after approval off**. The teasers went in with `--teasers` (one per campaign per
+round, stops at the add limit) at 21:50 UTC: 40 of 40 accepted in two minutes, all `onModeration` (5, 6, 4, 7, 6, 6, 6 per campaign; the
+ids are in `data/nutra-direct-created.json`), BA has none.
 
 **Before any of them runs.** (1) AdCombo's S2S postback has to call `https://a.mgid.com/postback?c={subacc}&e=lead&r=<payout>`; the keychain
 has no AdCombo entry, so this is the owner's. (2) These creatives carry disease and cure claims («pressure at 120/80 in 10 days», «varicose
@@ -82,13 +83,15 @@ MGID's side, same day, the nine equity campaigns: 319 clicks, $18.31. So the cli
 **Found on the way.**
 - MGID v1 has no teaser edit. `POST goodhits/clients/{cid}/teasers/{id}` answers 200 and creates a **duplicate**; the link of a teaser
   cannot be changed. Create a new one, delete the old one (a deleted teaser cannot be restored). The add limit
-  (`LS_TEASER_ADD_LIMIT_ERROR`) came after about 19 teasers in 25 minutes.
+  (`LS_TEASER_ADD_LIMIT_ERROR`) looks per campaign, not per account: 12520627 was refused on its 11th creation of the day (9 at the start
+  and a replacement) and still is at 21:52 UTC, while seven other campaigns took 40 teasers in two minutes at 21:50 UTC; deleting a teaser
+  does not give the count back, and the MSK midnight did not reset it.
 - The chain from a datacenter address (the sandbox, Inferno) ends at `http://127.0.0.1`: the tracker filters it, the click is counted
   anyway. A check as a real US user needs a residential exit, and NodeMaven's residential package has been empty since 20.10 (HTTP 402; the ISP pool
   answers 407). The offer page itself has not been opened by us as a US user.
 - The cabinet of RollerAds is a Nuxt app, its API routes can be read from `https://my.rollerads.com/_nuxt/*.js`.
 
-**Open.** The 8 teasers of C calc (`rr1537_teasers.py`); moderation of the 13 teasers on the bbcwebhosting.com domain (the older ones on the
+**Open.** The 8 teasers of C calc (`rr1537_teasers.py`, try again after about 20:30 UTC on 21.10, not before: retries may count); moderation of the 13 teasers on the bbcwebhosting.com domain (the older ones on the
 RollerAds domains were rejected for type, landing and malware); the first lead; a real-user check of the link once the proxy is topped up.
 
 ## State on 14.10, ~12:35 MSK: MGID has blocked the whole account (API 401), everything on MGID stopped

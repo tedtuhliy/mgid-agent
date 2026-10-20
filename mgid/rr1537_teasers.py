@@ -10,8 +10,8 @@ duplicate. So a teaser on a link without `aff_click_id` is replaced: the new one
 A deleted teaser cannot be restored; the creatives (title and the MGID-hosted image) are kept in data/rr1537-creatives.json.
 
 - Idempotent. A teaser is right when its link carries `aff_click_id`; a rerun does only what is missing.
-- The teaser add limit (`LS_TEASER_ADD_LIMIT_ERROR`, hit after about 19 teasers in 25 minutes, lifts after the MSK midnight at the
-  latest) stops the creating; the old-link teasers are deleted anyway, a teaser whose clicks cannot be matched is worth nothing.
+- The teaser add limit (`LS_TEASER_ADD_LIMIT_ERROR`) stops the creating. It looks per campaign (about 10 creations a day, deletions do not
+  give them back), see README 20.10; the old-link teasers are deleted anyway, a teaser whose clicks cannot be matched is worth nothing.
 """
 import argparse
 import json
