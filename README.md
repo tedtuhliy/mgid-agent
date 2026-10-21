@@ -37,6 +37,16 @@ $3 stop-loss per campaign buys ~50 clicks, i.e. ~0.02 leads, so this test can sh
 The click id appended by the UTM on E/F v2 is still **not** verified (no real click yet; a 12:28 UTC click with a 32-hex `aff_click_id` was on offer 1021, another
 source of the owner).
 
+**The ladder (`cpa_ladder.py`, `deploy_cpa_ladder_inferno.sh`, `test_cpa_ladder.py`), 14:00 UTC.** Owner: «Поставь просто 50 центов ставку cpa tune и если трафика за час не
+будет хотя бы пару кликов то поднимай по 50 центов так каждый час пока не пойдёт хотя бы 10 20 кликов в час». All four campaigns (E v2, F v2, the two copies) are
+at $0.50 since 13:07 / 13:59 UTC; a systemd timer `mgid-cpa-ladder-second` runs at :07 every hour on Inferno (state `/var/lib/mgid-cpa-ladder-second/state.json`, log
+`actions.log`, campaign list and limits in the unit). Per campaign it compares the lifetime clicks of v1 `campaigns-stat` with the look an hour earlier: fewer than 10 an hour
+-> target CPA + $0.50 (v2 PATCH, read back), at most $5.00 (my cap, the owner named none); 10 or more -> held; it never lowers. The two thresholds of the order («пару кликов»
+and «10-20 в час») are read as one rule, keep climbing until 10 an hour. Only a campaign that can deliver is judged: active, an approved teaser, window open now and at the
+last look on the same Eastern day, so nights, weekends, the stop-loss and moderation never raise anything. First real step 14:07:01 UTC: E v2 0.50 -> 1.00 (0.0 clicks an
+hour), F v2 is judged at 15:07. The copies were renamed «... | CPA tune» because the price in the name would be stale an hour later. The stop-loss ($3 a campaign
+since its reset) still caps the spend: at 6 cents a click 10-20 clicks an hour is $0.6-1.2 an hour, so a campaign that reaches the goal is stopped after 2-5 hours.
+
 **Moderation at 12:50 MSK:** the 5 teasers of the CPA tune copies (A docs 4, C calc 1) are still `onModeration` after ~13 hours. Nutra copies: 30 of 40
 rejected (MatchaSlim, 6, joined the Italian ones with «Footnotes / User awareness» since the morning), 10 pending (Varcosin 4, ToxicOFF 6), none approved.
 
