@@ -4,6 +4,32 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 21.10 morning: what the night looked like, and what kept restarting the old campaigns
+
+**Two old schedulers on Inferno restarted the 1537 campaigns every hour.** Since 31.08 the crontab of root on Inferno had
+`4 * * * * cd /root/mgid-lidgen-scheduler && python3 lidgen_window.py` and `5,35 * * * * /usr/local/bin/mgid_daypart.sh auto`: during the
+offer window of 1537 (Mon-Fri 08:00-21:00 US Eastern) they set `whetherToBlockByClient=0` on A docs 12467638, C calc 12467640, E compare v2
+12468751 and F compare2 v2 12468752 (the first one every hour at :04, the second E v2 and F v2 every 30 minutes) and pause them outside it.
+That is why the campaigns paused on 20.10 evening came back at 21:04, 22:04, 23:04, 00:04 UTC (log `/root/mgid-lidgen-scheduler/log`) and at
+:05/:35; the stop-loss paused E v2, F v2 and C calc within two minutes each time because their spend since the reset was already over $3.
+**A docs was under $3 since the reset, so it ran from about 22:00 to 23:28 UTC and spent ~$6.3 (126 clicks)** before the stop-loss saw the
+lagging figure; balance $81.65 -> $74.12. Both cron lines were commented out at 08:4x UTC on 21.10 (crontab backup
+`/root/crontab.backup-20261021-before-lidgen-off` on Inferno; to bring them back remove the `# DISABLED` prefix; `ak-scheduler` for Adskeeper is a
+different job and was not touched). The two CPA tune copies 12520626 / 12520627 are not in those lists. The offer pays only inside the window,
+so putting them under it (add the ids to `CAMPS` in `lidgen_window.py`) is an open question for the owner. Nothing in the session itself
+restarted anything: the transcript has no turn between 21:55 UTC and 08:26 UTC.
+
+**CPA tune test of 1537.** 12520626 and 12520627 are `active/unfulfilled`: all 5 teasers are still `onModeration` after 12 hours, so zero
+impressions, zero spend, zero leads; the `autoLaunch` flag we set was reset by MGID (reads False again). RollerAds counters of the offer: 10064 clicks, 4 leads,
+$52 in total, nothing new overnight (+452 clicks since the history the owner quoted, all from 20.10). The click list of RollerAds
+(`aff-clicks`) keeps only the last few hours (it showed 302 rows on 20.10 evening and 1 row now), so a lead has to be matched while it is fresh.
+The postback 1373 is still active; no lead has gone through it.
+
+**Nutra copies, moderation after ~10 hours (40 teasers):** 24 rejected, 16 on moderation, none approved. AL Osteflex (5) and AL Hypertea (6):
+«Malware has been detected» on the lander (host uewhbgfvds.cc -> ljslfkjs.cc / tyblk.info); IT Cortitron (7) and IT Cardiotensive (6) (axdsz.pro):
+«Footnotes», «User awareness» and, for Cardiotensive, «Spoilers»; still pending: AL Varcosin (4), IT ToxicOFF (6), IT MatchaSlim (6), which use the
+same uewhbgfvds.cc family as the two AL campaigns rejected for malware. The account now carries ~65 rejected teasers.
+
 ## 20.10 night: direct-offer nutra copies on the second account, paused, CPA tune $0.05
 
 Owner: «найди все нутра кампании на прямые оферы что мы делали раньше на всех акаунтах и сделай их копии на нашем акаунте с cpa tune и
