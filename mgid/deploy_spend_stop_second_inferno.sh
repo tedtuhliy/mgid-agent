@@ -1,6 +1,8 @@
 #!/bin/bash
 # Install the MGID stop-loss of the SECOND account on Inferno (systemd timer, every 2 minutes): pauses every active campaign of the
-# account 816921 (v2 939023) whose spend since the reset reaches $3. Its own code directory, env file, state and units: the stop-loss
+# account 816921 (v2 939023) whose spend since the reset reaches $5 ($3 until the evening of 21.10, owner: "Поставь лимит по 5 баксов на каждую
+# кампанию что сейчас крутит"; on the box the number was changed in place, because running this script resets the baseline). The same number has
+# to stand in the unit of the offer window (deploy_offer_window_inferno.sh). Its own code directory, env file, state and units: the stop-loss
 # of the first (blocked) account, mgid-spend-stop, is not touched and keeps failing quietly until MGID lets that account in again.
 #
 #   TAILSCALE="/path/tailscale --socket=/path/ts.sock" CLAUDE_VAULT_FILE=~/.claude/secrets/vault.enc.json bash deploy_spend_stop_second_inferno.sh
@@ -43,12 +45,12 @@ echo "--- reset: считается только расход с этого мо
 bash -c 'set -a; . /etc/mgid-second.env; set +a; MGID_SPEND_ACTIONS=/var/lib/mgid-spend-stop-second/actions.log MGID_SPEND_BASELINE=/var/lib/mgid-spend-stop-second/baseline.json python3 /opt/mgid-spend-stop-second/spend_stop.py --reset'
 cat > /etc/systemd/system/mgid-spend-stop-second.service <<"EOF"
 [Unit]
-Description=MGID stop-loss, second account: pause every active campaign whose spend since the reset reaches $3
+Description=MGID stop-loss, second account: pause every active campaign whose spend since the reset reaches $5
 
 [Service]
 Type=oneshot
 EnvironmentFile=/etc/mgid-second.env
-Environment=MGID_SPEND_LIMIT=3.0
+Environment=MGID_SPEND_LIMIT=5.0
 Environment=MGID_SPEND_ACTIONS=/var/lib/mgid-spend-stop-second/actions.log
 Environment=MGID_SPEND_BASELINE=/var/lib/mgid-spend-stop-second/baseline.json
 WorkingDirectory=/var/lib/mgid-spend-stop-second

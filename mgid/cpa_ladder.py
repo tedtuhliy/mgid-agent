@@ -14,8 +14,8 @@ for the first hour; a CPA tune campaign with no conversions yet has no other lev
   08:00-21:00 US Eastern) open now and at the time of the last look, on the same Eastern date. Otherwise the state is only renewed: nights, weekends,
   a campaign held by the stop-loss or waiting for moderation never raise anything.
 - Clicks are the lifetime clicks of v1 `campaigns-stat`; MGID's figures lag, the lag is the same every hour, so the difference is fair.
-- A raise is a v2 PATCH of `bidding` and is read back; if it does not stick the state is not moved. The stop-loss ($3 per campaign since its reset)
-  stays above all of this.
+- A raise is a v2 PATCH of `bidding` and is read back; if it does not stick the state is not moved. The stop-loss ($5 per campaign since its reset;
+  $3 until the evening of 21.10) stays above all of this.
 """
 import json
 import os

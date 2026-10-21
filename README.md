@@ -36,6 +36,15 @@ Nutra copies: the moderation is over, 40 teasers: 36 `rejected` (Osteflex 5 and 
 MatchaSlim 6 «Footnotes / User awareness», Cardiotensive also «Spoilers»), Varcosin 4 `blocked` by the system, Nautubone (BA) has no teaser. Nothing of it can run; the
 campaigns are paused and were not deleted.
 
+**The limit, $5 (22:10 UTC).** Owner, the answer to the question whether E v2 and F v2 get a new $3 for tomorrow: «Поставь лимит по 5 баксов на каждую кампанию что сейчас
+крутит». The stop-loss limit of the second account is now **$5 instead of $3**: `Environment=MGID_SPEND_LIMIT=5.0` in `mgid-spend-stop-second.service` and in
+`mgid-offer-window-second.service` (the two must carry the same number, see the header of `deploy_offer_window_inferno.sh`). It was changed on the box in place (`sed`,
+`daemon-reload`, backups `/root/mgid-spend-stop-second.service.bak-20261021` and `/root/mgid-offer-window-second.service.bak-20261021`), **not** by running
+`deploy_spend_stop_second_inferno.sh` again, because that script resets the baseline. The baseline was not touched, so the $5 is counted from the reset of 09:52 UTC, not from
+now: at 22:10 UTC E v2 had $1.57 counted ($3.43 left), F v2 $0.47 ($4.53), the two copies $0 (they have no approved teaser). The stop-loss has one limit for the whole
+account, not one per campaign; everything else in the account is paused. MGID's own daily budget of these four campaigns is $20 (v2 shows 2000, the usual x100), so it
+does not stop them earlier. At 22:07 UTC the ladder raised both to $4.50 (E 4.0 clicks an hour, F 6.0): the 13 clicks of the hour before were not a steady rate.
+
 ## 21.10 noon: the offer window for the CPA tune campaigns, CPA tune on the already moderated campaigns
 
 Owner, 21.10: «cpa tune окна поставь по расписанию и проверь мы все ещё ждём модерацию?», then «Попробуй заменить модель на cpa tune в уже
