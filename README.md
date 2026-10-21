@@ -4,6 +4,31 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 21.10 noon: the offer window for the CPA tune campaigns, CPA tune on the already moderated campaigns
+
+Owner, 21.10: «cpa tune окна поставь по расписанию и проверь мы все ещё ждём модерацию?», then «Попробуй заменить модель на cpa tune в уже
+промодерированой кампании».
+
+**CPA tune on a moderated campaign.** The moderated campaigns that are *content* (A docs 12467638, C calc 12467640) refuse it again:
+`PATCH bidding targetCpa` -> 422 `BIDDING_STRATEGY_CAMPAIGN_TYPES_ERROR`, nothing changed (the type cannot be changed either). The moderated *product*
+campaigns E compare v2 12468751 (8 approved teasers) and F compare2 v2 12468752 (5) are already `targetCpa` $0.05 with the goal `rr1537lead`; what
+they lacked was the click id in the link, and the link of a teaser cannot be edited. The campaign-level UTM does it without a new moderation:
+`PUT goodhits/campaigns/{id}/utmtracking/` with `utm_source`, `utm_medium`, `utm_campaign` empty and `utm_custom=aff_click_id={click_id}` (reads back as
+`aff_click_id=${CLICK_ID}`), done on both. **Not proven until the first click:** that MGID appends it to these links (checked at the opening of the
+window, see the end of this section). Their stop-loss baseline was moved to the lifetime spend ($114.10 and $108.12), so each gets a new $3.
+
+**Offer window as a service (`offer_window.py`, `deploy_offer_window_inferno.sh`, tests in `test_offer_window.py`).** Replaces the two old crons. A systemd timer
+every 5 minutes on Inferno (`mgid-offer-window-second`, log `/var/lib/mgid-offer-window-second/actions.log`, journal) for 12468751, 12468752, 12520626 and
+12520627 (the list is in the unit): inside the window of the offer (weekdays 08:00-21:00 America/New_York = 12:00-01:00 UTC in summer time, 15:00-04:00 MSK)
+a campaign paused by us is started, outside it a running one is paused. It never starts a campaign the stop-loss holds (spend since the reset >= $3, same
+baseline file), a pause that is not ours (`outOfClientFunds`...) is left alone, and with unreadable spend nothing is started. First run 09:52 UTC: the
+window was closed, so the two CPA tune copies (no approved teaser yet) were paused; they and E/F v2 start at the opening. To put another campaign under
+the window add its id to `MGID_WINDOW_CAMPS` in the unit and `systemctl daemon-reload`. To give a stopped campaign a new $3, move its entry in
+`/var/lib/mgid-spend-stop-second/baseline.json` to its lifetime spend (the stop-loss `--reset` does it for all).
+
+**Moderation at 12:50 MSK:** the 5 teasers of the CPA tune copies (A docs 4, C calc 1) are still `onModeration` after ~13 hours. Nutra copies: 30 of 40
+rejected (MatchaSlim, 6, joined the Italian ones with «Footnotes / User awareness» since the morning), 10 pending (Varcosin 4, ToxicOFF 6), none approved.
+
 ## 21.10 morning: what the night looked like, and what kept restarting the old campaigns
 
 **Two old schedulers on Inferno restarted the 1537 campaigns every hour.** Since 31.08 the crontab of root on Inferno had
