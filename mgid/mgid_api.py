@@ -211,9 +211,10 @@ def widget_spend(cid, interval="all", since=None):
 def report(frm, till, metrics, dims, camps=None, limit=1000):
     """v2 custom report rows. frm/till: 'YYYY-MM-DD', whole MGID days, which are UTC+3 days.
 
-    The API moves the range into UTC+3 and returns every whole day it touches, and its `day` and
-    `hour` buckets are UTC+3 too. The old `{till}T23:59:59+00:00` is 02:59 of the NEXT day there,
-    so a one-day query for 30.09 came back with all of 01.10 (probed 01.10). A page holds at most
+    The API moves the range into the time zone of the account and returns every whole day it touches, and its `day` and
+    `hour` buckets are in that zone too: UTC+3 on the main account (probed 01.10), but the second account is `Europe/Tirane`
+    (v1 `clients/{id}` -> `timezone`), UTC+2 until 25.10.2026 and UTC+1 after (seen 21.10 from RollerAds click times). The old
+    `{till}T23:59:59+00:00` is 02:59 of the NEXT day in UTC+3, so a one-day query for 30.09 came back with all of 01.10. A page holds at most
     1000 rows and a full one is cut silently, so this pages with `offset` (two CIS campaigns by
     day x hour x placement over one day were 7983 rows)."""
     q = [("metrics[]", m) for m in metrics] + [("dimensions[]", x) for x in dims]

@@ -4,6 +4,38 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 21.10 evening (to 00:45 MSK 22.10): the ladder reached $4, the click id is verified, the copies and the nutra teasers are rejected
+
+Owner, 21.10: «Как идёт?» (answered at 21:50 UTC from the logs below; nothing was changed in the campaigns).
+
+**The ladder (journal of `mgid-cpa-ladder-second`, UTC).** E compare v2: $0.50 -> 1.00 (14:07) -> 1.50 -> 2.00 -> 2.50 -> 3.00 -> 3.50 (19:07) -> 4.00 (20:07, 1.0 clicks an
+hour), at 21:07 **held at $4.00 with 13.0 clicks an hour** (the goal of 10 is reached). F compare2 v2 starts one hour later (first judged 15:07) and got $4.00 only at 21:07
+(1.0 clicks an hour); its first look at that price is 22:07. The copies were never judged: all their teasers are rejected (below). So clicks come in numbers from a target of
+about $3.5-4, not from 5 or 50 cents; the climb from $0.50 to $3 only lifted E v2 from 6 to ~150 impressions an hour with no click.
+
+**Delivery since the window opened (v2 report by hour, impressions/clicks).** E v2 by UTC hour, target at the start of the hour -> after :07: 12h 6 ($0.05), 13h 5 ($0.05 -> 0.50 at 13:07 by the owner), 14h 17
+(0.50 -> 1.00), 15h 28 (-> 1.50), 16h 103 (-> 2.00), 17h 162 (-> 2.50), 18h 152 (-> 3.00), 19h 368 and 1 click (-> 3.50), 20h **1218 and 12 clicks, $0.98** (-> 4.00), 21h 806
+and 2 clicks (partial hour); F v2: 258 impressions, 4 clicks. Together 19 clicks, $1.53, i.e. 8 cents a click (MGID's own price, far under the target), $1.28 of it E v2. **The report's `day`/`hour` buckets of the second account
+are in the account's time zone, `Europe/Tirane` (v1 `clients/{id}.timezone`): UTC+2 until 25.10, then UTC+1**, not UTC+3 as `mgid_api.report` says for the main account (I first
+read the hours as MSK and they were an hour off: E v2 showed impressions in the "14h" bucket although it was started at 12:02 UTC = 15:02 MSK; the RollerAds clicks line up
+with UTC+2). The stop-loss counted $1.28 for E v2 and $0.06 for F v2 at 21:45 UTC (its source, the lifetime `campaigns-stat`, lags): E v2 has ~$1.7 left, at ~$1 an hour it
+is stopped around 23:30 UTC; the window closes at 01:00 UTC anyway. Balance $72.66.
+
+**RollerAds, offer 1537, UTC day 21.10 (`/api/statistics/aff-clicks`).** 22 clicks of the offer. **16 are real MGID traffic with a 32-hex click id in `aff_click_id`**: teaser
+27871308 (E v2) 10, 27871303 (E v2) 2, 27871311 (F v2) 4, each with `source_id=<widget>_<teaser id>`; MGID counted 10, 5 and 4 for the same teasers, so 16 of 19 clicks (84 %) reached
+the tracker. The links of these teasers are `...?source_id={widget_id}_{teaser_id}` and carry no click id of their own, so **the campaign-level UTM works** (the original
+teasers 27650xxx of E/F v2 got 59 impressions and no click, not seen yet, but the setting is the same). The other six: 3 clicks of 17:29-17:30 UTC on teaser 28220707 (A docs copy, ISP
+«WS Telecom») and 2x `utmsandbox_{teaser_id}` (17:28, 17:32, macOS, Spectrum) = MGID's moderators checking that copy, and the India click of 12:12 UTC with empty macros. US 21, India
+1; mobile 17 (Android 11, iOS 6), desktop 5; all inside the window; **no lead**. Offer counters: 10085 clicks, 4 leads, CR 0.040 %, still `active`. The postback chain (RollerAds
+1373 -> a.mgid.com) is still **unproven**, it needs a lead. The payout depends on the lead (T1 $45 down to T6 $0.50, the page of the offer), so 8 cents a click at 0.04 % is
+~$200 a lead against ~$13 on average.
+
+**Moderation.** A docs and C calc ("CPA tune" copies): all 5 teasers `rejected`, «Content mismatch», the verdict came after the check of 17:30 UTC (a near-identical title passed on
+E v2, so it is a per-teaser verdict, not a rule); with no approved teaser they cannot deliver and the ladder only renews their state. The 8 missing C calc teasers were not added.
+Nutra copies: the moderation is over, 40 teasers: 36 `rejected` (Osteflex 5 and Hypertea 6 «Malware has been detected» on the lander; Cortitron 7, Cardiotensive 6, ToxicOFF 6,
+MatchaSlim 6 «Footnotes / User awareness», Cardiotensive also «Spoilers»), Varcosin 4 `blocked` by the system, Nautubone (BA) has no teaser. Nothing of it can run; the
+campaigns are paused and were not deleted.
+
 ## 21.10 noon: the offer window for the CPA tune campaigns, CPA tune on the already moderated campaigns
 
 Owner, 21.10: «cpa tune окна поставь по расписанию и проверь мы все ещё ждём модерацию?», then «Попробуй заменить модель на cpa tune в уже
