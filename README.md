@@ -26,6 +26,17 @@ window was closed, so the two CPA tune copies (no approved teaser yet) were paus
 the window add its id to `MGID_WINDOW_CAMPS` in the unit and `systemctl daemon-reload`. To give a stopped campaign a new $3, move its entry in
 `/var/lib/mgid-spend-stop-second/baseline.json` to its lifetime spend (the stop-loss `--reset` does it for all).
 
+**15:00 MSK, the window opened (12:03 UTC):** the service started the four campaigns, E v2 and F v2 turned `active` with their 8 and 5 teasers
+`active`. 75 minutes later E v2 had 7 impressions and F v2 6, no click (before the CPA tune conversion the same campaigns got ~70 impressions a minute on a manual
+bid); no placement, domain or IP filter, language English, nothing in the campaign keeps it out of the auction, so it is the bidding: a click costs
+target CPA x predicted lead rate, and with a lead rate near 0.04 % (4 leads in 9612 clicks, $52) a 5 cent target is a fraction of a cent, far under the ~3 cent
+minimum click price of the US. Owner, 13:07 UTC: «Да подними до 0.5» -> E v2 target CPA $0.50 (PATCH 204, read back; conversion value left at 0.05); F v2 and the
+copies stay at 0.05 as a control. The money side: at the 5.7 cents a click cost on 20.10 and 0.04 % a lead costs ~$140 against an average payout of $13 and a
+$3 stop-loss per campaign buys ~50 clicks, i.e. ~0.02 leads, so this test can show the plumbing, not a CPA. RollerAds saw one click of the window on offer 1537:
+12:12 UTC, India, desktop, `source_id=_` (both macros empty) and no `aff_click_id` = a moderator opening a link of the new copies, so their moderation has started.
+The click id appended by the UTM on E/F v2 is still **not** verified (no real click yet; a 12:28 UTC click with a 32-hex `aff_click_id` was on offer 1021, another
+source of the owner).
+
 **Moderation at 12:50 MSK:** the 5 teasers of the CPA tune copies (A docs 4, C calc 1) are still `onModeration` after ~13 hours. Nutra copies: 30 of 40
 rejected (MatchaSlim, 6, joined the Italian ones with «Footnotes / User awareness» since the morning), 10 pending (Varcosin 4, ToxicOFF 6), none approved.
 
