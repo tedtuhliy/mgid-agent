@@ -4,6 +4,23 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 22.10 evening: the domains (Sources tab) of the leadgen test
+
+Owner, 22.10: «А можеш посмотреть с каких площадок идёт? Именно название доменов через вкладку sources». Read only; nothing was blocked.
+
+**Where the domain names are.** v1 `goodhits/campaigns/{id}/quality-analysis-sources/?dateInterval=interval&startDate=&endDate=` (`sourceName` = domain, only sources with delivery), the v2 report dimension
+`source`, and v2 `.../campaigns/{id}/sources/selective-bidding-statistics` (`sourceName`; its `widgetId` and `children` come back empty). Which widget id (the `{widget_id}` of the link, `source_id` in the
+RollerAds tracker) is which domain: v2 report with the dimensions `widgetId` x `source` (+ `day`). `sources_report.py` prints the tab (`MGID_ACCOUNT=second python3 sources_report.py 12468751,12468752
+2026-10-21 2026-10-22`), tests in `test_sources_report.py`. The days of the second account are Europe/Tirane days (see 21.10 evening).
+
+**E v2 + F v2 since the CPA tune restart (21.10 - 22.10 MGID days): 38 domains, 9700 impressions, 126 clicks, $12.85.** By clicks: buzzday.info 4704 impressions/28 clicks/$3.29 (48 % of all impressions,
+CTR 0.6 %), vitabloomy.shop 395/23/$2.01 (5.8 %), ultragameworld.com 667/8/$0.61, playexpedition.com 79/7/$0.23 (8.9 %), nullsite.info 31/6/$0.62 (19 %), thrivevia.shop 21/6/$0.46 (29 %),
+infojournalalert.com 182/4/$0.11, claimjustice.site 16/3/$0.45 (19 %), stories24.info 361/3/$0.31, gamecheckmate.com 27/3/$0.14 (11 %); the US news sites sell few clicks dear: lawandcrime.com 297/2/$0.61,
+usaglobe24.com 596/2/$0.42, patch.com 587/1/$0.34. **Six domains with at least 2 clicks and a CTR of 5 % or more (vitabloomy.shop, playexpedition.com, nullsite.info, thrivevia.shop, claimjustice.site,
+gamecheckmate.com) are 48 of the 126 clicks (38 %) and $3.91 of $12.85 (30 %)**; nullsite.info had 4 clicks against 2 impressions on 22.10. The widgets 75930494 and 75930495 of the double hits in RollerAds
+(22.10 evening) are both **vitabloomy.shop** (269 + 126 impressions, 20 + 3 clicks on 22.10). On 20.10, with the manual bids of 5-6 cents, 241 of the 263 clicks of E and F came from two sites,
+infojournalalert.com and newswiress.com; under CPA tune they have 4 and 2 clicks. No domain has a conversion (no lead yet).
+
 ## 22.10 evening (18:45 MSK): the leadgen test after the window opened, still no lead
 
 Owner, 22.10: «Ок как идёт лидген?» (answered from the MGID API and RollerAds, nothing was changed).
