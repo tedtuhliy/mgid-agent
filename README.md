@@ -14,7 +14,7 @@ The window opened at 12:00 UTC and the service started the four campaigns; E v2 
 first hour after the opening was the best (8-9 am US Eastern), then 6-10 clicks an hour on both campaigns together, below the 10-20 an hour of the order (21.10 evening had 17-20). Counted
 against the limit of $10 since the baseline (lifetime - baseline): **E v2 $6.69, $3.31 left; F v2 $5.73, $4.27 left**. Balance $61.48. Since the test began (21.10 12:02 UTC): ~123 clicks and ~$12.4.
 
-RollerAds, offer 1537, 12:09-15:31 UTC: 66 rows, all with a 32-hex click id, all US (mobile 61: Android 49, iOS 14 incl. tablets; desktop 3), **no lead**; offer counters 10202 clicks, 4 leads (the same 4),
+RollerAds, offer 1537, 12:09-15:31 UTC: 66 rows, all with a 32-hex click id, all US (phones 61: Android 49, iOS 12; tablets 2; desktop 3), **no lead**; offer counters 10202 clicks, 4 leads (the same 4),
 CR 0.039 %. **18 of the 66 rows are a second hit of the same click id 1-3 seconds after the first, all from widgets 75930494 (16) and 75930495 (2)**, so the distinct clicks are 48 (26 in the 12h hour,
 6, 6 and 10 in the next three), 87 % of MGID's 55; the cabinet of RollerAds (73 clicks today) therefore shows more than were paid for. Widget 75930494 alone is 16 of the 48 distinct clicks.
 By teaser (distinct): 27871311 (F v2) 20, 27871303 (E v2) 19, 27871308 (E v2) 8; none on the old teasers 27650xxx.
