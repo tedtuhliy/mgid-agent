@@ -4,6 +4,30 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 22.10 noon (13:55 MSK): the evening ran to the cap of the ladder, the window is shut, E v2 has ~$1 of its $5 left
+
+Owner, 22.10: «Как идёт?» (answered from the logs below, nothing was changed).
+
+**The ladder, 22:07-00:07 UTC (journal).** E v2: 22:07 4.00 -> 4.50 (4.0 clicks an hour), 23:07 held at 4.50 (11.0), 00:07 4.50 -> **5.00** (7.0). F v2: 22:07 4.00 -> 4.50 (6.0),
+23:07 4.50 -> **5.00** (7.0), 00:07 `cap` (3.0 clicks an hour, the $5.00 ceiling). So both are at the cap now; the thirteen clicks of 21:07 were not a steady rate, 10 an hour on
+each campaign was reached only in single hours. The ladder only renews its state while the window is shut (state of 10:07 UTC: E v2 and F v2 at $5.00).
+
+**Delivery of the evening, by UTC hour (impressions/clicks/$; Tirane buckets shifted by 2 hours).** E v2: 20h 1218/12/$0.98, 21h 1189/6/$0.56, 22h 1764/10/$0.65, 23h 2286/13/$1.49, 00h
+2409/2/$0.27, 01h 142/0. F v2: 20h 36/1, 21h 341/6/$0.41, 22h 1260/7/$0.63, 23h 1145/7/$0.94, 00h 1096/3/$0.22, 01h 66/0. Together 17 and 20 clicks an hour at 22h and 23h UTC
+(18:00-20:00 US Eastern) and 5 at 00h; a click costs 7-11 cents at every target. Since the window opened on 21.10: E v2 44 clicks, F v2 24, **68 clicks and $6.29 in all (9.3 cents a
+click)**. Balance $67.83. Nothing else of the account is active.
+
+**The window** paused all four campaigns at 01:00:38-41 UTC (log of `mgid-offer-window-second`); the stop-loss did not fire (no event after the baseline move of 09:52 UTC 21.10). Its count
+at 10:55 UTC against the limit of $5: **E v2 $4.03 (lifetime $118.13 - baseline $114.10), $0.97 left; F v2 $2.26 ($110.38 - $108.12), $2.74 left**. The window opens at 12:00 UTC (15:00
+MSK) and starts both again; at ~9 cents a click E v2 has ~10 clicks left (about an hour), F v2 ~30, and the stop-loss then keeps them paused (the window service refuses to start a
+campaign at or over the limit). Its source, the lifetime `campaigns-stat`, lags, so a campaign can pass the limit by what it spends in between (up to ~$1 at this pace).
+
+**RollerAds.** Offer counters of 1537: 10136 clicks (10085 at 21:47 UTC the evening before, +51), **4 leads, the same 4 as before: no lead from MGID in 68 clicks**, CR 0.039 %. The
+`aff-clicks` list keeps only the last ~10 hours (`yesterday` and `today` returned 7 rows each), so per-click checks have to be made the same evening. Its 7 rows: 4 real clicks of 00:12-01:01 UTC (teasers 27871308, 27871311 x2, 27871304, each with a 32-hex
+click id; the last one 20 seconds after the pause), 2 Microsoft Azure crawler hits at 03:01 and 03:27 UTC with a non-MGID `source_id`, and one click at 04:01 UTC from a hosting IP
+(HostHatch, desktop) on teaser 27871308 with a click id, three hours after the campaigns were paused (MGID counted no click in that hour). The postback chain (RollerAds 1373 -> a.mgid.com) is still unproven. At 9 cents a click and 0.04 %
+a lead costs ~$230 against ~$13 paid, so the test checks the plumbing (clicks arrive, the click id travels), not a CPA.
+
 ## 21.10 evening (to 00:45 MSK 22.10): the ladder reached $4, the click id is verified, the copies and the nutra teasers are rejected
 
 Owner, 21.10: «Как идёт?» (answered at 21:50 UTC from the logs below; nothing was changed in the campaigns).
