@@ -4,6 +4,36 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 22.10 afternoon: which nutra networks we have access to, and why the nutra teasers were rejected
+
+Owner, 22.10: «Изучи доступы все что у тебя есть дай список в партнёрские программы по нутре aray adcombo dr cash и другие. Нужно обновить ссылки насколько я понял ето причина
+отклонений на нутре кампаниях». Nothing was changed in MGID or in the networks; reads only.
+
+**The keychain.** The vault of this container (`~/.claude/secrets/vault.enc.json`, snapshot of 13.10, 92 services) is stale and has neither `aray` nor `drcash`; the fresh copy from the
+repository (the git command of the `secrets` skill, Tedbolt main 22.10, 111 services) has both. The history of that file (107 readable versions since 31.07) has the same 111 names:
+nothing was lost and nothing else ever stood there. Nutra networks: `aray` (ARAY_EMAIL, ARAY_PASSWORD, ARAY_API_KEY), `drcash` (DRCASH_EMAIL, DRCASH_PASSWORD); both were restored on
+18.10 from the Drive copy of 31.07. **Never stored: AdCombo and ClickHub** (the `clickhub` skill exists, its `CLICKHUB_LOGIN`/`CLICKHUB_PASSWORD` do not; nothing on Drive either, the only
+Dr.Cash file there is a shared folder «Sustarox» of marketing@dr.cash with creatives).
+
+**What works (22.10).** Aray: aray.com opens and the login page loads in headless Chromium (`playwrightsuper`), but `POST /auth/login` answers 403 «Just a moment...» (Cloudflare managed
+challenge) even from the browser, so no login from this IP; the tenant config of the site lists the nutra cabinet `nutra.aray.com`, which resets the connection from here. Dr.Cash: `dr.cash`
+answers 200, `partners.dr.cash` is refused by the environment's network policy (CONNECT 502): it has to be added to Allowed domains (environment settings), I did not go around it. AdCombo:
+adcombo.com and api.adcombo.com answer 403 (Cloudflare), no credentials. Other networks in the vault that are not nutra: Zeydoo (API ok, balance $77.84 + $18.30 in hold, 48 offers: surveys,
+finance, playables), Traforce = Affise «Victoriya» (API ok, 124 offers, all dating), LuckyFeed (OAuth ok, 3542 streams; monetisation, not an offer network), cpamatica, ApproachX, iMonetizeIt (dating).
+
+**Why the nutra teasers were rejected (the screenshots the moderators attach, `https://i.gyazo.com/<id>.png`).** The links of the eight copies are AdCombo trackers,
+`uh1fadd1a6uh.uewhbgfvds.cc` (Osteflex, Hypertea, Varcosin, ToxicOFF, MatchaSlim) and `uh1fadd1a6uh.axdsz.pro` (Cortitron, Cardiotensive, Nautubone), `?rid=&subacc=&subacc2=`.
+- Albania, Osteflex and Hypertea, «Malware has been detected»: the screenshots are Chrome's red **«Dangerous site»** page (Safe Browsing) on the link. That one is the link. Google's transparency
+  report (`transparencyreport.google.com/transparencyreport/api/v3/safebrowsing/status?site=`) shows both tracker domains clean (last scanned 09:15 and 09:24 UTC on 22.10), so the flag was temporary or limited to that URL.
+  Varcosin: `blocked` by `system`, no reason given.
+- Italy, Cortitron, Cardiotensive, ToxicOFF, MatchaSlim, «Footnotes», «User awareness» (+ «Spoilers» on Cardiotensive): the screenshot of Cardiotensive is the AdCombo landing, a story of a
+  man who had a stroke with grey boxes «18+ Click» in place of images. That is the content of the landing, not the domain: a new tracking link to the same landing will be rejected again; it needs a
+  different landing (an own prelander with a footnote in front of the order page, no shock images or disease claims, see `nutra-bundle-check`).
+- Bosnia, Nautubone: the same «malware» reason of 13.10, the same kind as Albania.
+So the owner's guess is right for Albania and Bosnia and not for Italy. Updating either needs a login to AdCombo (new tracker domain, a landing that is the order page) or Dr.Cash/Aray (flows with
+their own landings): the blockers are the missing AdCombo/ClickHub logins, the Dr.Cash host in the network policy and the Cloudflare challenge of Aray. 40 teasers are already rejected on this
+account, so nothing is sent to moderation before the link and the landing are checked by hand.
+
 ## 22.10 noon (13:55 MSK): the evening ran to the cap of the ladder, the window is shut, E v2 has ~$1 of its $5 left
 
 Owner, 22.10: «Как идёт?» (answered from the logs below, nothing was changed).
