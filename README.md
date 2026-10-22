@@ -28,6 +28,12 @@ click id; the last one 20 seconds after the pause), 2 Microsoft Azure crawler hi
 (HostHatch, desktop) on teaser 27871308 with a click id, three hours after the campaigns were paused (MGID counted no click in that hour). The postback chain (RollerAds 1373 -> a.mgid.com) is still unproven. At 9 cents a click and 0.04 %
 a lead costs ~$230 against ~$13 paid, so the test checks the plumbing (clicks arrive, the click id travels), not a CPA.
 
+**The limit, $10 (11:02 UTC).** Owner: «Добавь лимит ещё по 5 баксов». The stop-loss limit of the second account is now **$10** (it was $3, then $5): `Environment=MGID_SPEND_LIMIT=10.0` in
+`mgid-spend-stop-second.service` and in `mgid-offer-window-second.service`, changed in place as on 21.10 (`sed`, `daemon-reload`, backups `/root/*.service.bak-20261022`), the baseline
+untouched: it is counted from the reset of 09:52 UTC 21.10, so "another $5" is the old remainder plus $5. At 11:02 UTC E v2 had $4.03 counted, **$5.97 left**; F v2 $2.26, **$7.74
+left**; balance $67.83. The campaigns were paused (window shut), the first run with the new limit printed «лимит $10.00»; the window opens at 12:00 UTC and starts both. The limit is still
+one number for the whole account. The ladder is not touched (both at its $5.00 ceiling).
+
 ## 21.10 evening (to 00:45 MSK 22.10): the ladder reached $4, the click id is verified, the copies and the nutra teasers are rejected
 
 Owner, 21.10: «Как идёт?» (answered at 21:50 UTC from the logs below; nothing was changed in the campaigns).
