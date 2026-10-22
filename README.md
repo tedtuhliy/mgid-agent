@@ -4,6 +4,21 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 22.10 evening (18:45 MSK): the leadgen test after the window opened, still no lead
+
+Owner, 22.10: «Ок как идёт лидген?» (answered from the MGID API and RollerAds, nothing was changed).
+
+The window opened at 12:00 UTC and the service started the four campaigns; E v2 and F v2 are `active` at the $5.00 ceiling of the ladder (it only has `cap` left to do), the two copies are
+`active` with no approved teaser. MGID report, 12:00-15:43 UTC (Tirane buckets shifted by 2 hours): **E v2 28 clicks, $2.88; F v2 27 clicks, $3.47: 55 clicks, $6.35, 11.5 cents a click**
+(higher than the 9 cents of the evening of 21.10). E v2 by UTC hour 12h 1555 impressions/15 clicks, 13h 1133/5, 14h 848/2, 15h 671/6; F v2 1691/17, 956/4, 864/2, 639/4: the
+first hour after the opening was the best (8-9 am US Eastern), then 6-10 clicks an hour on both campaigns together, below the 10-20 an hour of the order (21.10 evening had 17-20). Counted
+against the limit of $10 since the baseline (lifetime - baseline): **E v2 $6.69, $3.31 left; F v2 $5.73, $4.27 left**. Balance $61.48. Since the test began (21.10 12:02 UTC): ~123 clicks and ~$12.4.
+
+RollerAds, offer 1537, 12:09-15:31 UTC: 66 rows, all with a 32-hex click id, all US (mobile 61: Android 49, iOS 14 incl. tablets; desktop 3), **no lead**; offer counters 10202 clicks, 4 leads (the same 4),
+CR 0.039 %. **18 of the 66 rows are a second hit of the same click id 1-3 seconds after the first, all from widgets 75930494 (16) and 75930495 (2)**, so the distinct clicks are 48 (26 in the 12h hour,
+6, 6 and 10 in the next three), 87 % of MGID's 55; the cabinet of RollerAds (73 clicks today) therefore shows more than were paid for. Widget 75930494 alone is 16 of the 48 distinct clicks.
+By teaser (distinct): 27871311 (F v2) 20, 27871303 (E v2) 19, 27871308 (E v2) 8; none on the old teasers 27650xxx.
+
 ## 22.10 afternoon: which nutra networks we have access to, and why the nutra teasers were rejected
 
 Owner, 22.10: «Изучи доступы все что у тебя есть дай список в партнёрские программы по нутре aray adcombo dr cash и другие. Нужно обновить ссылки насколько я понял ето причина
