@@ -24,6 +24,23 @@ nullsite.info 90574, thrivevia.shop 220654, claimjustice.site 345819, gamecheckm
 tracker twice). Both campaigns have `sourcesOptimization` on and already carried an `except` list of 155 sources; read back: 161, the six present with their names, nothing lost (PATCH is an upsert). Undo: PATCH/PUT the list without these six ids
 (the old list of each campaign was saved before the change). `sources_report.py` shows the delivery by domain.
 
+## 23.10, later: the six domains are back; new links for the rejected nutra bundles are not possible yet
+
+Owner, 23.10: «Верни vitabloomy.shop, playexpedition.com, nullsite.info, thrivevia.shop, claimjustice.site, gamecheckmate.com. Разве они плохие и много потратили?»
+
+**Six domains returned** (10:00 UTC): `PATCH .../sources/filters/batch-delete` with their ids on E v2 and F v2, read back: 155 sources on each, the same set as the list saved before the block. The honest reading of the data: they were 48 of 126 clicks and
+$3.91 of $12.85 (30 %), at 8.1 cents a click against 11.5 for the other domains, and **no domain has produced a lead**, so nothing proves them bad; they were blocked on suspicion (CTR 5-29 % on a handful of impressions, clicks without impressions on
+nullsite.info, double hits from vitabloomy.shop), not on results. Do not block on CTR again without being asked.
+
+**Owner, same day: «Зайди а партнерки где у тебя есть доступ и возьми новые ссылки на связки что нам отклонили и перенаправить их», then «На нутру я имею ввиду. Ставки по 5 центов за cpa tune».** The eight nutra copies are still exactly that: `targetCpa` $0.05,
+paused, `isAutoLaunchAdsAfterApproval` off (checked 09:55 UTC: Osteflex 5, Hypertea 6, Cortitron 7, Cardiotensive 6, ToxicOFF 6, MatchaSlim 6 teasers `rejected`, Varcosin 4 `blocked`, Nautubone none). No new link could be taken, because every way in is closed:
+- Dr.Cash: `partners.dr.cash` is refused by the environment's proxy (CONNECT 502), login and password are in the keychain.
+- Aray: the login page loads, but `/auth/login` (GET and POST) answers a Cloudflare managed challenge («Just a moment...») that never finishes in headless Chromium; the proxy log shows why or one reason why: `brunhild.challenges.cloudflare.com` is refused too,
+  so the challenge script cannot reach its own host. The nutra cabinet `nutra.aray.com` is refused as well. Hosts to put on the Allowed list of the environment: `partners.dr.cash`, `nutra.aray.com`, `challenges.cloudflare.com`.
+- AdCombo (the network of all eight bundles, trackers `uh1fadd1a6uh.uewhbgfvds.cc` and `uh1fadd1a6uh.axdsz.pro`) and ClickHub: no login in the keychain or its history; adcombo.com answers Cloudflare 403.
+Nothing was sent to moderation. Once there is a way in: find the same products (or others for AL/IT/BA) with a landing that is the order page, create the teasers on the new link in the same paused CPA tune $0.05 campaigns (`nutra_direct.py --teasers` after
+the `link` of the campaign in `data/nutra-direct-copies.json` and its ledger `data/nutra-direct-created.json` are updated), one teaser per campaign first. Italy needs a different landing, not only a new domain (see 22.10 afternoon).
+
 ## 23.10 midday (12:20 MSK): both campaigns ran to the $10 limit overnight, no lead in the whole test
 
 Owner, 23.10: «Лидов нет за 17 часов последних?» (answered from the MGID API and RollerAds, nothing was changed).
