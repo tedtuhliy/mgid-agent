@@ -1,8 +1,35 @@
 # mgid-agent
 MGID/Adskeeper agent.
 
-`index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
-MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
+`index.js` / `Dockerfile` are the small health-check service. Everything about the MGID tests of the owner lives in `mgid/`, plain Python,
+standard library only: the main account 816929 (v2 client 939031, blocked by MGID since 14.10) and the second account 816921 (v2 client 939023,
+the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
+(replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
+
+## 23.10 afternoon (2): the skills handed over; correction on tyblk.info (Bosnia lander IS flagged by Google)
+
+Owner, 23.10: «Обнови скил мгид и скил нутра партнерки создай с данными как в них входить с данными по доступу в паринерки и cpa tune как настраивать и скинь скилы сюда файлами». Nothing was changed in MGID, Dr.Cash, Aray or on Inferno.
+
+**Files.** `skills/mgid/SKILL.md`: the Tedbolt skill rewritten (two accounts and which one works, the CPA tune how-to with the verified request bodies, goals, UTM and postback, teaser rules
+and moderation reasons, the Sources tab and source filters, the three services on Inferno with how to change the stop-loss limit without resetting the baseline, boundaries, the old dating
+mechanics of the blocked account kept as reference). It corrects two things in the first version: the account 816929 is no longer called «second» (it is the main one, blocked; the second is 816921), and **a top-up does start
+campaigns that the network stopped for lack of funds** (README «Things found on the way»; the first version said they stay paused). `skills/nutra-partners/`: SKILL.md (where the
+credentials live by vault service and field name, how to log in to Dr.Cash and Aray through the Vision cloud browser, the Dr.Cash API and the Aray `/api/offers`, what AdCombo and ClickHub lack,
+the eight nutra copies, the CPA tune recipe for nutra, a checklist before moderation) and `scripts/`: `ts_tun_up.sh`, `ts_down.sh`, `ts_cleanup.mjs` (tailnet with a TUN device and its cleanup),
+`vision.sh` (list/start/stop through the local API), `vision_cdp.mjs`, `dr_login.mjs`, `dr_lib.mjs`, `dr_offers.mjs`, `dr_landers.mjs`, `aray_login.mjs`, `aray_offers.mjs`, `lander_scan.mjs`,
+`safebrowsing.sh`. The scripts are the ones used on 23.10 with the paths and the CDP port moved to environment variables; they were syntax-checked and `safebrowsing.sh` was run, the browser
+ones were NOT run again (that would need a new tailnet node, a profile start and new logins). **No password, token or key is in any file**: the files were checked against every field of the vault
+services involved (drcash, aray, browser-vision, vision-box, tailscale, mgid, inferno-vps, rollerads); only host names, ids and tailnet addresses match, which are not credentials.
+
+**Correction.** The note of the afternoon below said `tyblk.info` (the Bosnia lander behind the AdCombo link of Nautubone) gave «no answer (redirect page)» in Google's Safe Browsing transparency report. That
+was wrong: the fourth request in a row got Google's captcha page («302 Moved» to google.com/sorry) and I read it as no answer. The real answer (23.10 11:57 UTC, scan time 05:07 UTC): **status 2 (some pages
+unsafe), second flag true**, so Google flags that host and the moderator's «Malware has been detected» on the Bosnia bundle has support. Statuses seen: 1 nothing found, 2 some pages unsafe, 3 unsafe
+(Google's own test site testsafebrowsing.appspot.com: status 3, first three flags true), 6 no data; which flag is which category is not decoded. Status 1 (nothing found) for: ljslfkjs.cc (Albania lander),
+uewhbgfvds.cc and axdsz.pro (AdCombo trackers), cortitron-03.health-line.me and health-line.me, bbcwebhosting.com, template.drcash.pro, drcash.pro, statthroat.tech, feleo.net, kfodjeos.com, ahacdu.com. The
+Albania verdict is still unexplained (flag temporary, or another variant of the lander). `skills/nutra-partners/scripts/safebrowsing.sh` waits 5 s between hosts and says RATE-LIMITED when cut off.
+
+**State at 11:57 UTC** (read only): balance $53.37; E v2 and F v2 paused by us with $10.30 and $10.44 counted of the $15 limit; A docs and C calc paused, CPA tune $0.50; the eight nutra copies paused;
+the window service starts E v2, F v2, A docs and C calc at 12:00 UTC.
 
 ## 23.10 morning: the time window checked, six domains blocked, limit $15
 
@@ -28,7 +55,7 @@ tracker twice). Both campaigns have `sourcesOptimization` on and already carried
 
 Owner, 23.10: «Ладно давай Dr.Cash предлагает для этих продуктов, я на модерацию не отправлю. Почему? Если что то не понравится они отклонить сразу без проблем. Нужно проверить может модератор ошибся». Nothing was created, sent to moderation or launched. The checks below are static: `curl` without JavaScript from the container, and Google's Safe Browsing transparency report.
 
-- **Albania (Osteflex, Hypertea).** The moderator's screenshot is Chrome's «Dangerous site» interstitial, so Chrome flagged a page for the moderator at that time. The AdCombo test links redirect to `ljslfkjs.cc` (AL), `cortitron-03.health-line.me` (IT) and `tyblk.info` (BA). The transparency report: `ljslfkjs.cc` not flagged (checked 23.10 05:07 UTC), `health-line.me` not flagged (09:36 UTC), `tyblk.info` no answer (redirect page). So the flag may have been temporary or tied to one variant of the page. It can be checked only in a clean browser, not on the shared Vision box where the TikTok account runs.
+- **Albania (Osteflex, Hypertea).** The moderator's screenshot is Chrome's «Dangerous site» interstitial, so Chrome flagged a page for the moderator at that time. The AdCombo test links redirect to `ljslfkjs.cc` (AL), `cortitron-03.health-line.me` (IT) and `tyblk.info` (BA). The transparency report: `ljslfkjs.cc` not flagged (checked 23.10 05:07 UTC), `health-line.me` not flagged (09:36 UTC), `tyblk.info` **flagged: status 2, second flag true, last scan 23.10 05:07 UTC** (my first look wrote «no answer (redirect page)»: that was Google's captcha page, the fourth request in a row; corrected in the section «skills handed over» above). So for Bosnia the moderator's verdict is supported; for Albania the flag may have been temporary or tied to one variant of the page. It can be checked only in a clean browser, not on the shared Vision box where the TikTok account runs.
 - **Italy (Cortitron).** The moderator's screenshot shows the story «Uomo di 53 anni che ha avuto un ictus …» and grey «18+ Click» placeholders. From the container the same landing shows neither (no placeholders and no stroke story in the static HTML of the three landers). The landers serve different variants to different visitors, so the screenshot cannot be reproduced from here. There is no evidence that the moderator erred, and no evidence that they did not.
 - **Dr.Cash landers** for Cortitron IT, Matcha Slim IT and Nautubone BA (see 23.10 late): fabricated testimonials with names, invented research, promises such as «perdere 25 chili in 28 giorni». Not sent, the decision is unchanged.
 
