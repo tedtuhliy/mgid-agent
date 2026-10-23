@@ -24,6 +24,18 @@ nullsite.info 90574, thrivevia.shop 220654, claimjustice.site 345819, gamecheckm
 tracker twice). Both campaigns have `sourcesOptimization` on and already carried an `except` list of 155 sources; read back: 161, the six present with their names, nothing lost (PATCH is an upsert). Undo: PATCH/PUT the list without these six ids
 (the old list of each campaign was saved before the change). `sources_report.py` shows the delivery by domain.
 
+## 23.10 afternoon: the owner asked to send the Dr.Cash landers to moderation and to check whether the moderators erred; nothing was sent
+
+Owner, 23.10: «Ладно давай Dr.Cash предлагает для этих продуктов, я на модерацию не отправлю. Почему? Если что то не понравится они отклонить сразу без проблем. Нужно проверить может модератор ошибся». Nothing was created, sent to moderation or launched. The checks below are static: `curl` without JavaScript from the container, and Google's Safe Browsing transparency report.
+
+- **Albania (Osteflex, Hypertea).** The moderator's screenshot is Chrome's «Dangerous site» interstitial, so Chrome flagged a page for the moderator at that time. The AdCombo test links redirect to `ljslfkjs.cc` (AL), `cortitron-03.health-line.me` (IT) and `tyblk.info` (BA). The transparency report: `ljslfkjs.cc` not flagged (checked 23.10 05:07 UTC), `health-line.me` not flagged (09:36 UTC), `tyblk.info` no answer (redirect page). So the flag may have been temporary or tied to one variant of the page. It can be checked only in a clean browser, not on the shared Vision box where the TikTok account runs.
+- **Italy (Cortitron).** The moderator's screenshot shows the story «Uomo di 53 anni che ha avuto un ictus …» and grey «18+ Click» placeholders. From the container the same landing shows neither (no placeholders and no stroke story in the static HTML of the three landers). The landers serve different variants to different visitors, so the screenshot cannot be reproduced from here. There is no evidence that the moderator erred, and no evidence that they did not.
+- **Dr.Cash landers** for Cortitron IT, Matcha Slim IT and Nautubone BA (see 23.10 late): fabricated testimonials with names, invented research, promises such as «perdere 25 chili in 28 giorni». Not sent, the decision is unchanged.
+
+**Why not "rejection is harmless".** Each rejection stays on the account (40+ nutra teasers are rejected already). An approval of these pages would mean real people see invented testimonials and studies about a health product. A moderator's verdict does not settle that.
+
+**Open:** (1) a clean-browser check of the Albania landing, if the owner wants it, in an isolated profile; (2) the eight Italian COD offers of Aray (Formelan 4431, Menstill Plus 4428, Nano Slim 4679, ProstAktiv 4293, Revinelle 4860 and 4861, Varilux Premium 4302, Vigor Max Nature 4426): their landers to be read in the cabinet, then checked the same way as above; (3) the 1537 campaigns A docs and C calc were not touched.
+
 ## 23.10 late (14:00 MSK): the nutra copies are not relaunched; the Dr.Cash landers for the rejected bundles carry fabricated testimonials and studies
 
 Owner, 23.10: «Создай заново кампании перезапусти. Модерация отклонит если что то им снова на понравится» (about the eight nutra copies). Reads only: nothing was created in Dr.Cash or Aray, nothing was sent to MGID moderation.
