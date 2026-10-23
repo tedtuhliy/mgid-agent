@@ -24,6 +24,24 @@ nullsite.info 90574, thrivevia.shop 220654, claimjustice.site 345819, gamecheckm
 tracker twice). Both campaigns have `sourcesOptimization` on and already carried an `except` list of 155 sources; read back: 161, the six present with their names, nothing lost (PATCH is an upsert). Undo: PATCH/PUT the list without these six ids
 (the old list of each campaign was saved before the change). `sources_report.py` shows the delivery by domain.
 
+## 23.10 late (14:00 MSK): the nutra copies are not relaunched; the Dr.Cash landers for the rejected bundles carry fabricated testimonials and studies
+
+Owner, 23.10: «Создай заново кампании перезапусти. Модерация отклонит если что то им снова на понравится» (about the eight nutra copies). Reads only: nothing was created in Dr.Cash or Aray, nothing was sent to MGID moderation.
+
+**Access used.** The Vision cloud browser on vision-box (Coolify, Hostinger 31.97.180.182): profile geozo3 (direct connection, exit = the box, Frankfurt) started through the local API, driven over CDP through the tailnet, and stopped again at the end. The TikTok DE3 profile that was already running was not touched. GEOZO TEDDY (NodeMaven US) returns `Proxy error`; the cause is not verified (the NodeMaven package was empty already on 20.10). Dr.Cash: logged in (infodreamer66, manager Kirill, balance $1136.25); the offers came from the cabinet's own API (`drcash.io/v1/offer`, 3704 offers), the auth header is taken from the page session and nothing is printed. Aray: the login that headless Chromium could not pass (Cloudflare challenge) passes in the Vision browser; dashboard and `/api/offers` (290 offers, list in the field `objects`) read.
+
+**Dr.Cash matches for the rejected bundles.** Cortitron IT 32535 (Joints, $33), Matcha Slim IT 32364 (Diet, $27), Nautubone BA 31602 (Joints, $21, approve 49.73 %) and 31542 ($24, same templates as 31602). Not on Dr.Cash in our geos: Osteflex and Hypertea (AL); Cardiotensive and ToxicOFF (IT; only Cardiotens Plus, another product); Varcosin only in HR, RS and SI.
+
+**The landers of these offers** (template.drcash.pro, 12 pages read: Cortitron a-1 to a-5, Matcha Slim a-1 to a-4, Nautubone a-1 to a-3). They carry what the moderators already rejected under the same bundles: fabricated testimonials with names («Vittoria Massano», «Sara Marinelli», a «studentessa di medicina» who «ha inventato un rimedio»), invented research («Testato dagli scienziati», «Studi scientifici hanno confermato», «Centro Internazionale di Ricerca sulla Salute Umana»), promises such as «perdere 25 chili in 28 giorni», «CortiTron è un vero miracolo», «Elimina il dolore», «Krema koja u potpunosti uklanja bolove», «17 godina kliničkih ispitivanja». Every page loads assets from static.statthroat.tech, some from feleo.net, kfodjeos.com and cdn.ahacdu.com. The earlier rejections of the same bundles were «Footnotes» and «User awareness».
+
+**Decision (mine; the owner gets this report now):** no teaser on these landers and no relaunch of the copies with them, whatever moderation decides. The pages deceive people about a health product, so a moderation pass would not make them honest.
+
+**Postback.** The Dr.Cash account has a global postback `https://a.mgid.com/postback?c={sub5}&e=lead&r={payment}` with `is_approved: false`: Dr.Cash has to approve it before any lead reaches MGID. Account domains: doctor*.com with CNAME ok (at least 12 listed; not checked against Safe Browsing).
+
+**Aray.** Italian COD health offers (the country is in the name; none for AL or BA): Formelan 4431 ($37), Menstill Plus 4428 ($37), Nano Slim 4679 ($42), ProstAktiv 4293 ($37), Revinelle FullPrice 4861 ($33), Revinelle LowPrice 4860 ($31), Varilux Premium 4302 ($37), Vigor Max Nature 4426 ($37). Their landers are not in the API fields and are not reachable from the container: not checked yet.
+
+**State.** Nutra copies 12520656 to 12520663 are still paused, with 40 teasers rejected (unchanged). The 1537 campaigns A docs and C calc were not touched. In Dr.Cash the "Create campaign" form of offer 32535 was opened and not submitted. The entry of 23.10 "Proxy error: пакет прокси пуст" in the task log was an assumption, not a finding.
+
 ## 23.10, later: the six domains are back; new links for the rejected nutra bundles are not possible yet
 
 Owner, 23.10: «Верни vitabloomy.shop, playexpedition.com, nullsite.info, thrivevia.shop, claimjustice.site, gamecheckmate.com. Разве они плохие и много потратили?»
