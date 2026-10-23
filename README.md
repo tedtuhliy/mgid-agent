@@ -4,6 +4,20 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 23.10 midday (12:20 MSK): both campaigns ran to the $10 limit overnight, no lead in the whole test
+
+Owner, 23.10: «Лидов нет за 17 часов последних?» (answered from the MGID API and RollerAds, nothing was changed).
+
+E v2 and F v2 are `paused` (`clientManuallyPaused`) at the $5.00 ceiling of the ladder: counted against the stop-loss limit of $10, **E v2 $10.30 and F v2 $10.44** (lifetime $124.40 and $118.56), so the stop-loss
+held them at the end of the evening of 22.10 (E v2 has 201 impressions and no click in the 00h UTC bucket, F v2 674 impressions and 4 clicks; the window shut at 01:00 UTC anyway). The window service will not start
+them again at 12:00 UTC (counted >= limit); the copies A docs and C calc will be started and still have no approved teaser. Nothing else of the account is active. Clicks of E v2 + F v2 per UTC hour on 22.10 after the
+last note: 15h 11, 16h 8, 17h 9, 18h 4, 19h 4, 20h 7, 21h 6, 22h 12, 23h 7, 00h (23.10) 4, i.e. 72 clicks; since the window opened at 12:00 UTC 22.10: **117 clicks, $14.38 (12.3 cents a click)**, since the CPA tune
+test began (21.10 12:02 UTC) about **185 clicks and $20.7**. Balance $53.37 (it was $61.48 at 15:43 UTC 22.10).
+
+**Leads: none.** RollerAds offer 1537: 10270 clicks (10202 at 15:43 UTC 22.10, +68), **4 conversions, the same 4 as before the test**, CR 0.039 %; MGID: `campaigns-stat` `buying` 0 for both campaigns, the conversion metrics
+of the v2 report come back empty. The `aff-clicks` list of RollerAds keeps only the last ~9 hours (5 rows, 00:07-02:01 UTC, no earnings), so the evening of 22.10 can only be read from the counters. At 12 cents a click and 0.04 % a lead
+costs ~$300 against ~$13 paid on average; 185 clicks are 0.07 of an expected lead, so the test shows the plumbing and not a verdict. Still open: the six high-CTR domains of the 22.10 evening note are not blocked yet.
+
 ## 22.10 evening: the domains (Sources tab) of the leadgen test
 
 Owner, 22.10: «А можеш посмотреть с каких площадок идёт? Именно название доменов через вкладку sources». Read only; nothing was blocked.
