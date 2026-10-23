@@ -8,7 +8,7 @@
 #
 # Own code directory, state and units. The env file /etc/mgid-second.env (account switch and token) and the stop-loss baseline of the second
 # account already exist and are only read. The campaign list is in the unit: change it there, `systemctl daemon-reload`.
-# MGID_SPEND_LIMIT (10.0 since midday of 22.10; 5.0 and 3.0 before) has to equal the limit of mgid-spend-stop-second: a higher number here would start what the
+# MGID_SPEND_LIMIT (15.0 since the morning of 23.10; 10.0, 5.0 and 3.0 before) has to equal the limit of mgid-spend-stop-second: a higher number here would start what the
 # stop-loss has just paused, a lower one would refuse to start a campaign that is still under the stop-loss limit.
 # Order: tests, stage and compile on the box, dry run of the staged code (changes nothing), swap, units, start.
 # Rollback: systemctl disable --now mgid-offer-window-second.timer
@@ -48,7 +48,7 @@ Description=MGID offer window, second account: start the 1537 CPA tune campaigns
 Type=oneshot
 EnvironmentFile=/etc/mgid-second.env
 Environment=MGID_WINDOW_CAMPS=$CAMPS
-Environment=MGID_SPEND_LIMIT=10.0
+Environment=MGID_SPEND_LIMIT=15.0
 Environment=MGID_SPEND_BASELINE=/var/lib/mgid-spend-stop-second/baseline.json
 Environment=MGID_WINDOW_ACTIONS=/var/lib/mgid-offer-window-second/actions.log
 WorkingDirectory=/var/lib/mgid-offer-window-second

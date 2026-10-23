@@ -4,6 +4,26 @@ MGID/Adskeeper agent.
 `index.js` / `Dockerfile` are the small health-check service. Everything about the dating tests on
 MGID account 816929 (v2 client 939031) lives in `mgid/`, plain Python, standard library only.
 
+## 23.10 morning: the time window checked, six domains blocked, limit $15
+
+Owner, 23.10: «Мы откручилавали компании по тайм таргету оффера? Добавь ещё по 5 баксов».
+
+**Was the delivery inside the time targeting of the offer (weekdays 08:00-21:00 US Eastern = 12:00-01:00 UTC in summer time)?** Yes. v2 report by day x hour (Tirane buckets shifted by 2 hours, classified with `offer_window.in_window`),
+E v2 + F v2 from 21.10 12:00 UTC to 23.10 09:20 UTC: inside the window 40258 impressions, **185 clicks, $20.67**; outside it 231 impressions, **0 clicks, $0.00** (the tail after a pause: 142 + 66 impressions in the 01h UTC bucket of 22.10, single
+impressions at night). Who stopped what on the evening of 22.10 (logs on Inferno): the stop-loss paused E v2 at 00:09:13 UTC (counted $10.30) and F v2 at 00:31:10 UTC (counted $10.33; $10.44 now), the window service paused the two copies at
+01:02:58-59 UTC. **One doubt left open:** the offer page says «Weekdays 08:00am - 09:00pm EST»; the window is kept in America/New_York, i.e. EDT (UTC-4) until 1 November. If the advertiser meant a fixed EST (UTC-5) the window is one hour later
+(13:00-02:00 UTC) and the first hour of ours, 12:00-13:00 UTC, would be outside it; that hour carried 3255 impressions, 32 clicks and $3.28 (16 % of the spend) over the days of the test, and it is the strongest hour (08-09 am Eastern).
+The window was not changed; the question went to the owner (starting at 13:00 UTC until 1 November would be safe under both readings).
+
+**Limit $15.** `MGID_SPEND_LIMIT=15.0` in `mgid-spend-stop-second.service` and `mgid-offer-window-second.service` (09:40 UTC, `sed` + `daemon-reload`, backups `/root/*.service.bak-20261023`, baseline untouched, as on 21.10 and 22.10; the first run printed
+«лимит $15.00»). Counted since the baseline of 21.10 09:52 UTC: E v2 $10.30 -> **$4.70 left**, F v2 $10.44 -> **$4.56 left** (the stop-loss overshoots by what MGID's lagging lifetime figure hides, $0.30-0.44 here). Both are paused by us
+(`clientManuallyPaused`), so the window service starts them at 12:00 UTC (15:00 MSK); the copies A docs and C calc start too and still have no approved teaser.
+
+**Six domains blocked on E v2 and F v2** (the option the owner took, see the evening note of 22.10): `PATCH .../campaigns/{id}/sources/filters` with `filterType: except` and the source ids vitabloomy.shop 220777, playexpedition.com 310932,
+nullsite.info 90574, thrivevia.shop 220654, claimjustice.site 345819, gamecheckmate.com 310931 (they were 48 of 126 clicks and 30 % of the spend, CTR 5-29 % on a handful of impressions, and vitabloomy.shop sends every click to the
+tracker twice). Both campaigns have `sourcesOptimization` on and already carried an `except` list of 155 sources; read back: 161, the six present with their names, nothing lost (PATCH is an upsert). Undo: PATCH/PUT the list without these six ids
+(the old list of each campaign was saved before the change). `sources_report.py` shows the delivery by domain.
+
 ## 23.10 midday (12:20 MSK): both campaigns ran to the $10 limit overnight, no lead in the whole test
 
 Owner, 23.10: «Лидов нет за 17 часов последних?» (answered from the MGID API and RollerAds, nothing was changed).
