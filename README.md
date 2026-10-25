@@ -6,6 +6,26 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 25.10 (Sunday, 16:30 UTC): the leadgen after Friday's run; nine active campaigns that are not ours; owner: do not touch them
+
+Owner, 25.10: «Как идёт лидген? Или ты стопнул?», then «[Эти] компании активные не трогай». Reads only; nothing was changed in MGID, on Inferno or in the repository code. The nine active campaigns below are NOT to be touched.
+
+**Who stopped what (nobody by hand).** The window opened on Friday 23.10 at 12:00 UTC and started E v2, F v2, A docs and C calc. MGID report by hour (Tirane buckets converted with `zoneinfo`, the zone switched to UTC+1 on 25.10 at 03:00 local), 23.10 12:00 UTC - 24.10 01:00 UTC:
+E v2 8709 impressions, **40 clicks, $4.91**; F v2 6991 impressions, **24 clicks, $3.16**; together 64 clicks, $8.06 (lifetime figures: E v2 $129.31, F v2 $121.93). **E v2** counted **$15.21 against the $15 limit** (baseline 114.10): the stop-loss paused it
+on Friday evening (delivery 801 impressions in the 22h UTC hour, 3 in the 23h hour, i.e. about 23:00 UTC = 02:00 MSK Saturday). **F v2** counted $13.81 ($1.19 left) and ran until the window shut at 01:00 UTC Saturday (35 impressions in the 01h hour). A docs and C calc were started by the
+window and delivered nothing: all their teasers are rejected (A docs 4, C calc 1). The window is weekdays only, so everything stays paused over the weekend; Monday 26.10 12:00 UTC (15:00 MSK) it opens again, F v2 will start (about 10 clicks of money left), E v2 will not (over the limit; the stop-loss would pause it again anyway). The Inferno logs
+were not read, the above is from the MGID numbers.
+
+**Leads: none.** MGID counts no conversion for the four (`buying` 0, the `conversionsBuy` report is empty). RollerAds offer 1537 (still active): counters 10338 clicks (10270 on 23.10), **4 conversions, the same 4 as before the test**, average payout $13, earnings per click $0.005.
+Since the CPA tune test began (21.10 12:02 UTC): about 250 clicks and $29.02 counted by the stop-loss (E v2 15.21 + F v2 13.81), about 11.6 cents a click against 0.5 cents earned per click on the offer's own statistics, so the break-even conversion rate would be ~0.9 % against the offer's 0.039 %. 250 clicks are 0.1 of an expected lead,
+so the test cannot show a verdict either way. Balance $40.11 (53.17 at 12:11 UTC on 23.10): E v2 and F v2 took about $8.3 of the $13, the new campaigns below about $5.
+
+**Nine active campaigns and 36 paused ones that this session did not create.** The account holds 70 campaigns now (25 on 23.10). 45 of them have ids from 12522792 to 12523611, names like «KZ | Саламандрекс (aff 1128) | CPA tune», «… | CPA tune | Affstar LP», «TR | Redustar (aff 1075) …», «AZ | Prostalab (aff 752) …», «TJ | Суставитин (aff 894 Arteron) …»,
+`product`, `targetCpa`, goal **1281420** (not in our list), teaser links such as `shop.wavepulse.online/salamandrex/?click_id={click_id}&cmp={campaign_id}&wid={widget_id}&tid={teaser_id}`. Nothing in this repository or its branches creates them (grep for Affstar and 1281420 finds nothing): another chat or the owner by hand.
+Active (`active/unfulfilled`): 12523155 KZ Саламандрекс (aff 1128), 12523160 KZ Фунгуликс (aff 672), 12523161 KZ Фунгуликс «Грибной сбор» (aff 1036), 12523163 KZ Отифлекс (aff 673), 12523164 KZ Кетиш Диетиш (aff 682), 12523165 KZ Фитограном 7в1 (aff 666), 12523166 TR Redustar (aff 1075), 12523168 AZ Prostalab (aff 752),
+12523169 TJ Суставитин (aff 894 Arteron). Their lifetime: 874 clicks, $4.98, **one conversion on goal 1281420** (12523160); the biggest is 12523166 TR Redustar with 87373 impressions, 726 clicks and $4.22. The other 36 are paused with almost no delivery.
+**What it means for our services:** `mgid-spend-stop-second` judges EVERY active campaign of the account and, for a campaign missing from the baseline, counts all its spend: at $15 it pauses these too (TR Redustar is at $4.22). The window service and the ladder only know the four 1537 ids. The owner was told; the limit was not changed and no exception was added.
+
 ## 23.10 afternoon (2): the skills handed over; correction on tyblk.info (Bosnia lander IS flagged by Google)
 
 Owner, 23.10: «Обнови скил мгид и скил нутра партнерки создай с данными как в них входить с данными по доступу в паринерки и cpa tune как настраивать и скинь скилы сюда файлами». Nothing was changed in MGID, Dr.Cash, Aray or on Inferno.
