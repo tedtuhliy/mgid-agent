@@ -6,6 +6,23 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 26.10 late: the weekly top of Aray (owner's screenshot), the nine offers we have access to, links, landers, click id
+
+Owner, 26.10: a screenshot of the Telegram post «ТОП ОФФЕРОВ ОТ ARAY 19.10.2026-25.10.2026» (by volume: Vitaflex PE 30 %, FlexiGo CL 27 %, Sustarox EC 30 %, Audix PE 29 %, Glowy Care PE / CL / Serum CO 28 %; by approval: Elastica UY 46 %, Duston Gel UY 42 %, Sustarox PY 38 %, Oxys PY 35 %), then «У нас есть доступ к этим офферам».
+Reads only; no ticket, no campaign, no teaser, no test postback, nothing changed in MGID (the nine active campaigns of someone else untouched).
+
+**Access.** 9 of the 11 are in our granted list (Vitaflex PE 4840, Sustarox EC 3988, Audix PE 4098, Glowy Care PE 4846, Glowy Care Serum CO 4839, Elastica UY 4047, Duston Gel UY 3959, Sustarox PY 4109, Oxys PY 4081); **not** FlexiGo CL 4891 and Glowy Care CL 4907. The Telegram channel is `t.me/araycpa` with the web preview off, so the post text can only come from the owner.
+EV per raw lead = payout x approval: Elastica UY $5.06, Vitaflex PE $3.90, Glowy Care Serum CO $3.50, Duston Gel UY $3.15, Audix PE $3.04, Glowy Care PE $2.94, Sustarox EC $2.70, Sustarox PY $2.09, Oxys PY $1.93 (break-even click-to-lead conversion at a 3-cent click: 0.6 % to 1.6 %).
+
+**Plumbing found in the cabinet.** The global postbacks of the Aray account already point to MGID (`a.mgid.com/postback?c={subid}&e=aray_lead&r={revenue}` on a lead, `e=aray_buy` on confirmation; goals 1278025 and 1278024 of the second account). The tracking link of an offer is `https://uh76404db1uh.cpa-gate.pro/?target=<token>&al=<land>&ap=<preland>`;
+on one test click of Vitaflex PE (two clicks in all, markers `ZQM...`, Frankfurt IP, form not submitted) the tracker passed every parameter to the lander and the order form carried `subid`, `subacc`, `subacc2`, `sub1` as hidden fields. Not proven until a real order: that `{subid}` is the `subid` parameter; that another `al`/`ap` works.
+The preview pages (`cpa-preview.pro`) answer 403 without `Referer: https://aray.com/`. Delivery-zone sheets of PE, EC, CO, PY, UY are public Google sheets. Safe Browsing: cpa-gate.pro, cpa-lands.pro, crstnst.com, latest-news.pro clean; cpa-preland.pro, cpa-preview.pro no data.
+
+**Landers (45 pages, static).** The defaults in our cabinet are advertorials with testimonials, doctors and research claims for Duston Gel UY, Sustarox EC (pre-lander), Audix PE, Sustarox PY (only a pre-lander) and Glowy Care Serum CO (only an advertorial, 28 research hits); short product pages exist for Elastica UY 9576, Duston Gel UY 9124, Sustarox EC 9338, Oxys PY 9550 and (the only ones) Vitaflex PE and Glowy Care PE.
+Every page carries platform scripts (push subscription via `pushnginx.latest-news.pro`, back-button script): whether a visitor sees them is not visible in the code.
+
+**Files.** The dossier `aray-top-offers-2026-10-26.md` (with our tracking links, token inside, so NOT committed) went to the owner. In the skill: `aray_cards.mjs`, `aray_landers.mjs`, Spanish patterns and script flags in `lander_scan.mjs`, the Aray block of SKILL.md; `ts_down.sh` keeps the tailnet state file when the node cannot be deleted (the node of this work is `cc-mgid-arcadia-vb-2`, offline, together with `-vb` and `-vb-1`; `TS_API_TOKEN` is still invalid).
+
 ## 26.10 evening: Aray entered again, the top offers collected; the tailnet nodes of this job could not be deleted (TS_API_TOKEN is invalid)
 
 Owner, 26.10: «Ты можеш зайти в array», then «Собери топ офферы». Reads only; nothing was created or requested in Aray (no tickets), nothing changed in MGID.

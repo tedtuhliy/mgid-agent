@@ -8,5 +8,11 @@ HERE=$(cd "$(dirname "$0")" && pwd)
 VAULT=${VAULT:-$(ls /root/.claude/skills/synced/*/secrets/vault.mjs 2>/dev/null | head -1)}
 pkill -f "[t]ailscaled --state=$D/tun.state" || true
 sleep 4
-node "$VAULT" exec tailscale -- node "$HERE/ts_cleanup.mjs" || echo "!!! the node stays in the tailnet (offline) until it is deleted by hand: see the message above"
-rm -f "$D/tun.state" "$D/tun.sock" "$D/authkey.txt"
+if node "$VAULT" exec tailscale -- node "$HERE/ts_cleanup.mjs"; then
+  rm -f "$D/tun.state"
+else
+  # The node could not be deleted (bad TS_API_TOKEN): its entry stays in the tailnet, offline. The state file is KEPT, so the next ts_tun_up.sh in this
+  # container re-joins as the very same node instead of adding one more stale entry (26.10: every join without a working token left one behind).
+  echo "!!! the node stays in the tailnet (offline) until it is deleted by hand: see the message above; the state file $D/tun.state is kept for re-use"
+fi
+rm -f "$D/tun.sock" "$D/authkey.txt"

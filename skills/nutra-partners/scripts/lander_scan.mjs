@@ -7,14 +7,27 @@
 import { pathToFileURL } from 'node:url';
 
 export const PATTERNS = {
-  medical_disclaimer: /non (è|e') (un )?farmaco|non sono farmaci|integratore alimentare|disclaimer|avvertenz|informativa|footnote|nota legale|not a drug|not intended|results may vary/gi,
-  individual_results: /risultati (possono|individuali|variano|non sono garantiti)|può variare|possono variare|individual results/gi,
-  testimonials: /recension|testimonian|valutazione dei clienti|feedback|le mie esperienze|ho provato|recenzij|opinion/gi,
-  research_claims: /studi |studio |scienz|clinic|ricerca|laborator|universit|testato|ispitivanj|kliničk|trial/gi,
-  miracle_promises: /perdere \d+ ?(kg|chili)|elimin[ao] (il )?dolor|guarisc|miracol|garantit|cura (definitiva|completa)|100 ?%/gi,
-  shock_words: /morte|miracol|tragedia|ictus|stroke|paraly|cancer|cancro|amput|infarto|dialisi|insopportab/gi,
-  urgency: /countdown|offerta scade|offerta finisce|ponuda završava|scade|timer/gi,
+  medical_disclaimer: /non (è|e') (un )?farmaco|non sono farmaci|integratore alimentare|disclaimer|avvertenz|informativa|footnote|nota legale|not a drug|not intended|results may vary|aviso legal|descargo|no es un medicamento|no sustituye|resultados (pueden|podr[ií]an) variar|consulte (a su|con su) m[eé]dico/gi,
+  individual_results: /risultati (possono|individuali|variano|non sono garantiti)|può variare|possono variare|individual results|resultados (individuales|var[ií]an)/gi,
+  testimonials: /recension|testimonian|valutazione dei clienti|feedback|le mie esperienze|ho provato|recenzij|opinion|testimoni|rese[ñn]a|comentari|valoraci[oó]n|mi experiencia|lo prob[eé]/gi,
+  research_claims: /studi |studio |scienz|clinic|ricerca|laborator|universit|testato|ispitivanj|kliničk|trial|estudio|cient[ií]fic|cl[ií]nic|investigaci|laboratorio|universidad|comprobad|dermat[oó]log|ortoped|reumat[oó]log/gi,
+  miracle_promises: /perdere \d+ ?(kg|chili)|elimin[ao] (il )?dolor|guarisc|miracol|garantit|cura (definitiva|completa)|100 ?%|milagro|garantiz|garant[ií]a|desaparec|sin dolor|cura definitiva|resultados? (inmediat|r[aá]pid|garantizad)/gi,
+  shock_words: /morte|miracol|tragedia|ictus|stroke|paraly|cancer|cancro|amput|infarto|dialisi|insopportab|cirug[ií]a|operaci[oó]n|silla de ruedas|par[aá]lisis|invalidez|c[aá]ncer|muerte/gi,
+  urgency: /countdown|offerta scade|offerta finisce|ponuda završava|scade|timer|solo hoy|[uú]ltimas unidades|oferta (termina|finaliza)|cuenta regresiva|quedan \d+|\d+ (personas|usuarios) (est[aá]n|viendo)/gi,
+  authority: /\bdr\.? |\bdra\.? |doctor|m[eé]dico|especialista|profesor|farmac[eé]utic|reumat/gi,
+  fake_news_look: /peri[oó]dico|noticias|reportaje|advertorial|patrocinad|sponsored|entrevista|exclusiv[oa]|urgente/gi,
 };
+
+// Things in the HTML that can fail moderation or that the visitor does not expect: scripts, not words.
+export function flags(html) {
+  const f = [];
+  if (/Notification\.requestPermission|serviceWorker\.register|pushnginx|onesignal|pushwoosh|web-?push|pw_subscribing/i.test(html)) f.push('push-подписка');
+  if (/history\.pushState|onpopstate|beforeunload/i.test(html)) f.push('перехват «назад»');
+  if (/back_url|dbbtn_|dpush_/i.test(html)) f.push('скрипт возврата платформы');
+  if (/atob\(|eval\(|document\.write\(unescape|fromCharCode/i.test(html)) f.push('обфускация');
+  if (/<iframe/i.test(html)) f.push('iframe');
+  return f;
+}
 
 export function scan(html) {
   const txt = html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ')
@@ -32,15 +45,15 @@ export function scan(html) {
     imgs: (html.match(/<img/gi) || []).length,
     lang: ((html.match(/<html[^>]*lang=["']?([a-zA-Z-]+)/i) || [])[1]) || '?',
     title: ((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '').replace(/\s+/g, ' ').trim().slice(0, 80),
-    counts, where,
+    counts, where, flags: flags(html),
     hosts: [...new Set((html.match(/https?:\/\/[a-z0-9.-]+/gi) || []).map((h) => h.replace(/^https?:\/\//, '')))].slice(0, 12),
   };
 }
 
 export function show(label, r) {
   const hit = Object.entries(r.counts).filter(([, v]) => v).map(([k, v]) => `${k}:${v}`).join(' ') || 'nothing found';
-  console.log(`${label}\n   ${r.bytes}B ${r.words}w forms ${r.forms} inputs ${r.inputs} imgs ${r.imgs} lang ${r.lang} | ${hit}\n   title: ${r.title}\n   hosts: ${r.hosts.join(', ')}`);
-  for (const [k, v] of Object.entries(r.where)) if (/shock|research|miracle|testimonials|disclaimer/.test(k)) console.log(`   ${k}: …${v}…`);
+  console.log(`${label}\n   ${r.bytes}B ${r.words}w forms ${r.forms} inputs ${r.inputs} imgs ${r.imgs} lang ${r.lang} | ${hit}\n   title: ${r.title}\n   hosts: ${r.hosts.join(', ')}${r.flags && r.flags.length ? '\n   flags: ' + r.flags.join(', ') : ''}`);
+  for (const [k, v] of Object.entries(r.where)) if (/shock|research|miracle|testimonials|disclaimer|authority|fake_news/.test(k)) console.log(`   ${k}: …${v}…`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
