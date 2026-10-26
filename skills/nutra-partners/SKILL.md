@@ -165,7 +165,7 @@ challenge: из песочницы не проходит, в Chrome профил
 `… find IT,AL,BA`; статическая проверка лендов: `… scan IT` (**не запускалась**: после выгрузки профиль был остановлен).
 
 **Кабинет (26.10).** Аккаунт Infodreamer68, менеджер Sergey Aray. Меню: News (пусто), My campaigns, Offers, Statistics, Postbacks, Domains, Tickets, Payouts, Bonus, Orders.
-История небольшая: в My campaigns одна кампания «[3567] Sustarox PE - Adskeeper test» на оффер 3759; **заказов за всё время 2** (оба Elastica - UY, июль 2026, последний 29.07); доступно к
+История небольшая: в My campaigns одна кампания «[3567] Sustarox PE - Adskeeper test» на оффер 3759; **заказов с 1 января 2026 два** (оба Elastica - UY, июль, последний 29.07; что было раньше, не смотрел); доступно к
 выплате **$11.00**, выплат не было; доменов и постбек-логов нет; в Tickets четыре старых тикета (заявки на доступ к офферам за май–июль 2026, в первом пометка «New answer»;
 я их не открывал, чтобы не менять статус «прочитано»). Постбеки Aray настраиваются в разделе Postbacks (Settings, Testing, логи), трекер-домен ссылок — `cpa-gate.pro`.
 **Доступ к офферам:** из 287 офферов доступ есть к 25 (LatAm COD: Duston Gel, Oxys, Elastica, Vitaflex, Cardiwell…, плюс Aimour 60% CPS $65 и Prostanore ID $32);
