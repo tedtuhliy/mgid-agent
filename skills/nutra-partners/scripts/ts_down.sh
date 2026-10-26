@@ -8,5 +8,5 @@ HERE=$(cd "$(dirname "$0")" && pwd)
 VAULT=${VAULT:-$(ls /root/.claude/skills/synced/*/secrets/vault.mjs 2>/dev/null | head -1)}
 pkill -f "[t]ailscaled --state=$D/tun.state" || true
 sleep 4
-node "$VAULT" exec tailscale -- node "$HERE/ts_cleanup.mjs"
+node "$VAULT" exec tailscale -- node "$HERE/ts_cleanup.mjs" || echo "!!! the node stays in the tailnet (offline) until it is deleted by hand: see the message above"
 rm -f "$D/tun.state" "$D/tun.sock" "$D/authkey.txt"

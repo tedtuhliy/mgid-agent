@@ -15,6 +15,9 @@ description: >-
 # Нутра-партнёрки для MGID: доступы, входы, CPA tune
 
 Составлено 23.10.2026 по тому, что реально делалось в сессии (22–23.10). Всё, что не проверено, помечено «не проверено».
+**Проверено 26.10 боевым прогоном:** `ts_tun_up.sh` (с `TS_DIR=/tmp/claude-0/ts`, чтобы взять уже скачанную сборку Tailscale), `vision.sh` (list, start, stop),
+`aray_login.mjs`, `aray_offers.mjs dump` отработали; сессия Aray **сохраняется в профиле Vision между остановкой и запуском** (повторный вход не понадобился). Не прогонялись
+заново: `dr_*.mjs` и `aray_offers.mjs scan`.
 **Паролей, токенов и ключей в файле нет, так задумано:** они лежат в ключнике (скил `secrets`), здесь только сервис и поле.
 
 ## 0. Коротко
@@ -81,7 +84,12 @@ export VAULT=$(ls /root/.claude/skills/synced/*/secrets/vault.mjs | head -1)   #
    остаётся в профиле, вкладку не закрывать. Скрипты чтения (`dr_offers.mjs`, `dr_landers.mjs`, `aray_offers.mjs`) секретов не требуют, им нужны
    только `VISION_CDP_PORT` и залогиненная вкладка.
 6. **Конец работы:** `bash scripts/vision.sh stop <folder> <profile>` (только свой), `bash scripts/ts_down.sh` (останавливает демона и
-   удаляет узел из tailnet владельца через `TS_API_TOKEN`), стереть временные файлы. Скрин и дампы остаются в `OUT_DIR`.
+   пытается удалить узел из tailnet владельца через `TS_API_TOKEN`), стереть временные файлы. Скрин и дампы остаются в `OUT_DIR`.
+   🔴 **На 26.10 `TS_API_TOKEN` в ключнике недействителен** (Tailscale отвечает 401 «API token invalid»), так что узел удалить нельзя: он остаётся в tailnet
+   офлайн (`cc-mgid-arcadia-vb`, `cc-mgid-arcadia-vb-1`; повторный вход получает имя с суффиксом `-1`, пока старая запись жива). Первая версия `ts_cleanup.mjs`
+   в этом случае молча печатала «none left»; теперь скрипт падает с кодом 2 и говорит, что узел не удалён. Лечится новым API-токеном в ключнике (админка
+   Tailscale: Settings → Keys) или ручным удалением в Machines. **Чужие узлы (`cc-aff-kz` и остальные `cc-`, `ccr-`, `claude-`) не трогать.**
+   Многоразовый ключ `TS_AUTHKEY` действует до 29.10.2026.
 
 Что мешало и чем лечится:
 - Приложение Vision на боксе блокирует окно «**A new version of Vision is available!**»: нажимать **No**. «Yes» перезапускает приложение
@@ -155,6 +163,18 @@ challenge: из песочницы не проходит, в Chrome профил
 Поля оффера: `id`, `name` (страна — суффикс « - IT»; `countries` — числовые id), `vertical[]`, `flow` (COD…), `payout [{country_id, amount, currency}]`,
 `preview_url` (ленд, часто пусто), `epc`, `clicks`, `device`, `is_access_granted`. Выгрузить и искать: `node scripts/aray_offers.mjs dump`,
 `… find IT,AL,BA`; статическая проверка лендов: `… scan IT` (**не запускалась**: после выгрузки профиль был остановлен).
+
+**Кабинет (26.10).** Аккаунт Infodreamer68, менеджер Sergey Aray. Меню: News (пусто), My campaigns, Offers, Statistics, Postbacks, Domains, Tickets, Payouts, Bonus, Orders.
+История небольшая: в My campaigns одна кампания «[3567] Sustarox PE - Adskeeper test» на оффер 3759; **заказов за всё время 2** (оба Elastica - UY, июль 2026, последний 29.07); доступно к
+выплате **$11.00**, выплат не было; доменов и постбек-логов нет; в Tickets четыре старых тикета (заявки на доступ к офферам за май–июль 2026, в первом пометка «New answer»;
+я их не открывал, чтобы не менять статус «прочитано»). Постбеки Aray настраиваются в разделе Postbacks (Settings, Testing, логи), трекер-домен ссылок — `cpa-gate.pro`.
+**Доступ к офферам:** из 287 офферов доступ есть к 25 (LatAm COD: Duston Gel, Oxys, Elastica, Vitaflex, Cardiwell…, плюс Aimour 60% CPS $65 и Prostanore ID $32);
+к остальным 262 доступ **запрашивается тикетом «Offer request for <оффер>»** (в мае и июле одобряли от того же дня до четырёх дней). В карточке оффера с доступом есть
+`tracking_url` (наша ссылка), `_lands`, `_prelands`, `creatives`, `hold_period`, `restrictions`, `iframe_form`; без доступа поля урезаны. **Апрува, рейтинга и EPC в данных нет**
+(`epc`/`clicks` заполнены только у Duston Gel - CL: 0.668 и 542641, смысл цифр не ясен), поэтому «топ» в Aray можно собрать только по выплате и по доступу.
+Свод «топ офферы» по обеим сетям (рейтинг Dr.Cash, выплаты Aray, один продукт в обеих сетях, топ-5 по каждому гео) делает `python3 scripts/make_top.py` из дампов
+`aray_offers.mjs dump` и `dr_offers.mjs dump` (файл `top-offers-<дата>.md` в `OUT_DIR`; версия от 26.10 отправлена владельцу). Апрув 100 % у офферов Dr.Cash с рейтингом 1000+ — шум,
+ранжировать надо по `rank`. Свод не проверяет ленды (раздел 8).
 
 **Италия, COD (для AL и BA в Aray офферов нет):** Formelan (4431) $37, Menstill Plus (4428) $37, Nano Slim (4679) $42 (похудение), ProstAktiv (4293) $37,
 Revinelle FullPrice (4861) $33, Revinelle LowPrice (4860) $31, Varilux Premium (4302) $37, Vigor Max Nature (4426) $37. Это не те продукты, что были в

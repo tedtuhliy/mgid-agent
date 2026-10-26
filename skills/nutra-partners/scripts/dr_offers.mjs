@@ -23,6 +23,9 @@ if (cmd === 'dump') {
     const uniq = all.filter((x) => !seen.has(x.id) && seen.add(x.id));
     fs.writeFileSync(FILE, JSON.stringify(uniq));
     console.log('offers fetched', all.length, '| unique', uniq.length, '->', FILE);
+    const cat = await api('/v1/filter/category');        // id -> name of the categories, for make_top.py
+    fs.writeFileSync(`${OUT}/dr_category.json`, JSON.stringify(cat.json));
+    console.log('categories ->', `${OUT}/dr_category.json`, '(HTTP ' + cat.st + ')');
   });
 } else if (cmd === 'find') {
   const re = new RegExp(rest[0] || '.', 'i');

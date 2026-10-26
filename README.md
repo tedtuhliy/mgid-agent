@@ -6,6 +6,20 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 26.10 evening: Aray entered again, the top offers collected; the tailnet nodes of this job could not be deleted (TS_API_TOKEN is invalid)
+
+Owner, 26.10: «Ты можеш зайти в array», then «Собери топ офферы». Reads only; nothing was created or requested in Aray (no tickets), nothing changed in MGID.
+
+**Entry.** With the new skill scripts: `ts_tun_up.sh` (TS_DIR=/tmp/claude-0/ts, reuses the downloaded build; the node got the name `cc-mgid-arcadia-vb-1` because the old entry `cc-mgid-arcadia-vb` was still in the tailnet), `vision.sh start` of the profile geozo3 (no profile was running then),
+`aray_login.mjs`, `aray_offers.mjs dump`: all worked. The Aray session survived stopping and starting the profile. The cabinet: account Infodreamer68, manager Sergey Aray, News empty, one campaign «[3567] Sustarox PE - Adskeeper test», **2 orders in all** (both Elastica - UY, July 2026,
+the last on 29.07), available $11.00, no payouts, no domains, four old tickets (offer requests of May-July, the first has «New answer»; not opened). 287 offers (290 on 23.10), **access to 25** (LatAm COD, Aimour 60% CPS $65, Prostanore ID $32); the other 262 need a ticket «Offer request for ...». The data has no approval, no rating and EPC for one offer only (Duston Gel - CL 0.668, 542641 clicks).
+
+**Top offers** (`skills/nutra-partners/scripts/make_top.py`, the file `top-offers-2026-10-26.md` went to the owner): Aray by payout and access, Dr.Cash by its network rank (the top is PL «free» offers at $22-25 and 14-33 % approval), top 5 per geo, and 184 products that sit in both networks in the same geo. Dr.Cash data is the dump of 23.10 (not refreshed: a new login would leave one more stale node in the tailnet).
+The 100 % approval of Dr.Cash offers ranked 1000+ is noise and is not used for ranking. Not a check of the landers.
+
+**Tailnet.** At the end `ts_down.sh` stopped the daemon but **could not delete the node: `TS_API_TOKEN` of the vault service `tailscale` answers 401 «API token invalid»**. The first version of `ts_cleanup.mjs` hid that («none left»); it now stops with exit code 2 and says the node stays. Two offline nodes of this work stay in the tailnet:
+`cc-mgid-arcadia-vb` and `cc-mgid-arcadia-vb-1` (the owner can delete them in the admin console, Machines; others like `cc-aff-kz` are not ours). A new API token for the vault is needed for automatic cleanup. `TS_AUTHKEY` (reusable) works until 29.10.2026.
+
 ## 25.10 (Sunday, 16:30 UTC): the leadgen after Friday's run; nine active campaigns that are not ours; owner: do not touch them
 
 Owner, 25.10: «Как идёт лидген? Или ты стопнул?», then «[Эти] компании активные не трогай». Reads only; nothing was changed in MGID, on Inferno or in the repository code. The nine active campaigns below are NOT to be touched.
