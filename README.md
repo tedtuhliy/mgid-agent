@@ -6,6 +6,26 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 26.10 night: the nine Aray offers as paused CPA tune campaigns, five teasers on moderation, access requested for two
+
+Owner, 26.10: «Все 9, нужен запрос» (after the dossier of the Aray top). The nine active campaigns of someone else were not touched.
+
+**Access requested.** On the offer pages of FlexiGo - CL (4891) and Glowy Care - CL (4907) the button «Request approval» opens «Describe your traffic, please»; sent with a short Russian text (paid native traffic MGID, Chile, a test first). `PUT /api/offers/<id>` answered 200 and tickets
+**#2799 «Offer request for FlexiGo - CL»** and **#2800 «Offer request for Glowy Care - CL»** stand in the list. No answer yet (earlier requests were granted within a day to four days).
+
+**Campaigns (`aray_campaigns.py`, data `data/aray-offers.json`, ledger `data/aray-created.json`, tests `test_aray_campaigns.py`).** 12525146 UY Elastica (4047), 12525147 PE Vitaflex (4840), 12525148 UY Duston Gel (3959), 12525149 EC Sustarox (3988), 12525150 PY Oxys (4081), 12525151 PE Audix (4098),
+12525152 PE Glowy Care (4846), 12525153 CO Glowy Care Serum (4839), 12525154 PY Sustarox (4109): `product`, `targetCpa` **$0.05** (the owner's nutra figure of 23.10; in the 1537 test 5 cents gave 5-7 impressions an hour, so raise it before any start), goal **`aray_lead` 1278025** (a raw lead; `aray_buy` 1278024
+is the confirmation), lead value = payout x approval (EV: 5.06, 3.90, 3.15, 2.70, 1.93, 3.04, 2.94, 3.50, 2.09), country and Spanish, $20 a day, **paused, auto-launch off**, read back ok. Names «GEO | Product (Aray id) | CPA tune». None is in the lists of the window service, the ladder or the baseline; the stop-loss judges every active campaign ($15, counted from zero).
+The balance is $40.1, nine campaigns at $15 would not fit: start them one or two at a time.
+
+**Links.** `https://uh76404db1uh.cpa-gate.pro/?target=<token>&al=<lander>&ap=-1&subid={click_id}&subacc={widget_id}&subacc2={teaser_id}`. Tested in the Vision browser: with `al` replaced and **`ap=-1`** («No prelanding» of the offer page) the tracker opens the chosen lander directly and the labels reach the order form;
+without `ap` (and with `ap=0`) the saved pre-lander of our offer card is used (Duston Gel UY, Sustarox EC, Elastica UY had one selected). 11 test clicks in all in the Aray statistics (markers `ZQM...`, Frankfurt IP), no form was sent. Not proven until a real order: that `{subid}` of the Aray postback is the `subid` label.
+
+**Teasers: five, on moderation** (28265604-28265608; Spanish titles are the text of the pack, e.g. «Vitaflex: crema corporal refrescante, 50 g»; the picture is the product shot of the offer card on a flat 1200x800 background, hosted on pixeldrain, no people, no claims). Only where the lander has no invented people or studies:
+Elastica UY (lander 9576, labelled «Publicidad/advertorial»), Vitaflex PE (10092), Duston Gel UY (9124), Sustarox EC (9338), Oxys PY (9550). **These pages still carry efficacy claims** (Elastica: «can help to eliminate varicose veins», destroys blood clots; Duston Gel and Sustarox: against arthrosis, «no side effects»; Vitaflex: «immediate pain relief», a fake «prices will double / today 149, tomorrow 298»;
+Oxys: «effect after the first application»); moderation may reject them, the owner was told. **No teaser** for Audix PE, Glowy Care PE, Glowy Care Serum CO and Sustarox PY: their only landers are fabrications read in full (Audix «developed by the best Israeli scientists», a «drug» that restores hearing; Glowy Care PE an invented cosmetologist of «Versua Clinic», «clinical studies», «Botox effect»; Glowy Care Serum CO a fake ELLE BELLEZA article with an invented editor and invented women of 39-71;
+Sustarox PY a fake news site with an invented interview of «Dr. Pedro Serrano Vidal» and 33 invented comments). **Correction of the dossier of 26.10:** by the word counts Audix PE land3 and Glowy Care PE looked tolerable («read by eye»); read in full they are not.
+
 ## 26.10 late: the weekly top of Aray (owner's screenshot), the nine offers we have access to, links, landers, click id
 
 Owner, 26.10: a screenshot of the Telegram post «ТОП ОФФЕРОВ ОТ ARAY 19.10.2026-25.10.2026» (by volume: Vitaflex PE 30 %, FlexiGo CL 27 %, Sustarox EC 30 %, Audix PE 29 %, Glowy Care PE / CL / Serum CO 28 %; by approval: Elastica UY 46 %, Duston Gel UY 42 %, Sustarox PY 38 %, Oxys PY 35 %), then «У нас есть доступ к этим офферам».

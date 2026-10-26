@@ -136,6 +136,8 @@ node "$VAULT" exec mgid -- env MGID_ACCOUNT=second python3 mgid/sources_report.p
 | US 1537 equity, A docs, CPA tune | 12520626 | то же, product, CPA tune $0.50 | 4 тизера, все отклонены «Content mismatch», показов нет |
 | US 1537 equity, C calc, CPA tune | 12520627 | то же | 1 тизер, отклонён; 8 остальных не добавлены |
 | восемь нутра-копий (AL, IT, BA) | 12520656–12520663 | CPA tune $0.05, цель `lead` 1272844 | на паузе, тизеры отклонены (подробно в скилле nutra-partners) |
+| девять офферов Aray (UY, PE, EC, PY, CO) | 12525146–12525154 | CPA tune $0.05, цель `aray_lead` 1278025, ценность лида = выплата × апрув, $20 в сутки (26.10) | на паузе; 5 тизеров на модерации (Elastica UY, Vitaflex PE, Duston Gel UY, Sustarox EC, Oxys PY), у четырёх без тизеров нет честного ленда (Audix PE, Glowy Care PE, Glowy Care Serum CO, Sustarox PY); скрипт `mgid/aray_campaigns.py` |
+| активные кампании не нашего чата | 12523155–12523169 и др. (45 штук, «Affstar LP», цель 1281420) | не трогать, владелец 26.10: «активные не трогай» | девять активных, остальные на паузе; стоп-лосс $15 их тоже касается |
 
 **Лидген 1537.** Оффер RollerAds «LendingTree Mortgage Refinance CPL (1537)»: США, выплата плавает $0.50–$45 по фильтрам (T1 $45 … T6 $0.50), оплачивается пн–пт 08:00–21:00 по
 Нью-Йорку (RollerAds: «EST»). Ссылка тизера: `https://bbcwebhosting.com/or/baap/aopwqk?source_id={widget_id}_{teaser_id}&aff_click_id={click_id}` (трекер-домен возвращает

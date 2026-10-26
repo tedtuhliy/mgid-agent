@@ -1,0 +1,33 @@
+{
+  "note": "The nine offers of the Aray weekly top of 19-25.10.2026 that the account has access to (owner, 26.10: «Все 9»). No tracking link or token is stored here: the links are rebuilt from the offer cards (aray_cards.mjs) at run time.",
+  "goal": 1278025,
+  "goal_name": "aray_lead",
+  "cpa": 0.05,
+  "daily_usd": 20.0,
+  "language": 2,
+  "offers": [
+    {"aray_id": 4047, "product": "Elastica", "geo": "UY", "country_id": 191, "payout": 11.0, "approve": 46, "land": 9576, "preland": -1,
+     "thumb": "4047_Elastica_-_CL.png", "title": "Elástica: crema refrescante e hidratante para las piernas",
+     "lander_note": "9576 «blue waves top_up», labelled «Publicidad/advertorial», claims about varicose veins and blood vessels, no invented people or studies"},
+    {"aray_id": 4840, "product": "Vitaflex", "geo": "PE", "country_id": 159, "payout": 13.0, "approve": 30, "land": 10092, "preland": null,
+     "thumb": "4840_Vitaflex_-_Peru.png", "title": "Vitaflex: crema corporal refrescante, 50 g",
+     "lander_note": "10092 «joint pain», promises immediate pain relief and a fake price rise, no named people seen in the text"},
+    {"aray_id": 3959, "product": "Duston Gel", "geo": "UY", "country_id": 191, "payout": 7.5, "approve": 42, "land": 9124, "preland": -1,
+     "thumb": "3959_22004226.jpg", "title": "Duston Gel: gel frío con efecto refrescante y descongestionante",
+     "lander_note": "9124 «purple», claims against arthrosis and «no side effects», no invented people or studies"},
+    {"aray_id": 3988, "product": "Sustarox", "geo": "EC", "country_id": 96, "payout": 9.0, "approve": 30, "land": 9338, "preland": -1,
+     "thumb": "3988_Sustarox_Ecuador.png", "title": "Sustarox: gel humectante y relajante para masajes corporales",
+     "lander_note": "9338 «Blue Gray», claims against arthrosis and osteochondrosis, no invented people or studies"},
+    {"aray_id": 4081, "product": "Oxys", "geo": "PY", "country_id": 163, "payout": 5.5, "approve": 35, "land": 9550, "preland": null,
+     "thumb": "4081_Oxys_-_BO.png.jpg", "title": "Oxys: gel crema hidratante con ácido hialurónico, 50 g",
+     "lander_note": "9550 «green orange land», labelled «Anuncio», cosmetic claims («effect after the first application»), no invented people or studies"},
+    {"aray_id": 4098, "product": "Audix", "geo": "PE", "country_id": 159, "payout": 10.5, "approve": 29, "land": 9596, "preland": null, "thumb": "4098_Audix_-_1-20240425-111633-removebg.png",
+     "no_teaser": "the only landers are advertorials; 9596 «land3» says the formula was developed by «the best Israeli scientists», that a «drug» restores hearing and that surveys confirmed it"},
+    {"aray_id": 4846, "product": "Glowy Care", "geo": "PE", "country_id": 159, "payout": 10.5, "approve": 28, "land": 10102, "preland": null, "thumb": "4846_Glowy_Care_Crema_-_1.png",
+     "no_teaser": "the only lander (10102) quotes an invented «leading cosmetologist of the Swiss centre Versua Clinic», «clinical studies» and a «Botox effect without injections»"},
+    {"aray_id": 4839, "product": "Glowy Care Serum", "geo": "CO", "country_id": 88, "payout": 12.5, "approve": 28, "land": 10091, "preland": null, "thumb": "4839_Glowy_Care_Serum_-_Colombia_TEST.png",
+     "no_teaser": "the only lander (10091) is a fake ELLE BELLEZA article by an invented editor with testimonials of invented women of 39-71 and a «Dra. H.»"},
+    {"aray_id": 4109, "product": "Sustarox", "geo": "PY", "country_id": 163, "payout": 5.5, "approve": 38, "land": null, "preland": 9636, "thumb": "4109_Sustarox_1.png",
+     "no_teaser": "no lander at all, only a fake news site pre-lander with an invented interview of «Dr. Pedro Serrano Vidal» and 33 invented comments"}
+  ]
+}
