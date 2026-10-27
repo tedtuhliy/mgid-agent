@@ -6,6 +6,23 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 27.10 (Tuesday): «Запускай по одной» — Elastica UY (4047) started on the delivery regions at a $4 target; the balance is falling because of the other chat's campaigns
+
+Owner, 27.10: «Ты сделал кампании в мгиде?» (answered: nine, paused, five teasers on moderation), then «Запускай по одной». One campaign was started, the other eight stay paused.
+
+**The delivery rule I had missed.** Reading the Elastica UY card in full before the start (the dossier had cut the description): «Please target only the regions where delivery is possible, otherwise your lead will not be approved» and a link to the delivery sheet (public CSV, 303 rows): Montevideo 112 localities,
+Canelones 104, Maldonado 61, the other 16 departments 1-5 each (their capitals). The nine campaigns had been created for the whole country. MGID targets regions whole: `GET /v2/ads/dictionaries/countries/{country id}/regions` (UY: Montevideo 3804, Canelones 3796, Maldonado 3803), written by v2 `PATCH` as
+`geoTargeting: {"countries": [191], "regions": {"mode": "include", "value": [3796, 3803, 3804]}}` (204). 12525146 now takes only those three. The same rule holds for the other eight: their sheets are to be read before each start (`regions` is empty for them in `data/aray-offers.json`, `--launch` refuses without it).
+
+**Start (10:01 UTC).** New mode `aray_campaigns.py --launch 4047 --target 4.0`: refuses without regions, with a target above the value of a lead (payout x approval) and for a campaign that is not paused; writes the regions and the target while paused, reads each back, starts last. Read back after the start: `active/unfulfilled` (it waits for the teaser: 28265604 is still `onModeration`, so no impressions yet),
+regions [3796, 3803, 3804], `targetCpa` 4.0, limit 2000.0 in read units (= $20 a day), goal `aray_lead` 1278025 with value 5.06, Spanish, auto-launch off. The other eight: paused. No ladder, no window service on it; the stop-loss ($15, counted from zero) judges it like every active campaign.
+**Why $4:** in the 1537 test clicks came only from a target of about $4 (at $4.00 one hour gave 1218 impressions and 12 clicks, 8 cents a click; below $3 about 150 impressions an hour and none); an Elastica lead is worth $5.06, so $4 leaves $1.06. Vitaflex PE ($3.90), Duston Gel UY ($3.15), Sustarox EC ($2.70) and Oxys PY ($1.93) have their ceiling at or below the level where clicks came in 1537: little delivery is expected from them.
+
+**The first run stopped itself.** At 10:00 the regions were written (204) but the read-back right after still showed `value: []`, and the script stopped with «NOT started». That was correct: a minute later the regions read right; the v2 read lags a write by seconds. `read_back()` now polls up to 12 times, 5 s apart; the tests have a lagging fake (15 pass).
+
+**Balance.** $37.07 (26.10 night) -> $28.95 -> $28.80 after the start. Who spends it: about 25 active campaigns of the other chat (KZ, TR, AZ, AM, MD, «CPA tune / Affstar»), not touched. Account spend per day (Europe/Tirane): 25.10 $1.41, 26.10 $3.86, 27.10 $6.89 up to 10:44, the last hours $0.4-1.0 an hour; at this pace the balance lasts 1.5-2 days.
+The owner is to top up; the next campaign only after that (stop-loss $15 each).
+
 ## 26.10 night: the nine Aray offers as paused CPA tune campaigns, five teasers on moderation, access requested for two
 
 Owner, 26.10: «Все 9, нужен запрос» (after the dossier of the Aray top). The nine active campaigns of someone else were not touched.

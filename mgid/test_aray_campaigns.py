@@ -3,6 +3,7 @@
     MGID_ACCOUNT=second python3 -m unittest test_aray_campaigns -v
 """
 import unittest
+from unittest import mock
 
 import aray_campaigns as a
 
@@ -66,6 +67,92 @@ class Data(unittest.TestCase):
         raw = json.dumps(a.DATA)
         self.assertNotIn("target=", raw)
         self.assertNotIn("cpa-gate", raw)
+
+
+class Launch(unittest.TestCase):
+    """`launch` against an in-memory campaign: the order of the writes, the refusals, and that the start is the last step."""
+
+    CID = 12525146
+
+    def setUp(self):
+        self.state = {"status": {"name": "paused"}, "geoTargeting": {"countries": [191], "regions": {"mode": "include", "value": []}},
+                      "bidding": {"strategy": "targetCpa", "price": 0.05}}
+        self.log = []
+        self.ledger = {}
+        self.stick = True
+        self.lag = 0                                    # reads that still show the old values after a write
+        self.queued, self.reads_left = [], 0
+
+        def call(method, url, body=None, **kw):
+            self.log.append((method, body))
+            if self.stick:
+                self.queued.append(body)
+                self.reads_left = self.lag
+            return 204, None
+
+        def v2(fields=()):
+            if self.reads_left > 0:
+                self.reads_left -= 1
+            else:
+                while self.queued:
+                    self.state.update(self.queued.pop(0))
+            return {self.CID: self.state}
+
+        def pause(cid, on=True):
+            self.log.append(("pause" if on else "start", cid))
+            self.state["status"] = {"name": "paused" if on else "active", "reason": "clientManuallyPaused" if on else "unfulfilled"}
+            return self.state["status"]
+
+        self.patches = [
+            mock.patch.object(a, "call", call), mock.patch.object(a, "pause", pause),
+            mock.patch.object(a, "v2_campaigns", v2), mock.patch.object(a, "READ_BACK_WAIT", 0.0),
+            mock.patch.object(a, "campaign_ids", lambda: {o["aray_id"]: self.CID for o in a.DATA["offers"]}),
+            mock.patch.object(a, "load_ledger", lambda: self.ledger), mock.patch.object(a, "save_ledger", lambda d: None),
+        ]
+        for p in self.patches:
+            p.start()
+            self.addCleanup(p.stop)
+
+    def test_regions_and_target_are_written_first_and_the_start_is_last(self):
+        a.launch(4047, 4.0)
+        self.assertEqual([x[0] for x in self.log], ["PATCH", "PATCH", "start"])
+        self.assertEqual(self.log[0][1], {"geoTargeting": {"countries": [191], "regions": {"mode": "include", "value": [3796, 3803, 3804]}}})
+        self.assertEqual(self.log[1][1], {"bidding": {"strategy": "targetCpa", "price": 4.0}})
+        self.assertEqual(self.state["status"]["name"], "active")
+        self.assertEqual(self.ledger["4047"]["launched"]["target"], 4.0)
+
+    def test_no_regions_no_start(self):
+        with self.assertRaises(SystemExit):
+            a.launch(4840, 3.0)                         # Vitaflex PE: the delivery sheet has not been read yet
+        self.assertEqual(self.log, [])
+
+    def test_regions_can_be_given_on_the_command_line(self):
+        a.launch(4840, 3.0, ["3000", "3001"])
+        self.assertEqual(self.log[0][1]["geoTargeting"]["regions"]["value"], [3000, 3001])
+
+    def test_target_above_the_value_of_a_lead_is_refused(self):
+        with self.assertRaises(SystemExit):
+            a.launch(4047, 5.07)                        # a lead is worth 5.06
+        self.assertEqual(self.log, [])
+
+    def test_a_campaign_that_is_not_paused_is_not_touched(self):
+        self.state["status"] = {"name": "active"}
+        with self.assertRaises(SystemExit):
+            a.launch(4047, 4.0)
+        self.assertEqual(self.log, [])
+
+    def test_a_read_that_lags_the_write_is_waited_for(self):
+        self.lag = 3                                    # 27.10: the regions read back empty right after the 204
+        a.launch(4047, 4.0)
+        self.assertEqual(self.log[-1], ("start", self.CID))
+        self.assertEqual(self.state["geoTargeting"]["regions"]["value"], [3796, 3803, 3804])
+
+    def test_nothing_starts_when_the_write_does_not_stick(self):
+        self.stick = False
+        with self.assertRaises(SystemExit):
+            a.launch(4047, 4.0)
+        self.assertNotIn(("start", self.CID), self.log)
+        self.assertEqual(self.state["status"]["name"], "paused")
 
 
 if __name__ == "__main__":

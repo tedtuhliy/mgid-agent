@@ -6,6 +6,7 @@ where the lander is not a fabrication.
     ... python3 aray_campaigns.py --campaigns                        # creates the missing campaigns (paused, auto-launch off), reads each one back
     ... python3 aray_campaigns.py --teasers <dir>                    # uploads the images (vault service pixeldrain) and adds ONE teaser per eligible campaign
     ... python3 aray_campaigns.py --status
+    ... python3 aray_campaigns.py --launch 4047 --target 4.0         # starts ONE campaign: delivery regions and target first (read back), the start last
 
 Owner, 26.10: «Все 9, нужен запрос» (after the dossier of the Aray top). Per campaign: `product`, `targetCpa` $0.05 (the owner's figure for nutra, 23.10: «Ставки по 5 центов за
 cpa tune»), goal `aray_lead` 1278025 (a raw lead; `aray_buy` 1278024 is the confirmation) with the lead value = payout x the approval of the week, country and Spanish, $20 a day, paused,
@@ -20,8 +21,10 @@ import base64
 import json
 import os
 import sys
+import time
 import urllib.parse
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -204,6 +207,68 @@ def make_teasers(imgdir):
             print(f"{name(o)}: refused: HTTP {st} {msg}")
 
 
+READ_BACK_TRIES = 12
+READ_BACK_WAIT = 5.0
+
+
+def read_back(cid, field, ok):
+    """The v2 read lags a write by a few seconds (27.10: the regions read back empty right after a 204 and correct a minute later): poll until
+    `ok(value)` holds or the tries are spent. Returns (last value, whether it holds)."""
+    val = None
+    for i in range(READ_BACK_TRIES):
+        val = (v2_campaigns((field,)).get(cid) or {}).get(field)
+        if ok(val):
+            return val, True
+        if i + 1 < READ_BACK_TRIES:
+            time.sleep(READ_BACK_WAIT)
+    return val, False
+
+
+def launch(aray_id, target, regions=None):
+    """Start ONE campaign (owner, 27.10: «Запускай по одной»). While it is still paused the delivery regions and the target CPA are set and read back;
+    the start is the last step and happens only if both stuck.
+
+    - regions: MGID region ids of the delivery zones of the offer (here or `regions` in the data file). The card says «target only the regions where
+      delivery is possible, otherwise your lead will not be approved» and links the delivery sheet in its description; without regions nothing starts.
+    - target above the value of a lead (payout x approval) is refused: a lead that costs more than it pays is a loss by construction.
+    - a campaign that is not paused is not touched."""
+    o = next((x for x in DATA["offers"] if x["aray_id"] == aray_id), None)
+    if o is None:
+        raise SystemExit(f"{aray_id}: not one of the nine offers")
+    regions = [int(x) for x in (regions or o.get("regions") or [])]
+    if not regions:
+        raise SystemExit(f"{name(o)}: no delivery regions; read the delivery sheet of the offer card, then set `regions` in data/aray-offers.json or pass --regions")
+    if target > ev(o):
+        raise SystemExit(f"{name(o)}: target ${target} is above the value of a lead ${ev(o)}")
+    cid = campaign_ids().get(aray_id)
+    if not cid:
+        raise SystemExit(f"{name(o)}: no campaign")
+    row = v2_campaigns(("status",)).get(cid) or {}
+    if (row.get("status") or {}).get("name") != "paused":
+        raise SystemExit(f"{cid} {name(o)}: not paused ({row.get('status')}), not touching it")
+    url = V2 + f"account/{CID2}/campaigns/{cid}"
+    geo = {"countries": [o["country_id"]], "regions": {"mode": "include", "value": regions}}
+
+    def geo_ok(g):
+        g = g or {}
+        reg = g.get("regions") or {}
+        return g.get("countries") == geo["countries"] and reg.get("mode") == "include" and sorted(reg.get("value") or []) == sorted(regions)
+
+    st, d = call("PATCH", url, {"geoTargeting": geo})
+    got, ok = read_back(cid, "geoTargeting", geo_ok)
+    if st not in (200, 204) or not ok:
+        raise SystemExit(f"{cid}: regions did not stick (HTTP {st} {json.dumps(d, ensure_ascii=False)[:200]}), now {got}; NOT started")
+    st, d = call("PATCH", url, {"bidding": {"strategy": "targetCpa", "price": target}})
+    got, ok = read_back(cid, "bidding", lambda b: float((b or {}).get("price") or 0) == target)
+    if st not in (200, 204) or not ok:
+        raise SystemExit(f"{cid}: target did not stick (HTTP {st} {json.dumps(d, ensure_ascii=False)[:200]}), now {got}; NOT started")
+    s = pause(cid, on=False)
+    led = load_ledger()
+    led.setdefault(str(aray_id), {})["launched"] = {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "target": target, "regions": regions}
+    save_ledger(led)
+    print(f"{cid} {name(o)}: started, target ${target}, regions {regions}, status {s.get('name')}/{s.get('reason')}")
+
+
 def status():
     ids = campaign_ids()
     for o in DATA["offers"]:
@@ -222,6 +287,9 @@ def main():
     ap.add_argument("--campaigns", action="store_true")
     ap.add_argument("--teasers", metavar="DIR")
     ap.add_argument("--status", action="store_true")
+    ap.add_argument("--launch", type=int, metavar="ARAY_ID")
+    ap.add_argument("--target", type=float, help="target CPA in dollars for --launch")
+    ap.add_argument("--regions", help="MGID region ids for --launch, comma separated (default: `regions` of the offer in the data file)")
     a = ap.parse_args()
     if a.creatives:
         os.makedirs(a.creatives, exist_ok=True)
@@ -235,6 +303,10 @@ def main():
         make_teasers(a.teasers)
     elif a.status:
         status()
+    elif a.launch:
+        if a.target is None:
+            raise SystemExit("--launch needs --target")
+        launch(a.launch, a.target, [x for x in (a.regions or "").split(",") if x.strip()])
     else:
         plan()
 

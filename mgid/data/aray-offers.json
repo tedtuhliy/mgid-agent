@@ -7,6 +7,7 @@
   "language": 2,
   "offers": [
     {"aray_id": 4047, "product": "Elastica", "geo": "UY", "country_id": 191, "payout": 11.0, "approve": 46, "land": 9576, "preland": -1,
+     "regions": [3796, 3803, 3804], "regions_note": "Card: «target only the regions where delivery is possible, otherwise your lead will not be approved». Its delivery sheet (DEPARTAMENTO/LOCALIDAD, 27.10): Montevideo 112 localities, Canelones 104, Maldonado 61, the other 16 departments 1-5 each (their capitals). MGID targets whole departments, so only these three (ids 3804, 3796, 3803).",
      "thumb": "4047_Elastica_-_CL.png", "title": "Elástica: crema refrescante e hidratante para las piernas",
      "lander_note": "9576 «blue waves top_up», labelled «Publicidad/advertorial», claims about varicose veins and blood vessels, no invented people or studies"},
     {"aray_id": 4840, "product": "Vitaflex", "geo": "PE", "country_id": 159, "payout": 13.0, "approve": 30, "land": 10092, "preland": null,
