@@ -6,6 +6,18 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 27.10 evening (21:45 MSK): today's spend and revenue of every campaign as a file; the revenue of the other chat's campaigns is $0.10 a conversion, not what I estimated
+
+Owner, 27.10: «Какие результаты по кампаниям что откручиваются», «Какой результат», then «Ты можеш прислать сегодняшнюю статистику всех кампаний расход доход».
+
+**New: `daily_stats.py` (tests `test_daily_stats.py`, 6 pass).** One workbook for a Moscow day: spend, revenue, profit, conversions per campaign, ours flagged, totals; second sheet from a given date, third sheet the notes. The v2 report returns whole days of the account's zone (Tirane), so the Moscow day is cut from the hourly buckets.
+**Metrics probed (422 without a list of valid names):** valid `revenue`, `profit`, `conversions`, `conversionsDecision`, `conversionsInterest`, `ctr`, `cpc`, `cpm`; not valid `roi`, `cpa`, `conversionsValue`. `revenue` is what the partner's postback reported with the conversion.
+
+**Result for 27.10 00:00-21:44 MSK:** 26 campaigns with traffic, 150 490 impressions, 1 049 clicks, **spend $14.61, revenue $0.30, profit -$14.31**, 3 conversions (all in 12523608 AZ BeeFlex Forte (aff 824): $2.30 spent, $0.30 revenue).
+Ours: $0.48 (F compare2 v2 of 1537 in the early hours, before its window shut), nothing from the nine Aray campaigns. Others': $14.13. Since 25.10: spend $18.74, revenue $0.40, 4 conversions.
+**Correction of my message of 18:21 UTC:** I valued the conversions of the other chat's campaigns at the price set in their settings ($0.27-1.2, $4.59 for five) and said a fifth of the spend had paid back. MGID's own `revenue` is $0.10 a conversion, about 2% of the spend. The revenue in their partner's cabinet (Affstar, no access here) may be different: MGID shows only what the postbacks reported.
+Balance $22.68 at 21:21 MSK (26.74 at 16:20), about $0.8 an hour. Elastica UY (4047): teaser still on moderation (all five, about 22 hours), no impressions.
+
 ## 27.10 (Tuesday): «Запускай по одной» — Elastica UY (4047) started on the delivery regions at a $4 target; the balance is falling because of the other chat's campaigns
 
 Owner, 27.10: «Ты сделал кампании в мгиде?» (answered: nine, paused, five teasers on moderation), then «Запускай по одной». One campaign was started, the other eight stay paused.

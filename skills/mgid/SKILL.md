@@ -71,6 +71,10 @@ node "$VAULT" exec mgid -- env MGID_ACCOUNT=second python3 mgid/sources_report.p
 - MGID создаёт кампанию **активной**: сразу паузить.
 - **Чтение v2 отстаёт от записи на секунды.** 27.10 `geoTargeting.regions` читались пустыми сразу после `PATCH` 204 и верными примерно через минуту. Запись проверять чтением с ожиданием
   (`aray_campaigns.read_back`: до 12 попыток через 5 секунд), а не одним чтением сразу, иначе правильную запись примешь за потерянную (или наоборот).
+- **Метрики отчёта v2** (проверено 27.10, при неверном имени 422 без списка допустимых): годятся `impressions`, `clicks`, `spent`, `conversions`, `conversionsBuy`, `conversionsDecision`, `conversionsInterest`,
+  `revenue`, `profit`, `ctr`, `cpc`, `cpm`; не годятся `roi`, `cpa`, `conversionsValue`. **`revenue` — это сумма, которую партнёрка передала постбеком вместе с конверсией (`r=`)**, а не её бухгалтерия:
+  подтверждения, холд и отклонения позже сюда не попадают. У кампаний «Affstar LP» другого чата это $0.10 за конверсию при цене конверсии в настройках $0.27–1.2: брать `revenue`, а не `conversionValue`
+  из настроек (27.10 я сначала оценил доход по настройкам и завысил его в десять раз). Выгрузка за московский день одним файлом: `mgid/daily_stats.py --out stats.xlsx`.
 - **Регионы.** Справочник: `GET /v2/ads/dictionaries/countries/{id страны}/regions` → `{"data": [{"id", "name"}]}` (UY: Montevideo 3804, Canelones 3796, Maldonado 3803; последний пункт
   «Other regions» 4279). Запись: `PATCH …/campaigns/{id}` с `{"geoTargeting": {"countries": [191], "regions": {"mode": "include", "value": [3796, 3803, 3804]}}}` → 204. Пустой `value` = вся страна.
   Справочники регионов под другими адресами (`dictionaries/regions`, `…/geo`, `…/cities`) отвечают 404.
@@ -259,5 +263,6 @@ Smartlink WW (16588), то есть чужих закупок с тем же г�
 ## 9. Файлы
 
 - Репозиторий tedtuhliy/mgid-agent, папка `mgid/` (ветка с этой работой — `claude/optimistic-feynman-at3shp`): `mgid_api.py`, `spend_stop.py`, `offer_window.py`, `cpa_ladder.py`, `sources_report.py`,
-  `nutra_direct.py`, `rr1537_teasers.py`, `mgid_geo_copies.py`, `geozo_geos.py`, `deploy_*_inferno.sh`, `README.md` (журнал, новое сверху), `data/`.
+  `nutra_direct.py`, `rr1537_teasers.py`, `mgid_geo_copies.py`, `geozo_geos.py`, `aray_campaigns.py` (девять офферов Aray, запуск по одной), `daily_stats.py` (статистика всех кампаний за московский день: расход, доход, прибыль, xlsx),
+  `deploy_*_inferno.sh`, `README.md` (журнал, новое сверху), `data/`.
 - Tedbolt `.claude/skills/mgid/`: этот файл, `scripts/` (дейтинг основного аккаунта: `mgid_api.py`, `mgid_guard.py`, `mgid_pb_patch*.py`, `mgid_relaunch.py`, `mgid_utm.py`, `deploy_guard_inferno.sh`), `references/relaunch-3009.json`.
