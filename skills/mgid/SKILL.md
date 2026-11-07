@@ -54,6 +54,8 @@ VAULT=$(ls /root/.claude/skills/synced/*/secrets/vault.mjs | head -1)       # в
 node "$VAULT" exec mgid -- env MGID_ACCOUNT=second python3 mgid/sources_report.py 12468751,12468752 2026-10-21 2026-10-22
 ```
 Ключник должен быть свежим (локальный файл контейнера может быть старым; свежий — git-командой из скила `secrets`).
+Если `vault.mjs exec mgid -- …` отвечает «unknown service 'mgid'. The vault is empty», контейнер сменился (пропали и ключник, и файлы в scratchpad): выполнить git-команду из скила `secrets`
+(в окружении есть `GITHUB_ALL_REPOS_PAT` и `CLAUDE_VAULT_PASSPHRASE`; секунда, значения в чат не попадают); дальше `vault.mjs exec mgid -- env MGID_ACCOUNT=second python3 …` без `CLAUDE_VAULT_FILE`. Выгрузки из scratchpad не переживают смену контейнера.
 
 **Ловушки API.**
 - `v2 statistics/reports`: диапазон `dateRange` и бакеты читаются в зоне аккаунта и отдаются **целыми сутками**, которых диапазон коснулся (запрос за 30.09 приносил весь
@@ -75,6 +77,7 @@ node "$VAULT" exec mgid -- env MGID_ACCOUNT=second python3 mgid/sources_report.p
   `revenue`, `profit`, `ctr`, `cpc`, `cpm`; не годятся `roi`, `cpa`, `conversionsValue`. **`revenue` — это сумма, которую партнёрка передала постбеком вместе с конверсией (`r=`)**, а не её бухгалтерия:
   подтверждения, холд и отклонения позже сюда не попадают. У кампаний «Affstar LP» другого чата это $0.10 за конверсию при цене конверсии в настройках $0.27–1.2: брать `revenue`, а не `conversionValue`
   из настроек (27.10 я сначала оценил доход по настройкам и завысил его в десять раз). Выгрузка за московский день одним файлом: `mgid/daily_stats.py --out stats.xlsx`.
+- **Отчёт v2 по тизерам:** измерение `teaserId` годится (`dimensions[]=campaignId&dimensions[]=teaserId`), `adId`, `creativeId`, `ad`, `teaser`, `adGroupId` нет. Так видно, какая ссылка принесла клик и конверсию.
 - **Регионы.** Справочник: `GET /v2/ads/dictionaries/countries/{id страны}/regions` → `{"data": [{"id", "name"}]}` (UY: Montevideo 3804, Canelones 3796, Maldonado 3803; последний пункт
   «Other regions» 4279). Запись: `PATCH …/campaigns/{id}` с `{"geoTargeting": {"countries": [191], "regions": {"mode": "include", "value": [3796, 3803, 3804]}}}` → 204. Пустой `value` = вся страна.
   Справочники регионов под другими адресами (`dictionaries/regions`, `…/geo`, `…/cities`) отвечают 404.
@@ -146,7 +149,7 @@ node "$VAULT" exec mgid -- env MGID_ACCOUNT=second python3 mgid/sources_report.p
 | US 1537 equity, C calc, CPA tune | 12520627 | то же | 1 тизер, отклонён; 8 остальных не добавлены |
 | восемь нутра-копий (AL, IT, BA) | 12520656–12520663 | CPA tune $0.05, цель `lead` 1272844 | на паузе, тизеры отклонены (подробно в скилле nutra-partners) |
 | девять офферов Aray (UY, PE, EC, PY, CO) | 12525146–12525154 | CPA tune $0.05, цель `aray_lead` 1278025, ценность лида = выплата × апрув, $20 в сутки (26.10) | **12525146 Elastica UY запущена 27.10 в 10:01 UTC** (по слову владельца «запускай по одной»): ставка $4, регионы Монтевидео/Канелонес/Мальдонадо (зоны доставки из карточки оффера), тизер ещё на модерации, поэтому показов нет; остальные восемь на паузе. 5 тизеров на модерации (Elastica UY, Vitaflex PE, Duston Gel UY, Sustarox EC, Oxys PY), у четырёх без тизеров нет честного ленда (Audix PE, Glowy Care PE, Glowy Care Serum CO, Sustarox PY). Скрипт `mgid/aray_campaigns.py`, запуск одной: `--launch <id оффера Aray> --target <ставка>` (регионы и ставка пишутся на паузе и читаются обратно, включение последним; без регионов или со ставкой выше ценности лида не запускает) |
-| активные кампании не нашего чата | 12523155–12523169 и др. (45 штук, «Affstar LP», цель 1281420) | не трогать, владелец 26.10: «активные не трогай» | 27.10 утром около 25 активных (KZ, TR, AZ, AM, MD), тратят $0.5–1 в час: расход аккаунта за 25.10 $1.41, за 26.10 $3.86, за 27.10 к 10:44 (Тирана) $6.89, баланс $29 и падает; стоп-лосс $15 их тоже касается |
+| активные кампании не нашего чата | 12523155–12523169 и др. (45 штук, «Affstar LP», цель 1281420) | не трогать, владелец 26.10: «активные не трогай» | ссылки тизеров: короткий домен-трекер `….shop/r/<uuid>` (302) → посадочная `page-coedvf.shop/<продукт>/…` (в названиях «Affstar LP»), у трёх кампаний часть тизеров прямо на `wavepulse.online` и `bonwisper.online`; 27.10 утром около 25 активных (KZ, TR, AZ, AM, MD), тратят $0.5–1 в час: расход аккаунта за 25.10 $1.41, за 26.10 $3.86, за 27.10 к 10:44 (Тирана) $6.89, баланс $29 и падает; стоп-лосс $15 их тоже касается |
 
 **Лидген 1537.** Оффер RollerAds «LendingTree Mortgage Refinance CPL (1537)»: США, выплата плавает $0.50–$45 по фильтрам (T1 $45 … T6 $0.50), оплачивается пн–пт 08:00–21:00 по
 Нью-Йорку (RollerAds: «EST»). Ссылка тизера: `https://bbcwebhosting.com/or/baap/aopwqk?source_id={widget_id}_{teaser_id}&aff_click_id={click_id}` (трекер-домен возвращает

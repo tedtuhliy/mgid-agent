@@ -6,6 +6,14 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 07.11 (15:50 MSK): where the Armenia and Azerbaijan traffic went (read only); the container was replaced
+
+Owner, 07.11: «Куда лилась армения и азербайжан». The container had been replaced: the scratchpad (workbooks, the vault copy) was empty and `vault.mjs` found no `mgid` service; the vault was restored with the git command of the `secrets` skill (PAT and passphrase are in the environment), nothing else was lost (skills and README are in the repository).
+**Chain of every AM/AZ campaign (14, all «Affstar LP», created by another chat):** teaser -> short tracker domain `<x>.shop/r/<uuid>?sub_id1..3&utm_*` (five domains: to-uizyp, click-vufgr, go-ondrc, link-ubzdg, to-pheow; one uuid per campaign) -> 302 -> `page-coedvf.shop/<product>/…` (product slugs prostalab, power-bee, prozrenie, full-price (PROSLUH and ЗДОРОВ share it), deparazit, slimagic, ajdaha-power, beeflex-forte, vihair, varix, lisabelle). The first hop was read with `curl -I` from the container (host and path only, query dropped).
+Three campaigns (AM Prozrenie, AZ BeeFlex Forte 809 and 824) also had 10 teasers each straight to own pages: `zrenie.wavepulse.online` and `glaza.bonwisper.online` (Prozrenie), `oynaq.wavepulse.online` and `oynaq.bonwisper.online` (BeeFlex Forte), with the paths `/`, `/b/`, `/c/`, `/d/` and the macros `click_id`, `cmp`, `wid`, `tid`.
+**By destination, 25-31.10 (AM+AZ: 399 976 impressions, 2 506 clicks, $29.19, revenue $0.60, 6 conversions):** trackers $28.04 (link-ubzdg $9.67, 0 conv; to-pheow $6.54, 1; click-vufgr $5.50, 4; to-uizyp $5.48, 0; go-ondrc $0.85, 1), own pages $1.14 and 133 clicks, 0 conversions. **All six conversions came through the tracker links**, none through the own pages
+(report dimension `teaserId`, found valid today; it splits the statistics by teaser). Rejected teasers: all 8 of both Ajdaha Power campaigns (no traffic since), half of the teasers of PROSLUH, ЗДОРОВ, Deparazit, Slim Magic, BeeFlex Forte (824), Prozrenie.
+
 ## 07.11 (Saturday, 15:12 MSK): the balance is zero, everything has been stopped since 31.10; the result of the week 25-31.10; the verdicts of the five Aray teasers
 
 Owner, 07.11: «Мгид какой баланс» (answered «На аккаунте» after I started to read teaser reasons), then «Какой результат последней недели когда откручивались кампании».
