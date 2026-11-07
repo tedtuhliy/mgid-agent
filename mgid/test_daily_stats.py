@@ -52,5 +52,28 @@ class Sums(unittest.TestCase):
         self.assertEqual(tot["наши"][2], 0.0)
 
 
+class Groups(unittest.TestCase):
+    def test_geo_is_the_capital_pair_at_the_start_of_the_name(self):
+        self.assertEqual(d.geo_of("AZ | Varix (aff 849) | CPA tune | Affstar LP"), "AZ")
+        self.assertEqual(d.geo_of("US 1537 equity | F compare2 v2"), "US")
+        self.assertEqual(d.geo_of("Tinely girls"), "??")
+        self.assertEqual(d.geo_of(None), "??")
+
+    def test_by_geo_sums_and_sorts_by_spend(self):
+        stats = {1: [100, 10, 2.0, 0.3, 3], 2: [50, 5, 1.0, 0.0, 0], 3: [10, 1, 5.0, 0.0, 0]}
+        meta = {1: {"name": "AZ | A"}, 2: {"name": "AZ | B"}, 3: {"name": "KZ | C"}}
+        lines, total = d.by_geo(stats, meta)
+        self.assertEqual(lines[0], ("KZ", 1, 10, 1, 5.0, 0.0, -5.0, 0))
+        self.assertEqual(lines[1], ("AZ", 2, 150, 15, 3.0, 0.3, -2.7, 3))
+        self.assertEqual(total, ("ИТОГО", 3, 160, 16, 8.0, 0.3, -7.7, 3))
+
+    def test_by_day_orders_days_and_totals(self):
+        rows = [row(1, "2026-10-27", 0, 2.0, 0.3, 4, 100, 3), row(2, "2026-10-26", 0, 1.0, 0.0, 2, 50, 0), row(2, "2026-10-27", 1, 0.5, 0.0, 1, 20, 0)]
+        lines, total = d.by_day(rows)
+        self.assertEqual([x[0] for x in lines], ["2026-10-26", "2026-10-27"])
+        self.assertEqual(lines[1], ("2026-10-27", 120, 5, 2.5, 0.3, -2.2, 3))
+        self.assertEqual(total, ("ИТОГО", 170, 7, 3.5, 0.3, -3.2, 3))
+
+
 if __name__ == "__main__":
     unittest.main()

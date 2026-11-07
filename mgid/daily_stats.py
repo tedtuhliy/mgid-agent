@@ -15,6 +15,7 @@ Owner, 27.10: «прислать сегодняшнюю статистику в�
 """
 import argparse
 import csv
+import re
 import sys
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -94,7 +95,62 @@ def total_line(label, t):
     return (label, "", "", None, t[0], t[1], round(t[2], 2), round(t[3], 2), round(t[3] - t[2], 2), t[4])
 
 
-def write_xlsx(path, sheets, notes):
+def geo_of(name):
+    """Country of a campaign from its name («AZ | Varix …», «US 1537 equity | …»): the two capitals at the start, «??» if there are none."""
+    m = re.match(r"([A-Z]{2})\b", name or "")
+    return m.group(1) if m else "??"
+
+
+def by_geo(stats, meta):
+    """[(geo, campaigns, impressions, clicks, spend, revenue, profit, conversions)], the biggest spend first, and the totals."""
+    acc = {}
+    for cid, v in stats.items():
+        a = acc.setdefault(geo_of((meta.get(cid) or {}).get("name")), [0, 0, 0, 0.0, 0.0, 0])
+        a[0] += 1
+        for i in range(5):
+            a[i + 1] += v[i]
+    lines = [(g, a[0], a[1], a[2], round(a[3], 2), round(a[4], 2), round(a[4] - a[3], 2), a[5]) for g, a in sorted(acc.items(), key=lambda kv: -kv[1][3])]
+    t = [sum(x[i] for x in lines) for i in range(1, 8)]
+    return lines, ("ИТОГО", *[round(x, 2) if isinstance(x, float) else x for x in t])
+
+
+def by_day(rows):
+    """[(date of the account, impressions, clicks, spend, revenue, profit, conversions)] oldest first, and the totals."""
+    acc = {}
+    for r in rows:
+        a = acc.setdefault(str(r["day"])[:10], [0, 0, 0.0, 0.0, 0])
+        a[0] += int(_num(r.get("impressions")))
+        a[1] += int(_num(r.get("clicks")))
+        a[2] += _num(r.get("spent"))
+        a[3] += _num(r.get("revenue"))
+        a[4] += int(_num(r.get("conversions")))
+    lines = [(d, a[0], a[1], round(a[2], 2), round(a[3], 2), round(a[3] - a[2], 2), a[4]) for d, a in sorted(acc.items())]
+    t = [sum(a[i] for a in acc.values()) for i in range(5)]
+    return lines, ("ИТОГО", t[0], t[1], round(t[2], 2), round(t[3], 2), round(t[3] - t[2], 2), t[4])
+
+
+def plain_sheet(wb, title, head, lines, total):
+    from openpyxl.styles import Alignment, Font, PatternFill
+    ws = wb.create_sheet(title[:31])
+    ws.append(head)
+    for c in ws[1]:
+        c.font = Font(bold=True)
+        c.fill = PatternFill("solid", fgColor="DDDDDD")
+        c.alignment = Alignment(wrap_text=True, vertical="center")
+    for ln in lines:
+        ws.append(ln)
+    ws.append(total)
+    for c in ws[ws.max_row]:
+        c.font = Font(bold=True)
+    for i in range(len(head)):
+        ws.column_dimensions[chr(65 + i)].width = 14
+    for row in ws.iter_rows(min_row=2):
+        for c in row:
+            if isinstance(c.value, float):
+                c.number_format = "0.00"
+
+
+def write_xlsx(path, sheets, notes, extra=()):
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
     wb = Workbook()
@@ -118,6 +174,8 @@ def write_xlsx(path, sheets, notes):
             for c in row:
                 c.number_format = "0.00"
         ws.freeze_panes = "B2"
+    for title, head, lines, total in extra:
+        plain_sheet(wb, title, head, lines, total)
     ws = wb.create_sheet("Пояснения")
     for n in notes:
         ws.append([n])
@@ -133,13 +191,20 @@ def main():
     today = datetime.now(MSK).date().isoformat()
     ap.add_argument("--day", default=today, help="Moscow day, default today")
     ap.add_argument("--since", default=None, help="account date for the second sheet, default: the day before --day minus 2")
+    ap.add_argument("--no-day", action="store_true", help="skip the sheet of one day (a week report)")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
     since = a.since or (date.fromisoformat(a.day) - timedelta(days=2)).isoformat()
     meta = v2_campaigns(("name", "status", "bidding"))
-    day_stats = collect(day_rows(a.day), lambda r: True)
-    since_stats = collect(since_rows(since, a.day), lambda r: True)
-    sheets = [(f"День {a.day} (МСК)", table(day_stats, meta)), (f"С {since}", table(since_stats, meta))]
+    srows = since_rows(since, a.day)
+    since_stats = collect(srows, lambda r: True)
+    sheets = [(f"С {since}", table(since_stats, meta))]
+    if not a.no_day:
+        sheets.insert(0, (f"День {a.day} (МСК)", table(collect(day_rows(a.day), lambda r: True), meta)))
+    geo_lines, geo_total = by_geo(since_stats, meta)
+    day_lines, day_total = by_day(srows)
+    extra = [(f"По дням с {since}", ("Дата (Тирана)", "Показы", "Клики", "Расход $", "Доход $", "Прибыль $", "Конверсии"), day_lines, day_total),
+             (f"По странам с {since}", ("Страна", "Кампаний", "Показы", "Клики", "Расход $", "Доход $", "Прибыль $", "Конверсии"), geo_lines, geo_total)]
     now = datetime.now(MSK).strftime("%d.%m.%Y %H:%M МСК")
     notes = [
         f"Выгрузка {now}. Лист «День»: московские сутки {a.day} (00:00 МСК до момента выгрузки), собраны из часовых данных MGID (его бакеты в зоне аккаунта, Europe/Tirane).",
@@ -158,7 +223,9 @@ def main():
             for label in ("наши", "не наши", "всего"):
                 w.writerow(total_line("ИТОГО " + label, tot[label]))
     else:
-        write_xlsx(a.out, sheets, notes)
+        write_xlsx(a.out, sheets, notes, extra)
+    print("По дням:", *[f"{x[0]} расход {x[3]:.2f} доход {x[4]:.2f} конв {x[6]}" for x in day_lines], sep="\n  ")
+    print("По странам:", *[f"{x[0]} кампаний {x[1]} расход {x[4]:.2f} доход {x[5]:.2f} конв {x[7]}" for x in geo_lines], sep="\n  ")
     for title, (lines, tot) in sheets:
         t = tot["всего"]
         print(f"{title}: кампаний {len(lines)}, показы {t[0]}, клики {t[1]}, расход {t[2]:.2f}, доход {t[3]:.2f}, прибыль {t[3] - t[2]:.2f}, конверсий {t[4]}")

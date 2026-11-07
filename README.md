@@ -6,6 +6,17 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 07.11 (Saturday, 15:12 MSK): the balance is zero, everything has been stopped since 31.10; the result of the week 25-31.10; the verdicts of the five Aray teasers
+
+Owner, 07.11: «Мгид какой баланс» (answered «На аккаунте» after I started to read teaser reasons), then «Какой результат последней недели когда откручивались кампании».
+
+**Balance of the working account: -$0.015** (v1 `clients/{id}` wallet). Spend per account day (Tirane): 27.10 $15.45, 28.10 $10.32, 29.10 $6.53, 30.10 $2.62, 31.10 $0.79, nothing from 01.11. All 100 campaigns are paused: 44 by the network for lack of funds (`outOfClientFunds`), 56 by hand. **A top-up restarts the 44** (the other chat's campaigns and Elastica UY): the owner was told to say beforehand what must not run.
+**Teasers of the nine Aray campaigns (moderation answered between 27.10 evening and 07.11):** 28265605 Vitaflex PE and 28265606 Duston Gel UY `rejected` («Landing page issue», «The webpage has formatting issues», each with a gyazo screenshot link; not opened: the owner interrupted my download); 28265604 Elastica UY, 28265607 Sustarox EC and 28265608 Oxys PY `blocked`, `blocked_by: system`, no reason in the status. Elastica UY (12525146) itself stands `paused/outOfClientFunds`: it never had an impression.
+
+**Result of the week 25-31.10 (`daily_stats.py --since 2026-10-25 --no-day`, new sheets «По дням» and «По странам», tests 9 pass):** 37 campaigns with traffic, 649 391 impressions, 3 795 clicks (1.1 cents a click), **spend $40.98, revenue $0.60, profit -$40.38**, 6 conversions ($0.10 revenue each, $6.83 spend each).
+By country, spend/revenue/conversions: AZ $20.86/$0.50/5, AM $8.20/$0.10/1, MD $5.27/0/0, KZ $3.98/0/0, US 1537 (ours) $1.33/0/0, TR $1.16/0/0, TJ $0.11, nine more geos $0.07 together. The conversions: AZ BeeFlex Forte (aff 824) 4 ($4.11 spent, $0.40), AZ BeeFlex Forte (aff 809) 1 ($6.11, $0.10), AM Prozrenie (aff 1023) 1 ($1.10, $0.10).
+Ours: $1.33 (1537 F compare2 v2), none of the nine Aray campaigns. Revenue is what the postbacks reported to MGID; the partner's (Affstar) books are not visible here.
+
 ## 27.10 evening (21:45 MSK): today's spend and revenue of every campaign as a file; the revenue of the other chat's campaigns is $0.10 a conversion, not what I estimated
 
 Owner, 27.10: «Какие результаты по кампаниям что откручиваются», «Какой результат», then «Ты можеш прислать сегодняшнюю статистику всех кампаний расход доход».
