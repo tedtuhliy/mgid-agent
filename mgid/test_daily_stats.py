@@ -75,5 +75,27 @@ class Groups(unittest.TestCase):
         self.assertEqual(total, ("ИТОГО", 170, 7, 3.5, 0.3, -3.2, 3))
 
 
+class Since(unittest.TestCase):
+    def test_from_rows_cut_at_the_hour_in_moscow_time(self):
+        # 17:00 MSK on the 7th is 14:00 UTC = 15:00 Tirane (UTC+1)
+        rows = [row(1, "2026-11-07", 14, 1.0), row(1, "2026-11-07", 15, 2.0), row(1, "2026-11-07", 16, 4.0)]
+        with mock.patch.object(d, "report", lambda *a, **k: rows):
+            kept = d.from_rows("2026-11-07 17:00", "2026-11-12")
+        self.assertEqual([x["spent"]["amount"] for x in kept], ["2.0", "4.0"])
+
+    def test_by_day_can_group_by_the_moscow_date(self):
+        # 21:00 Tirane (UTC+1) on the 7th is 23:00 Moscow on the 7th, 22:00 Tirane is already 00:00 Moscow on the 8th
+        rows = [row(1, "2026-11-07", 21, 1.0), row(1, "2026-11-07", 22, 2.0), row(1, "2026-11-08", 10, 4.0)]
+        lines, total = d.by_day(rows, d.msk_date)
+        self.assertEqual([(x[0], x[3]) for x in lines], [("2026-11-07", 1.0), ("2026-11-08", 6.0)])
+        self.assertEqual(total[3], 7.0)
+
+
+class Sheets(unittest.TestCase):
+    def test_sheet_names_have_no_characters_excel_forbids(self):
+        self.assertEqual(d.sheet_title("С 2026-11-07 17:00"), "С 2026-11-07 17.00")
+        self.assertEqual(len(d.sheet_title("x" * 50)), 31)
+
+
 if __name__ == "__main__":
     unittest.main()

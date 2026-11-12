@@ -75,6 +75,12 @@ def since_rows(since, day):
     return [r for r in report(since, day, METRICS, ("campaignId", "day")) if str(r["day"])[:10] >= since]
 
 
+def from_rows(start, till):
+    """Hourly rows from `start` ('YYYY-MM-DD HH:MM', Moscow) through the Moscow day `till`: a report since a top-up."""
+    lo = datetime.strptime(start, "%Y-%m-%d %H:%M").replace(tzinfo=MSK).astimezone(timezone.utc)
+    return [r for r in report(start[:10], till, METRICS, ("campaignId", "day", "hour")) if bucket_start(r["day"], r["hour"]) >= lo]
+
+
 def table(stats, meta):
     """Rows for a sheet, the biggest spend first, and the totals {ours, others, all}."""
     lines, tot = [], {"наши": [0, 0, 0.0, 0.0, 0], "не наши": [0, 0, 0.0, 0.0, 0]}
@@ -114,11 +120,16 @@ def by_geo(stats, meta):
     return lines, ("ИТОГО", *[round(x, 2) if isinstance(x, float) else x for x in t])
 
 
-def by_day(rows):
-    """[(date of the account, impressions, clicks, spend, revenue, profit, conversions)] oldest first, and the totals."""
+def msk_date(r):
+    """Moscow date of an hourly row."""
+    return bucket_start(r["day"], r["hour"]).astimezone(MSK).date().isoformat()
+
+
+def by_day(rows, key=lambda r: str(r["day"])[:10]):
+    """[(date, impressions, clicks, spend, revenue, profit, conversions)] oldest first, and the totals. The date is the account's (Tirane) unless `key` says otherwise."""
     acc = {}
     for r in rows:
-        a = acc.setdefault(str(r["day"])[:10], [0, 0, 0.0, 0.0, 0])
+        a = acc.setdefault(key(r), [0, 0, 0.0, 0.0, 0])
         a[0] += int(_num(r.get("impressions")))
         a[1] += int(_num(r.get("clicks")))
         a[2] += _num(r.get("spent"))
@@ -131,7 +142,7 @@ def by_day(rows):
 
 def plain_sheet(wb, title, head, lines, total):
     from openpyxl.styles import Alignment, Font, PatternFill
-    ws = wb.create_sheet(title[:31])
+    ws = wb.create_sheet(sheet_title(title))
     ws.append(head)
     for c in ws[1]:
         c.font = Font(bold=True)
@@ -150,13 +161,18 @@ def plain_sheet(wb, title, head, lines, total):
                 c.number_format = "0.00"
 
 
+def sheet_title(t):
+    """Excel forbids : \\ / ? * [ ] in a sheet name and caps it at 31 characters."""
+    return re.sub(r"[\\/?*\[\]:]", ".", t)[:31]
+
+
 def write_xlsx(path, sheets, notes, extra=()):
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
     wb = Workbook()
     wb.remove(wb.active)
     for title, (lines, tot) in sheets:
-        ws = wb.create_sheet(title[:31])
+        ws = wb.create_sheet(sheet_title(title))
         ws.append(HEAD)
         for c in ws[1]:
             c.font = Font(bold=True)
@@ -192,19 +208,30 @@ def main():
     ap.add_argument("--day", default=today, help="Moscow day, default today")
     ap.add_argument("--since", default=None, help="account date for the second sheet, default: the day before --day minus 2")
     ap.add_argument("--no-day", action="store_true", help="skip the sheet of one day (a week report)")
+    ap.add_argument("--from", dest="start", help="Moscow time 'YYYY-MM-DD HH:MM': hourly cut from this moment to now (a report since a top-up); replaces the day and since sheets")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
     since = a.since or (date.fromisoformat(a.day) - timedelta(days=2)).isoformat()
     meta = v2_campaigns(("name", "status", "bidding"))
-    srows = since_rows(since, a.day)
-    since_stats = collect(srows, lambda r: True)
-    sheets = [(f"С {since}", table(since_stats, meta))]
-    if not a.no_day:
-        sheets.insert(0, (f"День {a.day} (МСК)", table(collect(day_rows(a.day), lambda r: True), meta)))
+    if a.start:
+        srows = from_rows(a.start, today)
+        since_stats = collect(srows, lambda r: True)
+        label = a.start
+        sheets = [(f"С {label}", table(since_stats, meta))]
+        day_lines, day_total = by_day(srows, msk_date)
+        day_head = "Дата (МСК)"
+        since = label + " МСК"
+    else:
+        srows = since_rows(since, a.day)
+        since_stats = collect(srows, lambda r: True)
+        sheets = [(f"С {since}", table(since_stats, meta))]
+        if not a.no_day:
+            sheets.insert(0, (f"День {a.day} (МСК)", table(collect(day_rows(a.day), lambda r: True), meta)))
+        day_lines, day_total = by_day(srows)
+        day_head = "Дата (Тирана)"
     geo_lines, geo_total = by_geo(since_stats, meta)
-    day_lines, day_total = by_day(srows)
-    extra = [(f"По дням с {since}", ("Дата (Тирана)", "Показы", "Клики", "Расход $", "Доход $", "Прибыль $", "Конверсии"), day_lines, day_total),
-             (f"По странам с {since}", ("Страна", "Кампаний", "Показы", "Клики", "Расход $", "Доход $", "Прибыль $", "Конверсии"), geo_lines, geo_total)]
+    extra = [(f"По дням с {since}"[:31], (day_head, "Показы", "Клики", "Расход $", "Доход $", "Прибыль $", "Конверсии"), day_lines, day_total),
+             (f"По странам с {since}"[:31], ("Страна", "Кампаний", "Показы", "Клики", "Расход $", "Доход $", "Прибыль $", "Конверсии"), geo_lines, geo_total)]
     now = datetime.now(MSK).strftime("%d.%m.%Y %H:%M МСК")
     notes = [
         f"Выгрузка {now}. Лист «День»: московские сутки {a.day} (00:00 МСК до момента выгрузки), собраны из часовых данных MGID (его бакеты в зоне аккаунта, Europe/Tirane).",

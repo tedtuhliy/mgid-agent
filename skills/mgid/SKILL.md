@@ -76,7 +76,9 @@ node "$VAULT" exec mgid -- env MGID_ACCOUNT=second python3 mgid/sources_report.p
 - **Метрики отчёта v2** (проверено 27.10, при неверном имени 422 без списка допустимых): годятся `impressions`, `clicks`, `spent`, `conversions`, `conversionsBuy`, `conversionsDecision`, `conversionsInterest`,
   `revenue`, `profit`, `ctr`, `cpc`, `cpm`; не годятся `roi`, `cpa`, `conversionsValue`. **`revenue` — это сумма, которую партнёрка передала постбеком вместе с конверсией (`r=`)**, а не её бухгалтерия:
   подтверждения, холд и отклонения позже сюда не попадают. У кампаний «Affstar LP» другого чата это $0.10 за конверсию при цене конверсии в настройках $0.27–1.2: брать `revenue`, а не `conversionValue`
-  из настроек (27.10 я сначала оценил доход по настройкам и завысил его в десять раз). Выгрузка за московский день одним файлом: `mgid/daily_stats.py --out stats.xlsx`.
+  из настроек (27.10 я сначала оценил доход по настройкам и завысил его в десять раз). Выгрузка одним файлом (xlsx: кампании, дни, страны): `mgid/daily_stats.py --out stats.xlsx` за московский день, `--since 2026-10-25 --no-day` за период, `--from "2026-11-07 17:00"` с часа пополнения (часовой срез, МСК).
+- **Пополнение видно в `wallet.income`** (v1 `GET clients/{id}`: накопительная сумма пополнений; 07.11 выросла с 6786 до 6886, то есть +$100) и по первому часу трафика после нулевого баланса
+  (пополнение само запускает кампании, которые остановила сеть). Расход с пополнения сходится с балансом: $100 − остаток.
 - **Отчёт v2 по тизерам:** измерение `teaserId` годится (`dimensions[]=campaignId&dimensions[]=teaserId`), `adId`, `creativeId`, `ad`, `teaser`, `adGroupId` нет. Так видно, какая ссылка принесла клик и конверсию.
 - **Регионы.** Справочник: `GET /v2/ads/dictionaries/countries/{id страны}/regions` → `{"data": [{"id", "name"}]}` (UY: Montevideo 3804, Canelones 3796, Maldonado 3803; последний пункт
   «Other regions» 4279). Запись: `PATCH …/campaigns/{id}` с `{"geoTargeting": {"countries": [191], "regions": {"mode": "include", "value": [3796, 3803, 3804]}}}` → 204. Пустой `value` = вся страна.

@@ -6,6 +6,17 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 12.11 (16:40 MSK): the statistics since the last top-up
+
+Owner, 12.11: «Разложи статистику после последнего пополнения».
+**The top-up:** +$100 on 07.11 at about 17:00 MSK (`wallet.income` 6786 -> 6886; the balance was -$0.015 at 15:12 MSK; the first hour of traffic is 07.11 17:00). Balance now $62.67, so the spend since then is about $37.3. 115 campaigns now (100 on 07.11): 58 active, 57 paused by hand; the top-up restarted the 44 that the network had stopped, and the other chat added 15.
+**New in `daily_stats.py`:** `--from "2026-11-07 17:00"` (Moscow time) cuts the hourly buckets from that moment, the day sheet is by Moscow date; sheet names are cleaned of `:` and the like (Excel rejects them); 12 tests pass.
+**Result 07.11 17:00 - 12.11 16:40:** 38 campaigns with traffic, 1 077 011 impressions, 3 514 clicks (1.06 cents a click), **spend $37.16, revenue $1.62, profit -$35.54**, 15 conversions. Ours: $0.00 (Elastica UY 12525146 restarted by the top-up, but its teaser is blocked, no impression; the other eight paused).
+By Moscow day: 07.11 from 17:00 $4.66, 08.11 $20.24, 09.11 $3.90, 10.11 $4.79, 11.11 $2.31, 12.11 until 16:40 $1.26. Since 08.11 the spend has fallen because the target CPAs of the other chat's campaigns were lowered by somebody (BeeFlex Forte 809 1.2 -> 0.15, Varix 1.2 -> 0.15, PROSLUH 1.44 -> 0.18).
+By country (spend/revenue/conversions): AZ $19.08/0.60/6 (6 campaigns), AM $4.82/0.10/1, KZ $4.58/0.40/4, TR $3.39/0.20/2, MD $2.01/0/0, ID $1.06, ES-LATAM $0.69, VN $0.42/0.32/2, the rest under $0.5 each.
+By offer family: «Affstar LP» 22 campaigns, 3 019 clicks, $33.88, revenue $1.30, 13 conversions; **new «WPS Office (cipiai 553)»** 14 campaigns in 14 geo groups (ID, ES-LATAM, VN, AF-EN, PH, AR-GULF, EG, EN-WEST, AR-REST, AF-PT, BR, TH, ZA, MX), 491 clicks, $3.23, revenue $0.32 (2 conversions in VN at $0.16); two more US campaigns (Private VPN Proxy cipiai 936, an old sweeps one) $0.02.
+Biggest: AZ BeeFlex Forte (aff 809) $8.59, 449 clicks, no conversion; AZ BeeFlex Forte (aff 824) $5.35, 2 conversions; KZ Отифлекс (aff 673) $3.82, 2; TR Redustar (aff 1075) $3.39, 2; AZ Varix (aff 849) $2.76, 1. Revenue is what the postbacks reported to MGID (mostly $0.10 a conversion).
+
 ## 07.11 (15:50 MSK): where the Armenia and Azerbaijan traffic went (read only); the container was replaced
 
 Owner, 07.11: «Куда лилась армения и азербайжан». The container had been replaced: the scratchpad (workbooks, the vault copy) was empty and `vault.mjs` found no `mgid` service; the vault was restored with the git command of the `secrets` skill (PAT and passphrase are in the environment), nothing else was lost (skills and README are in the repository).
