@@ -1,0 +1,27 @@
+{
+ "assets": {
+  "1046": "https://static.particlenews.com/nova/assets/2094796504854999041/cd9b8e4de4d42c9b880f4efdcfd31ef9444b0cf9.jpg",
+  "1282_a": "https://static.particlenews.com/nova/assets/2094796504854999041/2bac88aec1e89ab3b3d9b1e86e9592148edae0b1.jpg",
+  "1282_b": "https://static.particlenews.com/nova/assets/2094796504854999041/b55f13fd47792f8cf4ebbb1d254a9d24f52d6a3e.jpg",
+  "1282_d": "https://static.particlenews.com/nova/assets/2094796504854999041/e0d22bed70dfa9a7de7efa2f639447ca6048807a.jpg",
+  "1719": "https://static.particlenews.com/nova/assets/2094796504854999041/b55f13fd47792f8cf4ebbb1d254a9d24f52d6a3e.jpg",
+  "1725": "https://static.particlenews.com/nova/assets/2094796504854999041/f5bbac64e71f51a1d403fa3dbbb34a9e924ea45a.jpg",
+  "1795": "https://static.particlenews.com/nova/assets/2094796504854999041/05415162d7642d9b86abc5a530e3852aca893fda.jpg",
+  "2139_a": "https://static.particlenews.com/nova/assets/2094796504854999041/626e76a7615b09334c953ad663724d9813fa55e0.jpg",
+  "2139_c": "https://static.particlenews.com/nova/assets/2094796504854999041/dfa1468538fb2d12e7633b89d649ba478d190ebd.jpg",
+  "2139_d": "https://static.particlenews.com/nova/assets/2094796504854999041/09a403b01891a2c42b361b7f3b537412ad8fbc31.jpg",
+  "2154": "https://static.particlenews.com/nova/assets/2094796504854999041/074768b4dea6600af3c241a069645ab2d57419ed.jpg",
+  "2212": "https://static.particlenews.com/nova/assets/2094796504854999041/62038edbf8f04ac19445c708fe0e722e1ba4d3f7.jpg"
+ },
+ "offers": {
+  "1282": {
+   "ad_set": "2123401974553292802",
+   "ads": {
+    "1282 ad 1": "2123401977279590401",
+    "1282 ad 2": "2123401978739208194",
+    "1282 ad 3": "2123401980278517761"
+   },
+   "campaign": "2123401971659223042"
+  }
+ }
+}

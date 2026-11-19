@@ -3,8 +3,24 @@ MGID/Adskeeper agent.
 
 `index.js` / `Dockerfile` are the small health-check service. Everything about the MGID tests of the owner lives in `mgid/`, plain Python,
 standard library only: the main account 816929 (v2 client 939031, blocked by MGID since 14.10) and the second account 816921 (v2 client 939023,
-the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
+the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
+
+## 19.11 evening: NewsBreak (new source): access found, API client, the first test built PAUSED at the minimum bid and the minimum money
+
+Owner, 19.11: the login and the password of NewsBreak (pasted in the chat), «Доступ найди там api ключ и реализация все что можно через api», «Нужно сделать тест оферов на новом источнике по минималкам ставки и бюджет максимально ограничен по деньгам должен быть», «Все на паузе сделай в newsbreack», «Составь план задач и выполняй».
+**Access.** Stored in the vault (service `newsbreak`: `NEWSBREAK_LOGIN`, `NEWSBREAK_PASSWORD`, `NEWSBREAK_API_KEY`, published with the safe helper; the password is the same as cpamatica's and is in this transcript: rotate both). The cabinet is `admanager.newsbreak.com` (not ads.newsbreak.com).
+Its web app signs in with Firebase, then `POST /api/login` gives a Bearer token for the internal API: that works without a browser (`nb_api.session_token()`). The owner's Advertising API token of 01.09.2026 already existed (`GET /api/v1/users/access-token`, ACTIVE, 10 requests a second): saved, nothing new was generated.
+The API documentation is public only as Zendesk JSON (`advertising-api.newsbreak.com/api/v2/help_center/en-us/articles.json`, 39 articles; the help center `adhelp.newsbreak.com`, 163): the HTML pages answer bots 403.
+**Account:** organization and ad account «Bohdan Shevchenko» (`2094796504817250305` / `2094796504854999041`), balance **$0**, no campaigns, no events, no spending cap at the start.
+**Client and tool (`newsbreak/`, 13 tests pass):** `nb_api.py` (public API `business.newsbreak.com/business-api/v1`, header `Access-Token`, money in cents), `nb_sweeps.py` (`--cap`, `--upload`, `--build`, `--status`, `--all-off`), `ra_client.py`, `data/nb-sweeps.json`; skill `skills/newsbreak/SKILL.md`.
+**Minimums found with probe objects (deleted):** CPC at least **$0.10** (9 cents: «illegal bid rate too small»), DAILY budget at least **$10**, TOTAL at least $10 for every calendar day of the flight ($20 / $30 / $80 for 2 / 3 / 8 calendar days), headline 90 characters, image 16:9, ad review 1-2 working days.
+**Money limit:** the account spending cap was set to **$10** through `balance/updateAccountsBudget` ($10 remaining, $0 spent); the balance of the account is $0, so nothing can run until the owner tops it up.
+**Built, everything OFF:** campaign 2123401971659223042 (objective WEB_TRAFFIC) for Level Reward $1000 (1282), ad set 2123401974553292802 (DAILY $10, CPC $0.10, 14 days, first-party NewsBreak inventory, iOS and Android, ages 18-64, English), three ads (2123401977279590401, 2123401978739208194, 2123401980278517761), `auditStatus PENDING`.
+Only 1282 has a link in RollerAds; the other offers are skipped until the access comes (`nb_sweeps.py --build` is idempotent), 2139 also waits for the advertiser's approval. Twelve creatives (16:9; the insurance ones with the AI disclaimer printed after the crop) are in the account's Media Library.
+**Link:** `<tracker link of the offer>?source_id=nb-__FLIGHT_ID__-__CREATIVE_ID__&aff_click_id=__CALLBACK_PARAM__` (NewsBreak macros have two underscores; the click id is `nvss_...`). A test click with ids of the real length (42 and 57 characters) came back unchanged from `aff-clicks`;
+**that report is asynchronous: the first call is empty, repeat after 7 seconds.** No postback to NewsBreak: a traffic campaign needs none; conversions are read in RollerAds by `source_id`. Caveat: the shared RollerAds postback `mgid-sweeps-lead` fires on every conversion of these offers and would send a NewsBreak click id to `a.mgid.com`.
+Not done on purpose: nothing was switched on, no money was added (no payment data), no event/postback for optimisation (how to add it: skill §4).
 
 ## 19.11: the owner's sweeps focus, ten RollerAds offers; the first two prepared as paused CPA tune campaigns at $1
 
