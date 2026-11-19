@@ -1,0 +1,126 @@
+{
+ "min_bid": "0.02",
+ "offers": {
+  "1041": {
+   "ads": {
+    "Enter for a chance to win a $1000 gift card. Terms apply": 1065584,
+    "Quick sweepstakes entry: see the rules and your chance to win": 1065586,
+    "Trend'n Daily sweepstakes: a chance to win a $1000 gift card": 1065585
+   },
+   "bid": "0.02",
+   "campaign": 39180,
+   "group": 142441,
+   "limit_ok": true
+  },
+  "1046": {
+   "ads": {
+    "Enter for a chance to win a $1000 gift card. Terms apply": 1065581,
+    "Quick sweepstakes entry: see the rules and your chance to win": 1065583,
+    "Trend'n Daily sweepstakes: a chance to win a $1000 gift card": 1065582
+   },
+   "bid": "0.02",
+   "campaign": 39179,
+   "group": 142440,
+   "limit_ok": true
+  },
+  "1282": {
+   "ads": {
+    "3 quick questions: see if you qualify for a $1000 reward": 1065572,
+    "Level Reward: check if you qualify for the $1000 cash reward": 1065574,
+    "Take the quick quiz and check your cash reward eligibility": 1065573
+   },
+   "bid": "0.02",
+   "campaign": 39176,
+   "group": 142437,
+   "limit_ok": true
+  },
+  "1560": {
+   "ads": {
+    "American Survey sweepstakes: a chance to win a $500 gift card": 1065587,
+    "Enter for a chance to win a $500 gift card. Terms apply": 1065588,
+    "Quick survey entry: a chance to win a $500 gift card": 1065589
+   },
+   "bid": "0.02",
+   "campaign": 39181,
+   "group": 142442,
+   "limit_ok": true
+  },
+  "1719": {
+   "ads": {
+    "3 short questions to check your Level Rewards eligibility": 1065576,
+    "Check if you qualify for a Level Rewards cash reward": 1065577,
+    "Quick quiz: see if you qualify for a $1000 cash reward": 1065575
+   },
+   "bid": "0.02",
+   "campaign": 39177,
+   "group": 142438,
+   "limit_ok": true
+  },
+  "2139": {
+   "ads": {
+    "Compare home insurance options in minutes. See if you qualify": 1065603,
+    "Homeowners could save on home insurance. See if you qualify": 1065602,
+    "See if you qualify for a better home insurance rate": 1065604
+   },
+   "bid": "0.02",
+   "campaign": 39186,
+   "group": 142447,
+   "limit_ok": true
+  },
+  "2176": {
+   "ads": {
+    "Join a health research study: see if you qualify": 1065598,
+    "Physician-supervised research study: check your eligibility": 1065597,
+    "Research study enrolling participants: see if you qualify": 1065596
+   },
+   "bid": "0.02",
+   "campaign": 39184,
+   "group": 142445,
+   "limit_ok": true
+  },
+  "2177": {
+   "ads": {
+    "Adults 55+: find discounts on groceries and healthcare": 1065601,
+    "Ages 55+: explore savings, discounts and assistance programs": 1065600,
+    "Savings resources for adults 55+: see discounts and programs": 1065599
+   },
+   "bid": "0.02",
+   "campaign": 39185,
+   "group": 142446,
+   "limit_ok": true
+  },
+  "2212": {
+   "ads": {
+    "Mobile games with reward offers: see how it works": 1065580,
+    "Play games and complete offers in the app to earn rewards": 1065578,
+    "Playful Rewards: see how the rewards app works": 1065579
+   },
+   "bid": "0.02",
+   "campaign": 39178,
+   "group": 142439,
+   "limit_ok": true
+  },
+  "2238": {
+   "ads": {
+    "Government grant programs: check what you may qualify for": 1065592,
+    "Grant programs: see if you may be eligible": 1065590,
+    "Learn about grant programs and check your eligibility": 1065591
+   },
+   "bid": "0.02",
+   "campaign": 39182,
+   "group": 142443,
+   "limit_ok": true
+  },
+  "2239": {
+   "ads": {
+    "Billions in unclaimed money in the US: search your name": 1065595,
+    "Check if you have unclaimed money waiting in your name": 1065593,
+    "You may be owed up to $1,600 in unclaimed money: check now": 1065594
+   },
+   "bid": "0.02",
+   "campaign": 39183,
+   "group": 142444,
+   "limit_ok": true
+  }
+ }
+}

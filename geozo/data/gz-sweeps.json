@@ -1,0 +1,166 @@
+{
+  "note": "The RollerAds sweeps and lead offers on Geozo, US (owner, 19.11.2026: «На geozo ... есть usa трафик запустим там тоже все наши связки», «ставки минимально возможные на usa ставь по которым хоть какой то трафик пойдёт», «Все сделай»). One campaign, one group and 3 teasers per offer, a daily money limit on the campaign, minimum bid found by walking the ladder (a probe that is accepted IS the first real teaser). The settings (type, source, categories) are copied from the campaign that already works for the same kind of link (US 1537 LendingTree refi, 38206: commodity type 1, source 1 Websites). Geozo takes direct tracker links; the link is the tracker link of the offer on the custom domain of the buying team (eventsbytlcltd.com) with source_id=gz-[CAMPAIGN_ID]-[AD_ID]-[SITE_ID] (Geozo macros); no click id macro exists, the conversions are read on the RollerAds side by source_id. No TDS server: the tracker link is already a clean redirect to the offer, the same for everybody. Titles are 30..65 characters; the words are the words of the landings (the owner says Geozo takes aggressive creatives: the amounts are in, the invented stories, earnings and balance screenshots are not).",
+  "limits_note": "Geozo refuses a campaign limit below $20 (15 answers validation.min.numeric, 20 is accepted, checked 19.11 on an empty campaign): the hard caps are daily $20 and total $20 (the campaign stops for good at $20 spent). The softer rule of the owner, $3 a day a campaign, is kept by `gz_sweeps.py --guard` (stops the ads of a campaign that spent $3 today, starts them again the next UTC day; stops everything when the balance falls below balance_floor_usd, the balance is shared with the other campaigns of the account).",
+  "template_campaign": 38206,
+  "countries": [
+    "US"
+  ],
+  "daily_limit_usd": 20,
+  "total_limit_usd": 20,
+  "soft_daily_cap_usd": 3,
+  "balance_floor_usd": 60,
+  "bid_ladder": [
+    "0.005",
+    "0.008",
+    "0.01",
+    "0.012",
+    "0.015",
+    "0.018",
+    "0.02",
+    "0.025",
+    "0.03",
+    "0.04",
+    "0.05",
+    "0.06",
+    "0.07"
+  ],
+  "devices_mobile": [
+    2,
+    4
+  ],
+  "devices_all": [
+    1,
+    2,
+    4
+  ],
+  "offers": {
+    "1282": {
+      "devices": "mobile",
+      "images": [
+        "1282_a",
+        "1282_b",
+        "1282_c"
+      ],
+      "titles": [
+        "3 quick questions: see if you qualify for a $1000 reward",
+        "Take the quick quiz and check your cash reward eligibility",
+        "Level Reward: check if you qualify for the $1000 cash reward"
+      ]
+    },
+    "1719": {
+      "devices": "mobile",
+      "images": [
+        "1719"
+      ],
+      "titles": [
+        "Quick quiz: see if you qualify for a $1000 cash reward",
+        "3 short questions to check your Level Rewards eligibility",
+        "Check if you qualify for a Level Rewards cash reward"
+      ]
+    },
+    "2212": {
+      "devices": "mobile",
+      "images": [
+        "2212",
+        "2212_b"
+      ],
+      "titles": [
+        "Play games and complete offers in the app to earn rewards",
+        "Playful Rewards: see how the rewards app works",
+        "Mobile games with reward offers: see how it works"
+      ]
+    },
+    "1046": {
+      "devices": "mobile",
+      "images": [
+        "1046"
+      ],
+      "titles": [
+        "Enter for a chance to win a $1000 gift card. Terms apply",
+        "Trend'n Daily sweepstakes: a chance to win a $1000 gift card",
+        "Quick sweepstakes entry: see the rules and your chance to win"
+      ]
+    },
+    "1041": {
+      "devices": "mobile",
+      "images": [
+        "1046"
+      ],
+      "titles": [
+        "Enter for a chance to win a $1000 gift card. Terms apply",
+        "Trend'n Daily sweepstakes: a chance to win a $1000 gift card",
+        "Quick sweepstakes entry: see the rules and your chance to win"
+      ]
+    },
+    "1560": {
+      "devices": "mobile",
+      "images": [
+        "1725"
+      ],
+      "titles": [
+        "American Survey sweepstakes: a chance to win a $500 gift card",
+        "Enter for a chance to win a $500 gift card. Terms apply",
+        "Quick survey entry: a chance to win a $500 gift card"
+      ]
+    },
+    "2238": {
+      "devices": "mobile",
+      "images": [
+        "2238"
+      ],
+      "titles": [
+        "Grant programs: see if you may be eligible",
+        "Learn about grant programs and check your eligibility",
+        "Government grant programs: check what you may qualify for"
+      ]
+    },
+    "2239": {
+      "devices": "mobile",
+      "images": [
+        "2239"
+      ],
+      "titles": [
+        "Check if you have unclaimed money waiting in your name",
+        "You may be owed up to $1,600 in unclaimed money: check now",
+        "Billions in unclaimed money in the US: search your name"
+      ]
+    },
+    "2176": {
+      "devices": "all",
+      "images": [
+        "2176_a",
+        "2176_b"
+      ],
+      "titles": [
+        "Research study enrolling participants: see if you qualify",
+        "Physician-supervised research study: check your eligibility",
+        "Join a health research study: see if you qualify"
+      ]
+    },
+    "2177": {
+      "devices": "all",
+      "images": [
+        "2177_a"
+      ],
+      "titles": [
+        "Savings resources for adults 55+: see discounts and programs",
+        "Ages 55+: explore savings, discounts and assistance programs",
+        "Adults 55+: find discounts on groceries and healthcare"
+      ]
+    },
+    "2139": {
+      "devices": "all",
+      "images": [
+        "2139_a",
+        "2139_c",
+        "2139_d"
+      ],
+      "disclaimer": "Some images in this advertisement were generated using AI.",
+      "titles": [
+        "Homeowners could save on home insurance. See if you qualify",
+        "Compare home insurance options in minutes. See if you qualify",
+        "See if you qualify for a better home insurance rate"
+      ]
+    }
+  }
+}

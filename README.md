@@ -6,6 +6,22 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11, 17:15 UTC: all the bundles on Geozo (US), new tool `geozo/`
+
+Owner: «На geozo ... есть usa трафик запустим там тоже все наши связки», «Тдс чисто как редирект ... главное чтобы трекинг ссылка была рабочей», «ставки минимально возможные на usa», «Также беру: [2238, 1560, 2139, 2177] ... Все сделай».
+- **Tool** `geozo/gz_sweeps.py` (+ `gz_api.py`, `data/gz-sweeps.json`, `data/gz-created.json`, `test_gz.py`, 13 tests): `--images DIR`, `--check-links`, `--build DIR [--only]`, `--status`, `--guard`, `--all-off`, `--bid X [--only]`.
+  Run: `node vault.mjs exec geozo rollerads -- python3 -I gz_sweeps.py ...`.
+- **Built:** 11 campaigns (one per offer: 1282, 1719, 2212, 1046, 1041, 1560, 2238, 2239, 2176, 2177, 2139; ids 39176-39186), one group each (US, auto start of approved ads, devices [2,4] for the phone offers and [1,2,4] for CareHealth, Wise Savings and Home Insurance;
+  device codes: 1 desktop, 2 tablet, 4 phone, found from stats by `device_type_id`), 3 teasers each = 33 (title 30..65 characters, square 600x600 + wide 800x450; the Home Insurance pictures keep the band «generated using AI» in both formats).
+  Settings (type 1 commodity, source 1 Websites, categories) copied from 38206 «US 1537 LendingTree refi». Not built: 1725, 1795, 2154 (no link).
+- **Bid:** the US floor of a commodity campaign is **$0.02** (the ladder 0.005..0.018 answers `invalid_min_bid`); on Geozo the paid CPC equals the bid (the old US test: bids 0.02 / 0.05 / 0.07 gave CPC 0.02 / 0.042-0.046 / 0.069-0.072).
+- **Limits:** Geozo refuses a campaign limit below **$20** (15 answers `validation.min.numeric`): daily $20 and total $20 are the hard caps (the campaign stops for good at $20), written and read back before any teaser. The owner's $3 a day is `--guard`
+  (stops the ads of a campaign that spent $3 today, restarts them the next UTC day, stops all when the balance is under $60; the balance is $190 and shared with the campaigns that earn, ~$84 a day). An hourly scheduled task runs it until 22.11 15:00 UTC.
+- **Link:** the tracker link on eventsbytlcltd.com plus `source_id=gz-[CAMPAIGN_ID]-[AD_ID]-[SITE_ID]` (Geozo has no click id macro); no TDS server (Inferno is reachable only through Tailscale, the key did not work; the tracker link is already a clean redirect, the same for everybody).
+  What the tracker answers to a request from a datacenter (`--check-links`): 302 to the landing for 1282, 1041, 1560; **204 for the other eight** (its filter), a link checker may take that for a dead link.
+- **Statuses of ads** (`ads/universal/{id}.status_id`): 2 moderation, 21 queue before moderation, 5 active, 4 stopped, 6 archived, **3 (not in the skill): by all signs rejected** (no reason in the API): at 17:16 UTC 8 ads: 1560 (3 of 3), 2238 (3 of 3), 1041 (2 of 3);
+  1041 and 1560 are the two that MGID rejected as «Malicious URL». The rest in moderation or the queue, nothing active, no show, balance $190.40.
+
 ## 19.11, 15:25 UTC: «как успехи, открут где-то шёл?» — no spend anywhere; the answer to the moderation experiment; two MGID rejections
 
 - **Spend:** NewsBreak $0.00 of the $10 cap (balance $0); our MGID campaigns $0.00 (0 impressions); the other campaigns of the MGID account spent $1.12 today (128 426 impressions, not ours); RollerAds: no real click, no conversion.
