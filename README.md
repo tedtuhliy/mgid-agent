@@ -6,6 +6,13 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11, 19:15 UTC: Geozo: all 33 teasers rejected (status 3)
+
+At 18:16 and again at 19:16 UTC every ad of the 11 Geozo campaigns is `status_id 3` (at 17:16 only 8 of them): nothing active, 0 shows, $0 spent, balance $171.64 (the other campaigns of the account spend ~$10 an hour).
+The API gives no reason (`marks: []`, no moderation route: `ads/{id}/moderation`, `history`, `comments`, `reject_reasons`, `notifications` all 404), so it has to be read in the panel of Geozo (campaign 39176 and the others).
+Rejected are ALSO the ones whose tracker link answers 302 (1282), so the 204 of the tracker is not the only suspect; candidates: the tracker domain eventsbytlcltd.com itself (new, a redirect host), the texts with amounts and «reward», the sweepstakes/lead kind of link in a commodity campaign.
+Nothing more is created on Geozo until the reason is known (the account is shared with campaigns that earn, and rejections count). The hourly `--guard` task is still on (until 22.11 15:00 UTC), it only reports events.
+
 ## 19.11, 17:15 UTC: all the bundles on Geozo (US), new tool `geozo/`
 
 Owner: «На geozo ... есть usa трафик запустим там тоже все наши связки», «Тдс чисто как редирект ... главное чтобы трекинг ссылка была рабочей», «ставки минимально возможные на usa», «Также беру: [2238, 1560, 2139, 2177] ... Все сделай».
