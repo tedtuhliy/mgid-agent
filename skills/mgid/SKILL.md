@@ -178,6 +178,7 @@ RollerAds `GET /api/offers/1537/tracking-link`; он оставляет `source_
 - Нет редактирования: POST на существующий id создаёт **дубль**; ссылку и картинку не поменять. Заменить = создать новый, потом удалить старый (удалённый не восстановить). Журнал созданных:
   `mgid/data/nutra-direct-created.json`, скрипты `mgid/rr1537_teasers.py`, `mgid/nutra_direct.py`.
 - Лимит добавления `LS_TEASER_ADD_LIMIT_ERROR` ≈10 в сутки на кампанию; удаление его не возвращает, ретраи могут считаться: не долбить.
+- **Отказ `Malicious URL: https://verification.geoedge.com/ad-info/…`** (19.11: тизеры 1041 и 1560, оба за ~50 минут) — вердикт сканера GeoEdge по ссылке, а не по тексту; страница отчёта строится скриптом и без браузера пуста. Тизеры 1046 (с тем же текстом) и пятнадцать прежних ещё `onModeration`. Клики на трекере RollerAds без расхода и без устройства (`device_*` пусто) с адресов хостингов и с `source_id` вида `{widget}_{teaser}` — это проверка сканера, не трафик.
 - Статусы v1: `onModeration`, `rejected`, `blocked`, `campaignBlocked` (одобрен в кампании на паузе), `active`. Причина отказа — `status.reason_if_drop_karantin[0]`; в тексте ссылка на
   скриншот модератора `https://i.gyazo.com/<id>.png`.
 - Что видели: «Malware has been detected» (на скриншоте красная страница Chrome «Dangerous site»), «Footnotes / User awareness / Spoilers» (нутра, Италия),

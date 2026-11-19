@@ -6,6 +6,15 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11, 15:25 UTC: «как успехи, открут где-то шёл?» — no spend anywhere; the answer to the moderation experiment; two MGID rejections
+
+- **Spend:** NewsBreak $0.00 of the $10 cap (balance $0); our MGID campaigns $0.00 (0 impressions); the other campaigns of the MGID account spent $1.12 today (128 426 impressions, not ours); RollerAds: no real click, no conversion.
+- **The experiment «do they moderate ads that are off?»: yes, the automatic check starts at once.** The tracker log shows a robot from Amazon addresses opening the link of every OFF ad with the macros unresolved (`source_id=nb-__FLIGHT_ID__-__CREATIVE_ID__`):
+  the five OFF campaigns made at 14:22:50-14:23:12 UTC were opened first at 14:24:09-14:24:13 (about a minute later), 15-25 times each; the four made at 13:19 from 13:19:41; the ON campaign 1282 (made 13:04, switched ON 13:45) was first opened at 13:21:30 while still OFF.
+  A new wave at 15:23:47. The formal verdict: at 15:25 all 23 ads are `PENDING` (4 ON, 19 OFF), none approved or rejected; the ON campaign shows `ON/WARNING` since its flight started.
+- **MGID:** 2 of 17 teasers rejected: 1041 (28474459) and 1560 (28474463), «Malicious URL» with a GeoEdge ad-info link (the scanner of MGID judged the link, not the text); 1046 (28474456, the same text) and the 14 older ones still `onModeration`.
+- **The clicks on the tracker** (1282: 68, 1041: 24, 1560: 19, 2239: 1 today in the cabinet) are these robots (NewsBreak from Amazon, GeoEdge from hosting providers), not traffic.
+
 ## 19.11 night: requests for access sent from the cabinet (1046 and 2177 approved within minutes), the open versions 1041 and 1560, CareHealth and Wise Savings prepared
 
 Owner: «Все да сделай сам 1046 и 1725 кинь запросы».
