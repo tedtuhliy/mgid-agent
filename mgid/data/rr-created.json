@@ -1,7 +1,14 @@
 {
+ "1041": {
+  "campaign": 12552788,
+  "image": "RLRVsBC3",
+  "teaser": 28474459
+ },
  "1046": {
   "campaign": 12552693,
-  "goal": 1282661
+  "goal": 1282661,
+  "image": "byZ9qns4",
+  "teaser": 28474456
  },
  "1282": {
   "campaign": 12552674,
@@ -18,6 +25,11 @@
    "1282_d": "uaeND3vC"
   },
   "teaser": 28474040
+ },
+ "1560": {
+  "campaign": 12552789,
+  "image": "iL1h9Z4J",
+  "teaser": 28474463
  },
  "1719": {
   "campaign": 12552692,

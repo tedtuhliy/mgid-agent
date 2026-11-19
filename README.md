@@ -6,6 +6,21 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11 night: requests for access sent from the cabinet (1046 and 2177 approved within minutes), the open versions 1041 and 1560, CareHealth and Wise Savings prepared
+
+Owner: «Все да сделай сам 1046 и 1725 кинь запросы».
+- **Requests:** `POST /api/offers/{id}/access {"status": "sent"}` for 1046, 2177 and 1725 (HTTP 204 each). Within minutes **1046 and 2177 became `approved`** (link yes); 1725 stays `sent` (the card is still 404: a private offer, the manager has to answer).
+  Three more offers (2134, 2142, 2143) appeared in `/api/offers/my` as `sent` in the same hour: not ours, somebody else asked for them.
+- **Copy:** the landing of 1560 (preview of its card) is a sweepstakes («You Could WIN A $500 Gift Card», email entry, «Submit free entry»), so the headlines «short survey / reward eligibility» of 1046 and 1725 were wrong: replaced with «sweepstakes / a chance to win a gift card»
+  (the word «win» only inside «chance to win», no amounts; guards in `test_nb.py` and `test_rr_sweeps.py`). `rr-sweeps.json` has 14 offers now (+1041 Trend'n Daily push version, +1560 The American Survey push version).
+- **MGID** (paused): new campaigns 12552788 (1041) and 12552789 (1560); main teasers 28474459 (1041), 28474463 (1560) and 28474456 (1046: its link arrived in the same run); ONE teaser per campaign (the rule of the first round: a rejection stays on the account),
+  no extra variants until the first verdicts are known; the shared postback 1477 now targets 14 offers. No MGID teasers for CareHealth (one working account, healthcare is stricter) and Wise Savings (MGID has no age targeting, the offer needs 55+).
+- **NewsBreak** (all OFF, two ads each, CPC $0.10, $10 a day): 1046 (2123421740093452289), 1041 (2123421754010152962), 1560 (2123421774398664705), CareHealth 2176 (2123421815653838850), Wise Savings 2177 (2123421829901889538).
+  CareHealth: neutral «research study» copy and two neutral generated pictures; Wise Savings: age 65+ only (the offer wants 55+, NewsBreak has no such group), the age is written in the ad, one generated picture. Cap $10, spent $0, balance $0; the only ON campaign is Level Reward $1000 (1282).
+- **Status `WARNING`:** that campaign and its ad set changed from `ON/ACTIVE` and `ON/READY` to `ON/WARNING` when the flight of the ad set started (ads still `PENDING`, balance $0); the API does not say why.
+- **Product facts from the cards:** CareHealth (2176) is a physician-supervised research study (form: name, zip, email, phone, age, gender, kids under 18); Wise Savings (2177): seniors, discounts, 55+ housing, debt relief, form with date of birth.
+  The policy of NewsBreak lists «Healthcare & Pharmaceuticals» (medical institutions, telehealth) as a restricted category; medical claims need evidence; fake news-like staged images are forbidden.
+
 ## 19.11 evening: the owner asked «ты точно не имеешь ссылки в кабинете? или просто не нашёл?» — rechecked both RollerAds logins
 
 Read only, nothing sent to RollerAds. Both logins (affiliate accounts **118118** and **126546**), card, tracking link, `/api/offers/my` (89 rows) and the whole catalog `/api/offers` (396 rows):

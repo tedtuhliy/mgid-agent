@@ -73,18 +73,22 @@ class Variants(unittest.TestCase):
 
 
 class Data(unittest.TestCase):
-    def test_twelve_offers_with_unique_ids_and_the_owners_numbers(self):
+    def test_fourteen_offers_with_unique_ids_the_owners_twelve_and_the_two_open_versions(self):
         ids = [o["id"] for o in r.DATA["offers"]]
-        self.assertEqual(len(ids), 12)
-        self.assertEqual(sorted(ids), sorted([2139, 2176, 2177, 1046, 2154, 1795, 1725, 1282, 1719, 2212, 2238, 2239]))
+        self.assertEqual(len(ids), 14)
+        # the owner's twelve and, since 19.11, the versions of 1046 and 1725 that are open on the account (1041 push, 1560 push)
+        self.assertEqual(sorted(ids), sorted([2139, 2176, 2177, 1046, 2154, 1795, 1725, 1282, 1719, 2212, 2238, 2239, 1041, 1560]))
 
     def test_every_offer_with_a_title_has_an_image_and_the_titles_make_no_cash_claims(self):
         for o in r.DATA["offers"]:
             if o.get("title"):
                 self.assertTrue(o.get("image"), o["id"])
                 self.assertLessEqual(len(o["title"]), 75, o["id"])
+                low = o["title"].lower()
+                self.assertEqual(low.count("win"), low.count("chance to win"), o["title"])     # «win» only as «chance to win» (a sweepstakes landing, no promise)
+                low = low.replace("chance to win", "")
                 for bad in ("$1000", "$500", "free", "guarantee", "win ", "cash", "winner"):
-                    self.assertNotIn(bad, o["title"].lower(), o["id"])
+                    self.assertNotIn(bad, low, o["id"])
 
     def test_only_the_insurance_offer_waits_for_the_advertiser(self):
         self.assertEqual([o["id"] for o in r.DATA["offers"] if o.get("hold")], [2139])

@@ -48,8 +48,11 @@ class Copy(unittest.TestCase):
         for oid, c in s.DATA["offers"].items():
             for h in c["headlines"]:
                 self.assertLessEqual(len(h), 90, h)
+                low = h.lower()
+                self.assertEqual(low.count("win"), low.count("chance to win"), h)     # «win» only as «chance to win» (a sweepstakes landing, no promise)
+                low = low.replace("chance to win", "")
                 for bad in ("$1000", "$500", "free", "guarantee", "win ", "cash", "winner"):
-                    self.assertNotIn(bad, h.lower(), h)
+                    self.assertNotIn(bad, low, h)
 
     def test_every_copy_belongs_to_an_offer_of_the_list_and_has_images(self):
         for oid, c in s.DATA["offers"].items():

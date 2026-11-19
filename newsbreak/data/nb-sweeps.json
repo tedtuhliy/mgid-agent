@@ -62,8 +62,26 @@
         "1046"
       ],
       "headlines": [
-        "Short survey: see if you qualify for a gift card offer",
-        "Answer a few questions and check your gift card eligibility"
+        "Enter the sweepstakes for a chance to win a gift card",
+        "Quick sweepstakes entry: see the rules and your chance to win"
+      ],
+      "description": "Entry rules and terms apply."
+    },
+    "1041": {
+      "brand": "Trend'n Daily",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "1046"
+      ],
+      "description": "Entry rules and terms apply.",
+      "headlines": [
+        "Enter the sweepstakes for a chance to win a gift card",
+        "Quick sweepstakes entry: see the rules and your chance to win"
       ]
     },
     "2154": {
@@ -110,8 +128,26 @@
         "1725"
       ],
       "headlines": [
-        "Share your opinion in a short survey and check your reward eligibility",
-        "Short opinion survey: see if you qualify for a reward"
+        "The American Survey sweepstakes: a chance to win a gift card",
+        "Enter for a chance to win a gift card. Terms apply"
+      ],
+      "description": "Entry rules and terms apply."
+    },
+    "1560": {
+      "brand": "The American Survey",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "1725"
+      ],
+      "description": "Entry rules and terms apply.",
+      "headlines": [
+        "The American Survey sweepstakes: a chance to win a gift card",
+        "Enter for a chance to win a gift card. Terms apply"
       ]
     },
     "2212": {
@@ -184,6 +220,40 @@
         "Check if you may have unclaimed money in your name",
         "Search for unclaimed funds: takes about two minutes"
       ]
+    },
+    "2176": {
+      "brand": "CareHealth",
+      "mobile": true,
+      "age": [
+        "31-44",
+        "45-64",
+        "65+"
+      ],
+      "images": [
+        "2176_a",
+        "2176_b"
+      ],
+      "description": "Takes under two minutes. Eligibility rules and terms apply.",
+      "headlines": [
+        "Research study enrolling participants: see if you qualify",
+        "Physician-supervised research study: check your eligibility"
+      ]
+    },
+    "2177": {
+      "brand": "WiseSavings",
+      "mobile": false,
+      "age": [
+        "65+"
+      ],
+      "images": [
+        "2177_a"
+      ],
+      "description": "Ages 55+ only. Terms apply.",
+      "headlines": [
+        "Savings resources for adults 55+: see discounts and programs",
+        "Ages 55+: explore everyday savings, discounts and assistance programs"
+      ],
+      "age_note": "the offer needs 55+ targeting; NewsBreak has only 45-64 and 65+, so 65+ only (a subset of 55+), and the age is written in the ad (the advice of NewsBreak itself)"
     }
   }
 }

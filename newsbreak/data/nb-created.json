@@ -12,12 +12,31 @@
   "2139_c": "https://static.particlenews.com/nova/assets/2094796504854999041/dfa1468538fb2d12e7633b89d649ba478d190ebd.jpg",
   "2139_d": "https://static.particlenews.com/nova/assets/2094796504854999041/09a403b01891a2c42b361b7f3b537412ad8fbc31.jpg",
   "2154": "https://static.particlenews.com/nova/assets/2094796504854999041/074768b4dea6600af3c241a069645ab2d57419ed.jpg",
+  "2176_a": "https://static.particlenews.com/nova/assets/2094796504854999041/6a0d1b8ca34a6b62dcba61d050767f5c738523cc.jpg",
+  "2176_b": "https://static.particlenews.com/nova/assets/2094796504854999041/12e0954861818bd40fcf56996b04ecb0dbc6ef8c.jpg",
+  "2177_a": "https://static.particlenews.com/nova/assets/2094796504854999041/bfc0db38bdc36041bbcbf43d8bbf3639ce9c5adb.jpg",
   "2212": "https://static.particlenews.com/nova/assets/2094796504854999041/62038edbf8f04ac19445c708fe0e722e1ba4d3f7.jpg",
   "2212_b": "https://static.particlenews.com/nova/assets/2094796504854999041/7f148c4d33dc067f860f7800c062558fc7b897a6.jpg",
   "2238": "https://static.particlenews.com/nova/assets/2094796504854999041/f7f079b3c0429568db4f9760072ed3522a13437e.jpg",
   "2239": "https://static.particlenews.com/nova/assets/2094796504854999041/7d29217819781b01a3b02efbaeb1dee4f0859c60.jpg"
  },
  "offers": {
+  "1041": {
+   "ad_set": "2123421756811948034",
+   "ads": {
+    "1041 ad 1": "2123421759555022850",
+    "1041 ad 2": "2123421761148858370"
+   },
+   "campaign": "2123421754010152962"
+  },
+  "1046": {
+   "ad_set": "2123421742937190402",
+   "ads": {
+    "1046 ad 1": "2123421745835454466",
+    "1046 ad 2": "2123421747290877954"
+   },
+   "campaign": "2123421740093452289"
+  },
   "1282": {
    "ad_set": "2123401974553292802",
    "ads": {
@@ -28,6 +47,14 @@
    },
    "campaign": "2123401971659223042"
   },
+  "1560": {
+   "ad_set": "2123421777238208513",
+   "ads": {
+    "1560 ad 1": "2123421779897397249",
+    "1560 ad 2": "2123421781369597954"
+   },
+   "campaign": "2123421774398664705"
+  },
   "1719": {
    "ad_set": "2123405772311015425",
    "ads": {
@@ -35,6 +62,22 @@
     "1719 ad 2": "2123405777755222017"
    },
    "campaign": "2123405769190453249"
+  },
+  "2176": {
+   "ad_set": "2123421818447245314",
+   "ads": {
+    "2176 ad 1": "2123421821190320129",
+    "2176 ad 2": "2123421822641549314"
+   },
+   "campaign": "2123421815653838850"
+  },
+  "2177": {
+   "ad_set": "2123421833144086529",
+   "ads": {
+    "2177 ad 1": "2123421835857801218",
+    "2177 ad 2": "2123421837304836097"
+   },
+   "campaign": "2123421829901889538"
   },
   "2212": {
    "ad_set": "2123405798076624897",
