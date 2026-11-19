@@ -6,6 +6,21 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the two skills of the owner's repository in their current form: `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11: the owner's sweeps focus, ten RollerAds offers; the first two prepared as paused CPA tune campaigns at $1
+
+Owner, 19.11 (two messages and a pasted list): focus on sweepstakes (leadgen is what works for them from native and Meta), offers of the RollerAds catalog: Home Insurance RS 2139 (top, the advertiser must approve creatives), CareHealth 2176 and Wise Savings 2177 (CPL + prepop, "like sweeps but not"),
+sweeps 1046 Trend'n Daily, 2154 PrizeGrab, 1795 and 1725 The American Survey (private, approved sub ids), 1282 and 1719 Level Reward(s), 2212 Playful Rewards (app). Then: «Подготовь ссылки и запустим на тест кампании по cpa tune с ставкой 1 бакс. Креативы сделай через openrouter», and «Менеджер разберётся пушы и нативку на все оферы».
+**Facts read from the cabinet (session of vault service `rollerads`, 19.11):** cards of 2154, 1795, 1725 answer 404 (private, not visible to the account); access `approved` only for 1282; no access to 1719, 1046, 2212, 2139, 2176, 2177 (tracking-link 403, except 2139 whose link exists but the tracker answers 204 and records no click: privacy `approval_link`).
+**Traffic types in the descriptions:** 1282, 1719, 2212 «Meta and push by default», 1046 «Meta by default»; any other type, native included, needs the account manager's approval, «unapproved advertising ... will not be paid»; 2139, 2176, 2177 accept native by default.
+Payouts: 1046 $4, 1719 $5, 2176 and 2177 $3 static; 1282, 2212 dynamic $0.01-100, 2139 dynamic $0.10-50; 1795 $1.6 (the owner).
+**2139 advertiser rules (Drive PDF linked in the card):** no cash or checks, doctors or stock charts, carrier names or logos, flags or government, brands, celebrities, «free», rebates or gift cards, urgency, rates under $70 a month; allowed «could save», «see if you qualify»; **an AI disclaimer is mandatory on AI images**.
+**Built (`rr_sweeps.py`, data `data/rr-sweeps.json`, ledger `data/rr-created.json`, tests `test_rr_sweeps.py` 11 pass; the link is never stored):** goals `rr1282lead` 1282658 and `rr2139lead` 1282659 (category 9); RollerAds postbacks 1477 `mgid-1282-lead` and 1478 `mgid-2139-lead`, each targeted to its offer only
+(`https://a.mgid.com/postback?c={affClickId}&e=<event>&r={trx}`); paused product campaigns 12552674 (1282) and 12552675 (2139): `targetCpa` $1, US (country id 4), English (language id 1), $20 a day, auto-launch off, read back ok; 1282 with iOS and Android only (the old sweeps campaign 12471835 had iOS only on manual bids).
+Teaser 28473408 of 1282 «Take a quick survey and see which rewards you may qualify for» is on moderation; 2139 has no teaser on purpose (advertiser approval first). **Test click on the 1282 link:** the tracker (green-planet.live) answered 302 and wrote `source_id` and `aff_click_id` into `aff-clicks`
+(filter format `filters[aff_click_id]=eq|VALUE`); **not proven until a real lead:** the postback chain RollerAds -> a.mgid.com (no invented click id is ever sent to MGID).
+**Creatives:** OpenRouter (`genimg.py --sizes 1200x800`, eight photoreal scenes, four per offer); chosen 1282-a (woman with a phone) for the teaser, 2139 a, c, d with the disclaimer band «Some images in this advertisement were generated using AI.» as an approval pack for the advertiser (2139-b shows charts, 1282-c an Apple logo: left out).
+Balance $53.90 (no top-up since 07.11, $62.67 on 12.11). Nothing was started: native approval and access are the manager's; the first start is 1282 once the manager confirms native traffic.
+
 ## 12.11 (16:40 MSK): the statistics since the last top-up
 
 Owner, 12.11: «Разложи статистику после последнего пополнения».
