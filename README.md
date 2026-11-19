@@ -6,6 +6,15 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11, 20:30 UTC: the reason of the Geozo rejections is in the API after all; the NewsBreak cabinet read in the UI
+
+- **Geozo:** the panel itself reads `decline_reason` from `GET ad_groups/{gid}/ads/universal` (found in the code of the panel; `ads/universal/{id}` has no such field). All 33 teasers: **«Landing page: non-compliant with company policies», comment «The content is unavailable»**
+  (id 30, group «Content»; the comment is empty for two teasers of 1719 and 2212). So the checker of Geozo could not load the landing through our links: the tracker answers 204 to a datacenter for eight offers and the landing of the other three did not load for it either.
+  It is not the texts or the pictures. A TDS that is a plain redirect would not help (the chain still ends at the tracker filter); a TDS that shows the checker another page than the users is cloaking and is not built. The honest way: ask the manager of RollerAds to let the checker of Geozo through the tracker filter (IP or user agent) or to give a link that opens for it.
+- **NewsBreak UI** (admanager.newsbreak.com, logged in with the vault service newsbreak): ads show only `Active/Inactive` (no moderation text; the bell holds only announcements); `Account billing`: the account pays by the credit card `****9008`, billing threshold $10, next billing date 30.11,
+  a temporary $10 authorization went through on 19.11 04:16 PST, balance $0 is normal, cap $10 remaining $10, spent $0. The account is «verified». **The advice «top up the balance» of 19.11 was wrong.**
+  The only ON campaign (Level Reward $1000, 1282) is `ON/ACTIVE` with four approved ads and 0 impressions: the bid at the floor ($0.10) most likely does not win auctions (NewsBreak's own benchmarks: lead gen CPC $0.37-1.61).
+
 ## 19.11, 19:15 UTC: Geozo: all 33 teasers rejected (status 3)
 
 At 18:16 and again at 19:16 UTC every ad of the 11 Geozo campaigns is `status_id 3` (at 17:16 only 8 of them): nothing active, 0 shows, $0 spent, balance $171.64 (the other campaigns of the account spend ~$10 an hour).
