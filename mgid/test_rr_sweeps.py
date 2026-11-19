@@ -17,8 +17,10 @@ class Links(unittest.TestCase):
     def test_an_existing_query_gets_an_ampersand(self):
         self.assertEqual(r.link(TRACKER + "?x=1"), TRACKER + "?x=1&source_id={widget_id}_{teaser_id}&aff_click_id={click_id}")
 
-    def test_postback_carries_the_click_id_the_event_and_the_payout_macro(self):
-        self.assertEqual(r.postback_url(r.BY_ID[1282]), "https://a.mgid.com/postback?c={affClickId}&e=rr1282lead&r={trx}")
+    def test_one_postback_for_all_offers_carries_the_click_id_the_event_and_the_payout_macro(self):
+        # RollerAds keeps at most 10 postbacks per account (the 11th: 422 «Maximum number of postbacks reached»), so one goal and one postback serve all ten offers
+        self.assertEqual(r.postback_url(), "https://a.mgid.com/postback?c={affClickId}&e=rrsweepslead&r={trx}")
+        self.assertEqual(r.event(), "rrsweepslead")
 
 
 class Body(unittest.TestCase):

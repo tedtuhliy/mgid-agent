@@ -1,7 +1,7 @@
 """The RollerAds offers of the owner's sweeps focus (19.11.2026) as paused CPA tune campaigns on the second MGID account.
 
     python3 rr_sweeps.py                       # plan, read only: per offer the access, the link, the goal, the postback, the campaign, the teaser
-    python3 rr_sweeps.py --setup               # for the offers whose link works: the MGID goal rr<id>lead and the RollerAds postback to a.mgid.com
+    python3 rr_sweeps.py --setup               # the ONE MGID goal rrsweepslead and the ONE RollerAds postback to a.mgid.com for all offers (no link needed)
     python3 rr_sweeps.py --campaigns           # paused product campaigns, targetCpa $1, US, English (mobile OS for the sweeps), read back
     python3 rr_sweeps.py --teasers DIR         # ONE teaser per campaign from DIR/<image>; an offer with `hold` only with --include-hold
     python3 rr_sweeps.py --status
@@ -11,7 +11,7 @@
 Owner, 19.11: «Подготовь ссылки и запустим на тест кампании по cpa tune с ставкой 1 бакс. Креативы сделай через openrouter», and «Менеджер разберётся пушы и нативку на все оферы»
 (the traffic types and the access are the manager's). The chain is the one of the 1537 test (README 20.10): teaser -> the tracker link of the offer
 (`GET /api/offers/{id}/tracking-link`, cabinet session) with `source_id={widget_id}_{teaser_id}&aff_click_id={click_id}` -> postback of the offer
-(`POST /api/offers/postbacks`, `https://a.mgid.com/postback?c={affClickId}&e=rr<id>lead&r={trx}`) -> MGID goal `rr<id>lead`. `{trx}` is the payout macro (the other postbacks
+(`POST /api/offers/postbacks`, `https://a.mgid.com/postback?c={affClickId}&e=rrsweepslead&r={trx}`, ONE for all offers, the account holds at most 10) -> MGID goal `rrsweepslead`. `{trx}` is the payout macro (the other postbacks
 of the account use it as `payout=`). No test postback with an invented click id is ever sent to MGID.
 
 Not stored in the repository: tracking links (they carry the account's signature). Facts of 19.11: 1282 has access and its tracker records a click with the labels; 2139 has a link but the tracker
@@ -47,12 +47,13 @@ def name(o):
     return f"{DATA['country']} | {o['name']} (RollerAds {o['id']}) | CPA tune ${DATA['cpa']:g}"
 
 
-def event(o):
-    return f"rr{o['id']}lead"
+def event():
+    """ONE goal and ONE postback for all the offers: RollerAds lets an account keep only 10 postbacks (the 11th answers 422 «Maximum number of postbacks reached»)."""
+    return DATA["event"]
 
 
-def postback_url(o):
-    return f"https://a.mgid.com/postback?c={{affClickId}}&e={event(o)}&r={{trx}}"
+def postback_url():
+    return f"https://a.mgid.com/postback?c={{affClickId}}&e={event()}&r={{trx}}"
 
 
 def link(tracker):
@@ -105,10 +106,10 @@ class RollerAds:
         try:
             with self.op.open(r, timeout=60) as resp:
                 raw = resp.read().decode()
-                return resp.status, (json.loads(raw) if raw[:1] in "{[" else raw)
+                return resp.status, (json.loads(raw) if raw[:1] in ("{", "[") else raw)
         except urllib.error.HTTPError as e:
             raw = e.read().decode()
-            return e.code, (json.loads(raw) if raw[:1] in "{[" else raw)
+            return e.code, (json.loads(raw) if raw[:1] in ("{", "[") else raw)
 
     def card(self, oid):
         st, d = self.req("GET", f"/api/offers/{oid}")
@@ -148,65 +149,73 @@ def facts(ra):
 def plan():
     ra = RollerAds()
     f = facts(ra)
-    g = goals()
-    pbs = {p.get("postback_title") for p in ra.postbacks()}
+    g = goals().get(event())
+    mine = next((p for p in ra.postbacks() if p.get("postback_title") == DATA["postback_title"]), None)
+    allow = set(((mine or {}).get("postback_targeting_offer") or {}).get("allow") or [])
     ids = campaign_ids()
     led = load_ledger()
-    print(f"target CPA ${DATA['cpa']:g}, ${DATA['daily_usd']:g} a day, {DATA['country']}, language {DATA['language']}")
+    print(f"target CPA ${DATA['cpa']:g}, ${DATA['daily_usd']:g} a day, {DATA['country']}, language {DATA['language']} | goal {event()} {g or '-'} | postback {DATA['postback_title']} "
+          f"{(mine or {}).get('postback_id', '-')} for {len(allow)} offers")
     for o in DATA["offers"]:
         x = f[o["id"]]
         t = (led.get(str(o["id"])) or {}).get("teaser")
         state = "no card (private)" if not x["visible"] else f"access {x['access']}, link {'yes' if x['tracker'] else 'NO'}"
-        print(f"  {o['id']:>5} {o['name'][:44]:<44} {o['kind']:<13} {state:<28} goal {g.get(event(o)) or '-':<8} postback {'yes' if 'mgid-%d-lead' % o['id'] in pbs else '-':<3} "
+        print(f"  {o['id']:>5} {o['name'][:44]:<44} {o['kind']:<13} {state:<28} postback {'yes' if o['id'] in allow else '-':<3} "
               f"campaign {ids.get(o['id']) or '-':<9} teaser {t or ('hold' if o.get('hold') else ('no title' if not o.get('title') else '-'))}")
 
 
+def shared_goal():
+    g = goals().get(event())
+    if g:
+        return g
+    st, d = call("POST", V2 + f"account/{CID2}/targets", {"type": "postback", "eventName": event(), "name": "RollerAds sweeps lead (shared postback)",
+                                                         "description": "One postback of the RollerAds account (" + DATA["postback_title"] + ") for the offers " + " ".join(str(o["id"]) for o in DATA["offers"]) + ": e=" + event(), "categoryId": 9})
+    print(f"goal {event()} -> HTTP {st} {json.dumps(d, ensure_ascii=False)[:160]}")
+    for _ in range(6):
+        g = goals().get(event())
+        if g:
+            return g
+        time.sleep(4)
+    return None
+
+
 def setup():
+    """The shared MGID goal and the shared RollerAds postback (created once, the offers it targets are widened with PATCH; no link is needed)."""
     ra = RollerAds()
-    have_pb = {p.get("postback_title") for p in ra.postbacks()}
+    g = shared_goal()
+    if not g:
+        raise SystemExit("the goal is not readable yet, run --setup again")
     led = load_ledger()
-    for o in DATA["offers"]:
-        tracker = ra.tracker(o["id"]) if ra.card(o["id"]) else None
-        if not tracker:
-            print(f"{o['id']} {o['name']}: no link yet (access), skipped")
-            continue
-        g = goals().get(event(o))
-        if not g:
-            st, d = call("POST", V2 + f"account/{CID2}/targets", {"type": "postback", "eventName": event(o), "name": f"RollerAds offer {o['id']} lead",
-                                                                 "description": f"{o['name']}: lead postback of the RollerAds offer {o['id']} (e={event(o)})", "categoryId": 9})
-            print(f"{o['id']}: goal {event(o)} -> HTTP {st} {json.dumps(d, ensure_ascii=False)[:160]}")
-            for _ in range(6):
-                g = goals().get(event(o))
-                if g:
-                    break
-                time.sleep(4)
-        if not g:
-            print(f"{o['id']}: the goal is not readable yet, run --setup again")
-            continue
-        led.setdefault(str(o["id"]), {})["goal"] = g
-        title = f"mgid-{o['id']}-lead"
-        if title not in have_pb:
-            st, d = ra.req("POST", "/api/offers/postbacks", {"postback_title": title, "postback_url": postback_url(o), "postback_targeting_offer": {"allow": [o["id"]]}})
-            print(f"{o['id']}: postback {title} -> HTTP {st} {json.dumps(d, ensure_ascii=False)[:160]}")
-            if st not in (200, 201):
-                continue
-        print(f"{o['id']}: goal {g}, postback {title} ok")
-        save_ledger(led)
+    led["shared"] = {"goal": g}
+    ids = [o["id"] for o in DATA["offers"]]
+    mine = next((p for p in ra.postbacks() if p.get("postback_title") == DATA["postback_title"]), None)
+    body_ = {"postback_title": DATA["postback_title"], "postback_url": postback_url(), "postback_targeting_offer": {"allow": ids}}
+    if mine is None:
+        st, d = ra.req("POST", "/api/offers/postbacks", body_)
+        print(f"postback {DATA['postback_title']} -> HTTP {st} {json.dumps(d, ensure_ascii=False)[:160]}")
+    else:
+        allow = set(((mine.get("postback_targeting_offer") or {}).get("allow")) or [])
+        if allow != set(ids) or mine.get("postback_url") != postback_url():
+            st, d = ra.req("PATCH", f"/api/offers/postbacks/{mine['postback_id']}", body_)
+            print(f"postback {mine['postback_id']} widened -> HTTP {st}")
+        else:
+            print(f"postback {mine['postback_id']} {DATA['postback_title']}: ok, {len(ids)} offers")
+    save_ledger(led)
+    print(f"goal {event()} {g}")
 
 
 def make_campaigns():
     ids = campaign_ids()
     led = load_ledger()
+    g = goals().get(event())
+    if not g:
+        raise SystemExit("no shared goal yet, run --setup first")
     st, d = call("GET", "https://api.mgid.com/v2/ads/dictionaries/operating-systems")
     os_ids = mobile_os_ids((d or {}).get("data", []) if isinstance(d, dict) else [])
     for o in DATA["offers"]:
-        g = (led.get(str(o["id"])) or {}).get("goal")
         if ids.get(o["id"]):
             print(f"{name(o)}: exists {ids[o['id']]}")
             led.setdefault(str(o["id"]), {})["campaign"] = ids[o["id"]]
-            continue
-        if not g:
-            print(f"{o['id']} {o['name']}: no goal yet (no link), no campaign")
             continue
         st, d = call("POST", V2 + f"account/{CID2}/campaigns", body(o, g, os_ids))
         if st not in (200, 201) or not isinstance(d, dict) or not d.get("id"):
@@ -228,7 +237,7 @@ def make_campaigns():
             bad.append(f"status {r.get('status')}")
         if r.get("type") != "product" or (r.get("bidding") or {}).get("strategy") != "targetCpa" or float((r.get("bidding") or {}).get("price") or 0) != DATA["cpa"]:
             bad.append(f"bidding {r.get('bidding')}")
-        if (((r.get("conversionTracking") or {}).get("buyStage")) or {}).get("targetId") != (led.get(str(o["id"])) or {}).get("goal"):
+        if (((r.get("conversionTracking") or {}).get("buyStage")) or {}).get("targetId") != g:
             bad.append("goal")
         if (r.get("geoTargeting") or {}).get("countries") != [DATA["country_id"]]:
             bad.append(f"geo {r.get('geoTargeting')}")
