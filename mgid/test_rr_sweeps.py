@@ -56,6 +56,22 @@ class Body(unittest.TestCase):
         self.assertEqual(r.name(r.BY_ID[1282]), "US | Level Reward $1000 (RollerAds 1282) | CPA tune $1")
 
 
+class Variants(unittest.TestCase):
+    def test_pairs_follow_the_newsbreak_ads(self):
+        p = r.nb_pairs(1282)
+        self.assertEqual(len(p), 4)
+        self.assertEqual(p[0][0], "1282_a")
+        self.assertEqual(r.nb_pairs(1046), [("1046", r.NB["offers"]["1046"]["headlines"][0]), ("1046", r.NB["offers"]["1046"]["headlines"][1])])
+        self.assertEqual(r.nb_pairs(1), [])
+
+    def test_every_headline_fits_the_mgid_title_and_the_domain_limit(self):
+        for oid in r.NB["offers"]:
+            pairs = r.nb_pairs(int(oid))
+            self.assertLessEqual(len(pairs), r.MAX_TEASERS, oid)
+            for _, title in pairs:
+                self.assertLessEqual(len(title), 75, title)
+
+
 class Data(unittest.TestCase):
     def test_twelve_offers_with_unique_ids_and_the_owners_numbers(self):
         ids = [o["id"] for o in r.DATA["offers"]]

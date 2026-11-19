@@ -6,6 +6,16 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11 late: one NewsBreak campaign switched ON to see whether paused ads are moderated; MGID prepared the same way (extra teasers); MGID's minimum daily budget is $20
+
+Owner, 19.11: «На newsbreack запусти 1 кампанию чтобы мы узнали модерят они крео на паузе или нет. Так что то хоть будет модерироваться если нет», «Также на мгид все тоже самое подготовь».
+**NewsBreak, the experiment.** At ~13:45 UTC the four ads, the ad set and the campaign of **Level Reward $1000 (1282)** (campaign 2123401971659223042) were switched ON (`ON/ACTIVE`, ad set `ON/READY`, ads `ON/PENDING`); the campaigns of 1719, 2212, 2238 and 2239 stay OFF.
+Before it: the spending cap $10 (spent $0), the balance of the account $0 and no billing set up (`balance-accounts` and `billing-org` all zero), so nothing can be billed beyond the cap. All ads, ON or OFF, show the same text «Under review. It usually takes 1-2 work days»: the first read does not tell the two apart. A check-in is scheduled for ~15:55 UTC:
+which ads left `PENDING` (ON versus OFF) is the answer to the owner's question.
+**MGID, «все то же самое»:** the extra teasers with the same image + headline pairs as the NewsBreak ads (`rr_sweeps.py --variants DIR`, new function `make_variants`; a pair whose title is already a teaser is skipped, at most 5 per campaign for the domain limit): 1282 now has 4 teasers (28474040 + 28474241/2/3),
+1719 has 3 (28474041, 28474244/5), 2212 has 3 (28474045, 28474247/8), 2238 has 2 (28474049, 28474249), 2239 has 2 (28474057, 28474250); all on moderation, campaigns paused. MGID moderates a teaser from the moment it is created, paused campaign or not (known since 22.10), so there is nothing to test there.
+**Limits on MGID:** the minimum daily budget of a CPA tune campaign is **$20** (`limits.dailyLimit`: «The minimal daily budget limit is 20»), which is what these campaigns already have; the target CPA is the owner's $1; the stop-loss ($15 a campaign) stays. Nothing else was changed.
+
 ## 19.11 night: the colleague opened four offers and gave the custom tracker domain; the links of MGID and NewsBreak moved to it; honest everyday creatives instead of invented testimonials
 
 Owner, 19.11 (a message of the colleague Fedor Samborskii, then a second one with three screenshots): opened for us 2176 CareHealth and 2177 Wise Savings (CPL + prepop), **2238 FRU Government Grants** and **2239 FRU Unclaimed Money** (SOI, native, prepop), plus 1282, 1719, 2212 of the advertiser who «монетизирует Фб и нативку»; revshare works better than CPA for them;

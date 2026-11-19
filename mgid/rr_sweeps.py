@@ -4,6 +4,7 @@
     python3 rr_sweeps.py --setup               # the ONE MGID goal rrsweepslead and the ONE RollerAds postback to a.mgid.com for all offers (no link needed)
     python3 rr_sweeps.py --campaigns           # paused product campaigns, targetCpa $1, US, English (mobile OS for the sweeps), read back
     python3 rr_sweeps.py --teasers DIR         # ONE teaser per campaign from DIR/<image>; an offer with `hold` only with --include-hold; --replace ID makes a new one and deletes the old
+    python3 rr_sweeps.py --variants DIR        # extra teasers: the same image + headline pairs as the NewsBreak ads (up to 5 in a campaign)
     python3 rr_sweeps.py --status
     python3 rr_sweeps.py --launch 1282 --target 1.0
     run as:  node vault.mjs exec mgid rollerads pixeldrain -- env MGID_ACCOUNT=second python3 rr_sweeps.py ...
@@ -40,6 +41,8 @@ DATA = json.loads((HERE / "data" / "rr-sweeps.json").read_text())
 LEDGER = HERE / "data" / "rr-created.json"
 BY_ID = {o["id"]: o for o in DATA["offers"]}
 MACROS = "source_id={widget_id}_{teaser_id}&aff_click_id={click_id}"
+NB = json.loads((HERE.parent / "newsbreak" / "data" / "nb-sweeps.json").read_text())       # the NewsBreak copy: the same pairs are made as extra teasers here
+MAX_TEASERS = 5                      # MGID: at most five teasers on one domain in a product campaign (LS_CAB_GOODS_TEASER_ALLOWED_DOMAIN_LIMIT)
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 
 
@@ -87,6 +90,15 @@ def body(o, goal_id, os_ids):
 def mobile_os_ids(rows):
     """Ids of the MGID operating systems of the phones and tablets we want (iOS and Android, every version)."""
     return [int(x["id"]) for x in rows if x.get("name") in DATA["mobile_os"] and x.get("deviceType") in ("mobile", "tablet")]
+
+
+def nb_pairs(oid):
+    """[(image key, headline)] of an offer as the NewsBreak ads have them: the images and the headlines paired by position, the shorter list repeated."""
+    c = NB["offers"].get(str(oid))
+    if not c:
+        return []
+    n = max(len(c["images"]), len(c["headlines"]))
+    return [(c["images"][i % len(c["images"])], c["headlines"][i % len(c["headlines"])]) for i in range(n)]
 
 
 def load_ledger():
@@ -308,6 +320,59 @@ def make_teasers(imgdir, include_hold=False, replace=()):
             print(f"{name(o)}: refused: HTTP {st} {msg}")
 
 
+def make_variants(imgdir, include_hold=False):
+    """The same image + headline pairs as the NewsBreak ads, as extra teasers of the campaigns (owner, 19.11: «на мгид все тоже самое подготовь»). A pair whose title is already a
+    teaser of the campaign is skipped (MGID writes titles in Title Case: compared in lower case); at most MAX_TEASERS in a campaign; the images are `<imgdir>/<key>.jpg`."""
+    ra = RollerAds()
+    ids = campaign_ids()
+    led = load_ledger()
+    for o in DATA["offers"]:
+        cid = ids.get(o["id"])
+        pairs = nb_pairs(o["id"])
+        if not cid or not pairs or (o.get("hold") and not include_hold):
+            continue
+        tracker = ra.tracker(o["id"]) if ra.card(o["id"]) else None
+        if not tracker:
+            print(f"{o['id']} {o['name']}: no link, skipped")
+            continue
+        entry = led.setdefault(str(o["id"]), {})
+        images = entry.setdefault("images", {})
+        extra = entry.setdefault("extra", {})
+        have = {(v.get("title") or "").lower() for v in cp.teasers(cid).values()}
+        for key, title in pairs:
+            if len(have) >= MAX_TEASERS:
+                break
+            if title.lower() in have:
+                continue
+            if len(title) > 75:
+                print(f"{o['id']}: title longer than 75, skipped: {title[:40]}")
+                continue
+            if key not in images:
+                src = Path(imgdir) / f"{key}.jpg"
+                if not src.exists():
+                    print(f"{o['id']}: no image {src}")
+                    continue
+                tmp = Path(imgdir) / f"rr{o['id']}_{key}.jpg"
+                tmp.write_bytes(src.read_bytes())
+                images[key] = ac.pixeldrain_upload(tmp)
+                save_ledger(led)
+            form = {"campaignId": cid, "url": link(tracker), "title": title, "imageLink": "https://pixeldrain.com/api/file/" + images[key],
+                    "priceOfClick": cp.TEASER_CENTS, "whetherShowGoodPrice": 0}
+            st, d = call("POST", V1 + f"goodhits/clients/{CID1}/teasers", form, form=True)
+            tid = d.get("id") if isinstance(d, dict) else None
+            msg = json.dumps(d, ensure_ascii=False)[:240]
+            if tid:
+                extra[title] = int(tid)
+                have.add(title.lower())
+                save_ledger(led)
+                print(f"{name(o)}: teaser {tid} ({key}: {title[:46]})")
+            elif "LS_TEASER_ADD_LIMIT_ERROR" in msg:
+                print("teaser add limit: stop, run again later")
+                return
+            else:
+                print(f"{name(o)}: refused: HTTP {st} {msg}")
+
+
 def status():
     ids = campaign_ids()
     rows = v2_campaigns(("name", "status", "bidding"))
@@ -349,6 +414,7 @@ def main():
     ap.add_argument("--setup", action="store_true")
     ap.add_argument("--campaigns", action="store_true")
     ap.add_argument("--teasers", metavar="DIR")
+    ap.add_argument("--variants", metavar="DIR", help="extra teasers: the image + headline pairs of the NewsBreak ads (images DIR/<key>.jpg)")
     ap.add_argument("--include-hold", action="store_true", help="also the offers on hold (creatives not yet approved by the advertiser)")
     ap.add_argument("--replace", type=int, action="append", default=[], metavar="OFFER_ID", help="make a new teaser for this offer and delete the old one (the link changed)")
     ap.add_argument("--status", action="store_true")
@@ -361,6 +427,8 @@ def main():
         make_campaigns()
     elif a.teasers:
         make_teasers(a.teasers, a.include_hold, set(a.replace))
+    elif a.variants:
+        make_variants(a.variants, a.include_hold)
     elif a.status:
         status()
     elif a.launch:

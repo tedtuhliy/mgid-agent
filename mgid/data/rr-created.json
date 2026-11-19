@@ -5,14 +5,31 @@
  },
  "1282": {
   "campaign": 12552674,
+  "extra": {
+   "Answer a few questions to see if you qualify for rewards": 28474242,
+   "Quick survey while you wait: see which rewards you may qualify for": 28474243,
+   "Short survey: check your eligibility for member rewards": 28474241
+  },
   "goal": 1282658,
   "image": "Wf9hmAuf",
+  "images": {
+   "1282_b": "bQZjQgTx",
+   "1282_c": "7cAWd8AA",
+   "1282_d": "uaeND3vC"
+  },
   "teaser": 28474040
  },
  "1719": {
   "campaign": 12552692,
+  "extra": {
+   "Quick survey: see which rewards you may be eligible for": 28474244,
+   "Share your opinion and check your reward eligibility": 28474245
+  },
   "goal": 1282660,
   "image": "3nDYfomP",
+  "images": {
+   "1719": "L9rd7DMH"
+  },
   "teaser": 28474041
  },
  "1725": {
@@ -39,18 +56,38 @@
  },
  "2212": {
   "campaign": 12552697,
+  "extra": {
+   "Mobile games with reward offers: see how it works": 28474247,
+   "Rewards apps explained: how Playful Rewards works": 28474248
+  },
   "goal": 1282665,
   "image": "94QCQVnt",
+  "images": {
+   "2212": "KjSAbJQT",
+   "2212_b": "YKTJqmnS"
+  },
   "teaser": 28474045
  },
  "2238": {
   "campaign": 12552753,
+  "extra": {
+   "Learn about grant programs and check your eligibility": 28474249
+  },
   "image": "v57wYdih",
+  "images": {
+   "2238": "Z4SoabQB"
+  },
   "teaser": 28474049
  },
  "2239": {
   "campaign": 12552754,
+  "extra": {
+   "Search for unclaimed funds: takes about two minutes": 28474250
+  },
   "image": "CCUJr1Bw",
+  "images": {
+   "2239": "fLtQu2Xw"
+  },
   "teaser": 28474057
  },
  "shared": {
