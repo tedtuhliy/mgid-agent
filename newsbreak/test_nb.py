@@ -15,7 +15,7 @@ TRACKER = "https://tracker.example/or/AbC123/XyZ789"
 class Urls(unittest.TestCase):
     def test_click_url_carries_the_callback_flight_and_creative_macros(self):
         u = s.click_url(TRACKER)
-        self.assertEqual(u, TRACKER + "?source_id=nb-__FLIGHT_ID__-__CREATIVE_ID__&aff_click_id=__CALLBACK_PARAM__")
+        self.assertEqual(u, "https://eventsbytlcltd.com/or/AbC123/XyZ789?source_id=nb-__FLIGHT_ID__-__CREATIVE_ID__&aff_click_id=__CALLBACK_PARAM__")
 
     def test_an_existing_query_gets_an_ampersand(self):
         self.assertIn("?x=1&source_id=", s.click_url(TRACKER + "?x=1"))
@@ -58,7 +58,7 @@ class Copy(unittest.TestCase):
 
     def test_ads_pair_images_with_headlines_and_repeat_the_shorter_list(self):
         p = s.ads_plan(s.OFFERS[1282])
-        self.assertEqual(len(p), 3)
+        self.assertEqual(len(p), 4)
         self.assertEqual(p[0], ("1282_a", s.DATA["offers"]["1282"]["headlines"][0]))
         p = s.ads_plan(s.OFFERS[1046])
         self.assertEqual([k for k, _ in p], ["1046", "1046"])

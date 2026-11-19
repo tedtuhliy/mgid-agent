@@ -1,10 +1,11 @@
 {
-  "note": "RollerAds offers (the affiliate catalog of my.rollerads.com) of the owner's sweeps focus, 19.11.2026: «Подготовь ссылки и запустим на тест кампании по cpa tune с ставкой 1 бакс». ONE shared MGID goal (rrsweepslead) and ONE shared RollerAds postback (mgid-sweeps-lead, all offers): the account allows only 10 postbacks and six were already in use. No tracking link or token is stored here: the links are fetched from the cabinet at run time (GET /api/offers/{id}/tracking-link, session of the vault service rollerads).",
+  "note": "RollerAds offers (the affiliate catalog of my.rollerads.com) of the owner's sweeps focus, 19.11.2026: «Подготовь ссылки и запустим на тест кампании по cpa tune с ставкой 1 бакс». Links go through the buying team's custom tracker domain eventsbytlcltd.com instead of the default tracker domain of the offers (the owner's colleague, 19.11: «для свипов и лидгена на US запускаться именно с домена eventsbytlcltd.com»; only the host is replaced, checked with a click on 1282). ONE shared MGID goal (rrsweepslead) and ONE shared RollerAds postback (mgid-sweeps-lead, all offers): the account allows only 10 postbacks and six were already in use. No tracking link or token is stored here: the links are fetched from the cabinet at run time (GET /api/offers/{id}/tracking-link, session of the vault service rollerads).",
   "cpa": 1.0,
   "daily_usd": 20.0,
   "country": "US",
   "country_id": 4,
   "language": 1,
+  "tracker_domain": "eventsbytlcltd.com",
   "event": "rrsweepslead",
   "postback_title": "mgid-sweeps-lead",
   "mobile_os": ["iOS", "Android"],
@@ -36,8 +37,14 @@
      "title": "Homeowners could save on home insurance. See if you qualify", "image": "2139.jpg", "hold": "the creatives must be approved by the advertiser first",
      "traffic": "native accepted by default",
      "note": "link exists but the tracker answers 204 and records no click (account access is None, privacy approval_link): needs the manager; advertiser compliance guide (Drive PDF): no cash or checks, no doctors or stock charts, no carrier names or logos, no flags or government, no 'free', no urgency, approved phrases 'could save' and 'see if you qualify', an AI disclaimer on AI images"},
+    {"id": 2238, "show": "Grant Programs", "name": "FRU Government Grants", "kind": "SOI + prepop", "group": "leadgen", "payout": "3 static", "value": 3.0, "mobile": true,
+     "title": "Grant programs: see if you may be eligible", "image": "2238.jpg",
+     "traffic": "native by default; the card says «For Approved Sub ID's only»", "note": "opened by the colleague 19.11: access approved, tracker answers 204 to a datacenter address; the brand under the teaser must not suggest a government body"},
+    {"id": 2239, "show": "Unclaimed Funds", "name": "FRU Unclaimed Money", "kind": "SOI + prepop", "group": "leadgen", "payout": "3 static", "value": 3.0, "mobile": true,
+     "title": "Check if you may have unclaimed money in your name", "image": "2239.jpg",
+     "traffic": "native by default", "note": "opened by the colleague 19.11: access approved, tracker answers 204 to a datacenter address"},
     {"id": 2176, "show": "CareHealth", "name": "CareHealth (CPL, prepop)", "kind": "CPL", "group": "lead", "payout": "3 static", "value": 3.0, "mobile": false,
-     "title": null, "traffic": "Meta, Google, native by default", "note": "no access on 19.11; the owner: looks like a sweep but is not one; the landing has not been read"},
+     "title": null, "traffic": "Meta, Google, native by default", "note": "access approved 19.11 (link yes); no title on purpose: the landing cannot be read from a datacenter address (the tracker answers 204), the product is unknown"},
     {"id": 2177, "show": "Wise Savings", "name": "Wise Savings (CPL, prepop)", "kind": "CPL", "group": "lead", "payout": "3 static", "value": 3.0, "mobile": false,
      "title": null, "traffic": "Meta, Google, native by default", "note": "no access on 19.11; 55+ age targeting required; the landing has not been read"}
   ]

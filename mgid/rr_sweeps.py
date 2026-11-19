@@ -3,7 +3,7 @@
     python3 rr_sweeps.py                       # plan, read only: per offer the access, the link, the goal, the postback, the campaign, the teaser
     python3 rr_sweeps.py --setup               # the ONE MGID goal rrsweepslead and the ONE RollerAds postback to a.mgid.com for all offers (no link needed)
     python3 rr_sweeps.py --campaigns           # paused product campaigns, targetCpa $1, US, English (mobile OS for the sweeps), read back
-    python3 rr_sweeps.py --teasers DIR         # ONE teaser per campaign from DIR/<image>; an offer with `hold` only with --include-hold
+    python3 rr_sweeps.py --teasers DIR         # ONE teaser per campaign from DIR/<image>; an offer with `hold` only with --include-hold; --replace ID makes a new one and deletes the old
     python3 rr_sweeps.py --status
     python3 rr_sweeps.py --launch 1282 --target 1.0
     run as:  node vault.mjs exec mgid rollerads pixeldrain -- env MGID_ACCOUNT=second python3 rr_sweeps.py ...
@@ -56,8 +56,18 @@ def postback_url():
     return f"https://a.mgid.com/postback?c={{affClickId}}&e={event()}&r={{trx}}"
 
 
+def retarget(tracker, host):
+    """The tracker link of the offer on the custom domain of the buying team: only the host changes, the path (code and signature) stays."""
+    if not host:
+        return tracker
+    u = urllib.parse.urlsplit(tracker)
+    return urllib.parse.urlunsplit((u.scheme, host, u.path, u.query, ""))
+
+
 def link(tracker):
-    """The teaser link: the tracker link of the offer with the labels of MGID (braces stay as they are). The tracker keeps `source_id` and `aff_click_id`."""
+    """The teaser link: the tracker link of the offer on the custom domain (eventsbytlcltd.com, 19.11) with the labels of MGID (braces stay as they are).
+    The tracker keeps `source_id` and `aff_click_id`."""
+    tracker = retarget(tracker, DATA.get("tracker_domain"))
     return tracker + ("&" if "?" in tracker else "?") + MACROS
 
 
@@ -246,7 +256,7 @@ def make_campaigns():
         print(f"  read back {cid} {name(o)}: {'ok' if not bad else 'PROBLEM ' + '; '.join(bad)}")
 
 
-def make_teasers(imgdir, include_hold=False):
+def make_teasers(imgdir, include_hold=False, replace=()):
     ra = RollerAds()
     ids = campaign_ids()
     led = load_ledger()
@@ -259,9 +269,12 @@ def make_teasers(imgdir, include_hold=False):
         if o.get("hold") and not include_hold:
             print(f"{o['id']} {o['name']}: on hold ({o['hold']})")
             continue
+        old_teaser = None
         if entry.get("teaser"):
-            print(f"{o['id']} {o['name']}: teaser {entry['teaser']} exists")
-            continue
+            if o["id"] not in replace:
+                print(f"{o['id']} {o['name']}: teaser {entry['teaser']} exists")
+                continue
+            old_teaser = entry["teaser"]      # a teaser cannot be edited: the new one is made first, the old one is deleted after it
         tracker = ra.tracker(o["id"])
         if not tracker:
             print(f"{o['id']} {o['name']}: no link")
@@ -285,6 +298,9 @@ def make_teasers(imgdir, include_hold=False):
             entry["teaser"] = int(tid)
             save_ledger(led)
             print(f"{name(o)}: teaser {tid} ({o['title'][:50]})")
+            if old_teaser:
+                st2, _ = call("DELETE", V1 + f"goodhits/clients/{CID1}/teasers/{old_teaser}")
+                print(f"   the old teaser {old_teaser} deleted: HTTP {st2}")
         elif "LS_TEASER_ADD_LIMIT_ERROR" in msg:
             print("teaser add limit: stop, run again later")
             return
@@ -334,6 +350,7 @@ def main():
     ap.add_argument("--campaigns", action="store_true")
     ap.add_argument("--teasers", metavar="DIR")
     ap.add_argument("--include-hold", action="store_true", help="also the offers on hold (creatives not yet approved by the advertiser)")
+    ap.add_argument("--replace", type=int, action="append", default=[], metavar="OFFER_ID", help="make a new teaser for this offer and delete the old one (the link changed)")
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--launch", type=int, metavar="OFFER_ID")
     ap.add_argument("--target", type=float)
@@ -343,7 +360,7 @@ def main():
     elif a.campaigns:
         make_campaigns()
     elif a.teasers:
-        make_teasers(a.teasers, a.include_hold)
+        make_teasers(a.teasers, a.include_hold, set(a.replace))
     elif a.status:
         status()
     elif a.launch:

@@ -12,10 +12,14 @@ TRACKER = "https://tracker.example/or/AbC123/XyZ789"
 
 class Links(unittest.TestCase):
     def test_labels_of_mgid_keep_their_braces(self):
-        self.assertEqual(r.link(TRACKER), TRACKER + "?source_id={widget_id}_{teaser_id}&aff_click_id={click_id}")
+        self.assertEqual(r.link(TRACKER), "https://eventsbytlcltd.com/or/AbC123/XyZ789?source_id={widget_id}_{teaser_id}&aff_click_id={click_id}")
 
     def test_an_existing_query_gets_an_ampersand(self):
-        self.assertEqual(r.link(TRACKER + "?x=1"), TRACKER + "?x=1&source_id={widget_id}_{teaser_id}&aff_click_id={click_id}")
+        self.assertEqual(r.link(TRACKER + "?x=1"), "https://eventsbytlcltd.com/or/AbC123/XyZ789?x=1&source_id={widget_id}_{teaser_id}&aff_click_id={click_id}")
+
+    def test_only_the_host_is_replaced_code_and_signature_stay(self):
+        self.assertEqual(r.retarget(TRACKER, "custom.example"), "https://custom.example/or/AbC123/XyZ789")
+        self.assertEqual(r.retarget(TRACKER, None), TRACKER)
 
     def test_one_postback_for_all_offers_carries_the_click_id_the_event_and_the_payout_macro(self):
         # RollerAds keeps at most 10 postbacks per account (the 11th: 422 «Maximum number of postbacks reached»), so one goal and one postback serve all ten offers
@@ -53,10 +57,10 @@ class Body(unittest.TestCase):
 
 
 class Data(unittest.TestCase):
-    def test_ten_offers_with_unique_ids_and_the_owners_numbers(self):
+    def test_twelve_offers_with_unique_ids_and_the_owners_numbers(self):
         ids = [o["id"] for o in r.DATA["offers"]]
-        self.assertEqual(len(ids), 10)
-        self.assertEqual(sorted(ids), sorted([2139, 2176, 2177, 1046, 2154, 1795, 1725, 1282, 1719, 2212]))
+        self.assertEqual(len(ids), 12)
+        self.assertEqual(sorted(ids), sorted([2139, 2176, 2177, 1046, 2154, 1795, 1725, 1282, 1719, 2212, 2238, 2239]))
 
     def test_every_offer_with_a_title_has_an_image_and_the_titles_make_no_cash_claims(self):
         for o in r.DATA["offers"]:

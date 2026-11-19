@@ -7,11 +7,13 @@
   "campaign": 12552674,
   "goal": 1282658,
   "image": "Wf9hmAuf",
-  "teaser": 28473408
+  "teaser": 28474040
  },
  "1719": {
   "campaign": 12552692,
-  "goal": 1282660
+  "goal": 1282660,
+  "image": "3nDYfomP",
+  "teaser": 28474041
  },
  "1725": {
   "campaign": 12552696,
@@ -37,7 +39,19 @@
  },
  "2212": {
   "campaign": 12552697,
-  "goal": 1282665
+  "goal": 1282665,
+  "image": "94QCQVnt",
+  "teaser": 28474045
+ },
+ "2238": {
+  "campaign": 12552753,
+  "image": "v57wYdih",
+  "teaser": 28474049
+ },
+ "2239": {
+  "campaign": 12552754,
+  "image": "CCUJr1Bw",
+  "teaser": 28474057
  },
  "shared": {
   "goal": 1282668

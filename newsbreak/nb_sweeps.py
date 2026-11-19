@@ -6,6 +6,7 @@
     ... python3 nb_sweeps.py --build                                                    # campaign, ad set and ads for every offer that has a link; everything OFF, read back
     ... python3 nb_sweeps.py --status
     ... python3 nb_sweeps.py --all-off                                                  # the safety switch: every campaign, ad set and ad OFF
+    ... python3 nb_sweeps.py --refresh-links                                            # rewrite the click-through URL of the existing ads (a new tracker domain)
 
 What is built per offer: ONE campaign (objective WEB_TRAFFIC), ONE ad set (DAILY budget at the platform minimum, CPC at the minimum bid, a flight of `flight_days`, first-party NewsBreak
 inventory only, mobile OS for the sweeps), the ads (image + headline pairs). The click-through URL is the tracker link of the RollerAds offer with
@@ -18,6 +19,7 @@ import argparse
 import json
 import sys
 import time
+import urllib.parse
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -63,7 +65,12 @@ def ad_name(o, n):
 
 
 def click_url(tracker):
-    """The click-through URL: the tracker link of the offer plus the macros of NewsBreak (the braces of the other networks are not used here: NewsBreak writes __NAME__)."""
+    """The click-through URL: the tracker link of the offer on the custom domain (eventsbytlcltd.com, 19.11) plus the macros of NewsBreak
+    (the braces of the other networks are not used here: NewsBreak writes __NAME__)."""
+    host = RR.get("tracker_domain")
+    if host:
+        u = urllib.parse.urlsplit(tracker)
+        tracker = urllib.parse.urlunsplit((u.scheme, host, u.path, u.query, ""))
     return tracker + ("&" if "?" in tracker else "?") + DATA["click_params"]
 
 
@@ -172,6 +179,27 @@ def build(include_hold=False):
         save_ledger(led)
 
 
+def refresh_links():
+    """Rewrite the click-through URL of the ads that exist (the custom domain, 19.11): the creative is rebuilt from the data file, an update of a PENDING ad restarts nothing useful."""
+    from ra_client import RollerAds
+    ra = RollerAds()
+    led = load_ledger()
+    assets = led.get("assets", {})
+    for oid, e in (led.get("offers") or {}).items():
+        o = OFFERS[int(oid)]
+        tracker = ra.tracker(int(oid)) if ra.card(int(oid)) else None
+        if not tracker:
+            print(f"{oid}: no link, skipped")
+            continue
+        for n, (key, headline) in enumerate(ads_plan(o), 1):
+            ad_id = (e.get("ads") or {}).get(ad_name(o, n))
+            if not ad_id or key not in assets:
+                continue
+            body = {"creative": ad_body(e["ad_set"], o, n, assets[key], headline, tracker)["creative"]}
+            st, d = nb.call("PUT", f"/ad/update/{ad_id}", body)
+            print(f"{oid}: ad {ad_id} update -> HTTP {st} code {d.get('code') if isinstance(d, dict) else d}")
+
+
 def status():
     camps = nb.campaigns(ACC)
     for cp in camps:
@@ -221,6 +249,7 @@ def main():
     ap.add_argument("--include-hold", action="store_true")
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--all-off", action="store_true")
+    ap.add_argument("--refresh-links", action="store_true")
     a = ap.parse_args()
     if a.cap:
         print(nb.set_spending_cap(ACC, DATA["spending_cap_cents"]))
@@ -233,6 +262,8 @@ def main():
         status()
     elif a.all_off:
         all_off()
+    elif a.refresh_links:
+        refresh_links()
     else:
         plan()
 

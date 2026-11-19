@@ -5,28 +5,185 @@
   "bid_cents": 10,
   "daily_budget_cents": 1000,
   "flight_days": 14,
-  "platforms": ["NEWSBREAK"],
+  "platforms": [
+    "NEWSBREAK"
+  ],
   "objective": "WEB_TRAFFIC",
   "cta": "Learn More",
   "description": "Takes about two minutes. Eligibility rules and terms apply.",
   "click_params": "source_id=nb-__FLIGHT_ID__-__CREATIVE_ID__&aff_click_id=__CALLBACK_PARAM__",
   "offers": {
-    "1282": {"brand": "Level Reward", "mobile": true, "age": ["18-30", "31-44", "45-64"], "images": ["1282_a", "1282_b", "1282_d"],
-             "headlines": ["Take a quick survey and see which rewards you may qualify for", "Short survey: check your eligibility for member rewards", "Answer a few questions to see if you qualify for rewards"]},
-    "1719": {"brand": "Level Rewards", "mobile": true, "age": ["18-30", "31-44", "45-64"], "images": ["1719"],
-             "headlines": ["Quick survey: see which rewards you may be eligible for", "Share your opinion and check your reward eligibility"]},
-    "1046": {"brand": "Trend'n Daily", "mobile": true, "age": ["18-30", "31-44", "45-64"], "images": ["1046"],
-             "headlines": ["Short survey: see if you qualify for a gift card offer", "Answer a few questions and check your gift card eligibility"]},
-    "2154": {"brand": "PrizeGrab", "mobile": true, "age": ["18-30", "31-44", "45-64"], "images": ["2154"],
-             "headlines": ["Answer a few questions to see if you qualify for rewards", "Quick questions: check your eligibility for a reward offer"]},
-    "1795": {"brand": "The American Survey", "mobile": true, "age": ["18-30", "31-44", "45-64"], "images": ["1795"],
-             "headlines": ["Spin the wheel and check if you qualify for a reward", "Quick game: see if you are eligible for a reward"]},
-    "1725": {"brand": "The American Survey", "mobile": true, "age": ["18-30", "31-44", "45-64"], "images": ["1725"],
-             "headlines": ["Share your opinion in a short survey and check your reward eligibility", "Short opinion survey: see if you qualify for a reward"]},
-    "2212": {"brand": "Playful Rewards", "mobile": true, "age": ["18-30", "31-44", "45-64"], "images": ["2212"],
-             "headlines": ["Play games and complete offers in the app: see how rewards work", "Mobile games with reward offers: see how it works"]},
-    "2139": {"brand": "Home Insurance", "mobile": false, "age": ["31-44", "45-64", "65+"], "images": ["2139_a", "2139_c", "2139_d"], "description": "Compare options in minutes. Terms apply.",
-             "hold": "the creatives must be approved by the advertiser first; every image carries the AI disclaimer band",
-             "headlines": ["Homeowners could save on home insurance. See if you qualify", "Compare home insurance options in minutes. See if you qualify", "See if you qualify for a better home insurance rate"]}
+    "1282": {
+      "brand": "Level Reward",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "1282_a",
+        "1282_b",
+        "1282_d",
+        "1282_c"
+      ],
+      "headlines": [
+        "Take a quick survey and see which rewards you may qualify for",
+        "Short survey: check your eligibility for member rewards",
+        "Answer a few questions to see if you qualify for rewards",
+        "Quick survey while you wait: see which rewards you may qualify for"
+      ]
+    },
+    "1719": {
+      "brand": "Level Rewards",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "1719"
+      ],
+      "headlines": [
+        "Quick survey: see which rewards you may be eligible for",
+        "Share your opinion and check your reward eligibility"
+      ]
+    },
+    "1046": {
+      "brand": "Trend'n Daily",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "1046"
+      ],
+      "headlines": [
+        "Short survey: see if you qualify for a gift card offer",
+        "Answer a few questions and check your gift card eligibility"
+      ]
+    },
+    "2154": {
+      "brand": "PrizeGrab",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "2154"
+      ],
+      "headlines": [
+        "Answer a few questions to see if you qualify for rewards",
+        "Quick questions: check your eligibility for a reward offer"
+      ]
+    },
+    "1795": {
+      "brand": "The American Survey",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "1795"
+      ],
+      "headlines": [
+        "Spin the wheel and check if you qualify for a reward",
+        "Quick game: see if you are eligible for a reward"
+      ]
+    },
+    "1725": {
+      "brand": "The American Survey",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "1725"
+      ],
+      "headlines": [
+        "Share your opinion in a short survey and check your reward eligibility",
+        "Short opinion survey: see if you qualify for a reward"
+      ]
+    },
+    "2212": {
+      "brand": "Playful Rewards",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "2212",
+        "2212_b"
+      ],
+      "headlines": [
+        "Play games and complete offers in the app: see how rewards work",
+        "Mobile games with reward offers: see how it works",
+        "Rewards apps explained: how Playful Rewards works"
+      ]
+    },
+    "2139": {
+      "brand": "Home Insurance",
+      "mobile": false,
+      "age": [
+        "31-44",
+        "45-64",
+        "65+"
+      ],
+      "images": [
+        "2139_a",
+        "2139_c",
+        "2139_d"
+      ],
+      "description": "Compare options in minutes. Terms apply.",
+      "hold": "the creatives must be approved by the advertiser first; every image carries the AI disclaimer band",
+      "headlines": [
+        "Homeowners could save on home insurance. See if you qualify",
+        "Compare home insurance options in minutes. See if you qualify",
+        "See if you qualify for a better home insurance rate"
+      ]
+    },
+    "2238": {
+      "brand": "Grant Programs",
+      "mobile": true,
+      "age": [
+        "18-30",
+        "31-44",
+        "45-64"
+      ],
+      "images": [
+        "2238"
+      ],
+      "headlines": [
+        "Grant programs: see if you may be eligible",
+        "Learn about grant programs and check your eligibility"
+      ]
+    },
+    "2239": {
+      "brand": "Unclaimed Funds",
+      "mobile": true,
+      "age": [
+        "31-44",
+        "45-64",
+        "65+"
+      ],
+      "images": [
+        "2239"
+      ],
+      "headlines": [
+        "Check if you may have unclaimed money in your name",
+        "Search for unclaimed funds: takes about two minutes"
+      ]
+    }
   }
 }
