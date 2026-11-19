@@ -6,6 +6,13 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11, 22:15 UTC: NewsBreak did NOT approve the ads (my mistake: I trusted `auditStatus`)
+
+At 20:57-20:58 UTC NewsBreak itself switched all 23 ads OFF (one a second); the owner's phone screenshot of the Ads tab shows the red triangle «Ad has quality issues». The internal answer of the cabinet (`nova.newsbreak.com/api/v1/admin/ads`) has for **every one of the 23 ads**
+`rejectReason`: «Violation of Advertising Policy - The product associated with your ad violates our Advertising Policy -- . Please select another product to advertise and resubmit.» (sweeps and lead gen alike: 1282, 1719, 2212, 1046, 1041, 1560, 2238, 2239, 2176, 2177),
+while the public API still says `auditStatus APPROVED`, `statusTxt` empty. My reports of 19:48 and 20:53 («одобрены все 23») were wrong; the campaign 1282 was never delivering for that reason, not because of the bid. The reason is about the product (the destination behind the link), the same text for all offers.
+Candidates: the destination the reviewer sees behind eventsbytlcltd.com (a tracker; for 8 offers it answers 204 to a datacenter), or the kind of the offers (sweepstakes, lead gen, rewards) for this ad account. The owner can resubmit with another product only.
+
 ## 19.11, 21:00 UTC: age 45+ on the live NewsBreak campaign
 
 Owner: «Что за офер нам апрувнули? Поставь там возраст 45 плюс». The live (ON) campaign is Level Reward $1000 (1282), RollerAds revshare, US: landing = a 3-question quiz «Get $1000 Cash Deposited to You» (Do you use Cash?), the reward after the program requirements, payout depends on the user's actions in the flow.
