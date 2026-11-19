@@ -6,6 +6,11 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11, 21:00 UTC: age 45+ on the live NewsBreak campaign
+
+Owner: «Что за офер нам апрувнули? Поставь там возраст 45 плюс». The live (ON) campaign is Level Reward $1000 (1282), RollerAds revshare, US: landing = a 3-question quiz «Get $1000 Cash Deposited to You» (Do you use Cash?), the reward after the program requirements, payout depends on the user's actions in the flow.
+`PUT ad-set/update/2123401974553292802` with the full targeting: `ageGroup` was 18-30, 31-44, 45-64, now **45-64, 65+** (read back; os, location, language unchanged; ON/ACTIVE, bid $0.10, $10 a day); `nb-sweeps.json` 1282 `age` the same. The other nine ad sets are untouched. NewsBreak has no age setting finer than 18-30, 31-44, 45-64, 65+ (and gender all/male/female/notdisclosed).
+
 ## 19.11, 20:30 UTC: the reason of the Geozo rejections is in the API after all; the NewsBreak cabinet read in the UI
 
 - **Geozo:** the panel itself reads `decline_reason` from `GET ad_groups/{gid}/ads/universal` (found in the code of the panel; `ads/universal/{id}` has no such field). All 33 teasers: **«Landing page: non-compliant with company policies», comment «The content is unavailable»**
