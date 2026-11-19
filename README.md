@@ -6,6 +6,18 @@ standard library only: the main account 816929 (v2 client 939031, blocked by MGI
 the working one; `MGID_ACCOUNT=second`). `skills/` holds the skills of the owner's repository in their current form (also `skills/newsbreak/SKILL.md`): `skills/mgid/SKILL.md`
 (replaces `.claude/skills/mgid/SKILL.md` of Tedbolt) and `skills/nutra-partners/` (SKILL.md and the scripts for the nutra networks).
 
+## 19.11 evening: the owner asked «ты точно не имеешь ссылки в кабинете? или просто не нашёл?» — rechecked both RollerAds logins
+
+Read only, nothing sent to RollerAds. Both logins (affiliate accounts **118118** and **126546**), card, tracking link, `/api/offers/my` (89 rows) and the whole catalog `/api/offers` (396 rows):
+- **Trend'n Daily $1000 CashApp Card (1046)** and **Wise Savings (2177)**: visible, `offer_privacy approval_full`, `offer_account_privacy_status null` (nobody requested or approved it), link 403. The cabinet has the button «Request approval»
+  (`POST /api/offers/{id}/access {"status":"sent"}`); not pressed, to be agreed with the owner. Of the four offers the colleague said he opened (2176, 2177, 2238, 2239) three arrived on 118118, **2177 did not** (on neither login).
+- **PrizeGrab $500 Cash App (2154)**, **The American Survey: Spin to Win (1795)**, **The American Survey: $500 Cash App Gift Card (1725)**: card and link 404 on both logins, they are not in the 396 either: private offers, only the manager can add the account.
+- **Related versions with a link already approved on 118118**: Trend'n Daily $1000 CashApp Card (**1041**, Push, $4) next to 1046; The American Survey $500 Cash App Gift Card (**1560**, "For Approved Push Sub id's" + prepop, $5.5 dynamic) next to 1725.
+  PrizeGrab: 2054 is visible but also without access. No sibling for Spin to Win (1795) and Wise Savings (2177).
+- **CareHealth (2176): the product is readable** from `offer_preview` of the card (`/images/offers/<path>`, webp of the whole landing): a physician-supervised research study («Get Paid For Your Health Journey», «Earn $150 - $3000 for completing each study»,
+  form: name, zip, email, phone, age, gender, kids under 18; «Check My Eligibility»). Wise Savings (2177) landing: seniors, discounts, housing, debt relief; the offer card says **55+ age targeting required**.
+- Details of the three states and the way to search for siblings: `skills/mgid/SKILL.md`, section 2.
+
 ## 19.11 late: one NewsBreak campaign switched ON to see whether paused ads are moderated; MGID prepared the same way (extra teasers); MGID's minimum daily budget is $20
 
 Owner, 19.11: «На newsbreack запусти 1 кампанию чтобы мы узнали модерят они крео на паузе или нет. Так что то хоть будет модерироваться если нет», «Также на мгид все тоже самое подготовь».
