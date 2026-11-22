@@ -10,6 +10,7 @@
    "bid": "0.02",
    "campaign": 39180,
    "group": 142441,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "1046": {
@@ -21,6 +22,7 @@
    "bid": "0.02",
    "campaign": 39179,
    "group": 142440,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "1282": {
@@ -32,6 +34,7 @@
    "bid": "0.02",
    "campaign": 39176,
    "group": 142437,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "1560": {
@@ -43,6 +46,7 @@
    "bid": "0.02",
    "campaign": 39181,
    "group": 142442,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "1719": {
@@ -54,6 +58,7 @@
    "bid": "0.02",
    "campaign": 39177,
    "group": 142438,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "2139": {
@@ -65,6 +70,7 @@
    "bid": "0.02",
    "campaign": 39186,
    "group": 142447,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "2176": {
@@ -76,6 +82,7 @@
    "bid": "0.02",
    "campaign": 39184,
    "group": 142445,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "2177": {
@@ -87,6 +94,7 @@
    "bid": "0.02",
    "campaign": 39185,
    "group": 142446,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "2212": {
@@ -98,6 +106,7 @@
    "bid": "0.02",
    "campaign": 39178,
    "group": 142439,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "2238": {
@@ -109,6 +118,7 @@
    "bid": "0.02",
    "campaign": 39182,
    "group": 142443,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   },
   "2239": {
@@ -120,6 +130,7 @@
    "bid": "0.02",
    "campaign": 39183,
    "group": 142444,
+   "guard_day": "2026-11-22",
    "limit_ok": true
   }
  }
